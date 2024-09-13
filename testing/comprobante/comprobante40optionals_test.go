@@ -1,7 +1,7 @@
 package comprobante
 
 import (
-	comprobante2 "github.com/saulenriquemr/kore-models/models/comprobante"
+	comprobante2 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

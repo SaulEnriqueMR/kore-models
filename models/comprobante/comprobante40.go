@@ -2,7 +2,7 @@ package comprobante
 
 import (
 	"encoding/xml"
-	"github.com/saulenriquemr/kore-models/models"
+	"github.com/SaulEnriqueMR/kore-models/models"
 	"time"
 )
 

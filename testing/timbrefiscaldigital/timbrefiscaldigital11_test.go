@@ -2,8 +2,8 @@ package timbrefiscaldigital
 
 import (
 	"encoding/xml"
-	"github.com/saulenriquemr/koremodels/models/timbrefiscaldigital"
-	testing2 "github.com/saulenriquemr/koremodels/testing"
+	"github.com/saulenriquemr/kore-models/models/timbrefiscaldigital"
+	testing2 "github.com/saulenriquemr/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

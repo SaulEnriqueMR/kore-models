@@ -2,8 +2,8 @@ package comprobante
 
 import (
 	"encoding/xml"
-	comprobante2 "github.com/saulenriquemr/koremodels/models/comprobante"
-	testing2 "github.com/saulenriquemr/koremodels/testing"
+	comprobante2 "github.com/saulenriquemr/kore-models/models/comprobante"
+	testing2 "github.com/saulenriquemr/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

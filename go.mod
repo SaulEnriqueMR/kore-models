@@ -1,4 +1,4 @@
-module github.com/saulenriquemr/koremodels
+module github.com/saulenriquemr/kore-models
 
 go 1.22.4
 

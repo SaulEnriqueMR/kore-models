@@ -103,7 +103,9 @@
                     Unidad="Pieza"
                     Descripcion="ACEITE AJONJOLI"
                     ValorUnitario="736.89"
-                    Importe="736.89" />
+                    Importe="736.89" >
+                <cfdi:InformacionAduanera NumeroPedimento="345678"/>
+            </cfdi:Parte>
         </cfdi:Concepto>
     </cfdi:Conceptos>
     <cfdi:Impuestos

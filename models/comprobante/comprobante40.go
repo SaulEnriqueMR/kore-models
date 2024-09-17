@@ -112,8 +112,8 @@ type RetencionConcepto40 struct {
 }
 
 type ACuentaTerceros40 struct {
-	Rfc             string `xml:"RfcACuentaTerceros,attr" bson:"Rfc"`        // Cifrado
-	Nombre          string `xml:"NombreACuentaTerceros,attr" bson:"Nombre "` // Cifrado
+	Rfc             string `xml:"RfcACuentaTerceros,attr" bson:"Rfc"`
+	Nombre          string `xml:"NombreACuentaTerceros,attr" bson:"Nombre"`
 	RegimenFiscal   string `xml:"RegimenFiscalACuentaTerceros,attr" bson:"RegimenFiscal"`
 	DomicilioFiscal string `xml:"DomicilioFiscalACuentaTerceros,attr" bson:"DomicilioFiscal"`
 }

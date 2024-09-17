@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<iedu:instEducativas
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sat.gob.mx/iedu http://www.sat.gob.mx/sitio_internet/cfd/iedu/iedu.xsd"  xmlns:iedu="http://www.sat.gob.mx/iedu" version="1.0" nombreAlumno="Francisco Hernandez" CURP="BAHF840120HOCTRR04" nivelEducativo="Preescolar" autRVOE="CCA29123210" rfcPago="XAXX010101333"/>

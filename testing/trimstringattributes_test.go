@@ -1,7 +1,7 @@
 package testing
 
 import (
-	comprobante2 "kore-models/models/comprobante"
+	comprobante2 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
 	"testing"
 )
 

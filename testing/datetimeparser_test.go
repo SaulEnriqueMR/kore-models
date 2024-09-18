@@ -1,7 +1,7 @@
 package testing
 
 import (
-	"kore-models/models"
+	"github.com/SaulEnriqueMR/kore-models/models"
 	"testing"
 	"time"
 )

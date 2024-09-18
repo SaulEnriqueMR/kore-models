@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aerolineas:Aerolineas
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:aerolineas="http://www.sat.gob.mx/aerolineas"
+        xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd http://www.sat.gob.mx/aerolineas http://www.sat.gob.mx/sitio_internet/cfd/aerolineas/aerolineas.xsd "
+        Version="1.0" TUA="1000.00" >
+    <aerolineas:OtrosCargos TotalCargos="60.00" >
+        <aerolineas:Cargo  CodigoCargo="AA" Importe="60.00" />
+    </aerolineas:OtrosCargos>
+</aerolineas:Aerolineas>

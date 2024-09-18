@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<destruccion:certificadodedestruccion
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:destruccion="http://www.sat.gob.mx/certificadodestruccion"
+                xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/certificadodestruccion http://www.sat.gob.mx/sitio_internet/cfd/certificadodestruccion/certificadodedestruccion.xsd "
+                Version="1.0" Serie="SERIE A" NumFolDesVeh="000323">
+    <destruccion:VehiculoDestruido Marca="Nissan" TipooClase="Camioneta" Año="2008" Modelo="Pick-Up" NIV="39883" NumSerie="IGIYY2189E5138227" NumPlacas="TJN-25-29" NumMotor="0445542897692" NumFolTarjCir="05413312114"/>
+    <destruccion:InformacionAduanera NumPedImp="2390321" Fecha="2014-01-23" Aduana="Aduana"/>
+</destruccion:certificadodedestruccion>

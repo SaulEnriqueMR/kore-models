@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spei:Complemento_SPEI xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/spei http://www.sat.gob.mx/sitio_internet/cfd/spei/spei.xsd"
+                       xmlns:spei="http://www.sat.gob.mx/spei">
+    <spei:SPEI_Tercero ClaveSPEI="23837" FechaOperacion="2016-04-07" Hora="07:20:17.635" cadenaCDA="cadena" numeroCertificado="20001000000200000876" sello="v7Uq8JveMHDigYBN1mgeUqtAeuCRnTIDE1IpvEQWCCwttZkEOA7OZe+JzdgkLGMlhCzlFMTp3aOZkhhK7WPZXHeov1XlxevfctNqGl1sQWOyZjqqEmngliZppl4dr" >
+        <spei:Ordenante BancoEmisor="Banco Emisor S.A."  Nombre="Francisco Bautista" Cuenta="43328545620125000237" RFC="AAA010101AAA" TipoCuenta="01"/>
+        <spei:Beneficiario BancoReceptor="Banco Receptor S.A."  Nombre="Juan Perez Santiago" TipoCuenta="03" Cuenta="98363842374909422123" RFC="AAA010101AAA" Concepto="Honorarios"  IVA="0.00" MontoPago="10000.00" />
+    </spei:SPEI_Tercero>
+</spei:Complemento_SPEI>

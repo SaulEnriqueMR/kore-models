@@ -1,0 +1,76 @@
+<Nomina xmlns="http://www.sat.gob.mx/nomina" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sat.gob.mx/nomina nomina.xsd"
+    Version="1.2"
+    TipoNomina="O"
+    FechaPago="2024-09-15"
+    FechaInicialPago="2024-09-01"
+    FechaFinalPago="2024-09-14"
+    NumDiasPagados="14.000"
+    TotalPercepciones="15000.00"
+    TotalDeducciones="5000.00"
+    TotalOtrosPagos="2000.00">
+    <Emisor Curp="ABC123456HDFGJ90"
+        RegistroPatronal="12345678901234567890"
+        RfcPatronOrigen="RFC123456789">
+
+        <EntidadSNCF OrigenRecurso="Federal"
+            MontoRecursoPropio="30000.00" />
+
+    </Emisor>
+    <Receptor Curp="DEF123456HDFGJ01"
+        NumSeguridadSocial="123456789012345"
+        FechaInicioRelLaboral="2022-01-01"
+        Antigüedad="P1Y2M10D"
+        TipoContrato="01"
+        Sindicalizado="Sí"
+        TipoJornada="Diurna"
+        TipoRegimen="01"
+        NumEmpleado="12345"
+        Departamento="Ventas"
+        Puesto="Ejecutivo de Ventas"
+        RiesgoPuesto="B"
+        PeriodicidadPago="Quincenal"
+        Banco="021"
+        CuentaBancaria="12345678901"
+        SalarioBaseCotApor="12000.00"
+        SalarioDiarioIntegrado="800.00"
+        ClaveEntFed="09">
+
+        <SubContratacion RfcLabora="XAXX010101000"
+            PorcentajeTiempo="50.000" />
+        <SubContratacion RfcLabora="YAXX020202000"
+            PorcentajeTiempo="25.000" />
+
+    </Receptor>
+    <Percepciones TotalSueldos="15000.00" TotalSeparacionIndemnizacion="5000.00"
+        TotalJubilacionPensionRetiro="2000.00" TotalGravado="22000.00" TotalExento="3000.00">
+        <Percepcion TipoPercepcion="001" Clave="12345" Concepto="Sueldo Mensual"
+            ImporteGravado="15000.00" ImporteExento="0.00">
+            <AccionesOTitulos ValorMercado="100.000000" PrecioAlOtorgarse="50.000000" />
+            <HorasExtra Dias="5" TipoHoras="1" HorasExtra="10" ImportePagado="2000.00" />
+        </Percepcion>
+        <Percepcion TipoPercepcion="039" Clave="67890" Concepto="Pensión" ImporteGravado="0.00"
+            ImporteExento="2000.00">
+        </Percepcion>
+        <JubilacionPensionRetiro IngresoAcumulable="0.00" IngresoNoAcumulable="2000.00" TotalUnaExhibicion="1000.00" TotalParcialidad="500.00" MontoDiario="50.00"  />
+        <SeparacionIndemnizacion TotalPagado="5000.00" NumAñosServicio="10"
+            UltimoSueldoMensOrd="1500.00" IngresoAcumulable="4000.00" IngresoNoAcumulable="1000.00" />
+    </Percepciones>
+    <Deducciones TotalOtrasDeducciones="3000.00" TotalImpuestosRetenidos="2000.00">
+        <Deduccion TipoDeduccion="003" Clave="D001" Concepto="Préstamo Personal" Importe="1500.00" />
+        <Deduccion TipoDeduccion="002" Clave="D002" Concepto="ISR Retenido" Importe="2000.00" />
+    </Deducciones>
+    <OtrosPagos>
+        <OtroPago TipoOtroPago="001" Clave="OP001" Concepto="Subsidio de Empleo" Importe="500.00">
+            <SubsidioAlEmpleo SubsidioCausado="500.00" />
+        </OtroPago>
+        <OtroPago TipoOtroPago="002" Clave="OP002" Concepto="Compensación de Saldos a Favor"
+            Importe="200.00">
+            <CompensacionSaldosAFavor SaldoAFavor="300.00" Año="2023" RemanenteSalFav="100.00" />
+        </OtroPago>
+    </OtrosPagos>
+    <Incapacidades>
+        <Incapacidad DiasIncapacidad="5" TipoIncapacidad="01" ImporteMonetario="1500.00" />
+        <Incapacidad DiasIncapacidad="2" TipoIncapacidad="02" ImporteMonetario="600.00" />
+    </Incapacidades>
+</Nomina>

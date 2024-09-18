@@ -36,7 +36,7 @@
             ImporteExento="0.00" />
     </Deducciones>
     <Incapacidades>
-        <Incapacidad DiasIncapacidad="2.00" TipoIncapacidad="1.00" Descuento="200.00" />
+        <Incapacidad DiasIncapacidad="2.00" TipoIncapacidad="1" Descuento="200.00" />
         <Incapacidad DiasIncapacidad="2.00" TipoIncapacidad="1" Descuento="200.00" />
     </Incapacidades>
     <HorasExtras>

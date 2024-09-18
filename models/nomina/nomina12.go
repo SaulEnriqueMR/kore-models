@@ -125,7 +125,7 @@ type OtroPagoNomina12 struct {
 	Concepto                 string                            `xml:"Concepto,attr" bson:"Concepto"`
 	Importe                  float64                           `xml:"Importe,attr" bson:"Importe"`
 	SubsidioAlEmpleo         *SubsidioAlEmpleoNomina12         `xml:"SubsidioAlEmpleo" bson:"SubsidioAlEmpleo,omitempty"`
-	CompensacionSaldosAFavor *CompensacionSaldosAFavorNomina12 `xml:"CompensacionSaldosAFavor,attr" bson:"CompensacionSaldosAFavor,omitempty"`
+	CompensacionSaldosAFavor *CompensacionSaldosAFavorNomina12 `xml:"CompensacionSaldosAFavor" bson:"CompensacionSaldosAFavor,omitempty"`
 }
 
 type SubsidioAlEmpleoNomina12 struct {

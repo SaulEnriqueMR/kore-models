@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ventavehiculos:VentaVehiculos
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/ventavehiculos http://www.sat.gob.mx/sitio_internet/cfd/ventavehiculos/ventavehiculos11.xsd" xmlns:ventavehiculos="http://www.sat.gob.mx/ventavehiculos"
+        version="1.0" ClaveVehicular="KLS829129990200032712" Niv="NIVEH287212">
+    <ventavehiculos:Parte cantidad="1" unidad="PZA" noIdentificacion="123938" descripcion="CHASIS" valorUnitario="10000.00" importe="10000.00">
+        <ventavehiculos:InformacionAduanera numero="AAA1212129" fecha="2016-04-11" aduana="Tijuana"/>
+    </ventavehiculos:Parte>
+</ventavehiculos:VentaVehiculos>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implocal:ImpuestosLocales xmlns:implocal="http://www.sat.gob.mx/implocal" version="1.0" TotaldeRetenciones="1500.00" TotaldeTraslados="3000.00">
+    <implocal:RetencionesLocales ImpLocRetenido="ISR" TasadeRetencion="15.00" Importe="1500.00"/>
+    <implocal:TrasladosLocales ImpLocTrasladado="IVA" TasadeTraslado="16.00" Importe="3000.00"/>
+</implocal:ImpuestosLocales>

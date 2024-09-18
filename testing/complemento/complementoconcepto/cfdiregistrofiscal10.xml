@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registrofiscal:CFDIRegistroFiscal
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/registrofiscal http://www.sat.gob.mx/sitio_internet/cfd/cfdiregistrofiscal/cfdiregistrofiscal.xsd"
+        xmlns:registrofiscal="http://www.sat.gob.mx/registrofiscal"
+        Folio="8123831283128383" Version="1.0" />

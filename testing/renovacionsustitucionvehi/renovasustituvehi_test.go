@@ -46,6 +46,7 @@ func InternalTestVehiculosUsadosRenovacion(t *testing.T, vehiculos []renovasusti
 	assert.NotNil(t, vehiculos)
 	assert.Equal(t, len(vehiculos), 2)
 	vehiculo := (vehiculos)[0]
+	vehiculo1 := (vehiculos)[1]
 	assert.Equal(t, 250000.00, vehiculo.PrecioVehUsado)
 	assert.Equal(t, "AUTOMOVIL", vehiculo.TipoVeh)
 	assert.Equal(t, "Toyota", vehiculo.Marca)
@@ -59,8 +60,9 @@ func InternalTestVehiculosUsadosRenovacion(t *testing.T, vehiculos []renovasusti
 	assert.Equal(t, "ABC987654321", vehiculo.NumFolTarjCir)
 	assert.Equal(t, "12345678901234567890", *vehiculo.NumPedIm)
 	assert.Equal(t, "Aduana de Tijuana", *vehiculo.Aduana)
-	assert.Equal(t, "2021-07-15", *vehiculo.FechaRegulVeh)
+	assert.Equal(t, "2021-07-15", *vehiculo.FechaRegulVehString)
 	assert.Equal(t, "A1B2C3D4E5F6G7H8I9J0", vehiculo.Foliofiscal)
+	assert.Equal(t, "2022-07-15", *vehiculo1.FechaRegulVehString)
 }
 
 func InternalTestVehiculosNuevosRenovacion(t *testing.T, vehiculos []renovasustivehi1.VehiculosNuevos) {
@@ -77,6 +79,7 @@ func InternalTestVehiculosUsadosSustitucion(t *testing.T, vehiculos []renovasust
 	assert.NotNil(t, vehiculos)
 	assert.Equal(t, len(vehiculos), 1)
 	vehiculo := (vehiculos)[0]
+
 	assert.Equal(t, 250000.00, vehiculo.PrecioVehUsado)
 	assert.Equal(t, "AUTOMOVIL", vehiculo.TipoVeh)
 	assert.Equal(t, "Toyota", vehiculo.Marca)
@@ -90,7 +93,7 @@ func InternalTestVehiculosUsadosSustitucion(t *testing.T, vehiculos []renovasust
 	assert.Equal(t, "ABC987654321", vehiculo.NumFolTarjCir)
 	assert.Equal(t, "12345678901234567890", *vehiculo.NumPedIm)
 	assert.Equal(t, "Aduana de Tijuana", *vehiculo.Aduana)
-	assert.Equal(t, "2021-07-15", *vehiculo.FechaRegulVeh)
+	assert.Equal(t, "2023-07-15", *vehiculo.FechaRegulVehString)
 	assert.Equal(t, "A1B2C3D4E5F6G7H8I9J0", vehiculo.Foliofiscal)
 }
 

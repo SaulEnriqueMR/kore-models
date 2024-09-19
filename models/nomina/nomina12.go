@@ -1,21 +1,31 @@
 package nomina
 
+import (
+	"encoding/xml"
+	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models"
+)
+
 type Nomina12 struct {
-	Version           string                 `xml:"Version,attr" bson:"Version"`
-	TipoNomina        string                 `xml:"TipoNomina,attr" bson:"TipoNomina"`
-	FechaPago         string                 `xml:"FechaPago,attr" bson:"FechaPago"`
-	FechaInicialPago  string                 `xml:"FechaInicialPago,attr" bson:"FechaInicialPago"`
-	FechaFinalPago    string                 `xml:"FechaFinalPago,attr" bson:"FechaFinalPago"`
-	NumDiasPagados    float64                `xml:"NumDiasPagados,attr" bson:"NumDiasPagados"`
-	TotalPercepciones *float64               `xml:"TotalPercepciones,attr" bson:"TotalPercepciones,omitempty"`
-	TotalDeducciones  *float64               `xml:"TotalDeducciones,attr" bson:"TotalDeducciones,omitempty"`
-	TotalOtrosPagos   *float64               `xml:"TotalOtrosPagos,attr" bson:"TotalOtrosPagos,omitempty"`
-	Emisor            *EmisorNomina12        `xml:"Emisor" bson:"Emisor,omitempty"`
-	Receptor          ReceptorNomina12       `xml:"Receptor" bson:"Receptor"`
-	Percepciones      *PercepcionesNomina12  `xml:"Percepciones" bson:"Percepciones,omitempty"`
-	Deducciones       *DeduccionesNomina12   `xml:"Deducciones" bson:"Deducciones,omitempty"`
-	OtrosPagos        *[]OtroPagoNomina12    `xml:"OtrosPagos>OtroPago" bson:"OtrosPagos,omitempty"`
-	Incapacidades     *[]IncapacidadNomina12 `xml:"Incapacidades>Incapacidad" bson:"Incapacidades,omitempty"`
+	Version                string                 `xml:"Version,attr" bson:"Version"`
+	TipoNomina             string                 `xml:"TipoNomina,attr"`
+	FechaPagoString        string                 `xml:"FechaPago,attr"`
+	FechaInicialPagoString string                 `xml:"FechaInicialPago,attr"`
+	FechaFinalPagoString   string                 `xml:"FechaFinalPago,attr"`
+	FechaPago              time.Time              `bson:"FechaPago"`
+	FechaInicialPago       time.Time              `bson:"FechaInicialPago"`
+	FechaFinalPago         time.Time              `bson:"FechaFinalPago"`
+	NumDiasPagados         float64                `xml:"NumDiasPagados,attr" bson:"NumDiasPagados"`
+	TotalPercepciones      *float64               `xml:"TotalPercepciones,attr" bson:"TotalPercepciones,omitempty"`
+	TotalDeducciones       *float64               `xml:"TotalDeducciones,attr" bson:"TotalDeducciones,omitempty"`
+	TotalOtrosPagos        *float64               `xml:"TotalOtrosPagos,attr" bson:"TotalOtrosPagos,omitempty"`
+	Emisor                 *EmisorNomina12        `xml:"Emisor" bson:"Emisor,omitempty"`
+	Receptor               ReceptorNomina12       `xml:"Receptor" bson:"Receptor"`
+	Percepciones           *PercepcionesNomina12  `xml:"Percepciones" bson:"Percepciones,omitempty"`
+	Deducciones            *DeduccionesNomina12   `xml:"Deducciones" bson:"Deducciones,omitempty"`
+	OtrosPagos             *[]OtroPagoNomina12    `xml:"OtrosPagos>OtroPago" bson:"OtrosPagos,omitempty"`
+	Incapacidades          *[]IncapacidadNomina12 `xml:"Incapacidades>Incapacidad" bson:"Incapacidades,omitempty"`
 }
 
 type EmisorNomina12 struct {
@@ -142,4 +152,38 @@ type IncapacidadNomina12 struct {
 	DiasIncapacidad  float64  `xml:"DiasIncapacidad,attr" bson:"DiasIncapacidad"`
 	TipoIncapacidad  float64  `xml:"TipoIncapacidad,attr" bson:"TipoIncapacidad"`
 	ImporteMonetario *float64 `xml:"ImporteMonetario,attr" bson:"ImporteMonetario,omitempty"`
+}
+
+func (c *Nomina12) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias Nomina12
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*c = Nomina12(aux)
+	fecha1, err := models.ParseDatetime(aux.FechaPagoString)
+	if err != nil {
+		return err
+	}
+
+	c.FechaPago = fecha1
+
+	fecha2, err := models.ParseDatetime(aux.FechaInicialPagoString)
+	if err != nil {
+		return err
+	}
+
+	c.FechaInicialPago = fecha2
+
+	fecha3, err := models.ParseDatetime(aux.FechaFinalPagoString)
+	if err != nil {
+		return err
+	}
+
+	c.FechaFinalPago = fecha3
+
+	return nil
 }

@@ -32,9 +32,9 @@ func TestFullNomina12(t *testing.T) {
 func InternalTestBaseAttributes12(t *testing.T, nomina nomina12.Nomina12) {
 	assert.Equal(t, "1.2", nomina.Version)
 	assert.Equal(t, "O", nomina.TipoNomina)
-	assert.Equal(t, "2024-09-15", nomina.FechaPago)
-	assert.Equal(t, "2024-09-01", nomina.FechaInicialPago)
-	assert.Equal(t, "2024-09-14", nomina.FechaFinalPago)
+	assert.Equal(t, "2024-09-15", nomina.FechaPagoString)
+	assert.Equal(t, "2024-09-01", nomina.FechaInicialPagoString)
+	assert.Equal(t, "2024-09-14", nomina.FechaFinalPagoString)
 	assert.Equal(t, 14.000, nomina.NumDiasPagados)
 	assert.Equal(t, 15000.00, *nomina.TotalPercepciones)
 	assert.Equal(t, 5000.00, *nomina.TotalDeducciones)

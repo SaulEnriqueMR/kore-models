@@ -2,6 +2,7 @@ package models
 
 import (
 	"errors"
+	"log"
 	"strings"
 	"time"
 )
@@ -20,15 +21,18 @@ func ParseDatetime(s string) (time.Time, error) {
 		return time.Time{}, errors.New("error parsing datetime. String is empty")
 	}
 	// Primero checamos si coincide con el layout de ISO.
-	if isoDate, err := time.Parse(IsoDatetimeLayout, s); err == nil {
+	if isoDate, err := time.Parse(IsoDatetimeLayout, trimmedString); err == nil {
+		log.Println("Entro iso")
 		return isoDate, nil
 	}
 	// En caso de que no, probamos con el RFC3339.
 	if rfc3339, err := time.Parse(Rfc3339DatetimeLayout, trimmedString); err == nil {
+		log.Println("Entro rfc")
 		return rfc3339, nil
 	}
 	// En caso de que sea rfc3339 nativo de golang
 	if rfc3339, err := time.Parse(time.RFC3339, trimmedString); err == nil {
+		log.Println("Entro rfc 33")
 		return rfc3339, nil
 	}
 	// Regresamos error.

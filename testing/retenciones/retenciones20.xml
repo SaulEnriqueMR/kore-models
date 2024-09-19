@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<retenciones:Retenciones
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/2 http://www.sat.gob.mx/esquemas/retencionpago/2/retencionpagov2.xsd"
+        xmlns:retenciones="http://www.sat.gob.mx/esquemas/retencionpago/2"
+        Version="2.0"
+        FolioInt="9"
+        Sello="bG3OOBPprTCS9TJXLvRl4"
+        NoCertificado="30001000000500003416"
+        Certificado="MIIFsDCCA5igAwIBAgIUMz"
+        FechaExp="2024-03-04T00:00:00"
+        LugarExpRetenc="45110"
+        CveRetenc="01"
+        DescRetenc="DESCRIPCION">
+    <retenciones:CfdiRetenRelacionados
+        TipoRelacion="02"
+        UUID="9341a0a9-eade-4c20-9f6e-a58aa5438a6a"
+    />
+    <retenciones:Emisor
+            RfcE="EKU9003173C9"
+            NomDenRazSocE="ESCUELA KEMPER URGATE"
+            RegimenFiscalE="601" />
+    <retenciones:Receptor NacionalidadR="Nacional">
+        <retenciones:Nacional
+                RfcR="URE180429TM6"
+                NomDenRazSocR="UNIVERSIDAD ROBOTICA ESPAÑOLA"
+                DomicilioFiscalR="86991"
+                CurpR="UREE180429TMRQPM10"/>
+        <retenciones:Extranjero
+                NumRegIdTribR="URE180429TM6"
+                NomDenRazSocR="UNIVERSIDAD ROBOTICA ESPAÑOLA" />
+    </retenciones:Receptor>
+    <retenciones:Periodo
+            MesIni="01"
+            MesFin="03"
+            Ejercicio="2023" />
+    <retenciones:Totales
+            MontoTotOperacion="2000.00"
+            MontoTotGrav="2000.00"
+            MontoTotExent="0"
+            MontoTotRet="580.00"
+            UtilidadBimestral="0"
+            ISRCorrespondiente="0">
+        <retenciones:ImpRetenidos
+                BaseRet="2000"
+                ImpuestoRet="001"
+                MontoRet="580.00"
+                TipoPagoRet="03" />
+        <retenciones:ImpRetenidos
+                BaseRet="2000"
+                ImpuestoRet="001"
+                MontoRet="580.00"
+                TipoPagoRet="03" />
+    </retenciones:Totales>
+    <retenciones:Complemento>
+        <tfd:TimbreFiscalDigital xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="05b7859f-9eba-46ec-a2b3-496dbb1c5b15" FechaTimbrado="2024-03-04T16:20:28" RfcProvCertif="SPR190613I52" SelloCFD="bG3OOBPprTCS9TJXLvRl4FoXuw70xzlKKpMyzFLnkWAilRw541nEv0q7PkUJ24BfBDP7vZ24GXCPMzwNuy/DXNkzYyqG2gNVU17Y5iDqOqP46lMUKDNn8piH/HaQ8Q8Ns5G/rmJexiSmc+ZF+Mym1oxDe+8B5u0K87e14+RvcznB4943QVpXyRowAF9F6AyJ1xMbOnPNWnQJp0ZMzRkKm3DOVRukVkz7ZHFY6Wnb6JQHXueRjzLvab8gjT5V6RNkfTdNQ9ck9QDCiHBza3OIgKwmMs8iGre4lorPz8MZumEuiF4pPWPQzgEaxz68aAkkda8CmxQVrDhBGYiPAZDyBA==" NoCertificadoSAT="30001000000400002495" SelloSAT="oiiD5hjcZQl6UetmevKOyygVjvlClSVSyzoDW6p4aET89/5uYXY5I0z7Lr6qwfMnojl8BpgESrPXU4Z85URHe8F9tjrLiVeBliY0swAEyztSUeSO4T0GZ8bxhGJr5Y/Nup5qmlNjI9fzdDgFB4W1W3zYwAFnMboWQopZntm6FvjayBvE+TMrU3/JERSNSU6v2/oCkx9nQ1h6zG5GkHlNCAQ1J/7H9D9VJfwk8clAJ3lkTeDaLt8eUcEXrwDFl83UWSAQjhAucQYsMZ52pJ5idwK7+K99aTXiLLCQg+0KZk50TcQi/rSV2r4t8Jfptf3ScSwxU1T03BC5yEohSxHLYg==" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </retenciones:Complemento>
+</retenciones:Retenciones>

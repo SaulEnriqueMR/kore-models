@@ -27,6 +27,10 @@ func ParseDatetime(s string) (time.Time, error) {
 	if rfc3339, err := time.Parse(Rfc3339DatetimeLayout, trimmedString); err == nil {
 		return rfc3339, nil
 	}
+	// En caso de que sea rfc3339 nativo de golang
+	if rfc3339, err := time.Parse(time.RFC3339, trimmedString); err == nil {
+		return rfc3339, nil
+	}
 	// Regresamos error.
 	return time.Time{}, errors.New("error parsing datetime. String does not match supported patterns")
 }

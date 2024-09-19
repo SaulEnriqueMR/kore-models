@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<retenciones:Retenciones
+        xmlns:retenciones="http://www.sat.gob.mx/esquemas/retencionpago/1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/1 http://www.sat.gob.mx/esquemas/retencionpago/1/retencionpagov1.xsd"
+        Version="1.0"
+        FolioInt="54"
+        Sello="RwN+snnlG7o9XzJKvqkAY"
+        NumCert="20001000000300022755"
+        Cert="MIIF7TCCA9WgAwIBAgIUMjAw"
+        FechaExp="2019-10-20T16:35:28-06:00"
+        CveRetenc="14"
+        DescRetenc="DESCRIPCION">
+    <retenciones:Emisor
+            RFCEmisor="MAG041126GT8"
+            NomDenRazSocE="PREPARATORIA MIGUEL HIDALGO SA"
+            CURPE="MAG041126GPTWDMA01"/>
+    <retenciones:Receptor
+            Nacionalidad="Extranjero">
+        <retenciones:Nacional
+                NomDenRazSocR="Cliente Nacional"
+                RFCRecep="REDF465379RT1"
+                CURPR="REDF465379PTRASQ01"/>
+        <retenciones:Extranjero
+                NomDenRazSocR="Cliente Extranjero"
+                NumRegIdTrib="ABCD10231" />
+    </retenciones:Receptor>
+    <retenciones:Periodo
+            MesIni="01"
+            MesFin="01"
+            Ejerc="2018" />
+    <retenciones:Totales
+            montoTotOperacion="390.00"
+            montoTotGrav="90.00"
+            montoTotExent="10.00"
+            montoTotRet="10.00">
+        <retenciones:ImpRetenidos
+                montoRet="10"
+                TipoPagoRet="Pago definitivo"
+                Impuesto="001"
+                BaseRet="10" />
+        <retenciones:ImpRetenidos
+                montoRet="10"
+                TipoPagoRet="Pago definitivo"
+                Impuesto="001"
+                BaseRet="10" />
+    </retenciones:Totales>
+</retenciones:Retenciones>

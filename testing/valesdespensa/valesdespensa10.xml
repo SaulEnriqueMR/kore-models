@@ -1,0 +1,8 @@
+<ValesDeDespensa version="1.0" registroPatronal="RP1234567890123456" tipoOperacion="monedero electrónico" numeroDeCuenta="12345678901234567890" total="5000.00">
+    <Conceptos>
+      <Concepto identificador="ABC12345678901234567" fecha="2024-09-19T14:30:00" rfc="ABC123456T56" curp="ABCD890123HMNLLL05" nombre="Juan Perez" numSeguridadSocial="123456789012345" importe="1500.00" />
+      <Concepto identificador="DEF98765432109876543" fecha="2024-09-19T14:45:00" rfc="DEF987654K32" curp="DEFG890123HMNLLL06" nombre="Maria Lopez" numSeguridadSocial="987654321098765" importe="2000.00" />
+      <Concepto identificador="XYZ45678901234567890" fecha="2024-09-19T15:00:00" rfc="XYZ456789G21" curp="XYZD890123HMNLLL07" nombre="Carlos Sanchez" numSeguridadSocial="987654321098766" importe="1500.00" />
+    </Conceptos>
+  </ValesDeDespensa>
+  

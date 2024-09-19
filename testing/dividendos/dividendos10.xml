@@ -1,0 +1,12 @@
+<Dividendos Version="1.0">
+    <DividOUtil 
+        CveTipDivOUtil="DIV123" 
+        MontISRAcredRetMexico="1500.50" 
+        MontISRAcredRetExtranjero="2000.75" 
+        MontRetExtDivExt="500.25" 
+        TipoSocDistrDiv="Sociedad Nacional" 
+        MontISRAcredNal="300.00" 
+        MontDivAcumNal="1200.00" 
+        MontDivAcumExt="800.00"/>
+    <Remanente ProporcionRem="10.503456"/>
+</Dividendos>

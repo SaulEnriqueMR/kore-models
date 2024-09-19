@@ -1,0 +1,77 @@
+<decreto:renovacionysustitucionvehiculos
+    xmlns:decreto="http://www.sat.gob.mx/renovacionysustitucionvehiculos" TipoDeDecreto="01"
+    Version="1.0">
+    <decreto:DecretoRenovVehicular VehEnaj="02">
+        <decreto:VehiculosUsadosEnajenadoPermAlFab 
+        PrecioVehUsado="250000.00" 
+        TipoVeh="AUTOMOVIL" 
+        Marca="Toyota" 
+        TipooClase="Sedan" 
+        Año="2018" 
+        Modelo="Corolla" 
+        NIV="1HGBH41JXMN109186" 
+        NumSerie="1HGBH41JXMN109186" 
+        NumPlacas="XYZ1234" 
+        NumMotor="XJHZ1234567890123" 
+        NumFolTarjCir="ABC987654321" 
+        NumPedIm="12345678901234567890" 
+        Aduana="Aduana de Tijuana" 
+        FechaRegulVeh="2021-07-15" 
+        Foliofiscal="A1B2C3D4E5F6G7H8I9J0" />
+        <decreto:VehiculosUsadosEnajenadoPermAlFab 
+        PrecioVehUsado="250000.00" 
+        TipoVeh="AUTOMOVIL" 
+        Marca="Toyota" 
+        TipooClase="Sedan" 
+        Año="2018" 
+        Modelo="Corolla" 
+        NIV="1HGBH41JXMN109186" 
+        NumSerie="1HGBH41JXMN109186" 
+        NumPlacas="XYZ1234" 
+        NumMotor="XJHZ1234567890123" 
+        NumFolTarjCir="ABC987654321" 
+        NumPedIm="12345678901234567890" 
+        Aduana="Aduana de Tijuana" 
+        FechaRegulVeh="2021-07-15" 
+        Foliofiscal="A1B2C3D4E5F6G7H8I9J0" />    
+        <decreto:VehiculoNuvoSemEnajenadoFabAlPerm 
+        Año="2022" 
+        Modelo="Hilux" 
+        NumPlacas="ABC1234" 
+        RFC="XAXX010101000"/>
+    
+    </decreto:DecretoRenovVehicular>
+    <decreto:DecretoSustitVehicular VehEnaj="02">
+        <decreto:VehiculosUsadosEnajenadoPermAlFab
+            PrecioVehUsado="250000.00"
+            TipoVeh="AUTOMOVIL"
+            Marca="Toyota"
+            TipooClase="Sedan"
+            Año="2018"
+            Modelo="Corolla"
+            NIV="1HGBH41JXMN109186"
+            NumSerie="1HGBH41JXMN109186"
+            NumPlacas="XYZ1234"
+            NumMotor="XJHZ1234567890123"
+            NumFolTarjCir="ABC987654321"
+            NumPedIm="12345678901234567890"
+            Aduana="Aduana de Tijuana"
+            FechaRegulVeh="2021-07-15"
+            Foliofiscal="A1B2C3D4E5F6G7H8I9J0" />
+        <decreto:VehiculoNuvoSemEnajenadoFabAlPerm 
+        Año="2022" 
+        Modelo="Hilux" 
+        NumPlacas="ABC1234" 
+        RFC="XAXX010101000"/>
+        <decreto:VehiculoNuvoSemEnajenadoFabAlPerm 
+        Año="2022" 
+        Modelo="Hilux" 
+        NumPlacas="ABC1234" 
+        RFC="XAXX010101000"/>
+        <decreto:VehiculoNuvoSemEnajenadoFabAlPerm 
+        Año="2022" 
+        Modelo="Hilux" 
+        NumPlacas="ABC1234" 
+        RFC="XAXX010101000"/>
+    </decreto:DecretoSustitVehicular>
+</decreto:renovacionysustitucionvehiculos>

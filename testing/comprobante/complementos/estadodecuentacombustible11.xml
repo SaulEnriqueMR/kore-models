@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ecc11:EstadoDeCuentaCombustible
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:ecc11="http://www.sat.gob.mx/EstadoDeCuentaCombustible"
+        xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/EstadoDeCuentaCombustible http://www.sat.gob.mx/sitio_internet/cfd/EstadoDeCuentaCombustible/ecc11.xsd"
+        Version="1.1" TipoOperacion="Tarjeta" NumeroDeCuenta="11238" SubTotal="1000.00" Total="1160.00">
+    <ecc11:Conceptos>
+        <ecc11:ConceptoEstadoDeCuentaCombustible Identificador="12234" Fecha="2015-11-02T10:20:02" Rfc="XAXX010101000" ClaveEstacion="111" TAR="617" Cantidad="3.0" NoIdentificacion="32011" Unidad="Litros" NombreCombustible="DIESEL" FolioOperacion="01" ValorUnitario="14.50" Importe="1000.00">
+            <ecc11:Traslados>
+                <ecc11:Traslado Impuesto="IVA" TasaoCuota="0.16" Importe="172.78"/>
+                <ecc11:Traslado Impuesto="IEPS" TasaoCuota="0.08" Importe="79.99"/>
+            </ecc11:Traslados>
+        </ecc11:ConceptoEstadoDeCuentaCombustible>
+    </ecc11:Conceptos>
+</ecc11:EstadoDeCuentaCombustible>

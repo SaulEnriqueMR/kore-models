@@ -1,0 +1,6 @@
+<VehiculoUsado Version="1.0" montoAdquisicion="150000.00" montoEnajenacion="140000.00" claveVehicular="1234567" marca="Toyota" tipo="Sedan" modelo="2018" numeroMotor="1HGBH41JXMN109186" numeroSerie="2HGBH41JXMN109186" NIV="JTHBJ46G992109186" valor="135000.00">
+    <InformacionAduanera numero="12345" fecha="2022-05-15" aduana="Aduana del Puerto de Veracruz" />
+    <InformacionAduanera numero="67890" fecha="2021-03-22" aduana="Aduana del Aeropuerto Internacional de la Ciudad de México" />
+    <InformacionAduanera numero="54321" fecha="2020-12-10" aduana="Aduana de Lázaro Cárdenas" />
+  </VehiculoUsado>
+  

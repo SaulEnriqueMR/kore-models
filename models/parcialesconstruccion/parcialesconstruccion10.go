@@ -1,19 +1,19 @@
 package parcialesconstruccion
 
 type ParcialesConstruccion10 struct {
-	Version			string `xml:"Version" bson:"Version"`
-	NumPerLicoAut 	string `xml:"NumPerLicoAut" bson:"NumPerLicoAut"`
-	Inmueble 		Inmueble `xml:"Inmueble" bson:"Inmueble"`
+	Version       string   `xml:"Version,attr" bson:"Version"`
+	NumPerLicoAut string   `xml:"NumPerLicoAut,attr" bson:"NumPerLicoAut"`
+	Inmueble      Inmueble `xml:"Inmueble" bson:"Inmueble"`
 }
 
 type Inmueble struct {
-	Calle 			string  `xml:"Calle" bson:"Calle"`
-	NoExterior 		*string `xml:"NoExterior" bson:"NoExterior,omitempty"`
-	NoInterior 		*string `xml:"NoInterior" bson:"NoInterior,omitempty"`
-	Colonia 		*string `xml:"Colonia" bson:"Colonia,omitempty"`
-	Localidad 		*string `xml:"Localidad" bson:"Localidad,omitempty"`
-	Referencia 		*string `xml:"Referencia" bson:"Referencia,omitempty"`
-	Municipio 		string  `xml:"Municipio" bson:"Municipio"`
-	Estado 			string  `xml:"Estado" bson:"Estado"`
-	CodigoPostal 	string  `xml:"CodigoPostal" bson:"CodigoPostal"`
+	Calle        string  `xml:"Calle,attr" bson:"Calle"`
+	NoExterior   *string `xml:"NoExterior,attr" bson:"NoExterior,omitempty"`
+	NoInterior   *string `xml:"NoInterior,attr" bson:"NoInterior,omitempty"`
+	Colonia      *string `xml:"Colonia,attr" bson:"Colonia,omitempty"`
+	Localidad    *string `xml:"Localidad,attr" bson:"Localidad,omitempty"`
+	Referencia   *string `xml:"Referencia,attr" bson:"Referencia,omitempty"`
+	Municipio    string  `xml:"Municipio,attr" bson:"Municipio"`
+	Estado       string  `xml:"Estado,attr" bson:"Estado"`
+	CodigoPostal string  `xml:"CodigoPostal,attr" bson:"CodigoPostal"`
 }

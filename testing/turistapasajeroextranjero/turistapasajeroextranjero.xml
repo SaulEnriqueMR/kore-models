@@ -1,0 +1,4 @@
+<TuristaPasajeroExtranjero version="1.0" fechadeTransito="2024-09-19T14:30:00" tipoTransito="Arribo">
+    <datosTransito Via="Aérea" TipoId="Pasaporte" NumeroId="X123456789" Nacionalidad="Canadiense" EmpresaTransporte="Air Canada" IdTransporte="AC102" />
+  </TuristaPasajeroExtranjero>
+  

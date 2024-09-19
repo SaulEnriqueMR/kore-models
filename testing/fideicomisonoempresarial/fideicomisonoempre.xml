@@ -1,0 +1,13 @@
+<fideicomisonoempresarial:Fideicomisonoempresarial Version="1.0"
+    xmlns:fideicomisonoempresarial="http://www.sat.gob.mx/esquemas/retencionpago/1/fideicomisonoempresarial">
+    <fideicomisonoempresarial:IngresosOEntradas MontTotEntradasPeriodo="300.00"
+        PartPropAcumDelFideicom="300.00" PropDelMontTot="800.000000">
+        <fideicomisonoempresarial:IntegracIngresos Concepto="CONCEPTO2" />
+    </fideicomisonoempresarial:IngresosOEntradas>
+    <fideicomisonoempresarial:DeduccOSalidas MontTotEgresPeriodo="50.00" PartPropDelFideicom="0.00"
+        PropDelMontTot="800.000000">
+        <fideicomisonoempresarial:IntegracEgresos ConceptoS="CONCEPTO2" />
+    </fideicomisonoempresarial:DeduccOSalidas>
+    <fideicomisonoempresarial:RetEfectFideicomiso MontRetRelPagFideic="750.45"
+        DescRetRelPagFideic="DESCRIPCION" />
+</fideicomisonoempresarial:Fideicomisonoempresarial>

@@ -1,4 +1,4 @@
-package yourpackage
+package nomina
 
 import (
 	"encoding/xml"

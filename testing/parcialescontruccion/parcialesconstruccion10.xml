@@ -1,0 +1,14 @@
+<parcialesconstruccion Version="1.0" NumPerLicoAut="12345-67890" >
+
+    <Inmueble 
+    Calle="Avenida Reforma" 
+    NoExterior="123" 
+    NoInterior="A" 
+    Colonia="Centro" 
+    Localidad="Ciudad de México" 
+    Referencia="Cerca del Monumento a la Independencia" 
+    Municipio="Cuauhtémoc" 
+    Estado="DF" 
+    CodigoPostal="06000" />
+
+</parcialesconstruccion>

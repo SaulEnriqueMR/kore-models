@@ -1,0 +1,4 @@
+<LeyendasFiscales version="1.0">
+    <Leyenda disposicionFiscal="ISR" norma="133" textoLeyenda="Efectos fiscales al pago"/>
+    <Leyenda disposicionFiscal="IVA" norma="32" textoLeyenda="Impuesto retenido de conformidad con la Ley del Impuesto al Valor Agregado"/>
+</LeyendasFiscales>

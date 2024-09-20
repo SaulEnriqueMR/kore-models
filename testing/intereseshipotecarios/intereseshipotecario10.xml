@@ -1,0 +1,10 @@
+<Intereseshipotecarios 
+    Version="1.0" 
+    CreditoDeInstFinanc="SI" 
+    SaldoInsoluto="1000000.00" 
+    PropDeducDelCredit="0.50" 
+    MontTotIntNominalesDev="30000.00" 
+    MontTotIntNominalesDevYPag="25000.00" 
+    MontTotIntRealPagDeduc="12000.00" 
+    NumContrato="ABC123456">
+</Intereseshipotecarios>

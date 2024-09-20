@@ -1,0 +1,100 @@
+<ComercioExterior Version="2.0"
+    MotivoTraslado="01"
+    ClaveDePedimento="A1"
+    CertificadoOrigen="1"
+    NumCertificadoOrigen="1234567890"
+    NumeroExportadorConfiable="EXCONFIABLE123"
+    Incoterm="FOB"
+    Observaciones="Exportación de mercancías desde México."
+    TipoCambioUSD="18.50"
+    TotalUSD="10000.00">
+    <Emisor Curp="GOCM890107HDFRRR02">
+        <Domicilio Calle="Avenida Revolución"
+            NumeroExterior="123"
+            NumeroInterior="4B"
+            Colonia="0348"
+            Localidad="001"
+            Referencia="Cerca de la torre"
+            Municipio="012"
+            Estado="CDMX"
+            Pais="MEX"
+            CodigoPostal="03100" />
+    </Emisor>
+    <Propietario NumRegIdTrib="ABC123456789" ResidenciaFiscal="USA" />
+    <Propietario NumRegIdTrib="ABC123456789" ResidenciaFiscal="USA" />
+    <Receptor NumRegIdTrib="XYZ123456789">
+        <Domicilio Calle="Av. Principal" NumeroExterior="123" NumeroInterior="A"
+            Colonia="Centro" Localidad="Ciudad" Referencia="Frente al parque"
+            Municipio="Municipio" Estado="MX" Pais="MEX" CodigoPostal="12345" />
+    </Receptor>
+    <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+        <Domicilio
+            Calle="Avenida Insurgentes"
+            NumeroExterior="1234"
+            NumeroInterior="101"
+            Colonia="Colonia Centro"
+            Localidad="Ciudad de México"
+            Referencia="Cerca del Monumento a la Revolución"
+            Municipio="Cuauhtémoc"
+            Estado="CDMX"
+            Pais="MEX"
+            CodigoPostal="06300" />
+    </Destinatario>
+    <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+        <Domicilio
+            Calle="Avenida Insurgentes"
+            NumeroExterior="1234"
+            NumeroInterior="101"
+            Colonia="Colonia Centro"
+            Localidad="Ciudad de México"
+            Referencia="Cerca del Monumento a la Revolución"
+            Municipio="Cuauhtémoc"
+            Estado="CDMX"
+            Pais="MEX"
+            CodigoPostal="06300" />
+            <Domicilio
+            Calle="Avenida Insurgentes"
+            NumeroExterior="1234"
+            NumeroInterior="101"
+            Colonia="Colonia Centro"
+            Localidad="Ciudad de México"
+            Referencia="Cerca del Monumento a la Revolución"
+            Municipio="Cuauhtémoc"
+            Estado="CDMX"
+            Pais="MEX"
+            CodigoPostal="06300" />
+            <Domicilio
+            Calle="Avenida Insurgentes"
+            NumeroExterior="1234"
+            NumeroInterior="101"
+            Colonia="Colonia Centro"
+            Localidad="Ciudad de México"
+            Referencia="Cerca del Monumento a la Revolución"
+            Municipio="Cuauhtémoc"
+            Estado="CDMX"
+            Pais="MEX"
+            CodigoPostal="06300" />
+    </Destinatario>
+    <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+        <Domicilio
+            Calle="Avenida Insurgentes"
+            NumeroExterior="1234"
+            NumeroInterior="101"
+            Colonia="Colonia Centro"
+            Localidad="Ciudad de México"
+            Referencia="Cerca del Monumento a la Revolución"
+            Municipio="Cuauhtémoc"
+            Estado="CDMX"
+            Pais="MEX"
+            CodigoPostal="06300" />
+    </Destinatario>
+    <Mercancias>
+        <Mercancia NoIdentificacion="12345ABC" FraccionArancelaria="010121" CantidadAduana="100.000" UnidadAduana="KGM" ValorUnitarioAduana="50.123456" ValorDolares="5000.1234">
+            <DescripcionesEspecificas Marca="Toyota" Modelo="Corolla" SubModelo="XLE" NumeroSerie="ABC123XYZ456" />
+        </Mercancia>
+        <Mercancia NoIdentificacion="67890DEF" FraccionArancelaria="020711" CantidadAduana="200.000" UnidadAduana="LBR" ValorUnitarioAduana="20.654321" ValorDolares="4000.4321">
+            <DescripcionesEspecificas Marca="Ford" Modelo="Focus" SubModelo="SE" NumeroSerie="DEF456XYZ789" />
+            <DescripcionesEspecificas Marca="Ford" Modelo="Focus" SubModelo="SE" NumeroSerie="DEF456XYZ789" />
+        </Mercancia>
+    </Mercancias>
+</ComercioExterior>

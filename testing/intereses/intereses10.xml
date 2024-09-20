@@ -1,0 +1,9 @@
+<Intereses 
+    Version="1.0" 
+    SistFinanciero="SI" 
+    RetiroAORESRetInt="NO" 
+    OperFinancDerivad="NO" 
+    MontIntNominal="1500.00" 
+    MontIntReal="1200.00" 
+    Perdida="100.00">
+</Intereses>

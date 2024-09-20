@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func GetTurisInteresesForTest(filename string, t *testing.T) (intereses1.Intereses10, error) {
+func GetInteresesForTest(filename string, t *testing.T) (intereses1.Intereses10, error) {
 	data := testing2.GetFileContentForTest(filename, t)
 	var parsed intereses1.Intereses10
 	errUnmashal := xml.Unmarshal(data, &parsed)
@@ -18,9 +18,9 @@ func GetTurisInteresesForTest(filename string, t *testing.T) (intereses1.Interes
 }
 
 func TestFullIntereses(t *testing.T) {
-	fideicomiso, _ := GetTurisInteresesForTest("./intereses10.xml", t)
-	assert.NotNil(t, fideicomiso)
-	InternalTestIntereses(t, fideicomiso)
+	intereses, _ := GetInteresesForTest("./intereses10.xml", t)
+	assert.NotNil(t, intereses)
+	InternalTestIntereses(t, intereses)
 }
 
 func InternalTestIntereses(t *testing.T, intereses intereses1.Intereses10) {

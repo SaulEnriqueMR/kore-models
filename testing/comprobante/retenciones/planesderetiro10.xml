@@ -1,0 +1,12 @@
+<Planesderetiro
+        Version="1.0"
+        SistemaFinanc="SI"
+        MontTotAportAnioInmAnterior="1000.00"
+        MontIntRealesDevengAniooInmAnt="100.00"
+        HuboRetirosAnioInmAntPer="SI"
+        MontTotRetiradoAnioInmAntPer="10.00"
+        MontTotExentRetiradoAnioInmAnt="90.00"
+        MontTotExedenteAnioInmAnt="900.00"
+        HuboRetirosAnioInmAnt="SI"
+        MontTotRetiradoAnioInmAnt="90.00"
+/>

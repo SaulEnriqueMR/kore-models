@@ -1,0 +1,8 @@
+<INE Version="1.1" TipoProceso="Campaña" tipoComite="Ordinario" IdContabilidad="123">
+    <Entidad ClaveEntidad="OAX" Ambito="Local">
+        <Contabilidad IdContabilidad="654321"/>
+    </Entidad>
+    <Entidad ClaveEntidad="GUA" Ambito="Local">
+        <Contabilidad IdContabilidad="123546"/>
+    </Entidad>
+</INE>

@@ -1,6 +1,9 @@
 package comprobante
 
 import (
+	"github.com/SaulEnriqueMR/kore-models/models/cartaporte"
+	"github.com/SaulEnriqueMR/kore-models/models/comercioexterior"
+	impuestoslocales "github.com/SaulEnriqueMR/kore-models/models/implocales"
 	"reflect"
 	"strings"
 	"time"
@@ -11,14 +14,21 @@ type ComplementoConcepto struct {
 }
 
 type Complemento struct {
+	CartaPorte       *[]cartaporte.CartaPorte              `xml:"CartaPorte" bson:"CartaPorte,omitempty"`
+	ComercioExterior *[]comercioexterior.ComercioExterior  `xml:"ComercioExterior" bson:"ComercioExterior,omitempty"`
+	ImpuestoLocales  *[]impuestoslocales.ImpuestoLocales10 `xml:"ImpuestoLocales" bson:"ImpuestosLocales,omitempty"`
+	// Nomina              *nomina.Nomina                           `xml:"Nomina" bson:"Nomina,omitempty"`
+	// Pagos               *pagos.Pagos                             `xml:"Pagos" bson:"Pagos,omitempty"`
+	// TimbreFiscalDigital *timbrefiscaldigital.TimbreFiscalDigital `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`
 }
 
 type InformacionAdicional struct {
-	Comentario *string `bson:"Comentario,omitempty"`
-	Desgloce   *string `bson:"Desgloce,omitempty"`
-	NotaPie    *string `bson:"NotaPie,omitempty"`
-	IdProyecto *string `bson:"IdProyecto,omitempty"`
-	Categoria  *string `bson:"Categoria,omitempty"`
+	StampedByKuantik bool    `bson:"StampedByKuantik"`
+	Comentario       *string `bson:"Comentario,omitempty"`
+	Desgloce         *string `bson:"Desgloce,omitempty"`
+	NotaPie          *string `bson:"NotaPie,omitempty"`
+	IdProyecto       *string `bson:"IdProyecto,omitempty"`
+	Categoria        *string `bson:"Categoria,omitempty"`
 }
 
 type Cancelacion struct {

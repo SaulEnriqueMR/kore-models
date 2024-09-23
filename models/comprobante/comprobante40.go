@@ -38,6 +38,10 @@ type Comprobante40 struct {
 	/* Atributos extraidos desde tfd */
 	Uuid          string    `bson:"Uuid"`
 	FechaTimbrado time.Time `bson:"FechaTimbrado"`
+	/* Atributos adicionales, generalmente actualizados por fuentes externas */
+	InformacionAdicional InformacionAdicional `xml:"InformacionAdicional" bson:"InformacionAdicional"`
+	Cancelacion          Cancelacion          `xml:"Cancelacion" bson:"Cancelacion"`
+	Vigente              bool                 `bson:"Vigente"`
 }
 
 type InformacionGlobal40 struct {

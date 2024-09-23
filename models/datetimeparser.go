@@ -2,6 +2,7 @@ package models
 
 import (
 	"errors"
+	"regexp"
 	"strings"
 	"time"
 )
@@ -9,6 +10,8 @@ import (
 var (
 	IsoDatetimeLayout     = "2006-01-02T15:04:05"
 	Rfc3339DatetimeLayout = "2006-01-02"
+	IsoDateRegex          = `^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$`
+	Rfc3339Regex          = `^\d{4}-\d{2}-\d{2}$`
 )
 
 // ParseDatetime Función encargada de la conversión de los formatos de fechas utilizados por el SAT.
@@ -20,17 +23,17 @@ func ParseDatetime(s string) (time.Time, error) {
 		return time.Time{}, errors.New("error parsing datetime. String is empty")
 	}
 	// Primero checamos si coincide con el layout de ISO.
-	if isoDate, err := time.Parse(IsoDatetimeLayout, trimmedString); err == nil {
-		return isoDate, nil
+	patternISO := regexp.MustCompile(IsoDateRegex)
+	if patternISO.MatchString(s) {
+		isoDate, err := time.Parse(IsoDatetimeLayout, trimmedString)
+		return isoDate, err
 	}
 	// En caso de que no, probamos con el RFC3339.
-	if rfc3339, err := time.Parse(Rfc3339DatetimeLayout, trimmedString); err == nil {
-		return rfc3339, nil
+	patternRFC := regexp.MustCompile(Rfc3339Regex)
+	if patternRFC.MatchString(s) {
+		isoDate, err := time.Parse(Rfc3339DatetimeLayout, trimmedString)
+		return isoDate, err
 	}
 	// En caso de que sea rfc3339 nativo de golang
-	if rfc3339, err := time.Parse(time.RFC3339, trimmedString); err == nil {
-		return rfc3339, nil
-	}
-	// Regresamos error.
 	return time.Time{}, errors.New("error parsing datetime. String does not match supported patterns")
 }

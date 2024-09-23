@@ -1,0 +1,19 @@
+<NotariosPublicos Version="1.0">
+    <DescInmuebles>
+        <DescInmueble TipoInmueble="01" Calle="Conocida" NoExterior="218" NoInterior="1" Colonia="Colonia1" Localidad="Localidad1" Referencia="Referencia1" Municipio="Oaxaca de Juárez" Estado="14" Pais="MEX" CodigoPostal="68000"/>
+    </DescInmuebles>
+    <DatosOperacion NumInstrumentoNotarial="12345" FechaInstNotarial="2014-05-05" MontoOperacion="330000.00" Subtotal="330000.00" IVA="52800.00"/>
+    <DatosNotario CURP="AAQM010101HCSMNZ00" NumNotaria="3" EntidadFederativa="16" Adscripcion="Adscripcion1"/>
+    <DatosEnajenante CoproSocConyugalE="No">
+        <DatosUnEnajenante Nombre="Santiago" ApellidoPaterno="Hernandez" ApellidoMaterno="Martinez" RFC="XAXX010101000" CURP="XAXX010101HOCRRN03"/>
+        <DatosEnajenantesCopSC>
+            <DatosEnajenanteCopSC Nombre="Francisco" ApellidoPaterno="Vazquez" ApellidoMaterno="Ramirez" RFC="XAXX010101000" CURP="XAXX011001HOCRRN09" Porcentaje="17.00"/>
+        </DatosEnajenantesCopSC>
+    </DatosEnajenante>
+    <DatosAdquiriente CoproSocConyugalE="Si">
+        <DatosUnAdquiriente Nombre="Armando" ApellidoPaterno="Contreras" ApellidoMaterno="Velazquez" RFC="AACO010101000" CURP="XAXX010101HOCRRN03"/>
+        <DatosAdquirientesCopSC>
+            <DatosAdquirienteCopSC Nombre="Arturo" ApellidoPaterno="Montes" ApellidoMaterno="Herrera" RFC="AUMO010101000" CURP="XAXX011001HOCRRN09" Porcentaje="40.00"/>
+        </DatosAdquirientesCopSC>
+    </DatosAdquiriente>
+</NotariosPublicos>

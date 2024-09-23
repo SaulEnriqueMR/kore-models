@@ -1,0 +1,103 @@
+<Comprobante version="3.2"
+             serie="A"
+             folio="123456"
+             fecha="2023-09-23T12:00:00"
+             sello="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQ..."
+             formaDePago="01"
+             noCertificado="00000000000000000000"
+             certificado="MIICqjCCAbKgAwIBAgIJAN6vK1..."
+             condicionesDePago="Contado"
+             subTotal="1000.00"
+             descuento="50.00"
+             motivoDescuento="Promoción especial"
+             TipoCambio="20.5"
+             Moneda="MXN"
+             total="1000.00"
+             tipoDeComprobante="ingreso"
+             metodoDePago="Transferencia bancaria"
+             LugarExpedicion="Ciudad de México"
+             NumCtaPago="1234"
+             FolioFiscalOrig="ABC123456"
+             SerieFolioFiscalOrig="A1"
+             FechaFolioFiscalOrig="2023-09-23T12:00:00"
+             MontoFolioFiscalOrig="1000.00">
+    <Emisor rfc="ABC123456789" nombre="Juan Pérez S.A. de C.V.">
+        <RegimenFiscal>
+            <Regimen Regimen="Persona Física con Actividades Empresariales"/>
+            <Regimen Regimen="Régimen de Incorporación Fiscal"/>
+            <Regimen Regimen="Persona Moral"/>
+        </RegimenFiscal>
+        <DomicilioFiscal
+                calle="Avenida Insurgentes"
+                noExterior="456"
+                noInterior="A"
+                colonia="Roma"
+                localidad="Ciudad de México"
+                referencia="Cerca del Parque"
+                municipio="Cuauhtémoc"
+                estado="CDMX"
+                pais="México"
+                codigoPostal="06700">
+        </DomicilioFiscal>
+        <ExpedidoEn
+                calle="Avenida Reforma"
+                noExterior="123"
+                noInterior="1"
+                colonia="Centro"
+                localidad="Ciudad de México"
+                referencia="Referencia 1"
+                municipio="Cuauhtémoc"
+                estado="CDMX"
+                pais="México"
+                codigoPostal="06000">
+        </ExpedidoEn>
+    </Emisor>
+    <Receptor
+            rfc="ABC123456789"
+            nombre="Juan Pérez López">
+        <Domicilio
+                calle="Avenida Reforma"
+                noExterior="123"
+                noInterior="1"
+                colonia="Centro"
+                localidad="Ciudad de México"
+                referencia="Referencia 1"
+                municipio="Cuauhtémoc"
+                estado="CDMX"
+                pais="México"
+                codigoPostal="06000">
+        </Domicilio>
+    </Receptor>
+    <Conceptos>
+        <Concepto
+                cantidad="5"
+                unidad="pieza"
+                noIdentificacion="ABC123"
+                descripcion="Producto Ejemplo"
+                valorUnitario="100.00"
+                importe="500.00">
+            <InformacionAduanera numero="A123456" fecha="2023-09-15" aduana="Aduana de Ciudad Juárez"/>
+            <CuentaPredial numero="123456789"/>
+            <ComplementoConcepto>
+            </ComplementoConcepto>
+            <Parte cantidad="2"
+                   unidad="unidad"
+                   noIdentificacion="ABC123"
+                   descripcion="Componente Ejemplo"
+                   valorUnitario="50.00"
+                   importe="100.00"/>
+        </Concepto>
+    </Conceptos>
+    <Impuestos totalImpuestosRetenidos="11000.00" totalImpuestosTrasladados="11000.00">
+        <Traslados>
+            <Traslado impuesto="IEPS" tasa="16.00" importe="100.00"/>
+        </Traslados>
+        <Retenciones>
+            <Retencion impuesto="IEPS" importe="10500.00"/>
+        </Retenciones>
+    </Impuestos>
+    <Complemento>
+    </Complemento>
+    <Addenda>
+    </Addenda>
+</Comprobante>

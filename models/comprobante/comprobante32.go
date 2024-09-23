@@ -47,7 +47,7 @@ type Comprobante32 struct {
 type Emisor32 struct {
 	Rfc               string            `xml:"rfc,attr" bson:"Rfc"`
 	Nombre            *string           `xml:"nombre,attr" bson:"Nombre,omitempty"`
-	RegimenesFiscales []RegimenFiscal32 `xml:"RegimenFiscal" bson:"RegimenesFiscales"`
+	RegimenesFiscales []RegimenFiscal32 `xml:"RegimenFiscal>Regimen" bson:"RegimenesFiscales"`
 	DomicilioFiscal   *Domicilio32      `xml:"DomicilioFiscal" bson:"DomicilioFiscal,omitempty"`
 	ExpedidoEn        *Domicilio32      `xml:"ExpedidoEn" bson:"ExpedidoEn,omitempty"`
 }

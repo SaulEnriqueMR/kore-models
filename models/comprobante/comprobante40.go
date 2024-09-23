@@ -7,12 +7,10 @@ import (
 )
 
 type Comprobante40 struct {
-	Uuid              string                 `bson:"Uuid"`
 	Version           string                 `xml:"Version,attr" bson:"Version"`
 	Serie             *string                `xml:"Serie,attr" bson:"Serie,omitempty"`
 	Folio             *string                `xml:"Folio,attr" bson:"Folio,omitempty"`
 	Fecha             string                 `xml:"Fecha,attr"`
-	FechaEmision      time.Time              `bson:"FechaEmision"`
 	Sello             string                 `xml:"Sello,attr" bson:"Sello"`
 	FormaPago         *string                `xml:"FormaPago,attr" bson:"FormaPago,omitempty"`
 	NoCertificado     string                 `xml:"NoCertificado,attr" bson:"NoCertificado"`
@@ -35,8 +33,11 @@ type Comprobante40 struct {
 	Conceptos         []Concepto40           `xml:"Conceptos>Concepto" bson:"Conceptos"`
 	Impuestos         *Impuestos40           `xml:"Impuestos" bson:"Impuestos,omitempty"`
 	Complemento       Complemento            `xml:"Complemento" bson:"Complemento"`
-	/* Atributos adicionales, no incluidos en XML pero con funcionalidad interna */
-
+	/* Atributo convertido */
+	FechaEmision time.Time `bson:"FechaEmision"`
+	/* Atributos extraidos desde tfd */
+	Uuid          string    `bson:"Uuid"`
+	FechaTimbrado time.Time `bson:"FechaTimbrado"`
 }
 
 type InformacionGlobal40 struct {

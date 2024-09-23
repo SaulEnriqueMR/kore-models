@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiciosPlataformasTecnologicas
+        Version="1.0"
+        Periodicidad="Mensual"
+        NumServ="10"
+        MonTotServSIVA="5000.00"
+        TotalIVATrasladado="800.00"
+        TotalIVARetenido="200.00"
+        TotalISRRetenido="600.00"
+        DifIVAEntregadoPrestServ="100.00"
+        MonTotalporUsoPlataforma="300.00"
+        MonTotalContribucionGubernamental="150.00">
+    <Servicios>
+        <DetallesDelServicio FormaPagoServ="01" TipoDeServ="A01" SubTipServ="B02" RFCTerceroAutorizado="ABC123456789" FechaServ="2023-09-23" PrecioServSinIVA="1000.00">
+            <ImpuestosTrasladadosdelServicio Base="1000.00" Impuesto="IVA" TipoFactor="Tasa" TasaCuota="0.16" Importe="160.00"/>
+            <ContribucionGubernamental ImpContrib="200.00" EntidadDondePagaLaContribucion="01" />
+            <ComisionDelServicio Base="150.50" Porcentaje="0.05" Importe="7.53" />
+        </DetallesDelServicio>
+    </Servicios>
+</ServiciosPlataformasTecnologicas>

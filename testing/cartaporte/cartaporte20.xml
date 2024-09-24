@@ -1,0 +1,196 @@
+<CartaPorte
+        Version="2.0"
+        TranspInternac="Si"
+        EntradaSalidaMerc="Salida"
+        PaisOrigenDestino="MEX"
+        ViaEntradaSalida="T1"
+        TotalDistRec="120.50">
+    <Ubicaciones>
+        <Ubicacion TipoUbicacion="Origen"
+                   IDUbicacion="OR123456"
+                   RFCRemitenteDestinatario="XAXX010101000"
+                   NombreRemitenteDestinatario="Empresa Origen"
+                   NumRegIdTrib="IdTrib1"
+                   ResidenciaFiscal="ResidenciaFisc1"
+                   NumEstacion="1"
+                   NombreEstacion="Estacion1"
+                   NavegacionTrafico="Trafico1"
+                   FechaHoraSalidaLlegada="2024-09-23T12:30:00"
+                   TipoEstacion="Tipo1"
+                   DistanciaRecorrida="100.50">
+            <Domicilio
+                    Calle="Avenida Principal"
+                    NumeroExterior="123"
+                    NumeroInterior="A"
+                    Colonia="Centro"
+                    Localidad="Ciudad Ejemplo"
+                    Referencia="Cerca de la Plaza Central"
+                    Municipio="Municipio Ejemplo"
+                    Estado="Estado Ejemplo"
+                    Pais="MEX"
+                    CodigoPostal="12345" />
+        </Ubicacion>
+        <Ubicacion TipoUbicacion="Origen"
+                   IDUbicacion="OR123456"
+                   RFCRemitenteDestinatario="XAXX010101000"
+                   NombreRemitenteDestinatario="Empresa Origen"
+                   NumRegIdTrib="IdTrib2"
+                   ResidenciaFiscal="ResidenciaFisc2"
+                   NumEstacion="2"
+                   NombreEstacion="Estacion2"
+                   NavegacionTrafico="Trafico2"
+                   FechaHoraSalidaLlegada="2024-09-23T12:30:00"
+                   TipoEstacion="Tipo2"
+                   DistanciaRecorrida="100.50">
+            <Domicilio
+                    Calle="Avenida Principal"
+                    NumeroExterior="123"
+                    NumeroInterior="A"
+                    Colonia="Centro"
+                    Localidad="Ciudad Ejemplo"
+                    Referencia="Cerca de la Plaza Central"
+                    Municipio="Municipio Ejemplo"
+                    Estado="Estado Ejemplo"
+                    Pais="MEX"
+                    CodigoPostal="12345" />
+
+        </Ubicacion>
+    </Ubicaciones>
+    <Mercancias
+            PesoBrutoTotal="1500.250"
+            UnidadPeso="KGM"
+            PesoNetoTotal="1400.000"
+            NumTotalMercancias="10"
+            CargoPorTasacion="100.00">
+        <Mercancia
+                BienesTransp="12345678"
+                ClaveSTCC="123456"
+                Descripcion="Electrodomésticos de cocina"
+                Cantidad="10.000000"
+                ClaveUnidad="E48"
+                Unidad="Cajas"
+                Dimensiones="30/40/30cm"
+                MaterialPeligroso="No"
+                CveMaterialPeligroso="No"
+                Embalaje="Si"
+                DescripEmbalaje="Tipo1"
+                PesoEnKg="25.500"
+                ValorMercancia="1500.00"
+                Moneda="MXN"
+                FraccionArancelaria="1234.56"
+                UUIDComercioExt="550e8400-e29b-41d4-a716-446655440000">
+            <Pedimentos
+                    Pedimento="230112345678901"/>
+            <GuiasIdentificacion
+                    NumeroGuiaIdentificacion="1234567890"
+                    DescripGuiaIdentificacion="Paquete de libros de texto"
+                    PesoGuiaIdentificacion="2.500"/>
+            <CantidadTransporta
+                    Cantidad="100.500000"
+                    IDOrigen="OR123456"
+                    IDDestino="DE654321"
+                    CvesTransporte="TRK"/>
+            <DetalleMercancia
+                    UnidadPesoMerc="MTR"
+                    PesoBruto="1500.500"
+                    PesoNeto="1400.200"
+                    PesoTara="100.300"
+                    NumPiezas="10"/>
+        </Mercancia>
+        <Autotransporte PermSCT="PERM001" NumPermisoSCT="NUMPERM12345">
+            <IdentificacionVehicular
+                    ConfigVehicular="ClaveConfig123"
+                    PlacaVM="ABC1234"
+                    AnioModeloVM="2020"/>
+            <Seguros
+                    AseguraRespCivil="Aseguradora XYZ"
+                    PolizaRespCivil="POL123456"
+                    AseguraMedAmbiente="Aseguradora ABC"
+                    PolizaMedAmbiente="POLMED789"
+                    AseguraCarga="Aseguradora DEF"
+                    PolizaCarga="POLCARG456"
+                    PrimaSeguro="1500.00">
+            </Seguros>
+            <Remolques>
+                <Remolque
+                        SubTipoRem="REM01"
+                        Placa="ABC1234"/>
+            </Remolques>
+        </Autotransporte>
+        <TransporteMaritimo
+                PermSCT="PERM002"
+                NumPermisoSCT="987654"
+                NombreAseg="Aseguradora ABC"
+                NumPolizaSeguro="POL987654"
+                TipoEmbarcacion="TIPO001"
+                Matricula="MATRICULA123"
+                NumeroOMI="IMO1234567"
+                NacionalidadEmbarc="MX"
+                UnidadesDeArqBruto="250.500"
+                TipoCarga="CARGA001"
+                NumCertITC="CERT123"
+                AnioEmbarcacion="2010"
+                NombreEmbarc="Embarcación XYZ"
+                Eslora="30.00"
+                Manga="8.50"
+                Calado="5.00"
+                LineaNaviera="Naviera 123"
+                NombreAgenteNaviero="Agente Naviero ABC"
+                NumAutorizacionNaviero="AUTH123"
+                NumViaje="TRIP001"
+                NumConocEmbarc="CONOC123">
+            <Contenedor MatriculaContenedor="ABC1234567D" TipoContenedor="CONT001" NumPrecinto="PRECINT001"/>
+        </TransporteMaritimo>
+        <TransporteAereo
+                PermSCT="PERM001"
+                NumPermisoSCT="123456"
+                MatriculaAeronave="ABC-123"
+                NombreAseg="Aseguradora XYZ"
+                NumPolizaSeguro="POL123456"
+                NumeroGuia="GUIDE123456789"
+                CodigoTransportista="CODE001"
+                LugarContrato="Ciudad de México"
+                RFCEmbarcador="RFC123456789"
+                NumRegIdTribEmbarc="REG123456"
+                ResidenciaFiscalEmbarc="MX"
+                NombreEmbarcador="Embarcador S.A. de C.V."/>
+        <TransporteFerroviario
+                TipoDeServicio="01"
+                TipoDeTrafico="A"
+                NombreAseg="Aseguradora Ejemplo"
+                NumPolizaSeguro="POL123456">
+            <DerechosDePaso
+                    TipoDerechoDePaso="DERECHO001"
+                    KilometrajePagado="15.50" />
+            <Carro TipoCarro="01"
+                    MatriculaCarro="CAR12345"
+                    GuiaCarro="GUIA123"
+                    ToneladasNetasCarro="15.500">
+                <Contenedor TipoContenedor="CTN001"
+                            PesoContenedorVacio="2.500"
+                            PesoNetoMercancia="13.000" />
+            </Carro>
+        </TransporteFerroviario>
+    </Mercancias>
+    <FiguraTransporte>
+        <TiposFigura TipoFigura="Figura1"
+                     RFCFigura="RFCFigura1"
+                     NumLicencia="12456"
+                     NombreFigura="Nombre1"
+                     NumRegIdTribFigura="IdTrib1"
+                     ResidenciaFiscalFigura="Residencia1">
+            <PartesTransporte ParteTransporte="Vehículo"/>
+            <Domicilio
+                    Calle="Avenida Principal"
+                    NumeroExterior="123"
+                    NumeroInterior="A"
+                    Colonia="Centro"
+                    Localidad="Ciudad Ejemplo"
+                    Referencia="Cerca de la Plaza Central"
+                    Municipio="Municipio Ejemplo"
+                    Estado="Estado Ejemplo"
+                    Pais="MEX"
+                    CodigoPostal="12345" />
+        </TiposFigura>
+    </FiguraTransporte>
+</CartaPorte>

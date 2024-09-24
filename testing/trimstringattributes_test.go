@@ -1,7 +1,9 @@
 package testing
 
 import (
-	comprobante2 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
+	comprobante2 "github.com/SaulEnriqueMR/kore-models/app/comprobante"
+	"github.com/SaulEnriqueMR/kore-models/app/helpers"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
@@ -19,55 +21,41 @@ func TestTrimStringAttributes(t *testing.T) {
 			Nombre: "NOMBRE",
 		},
 		Conceptos: []comprobante2.Concepto40{
-			comprobante2.Concepto40{
+			{
 				ClaveProdServ: "0000000   ",
 			},
 		},
 	}
-	comprobante2.TrimStringAttributes(&comprobante)
-
-	expectedVersion := "1.0"
-	if comprobante.Version != expectedVersion {
-		t.Errorf("Wrong version. Expected: %s, got: %s", expectedVersion, comprobante.Version)
-	}
-	expectedSello := "SELLO"
-	if comprobante.Sello != expectedSello {
-		t.Errorf("Wrong sello. Expected: %s, got: %s", expectedSello, comprobante.Sello)
-	}
-	expectedNoCertificado := "NO CERTIFICADO"
-	if comprobante.NoCertificado != expectedNoCertificado {
-		t.Errorf("Wrong NoCertificado. Expected: %s, got: %s", expectedNoCertificado, comprobante.NoCertificado)
-	}
-	expectedCertificado := "CERTIFICADO"
-	if comprobante.Certificado != expectedCertificado {
-		t.Errorf("Wrong Certificado. Expected: %s, got: %s", expectedCertificado, comprobante.Certificado)
-	}
-	expectedMoneda := "MONEDA"
-	if comprobante.Moneda != expectedMoneda {
-		t.Errorf("Wrong Moneda. Expected: %s, got: %s", expectedMoneda, comprobante.Moneda)
-	}
-	expectedTipoComprobante := "TIPO COMPROBANTE"
-	if comprobante.TipoComprobante != expectedTipoComprobante {
-		t.Errorf("Wrong TipoComprobante. Expected: %s, got: %s", expectedTipoComprobante, comprobante.TipoComprobante)
-	}
-	expectedExportacion := "EXPORTACION"
-	if comprobante.Exportacion != expectedExportacion {
-		t.Errorf("Wrong Exportacion. Expected: %s, got: %s", expectedExportacion, comprobante.Exportacion)
-	}
-
+	helpers.TrimStringAttributes(&comprobante)
+	assert.Equal(t, "1.0", comprobante.Version)
+	assert.Equal(t, "SELLO", comprobante.Sello)
+	assert.Equal(t, "NO CERTIFICADO", comprobante.NoCertificado)
+	assert.Equal(t, "CERTIFICADO", comprobante.Certificado)
+	assert.Equal(t, "MONEDA", comprobante.Moneda)
+	assert.Equal(t, "TIPO COMPROBANTE", comprobante.TipoComprobante)
+	assert.Equal(t, "EXPORTACION", comprobante.Exportacion)
 	expectedEmisor := comprobante2.Emisor40{
 		Rfc:    "RFC",
 		Nombre: "NOMBRE",
 	}
-	if comprobante.Emisor != expectedEmisor {
-		t.Errorf("Wrong Emisor. Expected: %v, got: %v", expectedEmisor, comprobante.Emisor)
+	assert.Equal(t, expectedEmisor, comprobante.Emisor)
+	expectedConceptos := []comprobante2.Concepto40{
+		{
+			ClaveProdServ: "0000000",
+		},
 	}
+	assert.Equal(t, expectedConceptos, comprobante.Conceptos)
+}
 
-	expectedConcepto := comprobante2.Concepto40{
-		ClaveProdServ: "0000000",
-	}
-	concepto1 := comprobante.Conceptos[0]
-	if expectedConcepto != concepto1 {
-		t.Errorf("Wrong Concepto. Expected: %v, got: %v", expectedConcepto, concepto1)
-	}
+func TestTrimAttributesAndText(t *testing.T) {
+	// Sample XML input
+	inputXML := []byte(`
+		<root>
+			<element attribute="   some value   ">   some text   </element>
+		</root>`)
+	// Trim the XML attributes and text
+	outputXML, err := helpers.TrimAttributesAndText(inputXML)
+	assert.NoError(t, err)
+	expectedXML := []byte(`<root><element attribute="some value">some text</element></root>`)
+	assert.Equal(t, string(outputXML), string(expectedXML))
 }

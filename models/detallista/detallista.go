@@ -1,6 +1,11 @@
 package detallista
 
-import "encoding/xml"
+import (
+	"encoding/xml"
+	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models"
+)
 
 type Detallista10 struct {
 	Type                            *string                         `xml:"type,attr" bson:"Type,omitempty"`
@@ -41,7 +46,12 @@ type ReferenceIdentification struct {
 
 type OrderIdentification struct {
 	ReferenceIdentification []ReferenceIdentification `xml:"referenceIdentification" bson:"ReferenceIdentification"`
-	ReferenceDate           *string                   `xml:"ReferenceDate" bson:"ReferenceDate,omitempty"`
+	ReferenceDate           *ReferenceDate            `xml:"ReferenceDate"`
+}
+
+type ReferenceDate struct {
+	ReferenceDateString string    `xml:",chardata"`
+	Date                time.Time `bson:"ReferenceDate"`
 }
 
 type AdditionalInformation struct {
@@ -49,8 +59,8 @@ type AdditionalInformation struct {
 }
 
 type DeliveryNote struct {
-	ReferenceIdentification []string `xml:"referenceIdentification" bson:"ReferenceIdentification"`
-	ReferenceDate           *string  `xml:"ReferenceDate" bson:"ReferenceDate,omitempty"`
+	ReferenceIdentification []string       `xml:"referenceIdentification" bson:"ReferenceIdentification"`
+	ReferenceDate           *ReferenceDate `xml:"ReferenceDate"`
 }
 
 type Buyer struct {
@@ -201,7 +211,7 @@ type AdditionalInformationLine struct {
 type CustomsLineItem struct {
 	Gln                          *string                      `xml:"gln" bson:"Gln,omitempty"`
 	AlternatePartyIdentification AlternatePartyIdentification `xml:"alternatePartyIdentification" bson:"AlternatePartyIdentification"`
-	ReferenceDate                string                       `xml:"ReferenceDate" bson:"ReferenceDate"`
+	ReferenceDate                ReferenceDate                `xml:"ReferenceDate"`
 	NameAndAddress               NameAndAddress               `xml:"nameAndAddress" bson:"NameAndAddress"`
 }
 
@@ -238,8 +248,9 @@ type ExtendedAttributes struct {
 }
 
 type LotNumber struct {
-	ProductionDate string `xml:"productionDate,attr" bson:"ProductionDate"`
-	Value          string `xml:",chardata" bson:"Value"`
+	ProductionDateString string    `xml:"productionDate,attr"`
+	ProductionDate       time.Time `bson:"ProductionDate"`
+	Value                string    `xml:",chardata" bson:"Value"`
 }
 
 type AllowanceChargeLineItem struct {
@@ -279,4 +290,57 @@ type TotalAllowanceCharge struct {
 	AllowanceOrChargeType string   `xml:"allowanceOrChargeType,attr" bson:"AllowanceOrChargeType"`
 	SpecialServicesType   *string  `xml:"specialServicesType" bson:"SpecialServicesType"`
 	Amount                *float64 `xml:"Amount" bson:"Amount,omitempty"`
+}
+
+func (c *Detallista10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias Detallista10
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*c = Detallista10(aux)
+	if aux.OrderIdentification.ReferenceDate.ReferenceDateString != "" {
+
+		fecha1, err := models.ParseDatetime(aux.OrderIdentification.ReferenceDate.ReferenceDateString)
+		if err != nil {
+			return err
+		}
+		c.OrderIdentification.ReferenceDate.Date = fecha1
+	}
+
+	if aux.DeliveryNote.ReferenceDate.ReferenceDateString != "" {
+		fecha1, err := models.ParseDatetime(aux.DeliveryNote.ReferenceDate.ReferenceDateString)
+		if err != nil {
+			return err
+		}
+		c.DeliveryNote.ReferenceDate.Date = fecha1
+	}
+
+	if aux.LineItem != nil {
+		for index1, lineItem := range *aux.LineItem {
+			if lineItem.Customs != nil {
+				for index2, custom := range *lineItem.Customs {
+					fecha, err := models.ParseDatetime(custom.ReferenceDate.ReferenceDateString)
+					if err != nil {
+						return err
+					}
+					(*(*c.LineItem)[index1].Customs)[index2].ReferenceDate.Date = fecha
+				}
+			}
+			if lineItem.ExtendedAttributes.LotNumber != nil {
+				for index2, lot := range lineItem.ExtendedAttributes.LotNumber {
+					fecha, err := models.ParseDatetime(lot.ProductionDateString)
+					if err != nil {
+						return err
+					}
+					(*(*c.LineItem)[index1].ExtendedAttributes).LotNumber[index2].ProductionDate = fecha
+				}
+			}
+		}
+	}
+
+	return nil
 }

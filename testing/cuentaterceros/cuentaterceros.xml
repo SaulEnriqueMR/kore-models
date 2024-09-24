@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PorCuentadeTerceros xmlns="http://www.sat.gob.mx/terceros" version="1.1" rfc="AAA010101AAA" nombre="Juan Pérez">
+    <InformacionFiscalTercero calle="Av. Siempre Viva" noExterior="123" colonia="Centro" municipio="Ciudad" estado="Estado" pais="México" codigoPostal="01234"/>
+    <InformacionAduanera numero="123456" fecha="2024-09-23" aduana="Aduana Ejemplo"/>
+    <Parte cantidad="10.00" descripcion="Componente X" valorUnitario="100.00" importe="1000.00">
+        <InformacionAduanera numero="123456" fecha="2024-09-23" aduana="Aduana Ejemplo"/>
+    </Parte>
+    <CuentaPredial numero="00000123"/>
+    <Impuestos>
+        <Retenciones>
+            <Retencion impuesto="ISR" importe="150.00"/>
+        </Retenciones>
+        <Traslados>
+            <Traslado impuesto="IVA" tasa="16.00" importe="160.00"/>
+        </Traslados>
+    </Impuestos>
+</PorCuentadeTerceros>

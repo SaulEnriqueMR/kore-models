@@ -18,9 +18,9 @@ func GetDetallista10ForTest(filename string, t *testing.T) (detallista10.Detalli
 	return parsed, errUnmashal
 }
 
-func TestFullImpLocales10(t *testing.T) {
-	implocales, _ := GetDetallista10ForTest("./detallista.xml", t)
-	InternalTestBaseAttributes(t, implocales)
+func TestFullDetallistas10(t *testing.T) {
+	detallista, _ := GetDetallista10ForTest("./detallista.xml", t)
+	InternalTestBaseAttributes(t, detallista)
 }
 func InternalTestBaseAttributes(t *testing.T, detallista detallista10.Detallista10) {
 	assert.Equal(t, "SimpleInvoiceType", *detallista.Type)
@@ -63,14 +63,13 @@ func InternalSpecialInstruction(t *testing.T, specials *[]detallista10.SpecialIn
 
 func InternalOrderIdentification(t *testing.T, order detallista10.OrderIdentification) {
 	assert.NotNil(t, order)
-	assert.Equal(t, "2016-02-07", *order.ReferenceDate)
+	assert.Equal(t, "2016-02-07", order.ReferenceDate.ReferenceDateString)
 	InternalReferenceIdentification1(t, order.ReferenceIdentification)
 }
 
 func InternalReferenceIdentification1(t *testing.T, references []detallista10.ReferenceIdentification) {
 	assert.NotNil(t, references)
 	assert.Equal(t, len(references), 2)
-	log.Println(references)
 	reference := (references)[0]
 	assert.Equal(t, "ON", reference.Type)
 	assert.Equal(t, "81283939", reference.Value)
@@ -84,14 +83,13 @@ func InternalAdditionalInformation(t *testing.T, additional *detallista10.Additi
 func InternalReferenceIdentification2(t *testing.T, references []detallista10.ReferenceIdentification) {
 	assert.NotNil(t, references)
 	assert.Equal(t, len(references), 2)
-	log.Println(references)
 	reference := (references)[1]
 	assert.Equal(t, "AAE", reference.Type)
 	assert.Equal(t, "000001", reference.Value)
 }
 func InternalDeliveryNote(t *testing.T, delivery detallista10.DeliveryNote) {
 	assert.NotNil(t, delivery)
-	assert.Equal(t, "2016-04-07", *delivery.ReferenceDate)
+	assert.Equal(t, "2016-04-07", *&delivery.ReferenceDate.ReferenceDateString)
 	references := delivery.ReferenceIdentification
 	assert.NotNil(t, references)
 	assert.Equal(t, len(references), 2)
@@ -269,7 +267,7 @@ func InternalCustomsLine(t *testing.T, customs *[]detallista10.CustomsLineItem) 
 	assert.Equal(t, "1111111111111", *custom.Gln)
 	assert.Equal(t, "1239K23092", custom.AlternatePartyIdentification.Value)
 	assert.Equal(t, "TN", custom.AlternatePartyIdentification.Type)
-	assert.Equal(t, "2016-04-07", custom.ReferenceDate)
+	assert.Equal(t, "2016-04-07", custom.ReferenceDate.ReferenceDateString)
 	assert.Equal(t, "1239K23092", custom.AlternatePartyIdentification.Value)
 	assert.Equal(t, "TIJUANA", *custom.NameAndAddress.Name)
 }
@@ -294,7 +292,7 @@ func InternalExtendedAttributes(t *testing.T, extended *detallista10.ExtendedAtt
 	lots := extended.LotNumber
 	assert.Equal(t, len(lots), 1)
 	lot := lots[0]
-	assert.Equal(t, "2016-04-07", lot.ProductionDate)
+	assert.Equal(t, "2016-04-07", lot.ProductionDateString)
 	assert.Equal(t, "1123", lot.Value)
 }
 

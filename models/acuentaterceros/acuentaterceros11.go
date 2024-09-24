@@ -1,5 +1,12 @@
 package acuentaterceros
 
+import (
+	"encoding/xml"
+	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models"
+)
+
 type ACuentaTerceros11 struct {
 	Version                  string                              `xml:"version,attr" bson:"Version"`
 	Rfc                      string                              `xml:"rfc,attr" bson:"Rfc"`
@@ -25,9 +32,10 @@ type InformacionFiscalTerceroTerceros11 struct {
 }
 
 type InformacionAduaneraTerceros11 struct {
-	Numero string  `xml:"numero,attr" bson:"Numero"`
-	Fecha  string  `xml:"fecha,attr" bson:"Fecha"`
-	Aduana *string `xml:"aduana,attr" bson:"Aduana,omitempty"`
+	Numero      string    `xml:"numero,attr" bson:"Numero"`
+	FechaString string    `xml:"fecha,attr"`
+	Fecha       time.Time `bson:"Fecha"`
+	Aduana      *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
 }
 
 type ParteTerceros11 struct {
@@ -58,4 +66,26 @@ type TrasladoTerceros11 struct {
 	Impuesto string  `xml:"impuesto,attr" bson:"Impuesto"`
 	Tasa     float64 `xml:"tasa,attr" bson:"Tasa"`
 	Importe  float64 `xml:"importe,attr" bson:"Importe"`
+}
+
+func (r *ACuentaTerceros11) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias ACuentaTerceros11
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*r = ACuentaTerceros11(aux)
+
+	if aux.InformacionAduanera != nil {
+		fechaEmision, err := models.ParseDatetime(aux.InformacionAduanera.FechaString)
+		if err != nil {
+			return err
+		}
+		r.InformacionAduanera.Fecha = fechaEmision
+	}
+
+	return nil
 }

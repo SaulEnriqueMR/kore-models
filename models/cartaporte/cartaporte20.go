@@ -156,7 +156,7 @@ type TransporteMaritimoCartaPorte20 struct {
 	NumAutorizacionNaviero string                   `xml:"NumAutorizacionNaviero,attr" bson:"NumAutorizacionNaviero"`
 	NumViaje               *string                  `xml:"NumViaje,attr" bson:"NumViaje,omitempty"`
 	NumConocEmbarc         *string                  `xml:"NumConocEmbarc,attr" bson:"NumConocEmbarc,omitempty"`
-	Contenedor             []ContenedorCartaPorte20 `xml:"Contenedor,attr" bson:"Contenedor"`
+	Contenedor             []ContenedorCartaPorte20 `xml:"Contenedor" bson:"Contenedor"`
 }
 
 type ContenedorCartaPorte20 struct {
@@ -185,7 +185,7 @@ type TransporteFerroviarioCartaPorte20 struct {
 	TipoTrafico     string                     `xml:"TipoDeTrafico,attr" bson:"TipoTrafico"`
 	NombreAseg      *string                    `xml:"NombreAseg,attr" bson:"NombreAseg,omitempty"`           // Cifrado
 	NumPolizaSeguro *string                    `xml:"NumPolizaSeguro,attr" bson:"NumPolizaSeguro,omitempty"` // Cifrado
-	DerechoPaso     *[]DerechoPasoCartaPorte20 `xml:"DerechoDePaso" bson:"DerechoPaso,omitempty"`
+	DerechoPaso     *[]DerechoPasoCartaPorte20 `xml:"DerechosDePaso" bson:"DerechoPaso,omitempty"`
 	Carro           []CarroCartaPorte20        `xml:"Carro" bson:"Carro"`
 }
 
@@ -195,11 +195,11 @@ type DerechoPasoCartaPorte20 struct {
 }
 
 type CarroCartaPorte20 struct {
-	TipoCarro           string                    `xml:"TipoCarro,attr" bson:"TipoCarro"`
-	MatriculaCarro      string                    `xml:"MatriculaCarro,attr" bson:"MatriculaCarro"` // Cifrado
-	GuiaCarro           string                    `xml:"GuiaCarro,attr" bson:"GuiaCarro"`
-	ToneladasNetasCarro float64                   `xml:"ToneladasNetasCarro" bson:"ToneladasNetasCarro"`
-	Contenedor          *[]ContenedorCartaPorte20 `xml:"Contenedor" bson:"Contenedor,omitempty"`
+	TipoCarro           string                         `xml:"TipoCarro,attr" bson:"TipoCarro"`
+	MatriculaCarro      string                         `xml:"MatriculaCarro,attr" bson:"MatriculaCarro"` // Cifrado
+	GuiaCarro           string                         `xml:"GuiaCarro,attr" bson:"GuiaCarro"`
+	ToneladasNetasCarro float64                        `xml:"ToneladasNetasCarro,attr" bson:"ToneladasNetasCarro"`
+	Contenedor          *[]ContenedorCarroCartaPorte20 `xml:"Contenedor" bson:"Contenedor,omitempty"`
 }
 
 type ContenedorCarroCartaPorte20 struct {

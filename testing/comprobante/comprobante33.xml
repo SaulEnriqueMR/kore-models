@@ -1,0 +1,89 @@
+<Comprobante
+        Version="3.3"
+        Serie="A"
+        Folio="123456"
+        Fecha="2023-09-24T14:30:00"
+        Sello="Base64SelloDigital"
+        FormaPago="01"
+        NoCertificado="12345678901234567890"
+        Certificado="Base64Certificado"
+        CondicionesDePago="Contado"
+        SubTotal="1000.00"
+        Descuento="50.00"
+        Moneda="MXN"
+        TipoCambio="1.000000"
+        Total="950.00"
+        TipoDeComprobante="I"
+        MetodoPago="PUE"
+        LugarExpedicion="01234"
+        Confirmacion="ABCDE">
+    <CfdiRelacionados TipoRelacion="01">
+        <CfdiRelacionado UUID="123e4567-e89b-12d3-a456-426614174000"/>
+    </CfdiRelacionados>
+    <Emisor Rfc="XAXX010101000"
+            Nombre="Empresa Ejemplo S.A. de C.V."
+            RegimenFiscal="601"/>
+    <Receptor
+            Rfc="XAXX010101000"
+            Nombre="Juan Pérez"
+            ResidenciaFiscal="MEX"
+            NumRegIdTrib="1234567890"
+            UsoCFDI="G03"/>
+    <Conceptos>
+        <Concepto
+                ClaveProdServ="01010101"
+                NoIdentificacion="SKU12345"
+                Cantidad="10.000000"
+                ClaveUnidad="H87"
+                Unidad="Piezas"
+                Descripcion="Descripción del producto o servicio"
+                ValorUnitario="100.00"
+                Importe="1000.00"
+                Descuento="50.00">
+            <Impuestos>
+                <Traslados>
+                    <Traslado
+                            Base="1000.00"
+                            Impuesto="002"
+                            TipoFactor="Tasa"
+                            TasaOCuota="0.16"
+                            Importe="160.00"/>
+                </Traslados>
+                <Retenciones>
+                    <Retencion
+                            Base="1000.00"
+                            Impuesto="003"
+                            TipoFactor="Tasa"
+                            TasaOCuota="0.10"
+                            Importe="100.00"/>
+                </Retenciones>
+            </Impuestos>
+            <InformacionAduanera NumeroPedimento="230112340000123"/>
+            <CuentaPredial Numero="12345678901234567890"/>
+            <Parte
+                    ClaveProdServ="01010101"
+                    NoIdentificacion="PN123456"
+                    Cantidad="5.000000"
+                    Unidad="Piezas"
+                    Descripcion="Parte de repuesto para maquinaria"
+                    ValorUnitario="150.00"
+                    Importe="750.00">
+                <InformacionAduanera NumeroPedimento="21991234567890"/>
+            </Parte>
+        </Concepto>
+    </Conceptos>
+    <Impuestos TotalImpuestosRetenidos="100.00" TotalImpuestosTrasladados="200.00">
+        <Retenciones>
+            <Retencion Impuesto="001" Importe="100.00" />
+        </Retenciones>
+        <Traslados>
+            <Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="200.00" />
+        </Traslados>
+    </Impuestos>
+    <Complemento>
+        <ImpuestosLocales version="1.0" TotaldeRetenciones="1500.00" TotaldeTraslados="3000.00">
+            <RetencionesLocales ImpLocRetenido="ISR" TasadeRetencion="15.00" Importe="1500.00"/>
+            <TrasladosLocales ImpLocTrasladado="IVA" TasadeTraslado="16.00" Importe="3000.00"/>
+        </ImpuestosLocales>
+    </Complemento>
+</Comprobante>

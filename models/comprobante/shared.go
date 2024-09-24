@@ -16,7 +16,7 @@ type ComplementoConcepto struct {
 type Complemento struct {
 	CartaPorte       *[]cartaporte.CartaPorte              `xml:"CartaPorte" bson:"CartaPorte,omitempty"`
 	ComercioExterior *[]comercioexterior.ComercioExterior  `xml:"ComercioExterior" bson:"ComercioExterior,omitempty"`
-	ImpuestoLocales  *[]impuestoslocales.ImpuestoLocales10 `xml:"ImpuestoLocales" bson:"ImpuestosLocales,omitempty"`
+	ImpuestoLocales  *[]impuestoslocales.ImpuestoLocales10 `xml:"ImpuestosLocales" bson:"ImpuestosLocales,omitempty"`
 	// Nomina              *nomina.Nomina                           `xml:"Nomina" bson:"Nomina,omitempty"`
 	// Pagos               *pagos.Pagos                             `xml:"Pagos" bson:"Pagos,omitempty"`
 	// TimbreFiscalDigital *timbrefiscaldigital.TimbreFiscalDigital `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`

@@ -116,9 +116,9 @@ type DocumentacionAduaneraCartaPorte30 struct {
 }
 
 type GuiasIdentificacionCartaPorte30 struct {
-	NumeroGuiaIdentificacion  string  `xml:"NumeroGuiaIdentificacion" bson:"NumeroGuiaIdentificacion"`
-	DescripGuiaIdentificacion string  `xml:"DescripGuiaIdentificacion" bson:"DescripGuiaIdentificacion"`
-	PesoGuiaIdentificacion    float64 `xml:"PesoGuiaIdentificacion" bson:"PesoGuiaIdentificacion"`
+	NumeroGuiaIdentificacion  string  `xml:"NumeroGuiaIdentificacion,attr" bson:"NumeroGuiaIdentificacion"`
+	DescripGuiaIdentificacion string  `xml:"DescripGuiaIdentificacion,attr" bson:"DescripGuiaIdentificacion"`
+	PesoGuiaIdentificacion    float64 `xml:"PesoGuiaIdentificacion,attr" bson:"PesoGuiaIdentificacion"`
 }
 
 type CantidadTransportaCartaPorte30 struct {

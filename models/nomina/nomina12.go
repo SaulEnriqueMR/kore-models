@@ -7,6 +7,7 @@ import (
 	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
+// Nomina12 Presente en Comprobante 3.3 y 4.0
 type Nomina12 struct {
 	Version                string                 `xml:"Version,attr" bson:"Version"`
 	TipoNomina             string                 `xml:"TipoNomina,attr"`

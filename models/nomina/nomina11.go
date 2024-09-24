@@ -1,5 +1,6 @@
 package nomina
 
+// Nomina11 Presente en Comprobante 3.2 y 3.3
 type Nomina11 struct {
 	Version                string                  `xml:"Version,attr" bson:"Version"`
 	RegistroPatronal       *string                 `xml:"RegistroPatronal,attr" bson:"RegistroPatronal,omitempty"` // Cifrado

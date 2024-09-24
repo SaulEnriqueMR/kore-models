@@ -2,11 +2,11 @@ package comprobante
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/app/helpers"
+	"github.com/SaulEnriqueMR/kore-models/app/documentofiscaldigital"
 )
 
 type Comprobante33 struct {
-	helpers.DocumentoFiscalDigital
+	documentofiscaldigital.DocumentoFiscalDigital
 	Version          string              `xml:"Version,attr" bson:"Version"`
 	Serie            *string             `xml:"Serie,attr" bson:"Serie,omitempty"`
 	Folio            *string             `xml:"Folio,attr" bson:"Folio,omitempty"`
@@ -143,7 +143,7 @@ func (c *Comprobante33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		return err
 	}
 
-	fechaEmision, err := helpers.ParseDatetime(aux.Fecha)
+	fechaEmision, err := documentofiscaldigital.ParseDatetime(aux.Fecha)
 	if err != nil {
 		return err
 	}

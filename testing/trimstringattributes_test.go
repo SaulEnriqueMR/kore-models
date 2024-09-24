@@ -2,7 +2,7 @@ package testing
 
 import (
 	comprobante2 "github.com/SaulEnriqueMR/kore-models/app/comprobante"
-	"github.com/SaulEnriqueMR/kore-models/app/helpers"
+	"github.com/SaulEnriqueMR/kore-models/app/documentofiscaldigital"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -26,7 +26,7 @@ func TestTrimStringAttributes(t *testing.T) {
 			},
 		},
 	}
-	helpers.TrimStringAttributes(&comprobante)
+	documentofiscaldigital.TrimStringAttributes(&comprobante)
 	assert.Equal(t, "1.0", comprobante.Version)
 	assert.Equal(t, "SELLO", comprobante.Sello)
 	assert.Equal(t, "NO CERTIFICADO", comprobante.NoCertificado)
@@ -54,7 +54,7 @@ func TestTrimAttributesAndText(t *testing.T) {
 			<element attribute="   some value   ">   some text   </element>
 		</root>`)
 	// Trim the XML attributes and text
-	outputXML, err := helpers.TrimAttributesAndText(inputXML)
+	outputXML, err := documentofiscaldigital.TrimAttributesAndText(inputXML)
 	assert.NoError(t, err)
 	expectedXML := []byte(`<root><element attribute="some value">some text</element></root>`)
 	assert.Equal(t, string(outputXML), string(expectedXML))

@@ -2,8 +2,14 @@ package retenciones
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/app/timbrefiscaldigital"
+	"github.com/SaulEnriqueMR/kore-models/models"
+	"github.com/SaulEnriqueMR/kore-models/models/dividendos"
+	"github.com/SaulEnriqueMR/kore-models/models/enajenaciondeacciones"
+	"github.com/SaulEnriqueMR/kore-models/models/intereses"
+	"github.com/SaulEnriqueMR/kore-models/models/pagosaextranjeros"
 )
 
 type Retenciones20 struct {
@@ -21,6 +27,7 @@ type Retenciones20 struct {
 	Receptor             Receptor20              `xml:"Receptor" bson:"Receptor"`
 	Periodo              Periodo20               `xml:"Periodo" bson:"Periodo"`
 	Totales              Totales20               `xml:"Totales" bson:"Totales"`
+	Complemento          *ComplementoReten20     `xml:"Complemento" bson:"Complemento,omitempty"`
 	/* Atributo convertido */
 	FechaEmision time.Time `bson:"FechaEmision"`
 	/* Atributos extraidos desde tfd */
@@ -78,6 +85,14 @@ type ImpuestoRetenido20 struct {
 	Impuesto *string  `xml:"ImpuestoRet,attr" bson:"ImpuestoRet,omitempty"`
 	Monto    float64  `xml:"MontoRet,attr" bson:"MontoRet"`
 	TipoPago string   `xml:"TipoPagoRet,attr" bson:"TipoPagoRet"`
+}
+
+type ComplementoReten20 struct {
+	Dividendos          *dividendos.Dividendos10                       `xml:"Dividendos" bson:"Dividendos,omitempty"`
+	EnajenacionAcciones *enajenaciondeacciones.EnajenacionDeAcciones10 `xml:"EnajenaciondeAcciones" bson:"EnajenacionAcciones,omitempty"`
+	Intereses           *intereses.Intereses10                         `xml:"Intereses" bson:"Intereses,omitempty"`
+	PagosAExtranjeros   *pagosaextranjeros.Pagosaextranjeros10         `xml:"Pagosaextranjeros" bson:"PagosAExtranjeros,omitempty"`
+	TimbreFiscalDigital *timbrefiscaldigital.TimbreFiscalDigital       `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`
 }
 
 func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

@@ -1,12 +1,13 @@
 package comprobante
 
 import (
-	"github.com/SaulEnriqueMR/kore-models/models/cartaporte"
-	"github.com/SaulEnriqueMR/kore-models/models/comercioexterior"
-	impuestoslocales "github.com/SaulEnriqueMR/kore-models/models/implocales"
 	"reflect"
 	"strings"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models/cartaporte"
+	"github.com/SaulEnriqueMR/kore-models/models/comercioexterior"
+	impuestoslocales "github.com/SaulEnriqueMR/kore-models/models/impuestoslocales"
 )
 
 type ComplementoConcepto struct {

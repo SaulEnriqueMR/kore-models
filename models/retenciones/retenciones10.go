@@ -2,23 +2,31 @@ package retenciones
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/app/timbrefiscaldigital"
+	"github.com/SaulEnriqueMR/kore-models/models"
+	"github.com/SaulEnriqueMR/kore-models/models/dividendos"
+	"github.com/SaulEnriqueMR/kore-models/models/enajenaciondeacciones"
+	"github.com/SaulEnriqueMR/kore-models/models/intereses"
+	"github.com/SaulEnriqueMR/kore-models/models/pagosaextranjeros"
 )
 
 type Retenciones10 struct {
-	Version              string     `xml:"Version,attr" bson:"Version"`
-	Folio                *string    `xml:"FolioInt,attr" bson:"Folio,omitempty"`
-	Sello                string     `xml:"Sello,attr" bson:"Sello"`
-	NoCertificado        string     `xml:"NumCert,attr" bson:"NoCertificado"`
-	Certificado          string     `xml:"Cert,attr" bson:"Certificado"`
-	FechaExp             string     `xml:"FechaExp,attr"`
-	ClaveRetencion       string     `xml:"CveRetenc,attr" bson:"ClaveRetencion"`
-	DescripcionRetencion *string    `xml:"DescRetenc,attr" bson:"DescripcionRetencion,omitempty"`
-	Emisor               Emisor10   `xml:"Emisor" bson:"Emisor"`
-	Receptor             Receptor10 `xml:"Receptor" bson:"Receptor"`
-	Periodo              Periodo10  `xml:"Periodo" bson:"Periodo"`
-	Totales              Totales10  `xml:"Totales" bson:"Totales"`
+	Version              string              `xml:"Version,attr" bson:"Version"`
+	Folio                *string             `xml:"FolioInt,attr" bson:"Folio,omitempty"`
+	Sello                string              `xml:"Sello,attr" bson:"Sello"`
+	NoCertificado        string              `xml:"NumCert,attr" bson:"NoCertificado"`
+	Certificado          string              `xml:"Cert,attr" bson:"Certificado"`
+	FechaExp             string              `xml:"FechaExp,attr"`
+	ClaveRetencion       string              `xml:"CveRetenc,attr" bson:"ClaveRetencion"`
+	DescripcionRetencion *string             `xml:"DescRetenc,attr" bson:"DescripcionRetencion,omitempty"`
+	Emisor               Emisor10            `xml:"Emisor" bson:"Emisor"`
+	Receptor             Receptor10          `xml:"Receptor" bson:"Receptor"`
+	Periodo              Periodo10           `xml:"Periodo" bson:"Periodo"`
+	Totales              Totales10           `xml:"Totales" bson:"Totales"`
+	Complemento          *ComplementoReten10 `xml:"Complemento" bson:"Complemento,omitempty"`
+
 	/* Atributo convertido */
 	FechaEmision time.Time `bson:"FechaEmision"`
 	/* Atributos extraidos desde tfd */
@@ -53,6 +61,14 @@ type Periodo10 struct {
 	MesInicio string `xml:"MesIni,attr" bson:"MesInicio"`
 	MesFin    string `xml:"MesFin,attr" bson:"MesFin"`
 	Ejercicio string `xml:"Ejerc,attr" bson:"Ejercicio"`
+}
+
+type ComplementoReten10 struct {
+	Dividendos          *dividendos.Dividendos10                       `xml:"Dividendos" bson:"Dividendos,omitempty"`
+	EnajenacionAcciones *enajenaciondeacciones.EnajenacionDeAcciones10 `xml:"EnajenacionDeAcciones" bson:"EnajenacionAcciones,omitempty"`
+	Intereses           *intereses.Intereses10                         `xml:"Intereses" bson:"Intereses,omitempty"`
+	PagosAExtranjeros   *pagosaextranjeros.Pagosaextranjeros10         `xml:"PagosAExtranjeros" bson:"PagosAExtranjeros,omitempty"`
+	TimbreFiscalDigital *timbrefiscaldigital.TimbreFiscalDigital       `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`
 }
 
 type Totales10 struct {

@@ -59,7 +59,7 @@ type MercanciaComercioExterior10 struct {
 }
 
 type DescripcionesEspecificasComercioExterior10 struct {
-	Marca       string  `xml:"ValorDolares,attr" bson:"Marca"`
+	Marca       string  `xml:"Marca,attr" bson:"Marca"`
 	Modelo      *string `xml:"Modelo,attr" bson:"Modelo,omitempty"`
 	SubModelo   *string `xml:"SubModelo,attr" bson:"SubModelo,omitempty"`
 	NumeroSerie *string `xml:"NumeroSerie,attr" bson:"NumeroSerie,omitempty"`

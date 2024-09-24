@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComercioExterior Version="1.1"
+    TipoOperacion="EXPORTACION"
+    ClaveDePedimento="A1"
+    MotivoTraslado="01"
+    CertificadoOrigen="1"
+    NumCertificadoOrigen="123456789012"
+    NumeroExportadorConfiable="ABC123456"
+    Incoterm="CIF"
+    Subdivision="0"
+    Observaciones="Este es un ejemplo de comercio exterior."
+    TipoCambioUSD="20.50"
+    TotalUSD="10000.00">
+    <Emisor Curp="ABC123456789">
+        <Domicilio Calle="Av. Reforma"
+            NumeroExterior="123"
+            NumeroInterior="456"
+            Colonia="Centro"
+            Localidad="Cuauhtémoc"
+            Referencia="Cerca del ángel de la independencia"
+            Municipio="Cuauhtémoc"
+            Estado="DF"
+            Pais="MEX"
+            CodigoPostal="06000" />
+    </Emisor>
+    <Propietario NumRegIdTrib="RFC123456789" ResidenciaFiscal="MEX" />
+    <Propietario NumRegIdTrib="RFC123456789" ResidenciaFiscal="MEX" />
+    <Propietario NumRegIdTrib="RFC123456789" ResidenciaFiscal="MEX" />
+    <Receptor NumRegIdTrib="RFC123456789">
+        <Domicilio
+            Calle="Av. Insurgentes Sur"
+            NumeroExterior="123"
+            NumeroInterior="A"
+            Colonia="Roma"
+            Localidad="Ciudad de México"
+            Referencia="Cerca del parque"
+            Municipio="Benito Juárez"
+            Estado="Ciudad de México"
+            Pais="MEX"
+            CodigoPostal="06760" />
+    </Receptor>
+    <Destinatario
+        NumRegIdTrib="RFC987654321"
+        Nombre="Juan Pérez">
+        <Domicilio
+            Calle="Calle de la Paz"
+            NumeroExterior="45"
+            NumeroInterior="B"
+            Colonia="Centro"
+            Localidad="Ciudad de México"
+            Referencia="Cerca de la Plaza"
+            Municipio="Cuauhtémoc"
+            Estado="Ciudad de México"
+            Pais="MEX"
+            CodigoPostal="06000" />
+    </Destinatario>
+    <Mercancias>
+        <Mercancia
+            NoIdentificacion="ABC123456"
+            ValorDolares="1500.00">
+            <DescripcionesEspecificas Marca="MarcaX" Modelo="ModeloY" SubModelo="SubModeloZ"
+                NumeroSerie="123456789" />
+                <DescripcionesEspecificas Marca="MarcaX" Modelo="ModeloY" SubModelo="SubModeloZ"
+                NumeroSerie="123456789" />
+            <DescripcionesEspecificas Marca="MarcaA" />
+        </Mercancia>
+        <Mercancia
+            FraccionArancelaria="123456"
+            CantidadAduana="10"
+            UnidadAduana="PZ"
+            ValorUnitarioAduana="150.00" />
+    </Mercancias>
+</ComercioExterior>

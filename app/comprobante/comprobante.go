@@ -25,18 +25,22 @@ func (c *Comprobante) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 		if err := d.DecodeElement(&comp32, &start); err != nil {
 			return err
 		}
+		c.Comprobante32 = &comp32
 	}
 	if Version == "3.3" {
 		var comp33 Comprobante33
 		if err := d.DecodeElement(&comp33, &start); err != nil {
 			return err
 		}
+		c.Comprobante33 = &comp33
 	}
 	if Version == "4.0" {
 		var comp40 Comprobante40
 		if err := d.DecodeElement(&comp40, &start); err != nil {
 			return err
 		}
+		c.Comprobante40 = &comp40
 	}
+
 	return nil
 }

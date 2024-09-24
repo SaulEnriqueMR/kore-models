@@ -3,6 +3,7 @@ package comprobante
 import (
 	"encoding/xml"
 	"github.com/SaulEnriqueMR/kore-models/app/documentofiscaldigital"
+	"strings"
 )
 
 type Comprobante33 struct {
@@ -150,6 +151,14 @@ func (c *Comprobante33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 
 	*c = Comprobante33(aux)
 	c.FechaEmision = fechaEmision
+
+	if c.Complemento.TimbreFiscalDigital != nil {
+		tfd := c.Complemento.TimbreFiscalDigital.TimbreFiscalDigital11
+		if tfd != nil {
+			c.FechaTimbrado = tfd.FechaTimbrado
+			c.Uuid = strings.ToUpper(tfd.Uuid)
+		}
+	}
 
 	return nil
 }

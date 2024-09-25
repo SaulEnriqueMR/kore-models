@@ -2,15 +2,16 @@ package complementoconcepto
 
 import (
 	"encoding/xml"
-	pagoespecie2 "github.com/SaulEnriqueMR/kore-models/models/complemento/complementoconcepto"
+	"testing"
+
+	pagoespecie2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/pagoespecie"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
-func GetPagoEnEspecie10ForTest(filename string, t *testing.T) (pagoespecie2.PagoEnEspecie10, error) {
+func GetPagoEnEspecie10ForTest(filename string, t *testing.T) (pagoespecie2.PagoEspecie10, error) {
 	data := testing2.GetFileContentForTest(filename, t)
-	var parsed pagoespecie2.PagoEnEspecie10
+	var parsed pagoespecie2.PagoEspecie10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
 	return parsed, errUnmarshal

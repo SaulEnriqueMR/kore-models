@@ -2,10 +2,11 @@ package complementoconcepto
 
 import (
 	"encoding/xml"
-	obrasantiguedades2 "github.com/SaulEnriqueMR/kore-models/models/complemento/complementoconcepto"
+	"testing"
+
+	obrasantiguedades2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/obrasantiguedades"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetObrasAntiguedades10ForTest(filename string, t *testing.T) (obrasantiguedades2.ObrasAntiguedades10, error) {

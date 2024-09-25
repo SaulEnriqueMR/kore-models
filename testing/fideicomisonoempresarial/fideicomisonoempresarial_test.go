@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	fideicomiso1 "github.com/SaulEnriqueMR/kore-models/models/fideicomisonoempresarial"
+	fideicomiso1 "github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/fideicomisonoempresarial"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

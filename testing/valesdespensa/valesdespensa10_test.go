@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	valesdespensa1 "github.com/SaulEnriqueMR/kore-models/models/valesdespensa"
+	valesdespensa1 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/valesdespensa"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

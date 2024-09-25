@@ -2,10 +2,11 @@ package complementoconcepto
 
 import (
 	"encoding/xml"
-	registrofiscal "github.com/SaulEnriqueMR/kore-models/models/complemento/complementoconcepto"
+	"testing"
+
+	registrofiscal "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/cfdiregistrofiscal"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetCfdiRegistroFiscalForTest(filename string, t *testing.T) (registrofiscal.CfdiRegistroFiscal10, error) {

@@ -2,10 +2,11 @@ package retenciones
 
 import (
 	"encoding/xml"
-	platdigital2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/retenciones"
+	"testing"
+
+	platdigital2 "github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/serviciosplataformastecnologicas"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetServicioPlataformasDigitalesForTest(filename string, t *testing.T) (platdigital2.ServiciosPlataformasTecnologicas10, error) {

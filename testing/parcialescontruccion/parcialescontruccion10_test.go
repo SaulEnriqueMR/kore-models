@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	parciales1 "github.com/SaulEnriqueMR/kore-models/models/parcialesconstruccion"
+	parciales1 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/parcialesconstruccion"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

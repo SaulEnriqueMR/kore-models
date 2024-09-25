@@ -5,7 +5,7 @@ import (
 	"log"
 	"testing"
 
-	cartaporte1 "github.com/SaulEnriqueMR/kore-models/models/cartaporte"
+	cartaporte1 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/cartaporte"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

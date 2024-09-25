@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	dividendos1 "github.com/SaulEnriqueMR/kore-models/models/dividendos"
+	dividendos1 "github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/dividendos"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

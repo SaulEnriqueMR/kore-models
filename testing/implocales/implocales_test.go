@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	implocales10 "github.com/SaulEnriqueMR/kore-models/models/impuestoslocales"
+	implocales10 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/impuestoslocales"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

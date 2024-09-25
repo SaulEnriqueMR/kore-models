@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	turispasajextra1 "github.com/SaulEnriqueMR/kore-models/models/turistapasajeroextranjero"
+	turispasajextra1 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/turistapasajeroextranjero"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

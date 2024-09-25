@@ -2,15 +2,16 @@ package retenciones
 
 import (
 	"encoding/xml"
-	opderivados2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/retenciones"
+	"testing"
+
+	opderivados2 "github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/operacionesderivados"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
-func GetOperacioneConDerivados10ForTest(filename string, t *testing.T) (opderivados2.OperacionesConDerivados10, error) {
+func GetOperacioneConDerivados10ForTest(filename string, t *testing.T) (opderivados2.OperacionesDerivados10, error) {
 	data := testing2.GetFileContentForTest(filename, t)
-	var parsed opderivados2.OperacionesConDerivados10
+	var parsed opderivados2.OperacionesDerivados10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
 	return parsed, errUnmarshal

@@ -2,10 +2,11 @@ package cartaporte
 
 import (
 	"encoding/xml"
-	cartaporte2 "github.com/SaulEnriqueMR/kore-models/models/cartaporte"
+	"testing"
+
+	cartaporte2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/cartaporte"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetCartaPorte20ForTest(filename string, t *testing.T) (cartaporte2.CartaPorte20, error) {

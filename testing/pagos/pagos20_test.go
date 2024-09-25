@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	pagos20 "github.com/SaulEnriqueMR/kore-models/models/pagos"
+	pagos20 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/pagos"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

@@ -2,10 +2,11 @@ package complementoconcepto
 
 import (
 	"encoding/xml"
-	leyendasfiscales210 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos"
+	"testing"
+
+	leyendasfiscales210 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/leyendasfiscales"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetLeyendasFiscales10ForTest(filename string, t *testing.T) (leyendasfiscales210.LeyendasFiscales10, error) {

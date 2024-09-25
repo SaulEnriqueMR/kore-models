@@ -2,10 +2,11 @@ package complementos
 
 import (
 	"encoding/xml"
-	donatarias2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos"
+	"testing"
+
+	donatarias2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/donatorias"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetDonatarias11ForTest(filename string, t *testing.T) (donatarias2.Donatarias11, error) {

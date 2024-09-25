@@ -2,10 +2,11 @@ package complementoconcepto
 
 import (
 	"encoding/xml"
-	certificadodestruccion2 "github.com/SaulEnriqueMR/kore-models/models/complemento/complementoconcepto"
+	"testing"
+
+	certificadodestruccion2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/certificadodedestruccion"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetCertificadoDeDestruccion10ForTest(filename string, t *testing.T) (certificadodestruccion2.CertificadoDeDestruccion10, error) {

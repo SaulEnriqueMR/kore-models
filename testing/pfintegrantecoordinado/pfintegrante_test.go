@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	pfintegrante1 "github.com/SaulEnriqueMR/kore-models/models/pfintegrantecoordinado"
+	pfintegrante1 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/pfintegrantecoordinado"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

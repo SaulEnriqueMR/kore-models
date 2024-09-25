@@ -2,10 +2,11 @@ package complementoconcepto
 
 import (
 	"encoding/xml"
-	ine112 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos"
+	"testing"
+
+	ine112 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/ine"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetIne11ForTest(filename string, t *testing.T) (ine112.INE11, error) {

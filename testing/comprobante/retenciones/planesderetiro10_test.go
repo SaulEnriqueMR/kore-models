@@ -2,10 +2,11 @@ package retenciones
 
 import (
 	"encoding/xml"
-	planretiro10 "github.com/SaulEnriqueMR/kore-models/models/comprobante/retenciones"
+	"testing"
+
+	planretiro10 "github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/planesretiro"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetPlanesDeRetiro10ForTest(filename string, t *testing.T) (planretiro10.PlanesDeRetiro10, error) {

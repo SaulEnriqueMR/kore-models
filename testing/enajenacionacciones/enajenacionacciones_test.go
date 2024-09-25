@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	enajacciones1 "github.com/SaulEnriqueMR/kore-models/models/enajenaciondeacciones"
+	enajacciones1 "github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/enajenaciondeacciones"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

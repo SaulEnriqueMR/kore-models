@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	vehiculousado1 "github.com/SaulEnriqueMR/kore-models/models/vehiculousado"
+	vehiculousado1 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/vehiculousado"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

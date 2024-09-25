@@ -6,10 +6,10 @@ import (
 
 	"github.com/SaulEnriqueMR/kore-models/app/timbrefiscaldigital"
 	"github.com/SaulEnriqueMR/kore-models/models"
-	"github.com/SaulEnriqueMR/kore-models/models/dividendos"
-	"github.com/SaulEnriqueMR/kore-models/models/enajenaciondeacciones"
-	"github.com/SaulEnriqueMR/kore-models/models/intereses"
-	"github.com/SaulEnriqueMR/kore-models/models/pagosaextranjeros"
+	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/dividendos"
+	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/enajenaciondeacciones"
+	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/intereses"
+	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/pagosaextranjeros"
 )
 
 type Retenciones10 struct {
@@ -67,7 +67,7 @@ type ComplementoReten10 struct {
 	Dividendos          *dividendos.Dividendos10                       `xml:"Dividendos" bson:"Dividendos,omitempty"`
 	EnajenacionAcciones *enajenaciondeacciones.EnajenacionDeAcciones10 `xml:"EnajenacionDeAcciones" bson:"EnajenacionAcciones,omitempty"`
 	Intereses           *intereses.Intereses10                         `xml:"Intereses" bson:"Intereses,omitempty"`
-	PagosAExtranjeros   *pagosaextranjeros.Pagosaextranjeros10         `xml:"PagosAExtranjeros" bson:"PagosAExtranjeros,omitempty"`
+	PagosAExtranjeros   *pagosaextranjeros.PagosAExtranjeros10         `xml:"PagosAExtranjeros" bson:"PagosAExtranjeros,omitempty"`
 	TimbreFiscalDigital *timbrefiscaldigital.TimbreFiscalDigital       `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`
 }
 

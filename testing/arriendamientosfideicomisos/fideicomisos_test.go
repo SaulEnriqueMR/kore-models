@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	arriendamientos10 "github.com/SaulEnriqueMR/kore-models/models/arriendamientosfideicomisos"
+	arriendamientos10 "github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/arriendamientosfideicomisos"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

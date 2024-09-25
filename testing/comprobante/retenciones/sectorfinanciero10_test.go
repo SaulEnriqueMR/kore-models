@@ -2,10 +2,11 @@ package retenciones
 
 import (
 	"encoding/xml"
-	sectfinan2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/retenciones"
+	"testing"
+
+	sectfinan2 "github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/sectorfinanciero"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetSectorFinanciero10ForTest(filename string, t *testing.T) (sectfinan2.SectorFinanciero10, error) {

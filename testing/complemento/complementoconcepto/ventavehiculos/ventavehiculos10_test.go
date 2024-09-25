@@ -2,10 +2,11 @@ package ventavehiculos
 
 import (
 	"encoding/xml"
-	ventavehiculos10 "github.com/SaulEnriqueMR/kore-models/models/complemento/complementoconcepto/ventavehiculos"
+	"testing"
+
+	ventavehiculos10 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/ventavehiculos"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetVentaVehiculos10ForTest(filename string, t *testing.T) (ventavehiculos10.VentaVehiculos10, error) {

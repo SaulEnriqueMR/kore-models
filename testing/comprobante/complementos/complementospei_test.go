@@ -2,10 +2,11 @@ package complementos
 
 import (
 	"encoding/xml"
-	compspei2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos"
+	"testing"
+
+	compspei2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/complementospei"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetComplementoSpeiForTest(filename string, t *testing.T) (compspei2.ComplementoSpei, error) {

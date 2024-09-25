@@ -5,9 +5,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/SaulEnriqueMR/kore-models/models/cartaporte"
-	"github.com/SaulEnriqueMR/kore-models/models/comercioexterior"
-	impuestoslocales "github.com/SaulEnriqueMR/kore-models/models/impuestoslocales"
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/cartaporte"
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/comercioexterior"
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/impuestoslocales"
 )
 
 type ComplementoConcepto struct {
@@ -15,9 +15,9 @@ type ComplementoConcepto struct {
 }
 
 type Complemento struct {
-	CartaPorte       *[]cartaporte.CartaPorte              `xml:"CartaPorte" bson:"CartaPorte,omitempty"`
-	ComercioExterior *[]comercioexterior.ComercioExterior  `xml:"ComercioExterior" bson:"ComercioExterior,omitempty"`
-	ImpuestoLocales  *[]impuestoslocales.ImpuestoLocales10 `xml:"ImpuestosLocales" bson:"ImpuestosLocales,omitempty"`
+	CartaPorte       *[]cartaporte.CartaPorte             `xml:"CartaPorte" bson:"CartaPorte,omitempty"`
+	ComercioExterior *[]comercioexterior.ComercioExterior `xml:"ComercioExterior" bson:"ComercioExterior,omitempty"`
+	ImpuestoLocales  *[]impuestoslocales.ImpuestosLocales `xml:"ImpuestosLocales" bson:"ImpuestosLocales,omitempty"`
 	// Nomina              *nomina.Nomina                           `xml:"Nomina" bson:"Nomina,omitempty"`
 	// Pagos               *pagos.Pagos                             `xml:"Pagos" bson:"Pagos,omitempty"`
 	// TimbreFiscalDigital *timbrefiscaldigital.TimbreFiscalDigital `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`

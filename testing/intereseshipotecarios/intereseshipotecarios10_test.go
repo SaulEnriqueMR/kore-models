@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	intereseshipo1 "github.com/SaulEnriqueMR/kore-models/models/intereseshipotecarios"
+	intereseshipo1 "github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/intereseshipotecarios"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

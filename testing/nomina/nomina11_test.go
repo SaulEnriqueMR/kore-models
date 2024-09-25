@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	nomina11 "github.com/SaulEnriqueMR/kore-models/models/nomina"
+	nomina11 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/nomina"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

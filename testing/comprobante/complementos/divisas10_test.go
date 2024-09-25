@@ -4,10 +4,11 @@ package complementos
 
 import (
 	"encoding/xml"
-	divisas2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos"
+	"testing"
+
+	divisas2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/divisas"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetDivisas10ForTesting(filename string, t *testing.T) (divisas2.Divisas10, error) {

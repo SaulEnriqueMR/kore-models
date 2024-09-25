@@ -2,10 +2,11 @@ package complementos
 
 import (
 	"encoding/xml"
-	consumoCombus11 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos"
+	"testing"
+
+	consumoCombus11 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/consumocombustible"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetConsumoDeCombustible11ForTest(filename string, t *testing.T) (consumoCombus11.ConsumoDeCombustible11, error) {

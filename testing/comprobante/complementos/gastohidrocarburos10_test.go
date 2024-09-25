@@ -2,10 +2,11 @@ package complementos
 
 import (
 	"encoding/xml"
-	hidrocarburos2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos"
+	"testing"
+
+	hidrocarburos2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/gastohidrocarburos"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetGastoHidrocarburos10ForTest(filename string, t *testing.T) (hidrocarburos2.GastoHidrocarburos10, error) {

@@ -2,10 +2,11 @@ package retenciones
 
 import (
 	"encoding/xml"
-	premios2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/retenciones"
+	"testing"
+
+	premios2 "github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/premios"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetPremios10ForTest(filename string, t *testing.T) (premios2.Premios10, error) {

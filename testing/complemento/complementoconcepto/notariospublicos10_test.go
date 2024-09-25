@@ -2,10 +2,11 @@ package complementoconcepto
 
 import (
 	"encoding/xml"
-	notariosPub2 "github.com/SaulEnriqueMR/kore-models/models/complemento/complementoconcepto"
+	"testing"
+
+	notariosPub2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/notariospublicos"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetNotariosPublicos10ForTest(filename string, t *testing.T) (notariosPub2.NotariosPublicos10, error) {

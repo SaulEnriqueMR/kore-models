@@ -2,10 +2,11 @@ package complementoconcepto
 
 import (
 	"encoding/xml"
-	aerolineas10 "github.com/SaulEnriqueMR/kore-models/models/complemento/complementoconcepto"
+	"testing"
+
+	aerolineas10 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/aerolineas"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetAerolineas10ForTest(filename string, t *testing.T) (aerolineas10.Aerolineas10, error) {

@@ -2,10 +2,11 @@ package complementoconcepto
 
 import (
 	"encoding/xml"
-	insteducativas2 "github.com/SaulEnriqueMR/kore-models/models/complemento/complementoconcepto"
+	"testing"
+
+	insteducativas2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/institeducativas"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetInstEducativas10forTest(filename string, t *testing.T) (insteducativas2.InstitucioneEducativas10, error) {

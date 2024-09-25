@@ -5,7 +5,7 @@ import (
 	"log"
 	"testing"
 
-	detallista10 "github.com/SaulEnriqueMR/kore-models/models/detallista"
+	detallista10 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/detallista"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )
@@ -89,7 +89,7 @@ func InternalReferenceIdentification2(t *testing.T, references []detallista10.Re
 }
 func InternalDeliveryNote(t *testing.T, delivery detallista10.DeliveryNote) {
 	assert.NotNil(t, delivery)
-	assert.Equal(t, "2016-04-07", *&delivery.ReferenceDate.ReferenceDateString)
+	assert.Equal(t, "2016-04-07", delivery.ReferenceDate.ReferenceDateString)
 	references := delivery.ReferenceIdentification
 	assert.NotNil(t, references)
 	assert.Equal(t, len(references), 2)

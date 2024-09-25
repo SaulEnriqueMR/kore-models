@@ -2,7 +2,7 @@ package complementos
 
 import (
 	"encoding/xml"
-	edocuentacombus11 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos"
+	edocuentacombus11 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/estadodecuentacombustible"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 	"testing"

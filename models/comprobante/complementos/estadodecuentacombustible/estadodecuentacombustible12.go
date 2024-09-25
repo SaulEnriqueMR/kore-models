@@ -1,4 +1,4 @@
-package complementos
+package estadodecuentacombustible
 
 import (
 	"encoding/xml"

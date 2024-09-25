@@ -260,6 +260,4 @@
             <PartesTransporte ParteTransporte="PT02" />
         </TiposFigura>
     </FiguraTransporte>
-
-
 </CartaPorte>

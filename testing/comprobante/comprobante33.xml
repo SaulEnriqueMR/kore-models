@@ -85,5 +85,1999 @@
             <RetencionesLocales ImpLocRetenido="ISR" TasadeRetencion="15.00" Importe="1500.00"/>
             <TrasladosLocales ImpLocTrasladado="IVA" TasadeTraslado="16.00" Importe="3000.00"/>
         </ImpuestosLocales>
+        <ImpuestosLocales version="1.0" TotaldeRetenciones="1500.00" TotaldeTraslados="3000.00">
+            <RetencionesLocales ImpLocRetenido="ISR" TasadeRetencion="15.00" Importe="1500.00"/>
+            <TrasladosLocales ImpLocTrasladado="IVA" TasadeTraslado="16.00" Importe="3000.00"/>
+        </ImpuestosLocales>
+        <ImpuestosLocales version="1.0" TotaldeRetenciones="1500.00" TotaldeTraslados="3000.00">
+            <RetencionesLocales ImpLocRetenido="ISR" TasadeRetencion="15.00" Importe="1500.00"/>
+            <TrasladosLocales ImpLocTrasladado="IVA" TasadeTraslado="16.00" Importe="3000.00"/>
+        </ImpuestosLocales>
+        <ImpuestosLocales version="1.0" TotaldeRetenciones="1500.00" TotaldeTraslados="3000.00">
+            <RetencionesLocales ImpLocRetenido="ISR" TasadeRetencion="15.00" Importe="1500.00"/>
+            <TrasladosLocales ImpLocTrasladado="IVA" TasadeTraslado="16.00" Importe="3000.00"/>
+        </ImpuestosLocales>
+        <ImpuestosLocales version="1.0" TotaldeRetenciones="1500.00" TotaldeTraslados="3000.00">
+            <RetencionesLocales ImpLocRetenido="ISR" TasadeRetencion="15.00" Importe="1500.00"/>
+            <TrasladosLocales ImpLocTrasladado="IVA" TasadeTraslado="16.00" Importe="3000.00"/>
+        </ImpuestosLocales>
+        <ComercioExterior
+                Version="1.0"
+                TipoOperacion="1"
+                ClaveDePedimento="ABC123"
+                CertificadoOrigen="1"
+                NumCertificadoOrigen="123e4567-e89b-12d3-a456-426614174000"
+                NumeroExportadorConfiable="EX123456"
+                Incoterm="CIF"
+                Subdivision="0"
+                Observaciones="Factura de exportación."
+                TipoCambioUSD="20.50"
+                TotalUSD="1000.00">
+            <Emisor Curp="ABCD123456HDFRLM09" />
+            <Receptor
+                    Curp="XYZ123456HDFGJ00"
+                    NumRegIdTrib="RFC123456789" />
+            <Destinatario NumRegIdTrib="123456789012"
+                          Rfc="ABC123456XYZ"
+                          Curp="ABCD123456HDFXYZ00"
+                          Nombre="Juan Pérez García">
+                <Domicilio
+                        Calle="Av. Siempre Viva"
+                        Estado="Illinois"
+                        Pais="US"
+                        CodigoPostal="62704" />
+            </Destinatario>
+            <Mercancias>
+                <Mercancia NoIdentificacion="ABC123456"
+                           FraccionArancelaria="123456"
+                           CantidadAduana="10.000"
+                           UnidadAduana="PIE"
+                           ValorUnitarioAduana="150.00"
+                           ValorDolares="1500.00">
+                    <DescripcionesEspecificas Marca="MarcaEjemplo"
+                                              Modelo="ModeloEjemplo"
+                                              SubModelo="SubmodeloEjemplo"
+                                              NumeroSerie="SN123456789" />
+                </Mercancia>
+            </Mercancias>
+        </ComercioExterior>
+        <ComercioExterior
+                Version="1.0"
+                TipoOperacion="1"
+                ClaveDePedimento="ABC123"
+                CertificadoOrigen="1"
+                NumCertificadoOrigen="123e4567-e89b-12d3-a456-426614174000"
+                NumeroExportadorConfiable="EX123456"
+                Incoterm="CIF"
+                Subdivision="0"
+                Observaciones="Factura de exportación."
+                TipoCambioUSD="20.50"
+                TotalUSD="1000.00">
+            <Emisor Curp="ABCD123456HDFRLM09" />
+            <Receptor
+                    Curp="XYZ123456HDFGJ00"
+                    NumRegIdTrib="RFC123456789" />
+            <Destinatario NumRegIdTrib="123456789012"
+                          Rfc="ABC123456XYZ"
+                          Curp="ABCD123456HDFXYZ00"
+                          Nombre="Juan Pérez García">
+                <Domicilio
+                        Calle="Av. Siempre Viva"
+                        Estado="Illinois"
+                        Pais="US"
+                        CodigoPostal="62704" />
+            </Destinatario>
+            <Mercancias>
+                <Mercancia NoIdentificacion="ABC123456"
+                           FraccionArancelaria="123456"
+                           CantidadAduana="10.000"
+                           UnidadAduana="PIE"
+                           ValorUnitarioAduana="150.00"
+                           ValorDolares="1500.00">
+                    <DescripcionesEspecificas Marca="MarcaEjemplo"
+                                              Modelo="ModeloEjemplo"
+                                              SubModelo="SubmodeloEjemplo"
+                                              NumeroSerie="SN123456789" />
+                </Mercancia>
+            </Mercancias>
+        </ComercioExterior>
+        <ComercioExterior Version="1.1"
+                          TipoOperacion="EXPORTACION"
+                          ClaveDePedimento="A1"
+                          MotivoTraslado="01"
+                          CertificadoOrigen="1"
+                          NumCertificadoOrigen="123456789012"
+                          NumeroExportadorConfiable="ABC123456"
+                          Incoterm="CIF"
+                          Subdivision="0"
+                          Observaciones="Este es un ejemplo de comercio exterior."
+                          TipoCambioUSD="20.50"
+                          TotalUSD="10000.00">
+            <Emisor Curp="ABC123456789">
+                <Domicilio Calle="Av. Reforma"
+                           NumeroExterior="123"
+                           NumeroInterior="456"
+                           Colonia="Centro"
+                           Localidad="Cuauhtémoc"
+                           Referencia="Cerca del ángel de la independencia"
+                           Municipio="Cuauhtémoc"
+                           Estado="DF"
+                           Pais="MEX"
+                           CodigoPostal="06000" />
+            </Emisor>
+            <Propietario NumRegIdTrib="RFC123456789" ResidenciaFiscal="MEX" />
+            <Propietario NumRegIdTrib="RFC123456789" ResidenciaFiscal="MEX" />
+            <Propietario NumRegIdTrib="RFC123456789" ResidenciaFiscal="MEX" />
+            <Receptor NumRegIdTrib="RFC123456789">
+                <Domicilio
+                        Calle="Av. Insurgentes Sur"
+                        NumeroExterior="123"
+                        NumeroInterior="A"
+                        Colonia="Roma"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del parque"
+                        Municipio="Benito Juárez"
+                        Estado="Ciudad de México"
+                        Pais="MEX"
+                        CodigoPostal="06760" />
+            </Receptor>
+            <Destinatario
+                    NumRegIdTrib="RFC987654321"
+                    Nombre="Juan Pérez">
+                <Domicilio
+                        Calle="Calle de la Paz"
+                        NumeroExterior="45"
+                        NumeroInterior="B"
+                        Colonia="Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca de la Plaza"
+                        Municipio="Cuauhtémoc"
+                        Estado="Ciudad de México"
+                        Pais="MEX"
+                        CodigoPostal="06000" />
+            </Destinatario>
+            <Mercancias>
+                <Mercancia
+                        NoIdentificacion="ABC123456"
+                        ValorDolares="1500.00">
+                    <DescripcionesEspecificas Marca="MarcaX" Modelo="ModeloY" SubModelo="SubModeloZ"
+                                              NumeroSerie="123456789" />
+                    <DescripcionesEspecificas Marca="MarcaX" Modelo="ModeloY" SubModelo="SubModeloZ"
+                                              NumeroSerie="123456789" />
+                    <DescripcionesEspecificas Marca="MarcaA" />
+                </Mercancia>
+                <Mercancia
+                        FraccionArancelaria="123456"
+                        CantidadAduana="10"
+                        UnidadAduana="PZ"
+                        ValorUnitarioAduana="150.00" />
+            </Mercancias>
+        </ComercioExterior>
+        <ComercioExterior Version="1.1"
+                          TipoOperacion="EXPORTACION"
+                          ClaveDePedimento="A1"
+                          MotivoTraslado="01"
+                          CertificadoOrigen="1"
+                          NumCertificadoOrigen="123456789012"
+                          NumeroExportadorConfiable="ABC123456"
+                          Incoterm="CIF"
+                          Subdivision="0"
+                          Observaciones="Este es un ejemplo de comercio exterior."
+                          TipoCambioUSD="20.50"
+                          TotalUSD="10000.00">
+            <Emisor Curp="ABC123456789">
+                <Domicilio Calle="Av. Reforma"
+                           NumeroExterior="123"
+                           NumeroInterior="456"
+                           Colonia="Centro"
+                           Localidad="Cuauhtémoc"
+                           Referencia="Cerca del ángel de la independencia"
+                           Municipio="Cuauhtémoc"
+                           Estado="DF"
+                           Pais="MEX"
+                           CodigoPostal="06000" />
+            </Emisor>
+            <Propietario NumRegIdTrib="RFC123456789" ResidenciaFiscal="MEX" />
+            <Propietario NumRegIdTrib="RFC123456789" ResidenciaFiscal="MEX" />
+            <Propietario NumRegIdTrib="RFC123456789" ResidenciaFiscal="MEX" />
+            <Receptor NumRegIdTrib="RFC123456789">
+                <Domicilio
+                        Calle="Av. Insurgentes Sur"
+                        NumeroExterior="123"
+                        NumeroInterior="A"
+                        Colonia="Roma"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del parque"
+                        Municipio="Benito Juárez"
+                        Estado="Ciudad de México"
+                        Pais="MEX"
+                        CodigoPostal="06760" />
+            </Receptor>
+            <Destinatario
+                    NumRegIdTrib="RFC987654321"
+                    Nombre="Juan Pérez">
+                <Domicilio
+                        Calle="Calle de la Paz"
+                        NumeroExterior="45"
+                        NumeroInterior="B"
+                        Colonia="Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca de la Plaza"
+                        Municipio="Cuauhtémoc"
+                        Estado="Ciudad de México"
+                        Pais="MEX"
+                        CodigoPostal="06000" />
+            </Destinatario>
+            <Mercancias>
+                <Mercancia
+                        NoIdentificacion="ABC123456"
+                        ValorDolares="1500.00">
+                    <DescripcionesEspecificas Marca="MarcaX" Modelo="ModeloY" SubModelo="SubModeloZ"
+                                              NumeroSerie="123456789" />
+                    <DescripcionesEspecificas Marca="MarcaX" Modelo="ModeloY" SubModelo="SubModeloZ"
+                                              NumeroSerie="123456789" />
+                    <DescripcionesEspecificas Marca="MarcaA" />
+                </Mercancia>
+                <Mercancia
+                        FraccionArancelaria="123456"
+                        CantidadAduana="10"
+                        UnidadAduana="PZ"
+                        ValorUnitarioAduana="150.00" />
+            </Mercancias>
+        </ComercioExterior>
+        <ComercioExterior Version="2.0"
+                          MotivoTraslado="01"
+                          ClaveDePedimento="A1"
+                          CertificadoOrigen="1"
+                          NumCertificadoOrigen="1234567890"
+                          NumeroExportadorConfiable="EXCONFIABLE123"
+                          Incoterm="FOB"
+                          Observaciones="Exportación de mercancías desde México."
+                          TipoCambioUSD="18.50"
+                          TotalUSD="10000.00">
+            <Emisor Curp="GOCM890107HDFRRR02">
+                <Domicilio Calle="Avenida Revolución"
+                           NumeroExterior="123"
+                           NumeroInterior="4B"
+                           Colonia="0348"
+                           Localidad="001"
+                           Referencia="Cerca de la torre"
+                           Municipio="012"
+                           Estado="CDMX"
+                           Pais="MEX"
+                           CodigoPostal="03100" />
+            </Emisor>
+            <Propietario NumRegIdTrib="ABC123456789" ResidenciaFiscal="USA" />
+            <Propietario NumRegIdTrib="ABC123456789" ResidenciaFiscal="USA" />
+            <Receptor NumRegIdTrib="XYZ123456789">
+                <Domicilio Calle="Av. Principal" NumeroExterior="123" NumeroInterior="A"
+                           Colonia="Centro" Localidad="Ciudad" Referencia="Frente al parque"
+                           Municipio="Municipio" Estado="MX" Pais="MEX" CodigoPostal="12345" />
+            </Receptor>
+            <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+            </Destinatario>
+            <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+            </Destinatario>
+            <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+            </Destinatario>
+            <Mercancias>
+                <Mercancia NoIdentificacion="12345ABC" FraccionArancelaria="010121" CantidadAduana="100.000" UnidadAduana="KGM" ValorUnitarioAduana="50.123456" ValorDolares="5000.1234">
+                    <DescripcionesEspecificas Marca="Toyota" Modelo="Corolla" SubModelo="XLE" NumeroSerie="ABC123XYZ456" />
+                </Mercancia>
+                <Mercancia NoIdentificacion="67890DEF" FraccionArancelaria="020711" CantidadAduana="200.000" UnidadAduana="LBR" ValorUnitarioAduana="20.654321" ValorDolares="4000.4321">
+                    <DescripcionesEspecificas Marca="Ford" Modelo="Focus" SubModelo="SE" NumeroSerie="DEF456XYZ789" />
+                    <DescripcionesEspecificas Marca="Ford" Modelo="Focus" SubModelo="SE" NumeroSerie="DEF456XYZ789" />
+                </Mercancia>
+            </Mercancias>
+        </ComercioExterior>
+        <ComercioExterior Version="2.0"
+                          MotivoTraslado="01"
+                          ClaveDePedimento="A1"
+                          CertificadoOrigen="1"
+                          NumCertificadoOrigen="1234567890"
+                          NumeroExportadorConfiable="EXCONFIABLE123"
+                          Incoterm="FOB"
+                          Observaciones="Exportación de mercancías desde México."
+                          TipoCambioUSD="18.50"
+                          TotalUSD="10000.00">
+            <Emisor Curp="GOCM890107HDFRRR02">
+                <Domicilio Calle="Avenida Revolución"
+                           NumeroExterior="123"
+                           NumeroInterior="4B"
+                           Colonia="0348"
+                           Localidad="001"
+                           Referencia="Cerca de la torre"
+                           Municipio="012"
+                           Estado="CDMX"
+                           Pais="MEX"
+                           CodigoPostal="03100" />
+            </Emisor>
+            <Propietario NumRegIdTrib="ABC123456789" ResidenciaFiscal="USA" />
+            <Propietario NumRegIdTrib="ABC123456789" ResidenciaFiscal="USA" />
+            <Receptor NumRegIdTrib="XYZ123456789">
+                <Domicilio Calle="Av. Principal" NumeroExterior="123" NumeroInterior="A"
+                           Colonia="Centro" Localidad="Ciudad" Referencia="Frente al parque"
+                           Municipio="Municipio" Estado="MX" Pais="MEX" CodigoPostal="12345" />
+            </Receptor>
+            <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+            </Destinatario>
+            <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+            </Destinatario>
+            <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+            </Destinatario>
+            <Mercancias>
+                <Mercancia NoIdentificacion="12345ABC" FraccionArancelaria="010121" CantidadAduana="100.000" UnidadAduana="KGM" ValorUnitarioAduana="50.123456" ValorDolares="5000.1234">
+                    <DescripcionesEspecificas Marca="Toyota" Modelo="Corolla" SubModelo="XLE" NumeroSerie="ABC123XYZ456" />
+                </Mercancia>
+                <Mercancia NoIdentificacion="67890DEF" FraccionArancelaria="020711" CantidadAduana="200.000" UnidadAduana="LBR" ValorUnitarioAduana="20.654321" ValorDolares="4000.4321">
+                    <DescripcionesEspecificas Marca="Ford" Modelo="Focus" SubModelo="SE" NumeroSerie="DEF456XYZ789" />
+                    <DescripcionesEspecificas Marca="Ford" Modelo="Focus" SubModelo="SE" NumeroSerie="DEF456XYZ789" />
+                </Mercancia>
+            </Mercancias>
+        </ComercioExterior>
+        <ComercioExterior Version="2.0"
+                          MotivoTraslado="01"
+                          ClaveDePedimento="A1"
+                          CertificadoOrigen="1"
+                          NumCertificadoOrigen="1234567890"
+                          NumeroExportadorConfiable="EXCONFIABLE123"
+                          Incoterm="FOB"
+                          Observaciones="Exportación de mercancías desde México."
+                          TipoCambioUSD="18.50"
+                          TotalUSD="10000.00">
+            <Emisor Curp="GOCM890107HDFRRR02">
+                <Domicilio Calle="Avenida Revolución"
+                           NumeroExterior="123"
+                           NumeroInterior="4B"
+                           Colonia="0348"
+                           Localidad="001"
+                           Referencia="Cerca de la torre"
+                           Municipio="012"
+                           Estado="CDMX"
+                           Pais="MEX"
+                           CodigoPostal="03100" />
+            </Emisor>
+            <Propietario NumRegIdTrib="ABC123456789" ResidenciaFiscal="USA" />
+            <Propietario NumRegIdTrib="ABC123456789" ResidenciaFiscal="USA" />
+            <Receptor NumRegIdTrib="XYZ123456789">
+                <Domicilio Calle="Av. Principal" NumeroExterior="123" NumeroInterior="A"
+                           Colonia="Centro" Localidad="Ciudad" Referencia="Frente al parque"
+                           Municipio="Municipio" Estado="MX" Pais="MEX" CodigoPostal="12345" />
+            </Receptor>
+            <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+            </Destinatario>
+            <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+            </Destinatario>
+            <Destinatario NumRegIdTrib="X12345678" Nombre="Comercializadora Internacional S.A. de C.V.">
+                <Domicilio
+                        Calle="Avenida Insurgentes"
+                        NumeroExterior="1234"
+                        NumeroInterior="101"
+                        Colonia="Colonia Centro"
+                        Localidad="Ciudad de México"
+                        Referencia="Cerca del Monumento a la Revolución"
+                        Municipio="Cuauhtémoc"
+                        Estado="CDMX"
+                        Pais="MEX"
+                        CodigoPostal="06300" />
+            </Destinatario>
+            <Mercancias>
+                <Mercancia NoIdentificacion="12345ABC" FraccionArancelaria="010121" CantidadAduana="100.000" UnidadAduana="KGM" ValorUnitarioAduana="50.123456" ValorDolares="5000.1234">
+                    <DescripcionesEspecificas Marca="Toyota" Modelo="Corolla" SubModelo="XLE" NumeroSerie="ABC123XYZ456" />
+                </Mercancia>
+                <Mercancia NoIdentificacion="67890DEF" FraccionArancelaria="020711" CantidadAduana="200.000" UnidadAduana="LBR" ValorUnitarioAduana="20.654321" ValorDolares="4000.4321">
+                    <DescripcionesEspecificas Marca="Ford" Modelo="Focus" SubModelo="SE" NumeroSerie="DEF456XYZ789" />
+                    <DescripcionesEspecificas Marca="Ford" Modelo="Focus" SubModelo="SE" NumeroSerie="DEF456XYZ789" />
+                </Mercancia>
+            </Mercancias>
+        </ComercioExterior>
+        <CartaPorte
+                Version="2.0"
+                TranspInternac="Si"
+                EntradaSalidaMerc="Salida"
+                PaisOrigenDestino="MEX"
+                ViaEntradaSalida="T1"
+                TotalDistRec="120.50">
+            <Ubicaciones>
+                <Ubicacion TipoUbicacion="Origen"
+                           IDUbicacion="OR123456"
+                           RFCRemitenteDestinatario="XAXX010101000"
+                           NombreRemitenteDestinatario="Empresa Origen"
+                           NumRegIdTrib="IdTrib1"
+                           ResidenciaFiscal="ResidenciaFisc1"
+                           NumEstacion="1"
+                           NombreEstacion="Estacion1"
+                           NavegacionTrafico="Trafico1"
+                           FechaHoraSalidaLlegada="2024-09-23T12:30:00"
+                           TipoEstacion="Tipo1"
+                           DistanciaRecorrida="100.50">
+                    <Domicilio
+                            Calle="Avenida Principal"
+                            NumeroExterior="123"
+                            NumeroInterior="A"
+                            Colonia="Centro"
+                            Localidad="Ciudad Ejemplo"
+                            Referencia="Cerca de la Plaza Central"
+                            Municipio="Municipio Ejemplo"
+                            Estado="Estado Ejemplo"
+                            Pais="MEX"
+                            CodigoPostal="12345" />
+                </Ubicacion>
+                <Ubicacion TipoUbicacion="Origen"
+                           IDUbicacion="OR123456"
+                           RFCRemitenteDestinatario="XAXX010101000"
+                           NombreRemitenteDestinatario="Empresa Origen"
+                           NumRegIdTrib="IdTrib2"
+                           ResidenciaFiscal="ResidenciaFisc2"
+                           NumEstacion="2"
+                           NombreEstacion="Estacion2"
+                           NavegacionTrafico="Trafico2"
+                           FechaHoraSalidaLlegada="2024-09-23T12:30:00"
+                           TipoEstacion="Tipo2"
+                           DistanciaRecorrida="100.50">
+                    <Domicilio
+                            Calle="Avenida Principal"
+                            NumeroExterior="123"
+                            NumeroInterior="A"
+                            Colonia="Centro"
+                            Localidad="Ciudad Ejemplo"
+                            Referencia="Cerca de la Plaza Central"
+                            Municipio="Municipio Ejemplo"
+                            Estado="Estado Ejemplo"
+                            Pais="MEX"
+                            CodigoPostal="12345" />
+
+                </Ubicacion>
+            </Ubicaciones>
+            <Mercancias
+                    PesoBrutoTotal="1500.250"
+                    UnidadPeso="KGM"
+                    PesoNetoTotal="1400.000"
+                    NumTotalMercancias="10"
+                    CargoPorTasacion="100.00">
+                <Mercancia
+                        BienesTransp="12345678"
+                        ClaveSTCC="123456"
+                        Descripcion="Electrodomésticos de cocina"
+                        Cantidad="10.000000"
+                        ClaveUnidad="E48"
+                        Unidad="Cajas"
+                        Dimensiones="30/40/30cm"
+                        MaterialPeligroso="No"
+                        CveMaterialPeligroso="No"
+                        Embalaje="Si"
+                        DescripEmbalaje="Tipo1"
+                        PesoEnKg="25.500"
+                        ValorMercancia="1500.00"
+                        Moneda="MXN"
+                        FraccionArancelaria="1234.56"
+                        UUIDComercioExt="550e8400-e29b-41d4-a716-446655440000">
+                    <Pedimentos
+                            Pedimento="230112345678901"/>
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="1234567890"
+                            DescripGuiaIdentificacion="Paquete de libros de texto"
+                            PesoGuiaIdentificacion="2.500"/>
+                    <CantidadTransporta
+                            Cantidad="100.500000"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="TRK"/>
+                    <DetalleMercancia
+                            UnidadPesoMerc="MTR"
+                            PesoBruto="1500.500"
+                            PesoNeto="1400.200"
+                            PesoTara="100.300"
+                            NumPiezas="10"/>
+                </Mercancia>
+                <Autotransporte PermSCT="PERM001" NumPermisoSCT="NUMPERM12345">
+                    <IdentificacionVehicular
+                            ConfigVehicular="ClaveConfig123"
+                            PlacaVM="ABC1234"
+                            AnioModeloVM="2020"/>
+                    <Seguros
+                            AseguraRespCivil="Aseguradora XYZ"
+                            PolizaRespCivil="POL123456"
+                            AseguraMedAmbiente="Aseguradora ABC"
+                            PolizaMedAmbiente="POLMED789"
+                            AseguraCarga="Aseguradora DEF"
+                            PolizaCarga="POLCARG456"
+                            PrimaSeguro="1500.00">
+                    </Seguros>
+                    <Remolques>
+                        <Remolque
+                                SubTipoRem="REM01"
+                                Placa="ABC1234"/>
+                    </Remolques>
+                </Autotransporte>
+                <TransporteMaritimo
+                        PermSCT="PERM002"
+                        NumPermisoSCT="987654"
+                        NombreAseg="Aseguradora ABC"
+                        NumPolizaSeguro="POL987654"
+                        TipoEmbarcacion="TIPO001"
+                        Matricula="MATRICULA123"
+                        NumeroOMI="IMO1234567"
+                        NacionalidadEmbarc="MX"
+                        UnidadesDeArqBruto="250.500"
+                        TipoCarga="CARGA001"
+                        NumCertITC="CERT123"
+                        AnioEmbarcacion="2010"
+                        NombreEmbarc="Embarcación XYZ"
+                        Eslora="30.00"
+                        Manga="8.50"
+                        Calado="5.00"
+                        LineaNaviera="Naviera 123"
+                        NombreAgenteNaviero="Agente Naviero ABC"
+                        NumAutorizacionNaviero="AUTH123"
+                        NumViaje="TRIP001"
+                        NumConocEmbarc="CONOC123">
+                    <Contenedor MatriculaContenedor="ABC1234567D" TipoContenedor="CONT001" NumPrecinto="PRECINT001"/>
+                </TransporteMaritimo>
+                <TransporteAereo
+                        PermSCT="PERM001"
+                        NumPermisoSCT="123456"
+                        MatriculaAeronave="ABC-123"
+                        NombreAseg="Aseguradora XYZ"
+                        NumPolizaSeguro="POL123456"
+                        NumeroGuia="GUIDE123456789"
+                        CodigoTransportista="CODE001"
+                        LugarContrato="Ciudad de México"
+                        RFCEmbarcador="RFC123456789"
+                        NumRegIdTribEmbarc="REG123456"
+                        ResidenciaFiscalEmbarc="MX"
+                        NombreEmbarcador="Embarcador S.A. de C.V."/>
+                <TransporteFerroviario
+                        TipoDeServicio="01"
+                        TipoDeTrafico="A"
+                        NombreAseg="Aseguradora Ejemplo"
+                        NumPolizaSeguro="POL123456">
+                    <DerechosDePaso
+                            TipoDerechoDePaso="DERECHO001"
+                            KilometrajePagado="15.50" />
+                    <Carro TipoCarro="01"
+                           MatriculaCarro="CAR12345"
+                           GuiaCarro="GUIA123"
+                           ToneladasNetasCarro="15.500">
+                        <Contenedor TipoContenedor="CTN001"
+                                    PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="13.000" />
+                    </Carro>
+                </TransporteFerroviario>
+            </Mercancias>
+            <FiguraTransporte>
+                <TiposFigura TipoFigura="Figura1"
+                             RFCFigura="RFCFigura1"
+                             NumLicencia="12456"
+                             NombreFigura="Nombre1"
+                             NumRegIdTribFigura="IdTrib1"
+                             ResidenciaFiscalFigura="Residencia1">
+                    <PartesTransporte ParteTransporte="Vehículo"/>
+                    <Domicilio
+                            Calle="Avenida Principal"
+                            NumeroExterior="123"
+                            NumeroInterior="A"
+                            Colonia="Centro"
+                            Localidad="Ciudad Ejemplo"
+                            Referencia="Cerca de la Plaza Central"
+                            Municipio="Municipio Ejemplo"
+                            Estado="Estado Ejemplo"
+                            Pais="MEX"
+                            CodigoPostal="12345" />
+                </TiposFigura>
+            </FiguraTransporte>
+        </CartaPorte>
+        <CartaPorte
+                Version="2.0"
+                TranspInternac="Si"
+                EntradaSalidaMerc="Salida"
+                PaisOrigenDestino="MEX"
+                ViaEntradaSalida="T1"
+                TotalDistRec="120.50">
+            <Ubicaciones>
+                <Ubicacion TipoUbicacion="Origen"
+                           IDUbicacion="OR123456"
+                           RFCRemitenteDestinatario="XAXX010101000"
+                           NombreRemitenteDestinatario="Empresa Origen"
+                           NumRegIdTrib="IdTrib1"
+                           ResidenciaFiscal="ResidenciaFisc1"
+                           NumEstacion="1"
+                           NombreEstacion="Estacion1"
+                           NavegacionTrafico="Trafico1"
+                           FechaHoraSalidaLlegada="2024-09-23T12:30:00"
+                           TipoEstacion="Tipo1"
+                           DistanciaRecorrida="100.50">
+                    <Domicilio
+                            Calle="Avenida Principal"
+                            NumeroExterior="123"
+                            NumeroInterior="A"
+                            Colonia="Centro"
+                            Localidad="Ciudad Ejemplo"
+                            Referencia="Cerca de la Plaza Central"
+                            Municipio="Municipio Ejemplo"
+                            Estado="Estado Ejemplo"
+                            Pais="MEX"
+                            CodigoPostal="12345" />
+                </Ubicacion>
+                <Ubicacion TipoUbicacion="Origen"
+                           IDUbicacion="OR123456"
+                           RFCRemitenteDestinatario="XAXX010101000"
+                           NombreRemitenteDestinatario="Empresa Origen"
+                           NumRegIdTrib="IdTrib2"
+                           ResidenciaFiscal="ResidenciaFisc2"
+                           NumEstacion="2"
+                           NombreEstacion="Estacion2"
+                           NavegacionTrafico="Trafico2"
+                           FechaHoraSalidaLlegada="2024-09-23T12:30:00"
+                           TipoEstacion="Tipo2"
+                           DistanciaRecorrida="100.50">
+                    <Domicilio
+                            Calle="Avenida Principal"
+                            NumeroExterior="123"
+                            NumeroInterior="A"
+                            Colonia="Centro"
+                            Localidad="Ciudad Ejemplo"
+                            Referencia="Cerca de la Plaza Central"
+                            Municipio="Municipio Ejemplo"
+                            Estado="Estado Ejemplo"
+                            Pais="MEX"
+                            CodigoPostal="12345" />
+
+                </Ubicacion>
+            </Ubicaciones>
+            <Mercancias
+                    PesoBrutoTotal="1500.250"
+                    UnidadPeso="KGM"
+                    PesoNetoTotal="1400.000"
+                    NumTotalMercancias="10"
+                    CargoPorTasacion="100.00">
+                <Mercancia
+                        BienesTransp="12345678"
+                        ClaveSTCC="123456"
+                        Descripcion="Electrodomésticos de cocina"
+                        Cantidad="10.000000"
+                        ClaveUnidad="E48"
+                        Unidad="Cajas"
+                        Dimensiones="30/40/30cm"
+                        MaterialPeligroso="No"
+                        CveMaterialPeligroso="No"
+                        Embalaje="Si"
+                        DescripEmbalaje="Tipo1"
+                        PesoEnKg="25.500"
+                        ValorMercancia="1500.00"
+                        Moneda="MXN"
+                        FraccionArancelaria="1234.56"
+                        UUIDComercioExt="550e8400-e29b-41d4-a716-446655440000">
+                    <Pedimentos
+                            Pedimento="230112345678901"/>
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="1234567890"
+                            DescripGuiaIdentificacion="Paquete de libros de texto"
+                            PesoGuiaIdentificacion="2.500"/>
+                    <CantidadTransporta
+                            Cantidad="100.500000"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="TRK"/>
+                    <DetalleMercancia
+                            UnidadPesoMerc="MTR"
+                            PesoBruto="1500.500"
+                            PesoNeto="1400.200"
+                            PesoTara="100.300"
+                            NumPiezas="10"/>
+                </Mercancia>
+                <Autotransporte PermSCT="PERM001" NumPermisoSCT="NUMPERM12345">
+                    <IdentificacionVehicular
+                            ConfigVehicular="ClaveConfig123"
+                            PlacaVM="ABC1234"
+                            AnioModeloVM="2020"/>
+                    <Seguros
+                            AseguraRespCivil="Aseguradora XYZ"
+                            PolizaRespCivil="POL123456"
+                            AseguraMedAmbiente="Aseguradora ABC"
+                            PolizaMedAmbiente="POLMED789"
+                            AseguraCarga="Aseguradora DEF"
+                            PolizaCarga="POLCARG456"
+                            PrimaSeguro="1500.00">
+                    </Seguros>
+                    <Remolques>
+                        <Remolque
+                                SubTipoRem="REM01"
+                                Placa="ABC1234"/>
+                    </Remolques>
+                </Autotransporte>
+                <TransporteMaritimo
+                        PermSCT="PERM002"
+                        NumPermisoSCT="987654"
+                        NombreAseg="Aseguradora ABC"
+                        NumPolizaSeguro="POL987654"
+                        TipoEmbarcacion="TIPO001"
+                        Matricula="MATRICULA123"
+                        NumeroOMI="IMO1234567"
+                        NacionalidadEmbarc="MX"
+                        UnidadesDeArqBruto="250.500"
+                        TipoCarga="CARGA001"
+                        NumCertITC="CERT123"
+                        AnioEmbarcacion="2010"
+                        NombreEmbarc="Embarcación XYZ"
+                        Eslora="30.00"
+                        Manga="8.50"
+                        Calado="5.00"
+                        LineaNaviera="Naviera 123"
+                        NombreAgenteNaviero="Agente Naviero ABC"
+                        NumAutorizacionNaviero="AUTH123"
+                        NumViaje="TRIP001"
+                        NumConocEmbarc="CONOC123">
+                    <Contenedor MatriculaContenedor="ABC1234567D" TipoContenedor="CONT001" NumPrecinto="PRECINT001"/>
+                </TransporteMaritimo>
+                <TransporteAereo
+                        PermSCT="PERM001"
+                        NumPermisoSCT="123456"
+                        MatriculaAeronave="ABC-123"
+                        NombreAseg="Aseguradora XYZ"
+                        NumPolizaSeguro="POL123456"
+                        NumeroGuia="GUIDE123456789"
+                        CodigoTransportista="CODE001"
+                        LugarContrato="Ciudad de México"
+                        RFCEmbarcador="RFC123456789"
+                        NumRegIdTribEmbarc="REG123456"
+                        ResidenciaFiscalEmbarc="MX"
+                        NombreEmbarcador="Embarcador S.A. de C.V."/>
+                <TransporteFerroviario
+                        TipoDeServicio="01"
+                        TipoDeTrafico="A"
+                        NombreAseg="Aseguradora Ejemplo"
+                        NumPolizaSeguro="POL123456">
+                    <DerechosDePaso
+                            TipoDerechoDePaso="DERECHO001"
+                            KilometrajePagado="15.50" />
+                    <Carro TipoCarro="01"
+                           MatriculaCarro="CAR12345"
+                           GuiaCarro="GUIA123"
+                           ToneladasNetasCarro="15.500">
+                        <Contenedor TipoContenedor="CTN001"
+                                    PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="13.000" />
+                    </Carro>
+                </TransporteFerroviario>
+            </Mercancias>
+            <FiguraTransporte>
+                <TiposFigura TipoFigura="Figura1"
+                             RFCFigura="RFCFigura1"
+                             NumLicencia="12456"
+                             NombreFigura="Nombre1"
+                             NumRegIdTribFigura="IdTrib1"
+                             ResidenciaFiscalFigura="Residencia1">
+                    <PartesTransporte ParteTransporte="Vehículo"/>
+                    <Domicilio
+                            Calle="Avenida Principal"
+                            NumeroExterior="123"
+                            NumeroInterior="A"
+                            Colonia="Centro"
+                            Localidad="Ciudad Ejemplo"
+                            Referencia="Cerca de la Plaza Central"
+                            Municipio="Municipio Ejemplo"
+                            Estado="Estado Ejemplo"
+                            Pais="MEX"
+                            CodigoPostal="12345" />
+                </TiposFigura>
+            </FiguraTransporte>
+        </CartaPorte>
+        <CartaPorte Version="3.0"
+                    IdCCP="CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12"
+                    TranspInternac="Sí"
+                    EntradaSalidaMerc="Entrada"
+                    PaisOrigenDestino="MEX"
+                    ViaEntradaSalida="01"
+                    TotalDistRec="1500.00"
+                    RegistroISTMO="Sí"
+                    UbicacionPoloOrigen="001"
+                    UbicacionPoloDestino="002"
+                    RegimenAduanero="A1" >
+            <Ubicaciones>
+                <Ubicacion TipoUbicacion="Origen" IDUbicacion="OR123456"
+                           RFCRemitenteDestinatario="XAXX010101000"
+                           NombreRemitenteDestinatario="Empresa Origen" NumRegIdTrib="123456"
+                           ResidenciaFiscal="MEX" NumEstacion="E123456" NombreEstacion="Estación 1"
+                           NavegacionTrafico="Altura" FechaHoraSalidaLlegada="2024-09-20T08:30:00"
+                           TipoEstacion="Terrestre" DistanciaRecorrida="150.50">
+                    <Domicilio Calle="Avenida Principal" NumeroExterior="123" NumeroInterior="A"
+                               Colonia="Colonia Centro" Localidad="Ciudad de México"
+                               Referencia="Cerca del parque" Municipio="Cuauhtémoc"
+                               Estado="CDMX" Pais="MEX" CodigoPostal="01000" />
+                </Ubicacion>
+                <Ubicacion TipoUbicacion="Destino" IDUbicacion="DE654321"
+                           RFCRemitenteDestinatario="XEXX010101000"
+                           NombreRemitenteDestinatario="Empresa Destino" NumRegIdTrib="654321"
+                           ResidenciaFiscal="USA" NumEstacion="E654321" NombreEstacion="Estación 2"
+                           FechaHoraSalidaLlegada="2024-09-21T12:45:00" DistanciaRecorrida="350.75">
+                    <Domicilio Calle="Calle de las Flores" NumeroExterior="789"
+                               Colonia="Colonia Del Valle" Localidad="San Luis Potosí"
+                               Referencia="Cerca de la plaza" Municipio="San Luis Potosí"
+                               Estado="SLP" Pais="MEX" CodigoPostal="78220" />
+                </Ubicacion>
+
+                <Ubicacion TipoUbicacion="Destino" IDUbicacion="DE987654"
+                           RFCRemitenteDestinatario="ZAXX010101000"
+                           NombreRemitenteDestinatario="Tercera Empresa" NumRegIdTrib="789012"
+                           ResidenciaFiscal="CAN" NumEstacion="E987654" NombreEstacion="Estación 3"
+                           FechaHoraSalidaLlegada="2024-09-22T16:30:00" DistanciaRecorrida="220.00" />
+            </Ubicaciones>
+            <Mercancias PesoBrutoTotal="1500.250" UnidadPeso="KGM" PesoNetoTotal="1400.200"
+                        NumTotalMercancias="5" CargoPorTasacion="200.00"
+                        LogisticaInversaRecoleccionDevolucion="Sí">
+                <Mercancia BienesTransp="123456" ClaveSTCC="1234567" Descripcion="Medicamento XYZ"
+                           Cantidad="10.000000" ClaveUnidad="KGM" Unidad="Kilogramos"
+                           Dimensiones="30/40/30cm" MaterialPeligroso="No"
+                           CveMaterialPeligroso="C1" Embalaje="Caja"
+                           DescripEmbalaje="Caja de cartón" SectorCOFEPRIS="No"
+                           NombreIngredienteActivo="N/A" NomQuimico="N/A"
+                           DenominacionGenericaProd="N/A" DenominacionDistintivaProd="Marca ABC"
+                           Fabricante="Laboratorio XYZ" FechaCaducidad="2025-12-31"
+                           LoteMedicamento="L123456" FormaFarmaceutica="Tableta"
+                           CondicionesEspTransp="N/A" RegistroSanitarioFolioAutorizacion="RS123456"
+                           PermisoImportacion="P1234" FolioImpoVUCEM="VUCEM123456"
+                           NumCAS="123-45-6" RazonSocialEmpImp="Importadora ABC S.A."
+                           NumRegSanPlagCOFEPRIS="RS-ABC-123" DatosFabricante="México, Laboratorio XYZ"
+                           DatosFormulador="México, Formulador ABC" DatosMaquilador="México, Maquilador XYZ"
+                           UsoAutorizado="Agricultura, plagas específicas" PesoEnKg="1.500"
+                           ValorMercancia="1000.00" Moneda="MXN" FraccionArancelaria="123456"
+                           UUIDComercioExt="123e4567-e89b-12d3-a456-426614174000"
+                           TipoMateria="Producto" DescripcionMateria="Tabletas de medicamento">
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <DetalleMercancia
+                            UnidadPesoMerc="KG"
+                            PesoBruto="1500.500"
+                            PesoNeto="1450.250"
+                            PesoTara="50.250"
+                            NumPiezas="10" />
+
+                </Mercancia>
+                <Autotransporte PermSCT="TIPO_PERMISO" NumPermisoSCT="NUM_PERMISO">
+                    <IdentificacionVehicular
+                            ConfigVehicular="CLAVE_CONFIG"
+                            PesoBrutoVehicular="20.00"
+                            PlacaVM="ABC1234"
+                            AnioModeloVM="2020" />
+
+                    <Seguros
+                            AseguraRespCivil="Nombre Aseguradora"
+                            PolizaRespCivil="POLIZA_123456"
+                            AseguraMedAmbiente="Nombre Aseguradora Ambiental"
+                            PolizaMedAmbiente="POLIZA_AMB_123"
+                            AseguraCarga="Nombre Aseguradora Carga"
+                            PolizaCarga="POLIZA_CARGA_123"
+                            PrimaSeguro="1500.00" />
+
+                    <Remolques>
+                        <Remolque
+                                SubTipoRem="SUBTIPO_REM"
+                                Placa="REM1234" />
+                        <Remolque
+                                SubTipoRem="SUBTIPO_REM"
+                                Placa="REM5678" />
+                    </Remolques>
+                </Autotransporte>
+                <TransporteMaritimo
+                        PermSCT="ABC123"
+                        NumPermisoSCT="1234567890"
+                        NombreAseg="Aseguradora XYZ"
+                        NumPolizaSeguro="POL123456"
+                        TipoEmbarcacion="Tipo1"
+                        Matricula="MAT12345"
+                        NumeroOMI="IMO1234567"
+                        AnioEmbarcacion="2020"
+                        NombreEmbarc="Embarcación del Mar"
+                        NacionalidadEmbarc="MX"
+                        UnidadesDeArqBruto="100.500"
+                        TipoCarga="CargaGeneral"
+                        Eslora="150.25"
+                        Manga="30.50"
+                        Calado="10.75"
+                        Puntal="15.00"
+                        LineaNaviera="Naviera ABC"
+                        NombreAgenteNaviero="Agente XYZ"
+                        NumAutorizacionNaviero="AUT123456"
+                        NumViaje="VIAJE001"
+                        NumConocEmbarc="CONOC123456"
+                        PermisoTempNavegacion="TEMP123456">
+                    <RemolquesCCP>
+                        <RemolqueCCP
+                                SubTipoRemCCP="SubTipo1"
+                                PlacaCCP="REM123">
+                        </RemolqueCCP>
+                        <RemolqueCCP
+                                SubTipoRemCCP="SubTipo2"
+                                PlacaCCP="REM456">
+                        </RemolqueCCP>
+                    </RemolquesCCP>
+                    <Contenedor
+                            TipoContenedor="ContenedorTipo1"
+                            MatriculaContenedor="ABCD1234567"
+                            NumPrecinto="PREC12345"
+                            IdCCPRelacionado="CCC1234-abcd-5678-efgh-1234567890ab"
+                            PlacaVMCCP="XYZ123"
+                            FechaCertificacionCCP="2023-09-20T12:00:00">
+
+
+                    </Contenedor>
+                    <Contenedor
+                            TipoContenedor="ContenedorTipo1"
+                            MatriculaContenedor="ABCD1234567"
+                            NumPrecinto="PREC12345"
+                            IdCCPRelacionado="CCC1234-abcd-5678-efgh-1234567890ab"
+                            PlacaVMCCP="XYZ123"
+                            FechaCertificacionCCP="2023-09-20T12:00:00">
+
+                        <RemolquesCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo1"
+                                    PlacaCCP="REM123">
+                            </RemolqueCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo2"
+                                    PlacaCCP="REM456">
+                            </RemolqueCCP>
+                        </RemolquesCCP>
+                    </Contenedor>
+                </TransporteMaritimo>
+                <TransporteAereo
+                        PermSCT="PermisoTipo1"
+                        NumPermisoSCT="1234567890"
+                        MatriculaAeronave="ABC-123"
+                        NombreAseg="Aseguradora XYZ"
+                        NumPolizaSeguro="POL123456"
+                        NumeroGuia="GUIDE123456789"
+                        LugarContrato="Ciudad de México"
+                        CodigoTransportista="T123"
+                        RFCEmbarcador="RFC123456789"
+                        NumRegIdTribEmbarc="ID123456"
+                        ResidenciaFiscalEmbarc="MEX"
+                        NombreEmbarcador="Embarcador S.A." />
+                <TransporteFerroviario TipoDeServicio="01" TipoDeTrafico="A" NombreAseg="Aseguradora S.A."
+                                       NumPolizaSeguro="PZ123456789">
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT06" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                </TransporteFerroviario>
+            </Mercancias>
+            <FiguraTransporte>
+                <TiposFigura TipoFigura="FT01" RFCFigura="RFC123456" NombreFigura="Transportista Ejemplo"
+                             NumLicencia="LIC123456">
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT02" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <Domicilio Calle="Av. Principal" NumeroExterior="123" Municipio="Municipio Ejemplo"
+                               Estado="Estado Ejemplo" Pais="MX" CodigoPostal="12345" />
+                </TiposFigura>
+                <TiposFigura TipoFigura="FT02" NombreFigura="Otro Transportista">
+                    <PartesTransporte ParteTransporte="PT02" />
+                </TiposFigura>
+            </FiguraTransporte>
+        </CartaPorte>
+        <CartaPorte Version="3.0"
+                    IdCCP="CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12"
+                    TranspInternac="Sí"
+                    EntradaSalidaMerc="Entrada"
+                    PaisOrigenDestino="MEX"
+                    ViaEntradaSalida="01"
+                    TotalDistRec="1500.00"
+                    RegistroISTMO="Sí"
+                    UbicacionPoloOrigen="001"
+                    UbicacionPoloDestino="002"
+                    RegimenAduanero="A1" >
+            <Ubicaciones>
+                <Ubicacion TipoUbicacion="Origen" IDUbicacion="OR123456"
+                           RFCRemitenteDestinatario="XAXX010101000"
+                           NombreRemitenteDestinatario="Empresa Origen" NumRegIdTrib="123456"
+                           ResidenciaFiscal="MEX" NumEstacion="E123456" NombreEstacion="Estación 1"
+                           NavegacionTrafico="Altura" FechaHoraSalidaLlegada="2024-09-20T08:30:00"
+                           TipoEstacion="Terrestre" DistanciaRecorrida="150.50">
+                    <Domicilio Calle="Avenida Principal" NumeroExterior="123" NumeroInterior="A"
+                               Colonia="Colonia Centro" Localidad="Ciudad de México"
+                               Referencia="Cerca del parque" Municipio="Cuauhtémoc"
+                               Estado="CDMX" Pais="MEX" CodigoPostal="01000" />
+                </Ubicacion>
+                <Ubicacion TipoUbicacion="Destino" IDUbicacion="DE654321"
+                           RFCRemitenteDestinatario="XEXX010101000"
+                           NombreRemitenteDestinatario="Empresa Destino" NumRegIdTrib="654321"
+                           ResidenciaFiscal="USA" NumEstacion="E654321" NombreEstacion="Estación 2"
+                           FechaHoraSalidaLlegada="2024-09-21T12:45:00" DistanciaRecorrida="350.75">
+                    <Domicilio Calle="Calle de las Flores" NumeroExterior="789"
+                               Colonia="Colonia Del Valle" Localidad="San Luis Potosí"
+                               Referencia="Cerca de la plaza" Municipio="San Luis Potosí"
+                               Estado="SLP" Pais="MEX" CodigoPostal="78220" />
+                </Ubicacion>
+
+                <Ubicacion TipoUbicacion="Destino" IDUbicacion="DE987654"
+                           RFCRemitenteDestinatario="ZAXX010101000"
+                           NombreRemitenteDestinatario="Tercera Empresa" NumRegIdTrib="789012"
+                           ResidenciaFiscal="CAN" NumEstacion="E987654" NombreEstacion="Estación 3"
+                           FechaHoraSalidaLlegada="2024-09-22T16:30:00" DistanciaRecorrida="220.00" />
+            </Ubicaciones>
+            <Mercancias PesoBrutoTotal="1500.250" UnidadPeso="KGM" PesoNetoTotal="1400.200"
+                        NumTotalMercancias="5" CargoPorTasacion="200.00"
+                        LogisticaInversaRecoleccionDevolucion="Sí">
+                <Mercancia BienesTransp="123456" ClaveSTCC="1234567" Descripcion="Medicamento XYZ"
+                           Cantidad="10.000000" ClaveUnidad="KGM" Unidad="Kilogramos"
+                           Dimensiones="30/40/30cm" MaterialPeligroso="No"
+                           CveMaterialPeligroso="C1" Embalaje="Caja"
+                           DescripEmbalaje="Caja de cartón" SectorCOFEPRIS="No"
+                           NombreIngredienteActivo="N/A" NomQuimico="N/A"
+                           DenominacionGenericaProd="N/A" DenominacionDistintivaProd="Marca ABC"
+                           Fabricante="Laboratorio XYZ" FechaCaducidad="2025-12-31"
+                           LoteMedicamento="L123456" FormaFarmaceutica="Tableta"
+                           CondicionesEspTransp="N/A" RegistroSanitarioFolioAutorizacion="RS123456"
+                           PermisoImportacion="P1234" FolioImpoVUCEM="VUCEM123456"
+                           NumCAS="123-45-6" RazonSocialEmpImp="Importadora ABC S.A."
+                           NumRegSanPlagCOFEPRIS="RS-ABC-123" DatosFabricante="México, Laboratorio XYZ"
+                           DatosFormulador="México, Formulador ABC" DatosMaquilador="México, Maquilador XYZ"
+                           UsoAutorizado="Agricultura, plagas específicas" PesoEnKg="1.500"
+                           ValorMercancia="1000.00" Moneda="MXN" FraccionArancelaria="123456"
+                           UUIDComercioExt="123e4567-e89b-12d3-a456-426614174000"
+                           TipoMateria="Producto" DescripcionMateria="Tabletas de medicamento">
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <DetalleMercancia
+                            UnidadPesoMerc="KG"
+                            PesoBruto="1500.500"
+                            PesoNeto="1450.250"
+                            PesoTara="50.250"
+                            NumPiezas="10" />
+
+                </Mercancia>
+                <Autotransporte PermSCT="TIPO_PERMISO" NumPermisoSCT="NUM_PERMISO">
+                    <IdentificacionVehicular
+                            ConfigVehicular="CLAVE_CONFIG"
+                            PesoBrutoVehicular="20.00"
+                            PlacaVM="ABC1234"
+                            AnioModeloVM="2020" />
+
+                    <Seguros
+                            AseguraRespCivil="Nombre Aseguradora"
+                            PolizaRespCivil="POLIZA_123456"
+                            AseguraMedAmbiente="Nombre Aseguradora Ambiental"
+                            PolizaMedAmbiente="POLIZA_AMB_123"
+                            AseguraCarga="Nombre Aseguradora Carga"
+                            PolizaCarga="POLIZA_CARGA_123"
+                            PrimaSeguro="1500.00" />
+
+                    <Remolques>
+                        <Remolque
+                                SubTipoRem="SUBTIPO_REM"
+                                Placa="REM1234" />
+                        <Remolque
+                                SubTipoRem="SUBTIPO_REM"
+                                Placa="REM5678" />
+                    </Remolques>
+                </Autotransporte>
+                <TransporteMaritimo
+                        PermSCT="ABC123"
+                        NumPermisoSCT="1234567890"
+                        NombreAseg="Aseguradora XYZ"
+                        NumPolizaSeguro="POL123456"
+                        TipoEmbarcacion="Tipo1"
+                        Matricula="MAT12345"
+                        NumeroOMI="IMO1234567"
+                        AnioEmbarcacion="2020"
+                        NombreEmbarc="Embarcación del Mar"
+                        NacionalidadEmbarc="MX"
+                        UnidadesDeArqBruto="100.500"
+                        TipoCarga="CargaGeneral"
+                        Eslora="150.25"
+                        Manga="30.50"
+                        Calado="10.75"
+                        Puntal="15.00"
+                        LineaNaviera="Naviera ABC"
+                        NombreAgenteNaviero="Agente XYZ"
+                        NumAutorizacionNaviero="AUT123456"
+                        NumViaje="VIAJE001"
+                        NumConocEmbarc="CONOC123456"
+                        PermisoTempNavegacion="TEMP123456">
+                    <RemolquesCCP>
+                        <RemolqueCCP
+                                SubTipoRemCCP="SubTipo1"
+                                PlacaCCP="REM123">
+                        </RemolqueCCP>
+                        <RemolqueCCP
+                                SubTipoRemCCP="SubTipo2"
+                                PlacaCCP="REM456">
+                        </RemolqueCCP>
+                    </RemolquesCCP>
+                    <Contenedor
+                            TipoContenedor="ContenedorTipo1"
+                            MatriculaContenedor="ABCD1234567"
+                            NumPrecinto="PREC12345"
+                            IdCCPRelacionado="CCC1234-abcd-5678-efgh-1234567890ab"
+                            PlacaVMCCP="XYZ123"
+                            FechaCertificacionCCP="2023-09-20T12:00:00">
+
+
+                    </Contenedor>
+                    <Contenedor
+                            TipoContenedor="ContenedorTipo1"
+                            MatriculaContenedor="ABCD1234567"
+                            NumPrecinto="PREC12345"
+                            IdCCPRelacionado="CCC1234-abcd-5678-efgh-1234567890ab"
+                            PlacaVMCCP="XYZ123"
+                            FechaCertificacionCCP="2023-09-20T12:00:00">
+
+                        <RemolquesCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo1"
+                                    PlacaCCP="REM123">
+                            </RemolqueCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo2"
+                                    PlacaCCP="REM456">
+                            </RemolqueCCP>
+                        </RemolquesCCP>
+                    </Contenedor>
+                </TransporteMaritimo>
+                <TransporteAereo
+                        PermSCT="PermisoTipo1"
+                        NumPermisoSCT="1234567890"
+                        MatriculaAeronave="ABC-123"
+                        NombreAseg="Aseguradora XYZ"
+                        NumPolizaSeguro="POL123456"
+                        NumeroGuia="GUIDE123456789"
+                        LugarContrato="Ciudad de México"
+                        CodigoTransportista="T123"
+                        RFCEmbarcador="RFC123456789"
+                        NumRegIdTribEmbarc="ID123456"
+                        ResidenciaFiscalEmbarc="MEX"
+                        NombreEmbarcador="Embarcador S.A." />
+                <TransporteFerroviario TipoDeServicio="01" TipoDeTrafico="A" NombreAseg="Aseguradora S.A."
+                                       NumPolizaSeguro="PZ123456789">
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT06" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                </TransporteFerroviario>
+            </Mercancias>
+            <FiguraTransporte>
+                <TiposFigura TipoFigura="FT01" RFCFigura="RFC123456" NombreFigura="Transportista Ejemplo"
+                             NumLicencia="LIC123456">
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT02" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <Domicilio Calle="Av. Principal" NumeroExterior="123" Municipio="Municipio Ejemplo"
+                               Estado="Estado Ejemplo" Pais="MX" CodigoPostal="12345" />
+                </TiposFigura>
+                <TiposFigura TipoFigura="FT02" NombreFigura="Otro Transportista">
+                    <PartesTransporte ParteTransporte="PT02" />
+                </TiposFigura>
+            </FiguraTransporte>
+        </CartaPorte>
+        <CartaPorte Version="3.1"
+                    IdCCP="CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12"
+                    TranspInternac="Sí"
+                    EntradaSalidaMerc="Entrada"
+                    PaisOrigenDestino="MEX"
+                    ViaEntradaSalida="01"
+                    TotalDistRec="1500.00"
+                    RegistroISTMO="Sí"
+                    UbicacionPoloOrigen="001"
+                    UbicacionPoloDestino="002">
+            <RegimenesAduaneros>
+                <RegimenAduaneroCCP RegimenAduanero="A1" />
+                <RegimenAduaneroCCP RegimenAduanero="B2" />
+                <RegimenAduaneroCCP RegimenAduanero="C3" />
+            </RegimenesAduaneros>
+            <Ubicaciones>
+                <Ubicacion TipoUbicacion="Origen" IDUbicacion="OR123456"
+                           RFCRemitenteDestinatario="XAXX010101000"
+                           NombreRemitenteDestinatario="Empresa Origen" NumRegIdTrib="123456"
+                           ResidenciaFiscal="MEX" NumEstacion="E123456" NombreEstacion="Estación 1"
+                           NavegacionTrafico="Altura" FechaHoraSalidaLlegada="2024-09-20T08:30:00"
+                           TipoEstacion="Terrestre" DistanciaRecorrida="150.50">
+                    <Domicilio Calle="Avenida Principal" NumeroExterior="123" NumeroInterior="A"
+                               Colonia="Colonia Centro" Localidad="Ciudad de México"
+                               Referencia="Cerca del parque" Municipio="Cuauhtémoc"
+                               Estado="CDMX" Pais="MEX" CodigoPostal="01000" />
+                </Ubicacion>
+                <Ubicacion TipoUbicacion="Destino" IDUbicacion="DE654321"
+                           RFCRemitenteDestinatario="XEXX010101000"
+                           NombreRemitenteDestinatario="Empresa Destino" NumRegIdTrib="654321"
+                           ResidenciaFiscal="USA" NumEstacion="E654321" NombreEstacion="Estación 2"
+                           FechaHoraSalidaLlegada="2024-09-21T12:45:00" DistanciaRecorrida="350.75">
+                    <Domicilio Calle="Calle de las Flores" NumeroExterior="789"
+                               Colonia="Colonia Del Valle" Localidad="San Luis Potosí"
+                               Referencia="Cerca de la plaza" Municipio="San Luis Potosí"
+                               Estado="SLP" Pais="MEX" CodigoPostal="78220" />
+                </Ubicacion>
+
+                <Ubicacion TipoUbicacion="Destino" IDUbicacion="DE987654"
+                           RFCRemitenteDestinatario="ZAXX010101000"
+                           NombreRemitenteDestinatario="Tercera Empresa" NumRegIdTrib="789012"
+                           ResidenciaFiscal="CAN" NumEstacion="E987654" NombreEstacion="Estación 3"
+                           FechaHoraSalidaLlegada="2024-09-22T16:30:00" DistanciaRecorrida="220.00" />
+            </Ubicaciones>
+            <Mercancias PesoBrutoTotal="1500.250" UnidadPeso="KGM" PesoNetoTotal="1400.200"
+                        NumTotalMercancias="5" CargoPorTasacion="200.00"
+                        LogisticaInversaRecoleccionDevolucion="Sí">
+                <Mercancia BienesTransp="123456" ClaveSTCC="1234567" Descripcion="Medicamento XYZ"
+                           Cantidad="10.000000" ClaveUnidad="KGM" Unidad="Kilogramos"
+                           Dimensiones="30/40/30cm" MaterialPeligroso="No"
+                           CveMaterialPeligroso="C1" Embalaje="Caja"
+                           DescripEmbalaje="Caja de cartón" SectorCOFEPRIS="No"
+                           NombreIngredienteActivo="N/A" NomQuimico="N/A"
+                           DenominacionGenericaProd="N/A" DenominacionDistintivaProd="Marca ABC"
+                           Fabricante="Laboratorio XYZ" FechaCaducidad="2025-12-31"
+                           LoteMedicamento="L123456" FormaFarmaceutica="Tableta"
+                           CondicionesEspTransp="N/A" RegistroSanitarioFolioAutorizacion="RS123456"
+                           PermisoImportacion="P1234" FolioImpoVUCEM="VUCEM123456"
+                           NumCAS="123-45-6" RazonSocialEmpImp="Importadora ABC S.A."
+                           NumRegSanPlagCOFEPRIS="RS-ABC-123" DatosFabricante="México, Laboratorio XYZ"
+                           DatosFormulador="México, Formulador ABC" DatosMaquilador="México, Maquilador XYZ"
+                           UsoAutorizado="Agricultura, plagas específicas" PesoEnKg="1.500"
+                           ValorMercancia="1000.00" Moneda="MXN" FraccionArancelaria="123456"
+                           UUIDComercioExt="123e4567-e89b-12d3-a456-426614174000"
+                           TipoMateria="Producto" DescripcionMateria="Tabletas de medicamento">
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <DetalleMercancia
+                            UnidadPesoMerc="KG"
+                            PesoBruto="1500.500"
+                            PesoNeto="1450.250"
+                            PesoTara="50.250"
+                            NumPiezas="10" />
+
+                </Mercancia>
+                <Autotransporte PermSCT="TIPO_PERMISO" NumPermisoSCT="NUM_PERMISO">
+                    <IdentificacionVehicular
+                            ConfigVehicular="CLAVE_CONFIG"
+                            PesoBrutoVehicular="20.00"
+                            PlacaVM="ABC1234"
+                            AnioModeloVM="2020" />
+
+                    <Seguros
+                            AseguraRespCivil="Nombre Aseguradora"
+                            PolizaRespCivil="POLIZA_123456"
+                            AseguraMedAmbiente="Nombre Aseguradora Ambiental"
+                            PolizaMedAmbiente="POLIZA_AMB_123"
+                            AseguraCarga="Nombre Aseguradora Carga"
+                            PolizaCarga="POLIZA_CARGA_123"
+                            PrimaSeguro="1500.00" />
+
+                    <Remolques>
+                        <Remolque
+                                SubTipoRem="SUBTIPO_REM"
+                                Placa="REM1234" />
+                        <Remolque
+                                SubTipoRem="SUBTIPO_REM"
+                                Placa="REM5678" />
+                    </Remolques>
+                </Autotransporte>
+                <TransporteMaritimo
+                        PermSCT="ABC123"
+                        NumPermisoSCT="1234567890"
+                        NombreAseg="Aseguradora XYZ"
+                        NumPolizaSeguro="POL123456"
+                        TipoEmbarcacion="Tipo1"
+                        Matricula="MAT12345"
+                        NumeroOMI="IMO1234567"
+                        AnioEmbarcacion="2020"
+                        NombreEmbarc="Embarcación del Mar"
+                        NacionalidadEmbarc="MX"
+                        UnidadesDeArqBruto="100.500"
+                        TipoCarga="CargaGeneral"
+                        Eslora="150.25"
+                        Manga="30.50"
+                        Calado="10.75"
+                        Puntal="15.00"
+                        LineaNaviera="Naviera ABC"
+                        NombreAgenteNaviero="Agente XYZ"
+                        NumAutorizacionNaviero="AUT123456"
+                        NumViaje="VIAJE001"
+                        NumConocEmbarc="CONOC123456"
+                        PermisoTempNavegacion="TEMP123456">
+                    <Contenedor
+                            TipoContenedor="ContenedorTipo1"
+                            MatriculaContenedor="ABCD1234567"
+                            NumPrecinto="PREC12345"
+                            IdCCPRelacionado="CCC1234-abcd-5678-efgh-1234567890ab"
+                            PlacaVMCCP="XYZ123"
+                            FechaCertificacionCCP="2023-09-20T12:00:00">
+
+                        <RemolquesCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo1"
+                                    PlacaCCP="REM123">
+                            </RemolqueCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo2"
+                                    PlacaCCP="REM456">
+                            </RemolqueCCP>
+                        </RemolquesCCP>
+                    </Contenedor>
+                    <Contenedor
+                            TipoContenedor="ContenedorTipo1"
+                            MatriculaContenedor="ABCD1234567"
+                            NumPrecinto="PREC12345"
+                            IdCCPRelacionado="CCC1234-abcd-5678-efgh-1234567890ab"
+                            PlacaVMCCP="XYZ123"
+                            FechaCertificacionCCP="2023-09-20T12:00:00">
+
+                        <RemolquesCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo1"
+                                    PlacaCCP="REM123">
+                            </RemolqueCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo2"
+                                    PlacaCCP="REM456">
+                            </RemolqueCCP>
+                        </RemolquesCCP>
+                    </Contenedor>
+                </TransporteMaritimo>
+                <TransporteAereo
+                        PermSCT="PermisoTipo1"
+                        NumPermisoSCT="1234567890"
+                        MatriculaAeronave="ABC-123"
+                        NombreAseg="Aseguradora XYZ"
+                        NumPolizaSeguro="POL123456"
+                        NumeroGuia="GUIDE123456789"
+                        LugarContrato="Ciudad de México"
+                        CodigoTransportista="T123"
+                        RFCEmbarcador="RFC123456789"
+                        NumRegIdTribEmbarc="ID123456"
+                        ResidenciaFiscalEmbarc="MEX"
+                        NombreEmbarcador="Embarcador S.A." />
+                <TransporteFerroviario TipoDeServicio="01" TipoDeTrafico="A" NombreAseg="Aseguradora S.A."
+                                       NumPolizaSeguro="PZ123456789">
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT06" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                </TransporteFerroviario>
+            </Mercancias>
+            <FiguraTransporte>
+                <TiposFigura TipoFigura="FT01" RFCFigura="RFC123456" NombreFigura="Transportista Ejemplo"
+                             NumLicencia="LIC123456">
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT02" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <Domicilio Calle="Av. Principal" NumeroExterior="123" Municipio="Municipio Ejemplo"
+                               Estado="Estado Ejemplo" Pais="MX" CodigoPostal="12345" />
+                </TiposFigura>
+                <TiposFigura TipoFigura="FT02" NombreFigura="Otro Transportista">
+                    <PartesTransporte ParteTransporte="PT02" />
+                </TiposFigura>
+            </FiguraTransporte>
+
+
+        </CartaPorte>
+        <CartaPorte Version="3.1"
+                    IdCCP="CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12"
+                    TranspInternac="Sí"
+                    EntradaSalidaMerc="Entrada"
+                    PaisOrigenDestino="MEX"
+                    ViaEntradaSalida="01"
+                    TotalDistRec="1500.00"
+                    RegistroISTMO="Sí"
+                    UbicacionPoloOrigen="001"
+                    UbicacionPoloDestino="002">
+            <RegimenesAduaneros>
+                <RegimenAduaneroCCP RegimenAduanero="A1" />
+                <RegimenAduaneroCCP RegimenAduanero="B2" />
+                <RegimenAduaneroCCP RegimenAduanero="C3" />
+            </RegimenesAduaneros>
+            <Ubicaciones>
+                <Ubicacion TipoUbicacion="Origen" IDUbicacion="OR123456"
+                           RFCRemitenteDestinatario="XAXX010101000"
+                           NombreRemitenteDestinatario="Empresa Origen" NumRegIdTrib="123456"
+                           ResidenciaFiscal="MEX" NumEstacion="E123456" NombreEstacion="Estación 1"
+                           NavegacionTrafico="Altura" FechaHoraSalidaLlegada="2024-09-20T08:30:00"
+                           TipoEstacion="Terrestre" DistanciaRecorrida="150.50">
+                    <Domicilio Calle="Avenida Principal" NumeroExterior="123" NumeroInterior="A"
+                               Colonia="Colonia Centro" Localidad="Ciudad de México"
+                               Referencia="Cerca del parque" Municipio="Cuauhtémoc"
+                               Estado="CDMX" Pais="MEX" CodigoPostal="01000" />
+                </Ubicacion>
+                <Ubicacion TipoUbicacion="Destino" IDUbicacion="DE654321"
+                           RFCRemitenteDestinatario="XEXX010101000"
+                           NombreRemitenteDestinatario="Empresa Destino" NumRegIdTrib="654321"
+                           ResidenciaFiscal="USA" NumEstacion="E654321" NombreEstacion="Estación 2"
+                           FechaHoraSalidaLlegada="2024-09-21T12:45:00" DistanciaRecorrida="350.75">
+                    <Domicilio Calle="Calle de las Flores" NumeroExterior="789"
+                               Colonia="Colonia Del Valle" Localidad="San Luis Potosí"
+                               Referencia="Cerca de la plaza" Municipio="San Luis Potosí"
+                               Estado="SLP" Pais="MEX" CodigoPostal="78220" />
+                </Ubicacion>
+
+                <Ubicacion TipoUbicacion="Destino" IDUbicacion="DE987654"
+                           RFCRemitenteDestinatario="ZAXX010101000"
+                           NombreRemitenteDestinatario="Tercera Empresa" NumRegIdTrib="789012"
+                           ResidenciaFiscal="CAN" NumEstacion="E987654" NombreEstacion="Estación 3"
+                           FechaHoraSalidaLlegada="2024-09-22T16:30:00" DistanciaRecorrida="220.00" />
+            </Ubicaciones>
+            <Mercancias PesoBrutoTotal="1500.250" UnidadPeso="KGM" PesoNetoTotal="1400.200"
+                        NumTotalMercancias="5" CargoPorTasacion="200.00"
+                        LogisticaInversaRecoleccionDevolucion="Sí">
+                <Mercancia BienesTransp="123456" ClaveSTCC="1234567" Descripcion="Medicamento XYZ"
+                           Cantidad="10.000000" ClaveUnidad="KGM" Unidad="Kilogramos"
+                           Dimensiones="30/40/30cm" MaterialPeligroso="No"
+                           CveMaterialPeligroso="C1" Embalaje="Caja"
+                           DescripEmbalaje="Caja de cartón" SectorCOFEPRIS="No"
+                           NombreIngredienteActivo="N/A" NomQuimico="N/A"
+                           DenominacionGenericaProd="N/A" DenominacionDistintivaProd="Marca ABC"
+                           Fabricante="Laboratorio XYZ" FechaCaducidad="2025-12-31"
+                           LoteMedicamento="L123456" FormaFarmaceutica="Tableta"
+                           CondicionesEspTransp="N/A" RegistroSanitarioFolioAutorizacion="RS123456"
+                           PermisoImportacion="P1234" FolioImpoVUCEM="VUCEM123456"
+                           NumCAS="123-45-6" RazonSocialEmpImp="Importadora ABC S.A."
+                           NumRegSanPlagCOFEPRIS="RS-ABC-123" DatosFabricante="México, Laboratorio XYZ"
+                           DatosFormulador="México, Formulador ABC" DatosMaquilador="México, Maquilador XYZ"
+                           UsoAutorizado="Agricultura, plagas específicas" PesoEnKg="1.500"
+                           ValorMercancia="1000.00" Moneda="MXN" FraccionArancelaria="123456"
+                           UUIDComercioExt="123e4567-e89b-12d3-a456-426614174000"
+                           TipoMateria="Producto" DescripcionMateria="Tabletas de medicamento">
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <DocumentacionAduanera TipoDocumento="tipo_doc_aduanero"
+                                           NumPedimento="22  99  1234  0000000"
+                                           IdentDocAduanero="Folio123456"
+                                           RFCImpo="XAXX010101000" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <GuiasIdentificacion
+                            NumeroGuiaIdentificacion="GU1234567890"
+                            DescripGuiaIdentificacion="Paquete de medicamentos"
+                            PesoGuiaIdentificacion="10.500" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <CantidadTransporta
+                            Cantidad="100.500"
+                            IDOrigen="OR123456"
+                            IDDestino="DE654321"
+                            CvesTransporte="CVE01" />
+                    <DetalleMercancia
+                            UnidadPesoMerc="KG"
+                            PesoBruto="1500.500"
+                            PesoNeto="1450.250"
+                            PesoTara="50.250"
+                            NumPiezas="10" />
+
+                </Mercancia>
+                <Autotransporte PermSCT="TIPO_PERMISO" NumPermisoSCT="NUM_PERMISO">
+                    <IdentificacionVehicular
+                            ConfigVehicular="CLAVE_CONFIG"
+                            PesoBrutoVehicular="20.00"
+                            PlacaVM="ABC1234"
+                            AnioModeloVM="2020" />
+
+                    <Seguros
+                            AseguraRespCivil="Nombre Aseguradora"
+                            PolizaRespCivil="POLIZA_123456"
+                            AseguraMedAmbiente="Nombre Aseguradora Ambiental"
+                            PolizaMedAmbiente="POLIZA_AMB_123"
+                            AseguraCarga="Nombre Aseguradora Carga"
+                            PolizaCarga="POLIZA_CARGA_123"
+                            PrimaSeguro="1500.00" />
+
+                    <Remolques>
+                        <Remolque
+                                SubTipoRem="SUBTIPO_REM"
+                                Placa="REM1234" />
+                        <Remolque
+                                SubTipoRem="SUBTIPO_REM"
+                                Placa="REM5678" />
+                    </Remolques>
+                </Autotransporte>
+                <TransporteMaritimo
+                        PermSCT="ABC123"
+                        NumPermisoSCT="1234567890"
+                        NombreAseg="Aseguradora XYZ"
+                        NumPolizaSeguro="POL123456"
+                        TipoEmbarcacion="Tipo1"
+                        Matricula="MAT12345"
+                        NumeroOMI="IMO1234567"
+                        AnioEmbarcacion="2020"
+                        NombreEmbarc="Embarcación del Mar"
+                        NacionalidadEmbarc="MX"
+                        UnidadesDeArqBruto="100.500"
+                        TipoCarga="CargaGeneral"
+                        Eslora="150.25"
+                        Manga="30.50"
+                        Calado="10.75"
+                        Puntal="15.00"
+                        LineaNaviera="Naviera ABC"
+                        NombreAgenteNaviero="Agente XYZ"
+                        NumAutorizacionNaviero="AUT123456"
+                        NumViaje="VIAJE001"
+                        NumConocEmbarc="CONOC123456"
+                        PermisoTempNavegacion="TEMP123456">
+                    <Contenedor
+                            TipoContenedor="ContenedorTipo1"
+                            MatriculaContenedor="ABCD1234567"
+                            NumPrecinto="PREC12345"
+                            IdCCPRelacionado="CCC1234-abcd-5678-efgh-1234567890ab"
+                            PlacaVMCCP="XYZ123"
+                            FechaCertificacionCCP="2023-09-20T12:00:00">
+
+                        <RemolquesCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo1"
+                                    PlacaCCP="REM123">
+                            </RemolqueCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo2"
+                                    PlacaCCP="REM456">
+                            </RemolqueCCP>
+                        </RemolquesCCP>
+                    </Contenedor>
+                    <Contenedor
+                            TipoContenedor="ContenedorTipo1"
+                            MatriculaContenedor="ABCD1234567"
+                            NumPrecinto="PREC12345"
+                            IdCCPRelacionado="CCC1234-abcd-5678-efgh-1234567890ab"
+                            PlacaVMCCP="XYZ123"
+                            FechaCertificacionCCP="2023-09-20T12:00:00">
+
+                        <RemolquesCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo1"
+                                    PlacaCCP="REM123">
+                            </RemolqueCCP>
+                            <RemolqueCCP
+                                    SubTipoRemCCP="SubTipo2"
+                                    PlacaCCP="REM456">
+                            </RemolqueCCP>
+                        </RemolquesCCP>
+                    </Contenedor>
+                </TransporteMaritimo>
+                <TransporteAereo
+                        PermSCT="PermisoTipo1"
+                        NumPermisoSCT="1234567890"
+                        MatriculaAeronave="ABC-123"
+                        NombreAseg="Aseguradora XYZ"
+                        NumPolizaSeguro="POL123456"
+                        NumeroGuia="GUIDE123456789"
+                        LugarContrato="Ciudad de México"
+                        CodigoTransportista="T123"
+                        RFCEmbarcador="RFC123456789"
+                        NumRegIdTribEmbarc="ID123456"
+                        ResidenciaFiscalEmbarc="MEX"
+                        NombreEmbarcador="Embarcador S.A." />
+                <TransporteFerroviario TipoDeServicio="01" TipoDeTrafico="A" NombreAseg="Aseguradora S.A."
+                                       NumPolizaSeguro="PZ123456789">
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <DerechosDePaso TipoDerechoDePaso="D01" KilometrajePagado="150.50" />
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT06" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                    <Carro TipoCarro="C01" MatriculaCarro="CAR123" GuiaCarro="G12345"
+                           ToneladasNetasCarro="10.500">
+                        <Contenedor TipoContenedor="CT01" PesoContenedorVacio="2.500"
+                                    PesoNetoMercancia="8.000" />
+                    </Carro>
+                </TransporteFerroviario>
+            </Mercancias>
+            <FiguraTransporte>
+                <TiposFigura TipoFigura="FT01" RFCFigura="RFC123456" NombreFigura="Transportista Ejemplo"
+                             NumLicencia="LIC123456">
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT02" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <PartesTransporte ParteTransporte="PT01" />
+                    <Domicilio Calle="Av. Principal" NumeroExterior="123" Municipio="Municipio Ejemplo"
+                               Estado="Estado Ejemplo" Pais="MX" CodigoPostal="12345" />
+                </TiposFigura>
+                <TiposFigura TipoFigura="FT02" NombreFigura="Otro Transportista">
+                    <PartesTransporte ParteTransporte="PT02" />
+                </TiposFigura>
+            </FiguraTransporte>
+
+
+        </CartaPorte>
     </Complemento>
 </Comprobante>

@@ -2,8 +2,10 @@ package comprobante
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models"
+	"fmt"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 type Comprobante40 struct {
@@ -42,6 +44,8 @@ type Comprobante40 struct {
 	InformacionAdicional InformacionAdicional `xml:"InformacionAdicional" bson:"InformacionAdicional"`
 	Cancelacion          Cancelacion          `xml:"Cancelacion" bson:"Cancelacion"`
 	Vigente              bool                 `bson:"Vigente"`
+	/* Cadena original */
+	CadenaOriginal string `bson:"CadenaOriginal"`
 }
 
 type InformacionGlobal40 struct {
@@ -181,4 +185,10 @@ func (c *Comprobante40) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	c.FechaEmision = fechaEmision
 
 	return nil
+}
+
+func (c *Comprobante40) GetFileName() string {
+	year := fmt.Sprint(c.FechaEmision.Year())
+	month := fmt.Sprint(int(c.FechaEmision.Month()))
+	return c.Emisor.Rfc + "/" + c.Receptor.Rfc + "/" + year + "/" + month + "/" + c.Uuid + ".xml"
 }

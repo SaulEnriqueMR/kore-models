@@ -1,6 +1,7 @@
 package comprobante
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -38,6 +39,8 @@ type Comprobante33 struct {
 	InformacionAdicional InformacionAdicional `xml:"InformacionAdicional" bson:"InformacionAdicional"`
 	Cancelacion          Cancelacion          `xml:"Cancelacion" bson:"Cancelacion"`
 	Vigente              bool                 `bson:"Vigente"`
+	/* Cadena original */
+	CadenaOriginal string `bson:"CadenaOriginal"`
 }
 
 type CfdiRelacionados33 struct {
@@ -138,4 +141,10 @@ type TrasladoImpuestos33 struct {
 	TipoFactor string  `xml:"TipoFactor,attr" bson:"TipoFactor"`
 	TasaOCuota float64 `xml:"TasaOCuota,attr" bson:"TasaOCuota"`
 	Importe    float64 `xml:"Importe,attr" bson:"Importe"`
+}
+
+func (c *Comprobante33) GetFileName() string {
+	year := fmt.Sprint(c.FechaEmision.Year())
+	month := fmt.Sprint(int(c.FechaEmision.Month()))
+	return c.Emisor.Rfc + "/" + c.Receptor.Rfc + "/" + year + "/" + month + "/" + c.Uuid + ".xml"
 }

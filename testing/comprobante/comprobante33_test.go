@@ -1,10 +1,13 @@
 package comprobante
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	comprobante3 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
+	"log"
+	"os"
 	"testing"
 )
 
@@ -13,6 +16,7 @@ func GetComprobante33ForTest(filename string, t *testing.T) (comprobante3.Compro
 	var parsed comprobante3.Comprobante33
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	GenerateJSONFromXML("comprobante33.json", parsed)
 	return parsed, errUnmarshal
 }
 
@@ -151,14 +155,15 @@ func InternalTestFullAtributesTraslados(t *testing.T, impuestos33 []comprobante3
 func InternalTestFullAtributesComplemento33(t *testing.T, complemento33 comprobante3.Complemento) {
 	assert.NotNil(t, complemento33)
 	assert.NotNil(t, complemento33.ImpuestoLocales)
-	assert.Equal(t, 1, len(*complemento33.ImpuestoLocales))
+	assert.Equal(t, 5, len(*complemento33.ImpuestoLocales))
 	impuestosLocales := *complemento33.ImpuestoLocales
-	assert.Equal(t, "1.0", impuestosLocales[0].Version)
-	assert.Equal(t, 1500.00, impuestosLocales[0].TotalRetenciones)
-	assert.Equal(t, 3000.00, impuestosLocales[0].TotalTraslados)
+	impuestosLocales1 := *impuestosLocales[0].ImpuestoLocales10
+	assert.Equal(t, "1.0", impuestosLocales1[0].Version)
+	assert.Equal(t, 1500.00, impuestosLocales1[0].TotalRetenciones)
+	assert.Equal(t, 3000.00, impuestosLocales1[0].TotalTraslados)
 
-	retencionesLocales := *impuestosLocales[0].RetencionesLocales
-	trasladosLocales := *impuestosLocales[0].TrasladosLocales
+	retencionesLocales := *impuestosLocales1[0].RetencionesLocales
+	trasladosLocales := *impuestosLocales1[0].TrasladosLocales
 	assert.Equal(t, "ISR", retencionesLocales[0].ImpLocRetenido)
 	assert.Equal(t, 15.00, retencionesLocales[0].TasaRetencion)
 	assert.Equal(t, 1500.00, retencionesLocales[0].Importe)
@@ -166,4 +171,12 @@ func InternalTestFullAtributesComplemento33(t *testing.T, complemento33 comproba
 	assert.Equal(t, "IVA", trasladosLocales[0].ImpLocTrasladado)
 	assert.Equal(t, 16.00, trasladosLocales[0].TasaTraslado)
 	assert.Equal(t, 3000.00, trasladosLocales[0].Importe)
+}
+
+func GenerateJSONFromXML(namefile string, data comprobante3.Comprobante33) {
+	jsonData, err := json.MarshalIndent(data, "", "	")
+	err = os.WriteFile(namefile, jsonData, 0644)
+	if err != nil {
+		log.Println(err)
+	}
 }

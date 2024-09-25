@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	certificadodestruccion2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/certificadodedestruccion"
+	certificadodestruccion2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/certificadodestruccion"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

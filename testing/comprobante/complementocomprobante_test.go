@@ -23,6 +23,7 @@ func GetComprobante33ForTestComplementoTest(filename string, t *testing.T) (comp
 	assert.NoError(t, errUnmarshal)
 	return parsed, errUnmarshal
 }
+
 func TestComprobanteComplementos(t *testing.T) {
 	InternalTestComplementoComprobante32(t)
 	InternalTestComplementoComprobante33(t)
@@ -40,7 +41,21 @@ func InternalTestComplementoComprobante33(t *testing.T) {
 
 func InternalTestFullAtributesComplementoComprobantes(t *testing.T, complemento comprobantes.Complemento) {
 	assert.NotNil(t, complemento)
+	assert.Equal(t, 1, len(*complemento.Aerolineas))
 	assert.Equal(t, 5, len(*complemento.ImpuestoLocales))
+	assert.Equal(t, 1, len(*complemento.CertificadoDestruccion))
+	assert.Equal(t, 1, len(*complemento.CFDIRegistroFiscal))
+	assert.Equal(t, 1, len(*complemento.ComplementoSPEI))
+	assert.Equal(t, 1, len(*complemento.ConsumoCombustibles))
+	assert.Equal(t, 1, len(*complemento.Detallista))
+	assert.Equal(t, 1, len(*complemento.Divisas))
+	assert.Equal(t, 1, len(*complemento.Donatarias))
+	assert.Equal(t, 2, len(*complemento.EstadoCuentaCombustible))
+	assert.Equal(t, 1, len(*complemento.GastoHidrocarburos))
+	assert.Equal(t, 1, len(*complemento.Ine))
+	assert.Equal(t, 1, len(*complemento.LeyendasFiscales))
+	assert.Equal(t, 2, len(*complemento.Nomina))
+	assert.Equal(t, 1, len(*complemento.NotariosPublicos))
 	//assert.Equal(t, 7, len(*complemento.ComercioExterior))
 	//assert.Equal(t, 6, len(*complemento.CartaPorte))
 }

@@ -21,12 +21,12 @@ func (v *Donatarias) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error 
 		}
 	}
 
-	if Version == "1.0" {
-		var donatorias10 []Donatarias11
-		if err := d.DecodeElement(&donatorias10, &start); err != nil {
+	if Version == "1.1" {
+		var donatorias11 []Donatarias11
+		if err := d.DecodeElement(&donatorias11, &start); err != nil {
 			return err
 		}
-		v.Donatarias11 = &donatorias10
+		v.Donatarias11 = &donatorias11
 	}
 
 	return nil

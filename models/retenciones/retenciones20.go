@@ -2,14 +2,10 @@ package retenciones
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/app/documentofiscaldigital"
-	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/dividendos"
-	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/enajenaciondeacciones"
-	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/intereses"
-	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/pagosaextranjeros"
-	"github.com/SaulEnriqueMR/kore-models/models/timbrefiscaldigital"
 	"strings"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/app/documentofiscaldigital"
 )
 
 type Retenciones20 struct {
@@ -27,7 +23,7 @@ type Retenciones20 struct {
 	Receptor             Receptor20              `xml:"Receptor" bson:"Receptor"`
 	Periodo              Periodo20               `xml:"Periodo" bson:"Periodo"`
 	Totales              Totales20               `xml:"Totales" bson:"Totales"`
-	Complemento          *ComplementoReten20     `xml:"Complemento" bson:"Complemento,omitempty"`
+	Complemento          *Complemento            `xml:"Complemento" bson:"Complemento,omitempty"`
 	/* Atributo convertido */
 	FechaEmision time.Time `bson:"FechaEmision"`
 	/* Atributos extraidos desde tfd */
@@ -87,14 +83,6 @@ type ImpuestoRetenido20 struct {
 	TipoPago string   `xml:"TipoPagoRet,attr" bson:"TipoPagoRet"`
 }
 
-type ComplementoReten20 struct {
-	Dividendos          *dividendos.Dividendos10                       `xml:"Dividendos" bson:"Dividendos,omitempty"`
-	EnajenacionAcciones *enajenaciondeacciones.EnajenacionDeAcciones10 `xml:"EnajenaciondeAcciones" bson:"EnajenacionAcciones,omitempty"`
-	Intereses           *intereses.Intereses10                         `xml:"Intereses" bson:"Intereses,omitempty"`
-	PagosAExtranjeros   *pagosaextranjeros.PagosAExtranjeros10         `xml:"Pagosaextranjeros" bson:"PagosAExtranjeros,omitempty"`
-	TimbreFiscalDigital *timbrefiscaldigital.TimbreFiscalDigital       `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`
-}
-
 func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	// Create an alias to avoid recursion
 	type Alias Retenciones20
@@ -112,12 +100,13 @@ func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 
 	*r = Retenciones20(aux)
 	r.FechaEmision = fechaEmision
-
-	if r.Complemento.TimbreFiscalDigital != nil {
-		tfd11 := r.Complemento.TimbreFiscalDigital.TimbreFiscalDigital11
-		if tfd11 != nil {
-			r.FechaTimbrado = tfd11.FechaTimbrado
-			r.Uuid = strings.ToUpper(tfd11.Uuid)
+	if r.Complemento != nil {
+		if r.Complemento.TimbreFiscalDigital != nil {
+			tfd11 := r.Complemento.TimbreFiscalDigital.TimbreFiscalDigital11
+			if tfd11 != nil {
+				r.FechaTimbrado = tfd11.FechaTimbrado
+				r.Uuid = strings.ToUpper(tfd11.Uuid)
+			}
 		}
 	}
 

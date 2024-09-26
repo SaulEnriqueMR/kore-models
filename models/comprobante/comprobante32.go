@@ -3,41 +3,42 @@ package comprobante
 import (
 	"encoding/xml"
 	"fmt"
+	"strings"
+
 	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
-	"strings"
 )
 
 type Comprobante32 struct {
-	documentofiscaldigital.DocumentoFiscalDigital
-	Version              string       `xml:"version,attr" bson:"Version"`
-	Serie                *string      `xml:"serie,attr"  bson:"Serie,omitempty"`
-	Folio                *string      `xml:"folio,attr" bson:"Folio,omitempty"`
-	Fecha                string       `xml:"fecha,attr" bson:"Fecha"`
-	Sello                string       `xml:"sello,attr" bson:"Sello"`
-	FormaPago            string       `xml:"formaDePago,attr" bson:"FormaPago"`
-	NoCertificado        string       `xml:"noCertificado,attr" bson:"NoCertificado"`
-	Certificado          string       `xml:"certificado,attr" bson:"Certificado"`
-	CondicionesPago      *string      `xml:"condicionesDePago,attr" bson:"CondicionesPago,omitempty"`
-	Subtotal             float64      `xml:"subTotal,attr" bson:"Subtotal"`
-	Descuento            *float64     `xml:"descuento,attr" bson:"Descuento,omitempty"`
-	MotivoDescuento      *string      `xml:"motivoDescuento,attr" bson:"MotivoDescuento,omitempty"`
-	TipoCambio           *string      `xml:"TipoCambio,attr" bson:"TipoCambio,omitempty"`
-	Moneda               *string      `xml:"Moneda,attr" bson:"Moneda,omitempty"`
-	Total                float64      `xml:"total,attr" bson:"Total"`
-	TipoComprobante      string       `xml:"tipoDeComprobante,attr" bson:"TipoComprobante"`
-	MetodoPago           string       `xml:"metodoDePago,attr" bson:"MetodoPago"`
-	LugarExpedicion      string       `xml:"LugarExpedicion,attr" bson:"LugarExpedicion"`
-	NumeroCuentaPago     *string      `xml:"NumCtaPago,attr" bson:"NumeroCuentaPago,omitempty"`
-	FolioFiscalOrig      *string      `xml:"FolioFiscalOrig,attr" bson:"FolioFiscalOriginal,omitempty"`
-	SerieFolioFiscalOrig *string      `xml:"SerieFolioFiscalOrig,attr" bson:"SerieFolioFiscalOriginal,omitempty"`
-	FechaFolioFiscalOrig *string      `xml:"FechaFolioFiscalOrig,attr" bson:"FechaFolioFiscalOriginal,omitempty"`
-	MontoFolioFiscalOrig *string      `xml:"MontoFolioFiscalOrig,attr" bson:"MontoFolioFiscalOriginal,omitempty"`
-	Emisor               Emisor32     `xml:"Emisor" bson:"Emisor"`
-	Receptor             Receptor32   `xml:"Receptor" bson:"Receptor"`
-	Conceptos            []Concepto32 `xml:"Conceptos>Concepto" bson:"Conceptos"`
-	Impuestos            Impuestos32  `xml:"Impuestos" bson:"Impuestos"`
-	Complemento          *Complemento `xml:"Complemento" bson:"Complemento,omitempty"`
+	documentofiscaldigital.DocumentoFiscalDigital `bson:",inline"`
+	Version                                       string       `xml:"version,attr" bson:"Version"`
+	Serie                                         *string      `xml:"serie,attr"  bson:"Serie,omitempty"`
+	Folio                                         *string      `xml:"folio,attr" bson:"Folio,omitempty"`
+	Fecha                                         string       `xml:"fecha,attr" bson:"Fecha"`
+	Sello                                         string       `xml:"sello,attr" bson:"Sello"`
+	FormaPago                                     string       `xml:"formaDePago,attr" bson:"FormaPago"`
+	NoCertificado                                 string       `xml:"noCertificado,attr" bson:"NoCertificado"`
+	Certificado                                   string       `xml:"certificado,attr" bson:"Certificado"`
+	CondicionesPago                               *string      `xml:"condicionesDePago,attr" bson:"CondicionesPago,omitempty"`
+	Subtotal                                      float64      `xml:"subTotal,attr" bson:"Subtotal"`
+	Descuento                                     *float64     `xml:"descuento,attr" bson:"Descuento,omitempty"`
+	MotivoDescuento                               *string      `xml:"motivoDescuento,attr" bson:"MotivoDescuento,omitempty"`
+	TipoCambio                                    *string      `xml:"TipoCambio,attr" bson:"TipoCambio,omitempty"`
+	Moneda                                        *string      `xml:"Moneda,attr" bson:"Moneda,omitempty"`
+	Total                                         float64      `xml:"total,attr" bson:"Total"`
+	TipoComprobante                               string       `xml:"tipoDeComprobante,attr" bson:"TipoComprobante"`
+	MetodoPago                                    string       `xml:"metodoDePago,attr" bson:"MetodoPago"`
+	LugarExpedicion                               string       `xml:"LugarExpedicion,attr" bson:"LugarExpedicion"`
+	NumeroCuentaPago                              *string      `xml:"NumCtaPago,attr" bson:"NumeroCuentaPago,omitempty"`
+	FolioFiscalOrig                               *string      `xml:"FolioFiscalOrig,attr" bson:"FolioFiscalOriginal,omitempty"`
+	SerieFolioFiscalOrig                          *string      `xml:"SerieFolioFiscalOrig,attr" bson:"SerieFolioFiscalOriginal,omitempty"`
+	FechaFolioFiscalOrig                          *string      `xml:"FechaFolioFiscalOrig,attr" bson:"FechaFolioFiscalOriginal,omitempty"`
+	MontoFolioFiscalOrig                          *string      `xml:"MontoFolioFiscalOrig,attr" bson:"MontoFolioFiscalOriginal,omitempty"`
+	Emisor                                        Emisor32     `xml:"Emisor" bson:"Emisor"`
+	Receptor                                      Receptor32   `xml:"Receptor" bson:"Receptor"`
+	Conceptos                                     []Concepto32 `xml:"Conceptos>Concepto" bson:"Conceptos"`
+	Impuestos                                     Impuestos32  `xml:"Impuestos" bson:"Impuestos"`
+	Complemento                                   *Complemento `xml:"Complemento" bson:"Complemento,omitempty"`
 }
 
 type Emisor32 struct {
@@ -139,6 +140,7 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 
 	*c = Comprobante32(aux)
 	c.FechaEmision = fechaEmision
+	c.Comprobante = true
 
 	if c.Complemento.TimbreFiscalDigital != nil {
 		tfd := c.Complemento.TimbreFiscalDigital.TimbreFiscalDigital10

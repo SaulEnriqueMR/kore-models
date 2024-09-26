@@ -1,12 +1,14 @@
 package documentofiscaldigital
 
-import "time"
+import (
+	"time"
+)
 
 type DocumentoFiscalDigital struct {
-	FechaEmision         time.Time            `bson:"FechaEmision"`
-	Uuid                 string               `bson:"Uuid"`
-	FechaTimbrado        time.Time            `bson:"FechaTimbrado"`
-	Vigente              bool                 `bson:"Vigente"`
+	FechaEmision  time.Time `bson:"FechaEmision"`
+	Uuid          string    `bson:"Uuid"`
+	FechaTimbrado time.Time `bson:"FechaTimbrado"`
+	// Vigente              bool                 `bson:"Vigente"`
 	CadenaOriginal       string               `bson:"CadenaOriginal"`
 	InformacionAdicional InformacionAdicional `xml:"InformacionAdicional" bson:"InformacionAdicional"`
 	Cancelacion          Cancelacion          `xml:"Cancelacion" bson:"Cancelacion"`

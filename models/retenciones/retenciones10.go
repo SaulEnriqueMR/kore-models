@@ -2,30 +2,26 @@ package retenciones
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/app/documentofiscaldigital"
-	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/dividendos"
-	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/enajenaciondeacciones"
-	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/intereses"
-	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/pagosaextranjeros"
-	"github.com/SaulEnriqueMR/kore-models/models/timbrefiscaldigital"
 	"strings"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/app/documentofiscaldigital"
 )
 
 type Retenciones10 struct {
-	Version              string              `xml:"Version,attr" bson:"Version"`
-	Folio                *string             `xml:"FolioInt,attr" bson:"Folio,omitempty"`
-	Sello                string              `xml:"Sello,attr" bson:"Sello"`
-	NoCertificado        string              `xml:"NumCert,attr" bson:"NoCertificado"`
-	Certificado          string              `xml:"Cert,attr" bson:"Certificado"`
-	FechaExp             string              `xml:"FechaExp,attr"`
-	ClaveRetencion       string              `xml:"CveRetenc,attr" bson:"ClaveRetencion"`
-	DescripcionRetencion *string             `xml:"DescRetenc,attr" bson:"DescripcionRetencion,omitempty"`
-	Emisor               Emisor10            `xml:"Emisor" bson:"Emisor"`
-	Receptor             Receptor10          `xml:"Receptor" bson:"Receptor"`
-	Periodo              Periodo10           `xml:"Periodo" bson:"Periodo"`
-	Totales              Totales10           `xml:"Totales" bson:"Totales"`
-	Complemento          *ComplementoReten10 `xml:"Complemento" bson:"Complemento,omitempty"`
+	Version              string       `xml:"Version,attr" bson:"Version"`
+	Folio                *string      `xml:"FolioInt,attr" bson:"Folio,omitempty"`
+	Sello                string       `xml:"Sello,attr" bson:"Sello"`
+	NoCertificado        string       `xml:"NumCert,attr" bson:"NoCertificado"`
+	Certificado          string       `xml:"Cert,attr" bson:"Certificado"`
+	FechaExp             string       `xml:"FechaExp,attr"`
+	ClaveRetencion       string       `xml:"CveRetenc,attr" bson:"ClaveRetencion"`
+	DescripcionRetencion *string      `xml:"DescRetenc,attr" bson:"DescripcionRetencion,omitempty"`
+	Emisor               Emisor10     `xml:"Emisor" bson:"Emisor"`
+	Receptor             Receptor10   `xml:"Receptor" bson:"Receptor"`
+	Periodo              Periodo10    `xml:"Periodo" bson:"Periodo"`
+	Totales              Totales10    `xml:"Totales" bson:"Totales"`
+	Complemento          *Complemento `xml:"Complemento" bson:"Complemento,omitempty"`
 
 	/* Atributo convertido */
 	FechaEmision time.Time `bson:"FechaEmision"`
@@ -63,14 +59,6 @@ type Periodo10 struct {
 	Ejercicio string `xml:"Ejerc,attr" bson:"Ejercicio"`
 }
 
-type ComplementoReten10 struct {
-	Dividendos          *dividendos.Dividendos10                       `xml:"Dividendos" bson:"Dividendos,omitempty"`
-	EnajenacionAcciones *enajenaciondeacciones.EnajenacionDeAcciones10 `xml:"EnajenacionDeAcciones" bson:"EnajenacionAcciones,omitempty"`
-	Intereses           *intereses.Intereses10                         `xml:"Intereses" bson:"Intereses,omitempty"`
-	PagosAExtranjeros   *pagosaextranjeros.PagosAExtranjeros10         `xml:"PagosAExtranjeros" bson:"PagosAExtranjeros,omitempty"`
-	TimbreFiscalDigital *timbrefiscaldigital.TimbreFiscalDigital       `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`
-}
-
 type Totales10 struct {
 	MontoTotalOperacion float64               `xml:"montoTotOperacion,attr" bson:"MontoTotalOperacion"`
 	MontoTotalGravado   float64               `xml:"montoTotGrav,attr" bson:"MontoTotalGravado"`
@@ -104,17 +92,19 @@ func (r *Retenciones10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	*r = Retenciones10(aux)
 	r.FechaEmision = fechaEmision
 
-	if r.Complemento.TimbreFiscalDigital != nil {
-		tfd10 := r.Complemento.TimbreFiscalDigital.TimbreFiscalDigital10
-		if tfd10 != nil {
-			r.FechaTimbrado = tfd10.FechaTimbrado
-			r.Uuid = strings.ToUpper(tfd10.Uuid)
-		}
+	if r.Complemento != nil {
+		if r.Complemento.TimbreFiscalDigital != nil {
+			tfd10 := r.Complemento.TimbreFiscalDigital.TimbreFiscalDigital10
+			if tfd10 != nil {
+				r.FechaTimbrado = tfd10.FechaTimbrado
+				r.Uuid = strings.ToUpper(tfd10.Uuid)
+			}
 
-		tfd11 := r.Complemento.TimbreFiscalDigital.TimbreFiscalDigital11
-		if tfd11 != nil {
-			r.FechaTimbrado = tfd11.FechaTimbrado
-			r.Uuid = strings.ToUpper(tfd11.Uuid)
+			tfd11 := r.Complemento.TimbreFiscalDigital.TimbreFiscalDigital11
+			if tfd11 != nil {
+				r.FechaTimbrado = tfd11.FechaTimbrado
+				r.Uuid = strings.ToUpper(tfd11.Uuid)
+			}
 		}
 	}
 

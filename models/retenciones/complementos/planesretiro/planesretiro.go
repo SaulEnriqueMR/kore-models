@@ -15,7 +15,7 @@ func (p *PlanesDeRetiro) UnmarshalXML(d *xml.Decoder, start xml.StartElement) er
 	var Version string
 
 	for _, attributes := range start.Attr {
-		if attributes.Name.Local == "version" {
+		if attributes.Name.Local == "Version" {
 			Version = attributes.Value
 			Version = strings.TrimSpace(Version)
 			break

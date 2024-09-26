@@ -49,3 +49,17 @@ func (c *Comprobante) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 
 	return nil
 }
+
+type HasUuid interface {
+	GetUuid() string
+}
+
+func (c Comprobante32) GetUuid() string {
+	return c.Uuid
+}
+func (c Comprobante33) GetUuid() string {
+	return c.Uuid
+}
+func (c Comprobante40) GetUuid() string {
+	return c.Uuid
+}

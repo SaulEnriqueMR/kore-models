@@ -1,4 +1,4 @@
-package donatorias
+package donatarias
 
 import (
 	"encoding/xml"
@@ -9,7 +9,7 @@ type Donatarias struct {
 	Donatarias11 *[]Donatarias11 `bson:"Donatarias11,omitempty"`
 }
 
-func (v *Donatarias) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (d *Donatarias) UnmarshalXML(x *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -22,11 +22,14 @@ func (v *Donatarias) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error 
 	}
 
 	if Version == "1.1" {
-		var donatorias11 []Donatarias11
-		if err := d.DecodeElement(&donatorias11, &start); err != nil {
+		var donatarias11 []Donatarias11
+		if err := x.DecodeElement(&donatarias11, &start); err != nil {
 			return err
 		}
-		v.Donatarias11 = &donatorias11
+		if d.Donatarias11 == nil {
+			d.Donatarias11 = &[]Donatarias11{}
+		}
+		*d.Donatarias11 = append(*d.Donatarias11, donatarias11...)
 	}
 
 	return nil

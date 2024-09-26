@@ -1,9 +1,10 @@
-package donatorias
+package donatarias
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
 type Donatarias11 struct {

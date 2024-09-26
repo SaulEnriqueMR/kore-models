@@ -1,7 +1,7 @@
 package documentofiscaldigital
 
 import (
-	"encoding/json"
+	"encoding/xml"
 	"time"
 )
 
@@ -34,16 +34,19 @@ type Cancelacion struct {
 	FechaCancelacion   *time.Time `bson:"FechaCancelacion,omitempty"`
 }
 
-func (d *DocumentoFiscalDigital) UnmarshalJSON(data []byte) error {
+func (c *DocumentoFiscalDigital) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
 	type Alias DocumentoFiscalDigital
-	aux := &struct {
-		*Alias
-	}{
-		Alias: (*Alias)(d),
-	}
-	if err := json.Unmarshal(data, &aux); err != nil {
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
 		return err
 	}
-	d.Comprobante = true
+
+	*c = DocumentoFiscalDigital(aux)
+
+	c.Comprobante = true
+
 	return nil
 }

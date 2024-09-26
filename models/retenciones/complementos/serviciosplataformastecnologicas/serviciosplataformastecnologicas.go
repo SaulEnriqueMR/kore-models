@@ -9,7 +9,7 @@ type ServiciosPlataformasTecnologicas struct {
 	ServiciosPlataformasTecnologicas10 *[]ServiciosPlataformasTecnologicas10 `bson:"ServiciosPlataformasTecnologicas10,omitempty"`
 }
 
-func (v *ServiciosPlataformasTecnologicas) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (s *ServiciosPlataformasTecnologicas) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (v *ServiciosPlataformasTecnologicas) UnmarshalXML(d *xml.Decoder, start xm
 		if err := d.DecodeElement(&servicios10, &start); err != nil {
 			return err
 		}
-		v.ServiciosPlataformasTecnologicas10 = &servicios10
+		if s.ServiciosPlataformasTecnologicas10 == nil {
+			s.ServiciosPlataformasTecnologicas10 = &[]ServiciosPlataformasTecnologicas10{}
+		}
+		*s.ServiciosPlataformasTecnologicas10 = append(*s.ServiciosPlataformasTecnologicas10, servicios10...)
 	}
 
 	return nil

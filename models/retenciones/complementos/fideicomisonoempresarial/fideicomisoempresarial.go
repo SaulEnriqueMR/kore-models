@@ -9,7 +9,7 @@ type FideicomisoEmpresarial struct {
 	FideicomisoEmpresarial10 *[]FideicomisoEmpresarial10 `bson:"FideicomisoEmpresarial10,omitempty"`
 }
 
-func (c *FideicomisoEmpresarial) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (f *FideicomisoEmpresarial) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (c *FideicomisoEmpresarial) UnmarshalXML(d *xml.Decoder, start xml.StartEle
 		if err := d.DecodeElement(&fideicomiso10, &start); err != nil {
 			return err
 		}
-		c.FideicomisoEmpresarial10 = &fideicomiso10
+		if f.FideicomisoEmpresarial10 == nil {
+			f.FideicomisoEmpresarial10 = &[]FideicomisoEmpresarial10{}
+		}
+		*f.FideicomisoEmpresarial10 = append(*f.FideicomisoEmpresarial10, fideicomiso10...)
 	}
 
 	return nil

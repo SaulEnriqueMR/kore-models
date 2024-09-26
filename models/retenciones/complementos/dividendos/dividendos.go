@@ -9,7 +9,7 @@ type Dividendos struct {
 	Dividendos10 *[]Dividendos10 `bson:"Dividendos10,omitempty"`
 }
 
-func (c *Dividendos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (d *Dividendos) UnmarshalXML(x *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -23,10 +23,13 @@ func (c *Dividendos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error 
 
 	if Version == "1.0" {
 		var dividendos10 []Dividendos10
-		if err := d.DecodeElement(&dividendos10, &start); err != nil {
+		if err := x.DecodeElement(&dividendos10, &start); err != nil {
 			return err
 		}
-		c.Dividendos10 = &dividendos10
+		if d.Dividendos10 == nil {
+			d.Dividendos10 = &[]Dividendos10{}
+		}
+		*d.Dividendos10 = append(*d.Dividendos10, dividendos10...)
 	}
 
 	return nil

@@ -9,7 +9,7 @@ type EnajenacionDeAcciones struct {
 	EnajenacionDeAcciones10 *[]EnajenacionDeAcciones10 `bson:"EnajenacionDeAcciones10,omitempty"`
 }
 
-func (c *EnajenacionDeAcciones) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (e *EnajenacionDeAcciones) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (c *EnajenacionDeAcciones) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 		if err := d.DecodeElement(&enajenacion10, &start); err != nil {
 			return err
 		}
-		c.EnajenacionDeAcciones10 = &enajenacion10
+		if e.EnajenacionDeAcciones10 == nil {
+			e.EnajenacionDeAcciones10 = &[]EnajenacionDeAcciones10{}
+		}
+		*e.EnajenacionDeAcciones10 = append(*e.EnajenacionDeAcciones10, enajenacion10...)
 	}
 
 	return nil

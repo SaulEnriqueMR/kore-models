@@ -1,5 +1,11 @@
 package ventavehiculos
 
+import (
+	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
+	"time"
+)
+
 type VentaVehiculos10 struct {
 	Version        string             `xml:"version,attr" bson:"Version"`
 	ClaveVehicular string             `xml:"ClaveVehicular,attr" bson:"ClaveVehicular"`
@@ -17,7 +23,30 @@ type ParteVentVehi10 struct {
 }
 
 type InformacionAduaneraVentVehi10 struct {
-	Numero string  `xml:"numero,attr" bson:"Numero"`
-	Fecha  string  `xml:"fecha,attr" bson:"Fecha"`
-	Aduana *string `xml:"aduana,attr" bson:"Aduana,omitempty"`
+	Numero    string    `xml:"numero,attr" bson:"Numero"`
+	Fecha     string    `xml:"fecha,attr"`
+	FechaDate time.Time `bson:"Fecha"`
+	Aduana    *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
+}
+
+func (iavv10 *InformacionAduaneraVentVehi10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias InformacionAduaneraVentVehi10
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*iavv10 = InformacionAduaneraVentVehi10(aux)
+
+	if iavv10 != nil {
+		fecha, err := helpers.ParseDatetime(iavv10.Fecha)
+		if err != nil {
+			return err
+		}
+		iavv10.FechaDate = fecha
+	}
+
+	return nil
 }

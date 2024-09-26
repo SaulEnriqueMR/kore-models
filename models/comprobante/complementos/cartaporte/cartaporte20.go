@@ -1,6 +1,10 @@
 package cartaporte
 
-import "encoding/xml"
+import (
+	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
+	"time"
+)
 
 type CartaPorte20 struct {
 	XMLName           xml.Name                      `xml:"CartaPorte"`
@@ -25,7 +29,8 @@ type UbicacionCartaPorte20 struct {
 	NumEstacion                 *string                `xml:"NumEstacion,attr" bson:"NumEstacion,omitempty"`
 	NombreEstacion              *string                `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
 	NavegacionTrafico           *string                `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
-	FechaHoraSalidaLlegada      string                 `xml:"FechaHoraSalidaLlegada,attr" bson:"FechaHoraSalidaLlegada"`
+	FechaHoraSalidaLlegada      string                 `xml:"FechaHoraSalidaLlegada,attr"`
+	FechaHoraSalidaLlegadaDate  time.Time              `bson:"FechaHoraSalidaLlegada"`
 	TipoEstacion                *string                `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
 	DistanciaRecorrida          *float64               `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
 	Domicilio                   *DomicilioCartaPorte20 `xml:"Domicilio" bson:"Domicilio,omitempty"`
@@ -225,4 +230,26 @@ type TiposFiguraCartaPorte20 struct {
 
 type PartesTransporteCartaPorte20 struct {
 	ParteTransporte string `xml:"ParteTransporte,attr" bson:"ParteTransporte"`
+}
+
+func (ucp20 *UbicacionCartaPorte20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias UbicacionCartaPorte20
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*ucp20 = UbicacionCartaPorte20(aux)
+
+	if ucp20 != nil {
+		fecha, err := helpers.ParseDatetime(ucp20.FechaHoraSalidaLlegada)
+		if err != nil {
+			return err
+		}
+		ucp20.FechaHoraSalidaLlegadaDate = fecha
+	}
+
+	return nil
 }

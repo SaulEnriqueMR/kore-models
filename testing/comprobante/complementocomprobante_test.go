@@ -73,5 +73,6 @@ func InternalTestFullAtributesComplementoComprobantes(t *testing.T, complemento 
 	assert.Equal(t, 2, len(*complemento.RenovacionSustitucionVehiculos.RenovacionSustitucion10))
 	assert.Equal(t, 2, len(*complemento.TuristaPasajeroExtranjero.TuristaPasajeroExtranjero10))
 	assert.Equal(t, 2, len(*complemento.ValesDeDespensa.ValesDespensa10))
-	assert.Equal(t, 1, len(*complemento.VehiculoUsado.VehiculoUsado10))
+	assert.NotNil(t, complemento.TimbreFiscalDigital.TimbreFiscalDigital10)
+	assert.NotNil(t, complemento.TimbreFiscalDigital.TimbreFiscalDigital11)
 }

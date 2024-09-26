@@ -10,7 +10,7 @@ import (
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/consumocombustible"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/detallista"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/divisas"
-	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/donatorias"
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/donatarias"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/estadodecuentacombustible"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/gastohidrocarburos"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/impuestoslocales"
@@ -48,7 +48,7 @@ type Complemento struct {
 	ConsumoCombustibles            *consumocombustible.ConsumoDeCombustible             `xml:"ConsumoDeCombustibles" bson:"ConsumoDeCombustibles,omitempty"`
 	Detallista                     *detallista.Detallista                               `xml:"detallista" bson:"detallista,omitempty"`
 	Divisas                        *divisas.Divisas                                     `xml:"Divisas" bson:"Divisas,omitempty"`
-	Donatarias                     *donatorias.Donatarias                               `xml:"Donatarias" bson:"Donatarias,omitempty"`
+	Donatarias                     *donatarias.Donatarias                               `xml:"Donatarias" bson:"Donatarias,omitempty"`
 	EstadoCuentaCombustible        *estadodecuentacombustible.EstadoDeCuentaCombustible `xml:"EstadoDeCuentaCombustible" bson:"EstadoDeCuentaCombustible,omitempty"`
 	GastoHidrocarburos             *gastohidrocarburos.GastoHidrocarburos               `xml:"GastosHidrocarburos" bson:"GastosHidrocarburos,omitempty"`
 	Ine                            *ine.INE                                             `xml:"INE" bson:"Ine,omitempty"`

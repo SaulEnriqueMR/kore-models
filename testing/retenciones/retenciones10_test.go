@@ -1,10 +1,13 @@
 package retenciones
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"github.com/SaulEnriqueMR/kore-models/models/retenciones"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
+	"log"
+	"os"
 	"testing"
 )
 
@@ -12,6 +15,7 @@ func TestFullRetenciones10(t *testing.T) {
 	data := testing2.GetFileContentForTest("./retenciones10.xml", t)
 	var parsed retenciones.Retenciones10
 	errUnmashal := xml.Unmarshal(data, &parsed)
+	GenerateJSONFromXML("retenciones10.json", parsed)
 
 	assert.NoError(t, errUnmashal)
 	InternalTestFullAttributes10(t, parsed)
@@ -85,4 +89,12 @@ func InternalTestImpuestosRetenidos10(t *testing.T, impuestosRetenidos *[]retenc
 	assert.Equal(t, 10.0, *first.Base)
 	assert.NotNil(t, first.Impuesto)
 	assert.Equal(t, "001", *first.Impuesto)
+}
+
+func GenerateJSONFromXML(namefile string, data retenciones.Retenciones10) {
+	jsonData, err := json.MarshalIndent(data, "", "	")
+	err = os.WriteFile(namefile, jsonData, 0644)
+	if err != nil {
+		log.Println(err)
+	}
 }

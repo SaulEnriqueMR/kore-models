@@ -53,6 +53,305 @@
                 TipoPagoRet="03" />
     </retenciones:Totales>
     <retenciones:Complemento>
-        <tfd:TimbreFiscalDigital xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="05b7859f-9eba-46ec-a2b3-496dbb1c5b15" FechaTimbrado="2024-03-04T16:20:28" RfcProvCertif="SPR190613I52" SelloCFD="bG3OOBPprTCS9TJXLvRl4FoXuw70xzlKKpMyzFLnkWAilRw541nEv0q7PkUJ24BfBDP7vZ24GXCPMzwNuy/DXNkzYyqG2gNVU17Y5iDqOqP46lMUKDNn8piH/HaQ8Q8Ns5G/rmJexiSmc+ZF+Mym1oxDe+8B5u0K87e14+RvcznB4943QVpXyRowAF9F6AyJ1xMbOnPNWnQJp0ZMzRkKm3DOVRukVkz7ZHFY6Wnb6JQHXueRjzLvab8gjT5V6RNkfTdNQ9ck9QDCiHBza3OIgKwmMs8iGre4lorPz8MZumEuiF4pPWPQzgEaxz68aAkkda8CmxQVrDhBGYiPAZDyBA==" NoCertificadoSAT="30001000000400002495" SelloSAT="oiiD5hjcZQl6UetmevKOyygVjvlClSVSyzoDW6p4aET89/5uYXY5I0z7Lr6qwfMnojl8BpgESrPXU4Z85URHe8F9tjrLiVeBliY0swAEyztSUeSO4T0GZ8bxhGJr5Y/Nup5qmlNjI9fzdDgFB4W1W3zYwAFnMboWQopZntm6FvjayBvE+TMrU3/JERSNSU6v2/oCkx9nQ1h6zG5GkHlNCAQ1J/7H9D9VJfwk8clAJ3lkTeDaLt8eUcEXrwDFl83UWSAQjhAucQYsMZ52pJ5idwK7+K99aTXiLLCQg+0KZk50TcQi/rSV2r4t8Jfptf3ScSwxU1T03BC5yEohSxHLYg==" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+        <retenciones:Arrendamientoenfideicomiso Version="1.0"
+                                                PagProvEfecPorFiduc="3.000000"
+                                                RendimFideicom="3.000000" DeduccCorresp="4.000000" MontTotRet="5.000000"
+                                                MontResFiscDistFibras="6.000000" MontOtrosConceptDistr="7.000000"
+                                                DescrMontOtrosConceptDistr="ArrendamientoEnFideicomiso" />
+        <retenciones:Arrendamientoenfideicomiso Version="1.0"
+                                                PagProvEfecPorFiduc="3.000000"
+                                                RendimFideicom="3.000000" DeduccCorresp="4.000000" MontTotRet="5.000000"
+                                                MontResFiscDistFibras="6.000000" MontOtrosConceptDistr="7.000000"
+                                                DescrMontOtrosConceptDistr="ArrendamientoEnFideicomiso" />
+        <retenciones:Arrendamientoenfideicomiso Version="1.0"
+                                                PagProvEfecPorFiduc="3.000000"
+                                                RendimFideicom="3.000000" DeduccCorresp="4.000000" MontTotRet="5.000000"
+                                                MontResFiscDistFibras="6.000000" MontOtrosConceptDistr="7.000000"
+                                                DescrMontOtrosConceptDistr="ArrendamientoEnFideicomiso" />
+        <retenciones:Dividendos Version="1.0">
+            <DividOUtil
+                    CveTipDivOUtil="DIV123"
+                    MontISRAcredRetMexico="1500.50"
+                    MontISRAcredRetExtranjero="2000.75"
+                    MontRetExtDivExt="500.25"
+                    TipoSocDistrDiv="Sociedad Nacional"
+                    MontISRAcredNal="300.00"
+                    MontDivAcumNal="1200.00"
+                    MontDivAcumExt="800.00"/>
+            <Remanente ProporcionRem="10.503456"/>
+        </retenciones:Dividendos>
+        <retenciones:Dividendos Version="1.0">
+            <DividOUtil
+                    CveTipDivOUtil="DIV123"
+                    MontISRAcredRetMexico="1500.50"
+                    MontISRAcredRetExtranjero="2000.75"
+                    MontRetExtDivExt="500.25"
+                    TipoSocDistrDiv="Sociedad Nacional"
+                    MontISRAcredNal="300.00"
+                    MontDivAcumNal="1200.00"
+                    MontDivAcumExt="800.00"/>
+            <Remanente ProporcionRem="10.503456"/>
+        </retenciones:Dividendos>
+        <retenciones:Dividendos Version="1.0">
+            <DividOUtil
+                    CveTipDivOUtil="DIV123"
+                    MontISRAcredRetMexico="1500.50"
+                    MontISRAcredRetExtranjero="2000.75"
+                    MontRetExtDivExt="500.25"
+                    TipoSocDistrDiv="Sociedad Nacional"
+                    MontISRAcredNal="300.00"
+                    MontDivAcumNal="1200.00"
+                    MontDivAcumExt="800.00"/>
+            <Remanente ProporcionRem="10.503456"/>
+        </retenciones:Dividendos>
+        <retenciones:EnajenaciondeAcciones Version="1.0"
+                                           ContratoIntermediacion="Contrato de intermediación de acciones de la empresa XYZ"
+                                           Ganancia="5000.00"
+                                           Perdida="1500.50"/>
+        <retenciones:EnajenaciondeAcciones Version="1.0"
+                                           ContratoIntermediacion="Contrato de intermediación de acciones de la empresa XYZ"
+                                           Ganancia="5000.00"
+                                           Perdida="1500.50"/>
+        <retenciones:EnajenaciondeAcciones Version="1.0"
+                                           ContratoIntermediacion="Contrato de intermediación de acciones de la empresa XYZ"
+                                           Ganancia="5000.00"
+                                           Perdida="1500.50"/>
+        <retenciones:Fideicomisonoempresarial Version="1.0">
+            <IngresosOEntradas MontTotEntradasPeriodo="300.00"
+                               PartPropAcumDelFideicom="300.00" PropDelMontTot="800.000000">
+                <IntegracIngresos Concepto="CONCEPTO2" />
+            </IngresosOEntradas>
+            <DeduccOSalidas MontTotEgresPeriodo="50.00" PartPropDelFideicom="0.00"
+                            PropDelMontTot="800.000000">
+                <IntegracEgresos ConceptoS="CONCEPTO2" />
+            </DeduccOSalidas>
+            <RetEfectFideicomiso MontRetRelPagFideic="750.45"
+                                 DescRetRelPagFideic="DESCRIPCION" />
+        </retenciones:Fideicomisonoempresarial>
+        <retenciones:Fideicomisonoempresarial Version="1.0">
+            <IngresosOEntradas MontTotEntradasPeriodo="300.00"
+                               PartPropAcumDelFideicom="300.00" PropDelMontTot="800.000000">
+                <IntegracIngresos Concepto="CONCEPTO2" />
+            </IngresosOEntradas>
+            <DeduccOSalidas MontTotEgresPeriodo="50.00" PartPropDelFideicom="0.00"
+                            PropDelMontTot="800.000000">
+                <IntegracEgresos ConceptoS="CONCEPTO2" />
+            </DeduccOSalidas>
+            <RetEfectFideicomiso MontRetRelPagFideic="750.45"
+                                 DescRetRelPagFideic="DESCRIPCION" />
+        </retenciones:Fideicomisonoempresarial>
+        <retenciones:Fideicomisonoempresarial Version="1.0">
+            <IngresosOEntradas MontTotEntradasPeriodo="300.00"
+                               PartPropAcumDelFideicom="300.00" PropDelMontTot="800.000000">
+                <IntegracIngresos Concepto="CONCEPTO2" />
+            </IngresosOEntradas>
+            <DeduccOSalidas MontTotEgresPeriodo="50.00" PartPropDelFideicom="0.00"
+                            PropDelMontTot="800.000000">
+                <IntegracEgresos ConceptoS="CONCEPTO2" />
+            </DeduccOSalidas>
+            <RetEfectFideicomiso MontRetRelPagFideic="750.45"
+                                 DescRetRelPagFideic="DESCRIPCION" />
+        </retenciones:Fideicomisonoempresarial>
+        <retenciones:Intereses
+                Version="1.0"
+                SistFinanciero="SI"
+                RetiroAORESRetInt="NO"
+                OperFinancDerivad="NO"
+                MontIntNominal="1500.00"
+                MontIntReal="1200.00"
+                Perdida="100.00">
+        </retenciones:Intereses>
+        <retenciones:Intereses
+                Version="1.0"
+                SistFinanciero="SI"
+                RetiroAORESRetInt="NO"
+                OperFinancDerivad="NO"
+                MontIntNominal="1500.00"
+                MontIntReal="1200.00"
+                Perdida="100.00">
+        </retenciones:Intereses>
+        <retenciones:Intereses
+                Version="1.0"
+                SistFinanciero="SI"
+                RetiroAORESRetInt="NO"
+                OperFinancDerivad="NO"
+                MontIntNominal="1500.00"
+                MontIntReal="1200.00"
+                Perdida="100.00">
+        </retenciones:Intereses>
+        <retenciones:Intereseshipotecarios
+                Version="1.0"
+                CreditoDeInstFinanc="SI"
+                SaldoInsoluto="1000000.00"
+                PropDeducDelCredit="0.50"
+                MontTotIntNominalesDev="30000.00"
+                MontTotIntNominalesDevYPag="25000.00"
+                MontTotIntRealPagDeduc="12000.00"
+                NumContrato="ABC123456">
+        </retenciones:Intereseshipotecarios>
+        <retenciones:Intereseshipotecarios
+                Version="1.0"
+                CreditoDeInstFinanc="SI"
+                SaldoInsoluto="1000000.00"
+                PropDeducDelCredit="0.50"
+                MontTotIntNominalesDev="30000.00"
+                MontTotIntNominalesDevYPag="25000.00"
+                MontTotIntRealPagDeduc="12000.00"
+                NumContrato="ABC123456">
+        </retenciones:Intereseshipotecarios>
+        <retenciones:Intereseshipotecarios
+                Version="1.0"
+                CreditoDeInstFinanc="SI"
+                SaldoInsoluto="1000000.00"
+                PropDeducDelCredit="0.50"
+                MontTotIntNominalesDev="30000.00"
+                MontTotIntNominalesDevYPag="25000.00"
+                MontTotIntRealPagDeduc="12000.00"
+                NumContrato="ABC123456">
+        </retenciones:Intereseshipotecarios>
+        <retenciones:Operacionesconderivados Version="1.0" MontGanAcum="1.00" MontPerdDed="1.00"/>
+        <retenciones:Operacionesconderivados Version="1.0" MontGanAcum="1.00" MontPerdDed="1.00"/>
+        <retenciones:Operacionesconderivados Version="1.0" MontGanAcum="1.00" MontPerdDed="1.00"/>
+        <retenciones:Planesderetiro
+                Version="1.0"
+                SistemaFinanc="SI"
+                MontTotAportAnioInmAnterior="1000.00"
+                MontIntRealesDevengAniooInmAnt="100.00"
+                HuboRetirosAnioInmAntPer="SI"
+                MontTotRetiradoAnioInmAntPer="10.00"
+                MontTotExentRetiradoAnioInmAnt="90.00"
+                MontTotExedenteAnioInmAnt="900.00"
+                HuboRetirosAnioInmAnt="SI"
+                MontTotRetiradoAnioInmAnt="90.00"
+        />
+        <retenciones:Planesderetiro
+                Version="1.0"
+                SistemaFinanc="SI"
+                MontTotAportAnioInmAnterior="1000.00"
+                MontIntRealesDevengAniooInmAnt="100.00"
+                HuboRetirosAnioInmAntPer="SI"
+                MontTotRetiradoAnioInmAntPer="10.00"
+                MontTotExentRetiradoAnioInmAnt="90.00"
+                MontTotExedenteAnioInmAnt="900.00"
+                HuboRetirosAnioInmAnt="SI"
+                MontTotRetiradoAnioInmAnt="90.00"
+        />
+        <retenciones:Planesderetiro
+                Version="1.1"
+                SistemaFinanc="SI"
+                MontTotAportAnioInmAnterior="1000.00"
+                MontIntRealesDevengAniooInmAnt="100.00"
+                HuboRetirosAnioInmAntPer="SI"
+                MontTotRetiradoAnioInmAntPer="10.00"
+                MontTotExentRetiradoAnioInmAnt="90.00"
+                MontTotExedenteAnioInmAnt="900.00"
+                HuboRetirosAnioInmAnt="SI"
+                MontTotRetiradoAnioInmAnt="90.00"
+                NumReferencia="123456">
+            <AportacionesODepositos TipoAportacionODeposito="a" MontAportODep="1750.00" RFCFiduciaria="AAA010101AAA"/>
+        </retenciones:Planesderetiro>
+        <retenciones:Planesderetiro
+                Version="1.1"
+                SistemaFinanc="SI"
+                MontTotAportAnioInmAnterior="1000.00"
+                MontIntRealesDevengAniooInmAnt="100.00"
+                HuboRetirosAnioInmAntPer="SI"
+                MontTotRetiradoAnioInmAntPer="10.00"
+                MontTotExentRetiradoAnioInmAnt="90.00"
+                MontTotExedenteAnioInmAnt="900.00"
+                HuboRetirosAnioInmAnt="SI"
+                MontTotRetiradoAnioInmAnt="90.00"
+                NumReferencia="123456">
+            <AportacionesODepositos TipoAportacionODeposito="a" MontAportODep="1750.00" RFCFiduciaria="AAA010101AAA"/>
+        </retenciones:Planesderetiro>
+        <retenciones:Premios
+                Version="1.0"
+                EntidadFederativa="19"
+                MontTotPago="28263.91"
+                MontTotPagoGrav="28263.91"
+                MontTotPagoExent="0.00"
+        />
+        <retenciones:Premios
+                Version="1.0"
+                EntidadFederativa="19"
+                MontTotPago="28263.91"
+                MontTotPagoGrav="28263.91"
+                MontTotPagoExent="0.00"
+        />
+        <retenciones:SectorFinanciero
+                Version="1.0"
+                IdFideicom="111111"
+                NomFideicom="NOMBRE FIDEICOMISO"
+                DescripFideicom="OBJETO/FIN FIDEICOMISO"
+        />
+        <retenciones:SectorFinanciero
+                Version="1.0"
+                IdFideicom="111111"
+                NomFideicom="NOMBRE FIDEICOMISO"
+                DescripFideicom="OBJETO/FIN FIDEICOMISO"
+        />
+        <retenciones:SectorFinanciero
+                Version="1.0"
+                IdFideicom="111111"
+                NomFideicom="NOMBRE FIDEICOMISO"
+                DescripFideicom="OBJETO/FIN FIDEICOMISO"
+        />
+        <retenciones:ServiciosPlataformasTecnologicas
+                Version="1.0"
+                Periodicidad="Mensual"
+                NumServ="10"
+                MonTotServSIVA="5000.00"
+                TotalIVATrasladado="800.00"
+                TotalIVARetenido="200.00"
+                TotalISRRetenido="600.00"
+                DifIVAEntregadoPrestServ="100.00"
+                MonTotalporUsoPlataforma="300.00"
+                MonTotalContribucionGubernamental="150.00">
+            <Servicios>
+                <DetallesDelServicio FormaPagoServ="01" TipoDeServ="A01" SubTipServ="B02" RFCTerceroAutorizado="ABC123456789" FechaServ="2023-09-23" PrecioServSinIVA="1000.00">
+                    <ImpuestosTrasladadosdelServicio Base="1000.00" Impuesto="IVA" TipoFactor="Tasa" TasaCuota="0.16" Importe="160.00"/>
+                    <ContribucionGubernamental ImpContrib="200.00" EntidadDondePagaLaContribucion="01" />
+                    <ComisionDelServicio Base="150.50" Porcentaje="0.05" Importe="7.53" />
+                </DetallesDelServicio>
+            </Servicios>
+        </retenciones:ServiciosPlataformasTecnologicas>
+        <retenciones:ServiciosPlataformasTecnologicas
+                Version="1.0"
+                Periodicidad="Mensual"
+                NumServ="10"
+                MonTotServSIVA="5000.00"
+                TotalIVATrasladado="800.00"
+                TotalIVARetenido="200.00"
+                TotalISRRetenido="600.00"
+                DifIVAEntregadoPrestServ="100.00"
+                MonTotalporUsoPlataforma="300.00"
+                MonTotalContribucionGubernamental="150.00">
+            <Servicios>
+                <DetallesDelServicio FormaPagoServ="01" TipoDeServ="A01" SubTipServ="B02" RFCTerceroAutorizado="ABC123456789" FechaServ="2023-09-23" PrecioServSinIVA="1000.00">
+                    <ImpuestosTrasladadosdelServicio Base="1000.00" Impuesto="IVA" TipoFactor="Tasa" TasaCuota="0.16" Importe="160.00"/>
+                    <ContribucionGubernamental ImpContrib="200.00" EntidadDondePagaLaContribucion="01" />
+                    <ComisionDelServicio Base="150.50" Porcentaje="0.05" Importe="7.53" />
+                </DetallesDelServicio>
+            </Servicios>
+        </retenciones:ServiciosPlataformasTecnologicas>
+        <retenciones:ServiciosPlataformasTecnologicas
+                Version="1.0"
+                Periodicidad="Mensual"
+                NumServ="10"
+                MonTotServSIVA="5000.00"
+                TotalIVATrasladado="800.00"
+                TotalIVARetenido="200.00"
+                TotalISRRetenido="600.00"
+                DifIVAEntregadoPrestServ="100.00"
+                MonTotalporUsoPlataforma="300.00"
+                MonTotalContribucionGubernamental="150.00">
+            <Servicios>
+                <DetallesDelServicio FormaPagoServ="01" TipoDeServ="A01" SubTipServ="B02" RFCTerceroAutorizado="ABC123456789" FechaServ="2023-09-23" PrecioServSinIVA="1000.00">
+                    <ImpuestosTrasladadosdelServicio Base="1000.00" Impuesto="IVA" TipoFactor="Tasa" TasaCuota="0.16" Importe="160.00"/>
+                    <ContribucionGubernamental ImpContrib="200.00" EntidadDondePagaLaContribucion="01" />
+                    <ComisionDelServicio Base="150.50" Porcentaje="0.05" Importe="7.53" />
+                </DetallesDelServicio>
+            </Servicios>
+        </retenciones:ServiciosPlataformasTecnologicas>
     </retenciones:Complemento>
 </retenciones:Retenciones>

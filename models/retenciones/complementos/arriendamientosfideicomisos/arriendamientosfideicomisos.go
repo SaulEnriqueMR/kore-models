@@ -9,7 +9,7 @@ type ArriendamientosFideicomisos struct {
 	ArriendamientosFideicomisos10 *[]ArriendamientosFideicomisos10 `bson:"ArriendamientosFideicomisos10,omitempty"`
 }
 
-func (c *ArriendamientosFideicomisos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (a *ArriendamientosFideicomisos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (c *ArriendamientosFideicomisos) UnmarshalXML(d *xml.Decoder, start xml.Sta
 		if err := d.DecodeElement(&arriendamientos10, &start); err != nil {
 			return err
 		}
-		c.ArriendamientosFideicomisos10 = &arriendamientos10
+		if a.ArriendamientosFideicomisos10 == nil {
+			a.ArriendamientosFideicomisos10 = &[]ArriendamientosFideicomisos10{}
+		}
+		*a.ArriendamientosFideicomisos10 = append(*a.ArriendamientosFideicomisos10, arriendamientos10...)
 	}
 
 	return nil

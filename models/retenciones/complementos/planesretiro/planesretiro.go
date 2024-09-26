@@ -10,7 +10,7 @@ type PlanesDeRetiro struct {
 	PlanesDeRetiro11 *[]PlanesDeRetiro11 `bson:"PlanesDeRetiro11,omitempty"`
 }
 
-func (c *PlanesDeRetiro) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (p *PlanesDeRetiro) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -27,7 +27,10 @@ func (c *PlanesDeRetiro) UnmarshalXML(d *xml.Decoder, start xml.StartElement) er
 		if err := d.DecodeElement(&planes10, &start); err != nil {
 			return err
 		}
-		c.PlanesDeRetiro10 = &planes10
+		if p.PlanesDeRetiro10 == nil {
+			p.PlanesDeRetiro10 = &[]PlanesDeRetiro10{}
+		}
+		*p.PlanesDeRetiro10 = append(*p.PlanesDeRetiro10, planes10...)
 	}
 
 	if Version == "1.1" {
@@ -35,7 +38,10 @@ func (c *PlanesDeRetiro) UnmarshalXML(d *xml.Decoder, start xml.StartElement) er
 		if err := d.DecodeElement(&planes11, &start); err != nil {
 			return err
 		}
-		c.PlanesDeRetiro11 = &planes11
+		if p.PlanesDeRetiro11 == nil {
+			p.PlanesDeRetiro11 = &[]PlanesDeRetiro11{}
+		}
+		*p.PlanesDeRetiro11 = append(*p.PlanesDeRetiro11, planes11...)
 	}
 
 	return nil

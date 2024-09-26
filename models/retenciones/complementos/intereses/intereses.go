@@ -9,7 +9,7 @@ type Intereses struct {
 	Intereses10 *[]Intereses10 `bson:"Intereses10,omitempty"`
 }
 
-func (c *Intereses) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (i *Intereses) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (c *Intereses) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 		if err := d.DecodeElement(&intereses10, &start); err != nil {
 			return err
 		}
-		c.Intereses10 = &intereses10
+		if i.Intereses10 == nil {
+			i.Intereses10 = &[]Intereses10{}
+		}
+		*i.Intereses10 = append(*i.Intereses10, intereses10...)
 	}
 
 	return nil

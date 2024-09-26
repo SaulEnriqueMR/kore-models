@@ -9,7 +9,7 @@ type Premios struct {
 	Premios10 *[]Premios10 `bson:"Premios10,omitempty"`
 }
 
-func (v *Premios) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (p *Premios) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (v *Premios) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 		if err := d.DecodeElement(&premios10, &start); err != nil {
 			return err
 		}
-		v.Premios10 = &premios10
+		if p.Premios10 == nil {
+			p.Premios10 = &[]Premios10{}
+		}
+		*p.Premios10 = append(*p.Premios10, premios10...)
 	}
 
 	return nil

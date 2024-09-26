@@ -9,7 +9,7 @@ type SectorFinanciero struct {
 	SectorFinanciero10 *[]SectorFinanciero10 `bson:"SectorFinanciero,omitempty"`
 }
 
-func (v *SectorFinanciero) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (s *SectorFinanciero) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (v *SectorFinanciero) UnmarshalXML(d *xml.Decoder, start xml.StartElement) 
 		if err := d.DecodeElement(&sector10, &start); err != nil {
 			return err
 		}
-		v.SectorFinanciero10 = &sector10
+		if s.SectorFinanciero10 == nil {
+			s.SectorFinanciero10 = &[]SectorFinanciero10{}
+		}
+		*s.SectorFinanciero10 = append(*s.SectorFinanciero10, sector10...)
 	}
 
 	return nil

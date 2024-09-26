@@ -9,7 +9,7 @@ type OperacionesDerivados struct {
 	OperacionesDerivados10 *[]OperacionesDerivados10 `bson:"OperacionesDerivados10,omitempty"`
 }
 
-func (v *OperacionesDerivados) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (o *OperacionesDerivados) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (v *OperacionesDerivados) UnmarshalXML(d *xml.Decoder, start xml.StartEleme
 		if err := d.DecodeElement(&oper10, &start); err != nil {
 			return err
 		}
-		v.OperacionesDerivados10 = &oper10
+		if o.OperacionesDerivados10 == nil {
+			o.OperacionesDerivados10 = &[]OperacionesDerivados10{}
+		}
+		*o.OperacionesDerivados10 = append(*o.OperacionesDerivados10, oper10...)
 	}
 
 	return nil

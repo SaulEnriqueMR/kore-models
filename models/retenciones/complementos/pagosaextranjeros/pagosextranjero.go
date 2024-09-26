@@ -9,7 +9,7 @@ type PagosAExtranjeros struct {
 	PagosAExtranjeros10 *[]PagosAExtranjeros10 `bson:"PagosAExtranjeros10,omitempty"`
 }
 
-func (c *PagosAExtranjeros) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (p *PagosAExtranjeros) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (c *PagosAExtranjeros) UnmarshalXML(d *xml.Decoder, start xml.StartElement)
 		if err := d.DecodeElement(&pagoext10, &start); err != nil {
 			return err
 		}
-		c.PagosAExtranjeros10 = &pagoext10
+		if p.PagosAExtranjeros10 == nil {
+			p.PagosAExtranjeros10 = &[]PagosAExtranjeros10{}
+		}
+		*p.PagosAExtranjeros10 = append(*p.PagosAExtranjeros10, pagoext10...)
 	}
 
 	return nil

@@ -37,7 +37,7 @@ type UbicacionCartaPorte31 struct {
 	NumEstacion                 *string  `xml:"NumEstacion,attr" bson:"NumEstacion,omitempty"`
 	NombreEstacion              *string  `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
 	NavegacionTrafico           *string  `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
-	FechaHoraSalidaLlegada      string   `xml:"FechaHoraSalidaLlegada,attr" bson:"FechaHoraSalidaLlegada"`
+	FechaHoraSalidaLlegada      string   `xml:"FechaHoraSalidaLlegada,attr" bson:"FechaHoraSalidaLlegada"` //Agregar parser
 	TipoEstacion                *string  `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
 	DistanciaRecorrida          *float64 `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
 	// Nodos
@@ -91,7 +91,7 @@ type MercanciaCartaPorte31 struct {
 	DenominacionGenericaProd           *string  `xml:"DenominacionGenericaProd,attr" bson:"DenominacionGenericaProd,omitempty"`
 	DenominacionDistintivaProd         *string  `xml:"DenominacionDistintivaProd,attr" bson:"DenominacionDistintivaProd,omitempty"`
 	Fabricante                         *string  `xml:"Fabricante,attr" bson:"Fabricante,omitempty"`
-	FechaCaducidad                     *string  `xml:"FechaCaducidad,attr" bson:"FechaCaducidad,omitempty"`
+	FechaCaducidad                     *string  `xml:"FechaCaducidad,attr" bson:"FechaCaducidad,omitempty"` //Agregar parser
 	LoteMedicamento                    *string  `xml:"LoteMedicamento,attr" bson:"LoteMedicamento,omitempty"`
 	FormaFarmaceutica                  *string  `xml:"FormaFarmaceutica,attr" bson:"FormaFarmaceutica,omitempty"`
 	CondicionesEspTransp               *string  `xml:"CondicionesEspTransp,attr" bson:"CondicionesEspTransp,omitempty"`

@@ -1,10 +1,6 @@
 package cartaporte
 
-import (
-	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models/helpers"
-	"time"
-)
+import "encoding/xml"
 
 type CartaPorte20 struct {
 	XMLName           xml.Name                      `xml:"CartaPorte"`
@@ -29,8 +25,7 @@ type UbicacionCartaPorte20 struct {
 	NumEstacion                 *string                `xml:"NumEstacion,attr" bson:"NumEstacion,omitempty"`
 	NombreEstacion              *string                `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
 	NavegacionTrafico           *string                `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
-	FechaHoraSalidaLlegada      string                 `xml:"FechaHoraSalidaLlegada,attr"`
-	FechaHoraSalidaLlegadaDate  time.Time              `bson:"FechaHoraSalidaLlegada"`
+	FechaHoraSalidaLlegada      string                 `xml:"FechaHoraSalidaLlegada,attr" bson:"FechaHoraSalidaLlegada"` //Agregar parser
 	TipoEstacion                *string                `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
 	DistanciaRecorrida          *float64               `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
 	Domicilio                   *DomicilioCartaPorte20 `xml:"Domicilio" bson:"Domicilio,omitempty"`
@@ -141,15 +136,15 @@ type RemolqueCartaPorte20 struct {
 
 type TransporteMaritimoCartaPorte20 struct {
 	PermSCT                *string                  `xml:"PermSCT,attr" bson:"PermSCT,omitempty"`
-	NumPermisoSCT          *string                  `xml:"NumPermisoSCT,attr" bson:"NumPermisoSCT,omitempty"`     // Cifrado
-	NombreAseg             *string                  `xml:"NombreAseg,attr" bson:"NombreAseg,omitempty"`           // Cifrado
-	NumPolizaSeguro        *string                  `xml:"NumPolizaSeguro,attr" bson:"NumPolizaSeguro,omitempty"` // Cifrado
+	NumPermisoSCT          *string                  `xml:"NumPermisoSCT,attr" bson:"NumPermisoSCT,omitempty"`
+	NombreAseg             *string                  `xml:"NombreAseg,attr" bson:"NombreAseg,omitempty"`
+	NumPolizaSeguro        *string                  `xml:"NumPolizaSeguro,attr" bson:"NumPolizaSeguro,omitempty"`
 	TipoEmbarcacion        string                   `xml:"TipoEmbarcacion,attr" bson:"TipoEmbarcacion"`
 	Matricula              string                   `xml:"Matricula,attr" bson:"Matricula"`
 	NumeroOMI              string                   `xml:"NumeroOMI,attr" bson:"NumeroOMI"`
 	AnioEmbarcacion        *string                  `xml:"AnioEmbarcacion,attr" bson:"AnioEmbarcacion,omitempty"`
-	NombreEmbarc           *string                  `xml:"NombreEmbarc,attr" bson:"NombreEmbarc,omitempty"`   // Cifrado
-	NacionalidadEmbarc     string                   `xml:"NacionalidadEmbarc,attr" bson:"NacionalidadEmbarc"` // Cifrado
+	NombreEmbarc           *string                  `xml:"NombreEmbarc,attr" bson:"NombreEmbarc,omitempty"`
+	NacionalidadEmbarc     string                   `xml:"NacionalidadEmbarc,attr" bson:"NacionalidadEmbarc"`
 	UnidadesArqBruto       float64                  `xml:"UnidadesDeArqBruto,attr" bson:"UnidadesArqBruto"`
 	TipoCarga              string                   `xml:"TipoCarga,attr" bson:"TipoCarga"`
 	NumCertITC             string                   `xml:"NumCertITC,attr" bson:"NumCertITC"`
@@ -232,24 +227,23 @@ type PartesTransporteCartaPorte20 struct {
 	ParteTransporte string `xml:"ParteTransporte,attr" bson:"ParteTransporte"`
 }
 
-func (ucp20 *UbicacionCartaPorte20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+/*
+func (c *CartaPorte20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	// Create an alias to avoid recursion
-	type Alias UbicacionCartaPorte20
+	type Alias CartaPorte20
 	var aux Alias
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
 		return err
 	}
-	*ucp20 = UbicacionCartaPorte20(aux)
-
-	if ucp20 != nil {
-		fecha, err := helpers.ParseDatetime(ucp20.FechaHoraSalidaLlegada)
-		if err != nil {
-			return err
-		}
-		ucp20.FechaHoraSalidaLlegadaDate = fecha
+	*c = CartaPorte20(aux)
+	fecha1, err := helpers.ParseDatetime(aux.FechaPagoString)
+	if err != nil {
+		return err
 	}
 
+	c.FechaFinalPago = fecha3
+
 	return nil
-}
+}*/

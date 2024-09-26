@@ -1,11 +1,7 @@
 package retenciones
 
 import (
-	"encoding/xml"
-	"strings"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/app/documentofiscaldigital"
 )
 
 type Retenciones20 struct {
@@ -83,6 +79,7 @@ type ImpuestoRetenido20 struct {
 	TipoPago string   `xml:"TipoPagoRet,attr" bson:"TipoPagoRet"`
 }
 
+/*
 func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	// Create an alias to avoid recursion
 	type Alias Retenciones20
@@ -111,4 +108,4 @@ func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	}
 
 	return nil
-}
+}*/

@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	donatarias2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/donatorias"
+	donatarias2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/donatarias"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )

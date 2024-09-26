@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/SaulEnriqueMR/kore-models/app/documentofiscaldigital"
+	date "github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
 type Retenciones10 struct {
@@ -84,7 +84,7 @@ func (r *Retenciones10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		return err
 	}
 
-	fechaEmision, err := documentofiscaldigital.ParseDatetime(aux.FechaExp)
+	fechaEmision, err := date.ParseDatetime(aux.FechaExp)
 	if err != nil {
 		return err
 	}

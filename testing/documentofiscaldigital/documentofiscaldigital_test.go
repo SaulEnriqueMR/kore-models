@@ -2,11 +2,12 @@ package documentofiscaldigital
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/app/comprobante"
-	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
-	"github.com/stretchr/testify/assert"
 	"strings"
 	"testing"
+
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante"
+	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestDocumentoFiscalDigitalComprobante40(t *testing.T) {

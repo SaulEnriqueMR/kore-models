@@ -30,7 +30,7 @@ type UbicacionCartaPorte30 struct {
 	NumEstacion                 *string                `xml:"NumEstacion,attr" bson:"NumEstacion,omitempty"`
 	NombreEstacion              *string                `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
 	NavegacionTrafico           *string                `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
-	FechaHoraSalidaLlegada      string                 `xml:"FechaHoraSalidaLlegada,attr" bson:"FechaHoraSalidaLlegada"`
+	FechaHoraSalidaLlegada      string                 `xml:"FechaHoraSalidaLlegada,attr" bson:"FechaHoraSalidaLlegada"` //Aregar parser
 	TipoEstacion                *string                `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
 	DistanciaRecorrida          *float64               `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
 	Domicilio                   *DomicilioCartaPorte30 `xml:"Domicilio" bson:"Domicilio,omitempty"`

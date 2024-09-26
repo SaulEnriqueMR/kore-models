@@ -4,6 +4,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"strings"
+	"time"
 
 	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
@@ -86,9 +87,10 @@ type Concepto32 struct {
 }
 
 type InformacionAduanera32 struct {
-	Numero string  `xml:"numero,attr" bson:"Numero"`
-	Fecha  string  `xml:"fecha,attr" bson:"Fecha"`
-	Aduana *string `xml:"aduana,attr" bson:"Aduana,omitempty"`
+	Numero    string    `xml:"numero,attr" bson:"Numero"`
+	Fecha     string    `xml:"fecha,attr" bson:"Fecha"`
+	FechaDate time.Time `bson:"Fecha"`
+	Aduana    *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
 }
 
 type CuentaPredial32 struct {
@@ -148,6 +150,28 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 			c.FechaTimbrado = tfd.FechaTimbrado
 			c.Uuid = strings.ToUpper(tfd.Uuid)
 		}
+	}
+
+	return nil
+}
+
+func (ia32 *InformacionAduanera32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias InformacionAduanera32
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*ia32 = InformacionAduanera32(aux)
+
+	if ia32 != nil {
+		fecha, err := helpers.ParseDatetime(ia32.Fecha)
+		if err != nil {
+			return err
+		}
+		ia32.FechaDate = fecha
 	}
 
 	return nil

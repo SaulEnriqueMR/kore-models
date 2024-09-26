@@ -1,5 +1,11 @@
 package gastohidrocarburos
 
+import (
+	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
+	"time"
+)
+
 type GastoHidrocarburos10 struct {
 	Version         string                     `xml:"Version,attr" bson:"Version"`
 	NumeroContrato  string                     `xml:"NumeroContrato,attr" bson:"NumeroContrato"`
@@ -17,21 +23,22 @@ type ErogacionGastoHidrocar10 struct {
 }
 
 type DocumentoRelacionadoGastoHidrocar10 struct {
-	OrigenErogacion                string   `xml:"OrigenErogacion,attr" bson:"OrigenErogacion"`
-	FolioFiscalVinculado           *string  `xml:"FolioFiscalVinculado,attr" bson:"FolioFiscalVinculado,omitempty"`
-	RFCProveedor                   *string  `xml:"RFCProveedor,attr" bson:"RFCProveedor,omitempty"`
-	MontoTotalIVA                  *float64 `xml:"MontoTotalIVA,attr" bson:"MontoTotalIVA,omitempty"`
-	MontoRetencionISR              *float64 `xml:"MontoRetencionISR,attr" bson:"MontoRetencionISR,omitempty"`
-	MontoRetencionIVA              *float64 `xml:"MontoRetencionIVA,attr" bson:"MontoRetencionIVA,omitempty"`
-	MontoRetencionOtrosImpuestos   *float64 `xml:"MontoRetencionOtrosImpuestos,attr" bson:"MontoRetencionOtrosImpuestos,omitempty"`
-	NumeroPedimentoVinculado       *string  `xml:"NumeroPedimentoVinculado,attr" bson:"NumeroPedimentoVinculado,omitempty"`
-	ClavePedimentoVinculado        *string  `xml:"ClavePedimentoVinculado,attr" bson:"ClavePedimentoVinculado,omitempty"`
-	ClavePagoPedimentoVinculado    *string  `xml:"ClavePagoPedimentoVinculado,attr" bson:"ClavePagoPedimentoVinculado,omitempty"`
-	MontoIVAPedimento              *float64 `xml:"MontoIVAPedimento,attr" bson:",omitempty"`
-	OtrosImpuestosPagadosPedimento *float64 `xml:"OtrosImpuestosPagadosPedimento,attr" bson:"OtrosImpuestosPagadosPedimento,omitempty"`
-	FechaFolioFiscalVinculado      *string  `xml:"FechaFolioFiscalVinculado,attr" bson:"FechaFolioFiscalVinculado,omitempty"`
-	Mes                            string   `xml:"Mes,attr" bson:"Mes"`
-	MontoTotalErogaciones          float64  `xml:"MontoTotalErogaciones,attr" bson:"MontoTotalErogaciones,omitempty"`
+	OrigenErogacion                string    `xml:"OrigenErogacion,attr" bson:"OrigenErogacion"`
+	FolioFiscalVinculado           *string   `xml:"FolioFiscalVinculado,attr" bson:"FolioFiscalVinculado,omitempty"`
+	RFCProveedor                   *string   `xml:"RFCProveedor,attr" bson:"RFCProveedor,omitempty"`
+	MontoTotalIVA                  *float64  `xml:"MontoTotalIVA,attr" bson:"MontoTotalIVA,omitempty"`
+	MontoRetencionISR              *float64  `xml:"MontoRetencionISR,attr" bson:"MontoRetencionISR,omitempty"`
+	MontoRetencionIVA              *float64  `xml:"MontoRetencionIVA,attr" bson:"MontoRetencionIVA,omitempty"`
+	MontoRetencionOtrosImpuestos   *float64  `xml:"MontoRetencionOtrosImpuestos,attr" bson:"MontoRetencionOtrosImpuestos,omitempty"`
+	NumeroPedimentoVinculado       *string   `xml:"NumeroPedimentoVinculado,attr" bson:"NumeroPedimentoVinculado,omitempty"`
+	ClavePedimentoVinculado        *string   `xml:"ClavePedimentoVinculado,attr" bson:"ClavePedimentoVinculado,omitempty"`
+	ClavePagoPedimentoVinculado    *string   `xml:"ClavePagoPedimentoVinculado,attr" bson:"ClavePagoPedimentoVinculado,omitempty"`
+	MontoIVAPedimento              *float64  `xml:"MontoIVAPedimento,attr" bson:",omitempty"`
+	OtrosImpuestosPagadosPedimento *float64  `xml:"OtrosImpuestosPagadosPedimento,attr" bson:"OtrosImpuestosPagadosPedimento,omitempty"`
+	FechaFolioFiscalVinculado      *string   `xml:"FechaFolioFiscalVinculado,attr"`
+	FechaFolioFiscalVinculadoDate  time.Time `bson:"FechaFolioFiscalVinculado,omitempty"`
+	Mes                            string    `xml:"Mes,attr" bson:"Mes"`
+	MontoTotalErogaciones          float64   `xml:"MontoTotalErogaciones,attr" bson:"MontoTotalErogaciones,omitempty"`
 }
 
 type ActividadesGastoHidrocar10 struct {
@@ -60,4 +67,26 @@ type YacimientosGastoHidrocar10 struct {
 
 type PozosGastoHidrocar10 struct {
 	Pozo *string `xml:"Pozo,attr" bson:"Pozo,omitempty"`
+}
+
+func (iavv10 *DocumentoRelacionadoGastoHidrocar10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias DocumentoRelacionadoGastoHidrocar10
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*iavv10 = DocumentoRelacionadoGastoHidrocar10(aux)
+
+	if iavv10 != nil {
+		fecha, err := helpers.ParseDatetime(*iavv10.FechaFolioFiscalVinculado)
+		if err != nil {
+			return err
+		}
+		iavv10.FechaFolioFiscalVinculadoDate = fecha
+	}
+
+	return nil
 }

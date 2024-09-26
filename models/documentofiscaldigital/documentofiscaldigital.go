@@ -1,7 +1,6 @@
 package documentofiscaldigital
 
 import (
-	"encoding/xml"
 	"time"
 )
 
@@ -32,21 +31,4 @@ type Cancelacion struct {
 	EstatusCancelacion *string    `bson:"EstatusCancelacion,omitempty"`
 	EsCancelable       *string    `bson:"EsCancelable,omitempty"`
 	FechaCancelacion   *time.Time `bson:"FechaCancelacion,omitempty"`
-}
-
-func (c *DocumentoFiscalDigital) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
-	// Create an alias to avoid recursion
-	type Alias DocumentoFiscalDigital
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-
-	*c = DocumentoFiscalDigital(aux)
-
-	c.Comprobante = true
-
-	return nil
 }

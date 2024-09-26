@@ -140,6 +140,7 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 
 	*c = Comprobante32(aux)
 	c.FechaEmision = fechaEmision
+	c.Comprobante = true
 
 	if c.Complemento.TimbreFiscalDigital != nil {
 		tfd := c.Complemento.TimbreFiscalDigital.TimbreFiscalDigital10

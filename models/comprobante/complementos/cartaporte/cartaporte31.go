@@ -1,6 +1,11 @@
 package cartaporte
 
-import "encoding/xml"
+import (
+	"encoding/xml"
+	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
+)
 
 type CartaPorte31 struct {
 	// Attr
@@ -28,18 +33,19 @@ type RegimenAduaneroCartaPorte31 struct {
 
 type UbicacionCartaPorte31 struct {
 	// Attr
-	TipoUbicacion               string   `xml:"TipoUbicacion,attr" bson:"TipoUbicacion"`
-	IDUbicacion                 *string  `xml:"IDUbicacion,attr" bson:"IDUbicacion,omitempty"`
-	RFCRemitenteDestinatario    string   `xml:"RFCRemitenteDestinatario,attr" bson:"RFCRemitenteDestinatario"`
-	NombreRemitenteDestinatario *string  `xml:"NombreRemitenteDestinatario,attr" bson:"NombreRemitenteDestinatario,omitempty"`
-	NumRegIdTrib                *string  `xml:"NumRegIdTrib,attr" bson:"NumRegIdTrib,omitempty"`
-	ResidenciaFiscal            *string  `xml:"ResidenciaFiscal,attr" bson:"ResidenciaFiscal,omitempty"`
-	NumEstacion                 *string  `xml:"NumEstacion,attr" bson:"NumEstacion,omitempty"`
-	NombreEstacion              *string  `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
-	NavegacionTrafico           *string  `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
-	FechaHoraSalidaLlegada      string   `xml:"FechaHoraSalidaLlegada,attr" bson:"FechaHoraSalidaLlegada"` //Agregar parser
-	TipoEstacion                *string  `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
-	DistanciaRecorrida          *float64 `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
+	TipoUbicacion               string    `xml:"TipoUbicacion,attr" bson:"TipoUbicacion"`
+	IDUbicacion                 *string   `xml:"IDUbicacion,attr" bson:"IDUbicacion,omitempty"`
+	RFCRemitenteDestinatario    string    `xml:"RFCRemitenteDestinatario,attr" bson:"RFCRemitenteDestinatario"`
+	NombreRemitenteDestinatario *string   `xml:"NombreRemitenteDestinatario,attr" bson:"NombreRemitenteDestinatario,omitempty"`
+	NumRegIdTrib                *string   `xml:"NumRegIdTrib,attr" bson:"NumRegIdTrib,omitempty"`
+	ResidenciaFiscal            *string   `xml:"ResidenciaFiscal,attr" bson:"ResidenciaFiscal,omitempty"`
+	NumEstacion                 *string   `xml:"NumEstacion,attr" bson:"NumEstacion,omitempty"`
+	NombreEstacion              *string   `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
+	NavegacionTrafico           *string   `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
+	FechaHoraSalidaLlegada      string    `xml:"FechaHoraSalidaLlegada,attr"`
+	FechaHoraSalidaLlegadaDate  time.Time `bson:"FechaHoraSalidaLlegada"`
+	TipoEstacion                *string   `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
+	DistanciaRecorrida          *float64  `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
 	// Nodos
 	Domicilio *DomicilioCartaPorte31 `xml:"Domicilio" bson:"Domicilio,omitempty"`
 }
@@ -278,4 +284,26 @@ type TiposFiguraCartaPorte31 struct {
 
 type PartesTransporteCartaPorte31 struct {
 	ParteTransporte string `xml:"ParteTransporte,attr" bson:"ParteTransporte"`
+}
+
+func (ucp30 *UbicacionCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias UbicacionCartaPorte31
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*ucp30 = UbicacionCartaPorte31(aux)
+
+	if ucp30 != nil {
+		fecha, err := helpers.ParseDatetime(ucp30.FechaHoraSalidaLlegada)
+		if err != nil {
+			return err
+		}
+		ucp30.FechaHoraSalidaLlegadaDate = fecha
+	}
+
+	return nil
 }

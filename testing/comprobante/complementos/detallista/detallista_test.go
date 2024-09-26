@@ -1,8 +1,10 @@
 package detallista
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"log"
+	"os"
 	"testing"
 
 	detallista10 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/detallista"
@@ -15,7 +17,19 @@ func GetDetallista10ForTest(filename string, t *testing.T) (detallista10.Detalli
 	var parsed detallista10.Detallista10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	GenerateJSONFromXML("detallista10.json", parsed)
 	return parsed, errUnmashal
+}
+
+func GenerateJSONFromXML(namefile string, data detallista10.Detallista10) {
+	jsonData, err := json.MarshalIndent(data, "", "    ")
+	if err != nil {
+		log.Println(err)
+	}
+	err1 := os.WriteFile(namefile, jsonData, 0644)
+	if err1 != nil {
+		log.Println(err1)
+	}
 }
 
 func TestFullDetallistas10(t *testing.T) {
@@ -269,7 +283,7 @@ func InternalCustomsLine(t *testing.T, customs *[]detallista10.CustomsLineItem) 
 	assert.Equal(t, "TN", custom.AlternatePartyIdentification.Type)
 	assert.Equal(t, "2016-04-07", custom.ReferenceDate.ReferenceDateString)
 	assert.Equal(t, "1239K23092", custom.AlternatePartyIdentification.Value)
-	assert.Equal(t, "TIJUANA", *custom.NameAndAddress.Name)
+	assert.Equal(t, "TIJUANA", custom.NameAndAddress.Name)
 }
 
 func InternalLogisticUnits(t *testing.T, logistic *detallista10.LogisticUnits) {

@@ -1,0 +1,287 @@
+{
+    "Type": "SimpleInvoiceType",
+    "ContentVersion": "1.3.1",
+    "DocumentStructureVersion": "AMC8.1",
+    "DocumentStatus": "ORIGINAL",
+    "RequestForPaymentIdentification": {
+        "EntityType": "DEBIT_NOTE"
+    },
+    "SpecialInstruction": [
+        {
+            "Code": "AAB",
+            "Text": [
+                "TEXT",
+                "TEXT",
+                "TEXT",
+                "HOLA"
+            ]
+        }
+    ],
+    "OrderIdentification": {
+        "ReferenceIdentification": [
+            {
+                "Value": "81283939",
+                "Type": "ON"
+            },
+            {
+                "Value": "81283939",
+                "Type": "ON"
+            }
+        ],
+        "ReferenceDate": {
+            "ReferenceDateString": "2016-02-07",
+            "Date": "2016-02-07T00:00:00Z"
+        }
+    },
+    "AdditionalInformation": {
+        "ReferenceIdentification": [
+            {
+                "Value": "000001",
+                "Type": "AAE"
+            },
+            {
+                "Value": "000001",
+                "Type": "AAE"
+            }
+        ]
+    },
+    "DeliveryNote": {
+        "ReferenceIdentification": [
+            "0000001",
+            "0000002"
+        ],
+        "ReferenceDate": {
+            "ReferenceDateString": "2016-04-07",
+            "Date": "2016-04-07T00:00:00Z"
+        }
+    },
+    "Buyer": {
+        "Gln": "7504000107903",
+        "Text": "0001"
+    },
+    "Seller": {
+        "Gln": "7244020982223",
+        "AlternatePartyIdentification": {
+            "Value": "12382317",
+            "Type": "IEPS_REFERENCE"
+        }
+    },
+    "ShipTo": {
+        "Gln": "8724098266218",
+        "NameAndAddress": {
+            "Name": [
+                "EMPRESA DEMO",
+                "EMPRESA DEMO",
+                "EMPRESA DEMO"
+            ],
+            "StreetAddressOne": [
+                "Calle Peru num 029",
+                "Calle Peru num 029"
+            ],
+            "City": [
+                "Nuevo León",
+                "Nuevo León"
+            ],
+            "PostalCode": [
+                "64590",
+                "64590"
+            ]
+        }
+    },
+    "InvoiceCreator": {
+        "Gln": "5529910871321",
+        "AlternatePartyIdentification": {
+            "Value": "1281282",
+            "Type": "IA"
+        },
+        "NameAndAddress": {
+            "Name": "EMPRESA DEMO 1",
+            "StreetAddressOne": "Calle Niños Heres num 1293",
+            "City": "Nuevo León",
+            "PostalCode": "64590"
+        }
+    },
+    "Customs": [
+        {
+            "Gln": "0129829934772"
+        },
+        {
+            "Gln": "0129829934773"
+        }
+    ],
+    "Currency": [
+        {
+            "CurrencyISOCode": "MXN",
+            "CurrencyFunction": [
+                "PRICE_CURRENCY"
+            ],
+            "RateOfChange": 17.1
+        },
+        {
+            "CurrencyISOCode": "MXN",
+            "CurrencyFunction": [
+                "PRICE_CURRENCY",
+                "PRICE_CURRENCY",
+                "PRICE_CURRENCY"
+            ],
+            "RateOfChange": 17.1
+        },
+        {
+            "CurrencyISOCode": "MXN",
+            "CurrencyFunction": [
+                "PRICE_CURRENCY"
+            ],
+            "RateOfChange": 17.1
+        }
+    ],
+    "PaymentTerms": {
+        "PaymentTermsEvent": "DATE_OF_INVOICE",
+        "PaymentTermsRelationTime": "REFERENCE_AFTER",
+        "NetPayment": {
+            "NetPaymentTermsType": "BASIC_NET",
+            "TimePeriodDue": {
+                "TimePeriod": "DAYS",
+                "Value": "10"
+            }
+        },
+        "DiscountPayment": {
+            "DiscountType": "ALLOWANCE_BY_PAYMENT_ON_TIME",
+            "Percentage": "0.00"
+        }
+    },
+    "ShipmentDetail": {
+        "XMLName": {
+            "Space": "http://www.sat.gob.mx/detallista",
+            "Local": "shipmentDetail"
+        }
+    },
+    "AllowanceCharge": [
+        {
+            "AllowanceChargeType": "ALLOWANCE_GLOBAL",
+            "SettlementType": "BILL_BACK",
+            "SequenceNumber": "12717262",
+            "SpecialServicesType": "AA",
+            "MonetaryAmountOrPercentage": {
+                "Base": "INVOICE_VALUE",
+                "Percentage": 1
+            }
+        }
+    ],
+    "LineItem": [
+        {
+            "Type": "",
+            "Number": 0,
+            "TradeItemIdentification": {
+                "Gtin": "FGTSDF"
+            },
+            "AlternateTradeItemIdentification": [
+                {
+                    "Value": "1111",
+                    "Type": "SUPPLIER_ASSIGNED"
+                }
+            ],
+            "TradeItemDescriptionInformation": {
+                "Language": "ES",
+                "LongText": "ARTICULO"
+            },
+            "InvoicedQuantity": {
+                "UnitOfMeasure": "PZA",
+                "Value": 1
+            },
+            "AditionalQuantity": [
+                {
+                    "QuantityType": "NUM_CONSUMER_UNITS",
+                    "Value": 1
+                }
+            ],
+            "GrossPrice": {
+                "Amount": 1
+            },
+            "NetPrice": {
+                "Amount": 1
+            },
+            "AdditionalInformation": {
+                "ReferenceIdentification": {
+                    "Value": "TIPOREFERENCIA",
+                    "Type": "ON"
+                }
+            },
+            "Customs": [
+                {
+                    "Gln": "1111111111111",
+                    "AlternatePartyIdentification": {
+                        "Value": "1239K23092",
+                        "Type": "TN"
+                    },
+                    "ReferenceDate": {
+                        "ReferenceDateString": "2016-04-07",
+                        "Date": "2016-04-07T00:00:00Z"
+                    },
+                    "NameAndAddress": {
+                        "Name": "TIJUANA"
+                    }
+                }
+            ],
+            "LogisticUnits": {
+                "SerialShippingContainerCode": {
+                    "Value": "17717121128",
+                    "Type": "SRV"
+                }
+            },
+            "PalletInformation": {
+                "PalletQuantity": "2",
+                "Description": {
+                    "Value": "Empaque",
+                    "Type": "EXCHANGE_PALLETS"
+                },
+                "Transport": "PAID_BY_BUYER"
+            },
+            "ExtendedAttributes": {
+                "LotNumber": [
+                    {
+                        "ProductionDateString": "2016-04-07",
+                        "ProductionDate": "0001-01-01T00:00:00Z",
+                        "Value": "1123"
+                    }
+                ]
+            },
+            "AllowanceCharge": [
+                {
+                    "AllowanceChargeType": "ALLOWANCE_GLOBAL",
+                    "SettlementType": "OFF_INVOICE",
+                    "SequenceNumber": "1",
+                    "SpecialServicesType": "EAB",
+                    "MonetaryAmountOrPercentage": {
+                        "PercentagePerUnit": "5%",
+                        "RatePerUnit": "3.00"
+                    }
+                }
+            ],
+            "TradeItemTaxInformation": [
+                {
+                    "TaxTypeDescription": "GST",
+                    "ReferenceNumber": "112312",
+                    "TaxCategory": "TRANSFERIDO",
+                    "TradeItemTaxAmount": {
+                        "TaxPercentage": 1,
+                        "TaxAmount": 1
+                    }
+                }
+            ],
+            "TotalLineAmount": {
+                "GrossAmount": 1,
+                "NetAmount": 1
+            }
+        }
+    ],
+    "TotalAmount": {
+        "Amount": 1
+    },
+    "TotalAllowanceCharge": [
+        {
+            "AllowanceOrChargeType": "CHARGE",
+            "SpecialServicesType": "ADS",
+            "Amount": 1
+        }
+    ]
+}

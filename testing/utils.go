@@ -1,7 +1,9 @@
 package testing
 
 import (
+	"encoding/json"
 	"io"
+	"log"
 	"os"
 	"testing"
 )
@@ -20,4 +22,15 @@ func GetFileContentForTest(filename string, t *testing.T) []byte {
 		t.Error("Error reading file:", errRead)
 	}
 	return data
+}
+
+func GenerateJSONFromStructure(namefile string, data any) {
+	jsonData, err := json.MarshalIndent(data, "", "    ")
+	if err != nil {
+		log.Println(err)
+	}
+	err1 := os.WriteFile(namefile, jsonData, 0644)
+	if err1 != nil {
+		log.Println(err1)
+	}
 }

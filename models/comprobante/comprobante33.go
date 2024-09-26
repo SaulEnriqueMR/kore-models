@@ -156,8 +156,13 @@ func (c *Comprobante33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	c.FechaEmision = fechaEmision
 	c.Comprobante = true
 	c.Vigente = nil
-	c.InformacionAdicional.StampedByKuantik = nil
-	c.Cancelacion.CanceledByKuantik = nil
+
+	if c.InformacionAdicional != nil {
+		c.InformacionAdicional.StampedByKuantik = nil
+	}
+	if c.Cancelacion != nil {
+		c.Cancelacion.CanceledByKuantik = nil
+	}
 
 	if c.Complemento.TimbreFiscalDigital != nil {
 		tfd := c.Complemento.TimbreFiscalDigital.TimbreFiscalDigital11

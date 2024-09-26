@@ -176,19 +176,12 @@ func (c *Comprobante40) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	c.FechaEmision = fechaEmision
 	c.Comprobante = true
 	c.Vigente = nil
+
 	if c.InformacionAdicional != nil {
 		c.InformacionAdicional.StampedByKuantik = nil
-	} else {
-		c.InformacionAdicional = &documentofiscaldigital.InformacionAdicional{
-			StampedByKuantik: nil,
-		}
 	}
 	if c.Cancelacion != nil {
 		c.Cancelacion.CanceledByKuantik = nil
-	} else {
-		c.Cancelacion = &documentofiscaldigital.Cancelacion{
-			CanceledByKuantik: nil,
-		}
 	}
 
 	if c.Complemento.TimbreFiscalDigital != nil {

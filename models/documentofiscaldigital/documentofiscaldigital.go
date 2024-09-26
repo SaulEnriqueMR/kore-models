@@ -10,6 +10,7 @@ type DocumentoFiscalDigital struct {
 	CadenaOriginal       string               `bson:"CadenaOriginal"`
 	InformacionAdicional InformacionAdicional `xml:"InformacionAdicional" bson:"InformacionAdicional"`
 	Cancelacion          Cancelacion          `xml:"Cancelacion" bson:"Cancelacion"`
+	Comprobante          bool                 `bson:"Comprobante"`
 }
 
 type InformacionAdicional struct {

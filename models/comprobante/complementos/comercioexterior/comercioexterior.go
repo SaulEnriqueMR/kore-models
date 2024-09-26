@@ -29,7 +29,10 @@ func (c *ComercioExterior) UnmarshalXML(d *xml.Decoder, start xml.StartElement) 
 		if err := d.DecodeElement(&comExt10, &start); err != nil {
 			return err
 		}
-		c.ComercioExterior10 = &comExt10
+		if c.ComercioExterior10 == nil {
+			c.ComercioExterior10 = &[]ComercioExterior10{}
+		}
+		*c.ComercioExterior10 = append(*c.ComercioExterior10, comExt10...)
 	}
 
 	if Version == "1.1" {
@@ -37,7 +40,10 @@ func (c *ComercioExterior) UnmarshalXML(d *xml.Decoder, start xml.StartElement) 
 		if err := d.DecodeElement(&comExt11, &start); err != nil {
 			return err
 		}
-		c.ComercioExterior11 = &comExt11
+		if c.ComercioExterior11 == nil {
+			c.ComercioExterior11 = &[]ComercioExterior11{}
+		}
+		*c.ComercioExterior11 = append(*c.ComercioExterior11, comExt11...)
 	}
 
 	if Version == "2.0" {
@@ -46,7 +52,10 @@ func (c *ComercioExterior) UnmarshalXML(d *xml.Decoder, start xml.StartElement) 
 			fmt.Println(err)
 			return err
 		}
-		c.ComercioExterior20 = &comExt20
+		if c.ComercioExterior20 == nil {
+			c.ComercioExterior20 = &[]ComercioExterior20{}
+		}
+		*c.ComercioExterior20 = append(*c.ComercioExterior20, comExt20...)
 	}
 
 	return nil

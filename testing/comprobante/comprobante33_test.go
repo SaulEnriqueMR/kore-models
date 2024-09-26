@@ -3,12 +3,13 @@ package comprobante
 import (
 	"encoding/json"
 	"encoding/xml"
-	comprobante3 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
-	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
-	"github.com/stretchr/testify/assert"
 	"log"
 	"os"
 	"testing"
+
+	comprobante3 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
+	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
+	"github.com/stretchr/testify/assert"
 )
 
 func GetComprobante33ForTest(filename string, t *testing.T) (comprobante3.Comprobante33, error) {

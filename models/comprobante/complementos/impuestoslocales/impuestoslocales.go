@@ -26,7 +26,10 @@ func (c *ImpuestosLocales) UnmarshalXML(d *xml.Decoder, start xml.StartElement) 
 		if err := d.DecodeElement(&implocales10, &start); err != nil {
 			return err
 		}
-		c.ImpuestoLocales10 = &implocales10
+		if c.ImpuestoLocales10 == nil {
+			c.ImpuestoLocales10 = &[]ImpuestoLocales10{}
+		}
+		*c.ImpuestoLocales10 = append(*c.ImpuestoLocales10, implocales10...)
 	}
 
 	return nil

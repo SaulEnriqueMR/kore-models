@@ -31,3 +31,7 @@ type Complemento struct {
 	ServiciosPlataformasTecnologicas *serviciosplataformastecnologicas.ServiciosPlataformasTecnologicas `xml:"ServiciosPlataformasTecnologicas" bson:"ServiciosPlataformasTecnologicas,omitempty"`
 	TimbreFiscalDigital              *timbrefiscaldigital.TimbreFiscalDigital                           `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`
 }
+
+type Addenda struct {
+	Value string `xml:",chardata" bson:"Value"`
+}

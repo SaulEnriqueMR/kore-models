@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pagosaextranjeros:Pagosaextranjeros
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros/pagosaextranjeros.xsd"
+        xmlns:pagosaextranjeros="http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros"
+        Version="1.0"
+        EsBenefEfectDelCobro="NO">
+    <pagosaextranjeros:NoBeneficiario
+            PaisDeResidParaEfecFisc="US"
+            DescripcionConcepto="Artistas, deportistas y espectáculos públicos"
+            ConceptoPago="1" />
+    <pagosaextranjeros:Beneficiario
+            RFC="EKU9003173C9"
+            CURP="EKUW9003173C9RPB01"
+            NomDenRazSocB="ESCUELA KEMPER URGATE"
+            ConceptoPago="1"
+            DescripcionConcepto="Artistas, deportistas y espectáculos públicos"
+            />
+</pagosaextranjeros:Pagosaextranjeros>

@@ -68,3 +68,7 @@ type Complemento struct {
 	ValesDeDespensa                *valesdespensa.ValesDespensa                         `xml:"ValesDeDespensa" bson:"ValesDeDespensa,omitempty"`
 	VehiculoUsado                  *vehiculousado.VehiculoUsado                         `xml:"VehiculoUsado" bson:"VehiculoUsado,omitempty"`
 }
+
+type Addenda struct {
+	Value string `xml:",chardata" bson:"Value"`
+}

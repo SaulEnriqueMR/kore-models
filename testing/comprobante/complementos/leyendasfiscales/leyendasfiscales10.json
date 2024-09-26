@@ -1,0 +1,15 @@
+{
+    "Version": "1.0",
+    "Leyenda": [
+        {
+            "DisposicionFiscal": "ISR",
+            "Norma": "133",
+            "TextoLeyenda": "Efectos fiscales al pago"
+        },
+        {
+            "DisposicionFiscal": "IVA",
+            "Norma": "32",
+            "TextoLeyenda": "Impuesto retenido de conformidad con la Ley del Impuesto al Valor Agregado"
+        }
+    ]
+}

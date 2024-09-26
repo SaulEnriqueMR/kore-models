@@ -14,6 +14,7 @@ func GetPagoEnEspecie10ForTest(filename string, t *testing.T) (pagoespecie2.Pago
 	var parsed pagoespecie2.PagoEspecie10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("pagoenespecie10.json", parsed)
 	return parsed, errUnmarshal
 }
 

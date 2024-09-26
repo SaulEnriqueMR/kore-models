@@ -1,0 +1,12 @@
+{
+    "Version": "1.0",
+    "SistemaFinanc": "SI",
+    "MontTotAportAnioInmAnterior": 1000,
+    "MontIntRealesDevengAniooInmAnt": 100,
+    "HuboRetirosAnioInmAntPer": "SI",
+    "MontTotRetiradoAnioInmAntPer": 10,
+    "MontTotExentRetiradoAnioInmAnt": 90,
+    "MontTotExedenteAnioInmAnt": 900,
+    "HuboRetirosAnioInmAnt": "SI",
+    "MontTotRetiradoAnioInmAnt": 90
+}

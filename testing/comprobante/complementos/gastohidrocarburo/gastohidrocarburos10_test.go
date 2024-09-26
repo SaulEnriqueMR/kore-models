@@ -1,4 +1,4 @@
-package complementos
+package gastohidrocarburo
 
 import (
 	"encoding/xml"
@@ -13,6 +13,7 @@ func GetGastoHidrocarburos10ForTest(filename string, t *testing.T) (hidrocarburo
 	data := testing2.GetFileContentForTest(filename, t)
 	var parsed hidrocarburos2.GastoHidrocarburos10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
+	testing2.GenerateJSONFromStructure("gastohidrocarburos10.json", parsed)
 	assert.NoError(t, errUnmarshal)
 	return parsed, errUnmarshal
 }

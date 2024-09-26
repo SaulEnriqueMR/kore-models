@@ -14,6 +14,7 @@ func GetServicioPlataformasDigitalesForTest(filename string, t *testing.T) (plat
 	var parsed platdigital2.ServiciosPlataformasTecnologicas10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("serviciosplataformastecnologicas10.json", parsed)
 	return parsed, errUnmarshal
 }
 

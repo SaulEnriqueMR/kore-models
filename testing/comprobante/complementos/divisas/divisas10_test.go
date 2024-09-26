@@ -16,6 +16,7 @@ func GetDivisas10ForTesting(filename string, t *testing.T) (divisas2.Divisas10, 
 	var parsed divisas2.Divisas10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("divisas10.json", parsed)
 	return parsed, errUnmarshal
 }
 

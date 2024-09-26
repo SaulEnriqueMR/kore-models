@@ -1,7 +1,10 @@
 package complementoconcepto
 
 import (
+	"encoding/json"
 	"encoding/xml"
+	"log"
+	"os"
 	"testing"
 
 	certificadodestruccion2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/certificadodestruccion"
@@ -14,6 +17,7 @@ func GetCertificadoDeDestruccion10ForTest(filename string, t *testing.T) (certif
 	var parsed certificadodestruccion2.CertificadoDeDestruccion10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	GenerateJSONFromXMLcertificadodestruccion10("certificadodedestruccion10.json", parsed)
 	return parsed, errUnmashal
 }
 
@@ -58,4 +62,12 @@ func InternalTestFullAtributesInformacinoAduaneraCertDest10(t *testing.T, inform
 	assert.Equal(t, "2390321", first.NumPedImp)
 	assert.Equal(t, "2014-01-23", first.Fecha)
 	assert.Equal(t, "Aduana", first.Aduana)
+}
+
+func GenerateJSONFromXMLcertificadodestruccion10(namefile string, data certificadodestruccion2.CertificadoDeDestruccion10) {
+	jsonData, err := json.MarshalIndent(data, "", "	")
+	err = os.WriteFile(namefile, jsonData, 0644)
+	if err != nil {
+		log.Println(err)
+	}
 }

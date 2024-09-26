@@ -1,10 +1,13 @@
 package comprobante
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	comprobante2 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
+	"log"
+	"os"
 	"testing"
 )
 
@@ -13,6 +16,7 @@ func GestComprobante32ForTest(filename string, t *testing.T) (comprobante2.Compr
 	var parsed comprobante2.Comprobante32
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	GenerateJSONFromXMLComprobante32("comprobante32.json", parsed)
 	return parsed, errUnmarshal
 }
 
@@ -167,4 +171,12 @@ func InternalTestFullAtributesRetenciones32(t *testing.T, retenciones32 []compro
 	assert.Equal(t, 1, len(retenciones32))
 	assert.Equal(t, "IEPS", retenciones32[0].Impuesto)
 	assert.Equal(t, 10500.00, retenciones32[0].Importe)
+}
+
+func GenerateJSONFromXMLComprobante32(namefile string, data comprobante2.Comprobante32) {
+	jsonData, err := json.MarshalIndent(data, "", "	")
+	err = os.WriteFile(namefile, jsonData, 0644)
+	if err != nil {
+		log.Println(err)
+	}
 }

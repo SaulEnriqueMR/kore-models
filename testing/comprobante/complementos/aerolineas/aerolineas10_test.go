@@ -1,7 +1,10 @@
 package complementoconcepto
 
 import (
+	"encoding/json"
 	"encoding/xml"
+	"log"
+	"os"
 	"testing"
 
 	aerolineas10 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/aerolineas"
@@ -14,6 +17,7 @@ func GetAerolineas10ForTest(filename string, t *testing.T) (aerolineas10.Aerolin
 	var parsed aerolineas10.Aerolineas10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	GenerateJSONFromXMLAerolineas10("aerolineas10.json", parsed)
 	return parsed, errUnmashal
 }
 
@@ -46,4 +50,12 @@ func InternalTestFullCargoAero11(t *testing.T, cargo []aerolineas10.CargoAero10)
 
 	assert.Equal(t, "AA", firstCargo.CodigoCargo)
 	assert.Equal(t, "60.00", firstCargo.Importe)
+}
+
+func GenerateJSONFromXMLAerolineas10(namefile string, data aerolineas10.Aerolineas10) {
+	jsonData, err := json.MarshalIndent(data, "", "	")
+	err = os.WriteFile(namefile, jsonData, 0644)
+	if err != nil {
+		log.Println(err)
+	}
 }

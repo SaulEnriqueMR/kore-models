@@ -13,6 +13,7 @@ func GetEstadoDeCuentaCombustible12ForTest(filename string, t *testing.T) (edocu
 	var parsed edocuentacombus12.EstadoDeCuentaCombustible12
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("estadodecuentacombustible12.json", parsed)
 	return parsed, errUnmarshal
 }
 

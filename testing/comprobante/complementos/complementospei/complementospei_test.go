@@ -1,7 +1,10 @@
 package complementos
 
 import (
+	"encoding/json"
 	"encoding/xml"
+	"log"
+	"os"
 	"testing"
 
 	compspei2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/complementospei"
@@ -14,6 +17,7 @@ func GetComplementoSpeiForTest(filename string, t *testing.T) (compspei2.Complem
 	var parsed compspei2.ComplementoSpei
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	GenerateJSONFromXMLComplementoSpei("complementospei.json", parsed)
 	return parsed, errUnmarshal
 }
 
@@ -52,4 +56,12 @@ func InternalTestFullAtributesBeneficiario(t *testing.T, beneficiario compspei2.
 	assert.Equal(t, "Honorarios", beneficiario.Concepto)
 	assert.Equal(t, "0.00", *beneficiario.IVA)
 	assert.Equal(t, "10000.00", beneficiario.MontoPago)
+}
+
+func GenerateJSONFromXMLComplementoSpei(namefile string, data compspei2.ComplementoSpei) {
+	jsonData, err := json.MarshalIndent(data, "", "	")
+	err = os.WriteFile(namefile, jsonData, 0644)
+	if err != nil {
+		log.Println(err)
+	}
 }

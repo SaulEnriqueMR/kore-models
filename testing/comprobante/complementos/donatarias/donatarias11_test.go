@@ -14,6 +14,7 @@ func GetDonatarias11ForTest(filename string, t *testing.T) (donatarias2.Donatari
 	var parsed donatarias2.Donatarias11
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("donatarias11.json", parsed)
 	return parsed, errUnmarshal
 }
 

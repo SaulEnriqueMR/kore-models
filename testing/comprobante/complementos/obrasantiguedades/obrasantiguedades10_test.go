@@ -14,6 +14,7 @@ func GetObrasAntiguedades10ForTest(filename string, t *testing.T) (obrasantigued
 	var parsed obrasantiguedades2.ObrasAntiguedades10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("obrasantiguedades10.json", parsed)
 	return parsed, errUnmarshal
 }
 

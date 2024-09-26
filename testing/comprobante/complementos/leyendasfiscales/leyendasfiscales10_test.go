@@ -14,6 +14,7 @@ func GetLeyendasFiscales10ForTest(filename string, t *testing.T) (leyendasfiscal
 	var parsed leyendasfiscales210.LeyendasFiscales10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("leyendasfiscales10.json", parsed)
 	return parsed, errUnmarshal
 }
 

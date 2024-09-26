@@ -1,7 +1,10 @@
 package ventavehiculos
 
 import (
+	"encoding/json"
 	"encoding/xml"
+	"log"
+	"os"
 	"testing"
 
 	ventavehiculos11 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/ventavehiculos"
@@ -14,6 +17,7 @@ func GetVentaVehiculos11ForTest(filename string, t *testing.T) (ventavehiculos11
 	var parsed ventavehiculos11.VentaVehiculos11
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	GenerateJSONFromXMLVentaVehiculos11("ventavehiculos11.json", parsed)
 	return parsed, errUnmashal
 }
 
@@ -58,4 +62,12 @@ func InternalTestFullInformacionAduanera11(t *testing.T, informacionAduanera *[]
 	assert.Equal(t, "2016-04-11", first.Fecha)
 	assert.NotNil(t, first.Aduana)
 	assert.Equal(t, "Tijuana", *first.Aduana)
+}
+
+func GenerateJSONFromXMLVentaVehiculos11(namefile string, data ventavehiculos11.VentaVehiculos11) {
+	jsonData, err := json.MarshalIndent(data, "", "	")
+	err = os.WriteFile(namefile, jsonData, 0644)
+	if err != nil {
+		log.Println(err)
+	}
 }

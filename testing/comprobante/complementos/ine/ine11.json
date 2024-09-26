@@ -1,0 +1,26 @@
+{
+    "Version": "1.1",
+    "TipoProceso": "Campaña",
+    "TipoComite": "Ordinario",
+    "IdContabilidad": 123,
+    "Entidad": [
+        {
+            "ClaveEntidad": "OAX",
+            "Ambito": "Local",
+            "Contabilidad": [
+                {
+                    "IdContabilidad": 654321
+                }
+            ]
+        },
+        {
+            "ClaveEntidad": "GUA",
+            "Ambito": "Local",
+            "Contabilidad": [
+                {
+                    "IdContabilidad": 123546
+                }
+            ]
+        }
+    ]
+}

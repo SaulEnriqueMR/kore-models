@@ -14,6 +14,7 @@ func GetSectorFinanciero10ForTest(filename string, t *testing.T) (sectfinan2.Sec
 	var parsed sectfinan2.SectorFinanciero10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("sectorfinanciero.json", parsed)
 	return parsed, errUnmarshal
 }
 

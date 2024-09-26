@@ -1,0 +1,33 @@
+{
+    "Version": "1.1",
+    "TipoOperacion": "monedero electrónico",
+    "NumeroDeCuenta": "E1921212",
+    "SubTotal": 10000,
+    "Total": 10000,
+    "Conceptos": {
+        "ConceptoConsumoDeCombustibles": [
+            {
+                "Identificador": "0001",
+                "FechaString": "2016-04-08T06:02:00",
+                "Fecha": "2016-04-08T06:02:00Z",
+                "Rfc": "XAXX010101000",
+                "ClaveEstacion": "111",
+                "TipoCombustible": "Gasolina",
+                "Cantidad": 1,
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1291398",
+                "ValorUnitario": 10000,
+                "Importe": 10000,
+                "Determinados": {
+                    "Determinado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 160
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

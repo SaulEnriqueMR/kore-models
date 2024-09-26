@@ -14,6 +14,7 @@ func GetOperacioneConDerivados10ForTest(filename string, t *testing.T) (opderiva
 	var parsed opderivados2.OperacionesDerivados10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("operacionesconderivados10.json", parsed)
 	return parsed, errUnmarshal
 }
 

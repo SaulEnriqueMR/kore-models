@@ -1,0 +1,72 @@
+{
+    "Version": "1.0",
+    "DescInmueble": [
+        {
+            "TipoInmueble": "01",
+            "Calle": "Conocida",
+            "NoExterior": "218",
+            "NoInterior": "1",
+            "Colonia": "Colonia1",
+            "Localidad": "Localidad1",
+            "Referencia": "Referencia1",
+            "Municipio": "Oaxaca de Juárez",
+            "Estado": "14",
+            "Pais": "MEX",
+            "CodigoPostal": "68000"
+        }
+    ],
+    "DatosOperacion": {
+        "NumInstrumentoNotarial": 12345,
+        "FechaInstNotarialString": "2014-05-05",
+        "FechaInstNotarial": "2014-05-05T00:00:00Z",
+        "MontoOperacion": 330000,
+        "Subtotal": 330000,
+        "IVA": 52800
+    },
+    "DatosNotario": {
+        "Curp": "AAQM010101HCSMNZ00",
+        "NumNotaria": 3,
+        "EntidadFederativa": "16",
+        "Adscripcion": "Adscripcion1"
+    },
+    "DatosEnajenante": {
+        "CoproSocConyugalE": "No",
+        "DatosUnEnajenante": {
+            "Nombre": "Santiago",
+            "ApellidoPaterno": "Hernandez",
+            "ApellidoMaterno": "Martinez",
+            "Rfc": "XAXX010101000",
+            "Curp": "XAXX010101HOCRRN03"
+        },
+        "DatosEnajenanteCopSC": [
+            {
+                "Nombre": "Francisco",
+                "ApellidoPaterno": "Vazquez",
+                "ApellidoMaterno": "Ramirez",
+                "Rfc": "XAXX010101000",
+                "Curp": "XAXX011001HOCRRN09",
+                "Porcentaje": 17
+            }
+        ]
+    },
+    "DatosAdquiriente": {
+        "CoproSocConyugalE": "Si",
+        "DatosUnAdquiriente": {
+            "Nombre": "Armando",
+            "ApellidoPaterno": "Contreras",
+            "ApellidoMaterno": "Velazquez",
+            "Rfc": "AACO010101000",
+            "Curp": "XAXX010101HOCRRN03"
+        },
+        "DatosAdquirientesCopSC": [
+            {
+                "Nombre": "Arturo",
+                "ApellidoPaterno": "Montes",
+                "ApellidoMaterno": "Herrera",
+                "Rfc": "AUMO010101000",
+                "Curp": "XAXX011001HOCRRN09",
+                "Porcentaje": 40
+            }
+        ]
+    }
+}

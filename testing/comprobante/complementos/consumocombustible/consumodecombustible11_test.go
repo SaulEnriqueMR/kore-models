@@ -14,6 +14,7 @@ func GetConsumoDeCombustible11ForTest(filename string, t *testing.T) (consumoCom
 	var parsed consumoCombus11.ConsumoDeCombustible11
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("consumodecombustible11.json", parsed)
 	return parsed, errUnmarshal
 }
 

@@ -1,0 +1,12 @@
+{
+	"XMLName": {
+		"Space": "http://www.sat.gob.mx/iedu",
+		"Local": "instEducativas"
+	},
+	"Version": "1.0",
+	"NombreAlumno": "Francisco Hernandez",
+	"Curp": "BAHF840120HOCTRR04",
+	"NivelEducativo": "Preescolar",
+	"AutRVOE": "CCA29123210",
+	"RfcPago": "XAXX010101333"
+}

@@ -1,0 +1,22 @@
+{
+	"Version": "1.0",
+	"ClaveVehicular": "KLS829129990200032712",
+	"Parte": [
+		{
+			"InformacionAduanera": [
+				{
+					"Numero": "AAA1212129",
+					"Fecha": "2016-04-11",
+					"FechaDate": "2016-04-11T00:00:00Z",
+					"Aduana": "Tijuana"
+				}
+			],
+			"Cantidad": "1",
+			"Unidad": "PZA",
+			"NoIdentificacion": "123938",
+			"Descripcion": "CHASIS",
+			"ValorUnitario": "10000.00",
+			"Importe": "10000.00"
+		}
+	]
+}

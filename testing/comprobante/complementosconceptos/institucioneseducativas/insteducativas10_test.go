@@ -1,7 +1,10 @@
 package complementoconcepto
 
 import (
+	"encoding/json"
 	"encoding/xml"
+	"log"
+	"os"
 	"testing"
 
 	insteducativas2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/institeducativas"
@@ -14,6 +17,7 @@ func GetInstEducativas10forTest(filename string, t *testing.T) (insteducativas2.
 	var parsed insteducativas2.InstitucioneEducativas10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	GenerateJSONFromXMLInsEducativas("inseducativas10.json", parsed)
 	return parsed, errUnmashal
 }
 
@@ -30,4 +34,12 @@ func InternalTestFullAtributes(t *testing.T, institucion insteducativas2.Institu
 	assert.Equal(t, "CCA29123210", institucion.AutRVOE)
 	assert.NotNil(t, institucion.RfcPago)
 	assert.Equal(t, "XAXX010101333", *institucion.RfcPago)
+}
+
+func GenerateJSONFromXMLInsEducativas(namefile string, data insteducativas2.InstitucioneEducativas10) {
+	jsonData, err := json.MarshalIndent(data, "", "	")
+	err = os.WriteFile(namefile, jsonData, 0644)
+	if err != nil {
+		log.Println(err)
+	}
 }

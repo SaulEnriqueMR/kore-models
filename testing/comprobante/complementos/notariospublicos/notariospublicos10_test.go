@@ -14,6 +14,7 @@ func GetNotariosPublicos10ForTest(filename string, t *testing.T) (notariosPub2.N
 	var parsed notariosPub2.NotariosPublicos10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("notariospublicos10.json", parsed)
 	return parsed, errUnmarshal
 }
 

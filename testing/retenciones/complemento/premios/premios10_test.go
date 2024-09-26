@@ -14,6 +14,7 @@ func GetPremios10ForTest(filename string, t *testing.T) (premios2.Premios10, err
 	var parsed premios2.Premios10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("premios10.json", parsed)
 	return parsed, errUnmarshal
 }
 

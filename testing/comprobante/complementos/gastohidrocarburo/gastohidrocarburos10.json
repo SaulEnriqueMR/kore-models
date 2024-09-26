@@ -1,0 +1,62 @@
+{
+    "Version": "1.0",
+    "NumeroContrato": "ABC123456",
+    "AreaContractual": "CentroCosto01",
+    "Erogacion": [
+        {
+            "TipoErogacion": "Gasto",
+            "MontoCuErogacion": "1500.00",
+            "Porcentaje": "10.500",
+            "DocumentoRelacionado": [
+                {
+                    "OrigenErogacion": "Nacional",
+                    "FolioFiscalVinculado": "123e4567-e89b-12d3-a456-426614174000",
+                    "RFCProveedor": "ABC123456789",
+                    "MontoTotalIVA": 200,
+                    "MontoRetencionISR": 50,
+                    "MontoRetencionIVA": 30,
+                    "MontoRetencionOtrosImpuestos": 10,
+                    "NumeroPedimentoVinculado": "21011234",
+                    "ClavePedimentoVinculado": "123456789",
+                    "ClavePagoPedimentoVinculado": "987654321",
+                    "MontoIVAPedimento": 100,
+                    "OtrosImpuestosPagadosPedimento": 20,
+                    "FechaFolioFiscalVinculado": "2024-01-15",
+                    "FechaFolioFiscalVinculadoDate": "2024-01-15T00:00:00Z",
+                    "Mes": "Febrero",
+                    "MontoTotalErogaciones": 3000
+                }
+            ],
+            "Actividades": [
+                {
+                    "ActividadRelacionada": "Actividad1",
+                    "SubActividades": [
+                        {
+                            "SubActividadRelacionada": "SubActividadA",
+                            "Tareas": [
+                                {
+                                    "TareaRelacionada": "Tarea1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "CentroCostos": [
+                {
+                    "Campo": "Campo01",
+                    "Yacimientos": [
+                        {
+                            "Yacimiento": "YacimientoA",
+                            "Pozos": [
+                                {
+                                    "Pozo": "Pozo1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

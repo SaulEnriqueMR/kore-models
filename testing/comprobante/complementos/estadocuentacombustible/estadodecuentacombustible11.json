@@ -1,0 +1,40 @@
+{
+    "Version": "1.1",
+    "TipoOperacion": "Tarjeta",
+    "NumeroDeCuenta": "11238",
+    "SubTotal": 1000,
+    "Total": 1160,
+    "Conceptos": {
+        "ConceptoEstadoDeCuentaCombustible": [
+            {
+                "Identificador": "12234",
+                "FechaString": "2015-11-02T10:20:02",
+                "Fecha": "2015-11-02T10:20:02Z",
+                "Rfc": "XAXX010101000",
+                "ClaveEstacion": "111",
+                "Tar": "617",
+                "Cantidad": "3.0",
+                "NoIdentificacion": "32011",
+                "Unidad": "Litros",
+                "NombreCombustible": "DIESEL",
+                "FolioOperacion": "01",
+                "ValorUnitario": 14.5,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaoCuota": 0.16,
+                            "Importe": 172.78
+                        },
+                        {
+                            "Impuesto": "IEPS",
+                            "TasaoCuota": 0.08,
+                            "Importe": 79.99
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

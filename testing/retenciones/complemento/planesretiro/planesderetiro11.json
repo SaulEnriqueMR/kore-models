@@ -1,0 +1,20 @@
+{
+    "Version": "1.1",
+    "SistemaFinanc": "SI",
+    "MontTotAportAnioInmAnterior": 1000,
+    "MontIntRealesDevengAniooInmAnt": 100,
+    "HuboRetirosAnioInmAntPer": "SI",
+    "MontTotRetiradoAnioInmAntPer": 10,
+    "MontTotExentRetiradoAnioInmAnt": 90,
+    "MontTotExedenteAnioInmAnt": 900,
+    "HuboRetirosAnioInmAnt": "SI",
+    "MontTotRetiradoAnioInmAnt": 90,
+    "NumReferencia": "123456",
+    "AportacionesODepositos": [
+        {
+            "TipoAportacionODeposito": "a",
+            "MontAportODep": 1750,
+            "RFCFiduciaria": "AAA010101AAA"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "Version": "1.0",
+    "Periodicidad": "Mensual",
+    "NumServ": "10",
+    "MonTotServSIVA": 5000,
+    "TotalIVATrasladado": 800,
+    "TotalIVARetenido": 200,
+    "TotalISRRetenido": 600,
+    "DifIVAEntregadoPrestServ": 100,
+    "MonTotalporUsoPlataforma": 300,
+    "MonTotalContribucionGubernamental": 150,
+    "DetallesDelServicio": [
+        {
+            "FormaPagoServ": "01",
+            "TipoDeServ": "A01",
+            "SubTipServ": "B02",
+            "RFCTerceroAutorizado": "ABC123456789",
+            "FechaServString": "2023-09-23",
+            "FechaServ": "2023-09-23T00:00:00Z",
+            "PrecioServSinIVA": 1000,
+            "ImpuestosTrasladadosDelServicio": {
+                "Base": 1000,
+                "Impuesto": "IVA",
+                "TipoFactor": "Tasa",
+                "TasaCuota": 0.16,
+                "Importe": 160
+            },
+            "ContribucionGubernamental": {
+                "ImpContrib": 200,
+                "EntidadDondePagaLaContribucion": "01"
+            },
+            "ComisionDelServicio": {
+                "Base": 150.5,
+                "Porcentaje": 0.05,
+                "Importe": 7.53
+            }
+        }
+    ]
+}

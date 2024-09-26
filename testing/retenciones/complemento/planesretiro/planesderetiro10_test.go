@@ -14,6 +14,7 @@ func GetPlanesDeRetiro10ForTest(filename string, t *testing.T) (planretiro10.Pla
 	var parsed planretiro10.PlanesDeRetiro10
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
+	testing2.GenerateJSONFromStructure("planesderetiro10.json", parsed)
 	return parsed, errUnmarshal
 }
 

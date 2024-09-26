@@ -1,0 +1,15 @@
+{
+	"Version": "1.0",
+	"Tua": "1000.00",
+	"Otroscargos": [
+		{
+			"TotalCargos": "60.00",
+			"Cargo": [
+				{
+					"CodigoCargo": "AA",
+					"Importe": "60.00"
+				}
+			]
+		}
+	]
+}

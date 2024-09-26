@@ -60,6 +60,86 @@
             </Impuestos>
             <InformacionAduanera NumeroPedimento="230112340000123"/>
             <CuentaPredial Numero="12345678901234567890"/>
+            <ComplementoConcepto>
+                <instEducativas
+                        version="1.0" nombreAlumno="Francisco Hernandez" CURP="BAHF840120HOCTRR04" nivelEducativo="Preescolar" autRVOE="CCA29123210" rfcPago="XAXX010101333"/>
+                <instEducativas
+                        version="1.0" nombreAlumno="Francisco Hernandez" CURP="BAHF840120HOCTRR04" nivelEducativo="Preescolar" autRVOE="CCA29123210" rfcPago="XAXX010101333"/>
+                <instEducativas
+                        version="1.0" nombreAlumno="Francisco Hernandez" CURP="BAHF840120HOCTRR04" nivelEducativo="Preescolar" autRVOE="CCA29123210" rfcPago="XAXX010101333"/>
+                <PorCuentadeTerceros xmlns="http://www.sat.gob.mx/terceros" version="1.1" rfc="AAA010101AAA" nombre="Juan Pérez">
+                    <InformacionFiscalTercero calle="Av. Siempre Viva" noExterior="123" colonia="Centro" municipio="Ciudad" estado="Estado" pais="México" codigoPostal="01234"/>
+                    <InformacionAduanera numero="123456" fecha="2024-09-23" aduana="Aduana Ejemplo"/>
+                    <Parte cantidad="10.00" descripcion="Componente X" valorUnitario="100.00" importe="1000.00">
+                        <InformacionAduanera numero="123456" fecha="2024-09-23" aduana="Aduana Ejemplo"/>
+                    </Parte>
+                    <CuentaPredial numero="00000123"/>
+                    <Impuestos>
+                        <Retenciones>
+                            <Retencion impuesto="ISR" importe="150.00"/>
+                        </Retenciones>
+                        <Traslados>
+                            <Traslado impuesto="IVA" tasa="16.00" importe="160.00"/>
+                        </Traslados>
+                    </Impuestos>
+                </PorCuentadeTerceros>
+                <PorCuentadeTerceros xmlns="http://www.sat.gob.mx/terceros" version="1.1" rfc="AAA010101AAA" nombre="Juan Pérez">
+                    <InformacionFiscalTercero calle="Av. Siempre Viva" noExterior="123" colonia="Centro" municipio="Ciudad" estado="Estado" pais="México" codigoPostal="01234"/>
+                    <InformacionAduanera numero="123456" fecha="2024-09-23" aduana="Aduana Ejemplo"/>
+                    <Parte cantidad="10.00" descripcion="Componente X" valorUnitario="100.00" importe="1000.00">
+                        <InformacionAduanera numero="123456" fecha="2024-09-23" aduana="Aduana Ejemplo"/>
+                    </Parte>
+                    <CuentaPredial numero="00000123"/>
+                    <Impuestos>
+                        <Retenciones>
+                            <Retencion impuesto="ISR" importe="150.00"/>
+                        </Retenciones>
+                        <Traslados>
+                            <Traslado impuesto="IVA" tasa="16.00" importe="160.00"/>
+                        </Traslados>
+                    </Impuestos>
+                </PorCuentadeTerceros>
+                <PorCuentadeTerceros xmlns="http://www.sat.gob.mx/terceros" version="1.1" rfc="AAA010101AAA" nombre="Juan Pérez">
+                    <InformacionFiscalTercero calle="Av. Siempre Viva" noExterior="123" colonia="Centro" municipio="Ciudad" estado="Estado" pais="México" codigoPostal="01234"/>
+                    <InformacionAduanera numero="123456" fecha="2024-09-23" aduana="Aduana Ejemplo"/>
+                    <Parte cantidad="10.00" descripcion="Componente X" valorUnitario="100.00" importe="1000.00">
+                        <InformacionAduanera numero="123456" fecha="2024-09-23" aduana="Aduana Ejemplo"/>
+                    </Parte>
+                    <CuentaPredial numero="00000123"/>
+                    <Impuestos>
+                        <Retenciones>
+                            <Retencion impuesto="ISR" importe="150.00"/>
+                        </Retenciones>
+                        <Traslados>
+                            <Traslado impuesto="IVA" tasa="16.00" importe="160.00"/>
+                        </Traslados>
+                    </Impuestos>
+                </PorCuentadeTerceros>
+                <VentaVehiculos
+                        version="1.0" ClaveVehicular="KLS829129990200032712" Niv="NIVEH287212">
+                    <Parte cantidad="1" unidad="PZA" noIdentificacion="123938" descripcion="CHASIS" valorUnitario="10000.00" importe="10000.00">
+                        <InformacionAduanera numero="AAA1212129" fecha="2016-04-11" aduana="Tijuana"/>
+                    </Parte>
+                </VentaVehiculos>
+                <VentaVehiculos
+                        version="1.0" ClaveVehicular="KLS829129990200032712" Niv="NIVEH287212">
+                    <Parte cantidad="1" unidad="PZA" noIdentificacion="123938" descripcion="CHASIS" valorUnitario="10000.00" importe="10000.00">
+                        <InformacionAduanera numero="AAA1212129" fecha="2016-04-11" aduana="Tijuana"/>
+                    </Parte>
+                </VentaVehiculos>
+                <VentaVehiculos
+                        version="1.1" ClaveVehicular="KLS829129990200032712" Niv="NIVEH287212">
+                    <Parte cantidad="1" unidad="PZA" noIdentificacion="123938" descripcion="CHASIS" valorUnitario="10000.00" importe="10000.00">
+                        <InformacionAduanera numero="AAA1212129" fecha="2016-04-11" aduana="Tijuana"/>
+                    </Parte>
+                </VentaVehiculos>
+                <VentaVehiculos
+                        version="1.1" ClaveVehicular="KLS829129990200032712" Niv="NIVEH287212">
+                    <Parte cantidad="1" unidad="PZA" noIdentificacion="123938" descripcion="CHASIS" valorUnitario="10000.00" importe="10000.00">
+                        <InformacionAduanera numero="AAA1212129" fecha="2016-04-11" aduana="Tijuana"/>
+                    </Parte>
+                </VentaVehiculos>
+            </ComplementoConcepto>
             <Parte
                     ClaveProdServ="01010101"
                     NoIdentificacion="PN123456"

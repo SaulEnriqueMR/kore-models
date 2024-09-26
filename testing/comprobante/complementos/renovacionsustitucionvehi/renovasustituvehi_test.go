@@ -14,6 +14,7 @@ func GetRenovaSustiVehiForTest(filename string, t *testing.T) (renovasustivehi1.
 	var parsed renovasustivehi1.RenovacionSustitucion10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("renovacion10.json", parsed)
 	return parsed, errUnmashal
 }
 

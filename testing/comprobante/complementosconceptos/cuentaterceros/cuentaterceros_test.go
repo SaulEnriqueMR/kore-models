@@ -14,6 +14,7 @@ func GetACuentaTercerosForTest(filename string, t *testing.T) (acuentaterceros.A
 	var parsed acuentaterceros.ACuentaTerceros11
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("acuentaterceros10.json", parsed)
 	return parsed, errUnmashal
 }
 

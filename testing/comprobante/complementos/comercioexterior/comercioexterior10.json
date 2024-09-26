@@ -1,0 +1,56 @@
+{
+    "Version": "1.0",
+    "TipoOperacion": "1",
+    "ClavePedimento": "ABC123",
+    "CertificadoOrigen": 1,
+    "NumCertificadoOrigen": "123e4567-e89b-12d3-a456-426614174000",
+    "NumeroExportadorConfiable": "EX123456",
+    "Incoterm": "CIF",
+    "Subdivision": 0,
+    "Observaciones": "Factura de exportación.",
+    "TipoCambioUSD": 20.5,
+    "TotalUSD": 1000,
+    "Emisor": {
+        "Curp": "ABCD123456HDFRLM09"
+    },
+    "Receptor": {
+        "Curp": "XYZ123456HDFGJ00",
+        "NumRegIdTrib": "RFC123456789"
+    },
+    "Destinatario": {
+        "NumRegIdTrib": "123456789012",
+        "Rfc": "ABC123456XYZ",
+        "Curp": "ABCD123456HDFXYZ00",
+        "Nombre": "Juan Pérez García",
+        "Domicilio": {
+            "Calle": "Av. Siempre Viva",
+            "NumeroExterior": null,
+            "NumeroInterior": null,
+            "Colonia": null,
+            "Localidad": null,
+            "Referencia": null,
+            "Municipio": null,
+            "Estado": "Illinois",
+            "Pais": "US",
+            "CodigoPostal": "62704"
+        }
+    },
+    "Mercancias": [
+        {
+            "NoIdentificacion": "ABC123456",
+            "FraccionArancelaria": "123456",
+            "CantidadAduana": 10,
+            "UnidadAduana": "PIE",
+            "ValorUnitarioAduana": 150,
+            "ValorDolares": 1500,
+            "DescripcionesEspecificas": [
+                {
+                    "Marca": "MarcaEjemplo",
+                    "Modelo": "ModeloEjemplo",
+                    "SubModelo": "SubmodeloEjemplo",
+                    "NumeroSerie": "SN123456789"
+                }
+            ]
+        }
+    ]
+}

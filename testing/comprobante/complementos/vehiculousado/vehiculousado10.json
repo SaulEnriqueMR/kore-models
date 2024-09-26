@@ -1,0 +1,33 @@
+{
+    "Version": "1.0",
+    "MontoAdquisicion": 150000,
+    "MontoEnajenacion": 140000,
+    "ClaveVehicular": "1234567",
+    "Marca": "Toyota",
+    "Tipo": "Sedan",
+    "Modelo": "2018",
+    "NumeroMotor": "1HGBH41JXMN109186",
+    "NumeroSerie": "2HGBH41JXMN109186",
+    "NIV": "JTHBJ46G992109186",
+    "Valor": 135000,
+    "InformacionAduanera": [
+        {
+            "Numero": "12345",
+            "FechaString": "2022-05-15",
+            "Fecha": "2022-05-15T00:00:00Z",
+            "Aduana": "Aduana del Puerto de Veracruz"
+        },
+        {
+            "Numero": "67890",
+            "FechaString": "2021-03-22",
+            "Fecha": "2021-03-22T00:00:00Z",
+            "Aduana": "Aduana del Aeropuerto Internacional de la Ciudad de México"
+        },
+        {
+            "Numero": "54321",
+            "FechaString": "2020-12-10",
+            "Fecha": "2020-12-10T00:00:00Z",
+            "Aduana": "Aduana de Lázaro Cárdenas"
+        }
+    ]
+}

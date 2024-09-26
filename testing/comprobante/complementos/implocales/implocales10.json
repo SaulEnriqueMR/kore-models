@@ -1,0 +1,19 @@
+{
+    "Version": "1.0",
+    "TotalRetenciones": 1500,
+    "TotalTraslados": 3000,
+    "RetencionesLocales": [
+        {
+            "ImpLocRetenido": "ISR",
+            "TasaRetencion": 15,
+            "Importe": 1500
+        }
+    ],
+    "TrasladosLocales": [
+        {
+            "ImpLocTrasladado": "IVA",
+            "TasaTraslado": 16,
+            "Importe": 3000
+        }
+    ]
+}

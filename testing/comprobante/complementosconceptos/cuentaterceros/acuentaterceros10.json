@@ -1,0 +1,59 @@
+{
+    "Version": "1.1",
+    "Rfc": "AAA010101AAA",
+    "Nombre": "Juan Pérez",
+    "InformacionFiscalTercero": {
+        "Calle": "Av. Siempre Viva",
+        "NoExterior": "123",
+        "NoInterior": null,
+        "Colonia": "Centro",
+        "Localidad": null,
+        "Referencia": null,
+        "Municipio": "Ciudad",
+        "Estado": "Estado",
+        "Pais": "México",
+        "CodigoPostal": "01234"
+    },
+    "InformacionAduanera": {
+        "Numero": "123456",
+        "FechaString": "2024-09-23",
+        "Fecha": "2024-09-23T00:00:00Z",
+        "Aduana": "Aduana Ejemplo"
+    },
+    "Parte": [
+        {
+            "Cantidad": 10,
+            "Unidad": null,
+            "NoIdentificacion": null,
+            "Descripcion": "Componente X",
+            "ValorUnitario": 100,
+            "Importe": 1000,
+            "InformacionAduanera": [
+                {
+                    "Numero": "123456",
+                    "FechaString": "2024-09-23",
+                    "Fecha": "2024-09-23T00:00:00Z",
+                    "Aduana": "Aduana Ejemplo"
+                }
+            ]
+        }
+    ],
+    "CuentaPredial": {
+        "Numero": "00000123"
+    },
+    "Impuestos": {
+        "Retenciones": [
+            {
+                "Impuesto": "ISR",
+                "Importe": 150
+            }
+        ],
+        "Traslados": [
+            {
+                "Impuesto": "IVA",
+                "Tasa": 16,
+                "Importe": 160
+            }
+        ]
+    }
+}

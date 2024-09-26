@@ -2,16 +2,19 @@ package retenciones
 
 import (
 	"encoding/xml"
+	"testing"
+
 	"github.com/SaulEnriqueMR/kore-models/models/retenciones"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestFullRetenciones20(t *testing.T) {
 	data := testing2.GetFileContentForTest("./retenciones20.xml", t)
 	var parsed retenciones.Retenciones20
 	errUnmashal := xml.Unmarshal(data, &parsed)
+
+	testing2.GenerateJSONFromStructure("retenciones20.json", parsed)
 
 	assert.NoError(t, errUnmashal)
 	InternalTestFullAttributes20(t, parsed)

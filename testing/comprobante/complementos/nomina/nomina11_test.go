@@ -14,6 +14,7 @@ func GetNimina11ForTest(filename string, t *testing.T) (nomina11.Nomina11, error
 	var parsed nomina11.Nomina11
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("nomina11.json", parsed)
 	return parsed, errUnmashal
 }
 

@@ -1,0 +1,14 @@
+{
+    "Version": "1.0",
+    "FechaTransitoString": "2024-09-19T14:30:00",
+    "FechaTransito": "2024-09-19T14:30:00Z",
+    "TipoTransito": "Arribo",
+    "DatosTransito": {
+        "Via": "Aérea",
+        "TipoId": "Pasaporte",
+        "NumeroId": "X123456789",
+        "Nacionalidad": "Canadiense",
+        "EmpresaTransporte": "Air Canada",
+        "IdTransporte": "AC102"
+    }
+}

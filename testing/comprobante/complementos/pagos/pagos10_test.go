@@ -14,6 +14,7 @@ func GetPagos10ForTest(filename string, t *testing.T) (pagos10.Pagos10, error) {
 	var parsed pagos10.Pagos10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("pagos10.json", parsed)
 	return parsed, errUnmashal
 }
 

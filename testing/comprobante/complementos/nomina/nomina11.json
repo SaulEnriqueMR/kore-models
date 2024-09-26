@@ -1,0 +1,97 @@
+{
+    "Version": "1.1",
+    "RegistroPatronal": "12345678901234567890",
+    "NumEmpleado": "12345",
+    "Curp": "GODE561231GR8",
+    "TipoRegimen": 2,
+    "NumSeguridadSocial": "123456789012345",
+    "FechaPago": "2024-09-18",
+    "FechaPagoDate": "2024-09-18T00:00:00Z",
+    "FechaInicialPago": "2023-09-01",
+    "FechaInicialPagoDate": "2023-09-01T00:00:00Z",
+    "FechaFinalPago": "2023-09-15",
+    "FechaFinalPagoDate": "2023-09-15T00:00:00Z",
+    "NumDiasPagados": 14,
+    "Departamento": "Contabilidad",
+    "Clabe": "012345678901234567",
+    "Banco": 12,
+    "FechaInicioRelLaboral": "2010-05-15",
+    "Antiguedad": 750,
+    "Puesto": "Analista Financiero",
+    "TipoContrato": "Sindicalizado",
+    "TipoJornada": "Diurna",
+    "PeriodicidadPago": "Quincenal",
+    "SalarioBaseCotApor": 10000,
+    "RiesgoPuesto": 1,
+    "SalarioDiarioIntegrado": 500,
+    "Percepciones": [
+        {
+            "TotalGravado": 15000,
+            "TotalExento": 1000,
+            "Percepcion": [
+                {
+                    "TipoPercepcion": 1,
+                    "Clave": "001",
+                    "Concepto": "Sueldo Base",
+                    "ImporteGravado": 15000,
+                    "ImporteExento": 1000
+                },
+                {
+                    "TipoPercepcion": 1,
+                    "Clave": "001",
+                    "Concepto": "Sueldo Base",
+                    "ImporteGravado": 15000,
+                    "ImporteExento": 1000
+                }
+            ]
+        }
+    ],
+    "Deducciones": [
+        {
+            "TotalGravado": 500,
+            "TotalExento": 0,
+            "Deduccion": [
+                {
+                    "TipoDeduccion": 1,
+                    "Clave": "001",
+                    "Concepto": "ISR",
+                    "ImporteGravado": 500,
+                    "ImporteExento": 0
+                },
+                {
+                    "TipoDeduccion": 1,
+                    "Clave": "001",
+                    "Concepto": "ISR",
+                    "ImporteGravado": 500,
+                    "ImporteExento": 0
+                }
+            ]
+        }
+    ],
+    "Incapacidades": [
+        {
+            "DiasIncapacidad": 2,
+            "TipoIncapacidad": 1,
+            "Descuento": 200
+        },
+        {
+            "DiasIncapacidad": 2,
+            "TipoIncapacidad": 1,
+            "Descuento": 200
+        }
+    ],
+    "HorasExtras": [
+        {
+            "Dias": 1,
+            "TipoHoras": "Dobles",
+            "HorasExtra": 2,
+            "ImportePagado": 100
+        },
+        {
+            "Dias": 1,
+            "TipoHoras": "Dobles",
+            "HorasExtra": 2,
+            "ImportePagado": 100
+        }
+    ]
+}

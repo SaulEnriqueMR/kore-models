@@ -14,6 +14,7 @@ func GetComercioExterior11ForTest(filename string, t *testing.T) (comexterior1.C
 	var parsed comexterior1.ComercioExterior11
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("comercioexterior11.json", parsed)
 	return parsed, errUnmashal
 }
 

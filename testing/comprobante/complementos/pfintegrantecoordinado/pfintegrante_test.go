@@ -14,6 +14,7 @@ func GetPFIntegranteForTest(filename string, t *testing.T) (pfintegrante1.PFInte
 	var parsed pfintegrante1.PFIntegranteCoordinado10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("pfintegrante10.json", parsed)
 	return parsed, errUnmashal
 }
 

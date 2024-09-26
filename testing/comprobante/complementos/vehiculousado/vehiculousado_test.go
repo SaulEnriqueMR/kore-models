@@ -14,6 +14,7 @@ func GetTurisVehiculoUsadoForTest(filename string, t *testing.T) (vehiculousado1
 	var parsed vehiculousado1.VehiculoUsado10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("vehiculousado10.json", parsed)
 	return parsed, errUnmashal
 }
 

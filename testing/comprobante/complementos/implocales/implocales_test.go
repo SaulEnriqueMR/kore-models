@@ -14,6 +14,7 @@ func GetImpuestosLocales10ForTest(filename string, t *testing.T) (implocales10.I
 	var parsed implocales10.ImpuestoLocales10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("implocales10.json", parsed)
 	return parsed, errUnmashal
 }
 

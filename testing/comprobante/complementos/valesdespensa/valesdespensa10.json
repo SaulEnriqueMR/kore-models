@@ -1,0 +1,39 @@
+{
+    "Version": "1.0",
+    "TipoOperacion": "monedero electrónico",
+    "RegistroPatronal": "RP1234567890123456",
+    "NumeroCuenta": "12345678901234567890",
+    "Total": 5000,
+    "Conceptos": [
+        {
+            "Identificador": "ABC12345678901234567",
+            "FechaString": "2024-09-19T14:30:00",
+            "Fecha": "2024-09-19T14:30:00Z",
+            "Rfc": "ABC123456T56",
+            "Curp": "ABCD890123HMNLLL05",
+            "Nombre": "Juan Perez",
+            "NumSeguridadSocial": "123456789012345",
+            "Importe": 1500
+        },
+        {
+            "Identificador": "DEF98765432109876543",
+            "FechaString": "2024-09-19T14:45:00",
+            "Fecha": "2024-09-19T14:45:00Z",
+            "Rfc": "DEF987654K32",
+            "Curp": "DEFG890123HMNLLL06",
+            "Nombre": "Maria Lopez",
+            "NumSeguridadSocial": "987654321098765",
+            "Importe": 2000
+        },
+        {
+            "Identificador": "XYZ45678901234567890",
+            "FechaString": "2024-09-19T15:00:00",
+            "Fecha": "2024-09-19T15:00:00Z",
+            "Rfc": "XYZ456789G21",
+            "Curp": "XYZD890123HMNLLL07",
+            "Nombre": "Carlos Sanchez",
+            "NumSeguridadSocial": "987654321098766",
+            "Importe": 1500
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "Version": "1.0",
+    "Pago": [
+        {
+            "FechaPago": "2024-09-24T12:00:00",
+            "FormaDePagoP": "01",
+            "MonedaP": "MXN",
+            "TipoCambioP": 1,
+            "Monto": 1000,
+            "NumOperacion": "123456789",
+            "RfcEmisorCtaOrd": "XEXX010101000",
+            "NomBancoOrdExt": "Banco Ejemplo",
+            "CtaOrdenante": "0123456789",
+            "RfcEmisorCtaBen": "A123456789",
+            "CtaBeneficiario": "9876543210",
+            "TipoCadPago": "01",
+            "CertPago": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvD1X...",
+            "CadPago": "Cadena original de comprobante de pago",
+            "SelloPago": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvD1X...",
+            "DoctoRelacionado": [
+                {
+                    "IdDocumento": "123e4567-e89b-12d3-a456-426614174000",
+                    "Serie": "A",
+                    "Folio": "0001",
+                    "MonedaDR": "MXN",
+                    "TipoCambioDR": 1,
+                    "MetodoDePagoDR": "01",
+                    "NumParcialidad": 1,
+                    "ImpSaldoAnt": 2000,
+                    "ImpPagado": 1000,
+                    "ImpSaldoInsoluto": 1000
+                },
+                {
+                    "IdDocumento": "456e1234-e89b-12d3-a456-426614174001",
+                    "Serie": "B",
+                    "Folio": "0002",
+                    "MonedaDR": "USD",
+                    "TipoCambioDR": 1.2,
+                    "MetodoDePagoDR": "02",
+                    "NumParcialidad": 1,
+                    "ImpSaldoAnt": 2500,
+                    "ImpPagado": 1500,
+                    "ImpSaldoInsoluto": 1000
+                },
+                {
+                    "IdDocumento": "789e0123-e89b-12d3-a456-426614174002",
+                    "Serie": "C",
+                    "Folio": "0003",
+                    "MonedaDR": "EUR",
+                    "TipoCambioDR": 1.1,
+                    "MetodoDePagoDR": "03",
+                    "NumParcialidad": 2,
+                    "ImpSaldoAnt": 3000,
+                    "ImpPagado": 500,
+                    "ImpSaldoInsoluto": 2500
+                }
+            ],
+            "Impuestos": [
+                {
+                    "TotalImpuestosRetenidos": 150,
+                    "TotalImpuestosTrasladados": 50,
+                    "Retenciones": [
+                        {
+                            "Impuesto": "001",
+                            "Importe": 100
+                        },
+                        {
+                            "Impuesto": "002",
+                            "Importe": 50
+                        }
+                    ],
+                    "Traslados": [
+                        {
+                            "Impuesto": "003",
+                            "TipoFactor": "Tasa",
+                            "TasaOCuota": 0.16,
+                            "Importe": 50
+                        }
+                    ]
+                },
+                {
+                    "TotalImpuestosRetenidos": 200,
+                    "TotalImpuestosTrasladados": 75,
+                    "Retenciones": [
+                        {
+                            "Impuesto": "004",
+                            "Importe": 200
+                        }
+                    ],
+                    "Traslados": [
+                        {
+                            "Impuesto": "005",
+                            "TipoFactor": "Cuota",
+                            "TasaOCuota": 20,
+                            "Importe": 75
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

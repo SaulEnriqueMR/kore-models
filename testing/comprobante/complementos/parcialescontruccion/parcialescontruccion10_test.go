@@ -14,6 +14,7 @@ func GetParcialesConstruccionForTest(filename string, t *testing.T) (parciales1.
 	var parsed parciales1.ParcialesConstruccion10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("parciales10.json", parsed)
 	return parsed, errUnmashal
 }
 

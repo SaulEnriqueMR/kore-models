@@ -15,6 +15,7 @@ func GetTurisPasajExtraForTest(filename string, t *testing.T) (turispasajextra1.
 	var parsed turispasajextra1.TuristaPasajeroExtranjero10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("turista10.json", parsed)
 	return parsed, errUnmashal
 }
 

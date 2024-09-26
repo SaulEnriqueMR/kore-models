@@ -13,6 +13,7 @@ func GetTurisComercioExteriorForTest(filename string, t *testing.T) (comexterior
 	data := testing2.GetFileContentForTest(filename, t)
 	var parsed comexterior1.ComercioExterior20
 	errUnmashal := xml.Unmarshal(data, &parsed)
+	testing2.GenerateJSONFromStructure("comercioexterior20.json", parsed)
 	assert.NoError(t, errUnmashal)
 	return parsed, errUnmashal
 }

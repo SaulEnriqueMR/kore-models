@@ -15,7 +15,7 @@ func GetCartaPorteForTest(filename string, t *testing.T) (cartaporte1.CartaPorte
 	var parsed cartaporte1.CartaPorte31
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
-	testing2.GenerateJSONFromXML("cartaporte31.json", parsed)
+	testing2.GenerateJSONFromStructure("cartaporte31.json", parsed)
 	return parsed, errUnmashal
 }
 

@@ -1,0 +1,96 @@
+{
+    "Version": "1.0",
+    "TipoDecreto": "01",
+    "DecretoRenovacion": {
+        "VehEnaj": "02",
+        "VehiculosUsados": [
+            {
+                "PrecioVehUsado": 250000,
+                "TipoVeh": "AUTOMOVIL",
+                "Marca": "Toyota",
+                "TipooClase": "Sedan",
+                "Anio": 2018,
+                "Modelo": "Corolla",
+                "NIV": "1HGBH41JXMN109186",
+                "NumSerie": "1HGBH41JXMN109186",
+                "NumPlacas": "XYZ1234",
+                "NumMotor": "XJHZ1234567890123",
+                "NumFolTarjCir": "ABC987654321",
+                "NumPedIm": "12345678901234567890",
+                "Aduana": "Aduana de Tijuana",
+                "FechaRegulVehString": "2021-07-15",
+                "FechaRegulVeh": "2021-07-15T00:00:00Z",
+                "Foliofiscal": "A1B2C3D4E5F6G7H8I9J0"
+            },
+            {
+                "PrecioVehUsado": 250000,
+                "TipoVeh": "AUTOMOVIL",
+                "Marca": "Toyota",
+                "TipooClase": "Sedan",
+                "Anio": 2018,
+                "Modelo": "Corolla",
+                "NIV": "1HGBH41JXMN109186",
+                "NumSerie": "1HGBH41JXMN109186",
+                "NumPlacas": "XYZ1234",
+                "NumMotor": "XJHZ1234567890123",
+                "NumFolTarjCir": "ABC987654321",
+                "NumPedIm": "12345678901234567890",
+                "Aduana": "Aduana de Tijuana",
+                "FechaRegulVehString": "2022-07-15",
+                "FechaRegulVeh": "2022-07-15T00:00:00Z",
+                "Foliofiscal": "A1B2C3D4E5F6G7H8I9J0"
+            }
+        ],
+        "VehiculosNuevos": [
+            {
+                "Anio": 2022,
+                "Modelo": "Hilux",
+                "NumPlacas": "ABC1234",
+                "Rfc": "XAXX010101000"
+            }
+        ]
+    },
+    "DecretoSustitucion": {
+        "VehEnaj": "02",
+        "VehiculosUsados": [
+            {
+                "PrecioVehUsado": 250000,
+                "TipoVeh": "AUTOMOVIL",
+                "Marca": "Toyota",
+                "TipooClase": "Sedan",
+                "Anio": 2018,
+                "Modelo": "Corolla",
+                "NIV": "1HGBH41JXMN109186",
+                "NumSerie": "1HGBH41JXMN109186",
+                "NumPlacas": "XYZ1234",
+                "NumMotor": "XJHZ1234567890123",
+                "NumFolTarjCir": "ABC987654321",
+                "NumPedIm": "12345678901234567890",
+                "Aduana": "Aduana de Tijuana",
+                "FechaRegulVehString": "2023-07-15",
+                "FechaRegulVeh": "2023-07-15T00:00:00Z",
+                "Foliofiscal": "A1B2C3D4E5F6G7H8I9J0"
+            }
+        ],
+        "VehiculosNuevos": [
+            {
+                "Anio": 2022,
+                "Modelo": "Hilux",
+                "NumPlacas": "ABC1234",
+                "Rfc": "XAXX010101000"
+            },
+            {
+                "Anio": 2022,
+                "Modelo": "Hilux",
+                "NumPlacas": "ABC1234",
+                "Rfc": "XAXX010101000"
+            },
+            {
+                "Anio": 2022,
+                "Modelo": "Hilux",
+                "NumPlacas": "ABC1234",
+                "Rfc": "XAXX010101000"
+            }
+        ]
+    }
+}

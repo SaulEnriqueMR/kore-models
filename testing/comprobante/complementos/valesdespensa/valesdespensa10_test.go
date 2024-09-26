@@ -14,6 +14,7 @@ func GetTurisValesDespensaForTest(filename string, t *testing.T) (valesdespensa1
 	var parsed valesdespensa1.ValesDespensa10
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("valesdespensa10.json", parsed)
 	return parsed, errUnmashal
 }
 

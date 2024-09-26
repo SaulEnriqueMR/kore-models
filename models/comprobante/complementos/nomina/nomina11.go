@@ -1,5 +1,12 @@
 package nomina
 
+import (
+	"encoding/xml"
+	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
+)
+
 // Nomina11 Presente en Comprobante 3.2 y 3.3
 type Nomina11 struct {
 	Version                string                  `xml:"Version,attr" bson:"Version"`
@@ -8,9 +15,12 @@ type Nomina11 struct {
 	Curp                   string                  `xml:"CURP,attr" bson:"Curp"` // Cifrado
 	TipoRegimen            int                     `xml:"TipoRegimen,attr" bson:"TipoRegimen"`
 	NumSeguridadSocial     *string                 `xml:"NumSeguridadSocial,attr" bson:"NumSeguridadSocial,omitempty"` // Cifrado
-	FechaPago              string                  `xml:"FechaPago,attr" bson:"FechaPago"`
-	FechaInicialPago       string                  `xml:"FechaInicialPago,attr" bson:"FechaInicialPago"`
-	FechaFinalPago         string                  `xml:"FechaFinalPago,attr" bson:"FechaFinalPago"`
+	FechaPago              string                  `xml:"FechaPago,attr"`
+	FechaPagoDate          time.Time               `bson:"FechaPago"`
+	FechaInicialPago       string                  `xml:"FechaInicialPago,attr"`
+	FechaInicialPagoDate   time.Time               `bson:"FechaInicialPago"`
+	FechaFinalPago         string                  `xml:"FechaFinalPago,attr"`
+	FechaFinalPagoDate     time.Time               `bson:"FechaFinalPago"`
 	NumDiasPagados         float64                 `xml:"NumDiasPagados,attr" bson:"NumDiasPagados"`
 	Departamento           *string                 `xml:"Departamento,attr" bson:"Departamento,omitempty"`
 	Clabe                  *string                 `xml:"CLABE,attr" bson:"Clabe,omitempty"` // Cifrado
@@ -69,4 +79,36 @@ type HorasExtraNomina11 struct {
 	TipoHoras     string  `xml:"TipoHoras,attr" bson:"TipoHoras"`
 	HorasExtra    int     `xml:"HorasExtra,attr" bson:"HorasExtra"`
 	ImportePagado float64 `xml:"ImportePagado,attr" bson:"ImportePagado"`
+}
+
+func (n *Nomina11) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias Nomina11
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*n = Nomina11(aux)
+
+	fecha, err := helpers.ParseDatetime(aux.FechaPago)
+	if err != nil {
+		return err
+	}
+	n.FechaPagoDate = fecha
+
+	fecha1, err1 := helpers.ParseDatetime(aux.FechaInicialPago)
+	if err1 != nil {
+		return err1
+	}
+	n.FechaInicialPagoDate = fecha1
+
+	fecha2, err2 := helpers.ParseDatetime(aux.FechaFinalPago)
+	if err2 != nil {
+		return err2
+	}
+	n.FechaFinalPagoDate = fecha2
+
+	return nil
 }

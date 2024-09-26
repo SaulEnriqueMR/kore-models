@@ -1,0 +1,158 @@
+{
+    "Version": "1.2",
+    "TipoNomina": "O",
+    "FechaPagoString": "2024-09-15",
+    "FechaInicialPagoString": "2024-09-01",
+    "FechaFinalPagoString": "2024-09-14",
+    "FechaPago": "2024-09-15T00:00:00Z",
+    "FechaInicialPago": "2024-09-01T00:00:00Z",
+    "FechaFinalPago": "2024-09-14T00:00:00Z",
+    "NumDiasPagados": 14,
+    "TotalPercepciones": 15000,
+    "TotalDeducciones": 5000,
+    "TotalOtrosPagos": 2000,
+    "Emisor": {
+        "Curp": "ABC123456HDFGJ90",
+        "RegistroPatronal": "12345678901234567890",
+        "RfcPatronOrigen": "RFC123456789",
+        "EntidadSNCF": {
+            "OrigenRecurso": "Federal",
+            "MontoRecursoPropio": 30000
+        }
+    },
+    "Receptor": {
+        "Curp": "DEF123456HDFGJ01",
+        "NumSeguridadSocial": "123456789012345",
+        "FechaInicioRelLaboral": "2022-01-01",
+        "Antiguedad": "P1Y2M10D",
+        "TipoContrato": "01",
+        "Sindicalizado": "Sí",
+        "TipoJornada": "Diurna",
+        "TipoRegimen": "01",
+        "NumEmpleado": "12345",
+        "Departamento": "Ventas",
+        "Puesto": "Ejecutivo de Ventas",
+        "RiesgoPuesto": "B",
+        "PeriodicidadPago": "Quincenal",
+        "Banco": "021",
+        "CuentaBancaria": "12345678901",
+        "SalarioBaseCotApor": 12000,
+        "SalarioDiarioIntegrado": 800,
+        "ClaveEntFed": "09",
+        "SubContratacion": [
+            {
+                "RfcLabora": "XAXX010101000",
+                "PorcentajeTiempo": 50
+            },
+            {
+                "RfcLabora": "YAXX020202000",
+                "PorcentajeTiempo": 25
+            }
+        ]
+    },
+    "Percepciones": {
+        "TotalSueldos": 15000,
+        "TotalSeparacionIndemnizacion": 5000,
+        "TotalJubilacionPensionRetiro": 2000,
+        "TotalGravado": 22000,
+        "TotalExento": 3000,
+        "Percepcion": [
+            {
+                "TipoPercepcion": "001",
+                "Clave": "12345",
+                "Concepto": "Sueldo Mensual",
+                "ImporteGravado": 15000,
+                "ImporteExento": 0,
+                "AccionesOTitulos": {
+                    "ValorMercado": 100,
+                    "PrecioAlOtorgarse": 50
+                },
+                "HorasExtra": [
+                    {
+                        "Dias": 5,
+                        "TipoHoras": "1",
+                        "HorasExtra": 10,
+                        "ImportePagado": 2000
+                    }
+                ]
+            },
+            {
+                "TipoPercepcion": "039",
+                "Clave": "67890",
+                "Concepto": "Pensión",
+                "ImporteGravado": 0,
+                "ImporteExento": 2000,
+                "AccionesOTitulos": null,
+                "HorasExtra": null
+            }
+        ],
+        "JubilacionPensionRetiro": {
+            "TotalUnaExhibicion": 1000,
+            "TotalParcialidad": 500,
+            "MontoDiario": 50,
+            "IngresoAcumulable": 0,
+            "IngresoNoAcumulable": 2000
+        },
+        "SeparacionIndemnizacion": {
+            "TotalPagado": 5000,
+            "NumAniosServicio": 10,
+            "UltimoSueldoMensOrd": 1500,
+            "IngresoAcumulable": 4000,
+            "IngresoNoAcumulable": 1000
+        }
+    },
+    "Deducciones": {
+        "TotalOtrasDeducciones": 3000,
+        "TotalImpuestosRetenidos": 2000,
+        "Deduccion": [
+            {
+                "TipoDeduccion": "003",
+                "Clave": "D001",
+                "Concepto": "Préstamo Personal",
+                "Importe": 1500
+            },
+            {
+                "TipoDeduccion": "002",
+                "Clave": "D002",
+                "Concepto": "ISR Retenido",
+                "Importe": 2000
+            }
+        ]
+    },
+    "OtrosPagos": [
+        {
+            "TipoOtroPago": "001",
+            "Clave": "OP001",
+            "Concepto": "Subsidio de Empleo",
+            "Importe": 500,
+            "SubsidioAlEmpleo": {
+                "SubsidioCausado": 500
+            },
+            "CompensacionSaldosAFavor": null
+        },
+        {
+            "TipoOtroPago": "002",
+            "Clave": "OP002",
+            "Concepto": "Compensación de Saldos a Favor",
+            "Importe": 200,
+            "SubsidioAlEmpleo": null,
+            "CompensacionSaldosAFavor": {
+                "SaldoAFavor": 300,
+                "Anio": "2023",
+                "RemanenteSalFav": 100
+            }
+        }
+    ],
+    "Incapacidades": [
+        {
+            "DiasIncapacidad": 5,
+            "TipoIncapacidad": 1,
+            "ImporteMonetario": 1500
+        },
+        {
+            "DiasIncapacidad": 2,
+            "TipoIncapacidad": 2,
+            "ImporteMonetario": 600
+        }
+    ]
+}

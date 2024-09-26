@@ -6,7 +6,7 @@ import (
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/certificadodestruccion"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/cfdiregistrofiscal"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/comercioexterior"
-	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/complementospei"
+	complementos "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/complementospei"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/consumocombustible"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/detallista"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/divisas"
@@ -29,12 +29,14 @@ import (
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/vehiculousado"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/acuentaterceros"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/institeducativas"
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/ventavehiculos"
 	"github.com/SaulEnriqueMR/kore-models/models/timbrefiscaldigital"
 )
 
 type ComplementoConcepto struct {
-	ACuentaTerceros         *[]acuentaterceros.ACuentaTerceros         `xml:"PorCuentadeTerceros" bson:"ACuentaTerceros,omitempty"`
-	InstitucionesEducativas *[]institeducativas.InstitucioneEducativas `xml:"instEducativas" bson:"InstitucionesEducativas,omitempty"`
+	ACuentaTerceros         *acuentaterceros.ACuentaTerceros         `xml:"PorCuentadeTerceros" bson:"ACuentaTerceros,omitempty"`
+	InstitucionesEducativas *institeducativas.InstitucioneEducativas `xml:"instEducativas" bson:"InstitucionesEducativas,omitempty"`
+	VentaVehiculos          *ventavehiculos.VentaVehiculos           `xml:"VentaVehiculos" bson:"VentaVehiculos,omitempty"`
 }
 
 type Complemento struct {

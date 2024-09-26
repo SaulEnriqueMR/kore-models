@@ -9,7 +9,7 @@ type ACuentaTerceros struct {
 	ACuentaTerceros11 *[]ACuentaTerceros11 `bson:"ACuentaTerceros11,omitempty"`
 }
 
-func (c *ACuentaTerceros) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (a *ACuentaTerceros) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (c *ACuentaTerceros) UnmarshalXML(d *xml.Decoder, start xml.StartElement) e
 		if err := d.DecodeElement(&acuenta11, &start); err != nil {
 			return err
 		}
-		c.ACuentaTerceros11 = &acuenta11
+		if a.ACuentaTerceros11 == nil {
+			a.ACuentaTerceros11 = &[]ACuentaTerceros11{}
+		}
+		*a.ACuentaTerceros11 = append(*a.ACuentaTerceros11, acuenta11...)
 	}
 
 	return nil

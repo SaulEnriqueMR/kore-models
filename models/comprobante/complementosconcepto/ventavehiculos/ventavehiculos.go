@@ -28,7 +28,10 @@ func (v *VentaVehiculos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) er
 		if err := d.DecodeElement(&vv10, &start); err != nil {
 			return err
 		}
-		v.VentaVehiculos10 = &vv10
+		if v.VentaVehiculos10 == nil {
+			v.VentaVehiculos10 = &[]VentaVehiculos10{}
+		}
+		*v.VentaVehiculos10 = append(*v.VentaVehiculos10, vv10...)
 	}
 
 	if Version == "1.1" {
@@ -36,7 +39,10 @@ func (v *VentaVehiculos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) er
 		if err := d.DecodeElement(&vv11, &start); err != nil {
 			return err
 		}
-		v.VentaVehiculos11 = &vv11
+		if v.VentaVehiculos11 == nil {
+			v.VentaVehiculos11 = &[]VentaVehiculos11{}
+		}
+		*v.VentaVehiculos11 = append(*v.VentaVehiculos11, vv11...)
 	}
 
 	return nil

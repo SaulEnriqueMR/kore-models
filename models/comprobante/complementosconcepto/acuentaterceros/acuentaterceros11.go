@@ -2,8 +2,9 @@ package acuentaterceros
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
 type ACuentaTerceros11 struct {

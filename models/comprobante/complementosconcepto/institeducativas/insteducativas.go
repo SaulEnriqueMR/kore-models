@@ -9,7 +9,7 @@ type InstitucioneEducativas struct {
 	InstitucioneEducativas10 *[]InstitucioneEducativas10 `bson:"InstitucioneEducativas10,omitempty"`
 }
 
-func (c *InstitucioneEducativas) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (i *InstitucioneEducativas) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (c *InstitucioneEducativas) UnmarshalXML(d *xml.Decoder, start xml.StartEle
 		if err := d.DecodeElement(&instadu10, &start); err != nil {
 			return err
 		}
-		c.InstitucioneEducativas10 = &instadu10
+		if i.InstitucioneEducativas10 == nil {
+			i.InstitucioneEducativas10 = &[]InstitucioneEducativas10{}
+		}
+		*i.InstitucioneEducativas10 = append(*i.InstitucioneEducativas10, instadu10...)
 	}
 
 	return nil

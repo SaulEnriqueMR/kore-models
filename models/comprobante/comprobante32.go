@@ -80,7 +80,7 @@ type Concepto32 struct {
 	Importe             float64                  `xml:"importe,attr" bson:"Importe"`
 	InformacionAduanera *[]InformacionAduanera32 `xml:"InformacionAduanera" bson:"InformacionAduanera,omitempty"`
 	CuentaPredial       *CuentaPredial32         `xml:"CuentaPredial" bson:"CuentaPredial,omitempty"`
-	ComplementoConcepto ComplementoConcepto      `xml:"ComplementoConcepto" bson:"ComplementoConcepto,omitempty"`
+	ComplementoConcepto *ComplementoConcepto     `xml:"ComplementoConcepto" bson:"ComplementoConcepto,omitempty"`
 	Parte               *[]Parte32               `xml:"Parte" bson:"Parte,omitempty"`
 }
 

@@ -16,7 +16,7 @@ type NoBeneficiarioPagosExtran10 struct {
 type BeneficiarioPagosExtran10 struct {
 	Rfc                 string `xml:"RFC,attr" bson:"Rfc"`
 	Curp                string `xml:"CURP,attr" bson:"Curp"`
-	NomDenRazSocB       string `xml:"NomDenRazSocB,attr" bson:"NomDenRazSocB"`
+	Nombre              string `xml:"NomDenRazSocB,attr" bson:"Nombre"`
 	ConceptoPago        string `xml:"ConceptoPago,attr" bson:"ConceptoPago"`
 	DescripcionConcepto string `xml:"DescripcionConcepto,attr" bson:"DescripcionConcepto"`
 }

@@ -1,7 +1,7 @@
 package documentofiscaldigital
 
 import (
-	"encoding/xml"
+	"encoding/json"
 	"time"
 )
 
@@ -34,16 +34,16 @@ type Cancelacion struct {
 	FechaCancelacion   *time.Time `bson:"FechaCancelacion,omitempty"`
 }
 
-func (c *DocumentoFiscalDigital) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
-
+func (d *DocumentoFiscalDigital) UnmarshalJSON(data []byte) error {
 	type Alias DocumentoFiscalDigital
-	var aux Alias
-
-	if err := d.DecodeElement(&aux, &start); err != nil {
+	aux := &struct {
+		*Alias
+	}{
+		Alias: (*Alias)(d),
+	}
+	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
-
-	c.Comprobante = true
-
+	d.Comprobante = true
 	return nil
 }

@@ -26,7 +26,10 @@ func (v *GastoHidrocarburos) UnmarshalXML(d *xml.Decoder, start xml.StartElement
 		if err := d.DecodeElement(&gastos10, &start); err != nil {
 			return err
 		}
-		v.GastoHidrocarburos10 = &gastos10
+		if v.GastoHidrocarburos10 == nil {
+			v.GastoHidrocarburos10 = &[]GastoHidrocarburos10{}
+		}
+		*v.GastoHidrocarburos10 = append(*v.GastoHidrocarburos10, gastos10...)
 	}
 
 	return nil

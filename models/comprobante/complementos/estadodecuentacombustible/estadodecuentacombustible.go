@@ -27,7 +27,10 @@ func (v *EstadoDeCuentaCombustible) UnmarshalXML(d *xml.Decoder, start xml.Start
 		if err := d.DecodeElement(&edcc11, &start); err != nil {
 			return err
 		}
-		v.EstadoDeCuentaCombustible11 = &edcc11
+		if v.EstadoDeCuentaCombustible11 == nil {
+			v.EstadoDeCuentaCombustible11 = &[]EstadoDeCuentaCombustible11{}
+		}
+		*v.EstadoDeCuentaCombustible11 = append(*v.EstadoDeCuentaCombustible11, edcc11...)
 	}
 
 	if Version == "1.2" {
@@ -35,7 +38,10 @@ func (v *EstadoDeCuentaCombustible) UnmarshalXML(d *xml.Decoder, start xml.Start
 		if err := d.DecodeElement(&edcc12, &start); err != nil {
 			return err
 		}
-		v.EstadoDeCuentaCombustible12 = &edcc12
+		if v.EstadoDeCuentaCombustible12 == nil {
+			v.EstadoDeCuentaCombustible12 = &[]EstadoDeCuentaCombustible12{}
+		}
+		*v.EstadoDeCuentaCombustible12 = append(*v.EstadoDeCuentaCombustible12, edcc12...)
 	}
 
 	return nil

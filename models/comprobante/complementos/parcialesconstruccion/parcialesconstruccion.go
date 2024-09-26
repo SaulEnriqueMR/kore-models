@@ -9,7 +9,7 @@ type ParcialesConstruccion struct {
 	ParcialesConstruccion10 *[]ParcialesConstruccion10 `bson:"ParcialesConstruccion10,omitempty"`
 }
 
-func (c *ParcialesConstruccion) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (p *ParcialesConstruccion) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (c *ParcialesConstruccion) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 		if err := d.DecodeElement(&parciales10, &start); err != nil {
 			return err
 		}
-		c.ParcialesConstruccion10 = &parciales10
+		if p.ParcialesConstruccion10 == nil {
+			p.ParcialesConstruccion10 = &[]ParcialesConstruccion10{}
+		}
+		*p.ParcialesConstruccion10 = append(*p.ParcialesConstruccion10, parciales10...)
 	}
 
 	return nil

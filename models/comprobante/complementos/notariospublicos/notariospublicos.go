@@ -26,7 +26,10 @@ func (v *NotariosPublicos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) 
 		if err := d.DecodeElement(&nota10, &start); err != nil {
 			return err
 		}
-		v.NotariosPublicos10 = &nota10
+		if v.NotariosPublicos10 == nil {
+			v.NotariosPublicos10 = &[]NotariosPublicos10{}
+		}
+		*v.NotariosPublicos10 = append(*v.NotariosPublicos10, nota10...)
 	}
 
 	return nil

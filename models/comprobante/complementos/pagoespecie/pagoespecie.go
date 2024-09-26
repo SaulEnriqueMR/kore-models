@@ -26,7 +26,10 @@ func (v *PagoEnEspecie) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		if err := d.DecodeElement(&pago10, &start); err != nil {
 			return err
 		}
-		v.PagoEspecie10 = &pago10
+		if v.PagoEspecie10 == nil {
+			v.PagoEspecie10 = &[]PagoEspecie10{}
+		}
+		*v.PagoEspecie10 = append(*v.PagoEspecie10, pago10...)
 	}
 
 	return nil

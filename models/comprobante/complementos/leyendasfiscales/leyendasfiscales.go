@@ -26,7 +26,10 @@ func (v *LeyendasFiscales) UnmarshalXML(d *xml.Decoder, start xml.StartElement) 
 		if err := d.DecodeElement(&leyendas10, &start); err != nil {
 			return err
 		}
-		v.LeyendasFiscales10 = &leyendas10
+		if v.LeyendasFiscales10 == nil {
+			v.LeyendasFiscales10 = &[]LeyendasFiscales10{}
+		}
+		*v.LeyendasFiscales10 = append(*v.LeyendasFiscales10, leyendas10...)
 	}
 
 	return nil

@@ -9,7 +9,7 @@ type PFIntegranteCoordinado struct {
 	PFIntegranteCoordinado10 *[]PFIntegranteCoordinado10 `bson:"PFIntegranteCoordinado10,omitempty"`
 }
 
-func (c *PFIntegranteCoordinado) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (p *PFIntegranteCoordinado) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (c *PFIntegranteCoordinado) UnmarshalXML(d *xml.Decoder, start xml.StartEle
 		if err := d.DecodeElement(&pfintegrante10, &start); err != nil {
 			return err
 		}
-		c.PFIntegranteCoordinado10 = &pfintegrante10
+		if p.PFIntegranteCoordinado10 == nil {
+			p.PFIntegranteCoordinado10 = &[]PFIntegranteCoordinado10{}
+		}
+		*p.PFIntegranteCoordinado10 = append(*p.PFIntegranteCoordinado10, pfintegrante10...)
 	}
 
 	return nil

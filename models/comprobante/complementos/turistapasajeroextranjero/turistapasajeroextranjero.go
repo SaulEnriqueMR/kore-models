@@ -9,7 +9,7 @@ type TuristaPasajeroExtranjero struct {
 	TuristaPasajeroExtranjero10 *[]TuristaPasajeroExtranjero10 `bson:"TuristaPasajeroExtranjero10,omitempty"`
 }
 
-func (v *TuristaPasajeroExtranjero) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (t *TuristaPasajeroExtranjero) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (v *TuristaPasajeroExtranjero) UnmarshalXML(d *xml.Decoder, start xml.Start
 		if err := d.DecodeElement(&tpe10, &start); err != nil {
 			return err
 		}
-		v.TuristaPasajeroExtranjero10 = &tpe10
+		if t.TuristaPasajeroExtranjero10 == nil {
+			t.TuristaPasajeroExtranjero10 = &[]TuristaPasajeroExtranjero10{}
+		}
+		*t.TuristaPasajeroExtranjero10 = append(*t.TuristaPasajeroExtranjero10, tpe10...)
 	}
 
 	return nil

@@ -26,7 +26,10 @@ func (v *VehiculoUsado) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		if err := d.DecodeElement(&vu10, &start); err != nil {
 			return err
 		}
-		v.VehiculoUsado10 = &vu10
+		if v.VehiculoUsado10 == nil {
+			v.VehiculoUsado10 = &[]VehiculoUsado10{}
+		}
+		*v.VehiculoUsado10 = append(*v.VehiculoUsado10, vu10...)
 	}
 
 	return nil

@@ -26,7 +26,10 @@ func (v *ObrasAntiguedades) UnmarshalXML(d *xml.Decoder, start xml.StartElement)
 		if err := d.DecodeElement(&obras10, &start); err != nil {
 			return err
 		}
-		v.ObrasAntiguedades10 = &obras10
+		if v.ObrasAntiguedades10 == nil {
+			v.ObrasAntiguedades10 = &[]ObrasAntiguedades10{}
+		}
+		*v.ObrasAntiguedades10 = append(*v.ObrasAntiguedades10, obras10...)
 	}
 
 	return nil

@@ -2,7 +2,6 @@ package cartaporte
 
 import (
 	"encoding/xml"
-	"log"
 	"strings"
 )
 
@@ -26,7 +25,6 @@ func (c *CartaPorte) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error 
 
 	if Version == "2.0" {
 		var cp20 []CartaPorte20
-		log.Println(len(cp20))
 		if err := d.DecodeElement(&cp20, &start); err != nil {
 			return err
 		}
@@ -38,9 +36,6 @@ func (c *CartaPorte) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error 
 
 	if Version == "3.0" {
 		var cp30 []CartaPorte30
-		for i := 0; i < len(cp30); i++ {
-			log.Println(cp30[i])
-		}
 		if err := d.DecodeElement(&cp30, &start); err != nil {
 			return err
 		}
@@ -52,9 +47,6 @@ func (c *CartaPorte) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error 
 
 	if Version == "3.1" {
 		var cp31 []CartaPorte31
-		for i := 0; i < len(cp31); i++ {
-			log.Println(cp31[i])
-		}
 		if err := d.DecodeElement(&cp31, &start); err != nil {
 			return err
 		}

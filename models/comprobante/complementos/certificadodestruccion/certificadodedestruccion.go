@@ -9,7 +9,7 @@ type CertificadoDeDestruccion struct {
 	CertificadoDeDestruccion10 *[]CertificadoDeDestruccion10 `bson:"CertificadoDeDestruccion10,omitempty"`
 }
 
-func (v *CertificadoDeDestruccion) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (c *CertificadoDeDestruccion) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (v *CertificadoDeDestruccion) UnmarshalXML(d *xml.Decoder, start xml.StartE
 		if err := d.DecodeElement(&certi10, &start); err != nil {
 			return err
 		}
-		v.CertificadoDeDestruccion10 = &certi10
+		if c.CertificadoDeDestruccion10 == nil {
+			c.CertificadoDeDestruccion10 = &[]CertificadoDeDestruccion10{}
+		}
+		*c.CertificadoDeDestruccion10 = append(*c.CertificadoDeDestruccion10, certi10...)
 	}
 
 	return nil

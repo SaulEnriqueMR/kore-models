@@ -26,7 +26,10 @@ func (c *Aerolineas) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error 
 		if err := d.DecodeElement(&aerolineas10, &start); err != nil {
 			return err
 		}
-		c.Aerolineas10 = &aerolineas10
+		if c.Aerolineas10 == nil {
+			c.Aerolineas10 = &[]Aerolineas10{}
+		}
+		*c.Aerolineas10 = append(*c.Aerolineas10, aerolineas10...)
 	}
 
 	return nil

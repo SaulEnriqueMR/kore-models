@@ -27,7 +27,10 @@ func (p *Pagos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 		if err := d.DecodeElement(&pagos10, &start); err != nil {
 			return err
 		}
-		p.Pagos10 = &pagos10
+		if p.Pagos10 == nil {
+			p.Pagos10 = &[]Pagos10{}
+		}
+		*p.Pagos10 = append(*p.Pagos10, pagos10...)
 	}
 
 	if Version == "2.0" {
@@ -35,7 +38,10 @@ func (p *Pagos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 		if err := d.DecodeElement(&pagos20, &start); err != nil {
 			return err
 		}
-		p.Pagos20 = &pagos20
+		if p.Pagos20 == nil {
+			p.Pagos20 = &[]Pagos20{}
+		}
+		*p.Pagos20 = append(*p.Pagos20, pagos20...)
 	}
 
 	return nil

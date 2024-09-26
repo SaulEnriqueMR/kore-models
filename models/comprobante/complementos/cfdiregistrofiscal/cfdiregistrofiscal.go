@@ -26,7 +26,10 @@ func (c *CfdiRegistroFiscal) UnmarshalXML(d *xml.Decoder, start xml.StartElement
 		if err := d.DecodeElement(&cfdi10, &start); err != nil {
 			return err
 		}
-		c.CfdiRegistroFiscal10 = &cfdi10
+		if c.CfdiRegistroFiscal10 == nil {
+			c.CfdiRegistroFiscal10 = &[]CfdiRegistroFiscal10{}
+		}
+		*c.CfdiRegistroFiscal10 = append(*c.CfdiRegistroFiscal10, cfdi10...)
 	}
 
 	return nil

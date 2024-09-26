@@ -26,7 +26,10 @@ func (v *INE) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 		if err := d.DecodeElement(&ine11, &start); err != nil {
 			return err
 		}
-		v.INE11 = &ine11
+		if v.INE11 == nil {
+			v.INE11 = &[]INE11{}
+		}
+		*v.INE11 = append(*v.INE11, ine11...)
 	}
 
 	return nil

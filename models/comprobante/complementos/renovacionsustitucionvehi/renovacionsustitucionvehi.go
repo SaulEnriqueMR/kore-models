@@ -9,7 +9,7 @@ type RenovacionSustitucion struct {
 	RenovacionSustitucion10 *[]RenovacionSustitucion10 `bson:"RenovacionSustitucion10,omitempty"`
 }
 
-func (v *RenovacionSustitucion) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (r *RenovacionSustitucion) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	var Version string
 
@@ -26,7 +26,10 @@ func (v *RenovacionSustitucion) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 		if err := d.DecodeElement(&renova10, &start); err != nil {
 			return err
 		}
-		v.RenovacionSustitucion10 = &renova10
+		if r.RenovacionSustitucion10 == nil {
+			r.RenovacionSustitucion10 = &[]RenovacionSustitucion10{}
+		}
+		*r.RenovacionSustitucion10 = append(*r.RenovacionSustitucion10, renova10...)
 	}
 
 	return nil

@@ -4,14 +4,14 @@ import (
 	"encoding/xml"
 	"testing"
 
-	cuentaterceros1 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/acuentaterceros"
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/acuentaterceros"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
 )
 
-func GetACuentaTercerosForTest(filename string, t *testing.T) (cuentaterceros1.ACuentaTerceros11, error) {
+func GetACuentaTercerosForTest(filename string, t *testing.T) (acuentaterceros.ACuentaTerceros11, error) {
 	data := testing2.GetFileContentForTest(filename, t)
-	var parsed cuentaterceros1.ACuentaTerceros11
+	var parsed acuentaterceros.ACuentaTerceros11
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
 	return parsed, errUnmashal
@@ -29,19 +29,19 @@ func TestFullACuentaTerceros(t *testing.T) {
 	InternalTestTrasladoTerceros11(t, impuestos.Traslados)
 }
 
-func InternalTestInformacionAduaneraBaseTerceros11(t *testing.T, info *cuentaterceros1.InformacionAduaneraTerceros11) {
+func InternalTestInformacionAduaneraBaseTerceros11(t *testing.T, info *acuentaterceros.InformacionAduaneraTerceros11) {
 	assert.Equal(t, "123456", info.Numero)
 	assert.Equal(t, "2024-09-23", info.FechaString)
 	assert.Equal(t, "Aduana Ejemplo", *info.Aduana)
 }
 
-func InternalBaseAttributes(t *testing.T, cuenta cuentaterceros1.ACuentaTerceros11) {
+func InternalBaseAttributes(t *testing.T, cuenta acuentaterceros.ACuentaTerceros11) {
 	assert.Equal(t, "1.1", cuenta.Version)
 	assert.Equal(t, "AAA010101AAA", cuenta.Rfc)
 	assert.Equal(t, "Juan Pérez", *cuenta.Nombre)
 }
 
-func InternalTestInformacionFiscalTercero(t *testing.T, infoFiscal *cuentaterceros1.InformacionFiscalTerceroTerceros11) {
+func InternalTestInformacionFiscalTercero(t *testing.T, infoFiscal *acuentaterceros.InformacionFiscalTerceroTerceros11) {
 	assert.Equal(t, "Av. Siempre Viva", infoFiscal.Calle)
 	assert.Equal(t, "123", *infoFiscal.NoExterior)
 	assert.Equal(t, "Centro", *infoFiscal.Colonia)
@@ -50,7 +50,8 @@ func InternalTestInformacionFiscalTercero(t *testing.T, infoFiscal *cuentatercer
 	assert.Equal(t, "México", infoFiscal.Pais)
 	assert.Equal(t, "01234", infoFiscal.CodigoPostal)
 }
-func InternalTestParteTerceros11(t *testing.T, partes *[]cuentaterceros1.ParteTerceros11) {
+
+func InternalTestParteTerceros11(t *testing.T, partes *[]acuentaterceros.ParteTerceros11) {
 	assert.NotNil(t, partes)
 	assert.Equal(t, len(*partes), 1)
 	parte := (*partes)[0]
@@ -60,7 +61,8 @@ func InternalTestParteTerceros11(t *testing.T, partes *[]cuentaterceros1.ParteTe
 	assert.Equal(t, 1000.00, *parte.Importe)
 	InternalTestInformacionAduaneraTerceros11(t, parte.InformacionAduanera)
 }
-func InternalTestInformacionAduaneraTerceros11(t *testing.T, infos *[]cuentaterceros1.InformacionAduaneraTerceros11) {
+
+func InternalTestInformacionAduaneraTerceros11(t *testing.T, infos *[]acuentaterceros.InformacionAduaneraTerceros11) {
 	assert.NotNil(t, infos)
 	assert.Equal(t, len(*infos), 1)
 	info := (*infos)[0]
@@ -68,17 +70,20 @@ func InternalTestInformacionAduaneraTerceros11(t *testing.T, infos *[]cuentaterc
 	assert.Equal(t, "2024-09-23", info.FechaString)
 	assert.Equal(t, "Aduana Ejemplo", *info.Aduana)
 }
-func InternalTestCuentaPredialTerceros11(t *testing.T, cuenta *cuentaterceros1.CuentaPredialTerceros11) {
+
+func InternalTestCuentaPredialTerceros11(t *testing.T, cuenta *acuentaterceros.CuentaPredialTerceros11) {
 	assert.Equal(t, "00000123", cuenta.Numero)
 }
-func InternalTestRetencionTerceros11(t *testing.T, retenciones *[]cuentaterceros1.RetencionTerceros11) {
+
+func InternalTestRetencionTerceros11(t *testing.T, retenciones *[]acuentaterceros.RetencionTerceros11) {
 	assert.NotNil(t, retenciones)
 	assert.Equal(t, len(*retenciones), 1)
 	retencion := (*retenciones)[0]
 	assert.Equal(t, "ISR", retencion.Impuesto)
 	assert.Equal(t, 150.00, retencion.Importe)
 }
-func InternalTestTrasladoTerceros11(t *testing.T, traslados *[]cuentaterceros1.TrasladoTerceros11) {
+
+func InternalTestTrasladoTerceros11(t *testing.T, traslados *[]acuentaterceros.TrasladoTerceros11) {
 	assert.NotNil(t, traslados)
 	assert.Equal(t, len(*traslados), 1)
 	traslado := (*traslados)[0]

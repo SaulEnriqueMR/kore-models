@@ -2,7 +2,7 @@ package timbrefiscaldigital
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
 )
 
@@ -39,7 +39,7 @@ func (t *TimbreFiscalDigital11) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 	}
 
 	// Parse the date from the 'Fecha' field
-	fechaTimbrado, err := models.ParseDatetime(aux.Fecha)
+	fechaTimbrado, err := helpers.ParseDatetime(aux.Fecha)
 	if err != nil {
 		return err
 	}

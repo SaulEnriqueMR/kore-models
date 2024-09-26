@@ -1,10 +1,9 @@
-package serviciosplatadormastecnologicas
+package serviciosplataformastecnologicas
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 type ServiciosPlataformasTecnologicas10 struct {
@@ -64,7 +63,7 @@ func (t *DetallesDelServicioPlatTecno10) UnmarshalXML(d *xml.Decoder, start xml.
 	}
 
 	// Parse the date from the 'Fecha' field
-	fechaServ, err := models.ParseDatetime(aux.FechaServString)
+	fechaServ, err := helpers.ParseDatetime(aux.FechaServString)
 	if err != nil {
 		return err
 	}

@@ -2,9 +2,8 @@ package valesdespensa
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 type ValesDespensa10 struct {
@@ -41,7 +40,7 @@ func (c *ValesDespensa10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) e
 	if aux.Conceptos != nil {
 		for index, concepto := range aux.Conceptos {
 			if concepto.FechaString != "" {
-				fecha, err := models.ParseDatetime(concepto.FechaString)
+				fecha, err := helpers.ParseDatetime(concepto.FechaString)
 				if err != nil {
 					return err
 				}

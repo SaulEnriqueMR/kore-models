@@ -1,11 +1,15 @@
 package comprobante
 
 import (
+	"encoding/xml"
 	"fmt"
-	"time"
+	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
+	"strings"
 )
 
 type Comprobante33 struct {
+	documentofiscaldigital.DocumentoFiscalDigital
 	Version          string              `xml:"Version,attr" bson:"Version"`
 	Serie            *string             `xml:"Serie,attr" bson:"Serie,omitempty"`
 	Folio            *string             `xml:"Folio,attr" bson:"Folio,omitempty"`
@@ -30,17 +34,6 @@ type Comprobante33 struct {
 	Conceptos        []Concepto33        `xml:"Conceptos>Concepto" bson:"Conceptos"`
 	Impuestos        *Impuestos33        `xml:"Impuestos" bson:"Impuestos,omitempty"`
 	Complemento      *Complemento        `xml:"Complemento" bson:"Complemento,omitempty"`
-	/* Atributo convertido */
-	FechaEmision time.Time `bson:"FechaEmision"`
-	/* Atributos extraidos desde tfd */
-	Uuid          string    `bson:"Uuid"`
-	FechaTimbrado time.Time `bson:"FechaTimbrado"`
-	/* Atributos adicionales, generalmente actualizados por fuentes externas */
-	InformacionAdicional InformacionAdicional `xml:"InformacionAdicional" bson:"InformacionAdicional"`
-	Cancelacion          Cancelacion          `xml:"Cancelacion" bson:"Cancelacion"`
-	Vigente              bool                 `bson:"Vigente"`
-	/* Cadena original */
-	CadenaOriginal string `bson:"CadenaOriginal"`
 }
 
 type CfdiRelacionados33 struct {
@@ -141,6 +134,35 @@ type TrasladoImpuestos33 struct {
 	TipoFactor string  `xml:"TipoFactor,attr" bson:"TipoFactor"`
 	TasaOCuota float64 `xml:"TasaOCuota,attr" bson:"TasaOCuota"`
 	Importe    float64 `xml:"Importe,attr" bson:"Importe"`
+}
+
+func (c *Comprobante33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias Comprobante33
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+
+	fechaEmision, err := helpers.ParseDatetime(aux.Fecha)
+	if err != nil {
+		return err
+	}
+
+	*c = Comprobante33(aux)
+	c.FechaEmision = fechaEmision
+
+	if c.Complemento.TimbreFiscalDigital != nil {
+		tfd := c.Complemento.TimbreFiscalDigital.TimbreFiscalDigital11
+		if tfd != nil {
+			c.FechaTimbrado = tfd.FechaTimbrado
+			c.Uuid = strings.ToUpper(tfd.Uuid)
+		}
+	}
+
+	return nil
 }
 
 func (c *Comprobante33) GetFileName() string {

@@ -2,9 +2,8 @@ package nomina
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 // Nomina12 Presente en Comprobante 3.3 y 4.0
@@ -165,21 +164,21 @@ func (c *Nomina12) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 		return err
 	}
 	*c = Nomina12(aux)
-	fecha1, err := models.ParseDatetime(aux.FechaPagoString)
+	fecha1, err := helpers.ParseDatetime(aux.FechaPagoString)
 	if err != nil {
 		return err
 	}
 
 	c.FechaPago = fecha1
 
-	fecha2, err := models.ParseDatetime(aux.FechaInicialPagoString)
+	fecha2, err := helpers.ParseDatetime(aux.FechaInicialPagoString)
 	if err != nil {
 		return err
 	}
 
 	c.FechaInicialPago = fecha2
 
-	fecha3, err := models.ParseDatetime(aux.FechaFinalPagoString)
+	fecha3, err := helpers.ParseDatetime(aux.FechaFinalPagoString)
 	if err != nil {
 		return err
 	}

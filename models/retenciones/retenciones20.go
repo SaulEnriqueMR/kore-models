@@ -2,14 +2,14 @@ package retenciones
 
 import (
 	"encoding/xml"
-	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/app/timbrefiscaldigital"
-	"github.com/SaulEnriqueMR/kore-models/models"
+	"github.com/SaulEnriqueMR/kore-models/app/documentofiscaldigital"
 	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/dividendos"
 	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/enajenaciondeacciones"
 	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/intereses"
 	"github.com/SaulEnriqueMR/kore-models/models/retenciones/complementos/pagosaextranjeros"
+	"github.com/SaulEnriqueMR/kore-models/models/timbrefiscaldigital"
+	"strings"
+	"time"
 )
 
 type Retenciones20 struct {
@@ -105,13 +105,21 @@ func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		return err
 	}
 
-	fechaEmision, err := models.ParseDatetime(aux.FechaExp)
+	fechaEmision, err := documentofiscaldigital.ParseDatetime(aux.FechaExp)
 	if err != nil {
 		return err
 	}
 
 	*r = Retenciones20(aux)
 	r.FechaEmision = fechaEmision
+
+	if r.Complemento.TimbreFiscalDigital != nil {
+		tfd11 := r.Complemento.TimbreFiscalDigital.TimbreFiscalDigital11
+		if tfd11 != nil {
+			r.FechaTimbrado = tfd11.FechaTimbrado
+			r.Uuid = strings.ToUpper(tfd11.Uuid)
+		}
+	}
 
 	return nil
 }

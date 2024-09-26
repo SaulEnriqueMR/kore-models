@@ -2,9 +2,8 @@ package obrasantiguedades
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 type ObrasAntiguedades10 struct {
@@ -31,7 +30,7 @@ func (t *ObrasAntiguedades10) UnmarshalXML(d *xml.Decoder, start xml.StartElemen
 	}
 
 	// Parse the date from the 'Fecha' field
-	fechaAdquisicion, err := models.ParseDatetime(aux.FechaAdquisicionString)
+	fechaAdquisicion, err := helpers.ParseDatetime(aux.FechaAdquisicionString)
 	if err != nil {
 		return err
 	}

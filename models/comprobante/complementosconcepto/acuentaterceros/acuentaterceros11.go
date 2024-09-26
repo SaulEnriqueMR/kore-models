@@ -2,9 +2,8 @@ package acuentaterceros
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 type ACuentaTerceros11 struct {
@@ -38,6 +37,28 @@ type InformacionAduaneraTerceros11 struct {
 	Aduana      *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
 }
 
+func (iat *InformacionAduaneraTerceros11) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias InformacionAduaneraTerceros11
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*iat = InformacionAduaneraTerceros11(aux)
+
+	if iat != nil {
+		fecha, err := helpers.ParseDatetime(iat.FechaString)
+		if err != nil {
+			return err
+		}
+		iat.Fecha = fecha
+	}
+
+	return nil
+}
+
 type ParteTerceros11 struct {
 	Cantidad            float64                          `xml:"cantidad,attr" bson:"Cantidad"`
 	Unidad              *string                          `xml:"unidad,attr" bson:"Unidad,omitempty"`
@@ -66,26 +87,4 @@ type TrasladoTerceros11 struct {
 	Impuesto string  `xml:"impuesto,attr" bson:"Impuesto"`
 	Tasa     float64 `xml:"tasa,attr" bson:"Tasa"`
 	Importe  float64 `xml:"importe,attr" bson:"Importe"`
-}
-
-func (r *ACuentaTerceros11) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
-	// Create an alias to avoid recursion
-	type Alias ACuentaTerceros11
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-	*r = ACuentaTerceros11(aux)
-
-	if aux.InformacionAduanera != nil {
-		fechaEmision, err := models.ParseDatetime(aux.InformacionAduanera.FechaString)
-		if err != nil {
-			return err
-		}
-		r.InformacionAduanera.Fecha = fechaEmision
-	}
-
-	return nil
 }

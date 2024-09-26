@@ -2,9 +2,8 @@ package consumocombustible
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 type ConsumoDeCombustible11 struct {
@@ -55,7 +54,7 @@ func (c *ConceptoConsumoDeCombustibles11) UnmarshalXML(d *xml.Decoder, start xml
 		return err
 	}
 
-	fecha, err := models.ParseDatetime(aux.FechaString)
+	fecha, err := helpers.ParseDatetime(aux.FechaString)
 	if err != nil {
 		return err
 	}

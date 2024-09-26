@@ -2,9 +2,8 @@ package vehiculousado
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 type VehiculoUsado10 struct {
@@ -43,7 +42,7 @@ func (c *VehiculoUsado10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) e
 	if aux.InformacionAduanera != nil {
 		for index, infoaduanera := range *aux.InformacionAduanera {
 			if infoaduanera.FechaString != "" {
-				fecha, err := models.ParseDatetime(infoaduanera.FechaString)
+				fecha, err := helpers.ParseDatetime(infoaduanera.FechaString)
 				if err != nil {
 					return err
 				}

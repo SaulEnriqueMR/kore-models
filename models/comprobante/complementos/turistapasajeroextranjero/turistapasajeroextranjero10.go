@@ -2,9 +2,8 @@ package turistapasajeroextranjero
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 type TuristaPasajeroExtranjero10 struct {
@@ -34,7 +33,7 @@ func (c *TuristaPasajeroExtranjero10) UnmarshalXML(d *xml.Decoder, start xml.Sta
 		return err
 	}
 	if aux.FechaTransitoString != "" {
-		fecha, err := models.ParseDatetime(aux.FechaTransitoString)
+		fecha, err := helpers.ParseDatetime(aux.FechaTransitoString)
 		if err != nil {
 			return err
 		}

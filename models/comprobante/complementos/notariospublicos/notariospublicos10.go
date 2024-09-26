@@ -2,9 +2,8 @@ package notariospublicos
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 type NotariosPublicos10 struct {
@@ -103,7 +102,7 @@ func (t *DatosOperacionNotariosPub10) UnmarshalXML(d *xml.Decoder, start xml.Sta
 	}
 
 	// Parse the date from the 'Fecha' field
-	fechaInstNotarial, err := models.ParseDatetime(aux.FechaInstNotarialString)
+	fechaInstNotarial, err := helpers.ParseDatetime(aux.FechaInstNotarialString)
 	if err != nil {
 		return err
 	}

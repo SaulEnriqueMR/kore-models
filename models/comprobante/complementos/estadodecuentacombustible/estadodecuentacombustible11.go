@@ -2,7 +2,7 @@ package estadodecuentacombustible
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
 )
 
@@ -56,7 +56,7 @@ func (c *ConceptoEstadoDeCuentaCombustible11) UnmarshalXML(d *xml.Decoder, start
 		return err
 	}
 
-	fechaAutorizacion, err := models.ParseDatetime(aux.FechaString)
+	fechaAutorizacion, err := helpers.ParseDatetime(aux.FechaString)
 	if err != nil {
 		return err
 	}

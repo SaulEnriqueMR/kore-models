@@ -1,4 +1,4 @@
-package serviciosplatadormastecnologicas
+package serviciosplataformastecnologicas
 
 import (
 	"encoding/xml"

@@ -2,9 +2,8 @@ package renovacionsustitucion
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 type RenovacionSustitucion10 struct {
@@ -66,7 +65,7 @@ func (c *RenovacionSustitucion10) UnmarshalXML(d *xml.Decoder, start xml.StartEl
 	if aux.DecretoRenovacion != nil {
 		for index, vehiculoUsado := range aux.DecretoRenovacion.VehiculosUsados {
 			if vehiculoUsado.FechaRegulVehString != nil {
-				fecha, err := models.ParseDatetime(*vehiculoUsado.FechaRegulVehString)
+				fecha, err := helpers.ParseDatetime(*vehiculoUsado.FechaRegulVehString)
 				if err != nil {
 					return err
 				}
@@ -77,7 +76,7 @@ func (c *RenovacionSustitucion10) UnmarshalXML(d *xml.Decoder, start xml.StartEl
 	if aux.DecretoSustitucion != nil {
 		for index, vehiculoUsado := range aux.DecretoSustitucion.VehiculosUsados {
 			if vehiculoUsado.FechaRegulVehString != nil {
-				fecha, err := models.ParseDatetime(*vehiculoUsado.FechaRegulVehString)
+				fecha, err := helpers.ParseDatetime(*vehiculoUsado.FechaRegulVehString)
 				if err != nil {
 					return err
 				}

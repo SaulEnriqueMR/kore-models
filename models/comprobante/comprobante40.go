@@ -3,12 +3,13 @@ package comprobante
 import (
 	"encoding/xml"
 	"fmt"
-	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
+	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
+	"strings"
 )
 
 type Comprobante40 struct {
+	documentofiscaldigital.DocumentoFiscalDigital
 	Version           string                 `xml:"Version,attr" bson:"Version"`
 	Serie             *string                `xml:"Serie,attr" bson:"Serie,omitempty"`
 	Folio             *string                `xml:"Folio,attr" bson:"Folio,omitempty"`
@@ -35,17 +36,6 @@ type Comprobante40 struct {
 	Conceptos         []Concepto40           `xml:"Conceptos>Concepto" bson:"Conceptos"`
 	Impuestos         *Impuestos40           `xml:"Impuestos" bson:"Impuestos,omitempty"`
 	Complemento       Complemento            `xml:"Complemento" bson:"Complemento"`
-	/* Atributo convertido */
-	FechaEmision time.Time `bson:"FechaEmision"`
-	/* Atributos extraidos desde tfd */
-	Uuid          string    `bson:"Uuid"`
-	FechaTimbrado time.Time `bson:"FechaTimbrado"`
-	/* Atributos adicionales, generalmente actualizados por fuentes externas */
-	InformacionAdicional InformacionAdicional `xml:"InformacionAdicional" bson:"InformacionAdicional"`
-	Cancelacion          Cancelacion          `xml:"Cancelacion" bson:"Cancelacion"`
-	Vigente              bool                 `bson:"Vigente"`
-	/* Cadena original */
-	CadenaOriginal string `bson:"CadenaOriginal"`
 }
 
 type InformacionGlobal40 struct {
@@ -176,13 +166,21 @@ func (c *Comprobante40) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		return err
 	}
 
-	fechaEmision, err := models.ParseDatetime(aux.Fecha)
+	fechaEmision, err := helpers.ParseDatetime(aux.Fecha)
 	if err != nil {
 		return err
 	}
 
 	*c = Comprobante40(aux)
 	c.FechaEmision = fechaEmision
+
+	if c.Complemento.TimbreFiscalDigital != nil {
+		tfd := c.Complemento.TimbreFiscalDigital.TimbreFiscalDigital11
+		if tfd != nil {
+			c.FechaTimbrado = tfd.FechaTimbrado
+			c.Uuid = strings.ToUpper(tfd.Uuid)
+		}
+	}
 
 	return nil
 }

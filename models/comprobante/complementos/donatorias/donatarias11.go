@@ -2,9 +2,8 @@ package donatorias
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
-
-	"github.com/SaulEnriqueMR/kore-models/models"
 )
 
 type Donatarias11 struct {
@@ -25,7 +24,7 @@ func (do *Donatarias11) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		return err
 	}
 
-	fechaAutorizacion, err := models.ParseDatetime(aux.FechaAutString)
+	fechaAutorizacion, err := helpers.ParseDatetime(aux.FechaAutString)
 	if err != nil {
 		return err
 	}

@@ -98,7 +98,321 @@
 			"CuentaPredial": {
 				"Numero": "12345678901234567890"
 			},
-			"ComplementoConcepto": null,
+			"ComplementoConcepto": {
+				"ACuentaTerceros": {
+					"ACuentaTerceros11": [
+						{
+							"Version": "1.1",
+							"Rfc": "AAA010101AAA",
+							"Nombre": "Juan Pérez",
+							"InformacionFiscalTercero": {
+								"Calle": "Av. Siempre Viva",
+								"NoExterior": "123",
+								"NoInterior": null,
+								"Colonia": "Centro",
+								"Localidad": null,
+								"Referencia": null,
+								"Municipio": "Ciudad",
+								"Estado": "Estado",
+								"Pais": "México",
+								"CodigoPostal": "01234"
+							},
+							"InformacionAduanera": {
+								"Numero": "123456",
+								"FechaString": "2024-09-23",
+								"Fecha": "2024-09-23T00:00:00Z",
+								"Aduana": "Aduana Ejemplo"
+							},
+							"Parte": [
+								{
+									"Cantidad": 10,
+									"Unidad": null,
+									"NoIdentificacion": null,
+									"Descripcion": "Componente X",
+									"ValorUnitario": 100,
+									"Importe": 1000,
+									"InformacionAduanera": [
+										{
+											"Numero": "123456",
+											"FechaString": "2024-09-23",
+											"Fecha": "2024-09-23T00:00:00Z",
+											"Aduana": "Aduana Ejemplo"
+										}
+									]
+								}
+							],
+							"CuentaPredial": {
+								"Numero": "00000123"
+							},
+							"Impuestos": {
+								"Retenciones": [
+									{
+										"Impuesto": "ISR",
+										"Importe": 150
+									}
+								],
+								"Traslados": [
+									{
+										"Impuesto": "IVA",
+										"Tasa": 16,
+										"Importe": 160
+									}
+								]
+							}
+						},
+						{
+							"Version": "1.1",
+							"Rfc": "AAA010101AAA",
+							"Nombre": "Juan Pérez",
+							"InformacionFiscalTercero": {
+								"Calle": "Av. Siempre Viva",
+								"NoExterior": "123",
+								"NoInterior": null,
+								"Colonia": "Centro",
+								"Localidad": null,
+								"Referencia": null,
+								"Municipio": "Ciudad",
+								"Estado": "Estado",
+								"Pais": "México",
+								"CodigoPostal": "01234"
+							},
+							"InformacionAduanera": {
+								"Numero": "123456",
+								"FechaString": "2024-09-23",
+								"Fecha": "2024-09-23T00:00:00Z",
+								"Aduana": "Aduana Ejemplo"
+							},
+							"Parte": [
+								{
+									"Cantidad": 10,
+									"Unidad": null,
+									"NoIdentificacion": null,
+									"Descripcion": "Componente X",
+									"ValorUnitario": 100,
+									"Importe": 1000,
+									"InformacionAduanera": [
+										{
+											"Numero": "123456",
+											"FechaString": "2024-09-23",
+											"Fecha": "2024-09-23T00:00:00Z",
+											"Aduana": "Aduana Ejemplo"
+										}
+									]
+								}
+							],
+							"CuentaPredial": {
+								"Numero": "00000123"
+							},
+							"Impuestos": {
+								"Retenciones": [
+									{
+										"Impuesto": "ISR",
+										"Importe": 150
+									}
+								],
+								"Traslados": [
+									{
+										"Impuesto": "IVA",
+										"Tasa": 16,
+										"Importe": 160
+									}
+								]
+							}
+						},
+						{
+							"Version": "1.1",
+							"Rfc": "AAA010101AAA",
+							"Nombre": "Juan Pérez",
+							"InformacionFiscalTercero": {
+								"Calle": "Av. Siempre Viva",
+								"NoExterior": "123",
+								"NoInterior": null,
+								"Colonia": "Centro",
+								"Localidad": null,
+								"Referencia": null,
+								"Municipio": "Ciudad",
+								"Estado": "Estado",
+								"Pais": "México",
+								"CodigoPostal": "01234"
+							},
+							"InformacionAduanera": {
+								"Numero": "123456",
+								"FechaString": "2024-09-23",
+								"Fecha": "2024-09-23T00:00:00Z",
+								"Aduana": "Aduana Ejemplo"
+							},
+							"Parte": [
+								{
+									"Cantidad": 10,
+									"Unidad": null,
+									"NoIdentificacion": null,
+									"Descripcion": "Componente X",
+									"ValorUnitario": 100,
+									"Importe": 1000,
+									"InformacionAduanera": [
+										{
+											"Numero": "123456",
+											"FechaString": "2024-09-23",
+											"Fecha": "2024-09-23T00:00:00Z",
+											"Aduana": "Aduana Ejemplo"
+										}
+									]
+								}
+							],
+							"CuentaPredial": {
+								"Numero": "00000123"
+							},
+							"Impuestos": {
+								"Retenciones": [
+									{
+										"Impuesto": "ISR",
+										"Importe": 150
+									}
+								],
+								"Traslados": [
+									{
+										"Impuesto": "IVA",
+										"Tasa": 16,
+										"Importe": 160
+									}
+								]
+							}
+						}
+					]
+				},
+				"InstitucionesEducativas": {
+					"InstitucioneEducativas10": [
+						{
+							"XMLName": {
+								"Space": "",
+								"Local": "instEducativas"
+							},
+							"Version": "1.0",
+							"NombreAlumno": "Francisco Hernandez",
+							"Curp": "BAHF840120HOCTRR04",
+							"NivelEducativo": "Preescolar",
+							"AutRVOE": "CCA29123210",
+							"RfcPago": "XAXX010101333"
+						},
+						{
+							"XMLName": {
+								"Space": "",
+								"Local": "instEducativas"
+							},
+							"Version": "1.0",
+							"NombreAlumno": "Francisco Hernandez",
+							"Curp": "BAHF840120HOCTRR04",
+							"NivelEducativo": "Preescolar",
+							"AutRVOE": "CCA29123210",
+							"RfcPago": "XAXX010101333"
+						},
+						{
+							"XMLName": {
+								"Space": "",
+								"Local": "instEducativas"
+							},
+							"Version": "1.0",
+							"NombreAlumno": "Francisco Hernandez",
+							"Curp": "BAHF840120HOCTRR04",
+							"NivelEducativo": "Preescolar",
+							"AutRVOE": "CCA29123210",
+							"RfcPago": "XAXX010101333"
+						}
+					]
+				},
+				"VentaVehiculos": {
+					"VentaVehiculos10": [
+						{
+							"Version": "1.0",
+							"ClaveVehicular": "KLS829129990200032712",
+							"Parte": [
+								{
+									"InformacionAduanera": [
+										{
+											"Numero": "AAA1212129",
+											"Fecha": "2016-04-11",
+											"Aduana": "Tijuana"
+										}
+									],
+									"Cantidad": "1",
+									"Unidad": "PZA",
+									"NoIdentificacion": "123938",
+									"Descripcion": "CHASIS",
+									"ValorUnitario": "10000.00",
+									"Importe": "10000.00"
+								}
+							]
+						},
+						{
+							"Version": "1.0",
+							"ClaveVehicular": "KLS829129990200032712",
+							"Parte": [
+								{
+									"InformacionAduanera": [
+										{
+											"Numero": "AAA1212129",
+											"Fecha": "2016-04-11",
+											"Aduana": "Tijuana"
+										}
+									],
+									"Cantidad": "1",
+									"Unidad": "PZA",
+									"NoIdentificacion": "123938",
+									"Descripcion": "CHASIS",
+									"ValorUnitario": "10000.00",
+									"Importe": "10000.00"
+								}
+							]
+						}
+					],
+					"VentaVehiculos11": [
+						{
+							"Version": "1.1",
+							"ClaveVehicular": "KLS829129990200032712",
+							"Niv": "NIVEH287212",
+							"Parte": [
+								{
+									"InformacionAduanera": [
+										{
+											"Numero": "AAA1212129",
+											"Fecha": "2016-04-11",
+											"Aduana": "Tijuana"
+										}
+									],
+									"Cantidad": "1",
+									"Unidad": "PZA",
+									"NoIdentificacion": "123938",
+									"Descripcion": "CHASIS",
+									"ValorUnitario": "10000.00",
+									"Importe": "10000.00"
+								}
+							]
+						},
+						{
+							"Version": "1.1",
+							"ClaveVehicular": "KLS829129990200032712",
+							"Niv": "NIVEH287212",
+							"Parte": [
+								{
+									"InformacionAduanera": [
+										{
+											"Numero": "AAA1212129",
+											"Fecha": "2016-04-11",
+											"Aduana": "Tijuana"
+										}
+									],
+									"Cantidad": "1",
+									"Unidad": "PZA",
+									"NoIdentificacion": "123938",
+									"Descripcion": "CHASIS",
+									"ValorUnitario": "10000.00",
+									"Importe": "10000.00"
+								}
+							]
+						}
+					]
+				}
+			},
 			"Parte": [
 				{
 					"ClaveProdServ": "01010101",

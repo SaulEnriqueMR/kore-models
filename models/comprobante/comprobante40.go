@@ -3,39 +3,40 @@ package comprobante
 import (
 	"encoding/xml"
 	"fmt"
+	"strings"
+
 	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
-	"strings"
 )
 
 type Comprobante40 struct {
-	documentofiscaldigital.DocumentoFiscalDigital
-	Version           string                 `xml:"Version,attr" bson:"Version"`
-	Serie             *string                `xml:"Serie,attr" bson:"Serie,omitempty"`
-	Folio             *string                `xml:"Folio,attr" bson:"Folio,omitempty"`
-	Fecha             string                 `xml:"Fecha,attr"`
-	Sello             string                 `xml:"Sello,attr" bson:"Sello"`
-	FormaPago         *string                `xml:"FormaPago,attr" bson:"FormaPago,omitempty"`
-	NoCertificado     string                 `xml:"NoCertificado,attr" bson:"NoCertificado"`
-	Certificado       string                 `xml:"Certificado,attr" bson:"Certificado"`
-	CondicionesPago   *string                `xml:"CondicionesDePago,attr" bson:"CondicionesPago,omitempty"`
-	Subtotal          float64                `xml:"SubTotal,attr" bson:"Subtotal"`
-	Descuento         *float64               `xml:"Descuento,attr" bson:"Descuento,omitempty"`
-	Moneda            string                 `xml:"Moneda,attr" bson:"Moneda"`
-	TipoCambio        *float64               `xml:"TipoCambio,attr" bson:"TipoCambio,omitempty"`
-	Total             float64                `xml:"Total,attr" bson:"Total"`
-	TipoComprobante   string                 `xml:"TipoDeComprobante,attr" bson:"TipoComprobante"`
-	Exportacion       string                 `xml:"Exportacion,attr" bson:"Exportacion"`
-	MetodoPago        *string                `xml:"MetodoPago,attr" bson:"MetodoPago,omitempty"`
-	LugarExpedicion   string                 `xml:"LugarExpedicion,attr" bson:"LugarExpedicion"`
-	Confirmacion      *string                `xml:"Confirmacion,attr" bson:"Confirmacion,omitempty"`
-	InformacionGlobal *InformacionGlobal40   `xml:"InformacionGlobal" bson:"InformacionGlobal,omitempty"`
-	CfdisRelacionados *[]CfdisRelacionados40 `xml:"CfdiRelacionados" bson:"CfdisRelacionados,omitempty"`
-	Emisor            Emisor40               `xml:"Emisor" bson:"Emisor"`
-	Receptor          Receptor40             `xml:"Receptor" bson:"Receptor"`
-	Conceptos         []Concepto40           `xml:"Conceptos>Concepto" bson:"Conceptos"`
-	Impuestos         *Impuestos40           `xml:"Impuestos" bson:"Impuestos,omitempty"`
-	Complemento       Complemento            `xml:"Complemento" bson:"Complemento"`
+	documentofiscaldigital.DocumentoFiscalDigital `bson:",inline"`
+	Version                                       string                 `xml:"Version,attr" bson:"Version"`
+	Serie                                         *string                `xml:"Serie,attr" bson:"Serie,omitempty"`
+	Folio                                         *string                `xml:"Folio,attr" bson:"Folio,omitempty"`
+	Fecha                                         string                 `xml:"Fecha,attr"`
+	Sello                                         string                 `xml:"Sello,attr" bson:"Sello"`
+	FormaPago                                     *string                `xml:"FormaPago,attr" bson:"FormaPago,omitempty"`
+	NoCertificado                                 string                 `xml:"NoCertificado,attr" bson:"NoCertificado"`
+	Certificado                                   string                 `xml:"Certificado,attr" bson:"Certificado"`
+	CondicionesPago                               *string                `xml:"CondicionesDePago,attr" bson:"CondicionesPago,omitempty"`
+	Subtotal                                      float64                `xml:"SubTotal,attr" bson:"Subtotal"`
+	Descuento                                     *float64               `xml:"Descuento,attr" bson:"Descuento,omitempty"`
+	Moneda                                        string                 `xml:"Moneda,attr" bson:"Moneda"`
+	TipoCambio                                    *float64               `xml:"TipoCambio,attr" bson:"TipoCambio,omitempty"`
+	Total                                         float64                `xml:"Total,attr" bson:"Total"`
+	TipoComprobante                               string                 `xml:"TipoDeComprobante,attr" bson:"TipoComprobante"`
+	Exportacion                                   string                 `xml:"Exportacion,attr" bson:"Exportacion"`
+	MetodoPago                                    *string                `xml:"MetodoPago,attr" bson:"MetodoPago,omitempty"`
+	LugarExpedicion                               string                 `xml:"LugarExpedicion,attr" bson:"LugarExpedicion"`
+	Confirmacion                                  *string                `xml:"Confirmacion,attr" bson:"Confirmacion,omitempty"`
+	InformacionGlobal                             *InformacionGlobal40   `xml:"InformacionGlobal" bson:"InformacionGlobal,omitempty"`
+	CfdisRelacionados                             *[]CfdisRelacionados40 `xml:"CfdiRelacionados" bson:"CfdisRelacionados,omitempty"`
+	Emisor                                        Emisor40               `xml:"Emisor" bson:"Emisor"`
+	Receptor                                      Receptor40             `xml:"Receptor" bson:"Receptor"`
+	Conceptos                                     []Concepto40           `xml:"Conceptos>Concepto" bson:"Conceptos"`
+	Impuestos                                     *Impuestos40           `xml:"Impuestos" bson:"Impuestos,omitempty"`
+	Complemento                                   Complemento            `xml:"Complemento" bson:"Complemento"`
 }
 
 type InformacionGlobal40 struct {

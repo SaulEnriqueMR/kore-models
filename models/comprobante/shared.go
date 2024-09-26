@@ -30,23 +30,23 @@ type ComplementoConcepto struct {
 }
 
 type Complemento struct {
-	CartaPorte              *[]cartaporte.CartaPorte                               `xml:"CartaPorte" bson:"CartaPorte,omitempty"`
-	ComercioExterior        *[]comercioexterior.ComercioExterior                   `xml:"ComercioExterior" bson:"ComercioExterior,omitempty"`
-	ImpuestoLocales         *[]impuestoslocales.ImpuestosLocales                   `xml:"ImpuestosLocales" bson:"ImpuestosLocales,omitempty"`
-	Aerolineas              *[]aerolineas.Aerolineas                               `xml:"Aerolineas" bson:"Aerolineas,omitempty"`
-	CertificadoDestruccion  *[]certificadodestruccion.CertificadoDeDestruccion     `xml:"certificadodedestruccion" bson:"CertificadoDeDestruccion,omitempty"`
-	CFDIRegistroFiscal      *[]cfdiregistrofiscal.CfdiRegistroFiscal               `xml:"CFDIRegistroFiscal" bson:"CFDIRegistroFiscal,omitempty"`
-	ComplementoSPEI         *[]complementos.ComplementoSpei                        `xml:"Complemento_SPEI" bson:"ComplementoSPEI,omitempty"`
-	ConsumoCombustibles     *[]consumocombustible.ConsumoDeCombustible             `xml:"ConsumoDeCombustibles" bson:"ConsumoDeCombustibles,omitempty"`
-	Detallista              *[]detallista.Detallista                               `xml:"detallista" bson:"detallista,omitempty"`
-	Divisas                 *[]divisas.Divisas                                     `xml:"Divisas" bson:"Divisas,omitempty"`
-	Donatarias              *[]donatorias.Donatarias                               `xml:"Donatarias" bson:"Donatarias,omitempty"`
-	EstadoCuentaCombustible *[]estadodecuentacombustible.EstadoDeCuentaCombustible `xml:"EstadoDeCuentaCombustible" bson:"EstadoDeCuentaCombustible,omitempty"`
-	GastoHidrocarburos      *[]gastohidrocarburos.GastoHidrocarburos               `xml:"GastosHidrocarburos" bson:"GastosHidrocarburos,omitempty"`
-	Ine                     *[]ine.INE                                             `xml:"INE" bson:"Ine,omitempty"`
-	LeyendasFiscales        *[]leyendasfiscales.LeyendasFiscales                   `xml:"LeyendasFiscales" bson:"LeyendasFiscales,omitempty"`
-	Nomina                  *[]nomina.Nomina                                       `xml:"Nomina" bson:"Nomina,omitempty"`
-	NotariosPublicos        *[]notariospublicos.NotariosPublicos                   `xml:"NotariosPublicos" bson:"NotariosPublicos,omitempty"`
-	Pagos                   *[]pagos.Pagos                                         `xml:"Pagos" bson:"Pagos,omitempty"`
-	TimbreFiscalDigital     *timbrefiscaldigital.TimbreFiscalDigital               `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`
+	CartaPorte              *cartaporte.CartaPorte                               `xml:"CartaPorte" bson:"CartaPorte,omitempty"`
+	ComercioExterior        *comercioexterior.ComercioExterior                   `xml:"ComercioExterior" bson:"ComercioExterior,omitempty"`
+	ImpuestoLocales         *impuestoslocales.ImpuestosLocales                   `xml:"ImpuestosLocales" bson:"ImpuestosLocales,omitempty"`
+	Aerolineas              *aerolineas.Aerolineas                               `xml:"Aerolineas" bson:"Aerolineas,omitempty"`
+	CertificadoDestruccion  *certificadodestruccion.CertificadoDeDestruccion     `xml:"certificadodedestruccion" bson:"CertificadoDeDestruccion,omitempty"`
+	CFDIRegistroFiscal      *cfdiregistrofiscal.CfdiRegistroFiscal               `xml:"CFDIRegistroFiscal" bson:"CFDIRegistroFiscal,omitempty"`
+	ComplementoSPEI         *complementos.ComplementoSpei                        `xml:"Complemento_SPEI" bson:"ComplementoSPEI,omitempty"`
+	ConsumoCombustibles     *consumocombustible.ConsumoDeCombustible             `xml:"ConsumoDeCombustibles" bson:"ConsumoDeCombustibles,omitempty"`
+	Detallista              *detallista.Detallista                               `xml:"detallista" bson:"detallista,omitempty"`
+	Divisas                 *divisas.Divisas                                     `xml:"Divisas" bson:"Divisas,omitempty"`
+	Donatarias              *donatorias.Donatarias                               `xml:"Donatarias" bson:"Donatarias,omitempty"`
+	EstadoCuentaCombustible *estadodecuentacombustible.EstadoDeCuentaCombustible `xml:"EstadoDeCuentaCombustible" bson:"EstadoDeCuentaCombustible,omitempty"`
+	GastoHidrocarburos      *gastohidrocarburos.GastoHidrocarburos               `xml:"GastosHidrocarburos" bson:"GastosHidrocarburos,omitempty"`
+	Ine                     *ine.INE                                             `xml:"INE" bson:"Ine,omitempty"`
+	LeyendasFiscales        *leyendasfiscales.LeyendasFiscales                   `xml:"LeyendasFiscales" bson:"LeyendasFiscales,omitempty"`
+	Nomina                  *nomina.Nomina                                       `xml:"Nomina" bson:"Nomina,omitempty"`
+	NotariosPublicos        *notariospublicos.NotariosPublicos                   `xml:"NotariosPublicos" bson:"NotariosPublicos,omitempty"`
+	Pagos                   *pagos.Pagos                                         `xml:"Pagos" bson:"Pagos,omitempty"`
+	TimbreFiscalDigital     *timbrefiscaldigital.TimbreFiscalDigital             `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`
 }

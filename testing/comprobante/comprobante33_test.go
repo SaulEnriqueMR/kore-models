@@ -156,9 +156,9 @@ func InternalTestFullAtributesTraslados(t *testing.T, impuestos33 []comprobante3
 func InternalTestFullAtributesComplemento33(t *testing.T, complemento33 comprobante3.Complemento) {
 	assert.NotNil(t, complemento33)
 	assert.NotNil(t, complemento33.ImpuestoLocales)
-	assert.Equal(t, 5, len(*complemento33.ImpuestoLocales))
+	assert.Equal(t, 5, len(*complemento33.ImpuestoLocales.ImpuestoLocales10))
 	impuestosLocales := *complemento33.ImpuestoLocales
-	impuestosLocales1 := *impuestosLocales[0].ImpuestoLocales10
+	impuestosLocales1 := *impuestosLocales.ImpuestoLocales10
 	assert.Equal(t, "1.0", impuestosLocales1[0].Version)
 	assert.Equal(t, 1500.00, impuestosLocales1[0].TotalRetenciones)
 	assert.Equal(t, 3000.00, impuestosLocales1[0].TotalTraslados)

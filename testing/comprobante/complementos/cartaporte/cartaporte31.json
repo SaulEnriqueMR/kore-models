@@ -42,8 +42,8 @@
             "DistanciaRecorrida": 150.5,
             "Domicilio": {
                 "Calle": "Avenida Principal",
-                "NumeroExterior": "123",
-                "NumeroInterior": "A",
+                "NoExterior": "123",
+                "NoInterior": "A",
                 "Colonia": "Colonia Centro",
                 "Localidad": "Ciudad de México",
                 "Referencia": "Cerca del parque",
@@ -69,8 +69,8 @@
             "DistanciaRecorrida": 350.75,
             "Domicilio": {
                 "Calle": "Calle de las Flores",
-                "NumeroExterior": "789",
-                "NumeroInterior": null,
+                "NoExterior": "789",
+                "NoInterior": null,
                 "Colonia": "Colonia Del Valle",
                 "Localidad": "San Luis Potosí",
                 "Referencia": "Cerca de la plaza",
@@ -101,162 +101,163 @@
         "PesoBrutoTotal": 1500.25,
         "UnidadPeso": "KGM",
         "PesoNetoTotal": 1400.2,
-        "NumTotalMercancias": 5,
+        "NumeroTotalMercancias": 5,
         "CargoPorTasacion": 200,
         "LogisticaInversaRecoleccionDevolucion": "Sí",
         "Mercancia": [
             {
-                "BienesTransp": "123456",
-                "ClaveSTCC": "1234567",
+                "BienesTransportados": "123456",
+                "ClaveStcc": "1234567",
                 "Descripcion": "Medicamento XYZ",
                 "Cantidad": 10,
                 "ClaveUnidad": "KGM",
                 "Unidad": "Kilogramos",
                 "Dimensiones": "30/40/30cm",
                 "MaterialPeligroso": "No",
-                "CveMaterialPeligroso": "C1",
+                "EsMaterialPeligroso": false,
+                "ClaveMaterialPeligroso": "C1",
                 "Embalaje": "Caja",
-                "DescripEmbalaje": "Caja de cartón",
-                "SectorCOFEPRIS": "No",
+                "DescripcionEmbalaje": "Caja de cartón",
+                "SectorCofepris": "No",
                 "NombreIngredienteActivo": "N/A",
-                "NomQuimico": "N/A",
-                "DenominacionGenericaProd": "N/A",
-                "DenominacionDistintivaProd": "Marca ABC",
+                "NombreQuimico": "N/A",
+                "DenominacionGenericaProducto": "N/A",
+                "DenominacionDistintivaProducto": "Marca ABC",
                 "Fabricante": "Laboratorio XYZ",
                 "FechaCaducidad": "2025-12-31",
                 "LoteMedicamento": "L123456",
                 "FormaFarmaceutica": "Tableta",
-                "CondicionesEspTransp": "N/A",
+                "CondicionesEspecialesTransporte": "N/A",
                 "RegistroSanitarioFolioAutorizacion": "RS123456",
                 "PermisoImportacion": "P1234",
-                "FolioImpoVUCEM": "VUCEM123456",
-                "NumCAS": "123-45-6",
-                "RazonSocialEmpImp": "Importadora ABC S.A.",
-                "NumRegSanPlagCOFEPRIS": "RS-ABC-123",
+                "FolioImportacionVucem": "VUCEM123456",
+                "NoCas": "123-45-6",
+                "RazonSocialEmpresaImportadora": "Importadora ABC S.A.",
+                "NoRegistroSanitarioPlaguicidasCofepris": "RS-ABC-123",
                 "DatosFabricante": "México, Laboratorio XYZ",
                 "DatosFormulador": "México, Formulador ABC",
                 "DatosMaquilador": "México, Maquilador XYZ",
                 "UsoAutorizado": "Agricultura, plagas específicas",
-                "PesoEnKg": 1.5,
+                "PesoKg": 1.5,
                 "ValorMercancia": 1000,
                 "Moneda": "MXN",
                 "FraccionArancelaria": "123456",
-                "UUIDComercioExt": "123e4567-e89b-12d3-a456-426614174000",
+                "UuidComercioExterior": "123e4567-e89b-12d3-a456-426614174000",
                 "TipoMateria": "Producto",
                 "DescripcionMateria": "Tabletas de medicamento",
                 "DocumentacionAduanera": [
                     {
-                        "TipoDocumento": "tipo_doc_aduanero",
-                        "NumPedimento": "22  99  1234  0000000",
-                        "IdentDocAduanero": "Folio123456",
-                        "RFCImpo": "XAXX010101000"
+                        "Tipo": "tipo_doc_aduanero",
+                        "NumeroPedimento": "22  99  1234  0000000",
+                        "IdentificadorDocumento": "Folio123456",
+                        "RfcImportador": "XAXX010101000"
                     },
                     {
-                        "TipoDocumento": "tipo_doc_aduanero",
-                        "NumPedimento": "22  99  1234  0000000",
-                        "IdentDocAduanero": "Folio123456",
-                        "RFCImpo": "XAXX010101000"
+                        "Tipo": "tipo_doc_aduanero",
+                        "NumeroPedimento": "22  99  1234  0000000",
+                        "IdentificadorDocumento": "Folio123456",
+                        "RfcImportador": "XAXX010101000"
                     },
                     {
-                        "TipoDocumento": "tipo_doc_aduanero",
-                        "NumPedimento": "22  99  1234  0000000",
-                        "IdentDocAduanero": "Folio123456",
-                        "RFCImpo": "XAXX010101000"
+                        "Tipo": "tipo_doc_aduanero",
+                        "NumeroPedimento": "22  99  1234  0000000",
+                        "IdentificadorDocumento": "Folio123456",
+                        "RfcImportador": "XAXX010101000"
                     },
                     {
-                        "TipoDocumento": "tipo_doc_aduanero",
-                        "NumPedimento": "22  99  1234  0000000",
-                        "IdentDocAduanero": "Folio123456",
-                        "RFCImpo": "XAXX010101000"
+                        "Tipo": "tipo_doc_aduanero",
+                        "NumeroPedimento": "22  99  1234  0000000",
+                        "IdentificadorDocumento": "Folio123456",
+                        "RfcImportador": "XAXX010101000"
                     }
                 ],
                 "GuiasIdentificacion": [
                     {
-                        "NumeroGuiaIdentificacion": "GU1234567890",
-                        "DescripGuiaIdentificacion": "Paquete de medicamentos",
-                        "PesoGuiaIdentificacion": 10.5
+                        "Numero": "GU1234567890",
+                        "Descripcion": "Paquete de medicamentos",
+                        "Peso": 10.5
                     },
                     {
-                        "NumeroGuiaIdentificacion": "GU1234567890",
-                        "DescripGuiaIdentificacion": "Paquete de medicamentos",
-                        "PesoGuiaIdentificacion": 10.5
+                        "Numero": "GU1234567890",
+                        "Descripcion": "Paquete de medicamentos",
+                        "Peso": 10.5
                     },
                     {
-                        "NumeroGuiaIdentificacion": "GU1234567890",
-                        "DescripGuiaIdentificacion": "Paquete de medicamentos",
-                        "PesoGuiaIdentificacion": 10.5
+                        "Numero": "GU1234567890",
+                        "Descripcion": "Paquete de medicamentos",
+                        "Peso": 10.5
                     }
                 ],
                 "CantidadTransporta": [
                     {
                         "Cantidad": 100.5,
-                        "IDOrigen": "OR123456",
-                        "IDDestino": "DE654321",
-                        "CvesTransporte": "CVE01"
+                        "IdOrigen": "OR123456",
+                        "IdDestino": "DE654321",
+                        "ClavesTransporte": "CVE01"
                     },
                     {
                         "Cantidad": 100.5,
-                        "IDOrigen": "OR123456",
-                        "IDDestino": "DE654321",
-                        "CvesTransporte": "CVE01"
+                        "IdOrigen": "OR123456",
+                        "IdDestino": "DE654321",
+                        "ClavesTransporte": "CVE01"
                     },
                     {
                         "Cantidad": 100.5,
-                        "IDOrigen": "OR123456",
-                        "IDDestino": "DE654321",
-                        "CvesTransporte": "CVE01"
+                        "IdOrigen": "OR123456",
+                        "IdDestino": "DE654321",
+                        "ClavesTransporte": "CVE01"
                     }
                 ],
                 "DetalleMercancia": {
-                    "UnidadPesoMerc": "KG",
+                    "UnidadPeso": "KG",
                     "PesoBruto": 1500.5,
                     "PesoNeto": 1450.25,
                     "PesoTara": 50.25,
-                    "NumPiezas": 10
+                    "NumeroPiezas": 10
                 }
             }
         ],
         "Autotransporte": {
-            "PermSCT": "TIPO_PERMISO",
-            "NumPermisoSCT": "NUM_PERMISO",
+            "PermisoSct": "TIPO_PERMISO",
+            "NoPermisoSct": "NUM_PERMISO",
             "IdentificacionVehicular": {
-                "ConfigVehicular": "CLAVE_CONFIG",
-                "PesoBrutoVehicular": 20,
-                "PlacaVM": "ABC1234",
-                "AnioModeloVM": 2020
+                "Configuracion": "CLAVE_CONFIG",
+                "PesoBruto": 20,
+                "PlacaVm": "ABC1234",
+                "AnioModeloVm": 2020
             },
             "Seguros": {
-                "AseguraRespCivil": "Nombre Aseguradora",
-                "PolizaRespCivil": "POLIZA_123456",
-                "AseguraMedAmbiente": "Nombre Aseguradora Ambiental",
-                "PolizaMedAmbiente": "POLIZA_AMB_123",
-                "AseguraCarga": "Nombre Aseguradora Carga",
+                "AseguradoraResponsabilidadCivil": "Nombre Aseguradora",
+                "PolizaResponsabilidadCivil": "POLIZA_123456",
+                "AseguradoraMedioAmbiente": "Nombre Aseguradora Ambiental",
+                "PolizaMedioAmbiente": "POLIZA_AMB_123",
+                "AseguradoraCarga": "Nombre Aseguradora Carga",
                 "PolizaCarga": "POLIZA_CARGA_123",
                 "PrimaSeguro": 1500
             },
             "Remolques": [
                 {
-                    "SubTipoRem": "SUBTIPO_REM",
+                    "Subtipo": "SUBTIPO_REM",
                     "Placa": "REM1234"
                 },
                 {
-                    "SubTipoRem": "SUBTIPO_REM",
+                    "Subtipo": "SUBTIPO_REM",
                     "Placa": "REM5678"
                 }
             ]
         },
         "TransporteMaritimo": {
             "PermSCT": "ABC123",
-            "NumPermisoSCT": "1234567890",
-            "NombreAseg": "Aseguradora XYZ",
-            "NumPolizaSeguro": "POL123456",
+            "NoPermisoSct": "1234567890",
+            "NombreAseguradora": "Aseguradora XYZ",
+            "NoPolizaSeguro": "POL123456",
             "TipoEmbarcacion": "Tipo1",
             "Matricula": "MAT12345",
-            "NumeroOMI": "IMO1234567",
+            "NoOmi": "IMO1234567",
             "AnioEmbarcacion": 2020,
-            "NombreEmbarc": "Embarcación del Mar",
-            "NacionalidadEmbarc": "MX",
-            "UnidadesDeArqBruto": 100.5,
+            "NombreEmbarcacion": "Embarcación del Mar",
+            "NacionalidadEmbarcion": "MX",
+            "UnidadesArqueoBruto": 100.5,
             "TipoCarga": "CargaGeneral",
             "Eslora": 150.25,
             "Manga": 30.5,
@@ -264,150 +265,150 @@
             "Puntal": 15,
             "LineaNaviera": "Naviera ABC",
             "NombreAgenteNaviero": "Agente XYZ",
-            "NumAutorizacionNaviero": "AUT123456",
-            "NumViaje": "VIAJE001",
-            "NumConocEmbarc": "CONOC123456",
-            "PermisoTempNavegacion": "TEMP123456",
+            "NoAutorizacionNaviero": "AUT123456",
+            "NoViaje": "VIAJE001",
+            "NoConocimientoEmbarque": "CONOC123456",
+            "PermisoTemporalNavegacion": "TEMP123456",
             "Contenedor": [
                 {
-                    "TipoContenedor": "ContenedorTipo1",
-                    "MatriculaContenedor": "ABCD1234567",
-                    "NumPrecinto": "PREC12345",
-                    "IdCCPRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
-                    "PlacaVMCCP": "XYZ123",
-                    "FechaCertificacionCCP": "2023-09-20T12:00:00",
-                    "RemolquesCCP": [
+                    "Tipo": "ContenedorTipo1",
+                    "Matricula": "ABCD1234567",
+                    "NoPrecinto": "PREC12345",
+                    "IdCcpRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
+                    "PlacaVmCcp": "XYZ123",
+                    "FechaCertificacionCcp": "2023-09-20T12:00:00",
+                    "RemolquesCcp": [
                         {
-                            "SubTipoRemCCP": "SubTipo1",
-                            "PlacaCCP": "REM123"
+                            "Subtipo": "SubTipo1",
+                            "Placa": "REM123"
                         },
                         {
-                            "SubTipoRemCCP": "SubTipo2",
-                            "PlacaCCP": "REM456"
+                            "Subtipo": "SubTipo2",
+                            "Placa": "REM456"
                         }
                     ]
                 },
                 {
-                    "TipoContenedor": "ContenedorTipo1",
-                    "MatriculaContenedor": "ABCD1234567",
-                    "NumPrecinto": "PREC12345",
-                    "IdCCPRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
-                    "PlacaVMCCP": "XYZ123",
-                    "FechaCertificacionCCP": "2023-09-20T12:00:00",
-                    "RemolquesCCP": [
+                    "Tipo": "ContenedorTipo1",
+                    "Matricula": "ABCD1234567",
+                    "NoPrecinto": "PREC12345",
+                    "IdCcpRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
+                    "PlacaVmCcp": "XYZ123",
+                    "FechaCertificacionCcp": "2023-09-20T12:00:00",
+                    "RemolquesCcp": [
                         {
-                            "SubTipoRemCCP": "SubTipo1",
-                            "PlacaCCP": "REM123"
+                            "Subtipo": "SubTipo1",
+                            "Placa": "REM123"
                         },
                         {
-                            "SubTipoRemCCP": "SubTipo2",
-                            "PlacaCCP": "REM456"
+                            "Subtipo": "SubTipo2",
+                            "Placa": "REM456"
                         }
                     ]
                 }
             ]
         },
         "TransporteAereo": {
-            "PermSCT": "PermisoTipo1",
-            "NumPermisoSCT": "1234567890",
+            "PermisoSct": "PermisoTipo1",
+            "NoPermisoSct": "1234567890",
             "MatriculaAeronave": "ABC-123",
-            "NombreAseg": "Aseguradora XYZ",
-            "NumPolizaSeguro": "POL123456",
-            "NumeroGuia": "GUIDE123456789",
+            "NombreAseguradora": "Aseguradora XYZ",
+            "NoPolizaSeguro": "POL123456",
+            "NoGuia": "GUIDE123456789",
             "LugarContrato": "Ciudad de México",
             "CodigoTransportista": "T123",
-            "RFCEmbarcador": "RFC123456789",
-            "NumRegIdTribEmbarc": "ID123456",
-            "ResidenciaFiscalEmbarc": "MEX",
+            "RfcEmbarcador": "RFC123456789",
+            "NumRegIdTribEmbarcador": "ID123456",
+            "ResidenciaFiscalEmbarcador": "MEX",
             "NombreEmbarcador": "Embarcador S.A."
         },
         "TransporteFerroviario": {
-            "TipoDeServicio": "01",
-            "TipoDeTrafico": "A",
-            "NombreAseg": "Aseguradora S.A.",
-            "NumPolizaSeguro": "PZ123456789",
+            "TipoServicio": "01",
+            "TipoTrafico": "A",
+            "NombreAseguradora": "Aseguradora S.A.",
+            "NoPolizaSeguro": "PZ123456789",
             "DerechosDePaso": [
                 {
-                    "TipoDerechoDePaso": "D01",
+                    "Tipo": "D01",
                     "KilometrajePagado": 150.5
                 },
                 {
-                    "TipoDerechoDePaso": "D01",
+                    "Tipo": "D01",
                     "KilometrajePagado": 150.5
                 },
                 {
-                    "TipoDerechoDePaso": "D01",
+                    "Tipo": "D01",
                     "KilometrajePagado": 150.5
                 },
                 {
-                    "TipoDerechoDePaso": "D01",
+                    "Tipo": "D01",
                     "KilometrajePagado": 150.5
                 },
                 {
-                    "TipoDerechoDePaso": "D01",
+                    "Tipo": "D01",
                     "KilometrajePagado": 150.5
                 }
             ],
             "Carro": [
                 {
-                    "TipoCarro": "C01",
-                    "MatriculaCarro": "CAR123",
-                    "GuiaCarro": "G12345",
-                    "ToneladasNetasCarro": 10.5,
+                    "Tipo": "C01",
+                    "Matricula": "CAR123",
+                    "Guia": "G12345",
+                    "ToneladasNetas": 10.5,
                     "Contenedor": [
                         {
-                            "TipoContenedor": "CT01",
+                            "Tipo": "CT01",
                             "PesoContenedorVacio": 2.5,
                             "PesoNetoMercancia": 8
                         }
                     ]
                 },
                 {
-                    "TipoCarro": "C01",
-                    "MatriculaCarro": "CAR123",
-                    "GuiaCarro": "G12345",
-                    "ToneladasNetasCarro": 10.5,
+                    "Tipo": "C01",
+                    "Matricula": "CAR123",
+                    "Guia": "G12345",
+                    "ToneladasNetas": 10.5,
                     "Contenedor": [
                         {
-                            "TipoContenedor": "CT01",
+                            "Tipo": "CT01",
                             "PesoContenedorVacio": 2.5,
                             "PesoNetoMercancia": 8
                         },
                         {
-                            "TipoContenedor": "CT01",
+                            "Tipo": "CT01",
                             "PesoContenedorVacio": 2.5,
                             "PesoNetoMercancia": 8
                         },
                         {
-                            "TipoContenedor": "CT01",
+                            "Tipo": "CT01",
                             "PesoContenedorVacio": 2.5,
                             "PesoNetoMercancia": 8
                         },
                         {
-                            "TipoContenedor": "CT01",
+                            "Tipo": "CT01",
                             "PesoContenedorVacio": 2.5,
                             "PesoNetoMercancia": 8
                         },
                         {
-                            "TipoContenedor": "CT06",
+                            "Tipo": "CT06",
                             "PesoContenedorVacio": 2.5,
                             "PesoNetoMercancia": 8
                         },
                         {
-                            "TipoContenedor": "CT01",
+                            "Tipo": "CT01",
                             "PesoContenedorVacio": 2.5,
                             "PesoNetoMercancia": 8
                         }
                     ]
                 },
                 {
-                    "TipoCarro": "C01",
-                    "MatriculaCarro": "CAR123",
-                    "GuiaCarro": "G12345",
-                    "ToneladasNetasCarro": 10.5,
+                    "Tipo": "C01",
+                    "Matricula": "CAR123",
+                    "Guia": "G12345",
+                    "ToneladasNetas": 10.5,
                     "Contenedor": [
                         {
-                            "TipoContenedor": "CT01",
+                            "Tipo": "CT01",
                             "PesoContenedorVacio": 2.5,
                             "PesoNetoMercancia": 8
                         }
@@ -419,33 +420,33 @@
     "FiguraTransporte": {
         "TiposFigura": [
             {
-                "TipoFigura": "FT01",
-                "RFCFigura": "RFC123456",
-                "NumLicencia": "LIC123456",
-                "NombreFigura": "Transportista Ejemplo",
-                "NumRegIdTribFigura": null,
-                "ResidenciaFiscalFigura": null,
+                "Tipo": "FT01",
+                "Rfc": "RFC123456",
+                "NoLicencia": "LIC123456",
+                "Nombre": "Transportista Ejemplo",
+                "NumRegIdTrib": null,
+                "ResidenciaFiscal": null,
                 "PartesTransporte": [
                     {
-                        "ParteTransporte": "PT01"
+                        "Parte": "PT01"
                     },
                     {
-                        "ParteTransporte": "PT01"
+                        "Parte": "PT01"
                     },
                     {
-                        "ParteTransporte": "PT02"
+                        "Parte": "PT02"
                     },
                     {
-                        "ParteTransporte": "PT01"
+                        "Parte": "PT01"
                     },
                     {
-                        "ParteTransporte": "PT01"
+                        "Parte": "PT01"
                     }
                 ],
                 "Domicilio": {
                     "Calle": "Av. Principal",
-                    "NumeroExterior": "123",
-                    "NumeroInterior": null,
+                    "NoExterior": "123",
+                    "NoInterior": null,
                     "Colonia": null,
                     "Localidad": null,
                     "Referencia": null,
@@ -456,15 +457,15 @@
                 }
             },
             {
-                "TipoFigura": "FT02",
-                "RFCFigura": null,
-                "NumLicencia": null,
-                "NombreFigura": "Otro Transportista",
-                "NumRegIdTribFigura": null,
-                "ResidenciaFiscalFigura": null,
+                "Tipo": "FT02",
+                "Rfc": null,
+                "NoLicencia": null,
+                "Nombre": "Otro Transportista",
+                "NumRegIdTrib": null,
+                "ResidenciaFiscal": null,
                 "PartesTransporte": [
                     {
-                        "ParteTransporte": "PT02"
+                        "Parte": "PT02"
                     }
                 ],
                 "Domicilio": null

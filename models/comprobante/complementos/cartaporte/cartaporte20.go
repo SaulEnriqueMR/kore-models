@@ -72,23 +72,23 @@ func (u *UbicacionCartaPorte20) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 }
 
 type DomicilioCartaPorte20 struct {
-	Calle          *string `xml:"Calle,attr" bson:"Calle,omitempty"`
-	NumeroExterior *string `xml:"NumeroExterior,attr" bson:"NumeroExterior,omitempty"`
-	NumeroInterior *string `xml:"NumeroInterior,attr" bson:"NumeroInterior,omitempty"`
-	Colonia        *string `xml:"Colonia,attr" bson:"Colonia,omitempty"`
-	Localidad      *string `xml:"Localidad,attr" bson:"Localidad,omitempty"`
-	Referencia     *string `xml:"Referencia,attr" bson:"Referencia,omitempty"`
-	Municipio      *string `xml:"Municipio,attr" bson:"Municipio,omitempty"`
-	Estado         string  `xml:"Estado,attr" bson:"Estado"`
-	Pais           string  `xml:"Pais,attr" bson:"Pais"`
-	CodigoPostal   string  `xml:"CodigoPostal,attr" bson:"CodigoPostal"`
+	Calle        *string `xml:"Calle,attr" bson:"Calle,omitempty"`
+	NoExterior   *string `xml:"NumeroExterior,attr" bson:"NoExterior,omitempty"`
+	NoInterior   *string `xml:"NumeroInterior,attr" bson:"NoInterior,omitempty"`
+	Colonia      *string `xml:"Colonia,attr" bson:"Colonia,omitempty"`
+	Localidad    *string `xml:"Localidad,attr" bson:"Localidad,omitempty"`
+	Referencia   *string `xml:"Referencia,attr" bson:"Referencia,omitempty"`
+	Municipio    *string `xml:"Municipio,attr" bson:"Municipio,omitempty"`
+	Estado       string  `xml:"Estado,attr" bson:"Estado"`
+	Pais         string  `xml:"Pais,attr" bson:"Pais"`
+	CodigoPostal string  `xml:"CodigoPostal,attr" bson:"CodigoPostal"`
 }
 
 type MercanciasCartaPorte20 struct {
 	PesoBrutoTotal        float64                            `xml:"PesoBrutoTotal,attr" bson:"PesoBrutoTotal"`
 	UnidadPeso            string                             `xml:"UnidadPeso,attr" bson:"UnidadPeso"`
 	PesoNetoTotal         *float64                           `xml:"PesoNetoTotal,attr" bson:"PesoNetoTotal,omitempty"`
-	NumTotalMercancias    float64                            `xml:"NumTotalMercancias,attr" bson:"NumTotalMercancias"`
+	NumeroTotalMercancias float64                            `xml:"NumTotalMercancias,attr" bson:"NumeroTotalMercancias"`
 	CargoPorTasacion      *float64                           `xml:"CargoPorTasacion,attr" bson:"CargoPorTasacion,omitempty"`
 	Mercancia             []MercanciaCartaPorte20            `xml:"Mercancia" bson:"Mercancia"`
 	Autotransporte        *AutotransporteCartaPorte20        `xml:"Autotransporte" bson:"Autotrasporte,omitempty"`
@@ -98,26 +98,46 @@ type MercanciasCartaPorte20 struct {
 }
 
 type MercanciaCartaPorte20 struct {
-	BienesTransp         string                             `xml:"BienesTransp,attr" bson:"BienesTransp"`
-	ClaveSTCC            *string                            `xml:"ClaveSTCC,attr" bson:"ClaveSTCC,omitempty"`
-	Descripcion          string                             `xml:"Descripcion,attr" bson:"Descripcion"`
-	Cantidad             float64                            `xml:"Cantidad,attr" bson:"Cantidad"`
-	ClaveUnidad          string                             `xml:"ClaveUnidad,attr" bson:"ClaveUnidad"`
-	Unidad               *string                            `xml:"Unidad,attr" bson:"Unidad,omitempty"`
-	Dimensiones          *string                            `xml:"Dimensiones,attr" bson:"Dimensiones,omitempty"`
-	MaterialPeligroso    *string                            `xml:"MaterialPeligroso,attr" bson:"MaterialPeligroso,omitempty"`
-	CveMaterialPeligroso *string                            `xml:"CveMaterialPeligroso,attr" bson:"CveMaterialPeligroso,omitempty"`
-	Embalaje             *string                            `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
-	DescripEmbalaje      *string                            `xml:"DescripEmbalaje,attr" bson:"DescripEmbalaje,omitempty"`
-	PesoKg               float64                            `xml:"PesoEnKg,attr" bson:"PesoKg"`
-	ValorMercancia       *float64                           `xml:"ValorMercancia,attr" bson:"ValorMercancia,omitempty"`
-	Moneda               *string                            `xml:"Moneda,attr" bson:"Moneda,omitempty"`
-	FraccionArancelaria  *string                            `xml:"FraccionArancelaria,attr" bson:"FraccionArancelaria,omitempty"`
-	UUIDComercioExt      *string                            `xml:"UUIDComercioExt,attr" bson:"UUIDComercioExt,omitempty"`
-	Pedimentos           *[]PedimentosCartaPorte20          `xml:"Pedimentos" bson:"Pedimentos,omitempty"`
-	GuiasIdentificacion  *[]GuiasIdentificacionCartaPorte20 `xml:"GuiasIdentificacion" bson:"GuiasIdentificacion,omitempty"`
-	CantidadTransporta   *[]CantidadTransportaCartaPorte20  `xml:"CantidadTransporta" bson:"CantidadTransporta,omitempty"`
-	DetalleMercancia     *DetalleMercanciaCartaPorte20      `xml:"DetalleMercancia" bson:"DetalleMercancia,omitempty"`
+	BienesTransportados string  `xml:"BienesTransp,attr" bson:"BienesTransportados"`
+	ClaveSTCC           *string `xml:"ClaveSTCC,attr" bson:"ClaveSTCC,omitempty"`
+	Descripcion         string  `xml:"Descripcion,attr" bson:"Descripcion"`
+	Cantidad            float64 `xml:"Cantidad,attr" bson:"Cantidad"`
+	ClaveUnidad         string  `xml:"ClaveUnidad,attr" bson:"ClaveUnidad"`
+	Unidad              *string `xml:"Unidad,attr" bson:"Unidad,omitempty"`
+	Dimensiones         *string `xml:"Dimensiones,attr" bson:"Dimensiones,omitempty"`
+
+	MaterialPeligroso   *string `xml:"MaterialPeligroso,attr" bson:"MaterialPeligroso,omitempty"`
+	EsMaterialPeligroso *bool   `bson:"EsMaterialPeligroso,omitempty"`
+
+	ClaveMaterialPeligroso *string                            `xml:"CveMaterialPeligroso,attr" bson:"ClaveMaterialPeligroso,omitempty"`
+	Embalaje               *string                            `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
+	DescripcionEmbalaje    *string                            `xml:"DescripEmbalaje,attr" bson:"DescripcionEmbalaje,omitempty"`
+	PesoKg                 float64                            `xml:"PesoEnKg,attr" bson:"PesoKg"`
+	ValorMercancia         *float64                           `xml:"ValorMercancia,attr" bson:"ValorMercancia,omitempty"`
+	Moneda                 *string                            `xml:"Moneda,attr" bson:"Moneda,omitempty"`
+	FraccionArancelaria    *string                            `xml:"FraccionArancelaria,attr" bson:"FraccionArancelaria,omitempty"`
+	UuidComercioExterior   *string                            `xml:"UUIDComercioExt,attr" bson:"UuidComercioExterior,omitempty"`
+	Pedimentos             *[]PedimentosCartaPorte20          `xml:"Pedimentos" bson:"Pedimentos,omitempty"`
+	GuiasIdentificacion    *[]GuiasIdentificacionCartaPorte20 `xml:"GuiasIdentificacion" bson:"GuiasIdentificacion,omitempty"`
+	CantidadTransporta     *[]CantidadTransportaCartaPorte20  `xml:"CantidadTransporta" bson:"CantidadTransporta,omitempty"`
+	DetalleMercancia       *DetalleMercanciaCartaPorte20      `xml:"DetalleMercancia" bson:"DetalleMercancia,omitempty"`
+}
+
+func (m *MercanciaCartaPorte20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias MercanciaCartaPorte20
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*m = MercanciaCartaPorte20(aux)
+	if m.MaterialPeligroso != nil {
+		isMaterialPeligroso := helpers.ResolveSatBoolean(*aux.MaterialPeligroso)
+		m.EsMaterialPeligroso = &isMaterialPeligroso
+	}
+	return nil
 }
 
 type PedimentosCartaPorte20 struct {
@@ -125,125 +145,125 @@ type PedimentosCartaPorte20 struct {
 }
 
 type GuiasIdentificacionCartaPorte20 struct {
-	NumeroGuiaIdentificacion  string  `xml:"NumeroGuiaIdentificacion,attr" bson:"NumeroGuiaIdentificacion"`
-	DescripGuiaIdentificacion string  `xml:"DescripGuiaIdentificacion,attr" bson:"DescripGuiaIdentificacion"`
-	PesoGuiaIdentificacion    float64 `xml:"PesoGuiaIdentificacion,attr" bson:"PesoGuiaIdentificacion"`
+	Numero      string  `xml:"NumeroGuiaIdentificacion,attr" bson:"Numero"`
+	Descripcion string  `xml:"DescripGuiaIdentificacion,attr" bson:"Descripcion"`
+	Peso        float64 `xml:"PesoGuiaIdentificacion,attr" bson:"Peso"`
 }
 
 type CantidadTransportaCartaPorte20 struct {
-	Cantidad       float64 `xml:"Cantidad,attr" bson:"Cantidad"`
-	IDOrigen       string  `xml:"IDOrigen,attr" bson:"IDOrigen"`
-	IDDestino      string  `xml:"IDDestino,attr" bson:"IDDestino"`
-	CvesTransporte *string `xml:"CvesTransporte,attr" bson:"CvesTransporte,omitempty"`
+	Cantidad         float64 `xml:"Cantidad,attr" bson:"Cantidad"`
+	IdOrigen         string  `xml:"IDOrigen,attr" bson:"IdOrigen"`
+	IdDestino        string  `xml:"IDDestino,attr" bson:"IdDestino"`
+	ClavesTransporte *string `xml:"CvesTransporte,attr" bson:"ClavesTransporte,omitempty"`
 }
 
 type DetalleMercanciaCartaPorte20 struct {
-	UnidadPesoMerc string   `xml:"UnidadPesoMerc,attr" bson:"UnidadPesoMerc"`
-	PesoBruto      float64  `xml:"PesoBruto,attr" bson:"PesoBruto"`
-	PesoNeto       float64  `xml:"PesoNeto,attr" bson:"PesoNeto"`
-	PesoTara       float64  `xml:"PesoTara,attr" bson:"PesoTara"`
-	NumPiezas      *float64 `xml:"NumPiezas,attr" bson:"NumPiezas,omitempty"`
+	UnidadPeso   string   `xml:"UnidadPesoMerc,attr" bson:"UnidadPeso"`
+	PesoBruto    float64  `xml:"PesoBruto,attr" bson:"PesoBruto"`
+	PesoNeto     float64  `xml:"PesoNeto,attr" bson:"PesoNeto"`
+	PesoTara     float64  `xml:"PesoTara,attr" bson:"PesoTara"`
+	NumeroPiezas *float64 `xml:"NumPiezas,attr" bson:"NumeroPiezas,omitempty"`
 }
 
 type AutotransporteCartaPorte20 struct {
-	PermSCT                 string                              `xml:"PermSCT,attr" bson:"PermSCT"`
-	NumPermisoSCT           string                              `xml:"NumPermisoSCT,attr" bson:"NumPermisoSCT"` // Cifrado
+	PermisoSct              string                              `xml:"PermSCT,attr" bson:"PermisoSct"`
+	NoPermisoSct            string                              `xml:"NumPermisoSCT,attr" bson:"NoPermisoSct"`
 	IdentificacionVehicular IdentificacionVehicularCartaPorte20 `xml:"IdentificacionVehicular" bson:"IdentificacionVehicular"`
 	Seguros                 SegurosCartaPorte20                 `xml:"Seguros" bson:"Seguros"`
 	Remolques               *[]RemolqueCartaPorte20             `xml:"Remolques>Remolque" bson:"Remolques,omitempty"`
 }
 
 type IdentificacionVehicularCartaPorte20 struct {
-	ConfigVehicular string `xml:"ConfigVehicular,attr" bson:"ConfigVehicular"`
-	PlacaVM         string `xml:"PlacaVM,attr" bson:"PlacaVM"` // Cifrado
-	AnioModeloVM    string `xml:"AnioModeloVM,attr" bson:"AnioModeloVM"`
+	ConfiguracionVehicular string `xml:"ConfigVehicular,attr" bson:"Configuracion"`
+	PlacaVm                string `xml:"PlacaVM,attr" bson:"PlacaVm"`
+	AnioModeloVm           string `xml:"AnioModeloVM,attr" bson:"AnioModeloVm"`
 }
 
 type SegurosCartaPorte20 struct {
-	AseguraRespCivil   string   `xml:"AseguraRespCivil,attr" bson:"AseguraRespCivil"`
-	PolizaRespCivil    string   `xml:"PolizaRespCivil,attr" bson:"PolizaRespCivil"` // Cifrado
-	AseguraMedAmbiente *string  `xml:"AseguraMedAmbiente,attr" bson:"AseguraMedAmbiente,omitempty"`
-	PolizaMedAmbiente  *string  `xml:"PolizaMedAmbiente,attr" bson:"PolizaMedAmbiente,omitempty"` // Cifrado
-	AseguraCarga       *string  `xml:"AseguraCarga,attr" bson:"AseguraCarga,omitempty"`
-	PolizaCarga        *string  `xml:"PolizaCarga,attr" bson:"PolizaCarga,omitempty"` // Cifrado
-	PrimaSeguro        *float64 `xml:"PrimaSeguro,attr" bson:"PrimaSeguro,omitempty"`
+	AseguradoraResponsabilidadCivil string   `xml:"AseguraRespCivil,attr" bson:"AseguradoraResponsabilidadCivil"`
+	PolizaResponsabilidadCivil      string   `xml:"PolizaRespCivil,attr" bson:"PolizaResponsabilidadCivil"`
+	AseguradoraMedioAmbiente        *string  `xml:"AseguraMedAmbiente,attr" bson:"AseguradoraMedioAmbiente,omitempty"`
+	PolizaMedioAmbiente             *string  `xml:"PolizaMedAmbiente,attr" bson:"PolizaMedioAmbiente,omitempty"`
+	AseguradoraCarga                *string  `xml:"AseguraCarga,attr" bson:"AseguradoraCarga,omitempty"`
+	PolizaCarga                     *string  `xml:"PolizaCarga,attr" bson:"PolizaCarga,omitempty"`
+	PrimaSeguro                     *float64 `xml:"PrimaSeguro,attr" bson:"PrimaSeguro,omitempty"`
 }
 
 type RemolqueCartaPorte20 struct {
-	SubTipoRem string `xml:"SubTipoRem,attr" bson:"SubTipoRem"`
-	Placa      string `xml:"Placa,attr" bson:"Placa"` // Cifrado
+	Subtipo string `xml:"SubTipoRem,attr" bson:"Subtipo"`
+	Placa   string `xml:"Placa,attr" bson:"Placa"`
 }
 
 type TransporteMaritimoCartaPorte20 struct {
-	PermSCT                *string                  `xml:"PermSCT,attr" bson:"PermSCT,omitempty"`
-	NumPermisoSCT          *string                  `xml:"NumPermisoSCT,attr" bson:"NumPermisoSCT,omitempty"`
-	NombreAseg             *string                  `xml:"NombreAseg,attr" bson:"NombreAseg,omitempty"`
-	NumPolizaSeguro        *string                  `xml:"NumPolizaSeguro,attr" bson:"NumPolizaSeguro,omitempty"`
-	TipoEmbarcacion        string                   `xml:"TipoEmbarcacion,attr" bson:"TipoEmbarcacion"`
-	Matricula              string                   `xml:"Matricula,attr" bson:"Matricula"`
-	NumeroOMI              string                   `xml:"NumeroOMI,attr" bson:"NumeroOMI"`
-	AnioEmbarcacion        *string                  `xml:"AnioEmbarcacion,attr" bson:"AnioEmbarcacion,omitempty"`
-	NombreEmbarc           *string                  `xml:"NombreEmbarc,attr" bson:"NombreEmbarc,omitempty"`
-	NacionalidadEmbarc     string                   `xml:"NacionalidadEmbarc,attr" bson:"NacionalidadEmbarc"`
-	UnidadesArqBruto       float64                  `xml:"UnidadesDeArqBruto,attr" bson:"UnidadesArqBruto"`
-	TipoCarga              string                   `xml:"TipoCarga,attr" bson:"TipoCarga"`
-	NumCertITC             string                   `xml:"NumCertITC,attr" bson:"NumCertITC"`
-	Eslora                 *float64                 `xml:"Eslora,attr" bson:"Eslora,omitempty"`
-	Manga                  *float64                 `xml:"Manga,attr" bson:"Manga,omitempty"`
-	Calado                 *float64                 `xml:"Calado,attr" bson:"Calado,omitempty"`
-	LineaNaviera           *string                  `xml:"LineaNaviera,attr" bson:"LineaNaviera,omitempty"`
-	NombreAgenteNaviero    string                   `xml:"NombreAgenteNaviero,attr" bson:"NombreAgenteNaviero"`
-	NumAutorizacionNaviero string                   `xml:"NumAutorizacionNaviero,attr" bson:"NumAutorizacionNaviero"`
-	NumViaje               *string                  `xml:"NumViaje,attr" bson:"NumViaje,omitempty"`
-	NumConocEmbarc         *string                  `xml:"NumConocEmbarc,attr" bson:"NumConocEmbarc,omitempty"`
-	Contenedor             []ContenedorCartaPorte20 `xml:"Contenedor" bson:"Contenedor"`
+	PermisoSct              *string                  `xml:"PermSCT,attr" bson:"PermisoSct,omitempty"`
+	NoPermisoSct            *string                  `xml:"NumPermisoSCT,attr" bson:"NoPermisoSct,omitempty"`
+	NombreAseguradora       *string                  `xml:"NombreAseg,attr" bson:"NombreAseguradora,omitempty"`
+	NoPolizaSeguro          *string                  `xml:"NumPolizaSeguro,attr" bson:"NoPolizaSeguro,omitempty"`
+	TipoEmbarcacion         string                   `xml:"TipoEmbarcacion,attr" bson:"TipoEmbarcacion"`
+	Matricula               string                   `xml:"Matricula,attr" bson:"Matricula"`
+	NoOmi                   string                   `xml:"NumeroOMI,attr" bson:"NoOmi"`
+	AnioEmbarcacion         *string                  `xml:"AnioEmbarcacion,attr" bson:"AnioEmbarcacion,omitempty"`
+	NombreEmbarcacion       *string                  `xml:"NombreEmbarc,attr" bson:"NombreEmbarcacion,omitempty"`
+	NacionalidadEmbarcacion string                   `xml:"NacionalidadEmbarc,attr" bson:"NacionalidadEmbarcacion"`
+	UnidadesArqueoBruto     float64                  `xml:"UnidadesDeArqBruto,attr" bson:"UnidadesArqueoBruto"`
+	TipoCarga               string                   `xml:"TipoCarga,attr" bson:"TipoCarga"`
+	NumCertITC              string                   `xml:"NumCertITC,attr" bson:"NumCertITC"`
+	Eslora                  *float64                 `xml:"Eslora,attr" bson:"Eslora,omitempty"`
+	Manga                   *float64                 `xml:"Manga,attr" bson:"Manga,omitempty"`
+	Calado                  *float64                 `xml:"Calado,attr" bson:"Calado,omitempty"`
+	LineaNaviera            *string                  `xml:"LineaNaviera,attr" bson:"LineaNaviera,omitempty"`
+	NombreAgenteNaviero     string                   `xml:"NombreAgenteNaviero,attr" bson:"NombreAgenteNaviero"`
+	NoAutorizacionNaviero   string                   `xml:"NumAutorizacionNaviero,attr" bson:"NoAutorizacionNaviero"`
+	NoViaje                 *string                  `xml:"NumViaje,attr" bson:"NoViaje,omitempty"`
+	NoConocimientoEmbarque  *string                  `xml:"NumConocEmbarc,attr" bson:"NoConocimientoEmbarque,omitempty"`
+	Contenedor              []ContenedorCartaPorte20 `xml:"Contenedor" bson:"Contenedor"`
 }
 
 type ContenedorCartaPorte20 struct {
-	MatriculaContenedor string  `xml:"MatriculaContenedor,attr" bson:"MatriculaContenedor"` // Cifrado
-	TipoContenedor      string  `xml:"TipoContenedor,attr" bson:"TipoContenedor"`
-	NumPrecinto         *string `xml:"NumPrecinto,attr" bson:"NumPrecinto,omitempty"`
+	Matricula  string  `xml:"MatriculaContenedor,attr" bson:"Matricula"`
+	Tipo       string  `xml:"TipoContenedor,attr" bson:"Tipo"`
+	NoPrecinto *string `xml:"NumPrecinto,attr" bson:"NoPrecinto,omitempty"`
 }
 
 type TransporteAereoCartaPorte20 struct {
-	PermSCT                string  `xml:"PermSCT,attr" bson:"PermSCT"`
-	NumPermisoSCT          string  `xml:"NumPermisoSCT,attr" bson:"NumPermisoSCT"`                   // Cifrado
-	MatriculaAeronave      *string `xml:"MatriculaAeronave,attr" bson:"MatriculaAeronave,omitempty"` // Cifrado
-	NombreAseg             *string `xml:"NombreAseg,attr" bson:"NombreAseg,omitempty"`               // Cifrado
-	NumPolizaSeguro        *string `xml:"NumPolizaSeguro,attr" bson:"NumPolizaSeguro,omitempty"`     // Cifrado
-	NumeroGuia             string  `xml:"NumeroGuia,attr" bson:"NumeroGuia"`
-	LugarContrato          *string `xml:"LugarContrato,attr" bson:"LugarContrato,omitempty"` // Cifrado
-	CodigoTransportista    string  `xml:"CodigoTransportista,attr" bson:"CodigoTransportista"`
-	RFCEmbarcador          *string `xml:"RFCEmbarcador,attr" bson:"RFCEmbarcador,omitempty"`                   // Cifrado
-	NumRegIdTribEmbarc     *string `xml:"NumRegIdTribEmbarc,attr" bson:"NumRegIdTribEmbarc,omitempty"`         // Cifrado
-	ResidenciaFiscalEmbarc *string `xml:"ResidenciaFiscalEmbarc,attr" bson:"ResidenciaFiscalEmbarc,omitempty"` // Cifrado
-	NombreEmbarcador       *string `xml:"NombreEmbarcador,attr" bson:"NombreEmbarcador,omitempty"`             // Cifrado
+	PermSct                    string  `xml:"PermSCT,attr" bson:"PermSct"`
+	NoPermisoSct               string  `xml:"NumPermisoSCT,attr" bson:"NoPermisoSct"`
+	MatriculaAeronave          *string `xml:"MatriculaAeronave,attr" bson:"MatriculaAeronave,omitempty"`
+	NombreAseguradora          *string `xml:"NombreAseg,attr" bson:"NombreAseguradora,omitempty"`
+	NoPolizaSeguro             *string `xml:"NumPolizaSeguro,attr" bson:"NoPolizaSeguro,omitempty"`
+	NoGuia                     string  `xml:"NumeroGuia,attr" bson:"NoGuia"`
+	LugarContrato              *string `xml:"LugarContrato,attr" bson:"LugarContrato,omitempty"`
+	CodigoTransportista        string  `xml:"CodigoTransportista,attr" bson:"CodigoTransportista"`
+	RfcEmbarcador              *string `xml:"RFCEmbarcador,attr" bson:"RfcEmbarcador,omitempty"`
+	NumRegIdTribEmbarcador     *string `xml:"NumRegIdTribEmbarc,attr" bson:"NumRegIdTribEmbarcador,omitempty"`
+	ResidenciaFiscalEmbarcador *string `xml:"ResidenciaFiscalEmbarc,attr" bson:"ResidenciaFiscalEmbarcador,omitempty"`
+	NombreEmbarcador           *string `xml:"NombreEmbarcador,attr" bson:"NombreEmbarcador,omitempty"`
 }
 
 type TransporteFerroviarioCartaPorte20 struct {
-	TipoServicio    string                     `xml:"TipoDeServicio,attr" bson:"TipoServicio"`
-	TipoTrafico     string                     `xml:"TipoDeTrafico,attr" bson:"TipoTrafico"`
-	NombreAseg      *string                    `xml:"NombreAseg,attr" bson:"NombreAseg,omitempty"`           // Cifrado
-	NumPolizaSeguro *string                    `xml:"NumPolizaSeguro,attr" bson:"NumPolizaSeguro,omitempty"` // Cifrado
-	DerechoPaso     *[]DerechoPasoCartaPorte20 `xml:"DerechosDePaso" bson:"DerechoPaso,omitempty"`
-	Carro           []CarroCartaPorte20        `xml:"Carro" bson:"Carro"`
+	TipoServicio      string                     `xml:"TipoDeServicio,attr" bson:"TipoServicio"`
+	TipoTrafico       string                     `xml:"TipoDeTrafico,attr" bson:"TipoTrafico"`
+	NombreAseguradora *string                    `xml:"NombreAseg,attr" bson:"NombreAseguradora,omitempty"`
+	NoPolizaSeguro    *string                    `xml:"NumPolizaSeguro,attr" bson:"NoPolizaSeguro,omitempty"`
+	DerechoPaso       *[]DerechoPasoCartaPorte20 `xml:"DerechosDePaso" bson:"DerechoPaso,omitempty"`
+	Carro             []CarroCartaPorte20        `xml:"Carro" bson:"Carro"`
 }
 
 type DerechoPasoCartaPorte20 struct {
-	TipoDerechoPaso   string  `xml:"TipoDerechoDePaso,attr" bson:"TipoDerechoPaso"`
+	Tipo              string  `xml:"TipoDerechoDePaso,attr" bson:"Tipo"`
 	KilometrajePagado float64 `xml:"KilometrajePagado,attr" bson:"KilometrajePagado"`
 }
 
 type CarroCartaPorte20 struct {
-	TipoCarro           string                         `xml:"TipoCarro,attr" bson:"TipoCarro"`
-	MatriculaCarro      string                         `xml:"MatriculaCarro,attr" bson:"MatriculaCarro"` // Cifrado
-	GuiaCarro           string                         `xml:"GuiaCarro,attr" bson:"GuiaCarro"`
-	ToneladasNetasCarro float64                        `xml:"ToneladasNetasCarro,attr" bson:"ToneladasNetasCarro"`
-	Contenedor          *[]ContenedorCarroCartaPorte20 `xml:"Contenedor" bson:"Contenedor,omitempty"`
+	Tipo           string                         `xml:"TipoCarro,attr" bson:"Tipo"`
+	Matricula      string                         `xml:"MatriculaCarro,attr" bson:"Matricula"`
+	Guia           string                         `xml:"GuiaCarro,attr" bson:"Guia"`
+	ToneladasNetas float64                        `xml:"ToneladasNetasCarro,attr" bson:"ToneladasNetas"`
+	Contenedor     *[]ContenedorCarroCartaPorte20 `xml:"Contenedor" bson:"Contenedor,omitempty"`
 }
 
 type ContenedorCarroCartaPorte20 struct {
-	TipoContenedor      string  `xml:"TipoContenedor,attr" bson:"TipoContenedor"`
+	Tipo                string  `xml:"TipoContenedor,attr" bson:"Tipo"`
 	PesoContenedorVacio float64 `xml:"PesoContenedorVacio,attr" bson:"PesoContenedorVacio"`
 	PesoNetoMercancia   float64 `xml:"PesoNetoMercancia,attr" bson:"PesoNetoMercancia"`
 }
@@ -253,37 +273,16 @@ type FiguraTransporteCartaPorte20 struct {
 }
 
 type TiposFiguraCartaPorte20 struct {
-	TipoFigura             string                          `xml:"TipoFigura,attr" bson:"TipoFigura"`
-	RFCFigura              *string                         `xml:"RFCFigura,attr" bson:"RFCFigura,omitempty"`                           // Cifrado
-	NumLicencia            *string                         `xml:"NumLicencia,attr" bson:"NumLicencia,omitempty"`                       // Cifrado
-	NombreFigura           *string                         `xml:"NombreFigura,attr" bson:"NombreFigura,omitempty"`                     // Cifrado
-	NumRegIdTribFigura     *string                         `xml:"NumRegIdTribFigura,attr" bson:"NumRegIdTribFigura,omitempty"`         // Cifrado
-	ResidenciaFiscalFigura *string                         `xml:"ResidenciaFiscalFigura,attr" bson:"ResidenciaFiscalFigura,omitempty"` // Cifrado
-	PartesTransporte       *[]PartesTransporteCartaPorte20 `xml:"PartesTransporte" bson:"PartesTransporte,omitempty"`
-	Domicilio              *DomicilioCartaPorte20          `xml:"Domicilio" bson:"Domicilio,omitempty"`
+	Tipo             string                          `xml:"TipoFigura,attr" bson:"Tipo"`
+	Rfc              *string                         `xml:"RFCFigura,attr" bson:"Rfc,omitempty"`
+	NoLicencia       *string                         `xml:"NumLicencia,attr" bson:"NoLicencia,omitempty"`
+	Nombre           *string                         `xml:"NombreFigura,attr" bson:"Nombre,omitempty"`
+	NumRegIdTrib     *string                         `xml:"NumRegIdTribFigura,attr" bson:"NumRegIdTrib,omitempty"`
+	ResidenciaFiscal *string                         `xml:"ResidenciaFiscalFigura,attr" bson:"ResidenciaFiscal,omitempty"`
+	PartesTransporte *[]PartesTransporteCartaPorte20 `xml:"PartesTransporte" bson:"PartesTransporte,omitempty"`
+	Domicilio        *DomicilioCartaPorte20          `xml:"Domicilio" bson:"Domicilio,omitempty"`
 }
 
 type PartesTransporteCartaPorte20 struct {
-	ParteTransporte string `xml:"ParteTransporte,attr" bson:"ParteTransporte"`
+	Parte string `xml:"ParteTransporte,attr" bson:"Parte"`
 }
-
-/*
-func (c *CartaPorte20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
-	// Create an alias to avoid recursion
-	type Alias CartaPorte20
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-	*c = CartaPorte20(aux)
-	fecha1, err := helpers.ParseDatetime(aux.FechaPagoString)
-	if err != nil {
-		return err
-	}
-
-	c.FechaFinalPago = fecha3
-
-	return nil
-}*/

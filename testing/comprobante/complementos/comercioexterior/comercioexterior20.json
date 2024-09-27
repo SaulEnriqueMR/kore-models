@@ -3,18 +3,18 @@
     "MotivoTraslado": "01",
     "ClavePedimento": "A1",
     "CertificadoOrigen": 1,
-    "NumCertificadoOrigen": "1234567890",
-    "NumeroExportadorConfiable": "EXCONFIABLE123",
+    "NoCertificadoOrigen": "1234567890",
+    "NoExportadorConfiable": "EXCONFIABLE123",
     "Incoterm": "FOB",
     "Observaciones": "Exportación de mercancías desde México.",
-    "TipoCambioUSD": 18.5,
-    "TotalUSD": 10000,
+    "TipoCambioUsd": 18.5,
+    "TotalUsd": 10000,
     "Emisor": {
         "Curp": "GOCM890107HDFRRR02",
         "Domicilio": {
             "Calle": "Avenida Revolución",
-            "NumeroExterior": "123",
-            "NumeroInterior": "4B",
+            "NoExterior": "123",
+            "NoInterior": "4B",
             "Colonia": "0348",
             "Localidad": "001",
             "Referencia": "Cerca de la torre",
@@ -38,8 +38,8 @@
         "NumRegIdTrib": "XYZ123456789",
         "Domicilio": {
             "Calle": "Av. Principal",
-            "NumeroExterior": "123",
-            "NumeroInterior": "A",
+            "NoExterior": "123",
+            "NoInterior": "A",
             "Colonia": "Centro",
             "Localidad": "Ciudad",
             "Referencia": "Frente al parque",
@@ -56,8 +56,8 @@
             "Domicilio": [
                 {
                     "Calle": "Avenida Insurgentes",
-                    "NumeroExterior": "1234",
-                    "NumeroInterior": "101",
+                    "NoExterior": "1234",
+                    "NoInterior": "101",
                     "Colonia": "Colonia Centro",
                     "Localidad": "Ciudad de México",
                     "Referencia": "Cerca del Monumento a la Revolución",
@@ -74,8 +74,8 @@
             "Domicilio": [
                 {
                     "Calle": "Avenida Insurgentes",
-                    "NumeroExterior": "1234",
-                    "NumeroInterior": "101",
+                    "NoExterior": "1234",
+                    "NoInterior": "101",
                     "Colonia": "Colonia Centro",
                     "Localidad": "Ciudad de México",
                     "Referencia": "Cerca del Monumento a la Revolución",
@@ -86,8 +86,8 @@
                 },
                 {
                     "Calle": "Avenida Insurgentes",
-                    "NumeroExterior": "1234",
-                    "NumeroInterior": "101",
+                    "NoExterior": "1234",
+                    "NoInterior": "101",
                     "Colonia": "Colonia Centro",
                     "Localidad": "Ciudad de México",
                     "Referencia": "Cerca del Monumento a la Revolución",
@@ -98,8 +98,8 @@
                 },
                 {
                     "Calle": "Avenida Insurgentes",
-                    "NumeroExterior": "1234",
-                    "NumeroInterior": "101",
+                    "NoExterior": "1234",
+                    "NoInterior": "101",
                     "Colonia": "Colonia Centro",
                     "Localidad": "Ciudad de México",
                     "Referencia": "Cerca del Monumento a la Revolución",
@@ -116,8 +116,8 @@
             "Domicilio": [
                 {
                     "Calle": "Avenida Insurgentes",
-                    "NumeroExterior": "1234",
-                    "NumeroInterior": "101",
+                    "NoExterior": "1234",
+                    "NoInterior": "101",
                     "Colonia": "Colonia Centro",
                     "Localidad": "Ciudad de México",
                     "Referencia": "Cerca del Monumento a la Revolución",
@@ -141,8 +141,8 @@
                 {
                     "Marca": "Toyota",
                     "Modelo": "Corolla",
-                    "SubModelo": "XLE",
-                    "NumeroSerie": "ABC123XYZ456"
+                    "Submodelo": "XLE",
+                    "NoSerie": "ABC123XYZ456"
                 }
             ]
         },
@@ -157,14 +157,14 @@
                 {
                     "Marca": "Ford",
                     "Modelo": "Focus",
-                    "SubModelo": "SE",
-                    "NumeroSerie": "DEF456XYZ789"
+                    "Submodelo": "SE",
+                    "NoSerie": "DEF456XYZ789"
                 },
                 {
                     "Marca": "Ford",
                     "Modelo": "Focus",
-                    "SubModelo": "SE",
-                    "NumeroSerie": "DEF456XYZ789"
+                    "Submodelo": "SE",
+                    "NoSerie": "DEF456XYZ789"
                 }
             ]
         }

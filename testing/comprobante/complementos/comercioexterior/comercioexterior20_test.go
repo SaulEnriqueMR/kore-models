@@ -18,7 +18,7 @@ func GetTurisComercioExteriorForTest(filename string, t *testing.T) (comexterior
 	return parsed, errUnmashal
 }
 
-func TestFullIntereses(t *testing.T) {
+func TestFullComercioExterior20(t *testing.T) {
 	comexterior, _ := GetTurisComercioExteriorForTest("./comercioexterior20.xml", t)
 	assert.NotNil(t, comexterior)
 	InternalTestComercioExterior(t, comexterior)
@@ -29,12 +29,12 @@ func InternalTestComercioExterior(t *testing.T, comercioExterior comexterior1.Co
 	assert.Equal(t, "01", *comercioExterior.MotivoTraslado)
 	assert.Equal(t, "A1", comercioExterior.ClavePedimento)
 	assert.Equal(t, 1.0, comercioExterior.CertificadoOrigen)
-	assert.Equal(t, "1234567890", *comercioExterior.NumCertificadoOrigen)
-	assert.Equal(t, "EXCONFIABLE123", *comercioExterior.NumeroExportadorConfiable)
+	assert.Equal(t, "1234567890", *comercioExterior.NoCertificadoOrigen)
+	assert.Equal(t, "EXCONFIABLE123", *comercioExterior.NoExportadorConfiable)
 	assert.Equal(t, "FOB", *comercioExterior.Incoterm)
 	assert.Equal(t, "Exportación de mercancías desde México.", *comercioExterior.Observaciones)
-	assert.Equal(t, 18.50, comercioExterior.TipoCambioUSD)
-	assert.Equal(t, 10000.00, comercioExterior.TotalUSD)
+	assert.Equal(t, 18.50, comercioExterior.TipoCambioUsd)
+	assert.Equal(t, 10000.00, comercioExterior.TotalUsd)
 	InternalTestEmisorComercioExterior(t, comercioExterior.Emisor)
 	InternalTestPropietarioComercioExterior(t, comercioExterior.Propietario)
 	InternalTestReceptorComercioExterior(t, comercioExterior.Receptor)
@@ -49,8 +49,8 @@ func InternalTestEmisorComercioExterior(t *testing.T, emisor *comexterior1.Emiso
 
 func InternalTestDomicilioComercioExterior(t *testing.T, domicilio comexterior1.DomicilioComercioExterior20) {
 	assert.Equal(t, "Avenida Revolución", domicilio.Calle)
-	assert.Equal(t, "123", *domicilio.NumeroExterior)
-	assert.Equal(t, "4B", *domicilio.NumeroInterior)
+	assert.Equal(t, "123", *domicilio.NoExterior)
+	assert.Equal(t, "4B", *domicilio.NoInterior)
 	assert.Equal(t, "0348", *domicilio.Colonia)
 	assert.Equal(t, "001", *domicilio.Localidad)
 	assert.Equal(t, "Cerca de la torre", *domicilio.Referencia)
@@ -99,6 +99,6 @@ func InternalTestDescripcionesEspecificasComercioExterior(t *testing.T, descripc
 	assert.NotNil(t, descripcion)
 	assert.Equal(t, "Ford", descripcion.Marca)
 	assert.Equal(t, "Focus", *descripcion.Modelo)
-	assert.Equal(t, "SE", *descripcion.SubModelo)
-	assert.Equal(t, "DEF456XYZ789", *descripcion.NumeroSerie)
+	assert.Equal(t, "SE", *descripcion.Submodelo)
+	assert.Equal(t, "DEF456XYZ789", *descripcion.NoSerie)
 }

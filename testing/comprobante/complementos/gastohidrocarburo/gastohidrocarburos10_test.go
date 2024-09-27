@@ -27,7 +27,7 @@ func TestGastoHidrocarburos10(t *testing.T) {
 	InternalTestFullAtributesActividadesHidrocar10(t, *erogacion.Actividades)
 	actividades := erogacion.Actividades
 	actividad := (*actividades)[0]
-	subactividades := actividad.SubActividades
+	subactividades := actividad.Subactividades
 	InternalTestFullSubActividadesHidrocar10(t, *subactividades)
 	subactividad := (*subactividades)[0]
 	tareas := subactividad.Tareas
@@ -56,17 +56,17 @@ func InternalTestFullAtributesErogacionHidrocarburos10(t *testing.T, hidrocar10 
 func InternalTestFullAtributesDocumentoRelacionadoGastoHidrocar10(t *testing.T, hidrocarburos10 hidrocarburos2.DocumentoRelacionadoGastoHidrocar10) {
 	assert.Equal(t, "Nacional", hidrocarburos10.OrigenErogacion)
 	assert.Equal(t, "123e4567-e89b-12d3-a456-426614174000", *hidrocarburos10.FolioFiscalVinculado)
-	assert.Equal(t, "ABC123456789", *hidrocarburos10.RFCProveedor)
-	assert.Equal(t, 200.00, *hidrocarburos10.MontoTotalIVA)
-	assert.Equal(t, 50.00, *hidrocarburos10.MontoRetencionISR)
-	assert.Equal(t, 30.00, *hidrocarburos10.MontoRetencionIVA)
+	assert.Equal(t, "ABC123456789", *hidrocarburos10.RfcProveedor)
+	assert.Equal(t, 200.00, *hidrocarburos10.MontoTotalIva)
+	assert.Equal(t, 50.00, *hidrocarburos10.MontoRetencionIsr)
+	assert.Equal(t, 30.00, *hidrocarburos10.MontoRetencionIva)
 	assert.Equal(t, 10.00, *hidrocarburos10.MontoRetencionOtrosImpuestos)
 	assert.Equal(t, "21011234", *hidrocarburos10.NumeroPedimentoVinculado)
 	assert.Equal(t, "123456789", *hidrocarburos10.ClavePedimentoVinculado)
 	assert.Equal(t, "987654321", *hidrocarburos10.ClavePagoPedimentoVinculado)
-	assert.Equal(t, 100.00, *hidrocarburos10.MontoIVAPedimento)
+	assert.Equal(t, 100.00, *hidrocarburos10.MontoIvaPedimento)
 	assert.Equal(t, 20.00, *hidrocarburos10.OtrosImpuestosPagadosPedimento)
-	assert.Equal(t, "2024-01-15", *hidrocarburos10.FechaFolioFiscalVinculado)
+	assert.Equal(t, "2024-01-15", *hidrocarburos10.FechaFolioFiscalVinculadoString)
 	assert.Equal(t, "Febrero", hidrocarburos10.Mes)
 	assert.Equal(t, 3000.00, hidrocarburos10.MontoTotalErogaciones)
 }
@@ -80,7 +80,7 @@ func InternalTestFullAtributesActividadesHidrocar10(t *testing.T, actividades []
 func InternalTestFullSubActividadesHidrocar10(t *testing.T, subActividades []hidrocarburos2.SubActividadesGastoHidrocar10) {
 	assert.NotNil(t, subActividades)
 	assert.Equal(t, 1, len(subActividades))
-	assert.Equal(t, "SubActividadA", *subActividades[0].SubActividadRelacionada)
+	assert.Equal(t, "SubActividadA", *subActividades[0].SubactividadRelacionada)
 }
 
 func InternalTestFullAtributesTareasHidrocar10(t *testing.T, tareas []hidrocarburos2.TareasGastoHidrocar10) {

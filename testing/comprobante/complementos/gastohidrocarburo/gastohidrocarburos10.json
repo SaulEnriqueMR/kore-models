@@ -11,18 +11,18 @@
                 {
                     "OrigenErogacion": "Nacional",
                     "FolioFiscalVinculado": "123e4567-e89b-12d3-a456-426614174000",
-                    "RFCProveedor": "ABC123456789",
-                    "MontoTotalIVA": 200,
-                    "MontoRetencionISR": 50,
-                    "MontoRetencionIVA": 30,
+                    "RfcProveedor": "ABC123456789",
+                    "MontoTotalIva": 200,
+                    "MontoRetencionIsr": 50,
+                    "MontoRetencionIva": 30,
                     "MontoRetencionOtrosImpuestos": 10,
                     "NumeroPedimentoVinculado": "21011234",
                     "ClavePedimentoVinculado": "123456789",
                     "ClavePagoPedimentoVinculado": "987654321",
-                    "MontoIVAPedimento": 100,
+                    "MontoIvaPedimento": 100,
                     "OtrosImpuestosPagadosPedimento": 20,
-                    "FechaFolioFiscalVinculado": "2024-01-15",
-                    "FechaFolioFiscalVinculadoDate": "2024-01-15T00:00:00Z",
+                    "FechaFolioFiscalVinculadoString": "2024-01-15",
+                    "FechaFolioFiscalVinculado": "2024-01-15T00:00:00Z",
                     "Mes": "Febrero",
                     "MontoTotalErogaciones": 3000
                 }
@@ -30,9 +30,9 @@
             "Actividades": [
                 {
                     "ActividadRelacionada": "Actividad1",
-                    "SubActividades": [
+                    "Subactividades": [
                         {
-                            "SubActividadRelacionada": "SubActividadA",
+                            "SubactividadRelacionada": "SubActividadA",
                             "Tareas": [
                                 {
                                     "TareaRelacionada": "Tarea1"

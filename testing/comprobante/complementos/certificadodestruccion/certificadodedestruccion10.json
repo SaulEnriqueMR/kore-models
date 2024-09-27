@@ -1,25 +1,25 @@
 {
 	"Version": "1.0",
 	"Serie": "SERIE A",
-	"NumFolDesVeh": "000323",
+	"FolioDestruccionVehiculo": "000323",
 	"VehiculoDestruido": [
 		{
 			"Marca": "Nissan",
 			"TipoOClase": "Camioneta",
 			"Anio": "2008",
 			"Modelo": "Pick-Up",
-			"Niv": "39883",
-			"NumSerie": "IGIYY2189E5138227",
-			"NumPlacas": "TJN-25-29",
-			"NumMotor": "0445542897692",
-			"NumFolTarjCir": "05413312114"
+			"NoIdentificacionVehicular": "39883",
+			"NoSerie": "IGIYY2189E5138227",
+			"NoPlacas": "TJN-25-29",
+			"NoMotor": "0445542897692",
+			"FolioTarjetaCirculacion": "05413312114"
 		}
 	],
 	"InformacinoAduanera": [
 		{
-			"NumPedImp": "2390321",
-			"Fecha": "2014-01-23",
-			"FechaDate": "2014-01-23T00:00:00Z",
+			"NumeroPedimentoImportacion": "2390321",
+			"FechaString": "2014-01-23",
+			"Fecha": "2014-01-23T00:00:00Z",
 			"Aduana": "Aduana"
 		}
 	]

@@ -7,30 +7,30 @@ import (
 )
 
 type CertificadoDeDestruccion10 struct {
-	Version             string                           `xml:"Version,attr" bson:"Version"`
-	Serie               string                           `xml:"Serie,attr" bson:"Serie"`
-	NumFolDesVeh        string                           `xml:"NumFolDesVeh,attr" bson:"NumFolDesVeh"`
-	VehiculoDestruido   *[]VehiculoDestruidoCertDest10   `xml:"VehiculoDestruido" bson:"VehiculoDestruido"`
-	InformacinoAduanera *[]InformacionAduaneraCertDest10 `xml:"InformacionAduanera" bson:"InformacionAduanera"`
+	Version                  string                           `xml:"Version,attr" bson:"Version"`
+	Serie                    string                           `xml:"Serie,attr" bson:"Serie"`
+	FolioDestruccionVehiculo string                           `xml:"NumFolDesVeh,attr" bson:"FolioDestruccionVehiculo"`
+	VehiculoDestruido        *[]VehiculoDestruidoCertDest10   `xml:"VehiculoDestruido" bson:"VehiculoDestruido"`
+	InformacinoAduanera      *[]InformacionAduaneraCertDest10 `xml:"InformacionAduanera" bson:"InformacionAduanera"`
 }
 
 type VehiculoDestruidoCertDest10 struct {
-	Marca         string  `xml:"Marca,attr" bson:"Marca"`
-	TipoOClase    string  `xml:"TipooClase,attr" bson:"TipoOClase"`
-	Anio          string  `xml:"Año,attr" bson:"Anio"`
-	Modelo        *string `xml:"Modelo,attr" bson:"Modelo,omitempty"`
-	Niv           *string `xml:"NIV,attr" bson:"NIV,omitempty"`
-	NumSerie      *string `xml:"NumSerie,attr" bson:"NumSerie,omitempty"`
-	NumPlacas     string  `xml:"NumPlacas,attr" bson:"NumPlacas"`
-	NumMotor      *string `xml:"NumMotor,attr" bson:"NumMotor,omitempty"`
-	NumFolTarjCir string  `xml:"NumFolTarjCir,attr" bson:"NumFolTarjCir"`
+	Marca                     string  `xml:"Marca,attr" bson:"Marca"`
+	TipoOClase                string  `xml:"TipooClase,attr" bson:"TipoOClase"`
+	Anio                      string  `xml:"Año,attr" bson:"Anio"`
+	Modelo                    *string `xml:"Modelo,attr" bson:"Modelo,omitempty"`
+	NoIdentificacionVehicular *string `xml:"NIV,attr" bson:"NoIdentificacionVehicular,omitempty"`
+	NoSerie                   *string `xml:"NumSerie,attr" bson:"NoSerie,omitempty"`
+	NoPlacas                  string  `xml:"NumPlacas,attr" bson:"NoPlacas"`
+	NoMotor                   *string `xml:"NumMotor,attr" bson:"NoMotor,omitempty"`
+	FolioTarjetaCirculacion   string  `xml:"NumFolTarjCir,attr" bson:"FolioTarjetaCirculacion"`
 }
 
 type InformacionAduaneraCertDest10 struct {
-	NumPedImp string    `xml:"NumPedImp,attr" bson:"NumPedImp"`
-	Fecha     string    `xml:"Fecha,attr" bson:"Fecha"`
-	FechaDate time.Time `bson:"Fecha"`
-	Aduana    string    `xml:"Aduana,attr" bson:"Aduana"`
+	NumeroPedimentoImportacion string    `xml:"NumPedImp,attr" bson:"NumeroPedimentoImportacion"`
+	FechaString                string    `xml:"Fecha,attr"`
+	Fecha                      time.Time `bson:"Fecha"`
+	Aduana                     string    `xml:"Aduana,attr" bson:"Aduana"`
 }
 
 func (iacd10 *InformacionAduaneraCertDest10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
@@ -45,11 +45,11 @@ func (iacd10 *InformacionAduaneraCertDest10) UnmarshalXML(d *xml.Decoder, start 
 	*iacd10 = InformacionAduaneraCertDest10(aux)
 
 	if iacd10 != nil {
-		fecha, err := helpers.ParseDatetime(iacd10.Fecha)
+		fecha, err := helpers.ParseDatetime(iacd10.FechaString)
 		if err != nil {
 			return err
 		}
-		iacd10.FechaDate = fecha
+		iacd10.Fecha = fecha
 	}
 
 	return nil

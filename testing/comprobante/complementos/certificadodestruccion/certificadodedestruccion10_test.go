@@ -31,7 +31,7 @@ func TestCertificadoDeDestruccion10(t *testing.T) {
 func InternalTestFullAtributesCertDes10(t *testing.T, certificadoDestruccion certificadodestruccion2.CertificadoDeDestruccion10) {
 	assert.Equal(t, "1.0", certificadoDestruccion.Version)
 	assert.Equal(t, "SERIE A", certificadoDestruccion.Serie)
-	assert.Equal(t, "000323", certificadoDestruccion.NumFolDesVeh)
+	assert.Equal(t, "000323", certificadoDestruccion.FolioDestruccionVehiculo)
 }
 
 func InternalTestFullAtributesVehiculoDestruido10(t *testing.T, vehiculoDestruido *[]certificadodestruccion2.VehiculoDestruidoCertDest10) {
@@ -44,14 +44,14 @@ func InternalTestFullAtributesVehiculoDestruido10(t *testing.T, vehiculoDestruid
 	assert.Equal(t, "2008", first.Anio)
 	assert.NotNil(t, first.Modelo)
 	assert.Equal(t, "Pick-Up", *first.Modelo)
-	assert.NotNil(t, first.Niv)
-	assert.Equal(t, "39883", *first.Niv)
-	assert.NotNil(t, first.NumSerie)
-	assert.Equal(t, "IGIYY2189E5138227", *first.NumSerie)
-	assert.Equal(t, "TJN-25-29", first.NumPlacas)
-	assert.NotNil(t, first.NumMotor)
-	assert.Equal(t, "0445542897692", *first.NumMotor)
-	assert.Equal(t, "05413312114", first.NumFolTarjCir)
+	assert.NotNil(t, first.NoIdentificacionVehicular)
+	assert.Equal(t, "39883", *first.NoIdentificacionVehicular)
+	assert.NotNil(t, first.NoSerie)
+	assert.Equal(t, "IGIYY2189E5138227", *first.NoSerie)
+	assert.Equal(t, "TJN-25-29", first.NoPlacas)
+	assert.NotNil(t, first.NoMotor)
+	assert.Equal(t, "0445542897692", *first.NoMotor)
+	assert.Equal(t, "05413312114", first.FolioTarjetaCirculacion)
 }
 
 func InternalTestFullAtributesInformacinoAduaneraCertDest10(t *testing.T, informacionAduanera *[]certificadodestruccion2.InformacionAduaneraCertDest10) {
@@ -59,8 +59,8 @@ func InternalTestFullAtributesInformacinoAduaneraCertDest10(t *testing.T, inform
 	assert.Equal(t, 1, len(*informacionAduanera))
 	first := (*informacionAduanera)[0]
 
-	assert.Equal(t, "2390321", first.NumPedImp)
-	assert.Equal(t, "2014-01-23", first.Fecha)
+	assert.Equal(t, "2390321", first.NumeroPedimentoImportacion)
+	assert.Equal(t, "2014-01-23", first.FechaString)
 	assert.Equal(t, "Aduana", first.Aduana)
 }
 

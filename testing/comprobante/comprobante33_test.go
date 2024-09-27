@@ -1,10 +1,7 @@
 package comprobante
 
 import (
-	"encoding/json"
 	"encoding/xml"
-	"log"
-	"os"
 	"testing"
 
 	comprobante3 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
@@ -17,7 +14,7 @@ func GetComprobante33ForTest(filename string, t *testing.T) (comprobante3.Compro
 	var parsed comprobante3.Comprobante33
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
-	GenerateJSONFromXML("comprobante33.json", parsed)
+	testing2.GenerateJSONFromStructure("comprobante33.json", parsed)
 	return parsed, errUnmarshal
 }
 
@@ -172,12 +169,4 @@ func InternalTestFullAtributesComplemento33(t *testing.T, complemento33 comproba
 	assert.Equal(t, "IVA", trasladosLocales[0].ImpLocTrasladado)
 	assert.Equal(t, 16.00, trasladosLocales[0].TasaTraslado)
 	assert.Equal(t, 3000.00, trasladosLocales[0].Importe)
-}
-
-func GenerateJSONFromXML(namefile string, data comprobante3.Comprobante33) {
-	jsonData, err := json.MarshalIndent(data, "", "	")
-	err = os.WriteFile(namefile, jsonData, 0644)
-	if err != nil {
-		log.Println(err)
-	}
 }

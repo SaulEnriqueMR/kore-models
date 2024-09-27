@@ -2,10 +2,11 @@ package comprobante
 
 import (
 	"encoding/xml"
+	"testing"
+
 	comprobante2 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetComprobante40ForTest(filename string, t *testing.T) (comprobante2.Comprobante40, error) {
@@ -13,6 +14,7 @@ func GetComprobante40ForTest(filename string, t *testing.T) (comprobante2.Compro
 	var parsed comprobante2.Comprobante40
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
+	testing2.GenerateJSONFromStructure("comprobante40.json", parsed)
 	return parsed, errUnmashal
 }
 

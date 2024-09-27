@@ -1,18 +1,39 @@
 package cartaporte
 
-import "encoding/xml"
+import (
+	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
+)
 
 type CartaPorte20 struct {
-	XMLName           xml.Name                      `xml:"CartaPorte"`
-	Version           string                        `xml:"Version,attr" bson:"Version"`
-	TranspInternac    string                        `xml:"TranspInternac,attr" bson:"TranspInternac"`
-	EntradaSalidaMerc *string                       `xml:"EntradaSalidaMerc,attr" bson:"EntradaSalidaMerc,omitempty"`
-	PaisOrigenDestino *string                       `xml:"PaisOrigenDestino,attr" bson:"PaisOrigenDestino,omitempty"`
-	ViaEntradaSalida  *string                       `xml:"ViaEntradaSalida,attr" bson:"ViaEntradaSalida,omitempty"`
-	TotalDistRec      *float64                      `xml:"TotalDistRec,attr" bson:"TotalDistRec,omitempty"`
-	Ubicaciones       []UbicacionCartaPorte20       `xml:"Ubicaciones>Ubicacion" bson:"Ubicaciones"`
-	Mercancias        MercanciasCartaPorte20        `xml:"Mercancias" bson:"Mercancias"`
-	FiguraTransporte  *FiguraTransporteCartaPorte20 `xml:"FiguraTransporte" bson:"FiguraTransporte"`
+	XMLName xml.Name `xml:"CartaPorte"`
+	Version string   `xml:"Version,attr" bson:"Version"`
+
+	TransporteInternacional   string `xml:"TranspInternac,attr" bson:"TransporteInternacional"`
+	EsTransporteInternacional bool   `bson:"EsTransporteInternacional"`
+
+	EntradaSalidaMercancia  *string                       `xml:"EntradaSalidaMerc,attr" bson:"EntradaSalidaMercancia,omitempty"`
+	PaisOrigenDestino       *string                       `xml:"PaisOrigenDestino,attr" bson:"PaisOrigenDestino,omitempty"`
+	ViaEntradaSalida        *string                       `xml:"ViaEntradaSalida,attr" bson:"ViaEntradaSalida,omitempty"`
+	TotalDistanciaRecorrida *float64                      `xml:"TotalDistRec,attr" bson:"TotalDistanciaRecorrida,omitempty"`
+	Ubicaciones             []UbicacionCartaPorte20       `xml:"Ubicaciones>Ubicacion" bson:"Ubicaciones"`
+	Mercancias              MercanciasCartaPorte20        `xml:"Mercancias" bson:"Mercancias"`
+	FiguraTransporte        *FiguraTransporteCartaPorte20 `xml:"FiguraTransporte" bson:"FiguraTransporte"`
+}
+
+func (ccp *CartaPorte20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias CartaPorte20
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*ccp = CartaPorte20(aux)
+	ccp.EsTransporteInternacional = helpers.ResolveSatBoolean(ccp.TransporteInternacional)
+
+	return nil
 }
 
 type UbicacionCartaPorte20 struct {

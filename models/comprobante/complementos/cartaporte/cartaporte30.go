@@ -7,21 +7,39 @@ import (
 )
 
 type CartaPorte30 struct {
-	XMLName              xml.Name                      `xml:"CartaPorte"`
-	Version              string                        `xml:"Version,attr" bson:"Version"`
-	IdCCP                string                        `xml:"IdCCP,attr" bson:"IdCPP"`
-	TranspInternac       string                        `xml:"TranspInternac,attr" bson:"TranspInternac"`
-	RegimenAduanero      *string                       `xml:"RegimenAduanero,attr" bson:"RegimenAduanero,omitempty"`
-	EntradaSalidaMerc    *string                       `xml:"EntradaSalidaMerc,attr" bson:"EntradaSalidaMerc,omitempty"`
-	PaisOrigenDestino    *string                       `xml:"PaisOrigenDestino,attr" bson:"PaisOrigenDestino,omitempty"`
-	ViaEntradaSalida     *string                       `xml:"ViaEntradaSalida,attr" bson:"ViaEntradaSalida,omitempty"`
-	TotalDistRec         *float64                      `xml:"TotalDistRec,attr" bson:"TotalDistRec,omitempty"`
-	RegistroISTMO        *string                       `xml:"RegistroISTMO,attr" bson:"RegistroISTMO,omitempty"`
-	UbicacionPoloOrigen  *string                       `xml:"UbicacionPoloOrigen,attr" bson:"UbicacionPoloOrigen,omitempty"`
-	UbicacionPoloDestino *string                       `xml:"UbicacionPoloDestino,attr" bson:"UbicacionPoloDestino,omitempty"`
-	Ubicaciones          []UbicacionCartaPorte30       `xml:"Ubicaciones>Ubicacion" bson:"Ubicaciones"`
-	Mercancias           MercanciasCartaPorte30        `xml:"Mercancias" bson:"Mercancias"`
-	FiguraTransporte     *FiguraTransporteCartaPorte30 `xml:"FiguraTransporte" bson:"FiguraTransporte,omitempty"`
+	XMLName xml.Name `xml:"CartaPorte"`
+	Version string   `xml:"Version,attr" bson:"Version"`
+	IdCcp   string   `xml:"IdCCP,attr" bson:"IdCcp"`
+
+	TransporteInternacional   string `xml:"TranspInternac,attr" bson:"TransporteInternacional"`
+	EsTransporteInternacional bool   `bson:"EsTransporteInternacional"`
+
+	RegimenAduanero         *string                       `xml:"RegimenAduanero,attr" bson:"RegimenAduanero,omitempty"`
+	EntradaSalidaMercancia  *string                       `xml:"EntradaSalidaMerc,attr" bson:"EntradaSalidaMercancia,omitempty"`
+	PaisOrigenDestino       *string                       `xml:"PaisOrigenDestino,attr" bson:"PaisOrigenDestino,omitempty"`
+	ViaEntradaSalida        *string                       `xml:"ViaEntradaSalida,attr" bson:"ViaEntradaSalida,omitempty"`
+	TotalDistanciaRecorrida *float64                      `xml:"TotalDistRec,attr" bson:"TotalDistanciaRecorrida,omitempty"`
+	RegistroIstmo           *string                       `xml:"RegistroISTMO,attr" bson:"RegistroIstmo,omitempty"`
+	UbicacionPoloOrigen     *string                       `xml:"UbicacionPoloOrigen,attr" bson:"UbicacionPoloOrigen,omitempty"`
+	UbicacionPoloDestino    *string                       `xml:"UbicacionPoloDestino,attr" bson:"UbicacionPoloDestino,omitempty"`
+	Ubicaciones             []UbicacionCartaPorte30       `xml:"Ubicaciones>Ubicacion" bson:"Ubicaciones"`
+	Mercancias              MercanciasCartaPorte30        `xml:"Mercancias" bson:"Mercancias"`
+	FiguraTransporte        *FiguraTransporteCartaPorte30 `xml:"FiguraTransporte" bson:"FiguraTransporte,omitempty"`
+}
+
+func (ccp *CartaPorte30) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias CartaPorte30
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*ccp = CartaPorte30(aux)
+	ccp.EsTransporteInternacional = helpers.ResolveSatBoolean(ccp.TransporteInternacional)
+
+	return nil
 }
 
 type UbicacionCartaPorte30 struct {

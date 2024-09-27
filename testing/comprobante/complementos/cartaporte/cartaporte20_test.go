@@ -31,11 +31,12 @@ func TestCartaPorte20(t *testing.T) {
 
 func InternalTestFullAtributesCartaPorte20(t *testing.T, porte20 cartaporte2.CartaPorte20) {
 	assert.Equal(t, "2.0", porte20.Version)
-	assert.Equal(t, "Si", porte20.TranspInternac)
-	assert.Equal(t, "Salida", *porte20.EntradaSalidaMerc)
+	assert.Equal(t, "Si", porte20.TransporteInternacional)
+	assert.Equal(t, true, porte20.EsTransporteInternacional)
+	assert.Equal(t, "Salida", *porte20.EntradaSalidaMercancia)
 	assert.Equal(t, "MEX", *porte20.PaisOrigenDestino)
 	assert.Equal(t, "T1", *porte20.ViaEntradaSalida)
-	assert.Equal(t, 120.50, *porte20.TotalDistRec)
+	assert.Equal(t, 120.50, *porte20.TotalDistanciaRecorrida)
 }
 
 func InternalTestFullAtributesUbicacionCartaPorte20(t *testing.T, ubicaciones []cartaporte2.UbicacionCartaPorte20) {

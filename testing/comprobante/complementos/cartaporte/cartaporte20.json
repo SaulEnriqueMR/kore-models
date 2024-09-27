@@ -4,11 +4,12 @@
 		"Local": "CartaPorte"
 	},
 	"Version": "2.0",
-	"TranspInternac": "Si",
-	"EntradaSalidaMerc": "Salida",
+	"TransporteInternacional": "Si",
+	"EsTransporteInternacional": true,
+	"EntradaSalidaMercancia": "Salida",
 	"PaisOrigenDestino": "MEX",
 	"ViaEntradaSalida": "T1",
-	"TotalDistRec": 120.5,
+	"TotalDistanciaRecorrida": 120.5,
 	"Ubicaciones": [
 		{
 			"TipoUbicacion": "Origen",

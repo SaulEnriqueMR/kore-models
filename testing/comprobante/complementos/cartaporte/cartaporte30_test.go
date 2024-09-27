@@ -2,7 +2,6 @@ package cartaporte
 
 import (
 	"encoding/xml"
-	"log"
 	"testing"
 
 	cartaporte1 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/cartaporte"
@@ -27,13 +26,14 @@ func TestFullIntereses30(t *testing.T) {
 
 func InternalTestCartaPorte30(t *testing.T, carta cartaporte1.CartaPorte30) {
 	assert.Equal(t, "3.0", carta.Version)
-	assert.Equal(t, "CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12", carta.IdCCP)
-	assert.Equal(t, "Sí", carta.TranspInternac)
-	assert.Equal(t, "Entrada", *carta.EntradaSalidaMerc)
+	assert.Equal(t, "CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12", carta.IdCcp)
+	assert.Equal(t, "Sí", carta.TransporteInternacional)
+	assert.Equal(t, true, carta.EsTransporteInternacional)
+	assert.Equal(t, "Entrada", *carta.EntradaSalidaMercancia)
 	assert.Equal(t, "MEX", *carta.PaisOrigenDestino)
 	assert.Equal(t, "01", *carta.ViaEntradaSalida)
-	assert.Equal(t, 1500.00, *carta.TotalDistRec)
-	assert.Equal(t, "Sí", *carta.RegistroISTMO)
+	assert.Equal(t, 1500.00, *carta.TotalDistanciaRecorrida)
+	assert.Equal(t, "Sí", *carta.RegistroIstmo)
 	assert.Equal(t, "001", *carta.UbicacionPoloOrigen)
 	assert.Equal(t, "002", *carta.UbicacionPoloDestino)
 	assert.Equal(t, "A1", *carta.RegimenAduanero)
@@ -192,7 +192,6 @@ func InternalTestSeguros30(t *testing.T, seguros cartaporte1.SegurosCartaPorte30
 }
 func InternalTestRemolque30(t *testing.T, remolques *[]cartaporte1.RemolqueCartaPorte30) {
 	assert.NotNil(t, remolques)
-	log.Println(remolques)
 	assert.Equal(t, len(*remolques), 2)
 	remolque := (*remolques)[0]
 	assert.Equal(t, "SUBTIPO_REM", remolque.SubTipoRem)

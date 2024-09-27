@@ -1,15 +1,37 @@
 package helpers
 
-import "strings"
+import (
+	"golang.org/x/text/unicode/norm"
+	"strings"
+	"unicode"
+)
 
-func ResolveSatBoolean(booleanSat *string) bool {
-	trimmedBoolean := strings.TrimSpace(*booleanSat)
+func NormalizeSatBoolean(satBoolean string) string {
+	trimmedBoolean := strings.TrimSpace(satBoolean)
 
-	if strings.ToUpper(trimmedBoolean) == "SI" {
+	// Normalize the string to decomposed form
+	t := norm.NFD.String(trimmedBoolean)
+
+	// Use a builder to collect non-mark characters
+	var sb strings.Builder
+	for _, r := range t {
+		// Ignore marks (accents, etc.)
+		if !unicode.Is(unicode.Mn, r) {
+			sb.WriteRune(r)
+		}
+	}
+
+	return strings.ToUpper(sb.String())
+}
+
+func ResolveSatBoolean(booleanSat string) bool {
+	cleanBoolean := NormalizeSatBoolean(booleanSat)
+
+	if strings.ToUpper(cleanBoolean) == "SI" {
 		return true
 	}
 
-	if strings.ToUpper(trimmedBoolean) == "NO" {
+	if strings.ToUpper(cleanBoolean) == "NO" {
 		return false
 	}
 

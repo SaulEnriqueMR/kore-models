@@ -31,7 +31,7 @@ func InternalTestFullAtributes(t *testing.T, institucion insteducativas2.Institu
 	assert.Equal(t, "Francisco Hernandez", institucion.NombreAlumno)
 	assert.Equal(t, "BAHF840120HOCTRR04", institucion.Curp)
 	assert.Equal(t, "Preescolar", institucion.NivelEducativo)
-	assert.Equal(t, "CCA29123210", institucion.AutRVOE)
+	assert.Equal(t, "CCA29123210", institucion.AutRvoe)
 	assert.NotNil(t, institucion.RfcPago)
 	assert.Equal(t, "XAXX010101333", *institucion.RfcPago)
 }

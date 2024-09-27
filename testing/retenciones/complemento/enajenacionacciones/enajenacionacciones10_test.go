@@ -18,8 +18,10 @@ func GetTurisEnajenacionForTest(filename string, t *testing.T) (enajacciones1.En
 }
 
 func TestFullEnajenacionAcciones(t *testing.T) {
-	enajenacion, _ := GetTurisEnajenacionForTest("./enajenacionacciones.xml", t)
+	enajenacion, _ := GetTurisEnajenacionForTest("./enajenacionacciones10.xml", t)
 	assert.NotNil(t, enajenacion)
+	testing2.GenerateJSONFromStructure("enajenacionacciones10.json", enajenacion)
+
 	InternalTestEnajenacionDeAcciones(t, enajenacion)
 }
 

@@ -1,0 +1,12 @@
+{
+    "Version": "1.0",
+    "SistemaFinanciero": "SI",
+    "ProvienenSistemaFinanciero": true,
+    "RetiroIntereses": "NO",
+    "HuboRetiroIntereses": false,
+    "OperacionFinancieraDerivada": "NO",
+    "CorrespondeOperacionFinancieraDerivada": false,
+    "MontoInteresNominal": 1500,
+    "MontoInteresReal": 1200,
+    "Perdida": 100
+}

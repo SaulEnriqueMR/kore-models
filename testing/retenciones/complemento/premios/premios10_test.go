@@ -22,7 +22,6 @@ func TestPremios10(t *testing.T) {
 	premios10, _ := GetPremios10ForTest("./premios10.xml", t)
 	assert.Equal(t, "1.0", premios10.Version)
 	assert.Equal(t, "19", premios10.EntidadFederativa)
-	assert.Equal(t, 28263.91, premios10.MontTotPago)
-	assert.Equal(t, 28263.91, premios10.MontTotPagoGrav)
-	assert.Equal(t, 0.0, premios10.MontTotPagoExent)
+	assert.Equal(t, 28263.91, premios10.MontTotalPagoGravado)
+	assert.Equal(t, 0.0, premios10.MontTotalPagoExento)
 }

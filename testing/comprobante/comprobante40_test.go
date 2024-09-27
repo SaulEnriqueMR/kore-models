@@ -133,7 +133,7 @@ func InternalTestFullConcepto40Attributes(t *testing.T, concepto comprobante2.Co
 	assert.Equal(t, "Cigarros", concepto.Descripcion)
 	assert.Equal(t, 200.0, concepto.ValorUnitario)
 	assert.Equal(t, 200.0, concepto.Importe)
-	assert.Equal(t, "02", concepto.ObjetoImp)
+	assert.Equal(t, "02", concepto.ObjetoImpuesto)
 
 	assert.NotNil(t, concepto.NoIdentificacion)
 	assert.Equal(t, "ABC", *concepto.NoIdentificacion)

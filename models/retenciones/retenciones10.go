@@ -2,13 +2,13 @@ package retenciones
 
 import (
 	"encoding/xml"
-	"strings"
-	"time"
-
+	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
 	date "github.com/SaulEnriqueMR/kore-models/models/helpers"
+	"strings"
 )
 
 type Retenciones10 struct {
+	documentofiscaldigital.DocumentoFiscalDigital
 	Version              string       `xml:"Version,attr" bson:"Version"`
 	Folio                *string      `xml:"FolioInt,attr" bson:"Folio,omitempty"`
 	Sello                string       `xml:"Sello,attr" bson:"Sello"`
@@ -22,12 +22,6 @@ type Retenciones10 struct {
 	Periodo              Periodo10    `xml:"Periodo" bson:"Periodo"`
 	Totales              Totales10    `xml:"Totales" bson:"Totales"`
 	Complemento          *Complemento `xml:"Complemento" bson:"Complemento,omitempty"`
-
-	/* Atributo convertido */
-	FechaEmision time.Time `bson:"FechaEmision"`
-	/* Atributos extraidos desde tfd */
-	Uuid          string    `bson:"Uuid"`
-	FechaTimbrado time.Time `bson:"FechaTimbrado"`
 }
 
 type Emisor10 struct {
@@ -64,14 +58,14 @@ type Totales10 struct {
 	MontoTotalGravado   float64               `xml:"montoTotGrav,attr" bson:"MontoTotalGravado"`
 	MontoTotalExento    float64               `xml:"montoTotExent,attr" bson:"MontoTotalExento"`
 	MontoTotalRetenido  float64               `xml:"montoTotRet,attr" bson:"MontoTotalRetenido"`
-	ImpuestosRetenidos  *[]ImpuestoRetenido10 `xml:"ImpRetenidos" bson:"ImpuestosRetenidos,omitempty"`
+	ImpuestosRetenidos  *[]ImpuestoRetenido10 `xml:"ImpRetenidos" bson:"Impuestos,omitempty"`
 }
 
 type ImpuestoRetenido10 struct {
-	Base     *float64 `xml:"BaseRet,attr" bson:"BaseRet,omitempty"`
-	Impuesto *string  `xml:"Impuesto,attr" bson:"ImpuestoRet,omitempty"`
-	Monto    float64  `xml:"montoRet,attr" bson:"MontoRet"`
-	TipoPago string   `xml:"TipoPagoRet,attr" bson:"TipoPagoRet"`
+	Base     *float64 `xml:"BaseRet,attr" bson:"Base,omitempty"`
+	Impuesto *string  `xml:"Impuesto,attr" bson:"Impuesto,omitempty"`
+	Monto    float64  `xml:"montoRet,attr" bson:"Monto"`
+	TipoPago string   `xml:"TipoPagoRet,attr" bson:"TipoPago"`
 }
 
 func (r *Retenciones10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

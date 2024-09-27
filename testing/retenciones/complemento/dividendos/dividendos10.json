@@ -1,0 +1,16 @@
+{
+    "Version": "1.0",
+    "DividendoOUtilidad": {
+        "ClaveTipoDivendoOUtilidad": "DIV123",
+        "MontoIsrRetenidoMexico": 1500.5,
+        "MontoIsrRetenidoExtranjero": 2000.75,
+        "MontoRetencionDividendoExtranjero": 500.25,
+        "TipoSociedadDistribucionDividendo": "Sociedad Nacional",
+        "MontoIsrAcreditableNacional": 300,
+        "MontoDividendoAcumulableNacional": 1200,
+        "MontoDividendoAcumulableExtranjero": 800
+    },
+    "Remanente": {
+        "ProporcionRemanente": 10.503456
+    }
+}

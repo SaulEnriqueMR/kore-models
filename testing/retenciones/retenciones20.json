@@ -1,56 +1,64 @@
 {
-    "FechaEmision": "2019-10-20T16:35:28-06:00",
+    "FechaEmision": "2024-03-04T00:00:00Z",
     "Uuid": "",
     "FechaTimbrado": "0001-01-01T00:00:00Z",
     "CadenaOriginal": "",
     "Comprobante": false,
-    "Version": "1.0",
-    "Folio": "54",
-    "Sello": "RwN+snnlG7o9XzJKvqkAY",
-    "NoCertificado": "20001000000300022755",
-    "Certificado": "MIIF7TCCA9WgAwIBAgIUMjAw",
-    "FechaExp": "2019-10-20T16:35:28-06:00",
-    "ClaveRetencion": "14",
+    "Version": "2.0",
+    "Folio": "9",
+    "Sello": "bG3OOBPprTCS9TJXLvRl4",
+    "NoCertificado": "30001000000500003416",
+    "Certificado": "MIIFsDCCA5igAwIBAgIUMz",
+    "FechaExp": "2024-03-04T00:00:00",
+    "LugarExpedicion": "45110",
+    "ClaveRetencion": "01",
     "DescripcionRetencion": "DESCRIPCION",
+    "RetencionRelacionada": {
+        "TipoRelacion": "02",
+        "Uuid": "9341a0a9-eade-4c20-9f6e-a58aa5438a6a"
+    },
     "Emisor": {
-        "Rfc": "MAG041126GT8",
-        "Nombre": "PREPARATORIA MIGUEL HIDALGO SA",
-        "RegimenFiscal": "MAG041126GPTWDMA01"
+        "Rfc": "EKU9003173C9",
+        "Nombre": "ESCUELA KEMPER URGATE",
+        "RegimenFiscal": "601"
     },
     "Receptor": {
-        "Nacionalidad": "Extranjero",
+        "Nacionalidad": "Nacional",
         "Nacional": {
-            "Rfc": "REDF465379RT1",
-            "Nombre": "Cliente Nacional",
-            "Curp": "REDF465379PTRASQ01"
+            "Rfc": "URE180429TM6",
+            "Nombre": "UNIVERSIDAD ROBOTICA ESPAÑOLA",
+            "Curp": "UREE180429TMRQPM10",
+            "DomicilioFiscal": "86991"
         },
         "Extranjero": {
-            "NumRegIdTrib": "ABCD10231",
-            "Nombre": "Cliente Extranjero"
+            "NumRegIdTrib": "URE180429TM6",
+            "Nombre": "UNIVERSIDAD ROBOTICA ESPAÑOLA"
         }
     },
     "Periodo": {
         "MesInicio": "01",
-        "MesFin": "01",
-        "Ejercicio": "2018"
+        "MesFin": "03",
+        "Ejercicio": "2023"
     },
     "Totales": {
-        "MontoTotalOperacion": 390,
-        "MontoTotalGravado": 90,
-        "MontoTotalExento": 10,
-        "MontoTotalRetenido": 10,
+        "MontoTotalOperacion": 2000,
+        "MontoTotalGravado": 2000,
+        "MontoTotalExento": 0,
+        "MontoTotalRetenido": 580,
+        "UtilidadBimestral": 0,
+        "IsrCorrespondiente": 0,
         "ImpuestosRetenidos": [
             {
-                "Base": 10,
+                "Base": 2000,
                 "Impuesto": "001",
-                "Monto": 10,
-                "TipoPago": "Pago definitivo"
+                "Monto": 580,
+                "TipoPago": "03"
             },
             {
-                "Base": 10,
+                "Base": 2000,
                 "Impuesto": "001",
-                "Monto": 10,
-                "TipoPago": "Pago definitivo"
+                "Monto": 580,
+                "TipoPago": "03"
             }
         ]
     },

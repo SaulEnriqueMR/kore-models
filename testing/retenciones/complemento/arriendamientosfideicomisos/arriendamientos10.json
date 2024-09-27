@@ -1,0 +1,10 @@
+{
+    "Version": "1.0",
+    "PagoEfectuadoPorFiduciario": 3,
+    "RendimientoFideicomiso": 3,
+    "DeduccionCorrespondiente": 4,
+    "MontoTotalRetenido": 5,
+    "MontoResultadoFiscalDistribuidoPorFibras": 6,
+    "MontoOtrosConceptosDistribuidos": 7,
+    "DescripcionMontos": "ArrendamientoEnFideicomiso"
+}

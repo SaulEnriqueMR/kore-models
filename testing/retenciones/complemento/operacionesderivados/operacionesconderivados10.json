@@ -1,5 +1,5 @@
 {
     "Version": "1.0",
-    "MontGanAcum": 1,
-    "MontPerdDed": 1
+    "MontoGananciaAcumulable": 1,
+    "MontoPerdidaDeducible": 1
 }

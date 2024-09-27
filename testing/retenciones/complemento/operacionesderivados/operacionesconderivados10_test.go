@@ -21,6 +21,6 @@ func GetOperacioneConDerivados10ForTest(filename string, t *testing.T) (opderiva
 func TestOperacionesConderivados10(t *testing.T) {
 	operacionesConDerivados, _ := GetOperacioneConDerivados10ForTest("./operacionesconderivados10.xml", t)
 	assert.Equal(t, "1.0", operacionesConDerivados.Version)
-	assert.Equal(t, 1.00, operacionesConDerivados.MontGanAcum)
-	assert.Equal(t, 1.00, operacionesConDerivados.MontPerdDed)
+	assert.Equal(t, 1.00, operacionesConDerivados.MontoGananciaAcumulable)
+	assert.Equal(t, 1.00, operacionesConDerivados.MontoPerdidaDeducible)
 }

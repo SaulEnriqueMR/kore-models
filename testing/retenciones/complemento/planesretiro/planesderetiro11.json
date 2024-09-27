@@ -1,20 +1,23 @@
 {
     "Version": "1.1",
-    "SistemaFinanc": "SI",
-    "MontTotAportAnioInmAnterior": 1000,
-    "MontIntRealesDevengAniooInmAnt": 100,
+    "SistemaFinanciero": "SI",
+    "ProvienenSistemaFinanciero": true,
+    "MontoTotalAportacionesAnioAnterior": 1000,
+    "MontoInteresesRealesDevengadosAnioAnterior": 100,
     "HuboRetirosAnioInmAntPer": "SI",
-    "MontTotRetiradoAnioInmAntPer": 10,
-    "MontTotExentRetiradoAnioInmAnt": 90,
-    "MontTotExedenteAnioInmAnt": 900,
+    "HuboRetirosAnioAnteriorAntesPermanencia": true,
+    "MontoTotalRetiradoAnioAnteriorPermanencia": 10,
+    "MontoTotalExentoRetiradoAnioAnterior": 90,
+    "MontoTotalExedenteAnioAnterior": 900,
     "HuboRetirosAnioInmAnt": "SI",
-    "MontTotRetiradoAnioInmAnt": 90,
-    "NumReferencia": "123456",
+    "HuboRetirosAnioAnterior": true,
+    "MontoTotalRetiradoAnioAnterior": 90,
+    "NoReferencia": "123456",
     "AportacionesODepositos": [
         {
-            "TipoAportacionODeposito": "a",
-            "MontAportODep": 1750,
-            "RFCFiduciaria": "AAA010101AAA"
+            "Tipo": "a",
+            "Monto": 1750,
+            "RfcFiduciaria": "AAA010101AAA"
         }
     ]
 }

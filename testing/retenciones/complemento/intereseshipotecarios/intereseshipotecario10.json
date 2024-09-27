@@ -1,0 +1,11 @@
+{
+    "Version": "1.0",
+    "CreditoOtorgadoInstitucionFinanciera": "SI",
+    "EsCreditoOtorgadoInstitucionFinanciera": true,
+    "SaldoInsoluto": 1000000,
+    "ProporcionDeducibleCredito": 0.5,
+    "MontoTotalInteresesNominalesDevengados": 30000,
+    "MontoTotalInteresesNominalesDevengadosYPagados": 25000,
+    "MontoTotalInteresesRealesPagsDeducibles": 12000,
+    "NoContrato": "ABC123456"
+}

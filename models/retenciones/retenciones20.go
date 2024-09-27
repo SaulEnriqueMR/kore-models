@@ -1,10 +1,14 @@
 package retenciones
 
 import (
-	"time"
+	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
+	date "github.com/SaulEnriqueMR/kore-models/models/helpers"
+	"strings"
 )
 
 type Retenciones20 struct {
+	documentofiscaldigital.DocumentoFiscalDigital
 	Version              string                  `xml:"Version,attr" bson:"Version"`
 	Folio                *string                 `xml:"FolioInt,attr" bson:"Folio,omitempty"`
 	Sello                string                  `xml:"Sello,attr" bson:"Sello"`
@@ -20,11 +24,6 @@ type Retenciones20 struct {
 	Periodo              Periodo20               `xml:"Periodo" bson:"Periodo"`
 	Totales              Totales20               `xml:"Totales" bson:"Totales"`
 	Complemento          *Complemento            `xml:"Complemento" bson:"Complemento,omitempty"`
-	/* Atributo convertido */
-	FechaEmision time.Time `bson:"FechaEmision"`
-	/* Atributos extraidos desde tfd */
-	Uuid          string    `bson:"Uuid"`
-	FechaTimbrado time.Time `bson:"FechaTimbrado"`
 }
 
 type RetencionRelacionada20 struct {
@@ -69,17 +68,16 @@ type Totales20 struct {
 	MontoTotalRetenido  float64               `xml:"MontoTotRet,attr" bson:"MontoTotalRetenido"`
 	UtilidadBimestral   *float64              `xml:"UtilidadBimestral,attr" bson:"UtilidadBimestral,omitempty"`
 	IsrCorrespondiente  *float64              `xml:"ISRCorrespondiente,attr" bson:"IsrCorrespondiente,omitempty"`
-	ImpuestosRetenidos  *[]ImpuestoRetenido20 `xml:"ImpRetenidos" bson:"ImpuestosRetenidos,omitempty"`
+	ImpuestosRetenidos  *[]ImpuestoRetenido20 `xml:"ImpRetenidos" bson:"Impuestos,omitempty"`
 }
 
 type ImpuestoRetenido20 struct {
-	Base     *float64 `xml:"BaseRet,attr" bson:"BaseRet,omitempty"`
-	Impuesto *string  `xml:"ImpuestoRet,attr" bson:"ImpuestoRet,omitempty"`
-	Monto    float64  `xml:"MontoRet,attr" bson:"MontoRet"`
-	TipoPago string   `xml:"TipoPagoRet,attr" bson:"TipoPagoRet"`
+	Base     *float64 `xml:"BaseRet,attr" bson:"Base,omitempty"`
+	Impuesto *string  `xml:"ImpuestoRet,attr" bson:"Impuesto,omitempty"`
+	Monto    float64  `xml:"MontoRet,attr" bson:"Monto"`
+	TipoPago string   `xml:"TipoPagoRet,attr" bson:"TipoPago"`
 }
 
-/*
 func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	// Create an alias to avoid recursion
 	type Alias Retenciones20
@@ -90,7 +88,7 @@ func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		return err
 	}
 
-	fechaEmision, err := documentofiscaldigital.ParseDatetime(aux.FechaExp)
+	fechaEmision, err := date.ParseDatetime(aux.FechaExp)
 	if err != nil {
 		return err
 	}
@@ -108,4 +106,4 @@ func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	}
 
 	return nil
-}*/
+}

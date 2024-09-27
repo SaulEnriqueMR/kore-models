@@ -19,9 +19,10 @@ func GetTurisDividendosForTest(filename string, t *testing.T) (dividendos1.Divid
 
 func TestFullDividendos(t *testing.T) {
 	dividendos, _ := GetTurisDividendosForTest("./dividendos10.xml", t)
+	testing2.GenerateJSONFromStructure("dividendos10.json", dividendos)
 	assert.NotNil(t, dividendos)
 	InternalTestDividendos(t, dividendos)
-	InternalTestDividOUtil(t, dividendos.DividOUtil)
+	InternalTestDividOUtil(t, dividendos.DividendoOUtilidad)
 	InternalTestRemanente(t, dividendos.Remanente)
 }
 
@@ -30,16 +31,16 @@ func InternalTestDividendos(t *testing.T, dividendos dividendos1.Dividendos10) {
 }
 
 func InternalTestDividOUtil(t *testing.T, dividOUtil *dividendos1.DividOUtilDividendos10) {
-	assert.Equal(t, "DIV123", dividOUtil.CveTipDivOUtil)
-	assert.Equal(t, 1500.50, dividOUtil.MontISRAcredRetMexico)
-	assert.Equal(t, 2000.75, dividOUtil.MontISRAcredRetExtranjero)
-	assert.Equal(t, 500.25, *dividOUtil.MontRetExtDivExt)
-	assert.Equal(t, "Sociedad Nacional", dividOUtil.TipoSocDistrDiv)
-	assert.Equal(t, 300.00, *dividOUtil.MontISRAcredNal)
-	assert.Equal(t, 1200.00, *dividOUtil.MontDivAcumNal)
-	assert.Equal(t, 800.00, *dividOUtil.MontDivAcumExt)
+	assert.Equal(t, "DIV123", dividOUtil.ClaveTipoDivendoOUtilidad)
+	assert.Equal(t, 1500.50, dividOUtil.MontoIsrRetenidoMexico)
+	assert.Equal(t, 2000.75, dividOUtil.MontoIsrRetenidoExtranjero)
+	assert.Equal(t, 500.25, *dividOUtil.MontoRetencionDividendoExtranjero)
+	assert.Equal(t, "Sociedad Nacional", dividOUtil.TipoSociedadDistribucionDividendo)
+	assert.Equal(t, 300.00, *dividOUtil.MontoIsrAcreditableNacional)
+	assert.Equal(t, 1200.00, *dividOUtil.MontoDividendoAcumulableNacional)
+	assert.Equal(t, 800.00, *dividOUtil.MontoDividendoAcumulableExtranjero)
 }
 
 func InternalTestRemanente(t *testing.T, remanente *dividendos1.RemanenteDividendos10) {
-	assert.Equal(t, 10.503456, *remanente.ProporcionRem)
+	assert.Equal(t, 10.503456, *remanente.ProporcionRemanente)
 }

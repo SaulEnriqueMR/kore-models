@@ -1,7 +1,7 @@
 {
     "Version": "1.0",
     "EntidadFederativa": "19",
-    "MontTotPago": 28263.91,
-    "MontTotPagoGrav": 28263.91,
-    "MontTotPagoExent": 0
+    "MontoTotalPago": 28263.91,
+    "MontTotalPagoGravado": 28263.91,
+    "MontTotalPagoExento": 0
 }

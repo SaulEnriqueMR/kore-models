@@ -2,25 +2,8 @@
 	"FechaEmision": "2023-09-24T14:30:00Z",
 	"Uuid": "3EA43E97-71BF-4AC5-A28E-9374EA9F8B45",
 	"FechaTimbrado": "2024-04-29T10:46:30Z",
-	"Vigente": false,
 	"CadenaOriginal": "",
-	"InformacionAdicional": {
-		"StampedByKuantik": false,
-		"Comentario": null,
-		"Desgloce": null,
-		"NotaPie": null,
-		"IdProyecto": null,
-		"Categoria": null
-	},
-	"Cancelacion": {
-		"CanceledByKuantik": false,
-		"MotivoCancelacion": null,
-		"FolioSustitucion": null,
-		"EstatusCancelacion": null,
-		"EsCancelable": null,
-		"FechaCancelacion": null
-	},
-	"Comprobante": false,
+	"Comprobante": true,
 	"Version": "3.3",
 	"Serie": "A",
 	"Folio": "123456",
@@ -39,7 +22,7 @@
 	"MetodoPago": "PUE",
 	"LugarExpedicion": "01234",
 	"Confirmacion": "ABCDE",
-	"CfdiRelacionados": {
+	"CfdisRelacionados": {
 		"TipoRelacion": "01",
 		"CfdiRelacionado": [
 			{
@@ -331,6 +314,7 @@
 										{
 											"Numero": "AAA1212129",
 											"Fecha": "2016-04-11",
+											"FechaDate": "2016-04-11T00:00:00Z",
 											"Aduana": "Tijuana"
 										}
 									],
@@ -352,6 +336,7 @@
 										{
 											"Numero": "AAA1212129",
 											"Fecha": "2016-04-11",
+											"FechaDate": "2016-04-11T00:00:00Z",
 											"Aduana": "Tijuana"
 										}
 									],
@@ -376,6 +361,7 @@
 										{
 											"Numero": "AAA1212129",
 											"Fecha": "2016-04-11",
+											"FechaDate": "2016-04-11T00:00:00Z",
 											"Aduana": "Tijuana"
 										}
 									],
@@ -398,6 +384,7 @@
 										{
 											"Numero": "AAA1212129",
 											"Fecha": "2016-04-11",
+											"FechaDate": "2016-04-11T00:00:00Z",
 											"Aduana": "Tijuana"
 										}
 									],
@@ -971,6 +958,7 @@
 							"NombreEstacion": "Estación 1",
 							"NavegacionTrafico": "Altura",
 							"FechaHoraSalidaLlegada": "2024-09-20T08:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-20T08:30:00Z",
 							"TipoEstacion": "Terrestre",
 							"DistanciaRecorrida": 150.5,
 							"Domicilio": {
@@ -997,6 +985,7 @@
 							"NombreEstacion": "Estación 2",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-21T12:45:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-21T12:45:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 350.75,
 							"Domicilio": {
@@ -1023,6 +1012,7 @@
 							"NombreEstacion": "Estación 3",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-22T16:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-22T16:30:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 220,
 							"Domicilio": null
@@ -1421,6 +1411,7 @@
 							"NombreEstacion": "Estación 1",
 							"NavegacionTrafico": "Altura",
 							"FechaHoraSalidaLlegada": "2024-09-20T08:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-20T08:30:00Z",
 							"TipoEstacion": "Terrestre",
 							"DistanciaRecorrida": 150.5,
 							"Domicilio": {
@@ -1447,6 +1438,7 @@
 							"NombreEstacion": "Estación 2",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-21T12:45:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-21T12:45:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 350.75,
 							"Domicilio": {
@@ -1473,6 +1465,7 @@
 							"NombreEstacion": "Estación 3",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-22T16:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-22T16:30:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 220,
 							"Domicilio": null
@@ -1883,6 +1876,7 @@
 							"NombreEstacion": "Estación 1",
 							"NavegacionTrafico": "Altura",
 							"FechaHoraSalidaLlegada": "2024-09-20T08:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-20T08:30:00Z",
 							"TipoEstacion": "Terrestre",
 							"DistanciaRecorrida": 150.5,
 							"Domicilio": {
@@ -1909,6 +1903,7 @@
 							"NombreEstacion": "Estación 2",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-21T12:45:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-21T12:45:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 350.75,
 							"Domicilio": {
@@ -1935,6 +1930,7 @@
 							"NombreEstacion": "Estación 3",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-22T16:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-22T16:30:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 220,
 							"Domicilio": null
@@ -2353,6 +2349,7 @@
 							"NombreEstacion": "Estación 1",
 							"NavegacionTrafico": "Altura",
 							"FechaHoraSalidaLlegada": "2024-09-20T08:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-20T08:30:00Z",
 							"TipoEstacion": "Terrestre",
 							"DistanciaRecorrida": 150.5,
 							"Domicilio": {
@@ -2379,6 +2376,7 @@
 							"NombreEstacion": "Estación 2",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-21T12:45:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-21T12:45:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 350.75,
 							"Domicilio": {
@@ -2405,6 +2403,7 @@
 							"NombreEstacion": "Estación 3",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-22T16:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-22T16:30:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 220,
 							"Domicilio": null
@@ -3828,6 +3827,7 @@
 						{
 							"NumPedImp": "2390321",
 							"Fecha": "2014-01-23",
+							"FechaDate": "2014-01-23T00:00:00Z",
 							"Aduana": "Aduana"
 						}
 					]
@@ -3853,6 +3853,7 @@
 						{
 							"NumPedImp": "2390321",
 							"Fecha": "2014-01-23",
+							"FechaDate": "2014-01-23T00:00:00Z",
 							"Aduana": "Aduana"
 						}
 					]
@@ -3878,6 +3879,7 @@
 						{
 							"NumPedImp": "2390321",
 							"Fecha": "2014-01-23",
+							"FechaDate": "2014-01-23T00:00:00Z",
 							"Aduana": "Aduana"
 						}
 					]
@@ -3904,6 +3906,7 @@
 			"SpeiTercero": [
 				{
 					"FechaOperacion": "2016-04-07",
+					"FechaOperacionDate": "2016-04-07T00:00:00Z",
 					"Hora": "07:20:17.635",
 					"ClaveSPEI": "23837",
 					"Sello": "v7Uq8JveMHDigYBN1mgeUqtAeuCRnTIDE1IpvEQWCCwttZkEOA7OZe+JzdgkLGMlhCzlFMTp3aOZkhhK7WPZXHeov1XlxevfctNqGl1sQWOyZjqqEmngliZppl4dr",
@@ -3933,6 +3936,7 @@
 				},
 				{
 					"FechaOperacion": "2016-04-07",
+					"FechaOperacionDate": "2016-04-07T00:00:00Z",
 					"Hora": "07:20:17.635",
 					"ClaveSPEI": "23837",
 					"Sello": "v7Uq8JveMHDigYBN1mgeUqtAeuCRnTIDE1IpvEQWCCwttZkEOA7OZe+JzdgkLGMlhCzlFMTp3aOZkhhK7WPZXHeov1XlxevfctNqGl1sQWOyZjqqEmngliZppl4dr",
@@ -3962,6 +3966,7 @@
 				},
 				{
 					"FechaOperacion": "2016-04-07",
+					"FechaOperacionDate": "2016-04-07T00:00:00Z",
 					"Hora": "07:20:17.635",
 					"ClaveSPEI": "23837",
 					"Sello": "v7Uq8JveMHDigYBN1mgeUqtAeuCRnTIDE1IpvEQWCCwttZkEOA7OZe+JzdgkLGMlhCzlFMTp3aOZkhhK7WPZXHeov1XlxevfctNqGl1sQWOyZjqqEmngliZppl4dr",
@@ -4316,10 +4321,7 @@
 										"Date": "2016-04-07T00:00:00Z"
 									},
 									"NameAndAddress": {
-										"Name": "TIJUANA",
-										"StreetAddressOne": null,
-										"City": null,
-										"PostalCode": null
+										"Name": "TIJUANA"
 									}
 								}
 							],
@@ -4341,7 +4343,7 @@
 								"LotNumber": [
 									{
 										"ProductionDateString": "2016-04-07",
-										"ProductionDate": "2016-04-07T00:00:00Z",
+										"ProductionDate": "0001-01-01T00:00:00Z",
 										"Value": "1123"
 									}
 								]
@@ -4606,10 +4608,7 @@
 										"Date": "2016-04-07T00:00:00Z"
 									},
 									"NameAndAddress": {
-										"Name": "TIJUANA",
-										"StreetAddressOne": null,
-										"City": null,
-										"PostalCode": null
+										"Name": "TIJUANA"
 									}
 								}
 							],
@@ -4631,7 +4630,7 @@
 								"LotNumber": [
 									{
 										"ProductionDateString": "2016-04-07",
-										"ProductionDate": "2016-04-07T00:00:00Z",
+										"ProductionDate": "0001-01-01T00:00:00Z",
 										"Value": "1123"
 									}
 								]
@@ -4896,10 +4895,7 @@
 										"Date": "2016-04-07T00:00:00Z"
 									},
 									"NameAndAddress": {
-										"Name": "TIJUANA",
-										"StreetAddressOne": null,
-										"City": null,
-										"PostalCode": null
+										"Name": "TIJUANA"
 									}
 								}
 							],
@@ -4921,7 +4917,7 @@
 								"LotNumber": [
 									{
 										"ProductionDateString": "2016-04-07",
-										"ProductionDate": "2016-04-07T00:00:00Z",
+										"ProductionDate": "0001-01-01T00:00:00Z",
 										"Value": "1123"
 									}
 								]
@@ -5201,6 +5197,7 @@
 									"MontoIVAPedimento": 100,
 									"OtrosImpuestosPagadosPedimento": 20,
 									"FechaFolioFiscalVinculado": "2024-01-15",
+									"FechaFolioFiscalVinculadoDate": "2024-01-15T00:00:00Z",
 									"Mes": "Febrero",
 									"MontoTotalErogaciones": 3000
 								}
@@ -5262,6 +5259,7 @@
 									"MontoIVAPedimento": 100,
 									"OtrosImpuestosPagadosPedimento": 20,
 									"FechaFolioFiscalVinculado": "2024-01-15",
+									"FechaFolioFiscalVinculadoDate": "2024-01-15T00:00:00Z",
 									"Mes": "Febrero",
 									"MontoTotalErogaciones": 3000
 								}
@@ -5323,6 +5321,7 @@
 									"MontoIVAPedimento": 100,
 									"OtrosImpuestosPagadosPedimento": 20,
 									"FechaFolioFiscalVinculado": "2024-01-15",
+									"FechaFolioFiscalVinculadoDate": "2024-01-15T00:00:00Z",
 									"Mes": "Febrero",
 									"MontoTotalErogaciones": 3000
 								}
@@ -5503,8 +5502,11 @@
 					"TipoRegimen": 2,
 					"NumSeguridadSocial": "123456789012345",
 					"FechaPago": "2024-09-18",
+					"FechaPagoDate": "2024-09-18T00:00:00Z",
 					"FechaInicialPago": "2023-09-01",
+					"FechaInicialPagoDate": "2023-09-01T00:00:00Z",
 					"FechaFinalPago": "2023-09-15",
+					"FechaFinalPagoDate": "2023-09-15T00:00:00Z",
 					"NumDiasPagados": 14,
 					"Departamento": "Contabilidad",
 					"Clabe": "012345678901234567",
@@ -5597,8 +5599,11 @@
 					"TipoRegimen": 2,
 					"NumSeguridadSocial": "123456789012345",
 					"FechaPago": "2024-09-18",
+					"FechaPagoDate": "2024-09-18T00:00:00Z",
 					"FechaInicialPago": "2023-09-01",
+					"FechaInicialPagoDate": "2023-09-01T00:00:00Z",
 					"FechaFinalPago": "2023-09-15",
+					"FechaFinalPagoDate": "2023-09-15T00:00:00Z",
 					"NumDiasPagados": 14,
 					"Departamento": "Contabilidad",
 					"Clabe": "012345678901234567",

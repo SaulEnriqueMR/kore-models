@@ -34,6 +34,14 @@ func ParseDatetime(s string) (time.Time, error) {
 		isoDate, err := time.Parse(Rfc3339DatetimeLayout, trimmedString)
 		return isoDate, err
 	}
+
+	// Caso extraordinario Retenciones 1.0. Ejemplo "2019-10-20T16:35:28-06:00"
+	layout := time.RFC3339
+	parsedTime, err := time.Parse(layout, trimmedString)
+	if err == nil {
+		return parsedTime, err
+	}
+
 	// En caso de que sea rfc3339 nativo de golang
 	return time.Time{}, errors.New("error parsing datetime. String does not match supported patterns")
 }

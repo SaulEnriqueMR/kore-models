@@ -1,0 +1,23 @@
+{
+    "Version": "1.0",
+    "IngresosOEntradas": {
+        "MontoTotalEntradasPeriodo": 300,
+        "ParteProporcionalAcumulableFideicomiso": 300,
+        "ProporcionMontoTotal": 800,
+        "IntegracionIngresos": {
+            "Concepto": "CONCEPTO2"
+        }
+    },
+    "DeduccionesOSalidas": {
+        "MontoTotalEgresosPeriodo": 50,
+        "ParteProporcionalFideicomiso": 0,
+        "ProporcionMontoTotal": 800,
+        "IntegracionEgresos": {
+            "Concepto": "CONCEPTO2"
+        }
+    },
+    "RetencionesEfectuadasFideicomiso": {
+        "MontoRetencionRelacionadaFideicomiso": 750.45,
+        "DescripcionRetencionRelacionadaFideicomiso": "DESCRIPCION"
+    }
+}

@@ -27,9 +27,9 @@ type Comprobante33 struct {
 	Total                                         float64             `xml:"Total,attr" bson:"Total"`
 	TipoComprobante                               string              `xml:"TipoDeComprobante,attr" bson:"TipoComprobante"`
 	MetodoPago                                    *string             `xml:"MetodoPago,attr" bson:"MetodoPago,omitempty"`
-	LugarExpedicion                               string              `xml:"LugarExpedicion,attr" bson:"LugarExpedicion"` // Cifrado
+	LugarExpedicion                               string              `xml:"LugarExpedicion,attr" bson:"LugarExpedicion"`
 	Confirmacion                                  *string             `xml:"Confirmacion,attr" bson:"Confirmacion,omitempty"`
-	CfdiRelacionados                              *CfdiRelacionados33 `xml:"CfdiRelacionados" bson:"CfdiRelacionados,omitempty"`
+	CfdisRelacionados                             *CfdiRelacionados33 `xml:"CfdiRelacionados" bson:"CfdisRelacionados,omitempty"`
 	Emisor                                        Emisor33            `xml:"Emisor" bson:"Emisor"`
 	Receptor                                      Receptor33          `xml:"Receptor" bson:"Receptor"`
 	Conceptos                                     []Concepto33        `xml:"Conceptos>Concepto" bson:"Conceptos"`

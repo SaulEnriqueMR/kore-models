@@ -55,15 +55,15 @@ type UuidRelacionado40 struct {
 }
 
 type Emisor40 struct {
-	Rfc              string  `xml:"Rfc,attr" bson:"Rfc"`       // Cifrado
-	Nombre           string  `xml:"Nombre,attr" bson:"Nombre"` // Cifrado
+	Rfc              string  `xml:"Rfc,attr" bson:"Rfc"`
+	Nombre           string  `xml:"Nombre,attr" bson:"Nombre"`
 	RegimenFiscal    string  `xml:"RegimenFiscal,attr" bson:"RegimenFiscal"`
 	FactAtrAdquirent *string `xml:"FacAtrAdquirente,attr" bson:"FacAtrAdquirent,omitempty"`
 }
 
 type Receptor40 struct {
-	Rfc              string  `xml:"Rfc,attr" bson:"Rfc"`       // Cifrado
-	Nombre           string  `xml:"Nombre,attr" bson:"Nombre"` // Cifrado
+	Rfc              string  `xml:"Rfc,attr" bson:"Rfc"`
+	Nombre           string  `xml:"Nombre,attr" bson:"Nombre"`
 	DomicilioFiscal  string  `xml:"DomicilioFiscalReceptor,attr" bson:"DomicilioFiscal"`
 	ResidenciaFiscal *string `xml:"ResidenciaFiscal,attr" bson:"ResidenciaFiscal,omitempty"`
 	NumRegIdTrib     *string `xml:"NumRegIdTrib,attr" bson:"NumRegIdTrib,omitempty"`
@@ -81,7 +81,7 @@ type Concepto40 struct {
 	ValorUnitario       float64                  `xml:"ValorUnitario,attr" bson:"ValorUnitario"`
 	Importe             float64                  `xml:"Importe,attr" bson:"Importe"`
 	Descuento           *float64                 `xml:"Descuento,attr" bson:"Descuento,omitempty"`
-	ObjetoImp           string                   `xml:"ObjetoImp,attr" bson:"ObjetoImp"`
+	ObjetoImpuesto      string                   `xml:"ObjetoImp,attr" bson:"ObjetoImpuesto"`
 	Impuestos           *ImpuestosConcepto40     `xml:"Impuestos" bson:"Impuestos,omitempty"`
 	ACuentaTerceros     *ACuentaTerceros40       `xml:"ACuentaTerceros" bson:"ACuentaTerceros,omitempty"`
 	InformacionAduanera *[]InformacionAduanera40 `xml:"InformacionAduanera" bson:"InformacionAduanera,omitempty"`

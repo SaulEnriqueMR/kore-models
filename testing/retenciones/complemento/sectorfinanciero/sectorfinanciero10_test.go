@@ -21,7 +21,7 @@ func GetSectorFinanciero10ForTest(filename string, t *testing.T) (sectfinan2.Sec
 func TestSectorFinanciero10(t *testing.T) {
 	sectorFinanciero10, _ := GetSectorFinanciero10ForTest("./sectorfinanciero10.xml", t)
 	assert.Equal(t, "1.0", sectorFinanciero10.Version)
-	assert.Equal(t, "111111", sectorFinanciero10.IdFideicom)
-	assert.Equal(t, "NOMBRE FIDEICOMISO", *sectorFinanciero10.NomFideicom)
-	assert.Equal(t, "OBJETO/FIN FIDEICOMISO", sectorFinanciero10.DescripFideicom)
+	assert.Equal(t, "111111", sectorFinanciero10.IdFideicomiso)
+	assert.Equal(t, "NOMBRE FIDEICOMISO", *sectorFinanciero10.NombreFideicomiso)
+	assert.Equal(t, "OBJETO/FIN FIDEICOMISO", sectorFinanciero10.DescripcionFideicomiso)
 }

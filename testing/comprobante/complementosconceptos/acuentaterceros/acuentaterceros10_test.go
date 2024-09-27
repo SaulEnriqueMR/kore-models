@@ -19,7 +19,7 @@ func GetACuentaTercerosForTest(filename string, t *testing.T) (acuentaterceros.A
 }
 
 func TestFullACuentaTerceros(t *testing.T) {
-	cuenta, _ := GetACuentaTercerosForTest("./cuentaterceros.xml", t)
+	cuenta, _ := GetACuentaTercerosForTest("./acuentaterceros10.xml", t)
 	InternalBaseAttributes(t, cuenta)
 	InternalTestInformacionFiscalTercero(t, cuenta.InformacionFiscalTercero)
 	InternalTestInformacionAduaneraBaseTerceros11(t, cuenta.InformacionAduanera)

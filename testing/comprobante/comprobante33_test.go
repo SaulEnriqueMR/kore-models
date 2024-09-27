@@ -24,7 +24,7 @@ func GetComprobante33ForTest(filename string, t *testing.T) (comprobante3.Compro
 func TestComprobante33(t *testing.T) {
 	comprobante33, _ := GetComprobante33ForTest("./comprobante33.xml", t)
 	InternalTestFullAtributesComprobante33(t, comprobante33)
-	InternalTestFullAtributesCfdiRelacionados(t, *comprobante33.CfdiRelacionados)
+	InternalTestFullAtributesCfdiRelacionados(t, *comprobante33.CfdisRelacionados)
 	InternalTestFullAtributesEmisorComprobante33(t, comprobante33.Emisor)
 	InternalTestFullAtributesReceptorComprobante33(t, comprobante33.Receptor)
 	InternalTestFullAtributesImpuestosComprobante33(t, *comprobante33.Impuestos)

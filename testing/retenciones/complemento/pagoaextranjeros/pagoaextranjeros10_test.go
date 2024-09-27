@@ -18,9 +18,11 @@ func GetPagoAExtranjeros10ForTest(filename string, t *testing.T) (pagosaextranje
 
 func TestFullPagoATerceros10(t *testing.T) {
 	pagoExtranjeros, _ := GetPagoAExtranjeros10ForTest("./pagoaextranjeros10.xml", t)
+	testing2.GenerateJSONFromStructure("pagoaextranjeros10.json", pagoExtranjeros)
 
 	assert.Equal(t, "1.0", pagoExtranjeros.Version)
 	assert.Equal(t, "NO", pagoExtranjeros.EsBenefEfectDelCobro)
+	assert.Equal(t, false, pagoExtranjeros.EsBeneficiarioEfectivoCobro)
 
 	InternalTestNoBeneficiario10(t, pagoExtranjeros.NoBeneficiario)
 	InternalTestBeneficiario10(t, pagoExtranjeros.Beneficiario)
@@ -29,7 +31,7 @@ func TestFullPagoATerceros10(t *testing.T) {
 func InternalTestNoBeneficiario10(t *testing.T, noBeneficiario10 *pagosaextranjeros.NoBeneficiarioPagosExtran10) {
 	assert.NotNil(t, noBeneficiario10)
 
-	assert.Equal(t, "US", noBeneficiario10.PaisDeResidParaEfecFisc)
+	assert.Equal(t, "US", noBeneficiario10.ResidenciaFiscal)
 	assert.Equal(t, "Artistas, deportistas y espectáculos públicos", noBeneficiario10.DescripcionConcepto)
 	assert.Equal(t, "1", noBeneficiario10.ConceptoPago)
 }

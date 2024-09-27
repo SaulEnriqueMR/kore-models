@@ -1,6 +1,6 @@
 {
     "Version": "1.0",
-    "IdFideicom": "111111",
-    "NomFideicom": "NOMBRE FIDEICOMISO",
-    "DescripFideicom": "OBJETO/FIN FIDEICOMISO"
+    "IdFideicomiso": "111111",
+    "NombreFideicomiso": "NOMBRE FIDEICOMISO",
+    "DescripcionFideicomiso": "OBJETO/FIN FIDEICOMISO"
 }

@@ -1,30 +1,35 @@
 package fideicomisonoempresarial
 
 type FideicomisoEmpresarial10 struct {
-	Version           string            `xml:"Version,attr" bson:"Version"`
-	IngresosOEntradas IngresosOEntradas `xml:"IngresosOEntradas" bson:"IngresosOEntradas"`
-	DeduccOSalidas    DeduccOSalidas    `xml:"DeduccOSalidas" bson:"DeduccOSalidas"`
-	Retenciones       Retenciones       `xml:"RetEfectFideicomiso" bson:"Retenciones"`
+	Version                          string                           `xml:"Version,attr" bson:"Version"`
+	IngresosOEntradas                IngresosOEntradas                `xml:"IngresosOEntradas" bson:"IngresosOEntradas"`
+	DeduccionesOSalidas              DeduccOSalidas                   `xml:"DeduccOSalidas" bson:"DeduccionesOSalidas"`
+	RetencionesEfectuadasFideicomiso RetencionesEfectuadasFideicomiso `xml:"RetEfectFideicomiso" bson:"RetencionesEfectuadasFideicomiso"`
 }
 
 type IngresosOEntradas struct {
-	MontTotEntradasPeriodo  float64          `xml:"MontTotEntradasPeriodo,attr" bson:"MontTotEntradasPeriodo"`
-	PartPropAcumDelFideicom float64          `xml:"PartPropAcumDelFideicom,attr" bson:"PartPropAcumDelFideicom"`
-	PropDelMontTot          float64          `xml:"PropDelMontTot,attr" bson:"PropDelMontTot"`
-	IntegracIngresos        IntegracIngresos `xml:"IntegracIngresos" bson:"IntegracIngresos"`
+	MontoTotalEntradasPeriodo              float64             `xml:"MontTotEntradasPeriodo,attr" bson:"MontoTotalEntradasPeriodo"`
+	ParteProporcionalAcumulableFideicomiso float64             `xml:"PartPropAcumDelFideicom,attr" bson:"ParteProporcionalAcumulableFideicomiso"`
+	ProporcionMontoTotal                   float64             `xml:"PropDelMontTot,attr" bson:"ProporcionMontoTotal"`
+	IntegracionIngresos                    IntegracionIngresos `xml:"IntegracIngresos" bson:"IntegracionIngresos"`
 }
 
-type IntegracIngresos struct {
+type IntegracionIngresos struct {
 	Concepto string `xml:"Concepto,attr" bson:"Concepto"`
 }
 
 type DeduccOSalidas struct {
-	MontTotEgresPeriodo float64 `xml:"MontTotEgresPeriodo,attr" bson:"MontTotEgresPeriodo"`
-	PartPropDelFideicom float64 `xml:"PartPropDelFideicom,attr" bson:"PartPropDelFideicom"`
-	PropDelMontTot      float64 `xml:"PropDelMontTot,attr" bson:"PropDelMontTot"`
+	MontoTotalEgresosPeriodo     float64            `xml:"MontTotEgresPeriodo,attr" bson:"MontoTotalEgresosPeriodo"`
+	ParteProporcionalFideicomiso float64            `xml:"PartPropDelFideicom,attr" bson:"ParteProporcionalFideicomiso"`
+	ProporcionMontoTotal         float64            `xml:"PropDelMontTot,attr" bson:"ProporcionMontoTotal"`
+	IntegracionEgresos           IntegracionEgresos `xml:"IntegracEgresos" bson:"IntegracionEgresos"`
 }
 
-type Retenciones struct {
-	MontRetRelPagFideic float64 `xml:"MontRetRelPagFideic,attr" bson:"MontRetRelPagFideic"`
-	DescRetRelPagFideic string  `xml:"DescRetRelPagFideic,attr" bson:"DescRetRelPagFideic"`
+type IntegracionEgresos struct {
+	Concepto string `xml:"ConceptoS,attr" bson:"Concepto"`
+}
+
+type RetencionesEfectuadasFideicomiso struct {
+	MontoRetencionRelacionadaFideicomiso       float64 `xml:"MontRetRelPagFideic,attr" bson:"MontoRetencionRelacionadaFideicomiso"`
+	DescripcionRetencionRelacionadaFideicomiso string  `xml:"DescRetRelPagFideic,attr" bson:"DescripcionRetencionRelacionadaFideicomiso"`
 }

@@ -20,15 +20,20 @@ func GetInteresesForTest(filename string, t *testing.T) (intereses1.Intereses10,
 func TestFullIntereses(t *testing.T) {
 	intereses, _ := GetInteresesForTest("./intereses10.xml", t)
 	assert.NotNil(t, intereses)
+	testing2.GenerateJSONFromStructure("intereses10.json", intereses)
+
 	InternalTestIntereses(t, intereses)
 }
 
 func InternalTestIntereses(t *testing.T, intereses intereses1.Intereses10) {
 	assert.Equal(t, "1.0", intereses.Version)
-	assert.Equal(t, "SI", intereses.SistFinanciero)
-	assert.Equal(t, "NO", intereses.RetiroAORESRetInt)
-	assert.Equal(t, "NO", intereses.OperFinancDerivad)
-	assert.Equal(t, 1500.00, intereses.MontIntNominal)
-	assert.Equal(t, 1200.00, intereses.MontIntReal)
+	assert.Equal(t, "SI", intereses.SistemaFinanciero)
+	assert.Equal(t, true, intereses.ProvienenSistemaFinanciero)
+	assert.Equal(t, "NO", intereses.RetiroIntereses)
+	assert.Equal(t, false, intereses.HuboRetiroIntereses)
+	assert.Equal(t, "NO", intereses.OperacionFinancieraDerivada)
+	assert.Equal(t, false, intereses.CorrespondeOperacionFinancieraDerivada)
+	assert.Equal(t, 1500.00, intereses.MontoInteresNominal)
+	assert.Equal(t, 1200.00, intereses.MontoInteresReal)
 	assert.Equal(t, 100.00, intereses.Perdida)
 }

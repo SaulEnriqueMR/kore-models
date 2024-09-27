@@ -1,7 +1,7 @@
 {
     "FechaEmision": "2024-03-04T00:00:00Z",
-    "Uuid": "",
-    "FechaTimbrado": "0001-01-01T00:00:00Z",
+    "Uuid": "3EA43E97-71BF-4AC5-A28E-9374EA9F8B45",
+    "FechaTimbrado": "2024-04-29T10:46:30Z",
     "CadenaOriginal": "",
     "Comprobante": false,
     "Version": "2.0",
@@ -340,7 +340,44 @@
                 }
             ]
         },
-        "PagosAExtranjeros": null,
+        "PagosAExtranjeros": {
+            "PagosAExtranjeros10": [
+                {
+                    "Version": "1.0",
+                    "EsBenefEfectDelCobro": "NO",
+                    "EsBeneficiarioEfectivoCobro": false,
+                    "NoBeneficiario": {
+                        "ResidenciaFiscal": "US",
+                        "ConceptoPago": "1",
+                        "DescripcionConcepto": "Artistas, deportistas y espectáculos públicos"
+                    },
+                    "Beneficiario": {
+                        "Rfc": "EKU9003173C9",
+                        "Curp": "EKUW9003173C9RPB01",
+                        "Nombre": "ESCUELA KEMPER URGATE",
+                        "ConceptoPago": "1",
+                        "DescripcionConcepto": "Artistas, deportistas y espectáculos públicos"
+                    }
+                },
+                {
+                    "Version": "1.0",
+                    "EsBenefEfectDelCobro": "NO",
+                    "EsBeneficiarioEfectivoCobro": false,
+                    "NoBeneficiario": {
+                        "ResidenciaFiscal": "US",
+                        "ConceptoPago": "1",
+                        "DescripcionConcepto": "Artistas, deportistas y espectáculos públicos"
+                    },
+                    "Beneficiario": {
+                        "Rfc": "EKU9003173C9",
+                        "Curp": "EKUW9003173C9RPB01",
+                        "Nombre": "ESCUELA KEMPER URGATE",
+                        "ConceptoPago": "1",
+                        "DescripcionConcepto": "Artistas, deportistas y espectáculos públicos"
+                    }
+                }
+            ]
+        },
         "PlanesDeRetiro": {
             "PlanesDeRetiro10": [
                 {
@@ -584,6 +621,35 @@
                 }
             ]
         },
-        "TimbreFiscalDigital": null
+        "TimbreFiscalDigital": {
+            "TimbreFiscalDigital11": {
+                "XMLName": {
+                    "Space": "http://www.sat.gob.mx/TimbreFiscalDigital",
+                    "Local": "TimbreFiscalDigital"
+                },
+                "Version": "1.1",
+                "Uuid": "3ea43e97-71bf-4ac5-a28e-9374ea9f8b45",
+                "Fecha": "2024-04-29T10:46:30",
+                "FechaTimbrado": "2024-04-29T10:46:30Z",
+                "RfcProvCertif": "SPR190613I52",
+                "Leyenda": "Leyenda SAT",
+                "SelloCfd": "AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3",
+                "NoCertificadoSat": "30001000000500003456",
+                "SelloSat": "QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"
+            },
+            "TimbreFiscalDigital10": {
+                "XMLName": {
+                    "Space": "http://www.sat.gob.mx/TimbreFiscalDigital",
+                    "Local": "TimbreFiscalDigital"
+                },
+                "Version": "1.0",
+                "Uuid": "3ea43e97-71bf-4ac5-a28e-9374ea9f8b45",
+                "Fecha": "2024-04-29T10:46:30",
+                "FechaTimbrado": "2024-04-29T10:46:30Z",
+                "SelloCfd": "AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3",
+                "NoCertificadoSat": "30001000000500003456",
+                "SelloSat": "QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"
+            }
+        }
     }
 }

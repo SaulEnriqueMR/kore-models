@@ -53,4 +53,7 @@ func InternalTestFullAtributesComplementoRetenciones(t *testing.T, complemento r
 	assert.Equal(t, 2, len(*complemento.Premios.Premios10))
 	assert.Equal(t, 3, len(*complemento.SectorFinanciero.SectorFinanciero10))
 	assert.Equal(t, 3, len(*complemento.ServiciosPlataformasTecnologicas.ServiciosPlataformasTecnologicas10))
+	assert.Equal(t, 2, len(*complemento.PagosAExtranjeros.PagosAExtranjeros10))
+	assert.NotNil(t, complemento.TimbreFiscalDigital.TimbreFiscalDigital10)
+	assert.NotNil(t, complemento.TimbreFiscalDigital.TimbreFiscalDigital11)
 }

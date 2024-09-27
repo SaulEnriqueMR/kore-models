@@ -353,5 +353,63 @@
                 </DetallesDelServicio>
             </Servicios>
         </retenciones:ServiciosPlataformasTecnologicas>
+        <tfd:TimbreFiscalDigital
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv10.xsd"
+                xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+                version="1.0"
+                UUID="3ea43e97-71bf-4ac5-a28e-9374ea9f8b45"
+                FechaTimbrado="2024-04-29T10:46:30"
+                selloCFD="AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3"
+                noCertificadoSAT="30001000000500003456"
+                selloSAT="QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"
+        />
+        <tfd:TimbreFiscalDigital
+                xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd"
+                xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                Version="1.1" UUID="3ea43e97-71bf-4ac5-a28e-9374ea9f8b45"
+                Leyenda="Leyenda SAT"
+                FechaTimbrado="2024-04-29T10:46:30"
+                RfcProvCertif="SPR190613I52"
+                SelloCFD="AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3"
+                NoCertificadoSAT="30001000000500003456"
+                SelloSAT="QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"/>
+        <pagosaextranjeros:Pagosaextranjeros
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros/pagosaextranjeros.xsd"
+                xmlns:pagosaextranjeros="http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros"
+                Version="1.0"
+                EsBenefEfectDelCobro="NO">
+            <pagosaextranjeros:NoBeneficiario
+                    PaisDeResidParaEfecFisc="US"
+                    DescripcionConcepto="Artistas, deportistas y espectáculos públicos"
+                    ConceptoPago="1" />
+            <pagosaextranjeros:Beneficiario
+                    RFC="EKU9003173C9"
+                    CURP="EKUW9003173C9RPB01"
+                    NomDenRazSocB="ESCUELA KEMPER URGATE"
+                    ConceptoPago="1"
+                    DescripcionConcepto="Artistas, deportistas y espectáculos públicos"
+            />
+        </pagosaextranjeros:Pagosaextranjeros>
+        <pagosaextranjeros:Pagosaextranjeros
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros/pagosaextranjeros.xsd"
+                xmlns:pagosaextranjeros="http://www.sat.gob.mx/esquemas/retencionpago/1/pagosaextranjeros"
+                Version="1.0"
+                EsBenefEfectDelCobro="NO">
+            <pagosaextranjeros:NoBeneficiario
+                    PaisDeResidParaEfecFisc="US"
+                    DescripcionConcepto="Artistas, deportistas y espectáculos públicos"
+                    ConceptoPago="1" />
+            <pagosaextranjeros:Beneficiario
+                    RFC="EKU9003173C9"
+                    CURP="EKUW9003173C9RPB01"
+                    NomDenRazSocB="ESCUELA KEMPER URGATE"
+                    ConceptoPago="1"
+                    DescripcionConcepto="Artistas, deportistas y espectáculos públicos"
+            />
+        </pagosaextranjeros:Pagosaextranjeros>
     </retenciones:Complemento>
 </retenciones:Retenciones>

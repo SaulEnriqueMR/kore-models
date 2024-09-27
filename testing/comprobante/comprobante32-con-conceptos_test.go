@@ -41,6 +41,7 @@ func InternalTestComplementoConceptoComprobante33(t *testing.T) {
 
 func InternalTestFullAtributesComplementoConcepto(t *testing.T, complementoConcepto comprobantes.ComplementoConcepto) {
 	assert.NotNil(t, complementoConcepto)
+	assert.Equal(t, 3, len(*complementoConcepto.AcreditamientoIeps.AcreditamientoIeps10))
 	assert.Equal(t, 3, len(*complementoConcepto.InstitucionesEducativas.InstitucioneEducativas10))
 	assert.Equal(t, 3, len(*complementoConcepto.ACuentaTerceros.ACuentaTerceros11))
 	assert.Equal(t, 2, len(*complementoConcepto.VentaVehiculos.VentaVehiculos11))

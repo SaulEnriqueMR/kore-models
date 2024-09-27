@@ -27,6 +27,7 @@ import (
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/turistapasajeroextranjero"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/valesdespensa"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/vehiculousado"
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/acreditamientoieps"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/acuentaterceros"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/institeducativas"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/ventavehiculos"
@@ -37,6 +38,7 @@ type ComplementoConcepto struct {
 	ACuentaTerceros         *acuentaterceros.ACuentaTerceros         `xml:"PorCuentadeTerceros" bson:"ACuentaTerceros,omitempty"`
 	InstitucionesEducativas *institeducativas.InstitucioneEducativas `xml:"instEducativas" bson:"InstitucionesEducativas,omitempty"`
 	VentaVehiculos          *ventavehiculos.VentaVehiculos           `xml:"VentaVehiculos" bson:"VentaVehiculos,omitempty"`
+	AcreditamientoIeps      *acreditamientoieps.AcreditamientoIeps   `xml:"acreditamientoIEPS" bson:"AcreditamientoIeps,omitempty"`
 }
 
 type Complemento struct {

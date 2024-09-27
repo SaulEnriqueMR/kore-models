@@ -79,6 +79,27 @@
             <InformacionAduanera numero="A123456" fecha="2023-09-15" aduana="Aduana de Ciudad Juárez"/>
             <CuentaPredial numero="123456789"/>
             <ComplementoConcepto>
+                <aieps:acreditamientoIEPS
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://www.sat.gob.mx/acreditamiento http://www.sat.gob.mx/acreditamiento.xsd"
+                        xmlns:aieps="http://www.sat.gob.mx/acreditamiento"
+                        Version="1.0"
+                        TAR="619"
+                />
+                <aieps:acreditamientoIEPS
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://www.sat.gob.mx/acreditamiento http://www.sat.gob.mx/acreditamiento.xsd"
+                        xmlns:aieps="http://www.sat.gob.mx/acreditamiento"
+                        Version="1.0"
+                        TAR="619"
+                />
+                <aieps:acreditamientoIEPS
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://www.sat.gob.mx/acreditamiento http://www.sat.gob.mx/acreditamiento.xsd"
+                        xmlns:aieps="http://www.sat.gob.mx/acreditamiento"
+                        Version="1.0"
+                        TAR="619"
+                />
                 <instEducativas
                         version="1.0" nombreAlumno="Francisco Hernandez" CURP="BAHF840120HOCTRR04" nivelEducativo="Preescolar" autRVOE="CCA29123210" rfcPago="XAXX010101333"/>
                 <instEducativas

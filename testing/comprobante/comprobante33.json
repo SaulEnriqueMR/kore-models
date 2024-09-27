@@ -274,7 +274,7 @@
 							"NombreAlumno": "Francisco Hernandez",
 							"Curp": "BAHF840120HOCTRR04",
 							"NivelEducativo": "Preescolar",
-							"AutRVOE": "CCA29123210",
+							"AutRvoe": "CCA29123210",
 							"RfcPago": "XAXX010101333"
 						},
 						{
@@ -286,7 +286,7 @@
 							"NombreAlumno": "Francisco Hernandez",
 							"Curp": "BAHF840120HOCTRR04",
 							"NivelEducativo": "Preescolar",
-							"AutRVOE": "CCA29123210",
+							"AutRvoe": "CCA29123210",
 							"RfcPago": "XAXX010101333"
 						},
 						{
@@ -298,7 +298,7 @@
 							"NombreAlumno": "Francisco Hernandez",
 							"Curp": "BAHF840120HOCTRR04",
 							"NivelEducativo": "Preescolar",
-							"AutRVOE": "CCA29123210",
+							"AutRvoe": "CCA29123210",
 							"RfcPago": "XAXX010101333"
 						}
 					]
@@ -396,6 +396,22 @@
 									"Importe": "10000.00"
 								}
 							]
+						}
+					]
+				},
+				"AcreditamientoIeps": {
+					"AcreditamientoIeps10": [
+						{
+							"Version": "1.0",
+							"Tar": "619"
+						},
+						{
+							"Version": "1.0",
+							"Tar": "619"
+						},
+						{
+							"Version": "1.0",
+							"Tar": "619"
 						}
 					]
 				}
@@ -6163,6 +6179,7 @@
 					"Pago": [
 						{
 							"FechaPago": "2024-09-24T12:00:00",
+							"FechaPagoDate": "2024-09-24T12:00:00Z",
 							"FormaDePagoP": "01",
 							"MonedaP": "MXN",
 							"TipoCambioP": 1,
@@ -6265,6 +6282,7 @@
 					"Pago": [
 						{
 							"FechaPago": "2024-09-24T12:00:00",
+							"FechaPagoDate": "2024-09-24T12:00:00Z",
 							"FormaDePagoP": "01",
 							"MonedaP": "MXN",
 							"TipoCambioP": 1,
@@ -6382,6 +6400,7 @@
 					"Pago": [
 						{
 							"FechaPago": "2024-09-15T12:00:00",
+							"FechaPagoDate": "2024-09-15T12:00:00Z",
 							"FormaPagoP": "03",
 							"MonedaP": "USD",
 							"TipoCambioP": 17.5,
@@ -6493,6 +6512,7 @@
 					"Pago": [
 						{
 							"FechaPago": "2024-09-15T12:00:00",
+							"FechaPagoDate": "2024-09-15T12:00:00Z",
 							"FormaPagoP": "03",
 							"MonedaP": "USD",
 							"TipoCambioP": 17.5,

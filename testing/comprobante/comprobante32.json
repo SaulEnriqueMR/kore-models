@@ -2,10 +2,7 @@
 	"FechaEmision": "2023-09-23T12:00:00Z",
 	"Uuid": "3EA43E97-71BF-4AC5-A28E-9374EA9F8B45",
 	"FechaTimbrado": "2024-04-29T10:46:30Z",
-	"Vigente": null,
 	"CadenaOriginal": "",
-	"InformacionAdicional": null,
-	"Cancelacion": null,
 	"Comprobante": true,
 	"Version": "3.2",
 	"Serie": "A",
@@ -297,7 +294,7 @@
 							"NombreAlumno": "Francisco Hernandez",
 							"Curp": "BAHF840120HOCTRR04",
 							"NivelEducativo": "Preescolar",
-							"AutRVOE": "CCA29123210",
+							"AutRvoe": "CCA29123210",
 							"RfcPago": "XAXX010101333"
 						},
 						{
@@ -309,7 +306,7 @@
 							"NombreAlumno": "Francisco Hernandez",
 							"Curp": "BAHF840120HOCTRR04",
 							"NivelEducativo": "Preescolar",
-							"AutRVOE": "CCA29123210",
+							"AutRvoe": "CCA29123210",
 							"RfcPago": "XAXX010101333"
 						},
 						{
@@ -321,7 +318,7 @@
 							"NombreAlumno": "Francisco Hernandez",
 							"Curp": "BAHF840120HOCTRR04",
 							"NivelEducativo": "Preescolar",
-							"AutRVOE": "CCA29123210",
+							"AutRvoe": "CCA29123210",
 							"RfcPago": "XAXX010101333"
 						}
 					]
@@ -419,6 +416,22 @@
 									"Importe": "10000.00"
 								}
 							]
+						}
+					]
+				},
+				"AcreditamientoIeps": {
+					"AcreditamientoIeps10": [
+						{
+							"Version": "1.0",
+							"Tar": "619"
+						},
+						{
+							"Version": "1.0",
+							"Tar": "619"
+						},
+						{
+							"Version": "1.0",
+							"Tar": "619"
 						}
 					]
 				}
@@ -1892,6 +1905,7 @@
 							"NombreEstacion": "Estación 1",
 							"NavegacionTrafico": "Altura",
 							"FechaHoraSalidaLlegada": "2024-09-20T08:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-20T08:30:00Z",
 							"TipoEstacion": "Terrestre",
 							"DistanciaRecorrida": 150.5,
 							"Domicilio": {
@@ -1918,6 +1932,7 @@
 							"NombreEstacion": "Estación 2",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-21T12:45:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-21T12:45:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 350.75,
 							"Domicilio": {
@@ -1944,6 +1959,7 @@
 							"NombreEstacion": "Estación 3",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-22T16:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-22T16:30:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 220,
 							"Domicilio": null
@@ -2362,6 +2378,7 @@
 							"NombreEstacion": "Estación 1",
 							"NavegacionTrafico": "Altura",
 							"FechaHoraSalidaLlegada": "2024-09-20T08:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-20T08:30:00Z",
 							"TipoEstacion": "Terrestre",
 							"DistanciaRecorrida": 150.5,
 							"Domicilio": {
@@ -2388,6 +2405,7 @@
 							"NombreEstacion": "Estación 2",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-21T12:45:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-21T12:45:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 350.75,
 							"Domicilio": {
@@ -2414,6 +2432,7 @@
 							"NombreEstacion": "Estación 3",
 							"NavegacionTrafico": null,
 							"FechaHoraSalidaLlegada": "2024-09-22T16:30:00",
+							"FechaHoraSalidaLlegadaDate": "2024-09-22T16:30:00Z",
 							"TipoEstacion": null,
 							"DistanciaRecorrida": 220,
 							"Domicilio": null
@@ -4331,10 +4350,7 @@
 										"Date": "2016-04-07T00:00:00Z"
 									},
 									"NameAndAddress": {
-										"Name": "TIJUANA",
-										"StreetAddressOne": null,
-										"City": null,
-										"PostalCode": null
+										"Name": "TIJUANA"
 									}
 								}
 							],
@@ -4356,7 +4372,7 @@
 								"LotNumber": [
 									{
 										"ProductionDateString": "2016-04-07",
-										"ProductionDate": "2016-04-07T00:00:00Z",
+										"ProductionDate": "0001-01-01T00:00:00Z",
 										"Value": "1123"
 									}
 								]
@@ -4621,10 +4637,7 @@
 										"Date": "2016-04-07T00:00:00Z"
 									},
 									"NameAndAddress": {
-										"Name": "TIJUANA",
-										"StreetAddressOne": null,
-										"City": null,
-										"PostalCode": null
+										"Name": "TIJUANA"
 									}
 								}
 							],
@@ -4646,7 +4659,7 @@
 								"LotNumber": [
 									{
 										"ProductionDateString": "2016-04-07",
-										"ProductionDate": "2016-04-07T00:00:00Z",
+										"ProductionDate": "0001-01-01T00:00:00Z",
 										"Value": "1123"
 									}
 								]
@@ -4911,10 +4924,7 @@
 										"Date": "2016-04-07T00:00:00Z"
 									},
 									"NameAndAddress": {
-										"Name": "TIJUANA",
-										"StreetAddressOne": null,
-										"City": null,
-										"PostalCode": null
+										"Name": "TIJUANA"
 									}
 								}
 							],
@@ -4936,7 +4946,7 @@
 								"LotNumber": [
 									{
 										"ProductionDateString": "2016-04-07",
-										"ProductionDate": "2016-04-07T00:00:00Z",
+										"ProductionDate": "0001-01-01T00:00:00Z",
 										"Value": "1123"
 									}
 								]
@@ -5521,8 +5531,11 @@
 					"TipoRegimen": 2,
 					"NumSeguridadSocial": "123456789012345",
 					"FechaPago": "2024-09-18",
+					"FechaPagoDate": "2024-09-18T00:00:00Z",
 					"FechaInicialPago": "2023-09-01",
+					"FechaInicialPagoDate": "2023-09-01T00:00:00Z",
 					"FechaFinalPago": "2023-09-15",
+					"FechaFinalPagoDate": "2023-09-15T00:00:00Z",
 					"NumDiasPagados": 14,
 					"Departamento": "Contabilidad",
 					"Clabe": "012345678901234567",
@@ -5615,8 +5628,11 @@
 					"TipoRegimen": 2,
 					"NumSeguridadSocial": "123456789012345",
 					"FechaPago": "2024-09-18",
+					"FechaPagoDate": "2024-09-18T00:00:00Z",
 					"FechaInicialPago": "2023-09-01",
+					"FechaInicialPagoDate": "2023-09-01T00:00:00Z",
 					"FechaFinalPago": "2023-09-15",
+					"FechaFinalPagoDate": "2023-09-15T00:00:00Z",
 					"NumDiasPagados": 14,
 					"Departamento": "Contabilidad",
 					"Clabe": "012345678901234567",
@@ -6176,6 +6192,7 @@
 					"Pago": [
 						{
 							"FechaPago": "2024-09-24T12:00:00",
+							"FechaPagoDate": "2024-09-24T12:00:00Z",
 							"FormaDePagoP": "01",
 							"MonedaP": "MXN",
 							"TipoCambioP": 1,
@@ -6278,6 +6295,7 @@
 					"Pago": [
 						{
 							"FechaPago": "2024-09-24T12:00:00",
+							"FechaPagoDate": "2024-09-24T12:00:00Z",
 							"FormaDePagoP": "01",
 							"MonedaP": "MXN",
 							"TipoCambioP": 1,
@@ -6395,6 +6413,7 @@
 					"Pago": [
 						{
 							"FechaPago": "2024-09-15T12:00:00",
+							"FechaPagoDate": "2024-09-15T12:00:00Z",
 							"FormaPagoP": "03",
 							"MonedaP": "USD",
 							"TipoCambioP": 17.5,
@@ -6506,6 +6525,7 @@
 					"Pago": [
 						{
 							"FechaPago": "2024-09-15T12:00:00",
+							"FechaPagoDate": "2024-09-15T12:00:00Z",
 							"FormaPagoP": "03",
 							"MonedaP": "USD",
 							"TipoCambioP": 17.5,

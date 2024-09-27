@@ -43,20 +43,37 @@ func (ccp *CartaPorte30) UnmarshalXML(d *xml.Decoder, start xml.StartElement) er
 }
 
 type UbicacionCartaPorte30 struct {
-	TipoUbicacion               string                 `xml:"TipoUbicacion,attr" bson:"TipoUbicacion"`
-	IDUbicacion                 *string                `xml:"IDUbicacion,attr" bson:"IDUbicacion,omitempty"`
-	RFCRemitenteDestinatario    string                 `xml:"RFCRemitenteDestinatario,attr" bson:"RFCRemitenteDestinatario"`                 // Cifrado
-	NombreRemitenteDestinatario *string                `xml:"NombreRemitenteDestinatario,attr" bson:"NombreRemitenteDestinatario,omitempty"` // Cifrado
-	NumRegIdTrib                *string                `xml:"NumRegIdTrib,attr" bson:"NumRegIdTrib,omitempty"`                               // Cifrado
-	ResidenciaFiscal            *string                `xml:"ResidenciaFiscal,attr" bson:"ResidenciaFiscal,omitempty"`                       // Cifrado
-	NumEstacion                 *string                `xml:"NumEstacion,attr" bson:"NumEstacion,omitempty"`
-	NombreEstacion              *string                `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
-	NavegacionTrafico           *string                `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
-	FechaHoraSalidaLlegada      string                 `xml:"FechaHoraSalidaLlegada,attr"`
-	FechaHoraSalidaLlegadaDate  time.Time              `bson:"FechaHoraSalidaLlegada"`
-	TipoEstacion                *string                `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
-	DistanciaRecorrida          *float64               `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
-	Domicilio                   *DomicilioCartaPorte30 `xml:"Domicilio" bson:"Domicilio,omitempty"`
+	TipoUbicacion                string                 `xml:"TipoUbicacion,attr" bson:"TipoUbicacion"`
+	IdUbicacion                  *string                `xml:"IDUbicacion,attr" bson:"IdUbicacion,omitempty"`
+	RfcRemitenteDestinatario     string                 `xml:"RFCRemitenteDestinatario,attr" bson:"RfcRemitenteDestinatario"`
+	NombreRemitenteDestinatario  *string                `xml:"NombreRemitenteDestinatario,attr" bson:"NombreRemitenteDestinatario,omitempty"`
+	NumRegIdTrib                 *string                `xml:"NumRegIdTrib,attr" bson:"NumRegIdTrib,omitempty"`
+	ResidenciaFiscal             *string                `xml:"ResidenciaFiscal,attr" bson:"ResidenciaFiscal,omitempty"`
+	NoEstacion                   *string                `xml:"NumEstacion,attr" bson:"NoEstacion,omitempty"`
+	NombreEstacion               *string                `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
+	NavegacionTrafico            *string                `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
+	FechaHoraSalidaLlegadaString string                 `xml:"FechaHoraSalidaLlegada,attr"`
+	FechaHoraSalidaLlegada       time.Time              `bson:"FechaHoraSalidaLlegada"`
+	TipoEstacion                 *string                `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
+	DistanciaRecorrida           *float64               `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
+	Domicilio                    *DomicilioCartaPorte30 `xml:"Domicilio" bson:"Domicilio,omitempty"`
+}
+
+func (u *UbicacionCartaPorte30) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias UbicacionCartaPorte30
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*u = UbicacionCartaPorte30(aux)
+	fecha, errFecha := helpers.ParseDatetime(u.FechaHoraSalidaLlegadaString)
+	if errFecha == nil {
+		u.FechaHoraSalidaLlegada = fecha
+	}
+	return nil
 }
 
 type DomicilioCartaPorte30 struct {
@@ -290,26 +307,4 @@ type TiposFiguraCartaPorte30 struct {
 
 type PartesTransporteCartaPorte30 struct {
 	ParteTransporte string `xml:"ParteTransporte,attr" bson:"ParteTransporte"`
-}
-
-func (ucp30 *UbicacionCartaPorte30) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
-	// Create an alias to avoid recursion
-	type Alias UbicacionCartaPorte30
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-	*ucp30 = UbicacionCartaPorte30(aux)
-
-	if ucp30 != nil {
-		fecha, err := helpers.ParseDatetime(ucp30.FechaHoraSalidaLlegada)
-		if err != nil {
-			return err
-		}
-		ucp30.FechaHoraSalidaLlegadaDate = fecha
-	}
-
-	return nil
 }

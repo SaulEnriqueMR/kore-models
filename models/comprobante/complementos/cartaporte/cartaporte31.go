@@ -52,21 +52,38 @@ type RegimenAduaneroCartaPorte31 struct {
 
 type UbicacionCartaPorte31 struct {
 	// Attr
-	TipoUbicacion               string    `xml:"TipoUbicacion,attr" bson:"TipoUbicacion"`
-	IDUbicacion                 *string   `xml:"IDUbicacion,attr" bson:"IDUbicacion,omitempty"`
-	RFCRemitenteDestinatario    string    `xml:"RFCRemitenteDestinatario,attr" bson:"RFCRemitenteDestinatario"`
-	NombreRemitenteDestinatario *string   `xml:"NombreRemitenteDestinatario,attr" bson:"NombreRemitenteDestinatario,omitempty"`
-	NumRegIdTrib                *string   `xml:"NumRegIdTrib,attr" bson:"NumRegIdTrib,omitempty"`
-	ResidenciaFiscal            *string   `xml:"ResidenciaFiscal,attr" bson:"ResidenciaFiscal,omitempty"`
-	NumEstacion                 *string   `xml:"NumEstacion,attr" bson:"NumEstacion,omitempty"`
-	NombreEstacion              *string   `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
-	NavegacionTrafico           *string   `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
-	FechaHoraSalidaLlegada      string    `xml:"FechaHoraSalidaLlegada,attr"`
-	FechaHoraSalidaLlegadaDate  time.Time `bson:"FechaHoraSalidaLlegada"`
-	TipoEstacion                *string   `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
-	DistanciaRecorrida          *float64  `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
+	TipoUbicacion                string    `xml:"TipoUbicacion,attr" bson:"TipoUbicacion"`
+	IdUbicacion                  *string   `xml:"IDUbicacion,attr" bson:"IdUbicacion,omitempty"`
+	RfcRemitenteDestinatario     string    `xml:"RFCRemitenteDestinatario,attr" bson:"RfcRemitenteDestinatario"`
+	NombreRemitenteDestinatario  *string   `xml:"NombreRemitenteDestinatario,attr" bson:"NombreRemitenteDestinatario,omitempty"`
+	NumRegIdTrib                 *string   `xml:"NumRegIdTrib,attr" bson:"NumRegIdTrib,omitempty"`
+	ResidenciaFiscal             *string   `xml:"ResidenciaFiscal,attr" bson:"ResidenciaFiscal,omitempty"`
+	NoEstacion                   *string   `xml:"NumEstacion,attr" bson:"NoEstacion,omitempty"`
+	NombreEstacion               *string   `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
+	NavegacionTrafico            *string   `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
+	FechaHoraSalidaLlegadaString string    `xml:"FechaHoraSalidaLlegada,attr"`
+	FechaHoraSalidaLlegada       time.Time `bson:"FechaHoraSalidaLlegada"`
+	TipoEstacion                 *string   `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
+	DistanciaRecorrida           *float64  `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
 	// Nodos
 	Domicilio *DomicilioCartaPorte31 `xml:"Domicilio" bson:"Domicilio,omitempty"`
+}
+
+func (u *UbicacionCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias UbicacionCartaPorte31
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*u = UbicacionCartaPorte31(aux)
+	fecha, errFecha := helpers.ParseDatetime(u.FechaHoraSalidaLlegadaString)
+	if errFecha == nil {
+		u.FechaHoraSalidaLlegada = fecha
+	}
+	return nil
 }
 
 type DomicilioCartaPorte31 struct {
@@ -303,26 +320,4 @@ type TiposFiguraCartaPorte31 struct {
 
 type PartesTransporteCartaPorte31 struct {
 	ParteTransporte string `xml:"ParteTransporte,attr" bson:"ParteTransporte"`
-}
-
-func (ucp30 *UbicacionCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
-	// Create an alias to avoid recursion
-	type Alias UbicacionCartaPorte31
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-	*ucp30 = UbicacionCartaPorte31(aux)
-
-	if ucp30 != nil {
-		fecha, err := helpers.ParseDatetime(ucp30.FechaHoraSalidaLlegada)
-		if err != nil {
-			return err
-		}
-		ucp30.FechaHoraSalidaLlegadaDate = fecha
-	}
-
-	return nil
 }

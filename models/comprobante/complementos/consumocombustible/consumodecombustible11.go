@@ -7,20 +7,20 @@ import (
 )
 
 type ConsumoDeCombustible11 struct {
-	Version        string                     `xml:"version,attr" bson:"Version"`
-	TipoOperacion  string                     `xml:"tipoOperacion,attr" bson:"TipoOperacion"`
-	NumeroDeCuenta string                     `xml:"numeroDeCuenta,attr" bson:"NumeroDeCuenta"`
-	SubTotal       *float64                   `xml:"subTotal,attr" bson:"SubTotal,omitempty"`
-	Total          float64                    `xml:"total,attr" bson:"Total"`
-	Conceptos      ConceptosConsumoDeCombus11 `xml:"Conceptos" bson:"Conceptos,omitempty"`
+	Version       string                     `xml:"version,attr" bson:"Version"`
+	TipoOperacion string                     `xml:"tipoOperacion,attr" bson:"TipoOperacion"`
+	NoCuenta      string                     `xml:"numeroDeCuenta,attr" bson:"NoCuenta"`
+	Subtotal      *float64                   `xml:"subTotal,attr" bson:"Subtotal,omitempty"`
+	Total         float64                    `xml:"total,attr" bson:"Total"`
+	Conceptos     ConceptosConsumoDeCombus11 `xml:"Conceptos" bson:"Conceptos,omitempty"`
 }
 
 type ConceptosConsumoDeCombus11 struct {
-	ConceptoConsumoDeCombustibles []ConceptoConsumoDeCombustibles11 `xml:"ConceptoConsumoDeCombustibles" bson:"ConceptoConsumoDeCombustibles"`
+	Concepto []ConceptoConsumoDeCombustibles11 `xml:"ConceptoConsumoDeCombustibles" bson:"Concepto"`
 }
 
 type ConceptoConsumoDeCombustibles11 struct {
-	Identificador     string                        `xml:"identificador,attr" bson:"identificador"`
+	Identificador     string                        `xml:"identificador,attr" bson:"Identificador"`
 	FechaString       string                        `xml:"fecha,attr"`
 	Fecha             time.Time                     `bson:"Fecha"`
 	Rfc               string                        `xml:"rfc,attr" bson:"Rfc"`

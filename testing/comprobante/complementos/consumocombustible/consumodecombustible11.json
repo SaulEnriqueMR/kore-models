@@ -1,11 +1,11 @@
 {
     "Version": "1.1",
     "TipoOperacion": "monedero electrónico",
-    "NumeroDeCuenta": "E1921212",
-    "SubTotal": 10000,
+    "NoCuenta": "E1921212",
+    "Subtotal": 10000,
     "Total": 10000,
     "Conceptos": {
-        "ConceptoConsumoDeCombustibles": [
+        "Concepto": [
             {
                 "Identificador": "0001",
                 "FechaString": "2016-04-08T06:02:00",

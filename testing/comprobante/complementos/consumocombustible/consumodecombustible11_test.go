@@ -21,15 +21,15 @@ func GetConsumoDeCombustible11ForTest(filename string, t *testing.T) (consumoCom
 func TestConsumoDeCombustible11(t *testing.T) {
 	consumoCombustible11, _ := GetConsumoDeCombustible11ForTest("./consumodecombustible11.xml", t)
 	InternalTestFullAtributesConsumoCombus11(t, consumoCombustible11)
-	InternalTestFullAtributesConceptoConsumoCombus11(t, consumoCombustible11.Conceptos.ConceptoConsumoDeCombustibles[0])
-	InternalTestFullAtributesDeterminadoConsumoCombus11(t, consumoCombustible11.Conceptos.ConceptoConsumoDeCombustibles[0].Determinados.Determinado[0])
+	InternalTestFullAtributesConceptoConsumoCombus11(t, consumoCombustible11.Conceptos.Concepto[0])
+	InternalTestFullAtributesDeterminadoConsumoCombus11(t, consumoCombustible11.Conceptos.Concepto[0].Determinados.Determinado[0])
 }
 
 func InternalTestFullAtributesConsumoCombus11(t *testing.T, consumoCombustible11 consumoCombus11.ConsumoDeCombustible11) {
 	assert.Equal(t, "1.1", consumoCombustible11.Version)
 	assert.Equal(t, "monedero electrónico", consumoCombustible11.TipoOperacion)
-	assert.Equal(t, "E1921212", consumoCombustible11.NumeroDeCuenta)
-	assert.Equal(t, 10000.0, *consumoCombustible11.SubTotal)
+	assert.Equal(t, "E1921212", consumoCombustible11.NoCuenta)
+	assert.Equal(t, 10000.0, *consumoCombustible11.Subtotal)
 	assert.Equal(t, 10000.0, consumoCombustible11.Total)
 }
 

@@ -16,12 +16,12 @@ type ComprobanteMetadata struct {
 	RfcProvCertif   string            `bson:"RfcProvCertif" json:"RfcProvCertif"`
 	Metadata        bool              `bson:"Metadata" json:"Metadata"`
 	// FechaCancelacion *time.Time        `bson:"FechaCancelacion,omitempty" json:"FechaCancelacion,omitempty"`
-	Cancelacion Cancelacion `xml:"Cancelacion" bson:"Cancelacion"`
+	Cancelacion *Cancelacion `xml:"Cancelacion" bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
 }
 
 type Cancelacion struct {
-	CanceledByKuantik bool       `bson:"CanceledByKuantik"`
-	FechaCancelacion  *time.Time `bson:"FechaCancelacion,omitempty"`
+	CanceledByKuantik *bool      `bson:"CanceledByKuantik,omitempty" json:"CanceledByKuantik,omitempty"`
+	FechaCancelacion  *time.Time `bson:"FechaCancelacion,omitempty" json:"FechaCancelacion,omitempty"`
 }
 type RfcEmisorReceptor struct {
 	Rfc    string `bson:"Rfc" json:"Rfc"`

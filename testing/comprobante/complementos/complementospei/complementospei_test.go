@@ -30,20 +30,20 @@ func TestComplementoSpei(t *testing.T) {
 }
 
 func InternalTestFullAtributesCompSpei(t *testing.T, speiTercero compspei2.SpeiTerceroCompSpei) {
-	assert.Equal(t, "2016-04-07", speiTercero.FechaOperacion)
+	assert.Equal(t, "2016-04-07", speiTercero.FechaOperacionString)
 	assert.Equal(t, "07:20:17.635", speiTercero.Hora)
-	assert.Equal(t, "23837", speiTercero.ClaveSPEI)
+	assert.Equal(t, "23837", speiTercero.ClaveSpei)
 	sello := "v7Uq8JveMHDigYBN1mgeUqtAeuCRnTIDE1IpvEQWCCwttZkEOA7OZe+JzdgkLGMlhCzlFMTp3aOZkhhK7WPZXHeov1XlxevfctNqGl1sQWOyZjqqEmngliZppl4dr"
 	assert.Equal(t, sello, speiTercero.Sello)
-	assert.Equal(t, "20001000000200000876", speiTercero.NumeroCertificado)
-	assert.Equal(t, "cadena", speiTercero.CadenaCDA)
+	assert.Equal(t, "20001000000200000876", speiTercero.NoCertificado)
+	assert.Equal(t, "cadena", speiTercero.CadenaCda)
 }
 
 func InternalTestFullAtributesOrdenanteSPEI(t *testing.T, ordenante compspei2.OrdenanteCompSpei) {
 	assert.Equal(t, "Banco Emisor S.A.", ordenante.BancoEmisor)
 	assert.Equal(t, "Francisco Bautista", ordenante.Nombre)
 	assert.Equal(t, "43328545620125000237", ordenante.Cuenta)
-	assert.Equal(t, "AAA010101AAA", ordenante.RFC)
+	assert.Equal(t, "AAA010101AAA", ordenante.Rfc)
 	assert.Equal(t, "01", ordenante.TipoCuenta)
 }
 
@@ -52,9 +52,9 @@ func InternalTestFullAtributesBeneficiario(t *testing.T, beneficiario compspei2.
 	assert.Equal(t, "Juan Perez Santiago", beneficiario.Nombre)
 	assert.Equal(t, "98363842374909422123", beneficiario.Cuenta)
 	assert.Equal(t, "03", beneficiario.TipoCuenta)
-	assert.Equal(t, "AAA010101AAA", beneficiario.RFC)
+	assert.Equal(t, "AAA010101AAA", beneficiario.Rfc)
 	assert.Equal(t, "Honorarios", beneficiario.Concepto)
-	assert.Equal(t, "0.00", *beneficiario.IVA)
+	assert.Equal(t, "0.00", *beneficiario.Iva)
 	assert.Equal(t, "10000.00", beneficiario.MontoPago)
 }
 

@@ -11,15 +11,15 @@ type ComplementoSpei struct {
 }
 
 type SpeiTerceroCompSpei struct {
-	FechaOperacion     string                 `xml:"FechaOperacion,attr" bson:"FechaOperacion"`
-	FechaOperacionDate time.Time              `bson:"FechaOperacion"`
-	Hora               string                 `xml:"Hora,attr" bson:"Hora"`
-	ClaveSPEI          string                 `xml:"ClaveSPEI,attr" bson:"ClaveSPEI"`
-	Sello              string                 `xml:"sello,attr" bson:"sello"`
-	NumeroCertificado  string                 `xml:"numeroCertificado,attr" bson:"numeroCertificado"`
-	CadenaCDA          string                 `xml:"cadenaCDA,attr" bson:"cadenaCDA,omitempty"`
-	Ordenante          []OrdenanteCompSpei    `xml:"Ordenante" bson:"Ordenante"`
-	Beneficiario       []BeneficiarioCompSpei `xml:"Beneficiario" bson:"Beneficiario"`
+	FechaOperacionString string                 `xml:"FechaOperacion,attr"`
+	FechaOperacion       time.Time              `bson:"FechaOperacion"`
+	Hora                 string                 `xml:"Hora,attr" bson:"Hora"`
+	ClaveSpei            string                 `xml:"ClaveSPEI,attr" bson:"ClaveSpei"`
+	Sello                string                 `xml:"sello,attr" bson:"Sello"`
+	NoCertificado        string                 `xml:"numeroCertificado,attr" bson:"NoCertificado"`
+	CadenaCda            string                 `xml:"cadenaCDA,attr" bson:"cadenaCda,omitempty"`
+	Ordenante            []OrdenanteCompSpei    `xml:"Ordenante" bson:"Ordenante"`
+	Beneficiario         []BeneficiarioCompSpei `xml:"Beneficiario" bson:"Beneficiario"`
 }
 
 type OrdenanteCompSpei struct {
@@ -27,7 +27,7 @@ type OrdenanteCompSpei struct {
 	Nombre      string `xml:"Nombre,attr" bson:"Nombre"`
 	TipoCuenta  string `xml:"TipoCuenta,attr" bson:"TipoCuenta"`
 	Cuenta      string `xml:"Cuenta,attr" bson:"Cuenta"`
-	RFC         string `xml:"RFC,attr" bson:"RFC"`
+	Rfc         string `xml:"RFC,attr" bson:"Rfc"`
 }
 
 type BeneficiarioCompSpei struct {
@@ -35,9 +35,9 @@ type BeneficiarioCompSpei struct {
 	Nombre        string  `xml:"Nombre,attr" bson:"Nombre"`
 	TipoCuenta    string  `xml:"TipoCuenta,attr" bson:"TipoCuenta"`
 	Cuenta        string  `xml:"Cuenta,attr" bson:"Cuenta"`
-	RFC           string  `xml:"RFC,attr" bson:"RFC"`
+	Rfc           string  `xml:"RFC,attr" bson:"Rfc"`
 	Concepto      string  `xml:"Concepto,attr" bson:"Concepto"`
-	IVA           *string `xml:"IVA,attr" bson:"IVA,omitempty"`
+	Iva           *string `xml:"IVA,attr" bson:"Iva,omitempty"`
 	MontoPago     string  `xml:"MontoPago,attr" bson:"MontoPago"`
 }
 
@@ -53,11 +53,11 @@ func (stcs *SpeiTerceroCompSpei) UnmarshalXML(d *xml.Decoder, start xml.StartEle
 	*stcs = SpeiTerceroCompSpei(aux)
 
 	if stcs != nil {
-		fecha, err := helpers.ParseDatetime(stcs.FechaOperacion)
+		fecha, err := helpers.ParseDatetime(stcs.FechaOperacionString)
 		if err != nil {
 			return err
 		}
-		stcs.FechaOperacionDate = fecha
+		stcs.FechaOperacion = fecha
 	}
 
 	return nil

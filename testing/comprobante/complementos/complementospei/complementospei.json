@@ -1,20 +1,20 @@
 {
 	"SpeiTercero": [
 		{
-			"FechaOperacion": "2016-04-07",
-			"FechaOperacionDate": "2016-04-07T00:00:00Z",
+			"FechaOperacionString": "2016-04-07",
+			"FechaOperacion": "2016-04-07T00:00:00Z",
 			"Hora": "07:20:17.635",
-			"ClaveSPEI": "23837",
+			"ClaveSpei": "23837",
 			"Sello": "v7Uq8JveMHDigYBN1mgeUqtAeuCRnTIDE1IpvEQWCCwttZkEOA7OZe+JzdgkLGMlhCzlFMTp3aOZkhhK7WPZXHeov1XlxevfctNqGl1sQWOyZjqqEmngliZppl4dr",
-			"NumeroCertificado": "20001000000200000876",
-			"CadenaCDA": "cadena",
+			"NoCertificado": "20001000000200000876",
+			"CadenaCda": "cadena",
 			"Ordenante": [
 				{
 					"BancoEmisor": "Banco Emisor S.A.",
 					"Nombre": "Francisco Bautista",
 					"TipoCuenta": "01",
 					"Cuenta": "43328545620125000237",
-					"RFC": "AAA010101AAA"
+					"Rfc": "AAA010101AAA"
 				}
 			],
 			"Beneficiario": [
@@ -23,9 +23,9 @@
 					"Nombre": "Juan Perez Santiago",
 					"TipoCuenta": "03",
 					"Cuenta": "98363842374909422123",
-					"RFC": "AAA010101AAA",
+					"Rfc": "AAA010101AAA",
 					"Concepto": "Honorarios",
-					"IVA": "0.00",
+					"Iva": "0.00",
 					"MontoPago": "10000.00"
 				}
 			]

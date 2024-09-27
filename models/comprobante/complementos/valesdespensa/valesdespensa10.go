@@ -2,8 +2,9 @@ package valesdespensa
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
 type ValesDespensa10 struct {
@@ -26,27 +27,24 @@ type Conceptos struct {
 	Importe            float64   `xml:"importe,attr" bson:"Importe "`
 }
 
-func (c *ValesDespensa10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (c *Conceptos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	// Create an alias to avoid recursion
-	type Alias ValesDespensa10
+	type Alias Conceptos
 	var aux Alias
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
 		return err
 	}
-	*c = ValesDespensa10(aux)
+	*c = Conceptos(aux)
 
-	if aux.Conceptos != nil {
-		for index, concepto := range aux.Conceptos {
-			if concepto.FechaString != "" {
-				fecha, err := helpers.ParseDatetime(concepto.FechaString)
-				if err != nil {
-					return err
-				}
-				c.Conceptos[index].Fecha = fecha
-			}
+	if aux.FechaString != "" {
+		fecha, err := helpers.ParseDatetime(aux.FechaString)
+		if err != nil {
+			return err
 		}
+		c.Fecha = fecha
 	}
+
 	return nil
 }

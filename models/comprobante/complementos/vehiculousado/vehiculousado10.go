@@ -2,8 +2,9 @@ package vehiculousado
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
 type VehiculoUsado10 struct {
@@ -28,27 +29,24 @@ type InformacionAduanera struct {
 	Aduana      *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
 }
 
-func (c *VehiculoUsado10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (c *InformacionAduanera) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	// Create an alias to avoid recursion
-	type Alias VehiculoUsado10
+	type Alias InformacionAduanera
 	var aux Alias
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
 		return err
 	}
-	*c = VehiculoUsado10(aux)
+	*c = InformacionAduanera(aux)
 
-	if aux.InformacionAduanera != nil {
-		for index, infoaduanera := range *aux.InformacionAduanera {
-			if infoaduanera.FechaString != "" {
-				fecha, err := helpers.ParseDatetime(infoaduanera.FechaString)
-				if err != nil {
-					return err
-				}
-				(*c.InformacionAduanera)[index].Fecha = fecha
-			}
+	if aux.FechaString != "" {
+		fecha, err := helpers.ParseDatetime(aux.FechaString)
+		if err != nil {
+			return err
 		}
+		c.Fecha = fecha
 	}
+
 	return nil
 }

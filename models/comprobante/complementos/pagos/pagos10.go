@@ -1,12 +1,20 @@
 package pagos
 
+import (
+	"encoding/xml"
+	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
+)
+
 type Pagos10 struct {
 	Version string        `xml:"Version,attr" bson:"Version"`
 	Pago    []PagoPagos10 `xml:"Pago" bson:"Pago"`
 }
 
 type PagoPagos10 struct {
-	FechaPago        string                     `xml:"FechaPago,attr" bson:"FechaPago"`
+	FechaPago        string                     `xml:"FechaPago,attr"`
+	FechaPagoDate    time.Time                  `bson:"FechaPago"`
 	FormaDePagoP     string                     `xml:"FormaDePagoP,attr" bson:"FormaPagoP"`
 	MonedaP          string                     `xml:"MonedaP,attr" bson:"MonedaP"`
 	TipoCambioP      *float64                   `xml:"TipoCambioP,attr" bson:"TipoCambioP,omitempty"`
@@ -55,4 +63,24 @@ type TrasladoPagos10 struct {
 	TipoFactor string  `xml:"TipoFactor,attr" bson:"TipoFactor"`
 	TasaOCuota float64 `xml:"TasaOCuota,attr" bson:"TasaOCuota"`
 	Importe    float64 `xml:"Importe,attr" bson:"Importe"`
+}
+
+func (p *PagoPagos10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias PagoPagos10
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*p = PagoPagos10(aux)
+
+	fecha, err := helpers.ParseDatetime(aux.FechaPago)
+	if err != nil {
+		return err
+	}
+	p.FechaPagoDate = fecha
+
+	return nil
 }

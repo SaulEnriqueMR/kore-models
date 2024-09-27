@@ -2,8 +2,9 @@ package renovacionsustitucion
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
 type RenovacionSustitucion10 struct {
@@ -51,38 +52,23 @@ type VehiculosNuevos struct {
 	Rfc       *string `xml:"RFC,attr" bson:"Rfc,omitempty"`
 }
 
-func (c *RenovacionSustitucion10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+func (c *VehiculosUsados) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	// Create an alias to avoid recursion
-	type Alias RenovacionSustitucion10
+	type Alias VehiculosUsados
 	var aux Alias
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
 		return err
 	}
-	*c = RenovacionSustitucion10(aux)
+	*c = VehiculosUsados(aux)
 
-	if aux.DecretoRenovacion != nil {
-		for index, vehiculoUsado := range aux.DecretoRenovacion.VehiculosUsados {
-			if vehiculoUsado.FechaRegulVehString != nil {
-				fecha, err := helpers.ParseDatetime(*vehiculoUsado.FechaRegulVehString)
-				if err != nil {
-					return err
-				}
-				c.DecretoRenovacion.VehiculosUsados[index].FechaRegulVeh = &fecha
-			}
+	if aux.FechaRegulVehString != nil {
+		fecha, err := helpers.ParseDatetime(*aux.FechaRegulVehString)
+		if err != nil {
+			return err
 		}
-	}
-	if aux.DecretoSustitucion != nil {
-		for index, vehiculoUsado := range aux.DecretoSustitucion.VehiculosUsados {
-			if vehiculoUsado.FechaRegulVehString != nil {
-				fecha, err := helpers.ParseDatetime(*vehiculoUsado.FechaRegulVehString)
-				if err != nil {
-					return err
-				}
-				c.DecretoSustitucion.VehiculosUsados[index].FechaRegulVeh = &fecha
-			}
-		}
+		c.FechaRegulVeh = &fecha
 	}
 
 	return nil

@@ -67,32 +67,32 @@
             "ArriendamientosFideicomisos10": [
                 {
                     "Version": "1.0",
-                    "Pago": 3,
-                    "Rendimiento": 3,
-                    "Deduccion": 4,
-                    "MontoTotal": 5,
-                    "MontoResultado": 6,
-                    "MontoOtros": 7,
+                    "PagoEfectuadoPorFiduciario": 3,
+                    "RendimientoFideicomiso": 3,
+                    "DeduccionCorrespondiente": 4,
+                    "MontoTotalRetenido": 5,
+                    "MontoResultadoFiscalDistribuidoPorFibras": 6,
+                    "MontoOtrosConceptosDistribuidos": 7,
                     "DescripcionMontos": "ArrendamientoEnFideicomiso"
                 },
                 {
                     "Version": "1.0",
-                    "Pago": 3,
-                    "Rendimiento": 3,
-                    "Deduccion": 4,
-                    "MontoTotal": 5,
-                    "MontoResultado": 6,
-                    "MontoOtros": 7,
+                    "PagoEfectuadoPorFiduciario": 3,
+                    "RendimientoFideicomiso": 3,
+                    "DeduccionCorrespondiente": 4,
+                    "MontoTotalRetenido": 5,
+                    "MontoResultadoFiscalDistribuidoPorFibras": 6,
+                    "MontoOtrosConceptosDistribuidos": 7,
                     "DescripcionMontos": "ArrendamientoEnFideicomiso"
                 },
                 {
                     "Version": "1.0",
-                    "Pago": 3,
-                    "Rendimiento": 3,
-                    "Deduccion": 4,
-                    "MontoTotal": 5,
-                    "MontoResultado": 6,
-                    "MontoOtros": 7,
+                    "PagoEfectuadoPorFiduciario": 3,
+                    "RendimientoFideicomiso": 3,
+                    "DeduccionCorrespondiente": 4,
+                    "MontoTotalRetenido": 5,
+                    "MontoResultadoFiscalDistribuidoPorFibras": 6,
+                    "MontoOtrosConceptosDistribuidos": 7,
                     "DescripcionMontos": "ArrendamientoEnFideicomiso"
                 }
             ]
@@ -101,50 +101,50 @@
             "Dividendos10": [
                 {
                     "Version": "1.0",
-                    "DividOUtil": {
-                        "CveTipDivOUtil": "DIV123",
-                        "MontISRAcredRetMexico": 1500.5,
-                        "MontISRAcredRetExtranjero": 2000.75,
-                        "MontRetExtDivExt": 500.25,
-                        "TipoSocDistrDiv": "Sociedad Nacional",
-                        "MontISRAcredNal": 300,
-                        "MontDivAcumNal": 1200,
-                        "MontDivAcumExt": 800
+                    "DividendoOUtilidad": {
+                        "ClaveTipoDivendoOUtilidad": "DIV123",
+                        "MontoIsrRetenidoMexico": 1500.5,
+                        "MontoIsrRetenidoExtranjero": 2000.75,
+                        "MontoRetencionDividendoExtranjero": 500.25,
+                        "TipoSociedadDistribucionDividendo": "Sociedad Nacional",
+                        "MontoIsrAcreditableNacional": 300,
+                        "MontoDividendoAcumulableNacional": 1200,
+                        "MontoDividendoAcumulableExtranjero": 800
                     },
                     "Remanente": {
-                        "ProporcionRem": 10.503456
+                        "ProporcionRemanente": 10.503456
                     }
                 },
                 {
                     "Version": "1.0",
-                    "DividOUtil": {
-                        "CveTipDivOUtil": "DIV123",
-                        "MontISRAcredRetMexico": 1500.5,
-                        "MontISRAcredRetExtranjero": 2000.75,
-                        "MontRetExtDivExt": 500.25,
-                        "TipoSocDistrDiv": "Sociedad Nacional",
-                        "MontISRAcredNal": 300,
-                        "MontDivAcumNal": 1200,
-                        "MontDivAcumExt": 800
+                    "DividendoOUtilidad": {
+                        "ClaveTipoDivendoOUtilidad": "DIV123",
+                        "MontoIsrRetenidoMexico": 1500.5,
+                        "MontoIsrRetenidoExtranjero": 2000.75,
+                        "MontoRetencionDividendoExtranjero": 500.25,
+                        "TipoSociedadDistribucionDividendo": "Sociedad Nacional",
+                        "MontoIsrAcreditableNacional": 300,
+                        "MontoDividendoAcumulableNacional": 1200,
+                        "MontoDividendoAcumulableExtranjero": 800
                     },
                     "Remanente": {
-                        "ProporcionRem": 10.503456
+                        "ProporcionRemanente": 10.503456
                     }
                 },
                 {
                     "Version": "1.0",
-                    "DividOUtil": {
-                        "CveTipDivOUtil": "DIV123",
-                        "MontISRAcredRetMexico": 1500.5,
-                        "MontISRAcredRetExtranjero": 2000.75,
-                        "MontRetExtDivExt": 500.25,
-                        "TipoSocDistrDiv": "Sociedad Nacional",
-                        "MontISRAcredNal": 300,
-                        "MontDivAcumNal": 1200,
-                        "MontDivAcumExt": 800
+                    "DividendoOUtilidad": {
+                        "ClaveTipoDivendoOUtilidad": "DIV123",
+                        "MontoIsrRetenidoMexico": 1500.5,
+                        "MontoIsrRetenidoExtranjero": 2000.75,
+                        "MontoRetencionDividendoExtranjero": 500.25,
+                        "TipoSociedadDistribucionDividendo": "Sociedad Nacional",
+                        "MontoIsrAcreditableNacional": 300,
+                        "MontoDividendoAcumulableNacional": 1200,
+                        "MontoDividendoAcumulableExtranjero": 800
                     },
                     "Remanente": {
-                        "ProporcionRem": 10.503456
+                        "ProporcionRemanente": 10.503456
                     }
                 }
             ]
@@ -176,61 +176,70 @@
                 {
                     "Version": "1.0",
                     "IngresosOEntradas": {
-                        "MontTotEntradasPeriodo": 300,
-                        "PartPropAcumDelFideicom": 300,
-                        "PropDelMontTot": 800,
-                        "IntegracIngresos": {
+                        "MontoTotalEntradasPeriodo": 300,
+                        "ParteProporcionalAcumulableFideicomiso": 300,
+                        "ProporcionMontoTotal": 800,
+                        "IntegracionIngresos": {
                             "Concepto": "CONCEPTO2"
                         }
                     },
-                    "DeduccOSalidas": {
-                        "MontTotEgresPeriodo": 50,
-                        "PartPropDelFideicom": 0,
-                        "PropDelMontTot": 800
+                    "DeduccionesOSalidas": {
+                        "MontoTotalEgresosPeriodo": 50,
+                        "ParteProporcionalFideicomiso": 0,
+                        "ProporcionMontoTotal": 800,
+                        "IntegracionEgresos": {
+                            "Concepto": "CONCEPTO2"
+                        }
                     },
-                    "Retenciones": {
-                        "MontRetRelPagFideic": 750.45,
-                        "DescRetRelPagFideic": "DESCRIPCION"
+                    "RetencionesEfectuadasFideicomiso": {
+                        "MontoRetencionRelacionadaFideicomiso": 750.45,
+                        "DescripcionRetencionRelacionadaFideicomiso": "DESCRIPCION"
                     }
                 },
                 {
                     "Version": "1.0",
                     "IngresosOEntradas": {
-                        "MontTotEntradasPeriodo": 300,
-                        "PartPropAcumDelFideicom": 300,
-                        "PropDelMontTot": 800,
-                        "IntegracIngresos": {
+                        "MontoTotalEntradasPeriodo": 300,
+                        "ParteProporcionalAcumulableFideicomiso": 300,
+                        "ProporcionMontoTotal": 800,
+                        "IntegracionIngresos": {
                             "Concepto": "CONCEPTO2"
                         }
                     },
-                    "DeduccOSalidas": {
-                        "MontTotEgresPeriodo": 50,
-                        "PartPropDelFideicom": 0,
-                        "PropDelMontTot": 800
+                    "DeduccionesOSalidas": {
+                        "MontoTotalEgresosPeriodo": 50,
+                        "ParteProporcionalFideicomiso": 0,
+                        "ProporcionMontoTotal": 800,
+                        "IntegracionEgresos": {
+                            "Concepto": "CONCEPTO2"
+                        }
                     },
-                    "Retenciones": {
-                        "MontRetRelPagFideic": 750.45,
-                        "DescRetRelPagFideic": "DESCRIPCION"
+                    "RetencionesEfectuadasFideicomiso": {
+                        "MontoRetencionRelacionadaFideicomiso": 750.45,
+                        "DescripcionRetencionRelacionadaFideicomiso": "DESCRIPCION"
                     }
                 },
                 {
                     "Version": "1.0",
                     "IngresosOEntradas": {
-                        "MontTotEntradasPeriodo": 300,
-                        "PartPropAcumDelFideicom": 300,
-                        "PropDelMontTot": 800,
-                        "IntegracIngresos": {
+                        "MontoTotalEntradasPeriodo": 300,
+                        "ParteProporcionalAcumulableFideicomiso": 300,
+                        "ProporcionMontoTotal": 800,
+                        "IntegracionIngresos": {
                             "Concepto": "CONCEPTO2"
                         }
                     },
-                    "DeduccOSalidas": {
-                        "MontTotEgresPeriodo": 50,
-                        "PartPropDelFideicom": 0,
-                        "PropDelMontTot": 800
+                    "DeduccionesOSalidas": {
+                        "MontoTotalEgresosPeriodo": 50,
+                        "ParteProporcionalFideicomiso": 0,
+                        "ProporcionMontoTotal": 800,
+                        "IntegracionEgresos": {
+                            "Concepto": "CONCEPTO2"
+                        }
                     },
-                    "Retenciones": {
-                        "MontRetRelPagFideic": 750.45,
-                        "DescRetRelPagFideic": "DESCRIPCION"
+                    "RetencionesEfectuadasFideicomiso": {
+                        "MontoRetencionRelacionadaFideicomiso": 750.45,
+                        "DescripcionRetencionRelacionadaFideicomiso": "DESCRIPCION"
                     }
                 }
             ]
@@ -239,29 +248,38 @@
             "Intereses10": [
                 {
                     "Version": "1.0",
-                    "SistFinanciero": "SI",
-                    "RetiroAORESRetInt": "NO",
-                    "OperFinancDerivad": "NO",
-                    "MontIntNominal": 1500,
-                    "MontIntReal": 1200,
+                    "SistemaFinanciero": "SI",
+                    "ProvienenSistemaFinanciero": true,
+                    "RetiroIntereses": "NO",
+                    "HuboRetiroIntereses": false,
+                    "OperacionFinancieraDerivada": "NO",
+                    "CorrespondeOperacionFinancieraDerivada": false,
+                    "MontoInteresNominal": 1500,
+                    "MontoInteresReal": 1200,
                     "Perdida": 100
                 },
                 {
                     "Version": "1.0",
-                    "SistFinanciero": "SI",
-                    "RetiroAORESRetInt": "NO",
-                    "OperFinancDerivad": "NO",
-                    "MontIntNominal": 1500,
-                    "MontIntReal": 1200,
+                    "SistemaFinanciero": "SI",
+                    "ProvienenSistemaFinanciero": true,
+                    "RetiroIntereses": "NO",
+                    "HuboRetiroIntereses": false,
+                    "OperacionFinancieraDerivada": "NO",
+                    "CorrespondeOperacionFinancieraDerivada": false,
+                    "MontoInteresNominal": 1500,
+                    "MontoInteresReal": 1200,
                     "Perdida": 100
                 },
                 {
                     "Version": "1.0",
-                    "SistFinanciero": "SI",
-                    "RetiroAORESRetInt": "NO",
-                    "OperFinancDerivad": "NO",
-                    "MontIntNominal": 1500,
-                    "MontIntReal": 1200,
+                    "SistemaFinanciero": "SI",
+                    "ProvienenSistemaFinanciero": true,
+                    "RetiroIntereses": "NO",
+                    "HuboRetiroIntereses": false,
+                    "OperacionFinancieraDerivada": "NO",
+                    "CorrespondeOperacionFinancieraDerivada": false,
+                    "MontoInteresNominal": 1500,
+                    "MontoInteresReal": 1200,
                     "Perdida": 100
                 }
             ]
@@ -270,33 +288,36 @@
             "InteresesHipotecarios10": [
                 {
                     "Version": "1.0",
-                    "CreditoDeInstFinanc": "SI",
+                    "CreditoOtorgadoInstitucionFinanciera": "SI",
+                    "EsCreditoOtorgadoInstitucionFinanciera": true,
                     "SaldoInsoluto": 1000000,
-                    "PropDeducDelCredit": 0.5,
-                    "MontTotIntNominalesDev": 30000,
-                    "MontTotIntNominalesDevYPag": 25000,
-                    "MontTotIntRealPagDeduc": 12000,
-                    "NumContrato": "ABC123456"
+                    "ProporcionDeducibleCredito": 0.5,
+                    "MontoTotalInteresesNominalesDevengados": 30000,
+                    "MontoTotalInteresesNominalesDevengadosYPagados": 25000,
+                    "MontoTotalInteresesRealesPagsDeducibles": 12000,
+                    "NoContrato": "ABC123456"
                 },
                 {
                     "Version": "1.0",
-                    "CreditoDeInstFinanc": "SI",
+                    "CreditoOtorgadoInstitucionFinanciera": "SI",
+                    "EsCreditoOtorgadoInstitucionFinanciera": true,
                     "SaldoInsoluto": 1000000,
-                    "PropDeducDelCredit": 0.5,
-                    "MontTotIntNominalesDev": 30000,
-                    "MontTotIntNominalesDevYPag": 25000,
-                    "MontTotIntRealPagDeduc": 12000,
-                    "NumContrato": "ABC123456"
+                    "ProporcionDeducibleCredito": 0.5,
+                    "MontoTotalInteresesNominalesDevengados": 30000,
+                    "MontoTotalInteresesNominalesDevengadosYPagados": 25000,
+                    "MontoTotalInteresesRealesPagsDeducibles": 12000,
+                    "NoContrato": "ABC123456"
                 },
                 {
                     "Version": "1.0",
-                    "CreditoDeInstFinanc": "SI",
+                    "CreditoOtorgadoInstitucionFinanciera": "SI",
+                    "EsCreditoOtorgadoInstitucionFinanciera": true,
                     "SaldoInsoluto": 1000000,
-                    "PropDeducDelCredit": 0.5,
-                    "MontTotIntNominalesDev": 30000,
-                    "MontTotIntNominalesDevYPag": 25000,
-                    "MontTotIntRealPagDeduc": 12000,
-                    "NumContrato": "ABC123456"
+                    "ProporcionDeducibleCredito": 0.5,
+                    "MontoTotalInteresesNominalesDevengados": 30000,
+                    "MontoTotalInteresesNominalesDevengadosYPagados": 25000,
+                    "MontoTotalInteresesRealesPagsDeducibles": 12000,
+                    "NoContrato": "ABC123456"
                 }
             ]
         },
@@ -304,18 +325,18 @@
             "OperacionesDerivados10": [
                 {
                     "Version": "1.0",
-                    "MontGanAcum": 1,
-                    "MontPerdDed": 1
+                    "MontoGananciaAcumulable": 1,
+                    "MontoPerdidaDeducible": 1
                 },
                 {
                     "Version": "1.0",
-                    "MontGanAcum": 1,
-                    "MontPerdDed": 1
+                    "MontoGananciaAcumulable": 1,
+                    "MontoPerdidaDeducible": 1
                 },
                 {
                     "Version": "1.0",
-                    "MontGanAcum": 1,
-                    "MontPerdDed": 1
+                    "MontoGananciaAcumulable": 1,
+                    "MontoPerdidaDeducible": 1
                 }
             ]
         },
@@ -324,67 +345,79 @@
             "PlanesDeRetiro10": [
                 {
                     "Version": "1.0",
-                    "SistemaFinanc": "SI",
-                    "MontTotAportAnioInmAnterior": 1000,
-                    "MontIntRealesDevengAniooInmAnt": 100,
+                    "SistemaFinanciero": "SI",
+                    "ProvienenSistemaFinanciero": true,
+                    "MontoTotalAportacionesAnioAnterior": 1000,
+                    "MontoInteresesRealesDevengadosAnioAnterior": 100,
                     "HuboRetirosAnioInmAntPer": "SI",
-                    "MontTotRetiradoAnioInmAntPer": 10,
-                    "MontTotExentRetiradoAnioInmAnt": 90,
-                    "MontTotExedenteAnioInmAnt": 900,
+                    "HuboRetirosAnioAnteriorAntesPermanencia": true,
+                    "MontoTotalRetiradoAnioAnteriorPermanencia": 10,
+                    "MontoTotalExentoRetiradoAnioAnterior": 90,
+                    "MontoTotalExedenteAnioAnterior": 900,
                     "HuboRetirosAnioInmAnt": "SI",
-                    "MontTotRetiradoAnioInmAnt": 90
+                    "HuboRetirosAnioAnterior": true,
+                    "MontoTotalRetiradoAnioAnterior": 90
                 },
                 {
                     "Version": "1.0",
-                    "SistemaFinanc": "SI",
-                    "MontTotAportAnioInmAnterior": 1000,
-                    "MontIntRealesDevengAniooInmAnt": 100,
+                    "SistemaFinanciero": "SI",
+                    "ProvienenSistemaFinanciero": true,
+                    "MontoTotalAportacionesAnioAnterior": 1000,
+                    "MontoInteresesRealesDevengadosAnioAnterior": 100,
                     "HuboRetirosAnioInmAntPer": "SI",
-                    "MontTotRetiradoAnioInmAntPer": 10,
-                    "MontTotExentRetiradoAnioInmAnt": 90,
-                    "MontTotExedenteAnioInmAnt": 900,
+                    "HuboRetirosAnioAnteriorAntesPermanencia": true,
+                    "MontoTotalRetiradoAnioAnteriorPermanencia": 10,
+                    "MontoTotalExentoRetiradoAnioAnterior": 90,
+                    "MontoTotalExedenteAnioAnterior": 900,
                     "HuboRetirosAnioInmAnt": "SI",
-                    "MontTotRetiradoAnioInmAnt": 90
+                    "HuboRetirosAnioAnterior": true,
+                    "MontoTotalRetiradoAnioAnterior": 90
                 }
             ],
             "PlanesDeRetiro11": [
                 {
                     "Version": "1.1",
-                    "SistemaFinanc": "SI",
-                    "MontTotAportAnioInmAnterior": 1000,
-                    "MontIntRealesDevengAniooInmAnt": 100,
+                    "SistemaFinanciero": "SI",
+                    "ProvienenSistemaFinanciero": true,
+                    "MontoTotalAportacionesAnioAnterior": 1000,
+                    "MontoInteresesRealesDevengadosAnioAnterior": 100,
                     "HuboRetirosAnioInmAntPer": "SI",
-                    "MontTotRetiradoAnioInmAntPer": 10,
-                    "MontTotExentRetiradoAnioInmAnt": 90,
-                    "MontTotExedenteAnioInmAnt": 900,
+                    "HuboRetirosAnioAnteriorAntesPermanencia": true,
+                    "MontoTotalRetiradoAnioAnteriorPermanencia": 10,
+                    "MontoTotalExentoRetiradoAnioAnterior": 90,
+                    "MontoTotalExedenteAnioAnterior": 900,
                     "HuboRetirosAnioInmAnt": "SI",
-                    "MontTotRetiradoAnioInmAnt": 90,
-                    "NumReferencia": "123456",
+                    "HuboRetirosAnioAnterior": true,
+                    "MontoTotalRetiradoAnioAnterior": 90,
+                    "NoReferencia": "123456",
                     "AportacionesODepositos": [
                         {
-                            "TipoAportacionODeposito": "a",
-                            "MontAportODep": 1750,
-                            "RFCFiduciaria": "AAA010101AAA"
+                            "Tipo": "a",
+                            "Monto": 1750,
+                            "RfcFiduciaria": "AAA010101AAA"
                         }
                     ]
                 },
                 {
                     "Version": "1.1",
-                    "SistemaFinanc": "SI",
-                    "MontTotAportAnioInmAnterior": 1000,
-                    "MontIntRealesDevengAniooInmAnt": 100,
+                    "SistemaFinanciero": "SI",
+                    "ProvienenSistemaFinanciero": true,
+                    "MontoTotalAportacionesAnioAnterior": 1000,
+                    "MontoInteresesRealesDevengadosAnioAnterior": 100,
                     "HuboRetirosAnioInmAntPer": "SI",
-                    "MontTotRetiradoAnioInmAntPer": 10,
-                    "MontTotExentRetiradoAnioInmAnt": 90,
-                    "MontTotExedenteAnioInmAnt": 900,
+                    "HuboRetirosAnioAnteriorAntesPermanencia": true,
+                    "MontoTotalRetiradoAnioAnteriorPermanencia": 10,
+                    "MontoTotalExentoRetiradoAnioAnterior": 90,
+                    "MontoTotalExedenteAnioAnterior": 900,
                     "HuboRetirosAnioInmAnt": "SI",
-                    "MontTotRetiradoAnioInmAnt": 90,
-                    "NumReferencia": "123456",
+                    "HuboRetirosAnioAnterior": true,
+                    "MontoTotalRetiradoAnioAnterior": 90,
+                    "NoReferencia": "123456",
                     "AportacionesODepositos": [
                         {
-                            "TipoAportacionODeposito": "a",
-                            "MontAportODep": 1750,
-                            "RFCFiduciaria": "AAA010101AAA"
+                            "Tipo": "a",
+                            "Monto": 1750,
+                            "RfcFiduciaria": "AAA010101AAA"
                         }
                     ]
                 }
@@ -395,16 +428,16 @@
                 {
                     "Version": "1.0",
                     "EntidadFederativa": "19",
-                    "MontTotPago": 28263.91,
-                    "MontTotPagoGrav": 28263.91,
-                    "MontTotPagoExent": 0
+                    "MontoTotalPago": 28263.91,
+                    "MontTotalPagoGravado": 28263.91,
+                    "MontTotalPagoExento": 0
                 },
                 {
                     "Version": "1.0",
                     "EntidadFederativa": "19",
-                    "MontTotPago": 28263.91,
-                    "MontTotPagoGrav": 28263.91,
-                    "MontTotPagoExent": 0
+                    "MontoTotalPago": 28263.91,
+                    "MontTotalPagoGravado": 28263.91,
+                    "MontTotalPagoExento": 0
                 }
             ]
         },
@@ -412,21 +445,21 @@
             "SectorFinanciero10": [
                 {
                     "Version": "1.0",
-                    "IdFideicom": "111111",
-                    "NomFideicom": "NOMBRE FIDEICOMISO",
-                    "DescripFideicom": "OBJETO/FIN FIDEICOMISO"
+                    "IdFideicomiso": "111111",
+                    "NombreFideicomiso": "NOMBRE FIDEICOMISO",
+                    "DescripcionFideicomiso": "OBJETO/FIN FIDEICOMISO"
                 },
                 {
                     "Version": "1.0",
-                    "IdFideicom": "111111",
-                    "NomFideicom": "NOMBRE FIDEICOMISO",
-                    "DescripFideicom": "OBJETO/FIN FIDEICOMISO"
+                    "IdFideicomiso": "111111",
+                    "NombreFideicomiso": "NOMBRE FIDEICOMISO",
+                    "DescripcionFideicomiso": "OBJETO/FIN FIDEICOMISO"
                 },
                 {
                     "Version": "1.0",
-                    "IdFideicom": "111111",
-                    "NomFideicom": "NOMBRE FIDEICOMISO",
-                    "DescripFideicom": "OBJETO/FIN FIDEICOMISO"
+                    "IdFideicomiso": "111111",
+                    "NombreFideicomiso": "NOMBRE FIDEICOMISO",
+                    "DescripcionFideicomiso": "OBJETO/FIN FIDEICOMISO"
                 }
             ]
         },
@@ -435,35 +468,35 @@
                 {
                     "Version": "1.0",
                     "Periodicidad": "Mensual",
-                    "NumServ": "10",
-                    "MonTotServSIVA": 5000,
-                    "TotalIVATrasladado": 800,
-                    "TotalIVARetenido": 200,
-                    "TotalISRRetenido": 600,
-                    "DifIVAEntregadoPrestServ": 100,
-                    "MonTotalporUsoPlataforma": 300,
-                    "MonTotalContribucionGubernamental": 150,
+                    "NoServicio": "10",
+                    "MontoTotalServicioSinIva": 5000,
+                    "TotalIvaTrasladado": 800,
+                    "TotalIvaRetenido": 200,
+                    "TotalIsrRetenido": 600,
+                    "DiferenciaIvaEntregadoPrestadorServicios": 100,
+                    "MontoTotalUsoPlataforma": 300,
+                    "MontoTotalContribucionGubernamental": 150,
                     "DetallesDelServicio": [
                         {
-                            "FormaPagoServ": "01",
-                            "TipoDeServ": "A01",
-                            "SubTipServ": "B02",
-                            "RFCTerceroAutorizado": "ABC123456789",
+                            "FormaPagoServicio": "01",
+                            "TipoServicio": "A01",
+                            "SubtipoServicio": "B02",
+                            "RfcTerceroAutorizado": "ABC123456789",
                             "FechaServString": "2023-09-23",
-                            "FechaServ": "2023-09-23T00:00:00Z",
-                            "PrecioServSinIVA": 1000,
-                            "ImpuestosTrasladadosDelServicio": {
+                            "FechaServicio": "2023-09-23T00:00:00Z",
+                            "PrecioServicioSinIva": 1000,
+                            "ImpuestosTrasladadosServicio": {
                                 "Base": 1000,
                                 "Impuesto": "IVA",
                                 "TipoFactor": "Tasa",
-                                "TasaCuota": 0.16,
+                                "TasaOCuota": 0.16,
                                 "Importe": 160
                             },
                             "ContribucionGubernamental": {
-                                "ImpContrib": 200,
-                                "EntidadDondePagaLaContribucion": "01"
+                                "ImporteContribucion": 200,
+                                "EntidadPagoContribucion": "01"
                             },
-                            "ComisionDelServicio": {
+                            "ComisionServicio": {
                                 "Base": 150.5,
                                 "Porcentaje": 0.05,
                                 "Importe": 7.53
@@ -474,35 +507,35 @@
                 {
                     "Version": "1.0",
                     "Periodicidad": "Mensual",
-                    "NumServ": "10",
-                    "MonTotServSIVA": 5000,
-                    "TotalIVATrasladado": 800,
-                    "TotalIVARetenido": 200,
-                    "TotalISRRetenido": 600,
-                    "DifIVAEntregadoPrestServ": 100,
-                    "MonTotalporUsoPlataforma": 300,
-                    "MonTotalContribucionGubernamental": 150,
+                    "NoServicio": "10",
+                    "MontoTotalServicioSinIva": 5000,
+                    "TotalIvaTrasladado": 800,
+                    "TotalIvaRetenido": 200,
+                    "TotalIsrRetenido": 600,
+                    "DiferenciaIvaEntregadoPrestadorServicios": 100,
+                    "MontoTotalUsoPlataforma": 300,
+                    "MontoTotalContribucionGubernamental": 150,
                     "DetallesDelServicio": [
                         {
-                            "FormaPagoServ": "01",
-                            "TipoDeServ": "A01",
-                            "SubTipServ": "B02",
-                            "RFCTerceroAutorizado": "ABC123456789",
+                            "FormaPagoServicio": "01",
+                            "TipoServicio": "A01",
+                            "SubtipoServicio": "B02",
+                            "RfcTerceroAutorizado": "ABC123456789",
                             "FechaServString": "2023-09-23",
-                            "FechaServ": "2023-09-23T00:00:00Z",
-                            "PrecioServSinIVA": 1000,
-                            "ImpuestosTrasladadosDelServicio": {
+                            "FechaServicio": "2023-09-23T00:00:00Z",
+                            "PrecioServicioSinIva": 1000,
+                            "ImpuestosTrasladadosServicio": {
                                 "Base": 1000,
                                 "Impuesto": "IVA",
                                 "TipoFactor": "Tasa",
-                                "TasaCuota": 0.16,
+                                "TasaOCuota": 0.16,
                                 "Importe": 160
                             },
                             "ContribucionGubernamental": {
-                                "ImpContrib": 200,
-                                "EntidadDondePagaLaContribucion": "01"
+                                "ImporteContribucion": 200,
+                                "EntidadPagoContribucion": "01"
                             },
-                            "ComisionDelServicio": {
+                            "ComisionServicio": {
                                 "Base": 150.5,
                                 "Porcentaje": 0.05,
                                 "Importe": 7.53
@@ -513,35 +546,35 @@
                 {
                     "Version": "1.0",
                     "Periodicidad": "Mensual",
-                    "NumServ": "10",
-                    "MonTotServSIVA": 5000,
-                    "TotalIVATrasladado": 800,
-                    "TotalIVARetenido": 200,
-                    "TotalISRRetenido": 600,
-                    "DifIVAEntregadoPrestServ": 100,
-                    "MonTotalporUsoPlataforma": 300,
-                    "MonTotalContribucionGubernamental": 150,
+                    "NoServicio": "10",
+                    "MontoTotalServicioSinIva": 5000,
+                    "TotalIvaTrasladado": 800,
+                    "TotalIvaRetenido": 200,
+                    "TotalIsrRetenido": 600,
+                    "DiferenciaIvaEntregadoPrestadorServicios": 100,
+                    "MontoTotalUsoPlataforma": 300,
+                    "MontoTotalContribucionGubernamental": 150,
                     "DetallesDelServicio": [
                         {
-                            "FormaPagoServ": "01",
-                            "TipoDeServ": "A01",
-                            "SubTipServ": "B02",
-                            "RFCTerceroAutorizado": "ABC123456789",
+                            "FormaPagoServicio": "01",
+                            "TipoServicio": "A01",
+                            "SubtipoServicio": "B02",
+                            "RfcTerceroAutorizado": "ABC123456789",
                             "FechaServString": "2023-09-23",
-                            "FechaServ": "2023-09-23T00:00:00Z",
-                            "PrecioServSinIVA": 1000,
-                            "ImpuestosTrasladadosDelServicio": {
+                            "FechaServicio": "2023-09-23T00:00:00Z",
+                            "PrecioServicioSinIva": 1000,
+                            "ImpuestosTrasladadosServicio": {
                                 "Base": 1000,
                                 "Impuesto": "IVA",
                                 "TipoFactor": "Tasa",
-                                "TasaCuota": 0.16,
+                                "TasaOCuota": 0.16,
                                 "Importe": 160
                             },
                             "ContribucionGubernamental": {
-                                "ImpContrib": 200,
-                                "EntidadDondePagaLaContribucion": "01"
+                                "ImporteContribucion": 200,
+                                "EntidadPagoContribucion": "01"
                             },
-                            "ComisionDelServicio": {
+                            "ComisionServicio": {
                                 "Base": 150.5,
                                 "Porcentaje": 0.05,
                                 "Importe": 7.53

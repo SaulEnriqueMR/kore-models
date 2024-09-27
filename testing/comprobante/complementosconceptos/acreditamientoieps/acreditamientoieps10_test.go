@@ -18,5 +18,8 @@ func GetAcreditamientoIeps(filename string, t *testing.T) (acreditamientoieps.Ac
 }
 
 func TestAcreditamientoIeps10Full(t *testing.T) {
+	acreditamientoIeps, _ := GetAcreditamientoIeps("./acreditamientoieps10.xml", t)
 
+	assert.Equal(t, "1.0", acreditamientoIeps.Version)
+	assert.Equal(t, "619", acreditamientoIeps.Tar)
 }

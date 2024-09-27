@@ -7,16 +7,16 @@ import (
 )
 
 type EstadoDeCuentaCombustible12 struct {
-	Version        string                          `xml:"Version,attr" bson:"Version"`
-	TipoOperacion  string                          `xml:"TipoOperacion,attr" bson:"TipoOperacion"`
-	NumeroDeCuenta string                          `xml:"NumeroDeCuenta,attr" bson:"NumeroDeCuenta"`
-	SubTotal       float64                         `xml:"SubTotal,attr" bson:"SubTotal"`
-	Total          float64                         `xml:"Total,attr" bson:"Total"`
-	Conceptos      ConceptosEstadoDeCuentaCombus12 `xml:"Conceptos" bson:"Conceptos"`
+	Version       string                          `xml:"Version,attr" bson:"Version"`
+	TipoOperacion string                          `xml:"TipoOperacion,attr" bson:"TipoOperacion"`
+	NoCuenta      string                          `xml:"NumeroDeCuenta,attr" bson:"NoCuenta"`
+	Subtotal      float64                         `xml:"SubTotal,attr" bson:"Subtotal"`
+	Total         float64                         `xml:"Total,attr" bson:"Total"`
+	Conceptos     ConceptosEstadoDeCuentaCombus12 `xml:"Conceptos" bson:"Conceptos"`
 }
 
 type ConceptosEstadoDeCuentaCombus12 struct {
-	ConceptoEstadoDeCuentaCombustible []ConceptoEstadoDeCuentaCombustible12 `xml:"ConceptoEstadoDeCuentaCombustible" bson:"ConceptoEstadoDeCuentaCombustible"`
+	Concepto []ConceptoEstadoDeCuentaCombustible12 `xml:"ConceptoEstadoDeCuentaCombustible" bson:"Concepto"`
 }
 
 type ConceptoEstadoDeCuentaCombustible12 struct {

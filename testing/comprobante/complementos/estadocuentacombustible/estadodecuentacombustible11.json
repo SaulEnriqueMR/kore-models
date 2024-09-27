@@ -1,11 +1,11 @@
 {
     "Version": "1.1",
     "TipoOperacion": "Tarjeta",
-    "NumeroDeCuenta": "11238",
-    "SubTotal": 1000,
+    "NoCuenta": "11238",
+    "Subtotal": 1000,
     "Total": 1160,
     "Conceptos": {
-        "ConceptoEstadoDeCuentaCombustible": [
+        "Concepto": [
             {
                 "Identificador": "12234",
                 "FechaString": "2015-11-02T10:20:02",
@@ -24,12 +24,12 @@
                     "Traslado": [
                         {
                             "Impuesto": "IVA",
-                            "TasaoCuota": 0.16,
+                            "TasaOCuota": 0.16,
                             "Importe": 172.78
                         },
                         {
                             "Impuesto": "IEPS",
-                            "TasaoCuota": 0.08,
+                            "TasaOCuota": 0.08,
                             "Importe": 79.99
                         }
                     ]

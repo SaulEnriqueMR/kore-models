@@ -20,15 +20,15 @@ func GetEstadoDeCuentaCombustible11ForTest(filename string, t *testing.T) (edocu
 func TestEstadoDeCuentaCombustible11(t *testing.T) {
 	estadoCuentaCombus11, _ := GetEstadoDeCuentaCombustible11ForTest("./estadodecuentacombustible11.xml", t)
 	InternalTestFullAtributesEstadoDeCuentaCombus11(t, estadoCuentaCombus11)
-	InternalTestFullAtributesConceptoEstadoCuentaCombus11(t, estadoCuentaCombus11.Conceptos.ConceptoEstadoDeCuentaCombustible[0])
-	InternalTestFullAtributesTrasladoEstadoCuentaCombus11(t, estadoCuentaCombus11.Conceptos.ConceptoEstadoDeCuentaCombustible[0].Traslados.Traslado)
+	InternalTestFullAtributesConceptoEstadoCuentaCombus11(t, estadoCuentaCombus11.Conceptos.Concepto[0])
+	InternalTestFullAtributesTrasladoEstadoCuentaCombus11(t, estadoCuentaCombus11.Conceptos.Concepto[0].Traslados.Traslado)
 }
 
 func InternalTestFullAtributesEstadoDeCuentaCombus11(t *testing.T, combustible11 edocuentacombus11.EstadoDeCuentaCombustible11) {
 	assert.Equal(t, "1.1", combustible11.Version)
 	assert.Equal(t, "Tarjeta", combustible11.TipoOperacion)
-	assert.Equal(t, "11238", combustible11.NumeroDeCuenta)
-	assert.Equal(t, 1000.0, combustible11.SubTotal)
+	assert.Equal(t, "11238", combustible11.NoCuenta)
+	assert.Equal(t, 1000.0, combustible11.Subtotal)
 	assert.Equal(t, 1160.0, combustible11.Total)
 }
 
@@ -49,11 +49,11 @@ func InternalTestFullAtributesConceptoEstadoCuentaCombus11(t *testing.T, concept
 
 func InternalTestFullAtributesTrasladoEstadoCuentaCombus11(t *testing.T, trasladocombustible11 []edocuentacombus11.TrasladoEstadoDeCuentaCombus11) {
 	assert.Equal(t, "IVA", trasladocombustible11[0].Impuesto)
-	assert.Equal(t, 0.16, trasladocombustible11[0].TasaoCuota)
+	assert.Equal(t, 0.16, trasladocombustible11[0].TasaOCuota)
 	assert.Equal(t, 172.78, trasladocombustible11[0].Importe)
 
 	assert.Equal(t, "IEPS", trasladocombustible11[1].Impuesto)
-	assert.Equal(t, 0.08, trasladocombustible11[1].TasaoCuota)
+	assert.Equal(t, 0.08, trasladocombustible11[1].TasaOCuota)
 	assert.Equal(t, 79.99, trasladocombustible11[1].Importe)
 
 }

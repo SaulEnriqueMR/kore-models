@@ -7,16 +7,16 @@ import (
 )
 
 type EstadoDeCuentaCombustible11 struct {
-	Version        string                          `xml:"Version,attr" bson:"Version"`
-	TipoOperacion  string                          `xml:"TipoOperacion,attr" bson:"TipoOperacion"`
-	NumeroDeCuenta string                          `xml:"NumeroDeCuenta,attr" bson:"NumeroDeCuenta"`
-	SubTotal       float64                         `xml:"SubTotal,attr" bson:"SubTotal"`
-	Total          float64                         `xml:"Total,attr" bson:"Total"`
-	Conceptos      ConceptosEstadoDeCuentaCombus11 `xml:"Conceptos" bson:"Conceptos"`
+	Version       string                          `xml:"Version,attr" bson:"Version"`
+	TipoOperacion string                          `xml:"TipoOperacion,attr" bson:"TipoOperacion"`
+	NoCuenta      string                          `xml:"NumeroDeCuenta,attr" bson:"NoCuenta"`
+	Subtotal      float64                         `xml:"SubTotal,attr" bson:"Subtotal"`
+	Total         float64                         `xml:"Total,attr" bson:"Total"`
+	Conceptos     ConceptosEstadoDeCuentaCombus11 `xml:"Conceptos" bson:"Conceptos"`
 }
 
 type ConceptosEstadoDeCuentaCombus11 struct {
-	ConceptoEstadoDeCuentaCombustible []ConceptoEstadoDeCuentaCombustible11 `xml:"ConceptoEstadoDeCuentaCombustible" bson:"ConceptoEstadoDeCuentaCombustible"`
+	Concepto []ConceptoEstadoDeCuentaCombustible11 `xml:"ConceptoEstadoDeCuentaCombustible" bson:"Concepto"`
 }
 
 type ConceptoEstadoDeCuentaCombustible11 struct {
@@ -42,7 +42,7 @@ type TrasladosEstadoDeCuentaCombus11 struct {
 
 type TrasladoEstadoDeCuentaCombus11 struct {
 	Impuesto   string  `xml:"Impuesto,attr" bson:"Impuesto"`
-	TasaoCuota float64 `xml:"TasaoCuota,attr" bson:"TasaoCuota"`
+	TasaOCuota float64 `xml:"TasaoCuota,attr" bson:"TasaOCuota"`
 	Importe    float64 `xml:"Importe,attr" bson:"Importe"`
 }
 

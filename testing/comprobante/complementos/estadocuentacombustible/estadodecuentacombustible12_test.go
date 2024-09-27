@@ -20,15 +20,15 @@ func GetEstadoDeCuentaCombustible12ForTest(filename string, t *testing.T) (edocu
 func TestEstadoDeCuentaCombustible12(t *testing.T) {
 	estadoCuentaCombus12, _ := GetEstadoDeCuentaCombustible12ForTest("./estadodecuentacombustible12.xml", t)
 	InternalTestFullAtributesEstadoDeCuentaCombus12(t, estadoCuentaCombus12)
-	InternalTestFullAtributesConceptoEstadoCuentaCombus12(t, estadoCuentaCombus12.Conceptos.ConceptoEstadoDeCuentaCombustible[0])
-	InternalTestFullAtributesTrasladoEstadoCuentaCombus12(t, estadoCuentaCombus12.Conceptos.ConceptoEstadoDeCuentaCombustible[0].Traslados.Traslado)
+	InternalTestFullAtributesConceptoEstadoCuentaCombus12(t, estadoCuentaCombus12.Conceptos.Concepto[0])
+	InternalTestFullAtributesTrasladoEstadoCuentaCombus12(t, estadoCuentaCombus12.Conceptos.Concepto[0].Traslados.Traslado)
 }
 
 func InternalTestFullAtributesEstadoDeCuentaCombus12(t *testing.T, combustible12 edocuentacombus12.EstadoDeCuentaCombustible12) {
 	assert.Equal(t, "1.2", combustible12.Version)
 	assert.Equal(t, "Tarjeta", combustible12.TipoOperacion)
-	assert.Equal(t, "11238", combustible12.NumeroDeCuenta)
-	assert.Equal(t, 1000.0, combustible12.SubTotal)
+	assert.Equal(t, "11238", combustible12.NoCuenta)
+	assert.Equal(t, 1000.0, combustible12.Subtotal)
 	assert.Equal(t, 1160.0, combustible12.Total)
 }
 

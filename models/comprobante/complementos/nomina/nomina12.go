@@ -9,14 +9,14 @@ import (
 // Nomina12 Presente en Comprobante 3.3 y 4.0
 type Nomina12 struct {
 	Version                string                 `xml:"Version,attr" bson:"Version"`
-	TipoNomina             string                 `xml:"TipoNomina,attr"`
+	TipoNomina             string                 `xml:"TipoNomina,attr" bson:"Tipo"`
 	FechaPagoString        string                 `xml:"FechaPago,attr"`
-	FechaInicialPagoString string                 `xml:"FechaInicialPago,attr"`
-	FechaFinalPagoString   string                 `xml:"FechaFinalPago,attr"`
 	FechaPago              time.Time              `bson:"FechaPago"`
+	FechaInicialPagoString string                 `xml:"FechaInicialPago,attr"`
 	FechaInicialPago       time.Time              `bson:"FechaInicialPago"`
+	FechaFinalPagoString   string                 `xml:"FechaFinalPago,attr"`
 	FechaFinalPago         time.Time              `bson:"FechaFinalPago"`
-	NumDiasPagados         float64                `xml:"NumDiasPagados,attr" bson:"NumDiasPagados"`
+	NumeroDiasPagados      float64                `xml:"NumDiasPagados,attr" bson:"NumeroDiasPagados"`
 	TotalPercepciones      *float64               `xml:"TotalPercepciones,attr" bson:"TotalPercepciones,omitempty"`
 	TotalDeducciones       *float64               `xml:"TotalDeducciones,attr" bson:"TotalDeducciones,omitempty"`
 	TotalOtrosPagos        *float64               `xml:"TotalOtrosPagos,attr" bson:"TotalOtrosPagos,omitempty"`
@@ -32,7 +32,7 @@ type EmisorNomina12 struct {
 	Curp             *string              `xml:"Curp,attr" bson:"Curp,omitempty"`                         // Cifrado
 	RegistroPatronal *string              `xml:"RegistroPatronal,attr" bson:"RegistroPatronal,omitempty"` // Cifrado
 	RfcPatronOrigen  *string              `xml:"RfcPatronOrigen,attr" bson:"RfcPatronOrigen,omitempty"`   // Cifrado
-	EntidadSNCF      *EntidadSNCFNomina12 `xml:"EntidadSNCF" bson:"EntidadSNCF,omitempty"`
+	EntidadSncf      *EntidadSNCFNomina12 `xml:"EntidadSNCF" bson:"EntidadSncf,omitempty"`
 }
 
 type EntidadSNCFNomina12 struct {
@@ -41,25 +41,45 @@ type EntidadSNCFNomina12 struct {
 }
 
 type ReceptorNomina12 struct {
-	Curp                   string                     `xml:"Curp,attr" bson:"Curp"`                                       // Cifrado
-	NumSeguridadSocial     *string                    `xml:"NumSeguridadSocial,attr" bson:"NumSeguridadsocial,omitempty"` // Cifrado
-	FechaInicioRelLaboral  *string                    `xml:"FechaInicioRelLaboral,attr" bson:"FechaInicioRelLaboral,omitempty"`
-	Antiguedad             *string                    `xml:"Antigüedad,attr" bson:"Antiguedad,omitempty"`
-	TipoContrato           string                     `xml:"TipoContrato,attr" bson:"TipoContrato"`
-	Sindicalizado          *string                    `xml:"Sindicalizado,attr" bson:"Sindicalizado,omitempty"`
-	TipoJornada            *string                    `xml:"TipoJornada,attr" bson:"TipoJornada,omitempty"`
-	TipoRegimen            string                     `xml:"TipoRegimen,attr" bson:"TipoRegimen"`
-	NumEmpleado            string                     `xml:"NumEmpleado,attr" bson:"NumEmpleado"`
-	Departamento           *string                    `xml:"Departamento,attr" bson:"Departamento,omitempty"`
-	Puesto                 *string                    `xml:"Puesto,attr" bson:"Puesto,omitempty"`
-	RiesgoPuesto           *string                    `xml:"RiesgoPuesto,attr" bson:"RiesgoPuesto,omitempty"`
-	PeriodicidadPago       string                     `xml:"PeriodicidadPago,attr" bson:"PeriodicidadPago"`
-	Banco                  *string                    `xml:"Banco,attr" bson:"Banco,omitempty"`                   // Cifrado
-	CuentaBancaria         *string                    `xml:"CuentaBancaria,attr" bson:"CuentaBancaria,omitempty"` // Cifrado
-	SalarioBaseCotApor     *float64                   `xml:"SalarioBaseCotApor,attr" bson:"SalarioBaseCotApor,omitempty"`
-	SalarioDiarioIntegrado *float64                   `xml:"SalarioDiarioIntegrado,attr" bson:"SalarioDiarioIntegrado,omitempty"`
-	ClaveEntFed            string                     `xml:"ClaveEntFed,attr" bson:"ClaveEntFed"`
-	SubContratacion        *[]SubContratacionNomina12 `xml:"SubContratacion" bson:"SubContratacion,omitempty"`
+	Curp                             string                     `xml:"Curp,attr" bson:"Curp"`                                      // Cifrado
+	NoSeguridadSocial                *string                    `xml:"NumSeguridadSocial,attr" bson:"NoSeguridadSocial,omitempty"` // Cifrado
+	FechaInicioRelacionLaboralString *string                    `xml:"FechaInicioRelLaboral,attr" bson:"FechaInicioRelLaboral,omitempty"`
+	FechaInicioRelacionLaboral       *time.Time                 `bson:"FechaInicioRelacionLaboral,omitempty"`
+	Antiguedad                       *string                    `xml:"Antigüedad,attr" bson:"Antiguedad,omitempty"`
+	TipoContrato                     string                     `xml:"TipoContrato,attr" bson:"TipoContrato"`
+	Sindicalizado                    *string                    `xml:"Sindicalizado,attr" bson:"Sindicalizado,omitempty"`
+	TipoJornada                      *string                    `xml:"TipoJornada,attr" bson:"TipoJornada,omitempty"`
+	TipoRegimen                      string                     `xml:"TipoRegimen,attr" bson:"TipoRegimen"`
+	NoEmpleado                       string                     `xml:"NumEmpleado,attr" bson:"NoEmpleado"`
+	Departamento                     *string                    `xml:"Departamento,attr" bson:"Departamento,omitempty"`
+	Puesto                           *string                    `xml:"Puesto,attr" bson:"Puesto,omitempty"`
+	RiesgoPuesto                     *string                    `xml:"RiesgoPuesto,attr" bson:"RiesgoPuesto,omitempty"`
+	PeriodicidadPago                 string                     `xml:"PeriodicidadPago,attr" bson:"PeriodicidadPago"`
+	Banco                            *string                    `xml:"Banco,attr" bson:"Banco,omitempty"`
+	CuentaBancaria                   *string                    `xml:"CuentaBancaria,attr" bson:"CuentaBancaria,omitempty"`
+	SalarioBaseCotizacion            *float64                   `xml:"SalarioBaseCotApor,attr" bson:"SalarioBaseCotizacion,omitempty"`
+	SalarioDiarioIntegrado           *float64                   `xml:"SalarioDiarioIntegrado,attr" bson:"SalarioDiarioIntegrado,omitempty"`
+	ClaveEntidadFederativa           string                     `xml:"ClaveEntFed,attr" bson:"ClaveEntidadFederativa"`
+	Subcontratacion                  *[]SubContratacionNomina12 `xml:"SubContratacion" bson:"Subcontratacion,omitempty"`
+}
+
+func (r *ReceptorNomina12) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias ReceptorNomina12
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*r = ReceptorNomina12(aux)
+
+	if r.FechaInicioRelacionLaboralString != nil {
+		fechaIniRelLab, _ := helpers.ParseDatetime(*aux.FechaInicioRelacionLaboralString)
+		r.FechaInicioRelacionLaboral = &fechaIniRelLab
+	}
+
+	return nil
 }
 
 type SubContratacionNomina12 struct {
@@ -79,7 +99,7 @@ type PercepcionesNomina12 struct {
 }
 
 type PercepcionNomina12 struct {
-	TipoPercepcion   string                    `xml:"TipoPercepcion,attr" bson:"TipoPercepcion"`
+	TipoPercepcion   string                    `xml:"TipoPercepcion,attr" bson:"Tipo"`
 	Clave            string                    `xml:"Clave,attr" bson:"Clave"`
 	Concepto         string                    `xml:"Concepto,attr" bson:"Concepto"`
 	ImporteGravado   float64                   `xml:"ImporteGravado,attr" bson:"ImporteGravado"`
@@ -109,11 +129,11 @@ type JubilacionPensionRetiroNomina12 struct {
 }
 
 type SeparacionIndemnizacionNomina12 struct {
-	TotalPagado         float64 `xml:"TotalPagado,attr" bson:"TotalPagado"`
-	NumAniosServicio    float64 `xml:"NumAñosServicio,attr" bson:"NumAniosServicio"`
-	UltimoSueldoMensOrd float64 `xml:"UltimoSueldoMensOrd,attr" bson:"UltimoSueldoMensOrd"`
-	IngresoAcumulable   float64 `xml:"IngresoAcumulable,attr" bson:"IngresoAcumulable"`
-	IngresoNoAcumulable float64 `xml:"IngresoNoAcumulable,attr" bson:"IngresoNoAcumulable"`
+	TotalPagado                  float64 `xml:"TotalPagado,attr" bson:"TotalPagado"`
+	NumeroAniosServicio          float64 `xml:"NumAñosServicio,attr" bson:"NumeroAniosServicio"`
+	UltimoSueldoMensualOrdinario float64 `xml:"UltimoSueldoMensOrd,attr" bson:"UltimoSueldoMensualOrdinario"`
+	IngresoAcumulable            float64 `xml:"IngresoAcumulable,attr" bson:"IngresoAcumulable"`
+	IngresoNoAcumulable          float64 `xml:"IngresoNoAcumulable,attr" bson:"IngresoNoAcumulable"`
 }
 
 type DeduccionesNomina12 struct {
@@ -123,14 +143,14 @@ type DeduccionesNomina12 struct {
 }
 
 type DeduccionNomina12 struct {
-	TipoDeduccion string  `xml:"TipoDeduccion,attr" bson:"TipoDeduccion"`
-	Clave         string  `xml:"Clave,attr" bson:"Clave"`
-	Concepto      string  `xml:"Concepto,attr" bson:"Concepto"`
-	Importe       float64 `xml:"Importe,attr" bson:"Importe"`
+	Tipo     string  `xml:"TipoDeduccion,attr" bson:"Tipo"`
+	Clave    string  `xml:"Clave,attr" bson:"Clave"`
+	Concepto string  `xml:"Concepto,attr" bson:"Concepto"`
+	Importe  float64 `xml:"Importe,attr" bson:"Importe"`
 }
 
 type OtroPagoNomina12 struct {
-	TipoOtroPago             string                            `xml:"TipoOtroPago,attr" bson:"TipoOtroPago"`
+	Tipo                     string                            `xml:"TipoOtroPago,attr" bson:"Tipo"`
 	Clave                    string                            `xml:"Clave,attr" bson:"Clave"`
 	Concepto                 string                            `xml:"Concepto,attr" bson:"Concepto"`
 	Importe                  float64                           `xml:"Importe,attr" bson:"Importe"`
@@ -143,15 +163,15 @@ type SubsidioAlEmpleoNomina12 struct {
 }
 
 type CompensacionSaldosAFavorNomina12 struct {
-	SaldoAFavor     float64 `xml:"SaldoAFavor,attr" bson:"SaldoAFavor"`
-	Anio            string  `xml:"Año,attr" bson:"Anio"`
-	RemanenteSalFav float64 `xml:"RemanenteSalFav,attr" bson:"RemanenteSalFav"`
+	SaldoAFavor          float64 `xml:"SaldoAFavor,attr" bson:"SaldoAFavor"`
+	Anio                 string  `xml:"Año,attr" bson:"Anio"`
+	RemanenteSaldoAFavor float64 `xml:"RemanenteSalFav,attr" bson:"RemanenteSaldoAFavor"`
 }
 
 type IncapacidadNomina12 struct {
-	DiasIncapacidad  float64  `xml:"DiasIncapacidad,attr" bson:"DiasIncapacidad"`
-	TipoIncapacidad  float64  `xml:"TipoIncapacidad,attr" bson:"TipoIncapacidad"`
-	ImporteMonetario *float64 `xml:"ImporteMonetario,attr" bson:"ImporteMonetario,omitempty"`
+	Dias    float64  `xml:"DiasIncapacidad,attr" bson:"Dias"`
+	Tipo    float64  `xml:"TipoIncapacidad,attr" bson:"Tipo"`
+	Importe *float64 `xml:"ImporteMonetario,attr" bson:"Importe,omitempty"`
 }
 
 func (c *Nomina12) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

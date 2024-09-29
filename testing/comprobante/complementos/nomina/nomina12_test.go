@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func GetNimina12ForTest(filename string, t *testing.T) (nomina12.Nomina12, error) {
+func GetNomina12ForTest(filename string, t *testing.T) (nomina12.Nomina12, error) {
 	data := testing2.GetFileContentForTest(filename, t)
 	var parsed nomina12.Nomina12
 	errUnmashal := xml.Unmarshal(data, &parsed)
@@ -19,7 +19,7 @@ func GetNimina12ForTest(filename string, t *testing.T) (nomina12.Nomina12, error
 }
 
 func TestFullNomina12(t *testing.T) {
-	nomina, _ := GetNimina12ForTest("./nomina12.xml", t)
+	nomina, _ := GetNomina12ForTest("./nomina12.xml", t)
 	InternalTestBaseAttributes12(t, nomina)
 	InternalTestEmisor(t, nomina.Emisor)
 	InternalTestReceptor(t, nomina.Receptor)
@@ -36,7 +36,7 @@ func InternalTestBaseAttributes12(t *testing.T, nomina nomina12.Nomina12) {
 	assert.Equal(t, "2024-09-15", nomina.FechaPagoString)
 	assert.Equal(t, "2024-09-01", nomina.FechaInicialPagoString)
 	assert.Equal(t, "2024-09-14", nomina.FechaFinalPagoString)
-	assert.Equal(t, 14.000, nomina.NumDiasPagados)
+	assert.Equal(t, 14.000, nomina.NumeroDiasPagados)
 	assert.Equal(t, 15000.00, *nomina.TotalPercepciones)
 	assert.Equal(t, 5000.00, *nomina.TotalDeducciones)
 	assert.Equal(t, 2000.00, *nomina.TotalOtrosPagos)
@@ -47,7 +47,7 @@ func InternalTestEmisor(t *testing.T, emisor *nomina12.EmisorNomina12) {
 	assert.Equal(t, "ABC123456HDFGJ90", *emisor.Curp)
 	assert.Equal(t, "12345678901234567890", *emisor.RegistroPatronal)
 	assert.Equal(t, "RFC123456789", *emisor.RfcPatronOrigen)
-	InternalTestEntidadSNCF(t, emisor.EntidadSNCF)
+	InternalTestEntidadSNCF(t, emisor.EntidadSncf)
 }
 
 func InternalTestEntidadSNCF(t *testing.T, entidad *nomina12.EntidadSNCFNomina12) {
@@ -60,24 +60,24 @@ func InternalTestEntidadSNCF(t *testing.T, entidad *nomina12.EntidadSNCFNomina12
 func InternalTestReceptor(t *testing.T, receptor nomina12.ReceptorNomina12) {
 	assert.NotNil(t, receptor)
 	assert.Equal(t, "DEF123456HDFGJ01", receptor.Curp)
-	assert.Equal(t, "123456789012345", *receptor.NumSeguridadSocial)
-	assert.Equal(t, "2022-01-01", *receptor.FechaInicioRelLaboral)
+	assert.Equal(t, "123456789012345", *receptor.NoSeguridadSocial)
+	assert.Equal(t, "2022-01-01", *receptor.FechaInicioRelacionLaboralString)
 	assert.Equal(t, "P1Y2M10D", *receptor.Antiguedad)
 	assert.Equal(t, "01", receptor.TipoContrato)
 	assert.Equal(t, "Sí", *receptor.Sindicalizado)
 	assert.Equal(t, "Diurna", *receptor.TipoJornada)
 	assert.Equal(t, "01", receptor.TipoRegimen)
-	assert.Equal(t, "12345", receptor.NumEmpleado)
+	assert.Equal(t, "12345", receptor.NoEmpleado)
 	assert.Equal(t, "Ventas", *receptor.Departamento)
 	assert.Equal(t, "Ejecutivo de Ventas", *receptor.Puesto)
 	assert.Equal(t, "B", *receptor.RiesgoPuesto)
 	assert.Equal(t, "Quincenal", receptor.PeriodicidadPago)
 	assert.Equal(t, "021", *receptor.Banco)
 	assert.Equal(t, "12345678901", *receptor.CuentaBancaria)
-	assert.Equal(t, 12000.00, *receptor.SalarioBaseCotApor)
+	assert.Equal(t, 12000.00, *receptor.SalarioBaseCotizacion)
 	assert.Equal(t, 800.00, *receptor.SalarioDiarioIntegrado)
-	assert.Equal(t, "09", receptor.ClaveEntFed)
-	InternalTestSubContratacion(t, receptor.SubContratacion)
+	assert.Equal(t, "09", receptor.ClaveEntidadFederativa)
+	InternalTestSubContratacion(t, receptor.Subcontratacion)
 }
 
 func InternalTestSubContratacion(t *testing.T, subcontrataciones *[]nomina12.SubContratacionNomina12) {
@@ -142,8 +142,8 @@ func InternalTestJubilacionPensionRetiro12(t *testing.T, jubilacion nomina12.Jub
 func InternalTestSeparacionIndemnizacionNomina12(t *testing.T, separacion nomina12.SeparacionIndemnizacionNomina12) {
 	assert.NotNil(t, separacion)
 	assert.Equal(t, 5000.00, separacion.TotalPagado)
-	assert.Equal(t, 10.0, separacion.NumAniosServicio)
-	assert.Equal(t, 1500.00, separacion.UltimoSueldoMensOrd)
+	assert.Equal(t, 10.0, separacion.NumeroAniosServicio)
+	assert.Equal(t, 1500.00, separacion.UltimoSueldoMensualOrdinario)
 	assert.Equal(t, 4000.00, separacion.IngresoAcumulable)
 	assert.Equal(t, 1000.00, separacion.IngresoNoAcumulable)
 }
@@ -159,7 +159,7 @@ func InternalTestDeduccion12(t *testing.T, deducciones []nomina12.DeduccionNomin
 	assert.NotNil(t, deducciones)
 	deduccion := deducciones[0]
 	assert.NotNil(t, deduccion)
-	assert.Equal(t, "003", deduccion.TipoDeduccion)
+	assert.Equal(t, "003", deduccion.Tipo)
 	assert.Equal(t, "D001", deduccion.Clave)
 	assert.Equal(t, "Préstamo Personal", deduccion.Concepto)
 	assert.Equal(t, 1500.00, deduccion.Importe)
@@ -169,13 +169,12 @@ func InternalTestOtroPago12(t *testing.T, otrosPagos []nomina12.OtroPagoNomina12
 	assert.NotNil(t, otrosPagos)
 	otroPago := otrosPagos[0]
 	assert.NotNil(t, otroPago)
-	assert.Equal(t, "001", otroPago.TipoOtroPago)
+	assert.Equal(t, "001", otroPago.Tipo)
 	assert.Equal(t, "OP001", otroPago.Clave)
 	assert.Equal(t, "Subsidio de Empleo", otroPago.Concepto)
 	assert.Equal(t, 500.00, otroPago.Importe)
 	InternalTestSubsidioAlEmpleoNomina12(t, otroPago.SubsidioAlEmpleo)
 	otroPago1 := otrosPagos[1]
-	print(otroPago1.CompensacionSaldosAFavor)
 	assert.NotNil(t, otroPago1)
 	InternalTestCompensacionSaldosAFavorNomina12(t, otroPago1.CompensacionSaldosAFavor)
 }
@@ -188,13 +187,13 @@ func InternalTestCompensacionSaldosAFavorNomina12(t *testing.T, compensacion *no
 	assert.NotNil(t, compensacion)
 	assert.Equal(t, 300.00, compensacion.SaldoAFavor)
 	assert.Equal(t, "2023", compensacion.Anio)
-	assert.Equal(t, 100.00, compensacion.RemanenteSalFav)
+	assert.Equal(t, 100.00, compensacion.RemanenteSaldoAFavor)
 }
 func InternalTestIncapacidad12(t *testing.T, incapacidades []nomina12.IncapacidadNomina12) {
 	assert.NotNil(t, incapacidades)
 	incapacidad := incapacidades[0]
 	assert.NotNil(t, incapacidad)
-	assert.Equal(t, 5.0, incapacidad.DiasIncapacidad)
-	assert.Equal(t, 01.0, incapacidad.TipoIncapacidad)
-	assert.Equal(t, 1500.00, *incapacidad.ImporteMonetario)
+	assert.Equal(t, 5.0, incapacidad.Dias)
+	assert.Equal(t, 01.0, incapacidad.Tipo)
+	assert.Equal(t, 1500.00, *incapacidad.Importe)
 }

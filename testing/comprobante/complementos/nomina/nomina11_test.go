@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func GetNimina11ForTest(filename string, t *testing.T) (nomina11.Nomina11, error) {
+func GetNomina11ForTest(filename string, t *testing.T) (nomina11.Nomina11, error) {
 	data := testing2.GetFileContentForTest(filename, t)
 	var parsed nomina11.Nomina11
 	errUnmashal := xml.Unmarshal(data, &parsed)
@@ -19,7 +19,7 @@ func GetNimina11ForTest(filename string, t *testing.T) (nomina11.Nomina11, error
 }
 
 func TestFullNomina11(t *testing.T) {
-	nomina, _ := GetNimina11ForTest("./nomina11.xml", t)
+	nomina, _ := GetNomina11ForTest("./nomina11.xml", t)
 	InternalTestBaseAttributes(t, nomina)
 	InternalTestPercepciones(t, nomina.Percepciones)
 	InternalTestDeducciones(t, nomina.Deducciones)
@@ -29,20 +29,20 @@ func TestFullNomina11(t *testing.T) {
 
 func InternalTestBaseAttributes(t *testing.T, nomina nomina11.Nomina11) {
 	assert.Equal(t, "1.1", nomina.Version)
-	assert.Equal(t, "12345", nomina.NumEmpleado)
+	assert.Equal(t, "12345", nomina.NoEmpleado)
 	assert.Equal(t, "GODE561231GR8", nomina.Curp)
 	assert.Equal(t, 2, nomina.TipoRegimen)
-	assert.Equal(t, "2024-09-18", nomina.FechaPago)
-	assert.Equal(t, "2023-09-01", nomina.FechaInicialPago)
-	assert.Equal(t, "2023-09-15", nomina.FechaFinalPago)
-	assert.Equal(t, 14.000000, nomina.NumDiasPagados)
+	assert.Equal(t, "2024-09-18", nomina.FechaPagoString)
+	assert.Equal(t, "2023-09-01", nomina.FechaInicialPagoString)
+	assert.Equal(t, "2023-09-15", nomina.FechaFinalPagoString)
+	assert.Equal(t, 14.000000, nomina.NumerosDiasPagados)
 	assert.Equal(t, "Quincenal", nomina.PeriodicidadPago)
 	assert.Equal(t, "12345678901234567890", *nomina.RegistroPatronal)
 	assert.Equal(t, "123456789012345", *nomina.NumSeguridadSocial)
 	assert.Equal(t, "Contabilidad", *nomina.Departamento)
 	assert.Equal(t, "012345678901234567", *nomina.Clabe)
 	assert.Equal(t, 12, *nomina.Banco)
-	assert.Equal(t, "2010-05-15", *nomina.FechaInicioRelLaboral)
+	assert.Equal(t, "2010-05-15", *nomina.FechaInicioRelacionLaboralString)
 	assert.Equal(t, 750, *nomina.Antiguedad)
 	assert.Equal(t, "Analista Financiero", *nomina.Puesto)
 	assert.Equal(t, "Sindicalizado", *nomina.TipoContrato)
@@ -97,8 +97,8 @@ func InternalTestIncapacidad(t *testing.T, nomina *[]nomina11.IncapacidadNomina1
 	assert.NotNil(t, nomina)
 	assert.Equal(t, len(*nomina), 2)
 	nomina1 := (*nomina)[0]
-	assert.Equal(t, 2.00, nomina1.DiasIncapacidad)
-	assert.Equal(t, 001, nomina1.TipoIncapacidad)
+	assert.Equal(t, 2.00, nomina1.Dias)
+	assert.Equal(t, 001, nomina1.Tipo)
 	assert.Equal(t, 200.0, nomina1.Descuento)
 }
 

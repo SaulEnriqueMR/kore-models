@@ -2,12 +2,12 @@
     "Version": "1.2",
     "TipoNomina": "O",
     "FechaPagoString": "2024-09-15",
-    "FechaInicialPagoString": "2024-09-01",
-    "FechaFinalPagoString": "2024-09-14",
     "FechaPago": "2024-09-15T00:00:00Z",
+    "FechaInicialPagoString": "2024-09-01",
     "FechaInicialPago": "2024-09-01T00:00:00Z",
+    "FechaFinalPagoString": "2024-09-14",
     "FechaFinalPago": "2024-09-14T00:00:00Z",
-    "NumDiasPagados": 14,
+    "NumeroDiasPagados": 14,
     "TotalPercepciones": 15000,
     "TotalDeducciones": 5000,
     "TotalOtrosPagos": 2000,
@@ -15,31 +15,32 @@
         "Curp": "ABC123456HDFGJ90",
         "RegistroPatronal": "12345678901234567890",
         "RfcPatronOrigen": "RFC123456789",
-        "EntidadSNCF": {
+        "EntidadSncf": {
             "OrigenRecurso": "Federal",
             "MontoRecursoPropio": 30000
         }
     },
     "Receptor": {
         "Curp": "DEF123456HDFGJ01",
-        "NumSeguridadSocial": "123456789012345",
-        "FechaInicioRelLaboral": "2022-01-01",
+        "NoSeguridadSocial": "123456789012345",
+        "FechaInicioRelacionLaboralString": "2022-01-01",
+        "FechaInicioRelacionLaboral": "2022-01-01T00:00:00Z",
         "Antiguedad": "P1Y2M10D",
         "TipoContrato": "01",
         "Sindicalizado": "Sí",
         "TipoJornada": "Diurna",
         "TipoRegimen": "01",
-        "NumEmpleado": "12345",
+        "NoEmpleado": "12345",
         "Departamento": "Ventas",
         "Puesto": "Ejecutivo de Ventas",
         "RiesgoPuesto": "B",
         "PeriodicidadPago": "Quincenal",
         "Banco": "021",
         "CuentaBancaria": "12345678901",
-        "SalarioBaseCotApor": 12000,
+        "SalarioBaseCotizacion": 12000,
         "SalarioDiarioIntegrado": 800,
-        "ClaveEntFed": "09",
-        "SubContratacion": [
+        "ClaveEntidadFederativa": "09",
+        "Subcontratacion": [
             {
                 "RfcLabora": "XAXX010101000",
                 "PorcentajeTiempo": 50
@@ -95,8 +96,8 @@
         },
         "SeparacionIndemnizacion": {
             "TotalPagado": 5000,
-            "NumAniosServicio": 10,
-            "UltimoSueldoMensOrd": 1500,
+            "NumeroAniosServicio": 10,
+            "UltimoSueldoMensualOrdinario": 1500,
             "IngresoAcumulable": 4000,
             "IngresoNoAcumulable": 1000
         }
@@ -106,13 +107,13 @@
         "TotalImpuestosRetenidos": 2000,
         "Deduccion": [
             {
-                "TipoDeduccion": "003",
+                "Tipo": "003",
                 "Clave": "D001",
                 "Concepto": "Préstamo Personal",
                 "Importe": 1500
             },
             {
-                "TipoDeduccion": "002",
+                "Tipo": "002",
                 "Clave": "D002",
                 "Concepto": "ISR Retenido",
                 "Importe": 2000
@@ -121,7 +122,7 @@
     },
     "OtrosPagos": [
         {
-            "TipoOtroPago": "001",
+            "Tipo": "001",
             "Clave": "OP001",
             "Concepto": "Subsidio de Empleo",
             "Importe": 500,
@@ -131,7 +132,7 @@
             "CompensacionSaldosAFavor": null
         },
         {
-            "TipoOtroPago": "002",
+            "Tipo": "002",
             "Clave": "OP002",
             "Concepto": "Compensación de Saldos a Favor",
             "Importe": 200,
@@ -139,20 +140,20 @@
             "CompensacionSaldosAFavor": {
                 "SaldoAFavor": 300,
                 "Anio": "2023",
-                "RemanenteSalFav": 100
+                "RemanenteSaldoAFavor": 100
             }
         }
     ],
     "Incapacidades": [
         {
-            "DiasIncapacidad": 5,
-            "TipoIncapacidad": 1,
-            "ImporteMonetario": 1500
+            "Dias": 5,
+            "Tipo": 1,
+            "Importe": 1500
         },
         {
-            "DiasIncapacidad": 2,
-            "TipoIncapacidad": 2,
-            "ImporteMonetario": 600
+            "Dias": 2,
+            "Tipo": 2,
+            "Importe": 600
         }
     ]
 }

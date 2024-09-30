@@ -1,8 +1,8 @@
 {
     "Version": "1.0",
-    "DescInmueble": [
+    "DescripcionesInmuebles": [
         {
-            "TipoInmueble": "01",
+            "Tipo": "01",
             "Calle": "Conocida",
             "NoExterior": "218",
             "NoInterior": "1",
@@ -16,21 +16,22 @@
         }
     ],
     "DatosOperacion": {
-        "NumInstrumentoNotarial": 12345,
-        "FechaInstNotarialString": "2014-05-05",
-        "FechaInstNotarial": "2014-05-05T00:00:00Z",
+        "NoInstrumentoNotarial": "12345",
+        "FechaFirmaInstrumentoNotarialString": "2014-05-05",
+        "FechaFirmaInstrumentoNotarial": "2014-05-05T00:00:00Z",
         "MontoOperacion": 330000,
         "Subtotal": 330000,
-        "IVA": 52800
+        "Iva": 52800
     },
     "DatosNotario": {
         "Curp": "AAQM010101HCSMNZ00",
-        "NumNotaria": 3,
+        "NoNotaria": 3,
         "EntidadFederativa": "16",
         "Adscripcion": "Adscripcion1"
     },
     "DatosEnajenante": {
         "CoproSocConyugalE": "No",
+        "EsCopropiedadOSociedadConyugal": false,
         "DatosUnEnajenante": {
             "Nombre": "Santiago",
             "ApellidoPaterno": "Hernandez",
@@ -38,7 +39,7 @@
             "Rfc": "XAXX010101000",
             "Curp": "XAXX010101HOCRRN03"
         },
-        "DatosEnajenanteCopSC": [
+        "DatosEnajenanteCopropiedadOSociedadConyugal": [
             {
                 "Nombre": "Francisco",
                 "ApellidoPaterno": "Vazquez",
@@ -51,6 +52,7 @@
     },
     "DatosAdquiriente": {
         "CoproSocConyugalE": "Si",
+        "EsCopropiedadOSociedadConyugal": true,
         "DatosUnAdquiriente": {
             "Nombre": "Armando",
             "ApellidoPaterno": "Contreras",
@@ -58,7 +60,7 @@
             "Rfc": "AACO010101000",
             "Curp": "XAXX010101HOCRRN03"
         },
-        "DatosAdquirientesCopSC": [
+        "DatosAdquirientesCopropiedadOSociedadConyugal": [
             {
                 "Nombre": "Arturo",
                 "ApellidoPaterno": "Montes",

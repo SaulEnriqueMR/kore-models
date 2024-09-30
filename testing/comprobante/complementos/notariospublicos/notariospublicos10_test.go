@@ -21,7 +21,7 @@ func GetNotariosPublicos10ForTest(filename string, t *testing.T) (notariosPub2.N
 func TestNotariosPublicos10(t *testing.T) {
 	notariosPublicos10, _ := GetNotariosPublicos10ForTest("./notariospublicos10.xml", t)
 	InternalTestFullAtributesNotariosPublicos10(t, notariosPublicos10)
-	InternalFullTestAtributesDescInmuebleNotariosPub10(t, *notariosPublicos10.DescInmueble)
+	InternalFullTestAtributesDescInmuebleNotariosPub10(t, *notariosPublicos10.DescripcionesInmuebles)
 	InternalTestFullAtributesDatosOperacionNotariosPub10(t, notariosPublicos10.DatosOperacion)
 	InternalTestFullAtributesDatosNotarioNortariospub10(t, notariosPublicos10.DatosNotario)
 	InternalTestFullAtributesDatosEnajenanteNotariosPub10(t, notariosPublicos10.DatosEnajenante)
@@ -35,7 +35,7 @@ func InternalTestFullAtributesNotariosPublicos10(t *testing.T, publicos10 notari
 
 func InternalFullTestAtributesDescInmuebleNotariosPub10(t *testing.T, pub10 []notariosPub2.DescInmuebleNotariosPub10) {
 	assert.Equal(t, 1, len(pub10))
-	assert.Equal(t, "01", pub10[0].TipoInmueble)
+	assert.Equal(t, "01", pub10[0].Tipo)
 	assert.Equal(t, "Conocida", pub10[0].Calle)
 	assert.Equal(t, "218", *pub10[0].NoExterior)
 	assert.Equal(t, "1", *pub10[0].NoInterior)
@@ -49,16 +49,16 @@ func InternalFullTestAtributesDescInmuebleNotariosPub10(t *testing.T, pub10 []no
 }
 
 func InternalTestFullAtributesDatosOperacionNotariosPub10(t *testing.T, pub10 notariosPub2.DatosOperacionNotariosPub10) {
-	assert.Equal(t, int64(12345), pub10.NumInstrumentoNotarial)
-	assert.Equal(t, "2014-05-05", pub10.FechaInstNotarialString)
+	assert.Equal(t, "12345", pub10.NoInstrumentoNotarial)
+	assert.Equal(t, "2014-05-05", pub10.FechaFirmaInstrumentoNotarialString)
 	assert.Equal(t, 330000.00, pub10.MontoOperacion)
 	assert.Equal(t, 330000.00, pub10.Subtotal)
-	assert.Equal(t, 52800.00, pub10.IVA)
+	assert.Equal(t, 52800.00, pub10.Iva)
 }
 
 func InternalTestFullAtributesDatosNotarioNortariospub10(t *testing.T, pub10 notariosPub2.DatosNotarioNotariosPub10) {
 	assert.Equal(t, "AAQM010101HCSMNZ00", pub10.Curp)
-	assert.Equal(t, int16(3), pub10.NumNotaria)
+	assert.Equal(t, int16(3), pub10.NoNotaria)
 	assert.Equal(t, "16", pub10.EntidadFederativa)
 	assert.Equal(t, "Adscripcion1", *pub10.Adscripcion)
 }
@@ -66,7 +66,7 @@ func InternalTestFullAtributesDatosNotarioNortariospub10(t *testing.T, pub10 not
 func InternalTestFullAtributesDatosEnajenanteNotariosPub10(t *testing.T, pub10 notariosPub2.DatosEnajenanteNotariosPub10) {
 	assert.Equal(t, "No", pub10.CoproSocConyugalE)
 	InternalTestFullAtributesDatosUnEnajenanteNotariosPub10(t, *pub10.DatosUnEnajenante)
-	InternalTestFullAtributesDatosEnajenanteCopSCNotariosPub10(t, *pub10.DatosEnajenanteCopSC)
+	InternalTestFullAtributesDatosEnajenanteCopSCNotariosPub10(t, *pub10.DatosEnajenanteCopropiedadOSociedadConyugal)
 }
 
 func InternalTestFullAtributesDatosUnEnajenanteNotariosPub10(t *testing.T, pub10 notariosPub2.DatosUnEnajenanteNotariosPub10) {
@@ -90,7 +90,7 @@ func InternalTestFullAtributesDatosEnajenanteCopSCNotariosPub10(t *testing.T, pu
 func InternalTestFullAtributesDatosAdquirienteNotariosPub10(t *testing.T, pub10 notariosPub2.DatosAdquirienteNotariosPub10) {
 	assert.Equal(t, "Si", pub10.CoproSocConyugalE)
 	InternalTestFullAtributesDatosUnAdquirienteNotariosPub10(t, *pub10.DatosUnAdquiriente)
-	InternalTestFullAtributesDatosAdquirientesCopSCNotariosPub10(t, *pub10.DatosAdquirientesCopSC)
+	InternalTestFullAtributesDatosAdquirientesCopSCNotariosPub10(t, *pub10.DatosAdquirientesCopropiedadOSociedadConyugal)
 }
 
 func InternalTestFullAtributesDatosUnAdquirienteNotariosPub10(t *testing.T, pub10 notariosPub2.DatosUnAdquirienteNotariosPub10) {

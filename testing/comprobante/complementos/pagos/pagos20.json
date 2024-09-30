@@ -1,108 +1,109 @@
 {
     "Version": "2.0",
     "Totales": {
-        "TotalRetencionesIVA": 500,
-        "TotalRetencionesISR": 300,
-        "TotalRetencionesIEPS": 0,
-        "TotalTrasladosBaseIVA16": 10000,
-        "TotalTrasladosImpuestoIVA16": 1600,
-        "TotalTrasladosBaseIVA8": 0,
-        "TotalTrasladosImpuestoIVA8": 0,
-        "TotalTrasladosBaseIVA0": 0,
-        "TotalTrasladosImpuestoIVA0": 0,
-        "TotalTrasladosBaseIVAExento": 0,
+        "TotalRetencionesIva": 500,
+        "TotalRetencionesIsr": 300,
+        "TotalRetencionesIeps": 0,
+        "TotalTrasladosBaseIva16": 10000,
+        "TotalTrasladosImpuestoIva16": 1600,
+        "TotalTrasladosBaseIva8": 0,
+        "TotalTrasladosImpuestoIva8": 0,
+        "TotalTrasladosBaseIva0": 0,
+        "TotalTrasladosImpuestoIva0": 0,
+        "TotalTrasladosBaseIvaExento": 0,
         "MontoTotalPagos": 5000
     },
     "Pago": [
         {
-            "FechaPago": "2024-09-15T12:00:00",
-            "FormaPagoP": "03",
-            "MonedaP": "USD",
-            "TipoCambioP": 17.5,
+            "FechaPagoString": "2024-09-15T12:00:00",
+            "FechaPago": "2024-09-15T12:00:00Z",
+            "FormaPago": "03",
+            "Moneda": "USD",
+            "TipoCambio": 17.5,
             "Monto": 5000,
-            "NumOperacion": "1234567890",
-            "RfcEmisorCtaOrd": "XEXX010101000",
-            "NomBancoOrdExt": "Banco Internacional",
-            "CtaOrdenante": "1234567890123456",
-            "RfcEmisorCtaBen": "ABC123456T12",
-            "CtaBeneficiario": "6543210987654321",
-            "TipoCadPago": "01",
-            "CertPago": "MIIEBjCCAm4CCQD6P5Iks0ACxjANBgkqhkiG9w0BAQsFADCBhTELMAkGA1UEBhMCVVMxEzARBgNV",
-            "CadPago": "00001|ABC123456T12|2024-09-15T12:00:00|5000.00|17.500000",
+            "NoOperacion": "1234567890",
+            "RfcEmisorCuentaOrdenante": "XEXX010101000",
+            "NombreBancoOrdenanteExtranjero": "Banco Internacional",
+            "CuentaOrdenante": "1234567890123456",
+            "RfcEmisorCuentaBeneficiario": "ABC123456T12",
+            "CuentaBeneficiario": "6543210987654321",
+            "TipoCadenaPago": "01",
+            "CertificadoPago": "MIIEBjCCAm4CCQD6P5Iks0ACxjANBgkqhkiG9w0BAQsFADCBhTELMAkGA1UEBhMCVVMxEzARBgNV",
+            "CadenaPago": "00001|ABC123456T12|2024-09-15T12:00:00|5000.00|17.500000",
             "SelloPago": "MIIEBjCCAm4CCQD6P5Iks0ACxjANBgkqhkiG9w0BAQsFADCBhTELMAkGA1UEBhMCVVMxEzARBgNV",
-            "DoctoRelacionado": [
+            "DocumentosRelacionados": [
                 {
                     "IdDocumento": "123e4567-e89b-12d3-a456-426614174000",
                     "Serie": "A",
                     "Folio": "1001",
-                    "MonedaDR": "MXN",
-                    "EquivalenciaDR": null,
-                    "NumParcialidad": 1,
-                    "ImpSaldoAnt": 1500,
-                    "ImpPagado": 1500,
-                    "ImpSaldoInsoluto": 0,
-                    "ObjetoImpDR": "01",
-                    "ImpuestosDR": {
-                        "RetencionesDR": [
+                    "Moneda": "MXN",
+                    "Equivalencia": null,
+                    "NoParcialidad": 1,
+                    "ImporteSaldoAnterior": 1500,
+                    "ImportePagado": 1500,
+                    "ImporteSaldoInsoluto": 0,
+                    "ObjetoImpuesto": "01",
+                    "Impuestos": {
+                        "Retenciones": [
                             {
-                                "BaseDR": 1000.000001,
-                                "ImpuestoDR": "001",
-                                "TipoFactorDR": "Tasa",
-                                "TasaOCuotaDR": 0.16,
-                                "ImporteDR": 160
+                                "Base": 1000.000001,
+                                "Impuesto": "001",
+                                "TipoFactor": "Tasa",
+                                "TasaOCuota": 0.16,
+                                "Importe": 160
                             },
                             {
-                                "BaseDR": 500.000001,
-                                "ImpuestoDR": "002",
-                                "TipoFactorDR": "Tasa",
-                                "TasaOCuotaDR": 0.1,
-                                "ImporteDR": 50
+                                "Base": 500.000001,
+                                "Impuesto": "002",
+                                "TipoFactor": "Tasa",
+                                "TasaOCuota": 0.1,
+                                "Importe": 50
                             }
                         ],
-                        "TrasladosDR": [
+                        "Traslados": [
                             {
-                                "BaseDR": 2000.000001,
-                                "ImpuestoDR": "002",
-                                "TipoFactorDR": "Tasa",
-                                "TasaOCuotaDR": 0.16,
-                                "ImporteDR": 320
+                                "Base": 2000.000001,
+                                "Impuesto": "002",
+                                "TipoFactor": "Tasa",
+                                "TasaOCuota": 0.16,
+                                "Importe": 320
                             },
                             {
-                                "BaseDR": 1000.000001,
-                                "ImpuestoDR": "003",
-                                "TipoFactorDR": "Exento",
-                                "TasaOCuotaDR": null,
-                                "ImporteDR": null
+                                "Base": 1000.000001,
+                                "Impuesto": "003",
+                                "TipoFactor": "Exento",
+                                "TasaOCuota": null,
+                                "Importe": null
                             }
                         ]
                     }
                 }
             ],
-            "ImpuestosP": {
-                "RetencionesP": [
+            "Impuestos": {
+                "Retenciones": [
                     {
-                        "ImpuestoP": "ISR",
-                        "ImporteP": 1500
+                        "Impuesto": "ISR",
+                        "Importe": 1500
                     },
                     {
-                        "ImpuestoP": "IVA",
-                        "ImporteP": 300
+                        "Impuesto": "IVA",
+                        "Importe": 300
                     }
                 ],
-                "TrasladosP": [
+                "Traslados": [
                     {
-                        "BaseP": 5000,
-                        "ImpuestoP": "IVA",
-                        "TipoFactorP": "Tasa",
-                        "TasaOCuotaP": 0.16,
-                        "ImporteP": 800
+                        "Base": 5000,
+                        "Impuesto": "IVA",
+                        "TipoFactor": "Tasa",
+                        "TasaOCuota": 0.16,
+                        "Importe": 800
                     },
                     {
-                        "BaseP": 2000,
-                        "ImpuestoP": "IVA",
-                        "TipoFactorP": "Tasa",
-                        "TasaOCuotaP": 0.16,
-                        "ImporteP": 320
+                        "Base": 2000,
+                        "Impuesto": "IVA",
+                        "TipoFactor": "Tasa",
+                        "TasaOCuota": 0.16,
+                        "Importe": 320
                     }
                 ]
             }

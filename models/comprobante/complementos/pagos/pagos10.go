@@ -13,37 +13,37 @@ type Pagos10 struct {
 }
 
 type PagoPagos10 struct {
-	FechaPago        string                     `xml:"FechaPago,attr"`
-	FechaPagoDate    time.Time                  `bson:"FechaPago"`
-	FormaDePagoP     string                     `xml:"FormaDePagoP,attr" bson:"FormaPagoP"`
-	MonedaP          string                     `xml:"MonedaP,attr" bson:"MonedaP"`
-	TipoCambioP      *float64                   `xml:"TipoCambioP,attr" bson:"TipoCambioP,omitempty"`
-	Monto            float64                    `xml:"Monto,attr" bson:"Monto"`
-	NumOperacion     *string                    `xml:"NumOperacion,attr" bson:"NumOperacion,omitempty"`       // Cifrado
-	RfcEmisorCtaOrd  *string                    `xml:"RfcEmisorCtaOrd,attr" bson:"RfcEmisorCtaOrd,omitempty"` // Cifrado
-	NomBancoOrdExt   *string                    `xml:"NomBancoOrdExt,attr" bson:"NomBancoOrdExt,omitempty"`   // Cifrado
-	CtaOrdenante     *string                    `xml:"CtaOrdenante,attr" bson:"CtaOrdenante,omitempty"`       // Cifrado
-	RfcEmisorCtaBen  *string                    `xml:"RfcEmisorCtaBen,attr" bson:"RfcEmisorCtaBen,omitempty"` // Cifrado
-	CtaBeneficiario  *string                    `xml:"CtaBeneficiario,attr" bson:"CtaBeneficiario,omitempty"` // Cifrado
-	TipoCadPago      *string                    `xml:"TipoCadPago,attr" bson:"TipoCadPago,omitempty"`
-	CertPago         *string                    `xml:"CertPago,attr" bson:"CertPago,omitempty"`
-	CadPago          *string                    `xml:"CadPago,attr" bson:"CadPago,omitempty"`
-	SelloPago        *string                    `xml:"SelloPago,attr" bson:"SelloPago,omitempty"`
-	DoctoRelacionado *[]DoctoRelacionadoPagos10 `xml:"DoctoRelacionado" bson:"DoctoRelacionado,omitempty"`
-	Impuestos        *[]ImpuestosPagos10        `xml:"Impuestos" bson:"Impuestos,omitempty"`
+	FechaPagoString                string                     `xml:"FechaPago,attr"`
+	FechaPago                      time.Time                  `bson:"FechaPago"`
+	FormaPago                      string                     `xml:"FormaDePagoP,attr" bson:"FormaPago"`
+	Moneda                         string                     `xml:"MonedaP,attr" bson:"Moneda"`
+	TipoCambio                     *float64                   `xml:"TipoCambioP,attr" bson:"TipoCambio,omitempty"`
+	Monto                          float64                    `xml:"Monto,attr" bson:"Monto"`
+	NoOperacion                    *string                    `xml:"NumOperacion,attr" bson:"NoOperacion,omitempty"`
+	RfcEmisorCuentaOrdenante       *string                    `xml:"RfcEmisorCtaOrd,attr" bson:"RfcEmisorCuentaOrdenante,omitempty"`
+	NombreBancoOrdenanteExtranjero *string                    `xml:"NomBancoOrdExt,attr" bson:"NombreBancoOrdenanteExtranjero,omitempty"`
+	CuentaOrdenante                *string                    `xml:"CtaOrdenante,attr" bson:"CuentaOrdenante,omitempty"`
+	RfcEmisorCuentaBeneficiario    *string                    `xml:"RfcEmisorCtaBen,attr" bson:"RfcEmisorCuentaBenBeneficiario,omitempty"`
+	CuentaBeneficiario             *string                    `xml:"CtaBeneficiario,attr" bson:"CuentaBeneficiario,omitempty"`
+	TipoCadenaPago                 *string                    `xml:"TipoCadPago,attr" bson:"TipoCadenaPago,omitempty"`
+	CertificadoPago                *string                    `xml:"CertPago,attr" bson:"CertificadoPago,omitempty"`
+	CadenaPago                     *string                    `xml:"CadPago,attr" bson:"CadenaPago,omitempty"`
+	SelloPago                      *string                    `xml:"SelloPago,attr" bson:"SelloPago,omitempty"`
+	DocumentosRelacionados         *[]DoctoRelacionadoPagos10 `xml:"DoctoRelacionado" bson:"DocumentosRelacionados,omitempty"`
+	Impuestos                      *[]ImpuestosPagos10        `xml:"Impuestos" bson:"Impuestos,omitempty"`
 }
 
 type DoctoRelacionadoPagos10 struct {
-	IdDocumento      string   `xml:"IdDocumento,attr" bson:"IdDocumento"`
-	Serie            *string  `xml:"Serie,attr" bson:"Serie,omitempty"`
-	Folio            *string  `xml:"Folio,attr" bson:"Folio,omitempty"`
-	MonedaDR         string   `xml:"MonedaDR,attr" bson:"MonedaDR"`
-	TipoCambioDR     *float64 `xml:"TipoCambioDR,attr" bson:"TipoCambioDR,omitempty"`
-	MetodoDePagoDR   string   `xml:"MetodoDePagoDR,attr" bson:"MonedaPagoDR"`
-	NumParcialidad   *float64 `xml:"NumParcialidad,attr" bson:"NumParcialidad,omitempty"`
-	ImpSaldoAnt      *float64 `xml:"ImpSaldoAnt,attr" bson:"ImpSaldoAnt,omitempty"`
-	ImpPagado        *float64 `xml:"ImpPagado,attr" bson:"ImpPagado,omitempty"`
-	ImpSaldoInsoluto *float64 `xml:"ImpSaldoInsoluto,attr" bson:"ImpSaldoInsoluto,omitempty"`
+	IdDocumento          string   `xml:"IdDocumento,attr" bson:"IdDocumento"`
+	Serie                *string  `xml:"Serie,attr" bson:"Serie,omitempty"`
+	Folio                *string  `xml:"Folio,attr" bson:"Folio,omitempty"`
+	Moneda               string   `xml:"MonedaDR,attr" bson:"Moneda"`
+	TipoCambio           *float64 `xml:"TipoCambioDR,attr" bson:"TipoCambio,omitempty"`
+	MetodoPago           string   `xml:"MetodoDePagoDR,attr" bson:"MetodoPago"`
+	NoParcialidad        *float64 `xml:"NumParcialidad,attr" bson:"NoParcialidad,omitempty"`
+	ImporteSaldoAnterior *float64 `xml:"ImpSaldoAnt,attr" bson:"ImporteSaldoAnterior,omitempty"`
+	ImportePagado        *float64 `xml:"ImpPagado,attr" bson:"ImportePagado,omitempty"`
+	ImporteSaldoInsoluto *float64 `xml:"ImpSaldoInsoluto,attr" bson:"ImporteSaldoInsoluto,omitempty"`
 }
 
 type ImpuestosPagos10 struct {
@@ -76,11 +76,11 @@ func (p *PagoPagos10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 	}
 	*p = PagoPagos10(aux)
 
-	fecha, err := helpers.ParseDatetime(aux.FechaPago)
+	fecha, err := helpers.ParseDatetime(aux.FechaPagoString)
 	if err != nil {
 		return err
 	}
-	p.FechaPagoDate = fecha
+	p.FechaPago = fecha
 
 	return nil
 }

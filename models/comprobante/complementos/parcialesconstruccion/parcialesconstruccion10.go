@@ -1,9 +1,9 @@
 package parcialesconstruccion
 
 type ParcialesConstruccion10 struct {
-	Version       string   `xml:"Version,attr" bson:"Version"`
-	NumPerLicoAut string   `xml:"NumPerLicoAut,attr" bson:"NumPerLicoAut"`
-	Inmueble      Inmueble `xml:"Inmueble" bson:"Inmueble"`
+	Version                        string   `xml:"Version,attr" bson:"Version"`
+	NoPermisoLicenciaOAutorizacion string   `xml:"NumPerLicoAut,attr" bson:"NoPermisoLicenciaOAutorizacion"`
+	Inmueble                       Inmueble `xml:"Inmueble" bson:"Inmueble"`
 }
 
 type Inmueble struct {

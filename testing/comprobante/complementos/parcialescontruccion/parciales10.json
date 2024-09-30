@@ -1,6 +1,6 @@
 {
     "Version": "1.0",
-    "NumPerLicoAut": "12345-67890",
+    "NoPermisoLicenciaOAutorizacion": "12345-67890",
     "Inmueble": {
         "Calle": "Avenida Reforma",
         "NoExterior": "123",

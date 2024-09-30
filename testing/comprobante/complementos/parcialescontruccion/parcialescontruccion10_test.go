@@ -26,7 +26,7 @@ func TestFullParcialesConstruccion(t *testing.T) {
 
 func InternalTestBaseParcialesConstruccion10(t *testing.T, parcialesConstruccion parciales1.ParcialesConstruccion10) {
 	assert.Equal(t, "1.0", parcialesConstruccion.Version)
-	assert.Equal(t, "12345-67890", parcialesConstruccion.NumPerLicoAut)
+	assert.Equal(t, "12345-67890", parcialesConstruccion.NoPermisoLicenciaOAutorizacion)
 	InternalTestInmueble(t, parcialesConstruccion.Inmueble)
 }
 

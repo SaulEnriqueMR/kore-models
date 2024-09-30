@@ -52,19 +52,21 @@ type RegimenAduaneroCartaPorte31 struct {
 
 type UbicacionCartaPorte31 struct {
 	// Attr
-	TipoUbicacion                string    `xml:"TipoUbicacion,attr" bson:"TipoUbicacion"`
-	IdUbicacion                  *string   `xml:"IDUbicacion,attr" bson:"IdUbicacion,omitempty"`
-	RfcRemitenteDestinatario     string    `xml:"RFCRemitenteDestinatario,attr" bson:"RfcRemitenteDestinatario"`
-	NombreRemitenteDestinatario  *string   `xml:"NombreRemitenteDestinatario,attr" bson:"NombreRemitenteDestinatario,omitempty"`
-	NumRegIdTrib                 *string   `xml:"NumRegIdTrib,attr" bson:"NumRegIdTrib,omitempty"`
-	ResidenciaFiscal             *string   `xml:"ResidenciaFiscal,attr" bson:"ResidenciaFiscal,omitempty"`
-	NoEstacion                   *string   `xml:"NumEstacion,attr" bson:"NoEstacion,omitempty"`
-	NombreEstacion               *string   `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
-	NavegacionTrafico            *string   `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
+	TipoUbicacion               string  `xml:"TipoUbicacion,attr" bson:"TipoUbicacion"`
+	IdUbicacion                 *string `xml:"IDUbicacion,attr" bson:"IdUbicacion,omitempty"`
+	RfcRemitenteDestinatario    string  `xml:"RFCRemitenteDestinatario,attr" bson:"RfcRemitenteDestinatario"`
+	NombreRemitenteDestinatario *string `xml:"NombreRemitenteDestinatario,attr" bson:"NombreRemitenteDestinatario,omitempty"`
+	NumRegIdTrib                *string `xml:"NumRegIdTrib,attr" bson:"NumRegIdTrib,omitempty"`
+	ResidenciaFiscal            *string `xml:"ResidenciaFiscal,attr" bson:"ResidenciaFiscal,omitempty"`
+	NoEstacion                  *string `xml:"NumEstacion,attr" bson:"NoEstacion,omitempty"`
+	NombreEstacion              *string `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
+	NavegacionTrafico           *string `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
+
 	FechaHoraSalidaLlegadaString string    `xml:"FechaHoraSalidaLlegada,attr"`
 	FechaHoraSalidaLlegada       time.Time `bson:"FechaHoraSalidaLlegada"`
-	TipoEstacion                 *string   `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
-	DistanciaRecorrida           *float64  `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
+
+	TipoEstacion       *string  `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
+	DistanciaRecorrida *float64 `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
 	// Nodos
 	Domicilio *DomicilioCartaPorte31 `xml:"Domicilio" bson:"Domicilio,omitempty"`
 }
@@ -127,16 +129,19 @@ type MercanciaCartaPorte31 struct {
 	MaterialPeligroso   *string `xml:"MaterialPeligroso,attr" bson:"MaterialPeligroso,omitempty"`
 	EsMaterialPeligroso *bool   `bson:"EsMaterialPeligroso,omitempty"`
 
-	ClaveMaterialPeligroso                 *string  `xml:"CveMaterialPeligroso,attr" bson:"ClaveMaterialPeligroso,omitempty"`
-	Embalaje                               *string  `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
-	DescripcionEmbalaje                    *string  `xml:"DescripEmbalaje,attr" bson:"DescripcionEmbalaje,omitempty"`
-	SectorCofepris                         *string  `xml:"SectorCOFEPRIS,attr" bson:"SectorCofepris,omitempty"`
-	NombreIngredienteActivo                *string  `xml:"NombreIngredienteActivo,attr" bson:"NombreIngredienteActivo,omitempty"`
-	NombreQuimico                          *string  `xml:"NomQuimico,attr" bson:"NombreQuimico,omitempty"`
-	DenominacionGenericaProducto           *string  `xml:"DenominacionGenericaProd,attr" bson:"DenominacionGenericaProducto,omitempty"`
-	DenominacionDistintivaProducto         *string  `xml:"DenominacionDistintivaProd,attr" bson:"DenominacionDistintivaProducto,omitempty"`
-	Fabricante                             *string  `xml:"Fabricante,attr" bson:"Fabricante,omitempty"`
-	FechaCaducidad                         *string  `xml:"FechaCaducidad,attr" bson:"FechaCaducidad,omitempty"`
+	ClaveMaterialPeligroso         *string `xml:"CveMaterialPeligroso,attr" bson:"ClaveMaterialPeligroso,omitempty"`
+	Embalaje                       *string `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
+	DescripcionEmbalaje            *string `xml:"DescripEmbalaje,attr" bson:"DescripcionEmbalaje,omitempty"`
+	SectorCofepris                 *string `xml:"SectorCOFEPRIS,attr" bson:"SectorCofepris,omitempty"`
+	NombreIngredienteActivo        *string `xml:"NombreIngredienteActivo,attr" bson:"NombreIngredienteActivo,omitempty"`
+	NombreQuimico                  *string `xml:"NomQuimico,attr" bson:"NombreQuimico,omitempty"`
+	DenominacionGenericaProducto   *string `xml:"DenominacionGenericaProd,attr" bson:"DenominacionGenericaProducto,omitempty"`
+	DenominacionDistintivaProducto *string `xml:"DenominacionDistintivaProd,attr" bson:"DenominacionDistintivaProducto,omitempty"`
+	Fabricante                     *string `xml:"Fabricante,attr" bson:"Fabricante,omitempty"`
+
+	FechaCaducidadString *string    `xml:"FechaCaducidad,attr"`
+	FechaCaducidad       *time.Time `bson:"FechaCaducidad,omitempty"`
+
 	LoteMedicamento                        *string  `xml:"LoteMedicamento,attr" bson:"LoteMedicamento,omitempty"`
 	FormaFarmaceutica                      *string  `xml:"FormaFarmaceutica,attr" bson:"FormaFarmaceutica,omitempty"`
 	CondicionesEspecialesTransporte        *string  `xml:"CondicionesEspTransp,attr" bson:"CondicionesEspecialesTransporte,omitempty"`
@@ -177,6 +182,12 @@ func (m *MercanciaCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 	if m.MaterialPeligroso != nil {
 		isMaterialPeligroso := helpers.ResolveSatBoolean(*aux.MaterialPeligroso)
 		m.EsMaterialPeligroso = &isMaterialPeligroso
+	}
+	if m.FechaCaducidadString != nil && *m.FechaCaducidadString != "" {
+		fecha, errFecha := helpers.ParseDatetime(*m.FechaCaducidadString)
+		if errFecha == nil {
+			m.FechaCaducidad = &fecha
+		}
 	}
 	return nil
 }
@@ -240,7 +251,7 @@ type RemolqueCartaPorte31 struct {
 }
 
 type TransporteMaritimoCartaPorte31 struct {
-	PermSCT                   *string                   `xml:"PermSCT,attr" bson:"PermSCT,omitempty"`
+	PermSCT                   *string                   `xml:"PermSCT,attr" bson:"PermisoSct,omitempty"`
 	NoPermisoSct              *string                   `xml:"NumPermisoSCT,attr" bson:"NoPermisoSct,omitempty"`
 	NombreAseguradora         *string                   `xml:"NombreAseg,attr" bson:"NombreAseguradora,omitempty"`
 	NoPolizaSeguro            *string                   `xml:"NumPolizaSeguro,attr" bson:"NoPolizaSeguro,omitempty"`
@@ -266,13 +277,33 @@ type TransporteMaritimoCartaPorte31 struct {
 }
 
 type ContenedorCartaPorte31 struct {
-	Tipo                  string                     `xml:"TipoContenedor,attr" bson:"Tipo"`
-	Matricula             *string                    `xml:"MatriculaContenedor,attr" bson:"Matricula,omitempty"`
-	NoPrecinto            *string                    `xml:"NumPrecinto,attr" bson:"NoPrecinto,omitempty"`
-	IdCcpRelacionado      *string                    `xml:"IdCCPRelacionado,attr" bson:"IdCcpRelacionado,omitempty"`
-	PlacaVmCcp            *string                    `xml:"PlacaVMCCP,attr" bson:"PlacaVmCcp,omitempty"`
-	FechaCertificacionCcp *string                    `xml:"FechaCertificacionCCP,attr" bson:"FechaCertificacionCcp,omitempty"`
-	RemolquesCcp          *[]RemolqueCCPCartaPorte31 `xml:"RemolquesCCP>RemolqueCCP" bson:"RemolquesCcp,omitempty"`
+	Tipo                        string                     `xml:"TipoContenedor,attr" bson:"Tipo"`
+	Matricula                   *string                    `xml:"MatriculaContenedor,attr" bson:"Matricula,omitempty"`
+	NoPrecinto                  *string                    `xml:"NumPrecinto,attr" bson:"NoPrecinto,omitempty"`
+	IdCcpRelacionado            *string                    `xml:"IdCCPRelacionado,attr" bson:"IdCcpRelacionado,omitempty"`
+	PlacaVmCcp                  *string                    `xml:"PlacaVMCCP,attr" bson:"PlacaVmCcp,omitempty"`
+	FechaCertificacionCcpString *string                    `xml:"FechaCertificacionCCP,attr"`
+	FechaCertificacionCcp       *time.Time                 `bson:"FechaCertificacionCcp,omitempty"`
+	RemolquesCcp                *[]RemolqueCCPCartaPorte31 `xml:"RemolquesCCP>RemolqueCCP" bson:"RemolquesCcp,omitempty"`
+}
+
+func (c *ContenedorCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias ContenedorCartaPorte31
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+
+	if c.FechaCertificacionCcpString != nil && *c.FechaCertificacionCcpString != "" {
+		fecha, errFecha := helpers.ParseDatetime(*c.FechaCertificacionCcpString)
+		if errFecha == nil {
+			c.FechaCertificacionCcp = &fecha
+		}
+	}
+	return nil
 }
 
 type RemolqueCCPCartaPorte31 struct {

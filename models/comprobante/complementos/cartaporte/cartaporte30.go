@@ -2,8 +2,9 @@ package cartaporte
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
 type CartaPorte30 struct {
@@ -12,7 +13,7 @@ type CartaPorte30 struct {
 	IdCcp   string   `xml:"IdCCP,attr" bson:"IdCcp"`
 
 	TransporteInternacional   string `xml:"TranspInternac,attr" bson:"TransporteInternacional"`
-	EsTransporteInternacional bool   `bson:"EsTransporteInternacional"`
+	EsTransporteInternacional bool   `bson:"TransporteInternacional"`
 
 	RegimenAduanero         *string                       `xml:"RegimenAduanero,attr" bson:"RegimenAduanero,omitempty"`
 	EntradaSalidaMercancia  *string                       `xml:"EntradaSalidaMerc,attr" bson:"EntradaSalidaMercancia,omitempty"`
@@ -115,16 +116,19 @@ type MercanciaCartaPorte30 struct {
 	MaterialPeligroso   *string `xml:"MaterialPeligroso,attr" bson:"MaterialPeligroso,omitempty"`
 	EsMaterialPeligroso *bool   `bson:"EsMaterialPeligroso,omitempty"`
 
-	ClaveMaterialPeligroso                 *string                              `xml:"CveMaterialPeligroso,attr" bson:"ClaveMaterialPeligroso,omitempty"`
-	Embalaje                               *string                              `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
-	DescripcionEmbalaje                    *string                              `xml:"DescripEmbalaje,attr" bson:"DescripcionEmbalaje,omitempty"`
-	SectorCofepris                         *string                              `xml:"SectorCOFEPRIS,attr" bson:"SectorCofepris,omitempty"`
-	NombreIngredienteActivo                *string                              `xml:"NombreIngredienteActivo,attr" bson:"NombreIngredienteActivo,omitempty"`
-	NombreQuimico                          *string                              `xml:"NomQuimico,attr" bson:"NombreQuimico,omitempty"`
-	DenominacionGenericaProducto           *string                              `xml:"DenominacionGenericaProd,attr" bson:"DenominacionGenericaProducto,omitempty"`
-	DenominacionDistintivaProducto         *string                              `xml:"DenominacionDistintivaProd,attr" bson:"DenominacionDistintivaProducto,omitempty"`
-	Fabricante                             *string                              `xml:"Fabricante,attr" bson:"Fabricante,omitempty"`
-	FechaCaducidad                         *string                              `xml:"FechaCaducidad,attr" bson:"FechaCaducidad,omitempty"`
+	ClaveMaterialPeligroso         *string `xml:"CveMaterialPeligroso,attr" bson:"ClaveMaterialPeligroso,omitempty"`
+	Embalaje                       *string `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
+	DescripcionEmbalaje            *string `xml:"DescripEmbalaje,attr" bson:"DescripcionEmbalaje,omitempty"`
+	SectorCofepris                 *string `xml:"SectorCOFEPRIS,attr" bson:"SectorCofepris,omitempty"`
+	NombreIngredienteActivo        *string `xml:"NombreIngredienteActivo,attr" bson:"NombreIngredienteActivo,omitempty"`
+	NombreQuimico                  *string `xml:"NomQuimico,attr" bson:"NombreQuimico,omitempty"`
+	DenominacionGenericaProducto   *string `xml:"DenominacionGenericaProd,attr" bson:"DenominacionGenericaProducto,omitempty"`
+	DenominacionDistintivaProducto *string `xml:"DenominacionDistintivaProd,attr" bson:"DenominacionDistintivaProducto,omitempty"`
+	Fabricante                     *string `xml:"Fabricante,attr" bson:"Fabricante,omitempty"`
+
+	FechaCaducidadString *string    `xml:"FechaCaducidad,attr"`
+	FechaCaducidad       *time.Time `bson:"FechaCaducidad,omitempty"`
+
 	LoteMedicamento                        *string                              `xml:"LoteMedicamento,attr" bson:"LoteMedicamento,omitempty"`
 	FormaFarmaceutica                      *string                              `xml:"FormaFarmaceutica,attr" bson:"FormaFarmaceutica,omitempty"`
 	CondicionesEspecialesTransporte        *string                              `xml:"CondicionesEspTransp,attr" bson:"CondicionesEspecialesTransporte,omitempty"`
@@ -165,11 +169,17 @@ func (m *MercanciaCartaPorte30) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 		isMaterialPeligroso := helpers.ResolveSatBoolean(*aux.MaterialPeligroso)
 		m.EsMaterialPeligroso = &isMaterialPeligroso
 	}
+	if m.FechaCaducidadString != nil && *m.FechaCaducidadString != "" {
+		fecha, errFecha := helpers.ParseDatetime(*m.FechaCaducidadString)
+		if errFecha == nil {
+			m.FechaCaducidad = &fecha
+		}
+	}
 	return nil
 }
 
 type DocumentacionAduaneraCartaPorte30 struct {
-	Tipo                   string  `xml:"TipoDocumento,attr" bson:"TipoDocumento"`
+	TipoDocumento          string  `xml:"TipoDocumento,attr" bson:"TipoDocumento"`
 	NumeroPedimento        *string `xml:"NumPedimento,attr" bson:"NumeroPedimento,omitemtpy"`
 	IdentificadorDocumento *string `xml:"IdentDocAduanero,attr" bson:"IdentificadorDocumento,omitempty"`
 	RfcImportador          *string `xml:"RFCImpo,attr" bson:"RfcImportador,omitempty"`

@@ -2,6 +2,7 @@ package pagosaextranjeros
 
 import (
 	"encoding/xml"
+
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
@@ -24,7 +25,7 @@ func (pae *PagosAExtranjeros10) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 	}
 
 	*pae = PagosAExtranjeros10(aux)
-	pae.EsBeneficiarioEfectivoCobro = helpers.ResolveSatBoolean(&pae.EsBenefEfectDelCobro)
+	pae.EsBeneficiarioEfectivoCobro = helpers.ResolveSatBoolean(pae.EsBenefEfectDelCobro)
 
 	return nil
 }

@@ -2,6 +2,7 @@ package intereseshipotecarios
 
 import (
 	"encoding/xml"
+
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
@@ -30,7 +31,7 @@ func (ih *InteresesHipotecarios10) UnmarshalXML(d *xml.Decoder, start xml.StartE
 	}
 
 	*ih = InteresesHipotecarios10(aux)
-	ih.EsCreditoOtorgadoInstitucionFinanciera = helpers.ResolveSatBoolean(&ih.CreditoOtorgadoInstitucionFinanciera)
+	ih.EsCreditoOtorgadoInstitucionFinanciera = helpers.ResolveSatBoolean(ih.CreditoOtorgadoInstitucionFinanciera)
 
 	return nil
 }

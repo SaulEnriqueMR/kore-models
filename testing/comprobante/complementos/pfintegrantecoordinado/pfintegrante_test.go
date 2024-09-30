@@ -28,5 +28,5 @@ func InternalTestBasePFIntegrante(t *testing.T, pfIntegrante pfintegrante1.PFInt
 	assert.Equal(t, "1.0", pfIntegrante.Version)
 	assert.Equal(t, "SEDAN2021", pfIntegrante.ClaveVehicular)
 	assert.Equal(t, "ABC1234", pfIntegrante.Placa)
-	assert.Equal(t, "XAXX010101000", pfIntegrante.RfcPF)
+	assert.Equal(t, "XAXX010101000", pfIntegrante.Rfc)
 }

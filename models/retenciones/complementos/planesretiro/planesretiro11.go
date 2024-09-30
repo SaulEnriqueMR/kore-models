@@ -40,9 +40,9 @@ func (pr *PlanesDeRetiro11) UnmarshalXML(d *xml.Decoder, start xml.StartElement)
 	}
 
 	*pr = PlanesDeRetiro11(aux)
-	pr.ProvienenSistemaFinanciero = helpers.ResolveSatBoolean(&aux.SistemaFinanciero)
-	pr.HuboRetirosAnioAnteriorAntesPermanencia = helpers.ResolveSatBoolean(&aux.HuboRetirosAnioInmAntPer)
-	pr.HuboRetirosAnioAnterior = helpers.ResolveSatBoolean(&aux.HuboRetirosAnioInmAnt)
+	pr.ProvienenSistemaFinanciero = helpers.ResolveSatBoolean(aux.SistemaFinanciero)
+	pr.HuboRetirosAnioAnteriorAntesPermanencia = helpers.ResolveSatBoolean(aux.HuboRetirosAnioInmAntPer)
+	pr.HuboRetirosAnioAnterior = helpers.ResolveSatBoolean(aux.HuboRetirosAnioInmAnt)
 
 	return nil
 }

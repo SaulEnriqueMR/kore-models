@@ -8,18 +8,18 @@ import (
 )
 
 type VehiculoUsado10 struct {
-	Version             string                 `xml:"Version,attr" bson:"Version"`
-	MontoAdquisicion    float64                `xml:"montoAdquisicion,attr" bson:"MontoAdquisicion"`
-	MontoEnajenacion    float64                `xml:"montoEnajenacion,attr" bson:"MontoEnajenacion"`
-	ClaveVehicular      string                 `xml:"claveVehicular,attr" bson:"ClaveVehicular"`
-	Marca               string                 `xml:"marca,attr" bson:"Marca"`
-	Tipo                string                 `xml:"tipo,attr" bson:"Tipo"`
-	Modelo              string                 `xml:"modelo,attr" bson:"Modelo"`
-	NumeroMotor         *string                `xml:"numeroMotor,attr" bson:"NumeroMotor,omitempty"`
-	NumeroSerie         *string                `xml:"numeroSerie,attr" bson:"NumeroSerie,omitempty"`
-	NIV                 *string                `xml:"NIV,attr" bson:"NIV,omitempty"`
-	Valor               float64                `xml:"valor,attr" bson:"Valor"`
-	InformacionAduanera *[]InformacionAduanera `xml:"InformacionAduanera" bson:"InformacionAduanera,omitempty"`
+	Version                   string                 `xml:"Version,attr" bson:"Version"`
+	MontoAdquisicion          float64                `xml:"montoAdquisicion,attr" bson:"MontoAdquisicion"`
+	MontoEnajenacion          float64                `xml:"montoEnajenacion,attr" bson:"MontoEnajenacion"`
+	ClaveVehicular            string                 `xml:"claveVehicular,attr" bson:"ClaveVehicular"`
+	Marca                     string                 `xml:"marca,attr" bson:"Marca"`
+	Tipo                      string                 `xml:"tipo,attr" bson:"Tipo"`
+	Modelo                    string                 `xml:"modelo,attr" bson:"Modelo"`
+	NoMotor                   *string                `xml:"numeroMotor,attr" bson:"NoMotor,omitempty"`
+	NoSerie                   *string                `xml:"numeroSerie,attr" bson:"NoSerie,omitempty"`
+	NoIdentificacionVehicular *string                `xml:"NIV,attr" bson:"NoIdentificacionVehicular,omitempty"`
+	Valor                     float64                `xml:"valor,attr" bson:"Valor"`
+	InformacionAduanera       *[]InformacionAduanera `xml:"InformacionAduanera" bson:"InformacionAduanera,omitempty"`
 }
 
 type InformacionAduanera struct {

@@ -6,9 +6,9 @@
     "Marca": "Toyota",
     "Tipo": "Sedan",
     "Modelo": "2018",
-    "NumeroMotor": "1HGBH41JXMN109186",
-    "NumeroSerie": "2HGBH41JXMN109186",
-    "NIV": "JTHBJ46G992109186",
+    "NoMotor": "1HGBH41JXMN109186",
+    "NoSerie": "2HGBH41JXMN109186",
+    "NoIdentificacionVehicular": "JTHBJ46G992109186",
     "Valor": 135000,
     "InformacionAduanera": [
         {

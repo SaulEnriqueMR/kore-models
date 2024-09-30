@@ -7,16 +7,16 @@ import (
 )
 
 type ObrasAntiguedades10 struct {
-	Version                     string    `xml:"Version,attr" bson:"version"`
-	TipoBien                    string    `xml:"TipoBien,attr" bson:"TipoBien"`
-	OtrosTipoBien               *string   `xml:"OtrosTipoBien,attr" bson:"OtrosTipoBien,omitempty"`
-	TituloAdquirido             string    `xml:"TituloAdquirido,attr" bson:"TituloAdquirido"`
-	OtrosTitulosAdquiridos      *string   `xml:"OtrosTitulosAdquiridos,attr" bson:"OtrosTitulosAdquiridos,omitempty"`
-	Subtotal                    float64   `xml:"Subtotal,attr" bson:"Subtotal"`
-	IVA                         float64   `xml:"IVA,attr" bson:"IVA"`
-	FechaAdquisicionString      string    `xml:"FechaAdquisicion,attr"`
-	FechaAdquisicion            time.Time `bson:"FechaAdquisicion"`
-	CaracterísticasDeObraoPieza string    `xml:"CaracterísticasDeObraoPieza,attr" bson:"CaracteristicasDeObraoPieza"`
+	Version                   string    `xml:"Version,attr" bson:"Version"`
+	TipoBien                  string    `xml:"TipoBien,attr" bson:"TipoBien"`
+	OtrosTipoBien             *string   `xml:"OtrosTipoBien,attr" bson:"OtrosTipoBien,omitempty"`
+	TituloAdquirido           string    `xml:"TituloAdquirido,attr" bson:"TituloAdquirido"`
+	OtrosTitulosAdquiridos    *string   `xml:"OtrosTitulosAdquiridos,attr" bson:"OtrosTitulosAdquiridos,omitempty"`
+	Subtotal                  float64   `xml:"Subtotal,attr" bson:"Subtotal"`
+	Iva                       float64   `xml:"IVA,attr" bson:"Iva"`
+	FechaAdquisicionString    string    `xml:"FechaAdquisicion,attr"`
+	FechaAdquisicion          time.Time `bson:"FechaAdquisicion"`
+	CaracteristicasObraOPieza string    `xml:"CaracterísticasDeObraoPieza,attr" bson:"CaracteristicasObraOPieza"`
 }
 
 func (t *ObrasAntiguedades10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

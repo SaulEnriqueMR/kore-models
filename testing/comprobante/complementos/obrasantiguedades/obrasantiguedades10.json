@@ -5,8 +5,8 @@
     "TituloAdquirido": "01",
     "OtrosTitulosAdquiridos": "21",
     "Subtotal": 10000,
-    "IVA": 16,
+    "Iva": 16,
     "FechaAdquisicionString": "2016-04-03",
     "FechaAdquisicion": "2016-04-03T00:00:00Z",
-    "CaracterísticasDeObraoPieza": "02"
+    "CaracteristicasObraOPieza": "02"
 }

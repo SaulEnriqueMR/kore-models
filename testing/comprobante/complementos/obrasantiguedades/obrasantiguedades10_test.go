@@ -28,7 +28,7 @@ func TestObrasAntiguedades10(t *testing.T) {
 	assert.NotNil(t, *obrasAntiguedades10.OtrosTitulosAdquiridos)
 	assert.Equal(t, "21", *obrasAntiguedades10.OtrosTitulosAdquiridos)
 	assert.Equal(t, 10000.00, obrasAntiguedades10.Subtotal)
-	assert.Equal(t, 16.00, obrasAntiguedades10.IVA)
+	assert.Equal(t, 16.00, obrasAntiguedades10.Iva)
 	assert.Equal(t, "2016-04-03", obrasAntiguedades10.FechaAdquisicionString)
-	assert.Equal(t, "02", obrasAntiguedades10.CaracterísticasDeObraoPieza)
+	assert.Equal(t, "02", obrasAntiguedades10.CaracteristicasObraOPieza)
 }

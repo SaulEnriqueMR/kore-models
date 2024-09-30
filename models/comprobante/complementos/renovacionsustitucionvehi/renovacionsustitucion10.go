@@ -15,41 +15,41 @@ type RenovacionSustitucion10 struct {
 }
 
 type DecretoRenovacion struct {
-	VehEnaj         string            `xml:"VehEnaj,attr" bson:"VehEnaj"`
-	VehiculosUsados []VehiculosUsados `xml:"VehiculosUsadosEnajenadoPermAlFab" bson:"VehiculosUsados"`
-	VehiculosNuevos []VehiculosNuevos `xml:"VehiculoNuvoSemEnajenadoFabAlPerm" bson:"VehiculosNuevos"`
+	VehiculoEnajenado string            `xml:"VehEnaj,attr" bson:"VehiculoEnajenado"`
+	VehiculosUsados   []VehiculosUsados `xml:"VehiculosUsadosEnajenadoPermAlFab" bson:"VehiculosUsados"`
+	VehiculosNuevos   []VehiculosNuevos `xml:"VehiculoNuvoSemEnajenadoFabAlPerm" bson:"VehiculosNuevos"`
 }
 
 type DecretoSustitucion struct {
-	VehEnaj         string            `xml:"VehEnaj,attr" bson:"VehEnaj"`
-	VehiculosUsados []VehiculosUsados `xml:"VehiculosUsadosEnajenadoPermAlFab" bson:"VehiculosUsados"`
-	VehiculosNuevos []VehiculosNuevos `xml:"VehiculoNuvoSemEnajenadoFabAlPerm" bson:"VehiculosNuevos"`
+	VehiculoEnajenado string            `xml:"VehEnaj,attr" bson:"VehiculoEnajenado"`
+	VehiculosUsados   []VehiculosUsados `xml:"VehiculosUsadosEnajenadoPermAlFab" bson:"VehiculosUsados"`
+	VehiculosNuevos   []VehiculosNuevos `xml:"VehiculoNuvoSemEnajenadoFabAlPerm" bson:"VehiculosNuevos"`
 }
 
 type VehiculosUsados struct {
-	PrecioVehUsado      float64    `xml:"PrecioVehUsado,attr" bson:"PrecioVehUsado"`
-	TipoVeh             string     `xml:"TipoVeh,attr" bson:"TipoVeh"`
-	Marca               string     `xml:"Marca,attr" bson:"Marca"`
-	TipooClase          string     `xml:"TipooClase,attr" bson:""`
-	Anio                int        `xml:"Año,attr" bson:"Anio"`
-	Modelo              *string    `xml:"Modelo,attr" bson:"Modelo,omitempty"`
-	NIV                 *string    `xml:"NIV,attr" bson:"NIV,omitempty"`
-	NumSerie            *string    `xml:"NumSerie,attr" bson:"NumSerie,omitempty"`
-	NumPlacas           string     `xml:"NumPlacas,attr" bson:"NumPlacas"`
-	NumMotor            *string    `xml:"NumMotor,attr" bson:"NumMotor,omitempty"`
-	NumFolTarjCir       string     `xml:"NumFolTarjCir,attr" bson:"NumFolTarjCir"`
-	NumPedIm            *string    `xml:"NumPedIm,attr" bson:"NumPedIm,omitempty"`
-	Aduana              *string    `xml:"Aduana,attr" bson:"Aduana,omitempty"`
-	FechaRegulVehString *string    `xml:"FechaRegulVeh,attr"`
-	FechaRegulVeh       *time.Time `bson:"FechaRegulVeh,omitempty"`
-	Foliofiscal         string     `xml:"Foliofiscal,attr" bson:"Foliofiscal"`
+	PrecioVehUsado             float64    `xml:"PrecioVehUsado,attr" bson:"Precio"`
+	Tipo                       string     `xml:"TipoVeh,attr" bson:"Tipo"`
+	Marca                      string     `xml:"Marca,attr" bson:"Marca"`
+	TipoOClase                 string     `xml:"TipooClase,attr" bson:"TipoOClase"`
+	Anio                       string     `xml:"Año,attr" bson:"Anio"`
+	Modelo                     *string    `xml:"Modelo,attr" bson:"Modelo,omitempty"`
+	NoIdentificacionVehicular  *string    `xml:"NIV,attr" bson:"NoIdentificacionVehicular,omitempty"`
+	NoSerie                    *string    `xml:"NumSerie,attr" bson:"NoSerie,omitempty"`
+	NoPlacas                   string     `xml:"NumPlacas,attr" bson:"NoPlacas"`
+	NoMotor                    *string    `xml:"NumMotor,attr" bson:"NoMotor,omitempty"`
+	NoFolioTarjetaCirculacion  string     `xml:"NumFolTarjCir,attr" bson:"NoFolioTarjetaCirculacion"`
+	NumeroPedimentoImportacion *string    `xml:"NumPedIm,attr" bson:"NumeroPedimentoImportacion,omitempty"`
+	Aduana                     *string    `xml:"Aduana,attr" bson:"Aduana,omitempty"`
+	FechaRegulVehString        *string    `xml:"FechaRegulVeh,attr"`
+	FechaRegulacionImportacion *time.Time `bson:"FechaRegulacionImportacion,omitempty"`
+	FolioFiscal                string     `xml:"Foliofiscal,attr" bson:"FolioFiscal"`
 }
 
 type VehiculosNuevos struct {
-	Anio      int     `xml:"Año,attr" bson:"Anio"`
-	Modelo    *string `xml:"Modelo,attr" bson:"Modelo,omitempty"`
-	NumPlacas string  `xml:"NumPlacas,attr" bson:"NumPlacas"`
-	Rfc       *string `xml:"RFC,attr" bson:"Rfc,omitempty"`
+	Anio     string  `xml:"Año,attr" bson:"Anio"`
+	Modelo   *string `xml:"Modelo,attr" bson:"Modelo,omitempty"`
+	NoPlacas string  `xml:"NumPlacas,attr" bson:"NoPlacas"`
+	Rfc      *string `xml:"RFC,attr" bson:"Rfc,omitempty"`
 }
 
 func (c *VehiculosUsados) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
@@ -68,7 +68,7 @@ func (c *VehiculosUsados) UnmarshalXML(d *xml.Decoder, start xml.StartElement) e
 		if err != nil {
 			return err
 		}
-		c.FechaRegulVeh = &fecha
+		c.FechaRegulacionImportacion = &fecha
 	}
 
 	return nil

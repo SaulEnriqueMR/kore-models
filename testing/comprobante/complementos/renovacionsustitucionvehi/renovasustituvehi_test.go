@@ -32,13 +32,13 @@ func InternalTestBaseRenovaSustiVehi(t *testing.T, renovacion renovasustivehi1.R
 }
 
 func InternalTestDecretoRenovacion(t *testing.T, decreto *renovasustivehi1.DecretoRenovacion) {
-	assert.Equal(t, "02", decreto.VehEnaj)
+	assert.Equal(t, "02", decreto.VehiculoEnajenado)
 	InternalTestVehiculosUsadosRenovacion(t, decreto.VehiculosUsados)
 	InternalTestVehiculosNuevosRenovacion(t, decreto.VehiculosNuevos)
 }
 
 func InternalTestDecretoSustitucion(t *testing.T, decreto *renovasustivehi1.DecretoSustitucion) {
-	assert.Equal(t, "02", decreto.VehEnaj)
+	assert.Equal(t, "02", decreto.VehiculoEnajenado)
 	InternalTestVehiculosNuevosSustitucion(t, decreto.VehiculosNuevos)
 	InternalTestVehiculosUsadosSustitucion(t, decreto.VehiculosUsados)
 }
@@ -49,20 +49,20 @@ func InternalTestVehiculosUsadosRenovacion(t *testing.T, vehiculos []renovasusti
 	vehiculo := (vehiculos)[0]
 	vehiculo1 := (vehiculos)[1]
 	assert.Equal(t, 250000.00, vehiculo.PrecioVehUsado)
-	assert.Equal(t, "AUTOMOVIL", vehiculo.TipoVeh)
+	assert.Equal(t, "AUTOMOVIL", vehiculo.Tipo)
 	assert.Equal(t, "Toyota", vehiculo.Marca)
-	assert.Equal(t, "Sedan", vehiculo.TipooClase)
-	assert.Equal(t, 2018, vehiculo.Anio)
+	assert.Equal(t, "Sedan", vehiculo.TipoOClase)
+	assert.Equal(t, "2018", vehiculo.Anio)
 	assert.Equal(t, "Corolla", *vehiculo.Modelo)
-	assert.Equal(t, "1HGBH41JXMN109186", *vehiculo.NIV)
-	assert.Equal(t, "1HGBH41JXMN109186", *vehiculo.NumSerie)
-	assert.Equal(t, "XYZ1234", vehiculo.NumPlacas)
-	assert.Equal(t, "XJHZ1234567890123", *vehiculo.NumMotor)
-	assert.Equal(t, "ABC987654321", vehiculo.NumFolTarjCir)
-	assert.Equal(t, "12345678901234567890", *vehiculo.NumPedIm)
+	assert.Equal(t, "1HGBH41JXMN109186", *vehiculo.NoIdentificacionVehicular)
+	assert.Equal(t, "1HGBH41JXMN109186", *vehiculo.NoSerie)
+	assert.Equal(t, "XYZ1234", vehiculo.NoPlacas)
+	assert.Equal(t, "XJHZ1234567890123", *vehiculo.NoMotor)
+	assert.Equal(t, "ABC987654321", vehiculo.NoFolioTarjetaCirculacion)
+	assert.Equal(t, "12345678901234567890", *vehiculo.NumeroPedimentoImportacion)
 	assert.Equal(t, "Aduana de Tijuana", *vehiculo.Aduana)
 	assert.Equal(t, "2021-07-15", *vehiculo.FechaRegulVehString)
-	assert.Equal(t, "A1B2C3D4E5F6G7H8I9J0", vehiculo.Foliofiscal)
+	assert.Equal(t, "A1B2C3D4E5F6G7H8I9J0", vehiculo.FolioFiscal)
 	assert.Equal(t, "2022-07-15", *vehiculo1.FechaRegulVehString)
 }
 
@@ -70,9 +70,9 @@ func InternalTestVehiculosNuevosRenovacion(t *testing.T, vehiculos []renovasusti
 	assert.NotNil(t, vehiculos)
 	assert.Equal(t, len(vehiculos), 1)
 	vehiculo := (vehiculos)[0]
-	assert.Equal(t, 2022, vehiculo.Anio)
+	assert.Equal(t, "2022", vehiculo.Anio)
 	assert.Equal(t, "Hilux", *vehiculo.Modelo)
-	assert.Equal(t, "ABC1234", vehiculo.NumPlacas)
+	assert.Equal(t, "ABC1234", vehiculo.NoPlacas)
 	assert.Equal(t, "XAXX010101000", *vehiculo.Rfc)
 }
 
@@ -82,28 +82,28 @@ func InternalTestVehiculosUsadosSustitucion(t *testing.T, vehiculos []renovasust
 	vehiculo := (vehiculos)[0]
 
 	assert.Equal(t, 250000.00, vehiculo.PrecioVehUsado)
-	assert.Equal(t, "AUTOMOVIL", vehiculo.TipoVeh)
+	assert.Equal(t, "AUTOMOVIL", vehiculo.Tipo)
 	assert.Equal(t, "Toyota", vehiculo.Marca)
-	assert.Equal(t, "Sedan", vehiculo.TipooClase)
-	assert.Equal(t, 2018, vehiculo.Anio)
+	assert.Equal(t, "Sedan", vehiculo.TipoOClase)
+	assert.Equal(t, "2018", vehiculo.Anio)
 	assert.Equal(t, "Corolla", *vehiculo.Modelo)
-	assert.Equal(t, "1HGBH41JXMN109186", *vehiculo.NIV)
-	assert.Equal(t, "1HGBH41JXMN109186", *vehiculo.NumSerie)
-	assert.Equal(t, "XYZ1234", vehiculo.NumPlacas)
-	assert.Equal(t, "XJHZ1234567890123", *vehiculo.NumMotor)
-	assert.Equal(t, "ABC987654321", vehiculo.NumFolTarjCir)
-	assert.Equal(t, "12345678901234567890", *vehiculo.NumPedIm)
+	assert.Equal(t, "1HGBH41JXMN109186", *vehiculo.NoIdentificacionVehicular)
+	assert.Equal(t, "1HGBH41JXMN109186", *vehiculo.NoSerie)
+	assert.Equal(t, "XYZ1234", vehiculo.NoPlacas)
+	assert.Equal(t, "XJHZ1234567890123", *vehiculo.NoMotor)
+	assert.Equal(t, "ABC987654321", vehiculo.NoFolioTarjetaCirculacion)
+	assert.Equal(t, "12345678901234567890", *vehiculo.NumeroPedimentoImportacion)
 	assert.Equal(t, "Aduana de Tijuana", *vehiculo.Aduana)
 	assert.Equal(t, "2023-07-15", *vehiculo.FechaRegulVehString)
-	assert.Equal(t, "A1B2C3D4E5F6G7H8I9J0", vehiculo.Foliofiscal)
+	assert.Equal(t, "A1B2C3D4E5F6G7H8I9J0", vehiculo.FolioFiscal)
 }
 
 func InternalTestVehiculosNuevosSustitucion(t *testing.T, vehiculos []renovasustivehi1.VehiculosNuevos) {
 	assert.NotNil(t, vehiculos)
 	assert.Equal(t, len(vehiculos), 3)
 	vehiculo := (vehiculos)[2]
-	assert.Equal(t, 2022, vehiculo.Anio)
+	assert.Equal(t, "2022", vehiculo.Anio)
 	assert.Equal(t, "Hilux", *vehiculo.Modelo)
-	assert.Equal(t, "ABC1234", vehiculo.NumPlacas)
+	assert.Equal(t, "ABC1234", vehiculo.NoPlacas)
 	assert.Equal(t, "XAXX010101000", *vehiculo.Rfc)
 }

@@ -27,7 +27,7 @@ func TestFullValesDespensa(t *testing.T) {
 func InternalTestBase(t *testing.T, vales valesdespensa1.ValesDespensa10) {
 	assert.Equal(t, "1.0", vales.Version)
 	assert.Equal(t, "monedero electrónico", vales.TipoOperacion)
-	assert.Equal(t, "12345678901234567890", vales.NumeroCuenta)
+	assert.Equal(t, "12345678901234567890", vales.NoCuenta)
 	assert.Equal(t, "RP1234567890123456", *vales.RegistroPatronal)
 	assert.Equal(t, 5000.00, vales.Total)
 	InternalTestConceptos1(t, vales.Conceptos)
@@ -43,7 +43,7 @@ func InternalTestConceptos1(t *testing.T, conceptos []valesdespensa1.Conceptos) 
 	assert.Equal(t, "ABC123456T56", concepto.Rfc)
 	assert.Equal(t, "ABCD890123HMNLLL05", concepto.Curp)
 	assert.Equal(t, "Juan Perez", concepto.Nombre)
-	assert.Equal(t, "123456789012345", concepto.NumSeguridadSocial)
+	assert.Equal(t, "123456789012345", concepto.NoSeguridadSocial)
 	assert.Equal(t, 1500.00, concepto.Importe)
 }
 
@@ -54,6 +54,6 @@ func InternalTestConceptos2(t *testing.T, conceptos []valesdespensa1.Conceptos) 
 	assert.Equal(t, "XYZ456789G21", concepto.Rfc)
 	assert.Equal(t, "XYZD890123HMNLLL07", concepto.Curp)
 	assert.Equal(t, "Carlos Sanchez", concepto.Nombre)
-	assert.Equal(t, "987654321098766", concepto.NumSeguridadSocial)
+	assert.Equal(t, "987654321098766", concepto.NoSeguridadSocial)
 	assert.Equal(t, 1500.00, concepto.Importe)
 }

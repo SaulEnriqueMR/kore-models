@@ -21,10 +21,10 @@ func GetPagoEnEspecie10ForTest(filename string, t *testing.T) (pagoespecie2.Pago
 func TestPagoEnEspecie10(t *testing.T) {
 	pagoEnEspecie, _ := GetPagoEnEspecie10ForTest("./pagoenespecie10.xml", t)
 	assert.Equal(t, "1.0", pagoEnEspecie.Version)
-	assert.Equal(t, "Aamp;C8317286A1-18000101-020", pagoEnEspecie.CvePIC)
-	assert.Equal(t, "PE-12-45554", pagoEnEspecie.FolioSolDon)
-	assert.Equal(t, "PINTURA ARBOL ROJO", pagoEnEspecie.PzaArtNombre)
-	assert.Equal(t, "PINTURA AL OLEO", pagoEnEspecie.PzaArtTecn)
-	assert.Equal(t, "2000", pagoEnEspecie.PzaArtAProd)
-	assert.Equal(t, "2 x 4 mts", pagoEnEspecie.PzaArtDim)
+	assert.Equal(t, "Aamp;C8317286A1-18000101-020", pagoEnEspecie.ClavePadronInstitucionesCulturales)
+	assert.Equal(t, "PE-12-45554", pagoEnEspecie.FolioSolicitudDonacion)
+	assert.Equal(t, "PINTURA ARBOL ROJO", pagoEnEspecie.NombrePiezaArte)
+	assert.Equal(t, "PINTURA AL OLEO", pagoEnEspecie.TecnicaProduccionPiezaArte)
+	assert.Equal(t, "2000", pagoEnEspecie.AnioProduccionPiezaArte)
+	assert.Equal(t, "2 x 4 mts", pagoEnEspecie.DimensionPiezaArte)
 }

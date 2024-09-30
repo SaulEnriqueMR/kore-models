@@ -2,6 +2,7 @@ package intereses
 
 import (
 	"encoding/xml"
+
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
@@ -33,9 +34,9 @@ func (i *Intereses10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 	}
 
 	*i = Intereses10(aux)
-	i.ProvienenSistemaFinanciero = helpers.ResolveSatBoolean(&aux.SistemaFinanciero)
-	i.HuboRetiroIntereses = helpers.ResolveSatBoolean(&aux.RetiroIntereses)
-	i.CorrespondeOperacionFinancieraDerivada = helpers.ResolveSatBoolean(&aux.OperacionFinancieraDerivada)
+	i.ProvienenSistemaFinanciero = helpers.ResolveSatBoolean(aux.SistemaFinanciero)
+	i.HuboRetiroIntereses = helpers.ResolveSatBoolean(aux.RetiroIntereses)
+	i.CorrespondeOperacionFinancieraDerivada = helpers.ResolveSatBoolean(aux.OperacionFinancieraDerivada)
 
 	return nil
 }

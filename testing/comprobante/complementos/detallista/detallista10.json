@@ -28,10 +28,8 @@
                 "Type": "ON"
             }
         ],
-        "ReferenceDate": {
-            "ReferenceDateString": "2016-02-07",
-            "Date": "2016-02-07T00:00:00Z"
-        }
+        "ReferenceDateString": "2016-02-07",
+        "Date": "2016-02-07T00:00:00Z"
     },
     "AdditionalInformation": {
         "ReferenceIdentification": [
@@ -50,10 +48,8 @@
             "0000001",
             "0000002"
         ],
-        "ReferenceDate": {
-            "ReferenceDateString": "2016-04-07",
-            "Date": "2016-04-07T00:00:00Z"
-        }
+        "ReferenceDateString": "2016-04-07",
+        "Date": "2016-04-07T00:00:00Z"
     },
     "Buyer": {
         "Gln": "7504000107903",
@@ -83,6 +79,7 @@
                 "Nuevo León"
             ],
             "PostalCode": [
+                "64590",
                 "64590",
                 "64590"
             ]
@@ -213,10 +210,8 @@
                         "Value": "1239K23092",
                         "Type": "TN"
                     },
-                    "ReferenceDate": {
-                        "ReferenceDateString": "2016-04-07",
-                        "Date": "2016-04-07T00:00:00Z"
-                    },
+                    "ReferenceDateString": "2016-04-07",
+                    "Date": "2016-04-07T00:00:00Z",
                     "NameAndAddress": {
                         "Name": "TIJUANA"
                     }
@@ -234,13 +229,13 @@
                     "Value": "Empaque",
                     "Type": "EXCHANGE_PALLETS"
                 },
-                "Transport": "PAID_BY_BUYER"
+                "MethodPayment": "PAID_BY_BUYER"
             },
             "ExtendedAttributes": {
                 "LotNumber": [
                     {
                         "ProductionDateString": "2016-04-07",
-                        "ProductionDate": "0001-01-01T00:00:00Z",
+                        "ProductionDate": "2016-04-07T00:00:00Z",
                         "Value": "1123"
                     }
                 ]

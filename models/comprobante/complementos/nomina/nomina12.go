@@ -2,8 +2,9 @@ package nomina
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"time"
+
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
 // Nomina12 Presente en Comprobante 3.3 y 4.0
@@ -43,7 +44,7 @@ type EntidadSNCFNomina12 struct {
 type ReceptorNomina12 struct {
 	Curp                             string                     `xml:"Curp,attr" bson:"Curp"`                                      // Cifrado
 	NoSeguridadSocial                *string                    `xml:"NumSeguridadSocial,attr" bson:"NoSeguridadSocial,omitempty"` // Cifrado
-	FechaInicioRelacionLaboralString *string                    `xml:"FechaInicioRelLaboral,attr" bson:"FechaInicioRelLaboral,omitempty"`
+	FechaInicioRelacionLaboralString *string                    `xml:"FechaInicioRelLaboral,attr"`
 	FechaInicioRelacionLaboral       *time.Time                 `bson:"FechaInicioRelacionLaboral,omitempty"`
 	Antiguedad                       *string                    `xml:"Antigüedad,attr" bson:"Antiguedad,omitempty"`
 	TipoContrato                     string                     `xml:"TipoContrato,attr" bson:"TipoContrato"`

@@ -24,7 +24,7 @@ type TotalesPagos20 struct {
 	TotalTrasladosBaseIva0      *float64 `xml:"TotalTrasladosBaseIVA0,attr" bson:"TotalTrasladosBaseIva0,omitempty"`
 	TotalTrasladosImpuestoIva0  *float64 `xml:"TotalTrasladosImpuestoIVA0,attr" bson:"TotalTrasladosImpuestoIva0,omitempty"`
 	TotalTrasladosBaseIvaExento *float64 `xml:"TotalTrasladosBaseIVAExento,attr" bson:"TotalTrasladosBaseIvaExento,omitempty"`
-	MontoTotalPagos             float64  `xml:"MontoTotalPagos,attr"`
+	MontoTotalPagos             float64  `xml:"MontoTotalPagos,attr" bson:"MontoTotalPagos"`
 }
 
 type PagoPagos20 struct {

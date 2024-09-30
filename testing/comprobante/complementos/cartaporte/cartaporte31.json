@@ -124,7 +124,8 @@
                 "DenominacionGenericaProducto": "N/A",
                 "DenominacionDistintivaProducto": "Marca ABC",
                 "Fabricante": "Laboratorio XYZ",
-                "FechaCaducidad": "2025-12-31",
+                "FechaCaducidadString": "2025-12-31",
+                "FechaCaducidad": "2025-12-31T00:00:00Z",
                 "LoteMedicamento": "L123456",
                 "FormaFarmaceutica": "Tableta",
                 "CondicionesEspecialesTransporte": "N/A",
@@ -271,40 +272,24 @@
             "PermisoTemporalNavegacion": "TEMP123456",
             "Contenedor": [
                 {
-                    "Tipo": "ContenedorTipo1",
-                    "Matricula": "ABCD1234567",
-                    "NoPrecinto": "PREC12345",
-                    "IdCcpRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
-                    "PlacaVmCcp": "XYZ123",
-                    "FechaCertificacionCcp": "2023-09-20T12:00:00",
-                    "RemolquesCcp": [
-                        {
-                            "Subtipo": "SubTipo1",
-                            "Placa": "REM123"
-                        },
-                        {
-                            "Subtipo": "SubTipo2",
-                            "Placa": "REM456"
-                        }
-                    ]
+                    "Tipo": "",
+                    "Matricula": null,
+                    "NoPrecinto": null,
+                    "IdCcpRelacionado": null,
+                    "PlacaVmCcp": null,
+                    "FechaCertificacionCcpString": null,
+                    "FechaCertificacionCcp": null,
+                    "RemolquesCcp": null
                 },
                 {
-                    "Tipo": "ContenedorTipo1",
-                    "Matricula": "ABCD1234567",
-                    "NoPrecinto": "PREC12345",
-                    "IdCcpRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
-                    "PlacaVmCcp": "XYZ123",
-                    "FechaCertificacionCcp": "2023-09-20T12:00:00",
-                    "RemolquesCcp": [
-                        {
-                            "Subtipo": "SubTipo1",
-                            "Placa": "REM123"
-                        },
-                        {
-                            "Subtipo": "SubTipo2",
-                            "Placa": "REM456"
-                        }
-                    ]
+                    "Tipo": "",
+                    "Matricula": null,
+                    "NoPrecinto": null,
+                    "IdCcpRelacionado": null,
+                    "PlacaVmCcp": null,
+                    "FechaCertificacionCcpString": null,
+                    "FechaCertificacionCcp": null,
+                    "RemolquesCcp": null
                 }
             ]
         },

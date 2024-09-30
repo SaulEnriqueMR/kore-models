@@ -25,7 +25,7 @@ type Nomina11 struct {
 	Departamento                     *string                 `xml:"Departamento,attr" bson:"Departamento,omitempty"`
 	Clabe                            *string                 `xml:"CLABE,attr" bson:"Clabe,omitempty"`
 	Banco                            *int                    `xml:"Banco,attr" bson:"Banco,omitempty"`
-	FechaInicioRelacionLaboralString *string                 `xml:"FechaInicioRelLaboral,attr" bson:"FechaInicioRelLaboral,omitempty"`
+	FechaInicioRelacionLaboralString *string                 `xml:"FechaInicioRelLaboral,attr"`
 	FechaInicioRelacionLaboral       *time.Time              `bson:"FechaInicioRelacionLaboral,omitempty"`
 	Antiguedad                       *int                    `xml:"Antiguedad,attr" bson:"Antiguedad,omitempty"`
 	Puesto                           *string                 `xml:"Puesto,attr" bson:"Puesto,omitempty"`

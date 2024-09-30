@@ -117,7 +117,7 @@ func InternalTestMercancia(t *testing.T, mercancias []cartaporte1.MercanciaCarta
 	assert.Equal(t, "N/A", *mercancia.DenominacionGenericaProducto)
 	assert.Equal(t, "Marca ABC", *mercancia.DenominacionDistintivaProducto)
 	assert.Equal(t, "Laboratorio XYZ", *mercancia.Fabricante)
-	assert.Equal(t, "2025-12-31", *mercancia.FechaCaducidad)
+	assert.Equal(t, "2025-12-31", *mercancia.FechaCaducidadString)
 	assert.Equal(t, "L123456", *mercancia.LoteMedicamento)
 	assert.Equal(t, "Tableta", *mercancia.FormaFarmaceutica)
 	assert.Equal(t, "N/A", *mercancia.CondicionesEspecialesTransporte)

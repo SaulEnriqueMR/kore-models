@@ -13,7 +13,7 @@ type CartaPorte30 struct {
 	IdCcp   string   `xml:"IdCCP,attr" bson:"IdCcp"`
 
 	TransporteInternacional   string `xml:"TranspInternac,attr" bson:"TransporteInternacional"`
-	EsTransporteInternacional bool   `bson:"TransporteInternacional"`
+	EsTransporteInternacional bool   `bson:"EsTransporteInternacional"`
 
 	RegimenAduanero         *string                       `xml:"RegimenAduanero,attr" bson:"RegimenAduanero,omitempty"`
 	EntradaSalidaMercancia  *string                       `xml:"EntradaSalidaMerc,attr" bson:"EntradaSalidaMercancia,omitempty"`

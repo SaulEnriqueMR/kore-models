@@ -114,7 +114,8 @@
                 "DenominacionGenericaProducto": "N/A",
                 "DenominacionDistintivaProducto": "Marca ABC",
                 "Fabricante": "Laboratorio XYZ",
-                "FechaCaducidad": "2025-12-31",
+                "FechaCaducidadString": "2025-12-31",
+                "FechaCaducidad": "2025-12-31T00:00:00Z",
                 "LoteMedicamento": "L123456",
                 "FormaFarmaceutica": "Tableta",
                 "CondicionesEspecialesTransporte": "N/A",
@@ -137,25 +138,25 @@
                 "DescripcionMateria": "Tabletas de medicamento",
                 "DocumentacionAduanera": [
                     {
-                        "Tipo": "tipo_doc_aduanero",
+                        "TipoDocumento": "tipo_doc_aduanero",
                         "NumeroPedimento": "22  99  1234  0000000",
                         "IdentificadorDocumento": "Folio123456",
                         "RfcImportador": "XAXX010101000"
                     },
                     {
-                        "Tipo": "tipo_doc_aduanero",
+                        "TipoDocumento": "tipo_doc_aduanero",
                         "NumeroPedimento": "22  99  1234  0000000",
                         "IdentificadorDocumento": "Folio123456",
                         "RfcImportador": "XAXX010101000"
                     },
                     {
-                        "Tipo": "tipo_doc_aduanero",
+                        "TipoDocumento": "tipo_doc_aduanero",
                         "NumeroPedimento": "22  99  1234  0000000",
                         "IdentificadorDocumento": "Folio123456",
                         "RfcImportador": "XAXX010101000"
                     },
                     {
-                        "Tipo": "tipo_doc_aduanero",
+                        "TipoDocumento": "tipo_doc_aduanero",
                         "NumeroPedimento": "22  99  1234  0000000",
                         "IdentificadorDocumento": "Folio123456",
                         "RfcImportador": "XAXX010101000"

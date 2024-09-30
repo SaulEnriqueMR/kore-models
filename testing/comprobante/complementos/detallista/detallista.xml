@@ -47,6 +47,7 @@
           <detallista:streetAddressOne>Calle Peru num 029</detallista:streetAddressOne>
           <detallista:city>Nuevo León</detallista:city>
           <detallista:postalCode>64590</detallista:postalCode>
+          <detallista:postalCode>64590</detallista:postalCode>
         </detallista:nameAndAddress>
       </detallista:shipTo>
       <detallista:InvoiceCreator>

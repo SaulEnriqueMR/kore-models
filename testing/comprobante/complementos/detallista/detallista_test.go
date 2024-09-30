@@ -77,7 +77,7 @@ func InternalSpecialInstruction(t *testing.T, specials *[]detallista10.SpecialIn
 
 func InternalOrderIdentification(t *testing.T, order detallista10.OrderIdentification) {
 	assert.NotNil(t, order)
-	assert.Equal(t, "2016-02-07", order.ReferenceDate.ReferenceDateString)
+	assert.Equal(t, "2016-02-07", *order.ReferenceDateString)
 	InternalReferenceIdentification1(t, order.ReferenceIdentification)
 }
 
@@ -103,7 +103,7 @@ func InternalReferenceIdentification2(t *testing.T, references []detallista10.Re
 }
 func InternalDeliveryNote(t *testing.T, delivery detallista10.DeliveryNote) {
 	assert.NotNil(t, delivery)
-	assert.Equal(t, "2016-04-07", delivery.ReferenceDate.ReferenceDateString)
+	assert.Equal(t, "2016-04-07", *delivery.ReferenceDateString)
 	references := delivery.ReferenceIdentification
 	assert.NotNil(t, references)
 	assert.Equal(t, len(references), 2)
@@ -133,7 +133,7 @@ func InternalShipTo(t *testing.T, shipto *detallista10.ShipTo) {
 	name1 := (*names)[2]
 	assert.Equal(t, len(*nameandaddress.City), 2)
 	assert.Equal(t, len(*nameandaddress.StreetAddressOne), 2)
-	assert.Equal(t, len(*nameandaddress.PostalCode), 2)
+	assert.Equal(t, len(*nameandaddress.PostalCode), 3)
 	assert.Equal(t, "EMPRESA DEMO", name1)
 }
 
@@ -281,7 +281,7 @@ func InternalCustomsLine(t *testing.T, customs *[]detallista10.CustomsLineItem) 
 	assert.Equal(t, "1111111111111", *custom.Gln)
 	assert.Equal(t, "1239K23092", custom.AlternatePartyIdentification.Value)
 	assert.Equal(t, "TN", custom.AlternatePartyIdentification.Type)
-	assert.Equal(t, "2016-04-07", custom.ReferenceDate.ReferenceDateString)
+	assert.Equal(t, "2016-04-07", *custom.ReferenceDateString)
 	assert.Equal(t, "1239K23092", custom.AlternatePartyIdentification.Value)
 	assert.Equal(t, "TIJUANA", custom.NameAndAddress.Name)
 }
@@ -298,7 +298,7 @@ func InternalPalletInformation(t *testing.T, pallet *detallista10.PalletInformat
 	assert.Equal(t, "2", pallet.PalletQuantity)
 	assert.Equal(t, "EXCHANGE_PALLETS", pallet.Description.Type)
 	assert.Equal(t, "Empaque", pallet.Description.Value)
-	assert.Equal(t, "PAID_BY_BUYER", pallet.Transport)
+	assert.Equal(t, "PAID_BY_BUYER", pallet.MethodPayment)
 }
 
 func InternalExtendedAttributes(t *testing.T, extended *detallista10.ExtendedAttributes) {

@@ -2,9 +2,10 @@ package retenciones
 
 import (
 	"encoding/xml"
+	"strings"
+
 	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
 	date "github.com/SaulEnriqueMR/kore-models/models/helpers"
-	"strings"
 )
 
 type Retenciones10 struct {

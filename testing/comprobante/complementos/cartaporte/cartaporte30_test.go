@@ -108,7 +108,7 @@ func InternalTestMercancia30(t *testing.T, mercancias []cartaporte1.MercanciaCar
 	assert.Equal(t, "N/A", *mercancia.DenominacionGenericaProducto)
 	assert.Equal(t, "Marca ABC", *mercancia.DenominacionDistintivaProducto)
 	assert.Equal(t, "Laboratorio XYZ", *mercancia.Fabricante)
-	assert.Equal(t, "2025-12-31", *mercancia.FechaCaducidad)
+	assert.Equal(t, "2025-12-31", *mercancia.FechaCaducidadString)
 	assert.Equal(t, "L123456", *mercancia.LoteMedicamento)
 	assert.Equal(t, "Tableta", *mercancia.FormaFarmaceutica)
 	assert.Equal(t, "N/A", *mercancia.CondicionesEspecialesTransporte)
@@ -138,7 +138,7 @@ func InternalTestDocumentacionAduanera30(t *testing.T, docs *[]cartaporte1.Docum
 	assert.NotNil(t, docs)
 	assert.Equal(t, len(*docs), 4)
 	doc := (*docs)[0]
-	assert.Equal(t, "tipo_doc_aduanero", doc.Tipo)
+	assert.Equal(t, "tipo_doc_aduanero", doc.TipoDocumento)
 	assert.Equal(t, "22  99  1234  0000000", *doc.NumeroPedimento)
 	assert.Equal(t, "Folio123456", *doc.IdentificadorDocumento)
 	assert.Equal(t, "XAXX010101000", *doc.RfcImportador)

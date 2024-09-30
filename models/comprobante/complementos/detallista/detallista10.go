@@ -46,12 +46,29 @@ type ReferenceIdentification struct {
 
 type OrderIdentification struct {
 	ReferenceIdentification []ReferenceIdentification `xml:"referenceIdentification" bson:"ReferenceIdentification"`
-	ReferenceDate           *ReferenceDate            `xml:"ReferenceDate"`
+	ReferenceDateString     *string                   `xml:"ReferenceDate"`
+	Date                    *time.Time                `bson:"Date"`
 }
 
-type ReferenceDate struct {
-	ReferenceDateString string    `xml:",chardata"`
-	Date                time.Time `bson:"ReferenceDate"`
+func (oi *OrderIdentification) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias OrderIdentification
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*oi = OrderIdentification(aux)
+	if aux.ReferenceDateString != nil && *aux.ReferenceDateString != "" {
+		fecha, err := helpers.ParseDatetime(*aux.ReferenceDateString)
+		if err != nil {
+			return err
+		}
+		oi.Date = &fecha
+	}
+
+	return nil
 }
 
 type AdditionalInformation struct {
@@ -59,8 +76,30 @@ type AdditionalInformation struct {
 }
 
 type DeliveryNote struct {
-	ReferenceIdentification []string       `xml:"referenceIdentification" bson:"ReferenceIdentification"`
-	ReferenceDate           *ReferenceDate `xml:"ReferenceDate"`
+	ReferenceIdentification []string   `xml:"referenceIdentification" bson:"ReferenceIdentification"`
+	ReferenceDateString     *string    `xml:"ReferenceDate"`
+	Date                    *time.Time `bson:"Date"`
+}
+
+func (dn *DeliveryNote) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias DeliveryNote
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*dn = DeliveryNote(aux)
+	if aux.ReferenceDateString != nil && *aux.ReferenceDateString != "" {
+		fecha, err := helpers.ParseDatetime(*aux.ReferenceDateString)
+		if err != nil {
+			return err
+		}
+		dn.Date = &fecha
+	}
+
+	return nil
 }
 
 type Buyer struct {
@@ -211,8 +250,30 @@ type AdditionalInformationLine struct {
 type CustomsLineItem struct {
 	Gln                          *string                      `xml:"gln" bson:"Gln,omitempty"`
 	AlternatePartyIdentification AlternatePartyIdentification `xml:"alternatePartyIdentification" bson:"AlternatePartyIdentification"`
-	ReferenceDate                ReferenceDate                `xml:"ReferenceDate"`
+	ReferenceDateString          *string                      `xml:"ReferenceDate"`
+	Date                         *time.Time                   `bson:"Date"`
 	NameAndAddress               NameAndAddressCustoms        `xml:"nameAndAddress" bson:"NameAndAddress"`
+}
+
+func (cli *CustomsLineItem) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias CustomsLineItem
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*cli = CustomsLineItem(aux)
+	if aux.ReferenceDateString != nil && *aux.ReferenceDateString != "" {
+		fecha, err := helpers.ParseDatetime(*aux.ReferenceDateString)
+		if err != nil {
+			return err
+		}
+		cli.Date = &fecha
+	}
+
+	return nil
 }
 
 type NameAndAddressCustoms struct {
@@ -231,20 +292,12 @@ type SerialShippingContainerCode struct {
 type PalletInformation struct {
 	PalletQuantity string      `xml:"palletQuantity" bson:"PalletQuantity"`
 	Description    Description `xml:"description" bson:"Description"`
-	Transport      string      `xml:"transport>methodOfPayment" bson:"Transport"`
+	MethodPayment  string      `xml:"transport>methodOfPayment" bson:"MethodPayment"`
 }
 
 type Description struct {
 	Value string `xml:",chardata" bson:"Value"`
 	Type  string `xml:"type,attr" bson:"type"`
-}
-
-type Transport struct {
-	MethodPayment MethodPayment `xml:"" bson:""`
-}
-
-type MethodPayment struct {
-	Value string `xml:",chardata" bson:"Value"`
 }
 
 type ExtendedAttributes struct {
@@ -255,6 +308,26 @@ type LotNumber struct {
 	ProductionDateString string    `xml:"productionDate,attr"`
 	ProductionDate       time.Time `bson:"ProductionDate"`
 	Value                string    `xml:",chardata" bson:"Value"`
+}
+
+func (ln *LotNumber) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias LotNumber
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*ln = LotNumber(aux)
+
+	fecha, err := helpers.ParseDatetime(aux.ProductionDateString)
+	if err != nil {
+		return err
+	}
+	ln.ProductionDate = fecha
+
+	return nil
 }
 
 type AllowanceChargeLineItem struct {
@@ -294,24 +367,4 @@ type TotalAllowanceCharge struct {
 	AllowanceOrChargeType string   `xml:"allowanceOrChargeType,attr" bson:"AllowanceOrChargeType"`
 	SpecialServicesType   *string  `xml:"specialServicesType" bson:"SpecialServicesType"`
 	Amount                *float64 `xml:"Amount" bson:"Amount,omitempty"`
-}
-
-func (rd *ReferenceDate) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
-	// Create an alias to avoid recursion
-	type Alias ReferenceDate
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-	*rd = ReferenceDate(aux)
-
-	fecha, err := helpers.ParseDatetime(aux.ReferenceDateString)
-	if err != nil {
-		return err
-	}
-	rd.Date = fecha
-
-	return nil
 }

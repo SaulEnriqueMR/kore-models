@@ -3,13 +3,13 @@
     "TipoOperacion": "1",
     "ClavePedimento": "ABC123",
     "CertificadoOrigen": 1,
-    "NumCertificadoOrigen": "123e4567-e89b-12d3-a456-426614174000",
-    "NumeroExportadorConfiable": "EX123456",
+    "NoCertificadoOrigen": "123e4567-e89b-12d3-a456-426614174000",
+    "NoExportadorConfiable": "EX123456",
     "Incoterm": "CIF",
     "Subdivision": 0,
     "Observaciones": "Factura de exportación.",
-    "TipoCambioUSD": 20.5,
-    "TotalUSD": 1000,
+    "TipoCambioUsd": 20.5,
+    "TotalUsd": 1000,
     "Emisor": {
         "Curp": "ABCD123456HDFRLM09"
     },
@@ -47,8 +47,8 @@
                 {
                     "Marca": "MarcaEjemplo",
                     "Modelo": "ModeloEjemplo",
-                    "SubModelo": "SubmodeloEjemplo",
-                    "NumeroSerie": "SN123456789"
+                    "Submodelo": "SubmodeloEjemplo",
+                    "NoSerie": "SN123456789"
                 }
             ]
         }

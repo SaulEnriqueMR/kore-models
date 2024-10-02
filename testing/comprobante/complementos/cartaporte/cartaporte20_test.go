@@ -1,10 +1,8 @@
 package cartaporte
 
 import (
-	"encoding/json"
 	"encoding/xml"
-	"log"
-	"os"
+
 	"testing"
 
 	cartaporte2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/cartaporte"
@@ -17,7 +15,7 @@ func GetCartaPorte20ForTest(filename string, t *testing.T) (cartaporte2.CartaPor
 	var parsed cartaporte2.CartaPorte20
 	errUnmarshal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmarshal)
-	GenerateJSONFromXMLCartaPorte20("cartaporte20.json", parsed)
+	testing2.GenerateJSONFromStructure("cartaporte20.json", parsed)
 	return parsed, errUnmarshal
 }
 
@@ -309,12 +307,4 @@ func InternalTestFullAtributesDomicilioFiguraTransporte20(t *testing.T, porte20 
 	assert.Equal(t, "Estado Ejemplo", porte20.Estado)
 	assert.Equal(t, "MEX", porte20.Pais)
 	assert.Equal(t, "12345", porte20.CodigoPostal)
-}
-
-func GenerateJSONFromXMLCartaPorte20(namefile string, data cartaporte2.CartaPorte20) {
-	jsonData, err := json.MarshalIndent(data, "", "	")
-	err = os.WriteFile(namefile, jsonData, 0644)
-	if err != nil {
-		log.Println(err)
-	}
 }

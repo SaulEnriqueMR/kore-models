@@ -4,19 +4,19 @@
     "TipoOperacion": "EXPORTACION",
     "ClavePedimento": "A1",
     "CertificadoOrigen": 1,
-    "NumCertificadoOrigen": "123456789012",
-    "NumeroExportadorConfiable": "ABC123456",
+    "NoCertificadoOrigen": "123456789012",
+    "NoExportadorConfiable": "ABC123456",
     "Incoterm": "CIF",
     "Subdivision": 0,
     "Observaciones": "Este es un ejemplo de comercio exterior.",
-    "TipoCambioUSD": "20.50",
-    "TotalUSD": 10000,
+    "TipoCambioUsd": "20.50",
+    "TotalUsd": 10000,
     "Emisor": {
         "Curp": "ABC123456789",
         "Domicilio": {
             "Calle": "Av. Reforma",
-            "NumeroExterior": "123",
-            "NumeroInterior": "456",
+            "NoExterior": "123",
+            "NoInterior": "456",
             "Colonia": "Centro",
             "Localidad": "Cuauhtémoc",
             "Referencia": "Cerca del ángel de la independencia",
@@ -44,8 +44,8 @@
         "NumRegIdTrib": "RFC123456789",
         "Domicilio": {
             "Calle": "Av. Insurgentes Sur",
-            "NumeroExterior": "123",
-            "NumeroInterior": "A",
+            "NoExterior": "123",
+            "NoInterior": "A",
             "Colonia": "Roma",
             "Localidad": "Ciudad de México",
             "Referencia": "Cerca del parque",
@@ -62,8 +62,8 @@
             "Domicilio": [
                 {
                     "Calle": "Calle de la Paz",
-                    "NumeroExterior": "45",
-                    "NumeroInterior": "B",
+                    "NoExterior": "45",
+                    "NoInterior": "B",
                     "Colonia": "Centro",
                     "Localidad": "Ciudad de México",
                     "Referencia": "Cerca de la Plaza",
@@ -83,24 +83,24 @@
             "UnidadAduana": null,
             "ValorUnitarioAduana": null,
             "ValorDolares": 1500,
-            "DescripcionesEspecificasComercioExterior": [
+            "DescripcionesEspecificas": [
                 {
                     "Marca": "MarcaX",
                     "Modelo": "ModeloY",
-                    "SubModelo": "SubModeloZ",
-                    "NumeroSerie": "123456789"
+                    "Submodelo": "SubModeloZ",
+                    "NoSerie": "123456789"
                 },
                 {
                     "Marca": "MarcaX",
                     "Modelo": "ModeloY",
-                    "SubModelo": "SubModeloZ",
-                    "NumeroSerie": "123456789"
+                    "Submodelo": "SubModeloZ",
+                    "NoSerie": "123456789"
                 },
                 {
                     "Marca": "MarcaA",
                     "Modelo": null,
-                    "SubModelo": null,
-                    "NumeroSerie": null
+                    "Submodelo": null,
+                    "NoSerie": null
                 }
             ]
         },
@@ -111,7 +111,7 @@
             "UnidadAduana": "PZ",
             "ValorUnitarioAduana": 150,
             "ValorDolares": 0,
-            "DescripcionesEspecificasComercioExterior": null
+            "DescripcionesEspecificas": null
         }
     ]
 }

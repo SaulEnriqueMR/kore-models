@@ -296,6 +296,7 @@ func (c *ContenedorCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartEle
 	if err := d.DecodeElement(&aux, &start); err != nil {
 		return err
 	}
+	*c = ContenedorCartaPorte31(aux)
 
 	if c.FechaCertificacionCcpString != nil && *c.FechaCertificacionCcpString != "" {
 		fecha, errFecha := helpers.ParseDatetime(*c.FechaCertificacionCcpString)

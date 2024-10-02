@@ -272,24 +272,42 @@
             "PermisoTemporalNavegacion": "TEMP123456",
             "Contenedor": [
                 {
-                    "Tipo": "",
-                    "Matricula": null,
-                    "NoPrecinto": null,
-                    "IdCcpRelacionado": null,
-                    "PlacaVmCcp": null,
-                    "FechaCertificacionCcpString": null,
-                    "FechaCertificacionCcp": null,
-                    "RemolquesCcp": null
+                    "Tipo": "ContenedorTipo1",
+                    "Matricula": "ABCD1234567",
+                    "NoPrecinto": "PREC12345",
+                    "IdCcpRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
+                    "PlacaVmCcp": "XYZ123",
+                    "FechaCertificacionCcpString": "2023-09-20T12:00:00",
+                    "FechaCertificacionCcp": "2023-09-20T12:00:00Z",
+                    "RemolquesCcp": [
+                        {
+                            "Subtipo": "SubTipo1",
+                            "Placa": "REM123"
+                        },
+                        {
+                            "Subtipo": "SubTipo2",
+                            "Placa": "REM456"
+                        }
+                    ]
                 },
                 {
-                    "Tipo": "",
-                    "Matricula": null,
-                    "NoPrecinto": null,
-                    "IdCcpRelacionado": null,
-                    "PlacaVmCcp": null,
-                    "FechaCertificacionCcpString": null,
-                    "FechaCertificacionCcp": null,
-                    "RemolquesCcp": null
+                    "Tipo": "ContenedorTipo1",
+                    "Matricula": "ABCD1234567",
+                    "NoPrecinto": "PREC12345",
+                    "IdCcpRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
+                    "PlacaVmCcp": "XYZ123",
+                    "FechaCertificacionCcpString": "2023-09-20T12:00:00",
+                    "FechaCertificacionCcp": "2023-09-20T12:00:00Z",
+                    "RemolquesCcp": [
+                        {
+                            "Subtipo": "SubTipo1",
+                            "Placa": "REM123"
+                        },
+                        {
+                            "Subtipo": "SubTipo2",
+                            "Placa": "REM456"
+                        }
+                    ]
                 }
             ]
         },

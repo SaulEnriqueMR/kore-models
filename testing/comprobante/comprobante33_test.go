@@ -160,13 +160,13 @@ func InternalTestFullAtributesComplemento33(t *testing.T, complemento33 comproba
 	assert.Equal(t, 1500.00, impuestosLocales1[0].TotalRetenciones)
 	assert.Equal(t, 3000.00, impuestosLocales1[0].TotalTraslados)
 
-	retencionesLocales := *impuestosLocales1[0].RetencionesLocales
-	trasladosLocales := *impuestosLocales1[0].TrasladosLocales
-	assert.Equal(t, "ISR", retencionesLocales[0].ImpLocRetenido)
-	assert.Equal(t, 15.00, retencionesLocales[0].TasaRetencion)
+	retencionesLocales := *impuestosLocales1[0].Retenciones
+	trasladosLocales := *impuestosLocales1[0].Traslados
+	assert.Equal(t, "ISR", retencionesLocales[0].Impuesto)
+	assert.Equal(t, 15.00, retencionesLocales[0].Tasa)
 	assert.Equal(t, 1500.00, retencionesLocales[0].Importe)
 
-	assert.Equal(t, "IVA", trasladosLocales[0].ImpLocTrasladado)
-	assert.Equal(t, 16.00, trasladosLocales[0].TasaTraslado)
+	assert.Equal(t, "IVA", trasladosLocales[0].Impuesto)
+	assert.Equal(t, 16.00, trasladosLocales[0].Tasa)
 	assert.Equal(t, 3000.00, trasladosLocales[0].Importe)
 }

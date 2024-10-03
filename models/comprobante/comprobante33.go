@@ -32,6 +32,7 @@ type Comprobante33 struct {
 	CfdisRelacionados                             *CfdiRelacionados33 `xml:"CfdiRelacionados" bson:"CfdisRelacionados,omitempty"`
 	Emisor                                        Emisor33            `xml:"Emisor" bson:"Emisor"`
 	Receptor                                      Receptor33          `xml:"Receptor" bson:"Receptor"`
+	RfcProvCertif                                 string              `bson:"RfcProvCertif"`
 	Conceptos                                     []Concepto33        `xml:"Conceptos>Concepto" bson:"Conceptos"`
 	Impuestos                                     *Impuestos33        `xml:"Impuestos" bson:"Impuestos,omitempty"`
 	Complemento                                   *Complemento        `xml:"Complemento" bson:"Complemento,omitempty"`
@@ -169,6 +170,10 @@ func (c *Comprobante33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		if tfd != nil {
 			c.FechaTimbrado = tfd.FechaTimbrado
 			c.Uuid = strings.ToUpper(tfd.Uuid)
+		}
+		rfcProvCertif := tfd.RfcProvCertif
+		if len(rfcProvCertif) > 0 {
+			c.RfcProvCertif = rfcProvCertif
 		}
 	}
 

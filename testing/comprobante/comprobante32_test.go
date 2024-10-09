@@ -48,10 +48,10 @@ func InternalTestFullAtributesComprobante32(t *testing.T, comprobante32 comproba
 	assert.Equal(t, "Transferencia bancaria", comprobante32.MetodoPago)
 	assert.Equal(t, "Ciudad de México", comprobante32.LugarExpedicion)
 	assert.Equal(t, "1234", *comprobante32.NumeroCuentaPago)
-	assert.Equal(t, "ABC123456", *comprobante32.FolioFiscalOrig)
-	assert.Equal(t, "A1", *comprobante32.SerieFolioFiscalOrig)
-	assert.Equal(t, "2023-09-23T12:00:00", *comprobante32.FechaFolioFiscalOrig)
-	assert.Equal(t, "1000.00", *comprobante32.MontoFolioFiscalOrig)
+	assert.Equal(t, "ABC123456", *comprobante32.FolioFiscalOriginal)
+	assert.Equal(t, "A1", *comprobante32.SerieFolioFiscalOriginal)
+	assert.Equal(t, "2023-09-23T12:00:00", *comprobante32.FechaFolioFiscalOriginal)
+	assert.Equal(t, "1000.00", *comprobante32.MontoFolioFiscalOriginal)
 }
 
 func InternalTestFullAtributesEmisorComprobante32(t *testing.T, emisor32 comprobante2.Emisor32) {

@@ -39,17 +39,17 @@ type Comprobante33 struct {
 }
 
 type CfdiRelacionados33 struct {
-	TipoRelacion    string              `xml:"TipoRelacion,attr" bson:"TipoRelacion"`
-	CfdiRelacionado []CfdiRelacionado33 `xml:"CfdiRelacionado" bson:"CfdiRelacionado"`
+	TipoRelacion     string              `xml:"TipoRelacion,attr" bson:"TipoRelacion"`
+	UuidRelacionados []CfdiRelacionado33 `xml:"CfdiRelacionado" bson:"UuidRelacionados"`
 }
 
 type CfdiRelacionado33 struct {
-	UUID string `xml:"UUID,attr" bson:"Uuid"`
+	Uuid string `xml:"UUID,attr" bson:"Uuid"`
 }
 
 type Emisor33 struct {
-	Rfc           string  `xml:"Rfc,attr" bson:"Rfc"`                 // Cifrado
-	Nombre        *string `xml:"Nombre,attr" bson:"Nombre,omitempty"` // Cifrado
+	Rfc           string  `xml:"Rfc,attr" bson:"Rfc"`
+	Nombre        *string `xml:"Nombre,attr" bson:"Nombre,omitempty"`
 	RegimenFiscal string  `xml:"RegimenFiscal,attr" bson:"RegimenFiscal"`
 }
 

@@ -52,7 +52,7 @@ type CfdisRelacionados40 struct {
 }
 
 type UuidRelacionado40 struct {
-	UUID string `xml:"UUID,attr" bson:"Uuid"`
+	Uuid string `xml:"UUID,attr" bson:"Uuid"`
 }
 
 type Emisor40 struct {

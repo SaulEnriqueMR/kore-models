@@ -31,10 +31,10 @@ type Comprobante32 struct {
 	MetodoPago                                    string       `xml:"metodoDePago,attr" bson:"MetodoPago"`
 	LugarExpedicion                               string       `xml:"LugarExpedicion,attr" bson:"LugarExpedicion"`
 	NumeroCuentaPago                              *string      `xml:"NumCtaPago,attr" bson:"NumeroCuentaPago,omitempty"`
-	FolioFiscalOrig                               *string      `xml:"FolioFiscalOrig,attr" bson:"FolioFiscalOriginal,omitempty"`
-	SerieFolioFiscalOrig                          *string      `xml:"SerieFolioFiscalOrig,attr" bson:"SerieFolioFiscalOriginal,omitempty"`
-	FechaFolioFiscalOrig                          *string      `xml:"FechaFolioFiscalOrig,attr" bson:"FechaFolioFiscalOriginal,omitempty"`
-	MontoFolioFiscalOrig                          *string      `xml:"MontoFolioFiscalOrig,attr" bson:"MontoFolioFiscalOriginal,omitempty"`
+	FolioFiscalOriginal                           *string      `xml:"FolioFiscalOrig,attr" bson:"FolioFiscalOriginal,omitempty"`
+	SerieFolioFiscalOriginal                      *string      `xml:"SerieFolioFiscalOrig,attr" bson:"SerieFolioFiscalOriginal,omitempty"`
+	FechaFolioFiscalOriginal                      *string      `xml:"FechaFolioFiscalOrig,attr" bson:"FechaFolioFiscalOriginal,omitempty"`
+	MontoFolioFiscalOriginal                      *string      `xml:"MontoFolioFiscalOrig,attr" bson:"MontoFolioFiscalOriginal,omitempty"`
 	Emisor                                        Emisor32     `xml:"Emisor" bson:"Emisor"`
 	Receptor                                      Receptor32   `xml:"Receptor" bson:"Receptor"`
 	Conceptos                                     []Concepto32 `xml:"Conceptos>Concepto" bson:"Conceptos"`

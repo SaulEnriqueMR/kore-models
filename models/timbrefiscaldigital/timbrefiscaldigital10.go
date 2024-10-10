@@ -19,9 +19,9 @@ type TimbreFiscalDigital10 struct {
 	Fecha string `xml:"FechaTimbrado,attr"`
 	// Conversión de campo XML FechaTimbrado
 	FechaTimbrado    time.Time `bson:"FechaTimbrado"`
-	SelloCfd         string    `xml:"selloCFD,attr" bson:"SelloCFD"`
-	NoCertificadoSat string    `xml:"noCertificadoSAT,attr" bson:"NoCertificadoSAT"`
-	SelloSat         string    `xml:"selloSAT,attr" bson:"SelloSAT"`
+	SelloCfd         string    `xml:"selloCFD,attr" bson:"SelloCfd"`
+	NoCertificadoSat string    `xml:"noCertificadoSAT,attr" bson:"NoCertificadoSat"`
+	SelloSat         string    `xml:"selloSAT,attr" bson:"SelloSat"`
 }
 
 func (t *TimbreFiscalDigital10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

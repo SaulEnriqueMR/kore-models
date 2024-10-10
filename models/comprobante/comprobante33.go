@@ -176,6 +176,7 @@ func (c *Comprobante33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 			c.RfcProvCertif = rfcProvCertif
 		}
 	}
+	c.CadenaOriginal = helpers.CreateCadenaOriginal(c)
 
 	return nil
 }

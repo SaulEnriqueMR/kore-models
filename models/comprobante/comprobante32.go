@@ -159,6 +159,7 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 			c.Uuid = strings.ToUpper(tfd.Uuid)
 		}
 	}
+	c.CadenaOriginal = helpers.CreateCadenaOriginal(c)
 
 	return nil
 }

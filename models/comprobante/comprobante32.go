@@ -3,6 +3,7 @@ package comprobante
 import (
 	"encoding/xml"
 	"fmt"
+	"strconv"
 	"strings"
 	"time"
 
@@ -40,6 +41,15 @@ type Comprobante32 struct {
 	Conceptos                                     []Concepto32 `xml:"Conceptos>Concepto" bson:"Conceptos"`
 	Impuestos                                     Impuestos32  `xml:"Impuestos" bson:"Impuestos"`
 	Complemento                                   *Complemento `xml:"Complemento" bson:"Complemento,omitempty"`
+}
+
+func (c *Comprobante32) DefineTransaccion(rfc string) {
+	if c.Emisor.Rfc == rfc {
+		c.Transaccion = "EMITIDO"
+	}
+	if c.Receptor.Rfc == rfc {
+		c.Transaccion = "RECIBIDO"
+	}
 }
 
 type Emisor32 struct {
@@ -191,3 +201,25 @@ func (c *Comprobante32) GetFileName() string {
 	month := fmt.Sprint(int(c.FechaEmision.Month()))
 	return c.Emisor.Rfc + "/" + c.Receptor.Rfc + "/" + year + "/" + month + "/" + c.Uuid + ".xml"
 }
+
+func (c Comprobante32) GetBasePath() string {
+	year := c.FechaEmision.Year()
+	month := c.FechaEmision.Month()
+	sb := strings.Builder{}
+	sb.WriteString(c.Emisor.Rfc)
+	sb.WriteString("/")
+	sb.WriteString(c.Receptor.Rfc)
+	sb.WriteString("/")
+	sb.WriteString(strconv.Itoa(year))
+	sb.WriteString("/")
+	sb.WriteString(strconv.Itoa(int(month)))
+	sb.WriteString("/")
+	sb.WriteString(c.Uuid)
+	return sb.String()
+}
+
+/* func (c *Comprobante32) SetFilePaths() {
+	basePath := c.GetBasePath()
+	c.XmlPath = strings.Join([]string{basePath, "xml"}, ".")
+	c.PdfPath = strings.Join([]string{basePath, "pdf"}, ".")
+} */

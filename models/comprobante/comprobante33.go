@@ -38,6 +38,15 @@ type Comprobante33 struct {
 	Complemento                                   *Complemento        `xml:"Complemento" bson:"Complemento,omitempty"`
 }
 
+func (c *Comprobante33) DefineTransaccion(rfc string) {
+	if c.Emisor.Rfc == rfc {
+		c.Transaccion = "EMITIDO"
+	}
+	if c.Receptor.Rfc == rfc {
+		c.Transaccion = "RECIBIDO"
+	}
+}
+
 type CfdiRelacionados33 struct {
 	TipoRelacion     string              `xml:"TipoRelacion,attr" bson:"TipoRelacion"`
 	UuidRelacionados []CfdiRelacionado33 `xml:"CfdiRelacionado" bson:"UuidRelacionados"`
@@ -170,10 +179,10 @@ func (c *Comprobante33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		if tfd != nil {
 			c.FechaTimbrado = tfd.FechaTimbrado
 			c.Uuid = strings.ToUpper(tfd.Uuid)
-		}
-		rfcProvCertif := tfd.RfcProvCertif
-		if len(rfcProvCertif) > 0 {
-			c.RfcProvCertif = rfcProvCertif
+			rfcProvCertif := tfd.RfcProvCertif
+			if len(rfcProvCertif) > 0 {
+				c.RfcProvCertif = rfcProvCertif
+			}
 		}
 	}
 	c.CadenaOriginal = helpers.CreateCadenaOriginal(*c)
@@ -186,3 +195,25 @@ func (c *Comprobante33) GetFileName() string {
 	month := fmt.Sprint(int(c.FechaEmision.Month()))
 	return c.Emisor.Rfc + "/" + c.Receptor.Rfc + "/" + year + "/" + month + "/" + c.Uuid + ".xml"
 }
+
+func (c Comprobante33) GetBasePath() string {
+	year := fmt.Sprint(c.FechaEmision.Year())
+	month := fmt.Sprint(int(c.FechaEmision.Month()))
+	sb := strings.Builder{}
+	sb.WriteString(c.Emisor.Rfc)
+	sb.WriteString("/")
+	sb.WriteString(c.Receptor.Rfc)
+	sb.WriteString("/")
+	sb.WriteString(year)
+	sb.WriteString("/")
+	sb.WriteString(month)
+	sb.WriteString("/")
+	sb.WriteString(c.Uuid)
+	return sb.String()
+}
+
+/* func (c *Comprobante33) SetFilePaths() {
+	basePath := c.GetBasePath()
+	c.XmlPath = strings.Join([]string{basePath, "xml"}, ".")
+	c.PdfPath = strings.Join([]string{basePath, "pdf"}, ".")
+} */

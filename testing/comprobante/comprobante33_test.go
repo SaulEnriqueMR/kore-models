@@ -170,3 +170,21 @@ func InternalTestFullAtributesComplemento33(t *testing.T, complemento33 comproba
 	assert.Equal(t, 16.00, trasladosLocales[0].Tasa)
 	assert.Equal(t, 3000.00, trasladosLocales[0].Importe)
 }
+
+func TestEmitidaRecibida33(t *testing.T) {
+	comprobante33, _ := GetComprobante33ForTest("./comprobante33_emitido-recibido.xml", t)
+
+	rfcEmitido := "ABC123456789"
+	comprobante33.DefineTransaccion(rfcEmitido)
+	assert.Equal(t, "EMITIDO", comprobante33.Transaccion)
+
+	rfcRecibido := "DEF123456789"
+	comprobante33.DefineTransaccion(rfcRecibido)
+	assert.Equal(t, "RECIBIDO", comprobante33.Transaccion)
+}
+
+func TestBasePath33(t *testing.T) {
+	comprobante33, _ := GetComprobante33ForTest("./comprobante33.xml", t)
+
+	assert.Equal(t, comprobante33.GetFileName(), comprobante33.GetBasePath()+".xml")
+}

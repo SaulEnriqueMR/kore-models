@@ -309,3 +309,21 @@ func InternalTestFullTraslados(t *testing.T, traslados *[]comprobante2.TrasladoI
 	assert.NotNil(t, first.TasaOCuota)
 	assert.Equal(t, 0.16, *first.TasaOCuota)
 }
+
+func TestEmitidaRecibida40(t *testing.T) {
+	comprobante40, _ := GetComprobante40ForTest("./comprobante40.xml", t)
+
+	rfcEmitido := "EKU9003173C9"
+	comprobante40.DefineTransaccion(rfcEmitido)
+	assert.Equal(t, "EMITIDO", comprobante40.Transaccion)
+
+	rfcRecibido := "URE180429TM6"
+	comprobante40.DefineTransaccion(rfcRecibido)
+	assert.Equal(t, "RECIBIDO", comprobante40.Transaccion)
+}
+
+func TestBasePath40(t *testing.T) {
+	comprobante40, _ := GetComprobante40ForTest("./comprobante40.xml", t)
+
+	assert.Equal(t, comprobante40.GetFileName(), comprobante40.GetBasePath()+".xml")
+}

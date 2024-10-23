@@ -2,6 +2,7 @@ package retenciones
 
 import (
 	"encoding/xml"
+	"fmt"
 	"strings"
 
 	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
@@ -23,6 +24,15 @@ type Retenciones10 struct {
 	Periodo              Periodo10    `xml:"Periodo" bson:"Periodo"`
 	Totales              Totales10    `xml:"Totales" bson:"Totales"`
 	Complemento          *Complemento `xml:"Complemento" bson:"Complemento,omitempty"`
+}
+
+func (c *Retenciones10) DefineTransaccion(rfc string) {
+	if c.Emisor.Rfc == rfc {
+		c.Transaccion = "EMITIDO"
+	}
+	if c.Receptor.Nacional.Rfc == rfc {
+		c.Transaccion = "RECIBIDO"
+	}
 }
 
 type Emisor10 struct {
@@ -105,3 +115,31 @@ func (r *Retenciones10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 
 	return nil
 }
+
+func (c Retenciones10) GetBasePath() string {
+	year := fmt.Sprint(c.FechaEmision.Year())
+	month := fmt.Sprint(int(c.FechaEmision.Month()))
+	sb := strings.Builder{}
+	sb.WriteString(c.Emisor.Rfc)
+	sb.WriteString("/")
+	if c.Receptor.Nacional.Rfc != "" {
+		sb.WriteString(c.Receptor.Nacional.Rfc)
+		sb.WriteString("/")
+	}
+	if *c.Receptor.Extranjero.NumRegIdTrib != "" {
+		sb.WriteString(*c.Receptor.Extranjero.NumRegIdTrib)
+		sb.WriteString("/")
+	}
+	sb.WriteString(year)
+	sb.WriteString("/")
+	sb.WriteString(month)
+	sb.WriteString("/")
+	sb.WriteString(c.Uuid)
+	return sb.String()
+}
+
+/* func (c *Retenciones10) SetFilePaths() {
+	basePath := c.GetBasePath()
+	c.XmlPath = strings.Join([]string{basePath, "xml"}, ".")
+	c.PdfPath = strings.Join([]string{basePath, "pdf"}, ".")
+} */

@@ -11,7 +11,6 @@ import (
 // TimbreFiscalDigital10 Versión 1.0 del complemento TimbreFiscalDigital.
 // Solo aplica para versión Comprobante 3.2.
 type TimbreFiscalDigital10 struct {
-	XMLName xml.Name `xml:"TimbreFiscalDigital"`
 	// Debería siempre estar fijo a 1.0
 	Version string `xml:"version,attr" bson:"Version"`
 	Uuid    string `xml:"UUID,attr" bson:"Uuid"`

@@ -9,9 +9,8 @@ import (
 
 type CartaPorte31 struct {
 	// Attr
-	XMLName xml.Name `xml:"CartaPorte"`
-	Version string   `xml:"Version,attr" bson:"Version"`
-	IdCcp   string   `xml:"IdCCP,attr" bson:"IdCcp"`
+	Version string `xml:"Version,attr" bson:"Version"`
+	IdCcp   string `xml:"IdCCP,attr" bson:"IdCcp"`
 
 	TransporteInternacional   string `xml:"TranspInternac,attr" bson:"TransporteInternacional"`
 	EsTransporteInternacional bool   `bson:"EsTransporteInternacional"`

@@ -1,248 +1,244 @@
 {
-	"XMLName": {
-		"Space": "",
-		"Local": "CartaPorte"
-	},
-	"Version": "2.0",
-	"TransporteInternacional": "Si",
-	"EsTransporteInternacional": true,
-	"EntradaSalidaMercancia": "Salida",
-	"PaisOrigenDestino": "MEX",
-	"ViaEntradaSalida": "T1",
-	"TotalDistanciaRecorrida": 120.5,
-	"Ubicaciones": [
-		{
-			"TipoUbicacion": "Origen",
-			"IdUbicacion": "OR123456",
-			"RfcRemitenteDestinatario": "XAXX010101000",
-			"NombreRemitenteDestinatario": "Empresa Origen",
-			"NumRegIdTrib": "IdTrib1",
-			"ResidenciaFiscal": "ResidenciaFisc1",
-			"NoEstacion": "1",
-			"NombreEstacion": "Estacion1",
-			"NavegacionTrafico": "Trafico1",
-			"FechaHoraSalidaLlegadaString": "2024-09-23T12:30:00",
-			"FechaHoraSalidaLlegada": "2024-09-23T12:30:00Z",
-			"TipoEstacion": "Tipo1",
-			"DistanciaRecorrida": 100.5,
-			"Domicilio": {
-				"Calle": "Avenida Principal",
-				"NoExterior": "123",
-				"NoInterior": "A",
-				"Colonia": "Centro",
-				"Localidad": "Ciudad Ejemplo",
-				"Referencia": "Cerca de la Plaza Central",
-				"Municipio": "Municipio Ejemplo",
-				"Estado": "Estado Ejemplo",
-				"Pais": "MEX",
-				"CodigoPostal": "12345"
-			}
-		},
-		{
-			"TipoUbicacion": "Origen",
-			"IdUbicacion": "OR123456",
-			"RfcRemitenteDestinatario": "XAXX010101000",
-			"NombreRemitenteDestinatario": "Empresa Origen",
-			"NumRegIdTrib": "IdTrib2",
-			"ResidenciaFiscal": "ResidenciaFisc2",
-			"NoEstacion": "2",
-			"NombreEstacion": "Estacion2",
-			"NavegacionTrafico": "Trafico2",
-			"FechaHoraSalidaLlegadaString": "2024-09-23T12:30:00",
-			"FechaHoraSalidaLlegada": "2024-09-23T12:30:00Z",
-			"TipoEstacion": "Tipo2",
-			"DistanciaRecorrida": 100.5,
-			"Domicilio": {
-				"Calle": "Avenida Principal",
-				"NoExterior": "123",
-				"NoInterior": "A",
-				"Colonia": "Centro",
-				"Localidad": "Ciudad Ejemplo",
-				"Referencia": "Cerca de la Plaza Central",
-				"Municipio": "Municipio Ejemplo",
-				"Estado": "Estado Ejemplo",
-				"Pais": "MEX",
-				"CodigoPostal": "12345"
-			}
-		}
-	],
-	"Mercancias": {
-		"PesoBrutoTotal": 1500.25,
-		"UnidadPeso": "KGM",
-		"PesoNetoTotal": 1400,
-		"NumeroTotalMercancias": 10,
-		"CargoPorTasacion": 100,
-		"Mercancia": [
-			{
-				"BienesTransportados": "12345678",
-				"ClaveSTCC": "123456",
-				"Descripcion": "Electrodomésticos de cocina",
-				"Cantidad": 10,
-				"ClaveUnidad": "E48",
-				"Unidad": "Cajas",
-				"Dimensiones": "30/40/30cm",
-				"MaterialPeligroso": "No",
-				"EsMaterialPeligroso": false,
-				"ClaveMaterialPeligroso": "No",
-				"Embalaje": "Si",
-				"DescripcionEmbalaje": "Tipo1",
-				"PesoKg": 25.5,
-				"ValorMercancia": 1500,
-				"Moneda": "MXN",
-				"FraccionArancelaria": "1234.56",
-				"UuidComercioExterior": "550e8400-e29b-41d4-a716-446655440000",
-				"Pedimentos": [
-					{
-						"Pedimento": "230112345678901"
-					}
-				],
-				"GuiasIdentificacion": [
-					{
-						"Numero": "1234567890",
-						"Descripcion": "Paquete de libros de texto",
-						"Peso": 2.5
-					}
-				],
-				"CantidadTransporta": [
-					{
-						"Cantidad": 100.5,
-						"IdOrigen": "OR123456",
-						"IdDestino": "DE654321",
-						"ClavesTransporte": "TRK"
-					}
-				],
-				"DetalleMercancia": {
-					"UnidadPeso": "MTR",
-					"PesoBruto": 1500.5,
-					"PesoNeto": 1400.2,
-					"PesoTara": 100.3,
-					"NumeroPiezas": 10
-				}
-			}
-		],
-		"Autotransporte": {
-			"PermisoSct": "PERM001",
-			"NoPermisoSct": "NUMPERM12345",
-			"IdentificacionVehicular": {
-				"ConfiguracionVehicular": "ClaveConfig123",
-				"PlacaVm": "ABC1234",
-				"AnioModeloVm": "2020"
-			},
-			"Seguros": {
-				"AseguradoraResponsabilidadCivil": "Aseguradora XYZ",
-				"PolizaResponsabilidadCivil": "POL123456",
-				"AseguradoraMedioAmbiente": "Aseguradora ABC",
-				"PolizaMedioAmbiente": "POLMED789",
-				"AseguradoraCarga": "Aseguradora DEF",
-				"PolizaCarga": "POLCARG456",
-				"PrimaSeguro": 1500
-			},
-			"Remolques": [
-				{
-					"Subtipo": "REM01",
-					"Placa": "ABC1234"
-				}
-			]
-		},
-		"TransporteMaritimo": {
-			"PermisoSct": "PERM002",
-			"NoPermisoSct": "987654",
-			"NombreAseguradora": "Aseguradora ABC",
-			"NoPolizaSeguro": "POL987654",
-			"TipoEmbarcacion": "TIPO001",
-			"Matricula": "MATRICULA123",
-			"NoOmi": "IMO1234567",
-			"AnioEmbarcacion": "2010",
-			"NombreEmbarcacion": "Embarcación XYZ",
-			"NacionalidadEmbarcacion": "MX",
-			"UnidadesArqueoBruto": 250.5,
-			"TipoCarga": "CARGA001",
-			"NumCertITC": "CERT123",
-			"Eslora": 30,
-			"Manga": 8.5,
-			"Calado": 5,
-			"LineaNaviera": "Naviera 123",
-			"NombreAgenteNaviero": "Agente Naviero ABC",
-			"NoAutorizacionNaviero": "AUTH123",
-			"NoViaje": "TRIP001",
-			"NoConocimientoEmbarque": "CONOC123",
-			"Contenedor": [
-				{
-					"Matricula": "ABC1234567D",
-					"Tipo": "CONT001",
-					"NoPrecinto": "PRECINT001"
-				}
-			]
-		},
-		"TransporteAereo": {
-			"PermSct": "PERM001",
-			"NoPermisoSct": "123456",
-			"MatriculaAeronave": "ABC-123",
-			"NombreAseguradora": "Aseguradora XYZ",
-			"NoPolizaSeguro": "POL123456",
-			"NoGuia": "GUIDE123456789",
-			"LugarContrato": "Ciudad de México",
-			"CodigoTransportista": "CODE001",
-			"RfcEmbarcador": "RFC123456789",
-			"NumRegIdTribEmbarcador": "REG123456",
-			"ResidenciaFiscalEmbarcador": "MX",
-			"NombreEmbarcador": "Embarcador S.A. de C.V."
-		},
-		"TransporteFerroviario": {
-			"TipoServicio": "01",
-			"TipoTrafico": "A",
-			"NombreAseguradora": "Aseguradora Ejemplo",
-			"NoPolizaSeguro": "POL123456",
-			"DerechoPaso": [
-				{
-					"Tipo": "DERECHO001",
-					"KilometrajePagado": 15.5
-				}
-			],
-			"Carro": [
-				{
-					"Tipo": "01",
-					"Matricula": "CAR12345",
-					"Guia": "GUIA123",
-					"ToneladasNetas": 15.5,
-					"Contenedor": [
-						{
-							"Tipo": "CTN001",
-							"PesoContenedorVacio": 2.5,
-							"PesoNetoMercancia": 13
-						}
-					]
-				}
-			]
-		}
-	},
-	"FiguraTransporte": {
-		"TiposFigura": [
-			{
-				"Tipo": "Figura1",
-				"Rfc": "RFCFigura1",
-				"NoLicencia": "12456",
-				"Nombre": "Nombre1",
-				"NumRegIdTrib": "IdTrib1",
-				"ResidenciaFiscal": "Residencia1",
-				"PartesTransporte": [
-					{
-						"Parte": "Vehículo"
-					}
-				],
-				"Domicilio": {
-					"Calle": "Avenida Principal",
-					"NoExterior": "123",
-					"NoInterior": "A",
-					"Colonia": "Centro",
-					"Localidad": "Ciudad Ejemplo",
-					"Referencia": "Cerca de la Plaza Central",
-					"Municipio": "Municipio Ejemplo",
-					"Estado": "Estado Ejemplo",
-					"Pais": "MEX",
-					"CodigoPostal": "12345"
-				}
-			}
-		]
-	}
+    "Version": "2.0",
+    "TransporteInternacional": "Si",
+    "EsTransporteInternacional": true,
+    "EntradaSalidaMercancia": "Salida",
+    "PaisOrigenDestino": "MEX",
+    "ViaEntradaSalida": "T1",
+    "TotalDistanciaRecorrida": 120.5,
+    "Ubicaciones": [
+        {
+            "TipoUbicacion": "Origen",
+            "IdUbicacion": "OR123456",
+            "RfcRemitenteDestinatario": "XAXX010101000",
+            "NombreRemitenteDestinatario": "Empresa Origen",
+            "NumRegIdTrib": "IdTrib1",
+            "ResidenciaFiscal": "ResidenciaFisc1",
+            "NoEstacion": "1",
+            "NombreEstacion": "Estacion1",
+            "NavegacionTrafico": "Trafico1",
+            "FechaHoraSalidaLlegadaString": "2024-09-23T12:30:00",
+            "FechaHoraSalidaLlegada": "2024-09-23T12:30:00Z",
+            "TipoEstacion": "Tipo1",
+            "DistanciaRecorrida": 100.5,
+            "Domicilio": {
+                "Calle": "Avenida Principal",
+                "NoExterior": "123",
+                "NoInterior": "A",
+                "Colonia": "Centro",
+                "Localidad": "Ciudad Ejemplo",
+                "Referencia": "Cerca de la Plaza Central",
+                "Municipio": "Municipio Ejemplo",
+                "Estado": "Estado Ejemplo",
+                "Pais": "MEX",
+                "CodigoPostal": "12345"
+            }
+        },
+        {
+            "TipoUbicacion": "Origen",
+            "IdUbicacion": "OR123456",
+            "RfcRemitenteDestinatario": "XAXX010101000",
+            "NombreRemitenteDestinatario": "Empresa Origen",
+            "NumRegIdTrib": "IdTrib2",
+            "ResidenciaFiscal": "ResidenciaFisc2",
+            "NoEstacion": "2",
+            "NombreEstacion": "Estacion2",
+            "NavegacionTrafico": "Trafico2",
+            "FechaHoraSalidaLlegadaString": "2024-09-23T12:30:00",
+            "FechaHoraSalidaLlegada": "2024-09-23T12:30:00Z",
+            "TipoEstacion": "Tipo2",
+            "DistanciaRecorrida": 100.5,
+            "Domicilio": {
+                "Calle": "Avenida Principal",
+                "NoExterior": "123",
+                "NoInterior": "A",
+                "Colonia": "Centro",
+                "Localidad": "Ciudad Ejemplo",
+                "Referencia": "Cerca de la Plaza Central",
+                "Municipio": "Municipio Ejemplo",
+                "Estado": "Estado Ejemplo",
+                "Pais": "MEX",
+                "CodigoPostal": "12345"
+            }
+        }
+    ],
+    "Mercancias": {
+        "PesoBrutoTotal": 1500.25,
+        "UnidadPeso": "KGM",
+        "PesoNetoTotal": 1400,
+        "NumeroTotalMercancias": 10,
+        "CargoPorTasacion": 100,
+        "Mercancia": [
+            {
+                "BienesTransportados": "12345678",
+                "ClaveSTCC": "123456",
+                "Descripcion": "Electrodomésticos de cocina",
+                "Cantidad": 10,
+                "ClaveUnidad": "E48",
+                "Unidad": "Cajas",
+                "Dimensiones": "30/40/30cm",
+                "MaterialPeligroso": "No",
+                "EsMaterialPeligroso": false,
+                "ClaveMaterialPeligroso": "No",
+                "Embalaje": "Si",
+                "DescripcionEmbalaje": "Tipo1",
+                "PesoKg": 25.5,
+                "ValorMercancia": 1500,
+                "Moneda": "MXN",
+                "FraccionArancelaria": "1234.56",
+                "UuidComercioExterior": "550e8400-e29b-41d4-a716-446655440000",
+                "Pedimentos": [
+                    {
+                        "Pedimento": "230112345678901"
+                    }
+                ],
+                "GuiasIdentificacion": [
+                    {
+                        "Numero": "1234567890",
+                        "Descripcion": "Paquete de libros de texto",
+                        "Peso": 2.5
+                    }
+                ],
+                "CantidadTransporta": [
+                    {
+                        "Cantidad": 100.5,
+                        "IdOrigen": "OR123456",
+                        "IdDestino": "DE654321",
+                        "ClavesTransporte": "TRK"
+                    }
+                ],
+                "DetalleMercancia": {
+                    "UnidadPeso": "MTR",
+                    "PesoBruto": 1500.5,
+                    "PesoNeto": 1400.2,
+                    "PesoTara": 100.3,
+                    "NumeroPiezas": 10
+                }
+            }
+        ],
+        "Autotransporte": {
+            "PermisoSct": "PERM001",
+            "NoPermisoSct": "NUMPERM12345",
+            "IdentificacionVehicular": {
+                "ConfiguracionVehicular": "ClaveConfig123",
+                "PlacaVm": "ABC1234",
+                "AnioModeloVm": "2020"
+            },
+            "Seguros": {
+                "AseguradoraResponsabilidadCivil": "Aseguradora XYZ",
+                "PolizaResponsabilidadCivil": "POL123456",
+                "AseguradoraMedioAmbiente": "Aseguradora ABC",
+                "PolizaMedioAmbiente": "POLMED789",
+                "AseguradoraCarga": "Aseguradora DEF",
+                "PolizaCarga": "POLCARG456",
+                "PrimaSeguro": 1500
+            },
+            "Remolques": [
+                {
+                    "Subtipo": "REM01",
+                    "Placa": "ABC1234"
+                }
+            ]
+        },
+        "TransporteMaritimo": {
+            "PermisoSct": "PERM002",
+            "NoPermisoSct": "987654",
+            "NombreAseguradora": "Aseguradora ABC",
+            "NoPolizaSeguro": "POL987654",
+            "TipoEmbarcacion": "TIPO001",
+            "Matricula": "MATRICULA123",
+            "NoOmi": "IMO1234567",
+            "AnioEmbarcacion": "2010",
+            "NombreEmbarcacion": "Embarcación XYZ",
+            "NacionalidadEmbarcacion": "MX",
+            "UnidadesArqueoBruto": 250.5,
+            "TipoCarga": "CARGA001",
+            "NumCertITC": "CERT123",
+            "Eslora": 30,
+            "Manga": 8.5,
+            "Calado": 5,
+            "LineaNaviera": "Naviera 123",
+            "NombreAgenteNaviero": "Agente Naviero ABC",
+            "NoAutorizacionNaviero": "AUTH123",
+            "NoViaje": "TRIP001",
+            "NoConocimientoEmbarque": "CONOC123",
+            "Contenedor": [
+                {
+                    "Matricula": "ABC1234567D",
+                    "Tipo": "CONT001",
+                    "NoPrecinto": "PRECINT001"
+                }
+            ]
+        },
+        "TransporteAereo": {
+            "PermSct": "PERM001",
+            "NoPermisoSct": "123456",
+            "MatriculaAeronave": "ABC-123",
+            "NombreAseguradora": "Aseguradora XYZ",
+            "NoPolizaSeguro": "POL123456",
+            "NoGuia": "GUIDE123456789",
+            "LugarContrato": "Ciudad de México",
+            "CodigoTransportista": "CODE001",
+            "RfcEmbarcador": "RFC123456789",
+            "NumRegIdTribEmbarcador": "REG123456",
+            "ResidenciaFiscalEmbarcador": "MX",
+            "NombreEmbarcador": "Embarcador S.A. de C.V."
+        },
+        "TransporteFerroviario": {
+            "TipoServicio": "01",
+            "TipoTrafico": "A",
+            "NombreAseguradora": "Aseguradora Ejemplo",
+            "NoPolizaSeguro": "POL123456",
+            "DerechoPaso": [
+                {
+                    "Tipo": "DERECHO001",
+                    "KilometrajePagado": 15.5
+                }
+            ],
+            "Carro": [
+                {
+                    "Tipo": "01",
+                    "Matricula": "CAR12345",
+                    "Guia": "GUIA123",
+                    "ToneladasNetas": 15.5,
+                    "Contenedor": [
+                        {
+                            "Tipo": "CTN001",
+                            "PesoContenedorVacio": 2.5,
+                            "PesoNetoMercancia": 13
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "FiguraTransporte": {
+        "TiposFigura": [
+            {
+                "Tipo": "Figura1",
+                "Rfc": "RFCFigura1",
+                "NoLicencia": "12456",
+                "Nombre": "Nombre1",
+                "NumRegIdTrib": "IdTrib1",
+                "ResidenciaFiscal": "Residencia1",
+                "PartesTransporte": [
+                    {
+                        "Parte": "Vehículo"
+                    }
+                ],
+                "Domicilio": {
+                    "Calle": "Avenida Principal",
+                    "NoExterior": "123",
+                    "NoInterior": "A",
+                    "Colonia": "Centro",
+                    "Localidad": "Ciudad Ejemplo",
+                    "Referencia": "Cerca de la Plaza Central",
+                    "Municipio": "Municipio Ejemplo",
+                    "Estado": "Estado Ejemplo",
+                    "Pais": "MEX",
+                    "CodigoPostal": "12345"
+                }
+            }
+        ]
+    }
 }

@@ -2,9 +2,9 @@ package retenciones
 
 import (
 	"encoding/xml"
-	"fmt"
 	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
 	date "github.com/SaulEnriqueMR/kore-models/models/helpers"
+	"strconv"
 	"strings"
 )
 
@@ -118,8 +118,8 @@ func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 }
 
 func (c Retenciones20) GetBasePath() string {
-	year := fmt.Sprint(c.FechaEmision.Year())
-	month := fmt.Sprint(int(c.FechaEmision.Month()))
+	year := c.FechaEmision.Year()
+	month := c.FechaEmision.Month()
 	sb := strings.Builder{}
 	sb.WriteString(c.Emisor.Rfc)
 	sb.WriteString("/")
@@ -131,9 +131,9 @@ func (c Retenciones20) GetBasePath() string {
 		sb.WriteString(*c.Receptor.Extranjero.NumRegIdTrib)
 		sb.WriteString("/")
 	}
-	sb.WriteString(year)
+	sb.WriteString(strconv.Itoa(year))
 	sb.WriteString("/")
-	sb.WriteString(month)
+	sb.WriteString(strconv.Itoa(int(month)))
 	sb.WriteString("/")
 	sb.WriteString(c.Uuid)
 	return sb.String()

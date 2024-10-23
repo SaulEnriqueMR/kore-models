@@ -146,12 +146,7 @@
             "Percentage": "0.00"
         }
     },
-    "ShipmentDetail": {
-        "XMLName": {
-            "Space": "http://www.sat.gob.mx/detallista",
-            "Local": "shipmentDetail"
-        }
-    },
+    "ShipmentDetail": {},
     "AllowanceCharge": [
         {
             "AllowanceChargeType": "ALLOWANCE_GLOBAL",

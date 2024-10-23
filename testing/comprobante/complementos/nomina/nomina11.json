@@ -22,7 +22,7 @@
     "TipoContrato": "Sindicalizado",
     "TipoJornada": "Diurna",
     "PeriodicidadPago": "Quincenal",
-    "SalarioBaseCotApor": 10000,
+    "SalarioBaseCotizacion": 10000,
     "RiesgoPuesto": 1,
     "SalarioDiarioIntegrado": 500,
     "Percepciones": [

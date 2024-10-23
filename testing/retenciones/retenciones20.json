@@ -4,6 +4,9 @@
     "FechaTimbrado": "2024-04-29T10:46:30Z",
     "CadenaOriginal": "",
     "Comprobante": false,
+    "Transaccion": "",
+    "XmlPath": "",
+    "PdfPath": "",
     "Version": "2.0",
     "Folio": "9",
     "Sello": "bG3OOBPprTCS9TJXLvRl4",
@@ -623,10 +626,6 @@
         },
         "TimbreFiscalDigital": {
             "TimbreFiscalDigital11": {
-                "XMLName": {
-                    "Space": "http://www.sat.gob.mx/TimbreFiscalDigital",
-                    "Local": "TimbreFiscalDigital"
-                },
                 "Version": "1.1",
                 "Uuid": "3ea43e97-71bf-4ac5-a28e-9374ea9f8b45",
                 "Fecha": "2024-04-29T10:46:30",
@@ -638,10 +637,6 @@
                 "SelloSat": "QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"
             },
             "TimbreFiscalDigital10": {
-                "XMLName": {
-                    "Space": "http://www.sat.gob.mx/TimbreFiscalDigital",
-                    "Local": "TimbreFiscalDigital"
-                },
                 "Version": "1.0",
                 "Uuid": "3ea43e97-71bf-4ac5-a28e-9374ea9f8b45",
                 "Fecha": "2024-04-29T10:46:30",

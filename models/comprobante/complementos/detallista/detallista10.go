@@ -175,7 +175,6 @@ type DiscountPayment struct {
 }
 
 type ShipmentDetail struct {
-	XMLName xml.Name `xml:"shipmentDetail"`
 }
 
 type AllowanceCharge struct {

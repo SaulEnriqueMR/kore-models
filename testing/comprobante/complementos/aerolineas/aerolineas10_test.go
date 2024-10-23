@@ -3,7 +3,6 @@ package complementoconcepto
 import (
 	"encoding/json"
 	"encoding/xml"
-	"log"
 	"os"
 	"testing"
 
@@ -53,9 +52,6 @@ func InternalTestFullCargoAero11(t *testing.T, cargo []aerolineas10.CargoAero10)
 }
 
 func GenerateJSONFromXMLAerolineas10(namefile string, data aerolineas10.Aerolineas10) {
-	jsonData, err := json.MarshalIndent(data, "", "	")
-	err = os.WriteFile(namefile, jsonData, 0644)
-	if err != nil {
-		log.Println(err)
-	}
+	jsonData, _ := json.MarshalIndent(data, "", "	")
+	_ = os.WriteFile(namefile, jsonData, 0644)
 }

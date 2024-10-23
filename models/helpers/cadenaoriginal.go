@@ -30,7 +30,7 @@ var ignoreMap = map[string]struct{}{
 	"Sello":                  {},
 	"Certificado":            {},
 	"NoCertificado":          {},
-	"XMLName":                {},
+	"XmlName":                {},
 	"SelloCfd":               {},
 	"NoCertificadoSat":       {},
 	"SelloSat":               {},

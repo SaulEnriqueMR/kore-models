@@ -1,8 +1,4 @@
 {
-	"XMLName": {
-		"Space": "http://www.sat.gob.mx/iedu",
-		"Local": "instEducativas"
-	},
 	"Version": "1.0",
 	"NombreAlumno": "Francisco Hernandez",
 	"Curp": "BAHF840120HOCTRR04",

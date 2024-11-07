@@ -1,4 +1,4 @@
-package testing
+package helpers
 
 import (
 	comprobante2 "github.com/SaulEnriqueMR/kore-models/models/comprobante"

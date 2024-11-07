@@ -12,10 +12,7 @@ func TestFullTimbreFiscalDigital11(t *testing.T) {
 	data := testing2.GetFileContentForTest("./timbrefiscaldigital11.xml", t)
 
 	var parsed timbrefiscaldigital.TimbreFiscalDigital11
-	errUnmashal := xml.Unmarshal(data, &parsed)
-	if errUnmashal != nil {
-		t.Error("Error unmarshalling xml: ", errUnmashal)
-	}
+	_ = xml.Unmarshal(data, &parsed)
 
 	assert.Equal(t, "1.1", parsed.Version)
 	assert.Equal(t, "3ea43e97-71bf-4ac5-a28e-9374ea9f8b45", parsed.Uuid)

@@ -10,9 +10,12 @@ type DocumentoFiscalDigital struct {
 	FechaTimbrado        time.Time             `bson:"FechaTimbrado"`
 	Vigente              *bool                 `bson:"Vigente,omitempty" json:"Vigente,omitempty"`
 	CadenaOriginal       string                `bson:"CadenaOriginal"`
-	InformacionAdicional *InformacionAdicional `xml:"InformacionAdicional" bson:"InformacionAdicional,omitempty" json:"InformacionAdicional,omitempty"`
-	Cancelacion          *Cancelacion          `xml:"Cancelacion" bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
+	InformacionAdicional *InformacionAdicional `bson:"InformacionAdicional,omitempty" json:"InformacionAdicional,omitempty"`
+	Cancelacion          *Cancelacion          `bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
 	Comprobante          bool                  `bson:"Comprobante"`
+	Transaccion          string                `bson:"Transaccion"`
+	XmlPath              string                `bson:"XmlPath"`
+	PdfPath              string                `bson:"PdfPath"`
 }
 
 type InformacionAdicional struct {

@@ -11,7 +11,6 @@ import (
 // TimbreFiscalDigital11 Versión 1.1 del complemento TimbreFiscalDigital.
 // Aplica para versión Comprobante 3.3 y 4.0.
 type TimbreFiscalDigital11 struct {
-	XMLName xml.Name `xml:"TimbreFiscalDigital"`
 	// Debería siempre estar fijo a 1.0
 	Version string `xml:"Version,attr" bson:"Version"`
 	Uuid    string `xml:"UUID,attr" bson:"Uuid"`
@@ -22,9 +21,9 @@ type TimbreFiscalDigital11 struct {
 	// PAC que provee el certificado
 	RfcProvCertif    string  `xml:"RfcProvCertif,attr" bson:"RfcProvCertif"`
 	Leyenda          *string `xml:"Leyenda,attr" bson:"Leyenda,omitempty"`
-	SelloCfd         string  `xml:"SelloCFD,attr" bson:"SelloCFD"`
-	NoCertificadoSat string  `xml:"NoCertificadoSAT,attr" bson:"NoCertificadoSAT"`
-	SelloSat         string  `xml:"SelloSAT,attr" bson:"SelloSAT"`
+	SelloCfd         string  `xml:"SelloCFD,attr" bson:"SelloCfd"`
+	NoCertificadoSat string  `xml:"NoCertificadoSAT,attr" bson:"NoCertificadoSat"`
+	SelloSat         string  `xml:"SelloSAT,attr" bson:"SelloSat"`
 }
 
 func (t *TimbreFiscalDigital11) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

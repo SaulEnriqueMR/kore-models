@@ -47,7 +47,7 @@ func InternalTestBaseAttributes(t *testing.T, nomina nomina11.Nomina11) {
 	assert.Equal(t, "Analista Financiero", *nomina.Puesto)
 	assert.Equal(t, "Sindicalizado", *nomina.TipoContrato)
 	assert.Equal(t, "Diurna", *nomina.TipoJornada)
-	assert.Equal(t, 10000.00, *nomina.SalarioBaseCotApor)
+	assert.Equal(t, 10000.00, *nomina.SalarioBaseCotizacion)
 	assert.Equal(t, 1, *nomina.RiesgoPuesto)
 	assert.Equal(t, 500.0, *nomina.SalarioDiarioIntegrado)
 }

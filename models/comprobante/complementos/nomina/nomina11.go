@@ -32,7 +32,7 @@ type Nomina11 struct {
 	TipoContrato                     *string                 `xml:"TipoContrato,attr" bson:"TipoContrato,omitempty"`
 	TipoJornada                      *string                 `xml:"TipoJornada,attr" bson:"TipoJornada,omitempty"`
 	PeriodicidadPago                 string                  `xml:"PeriodicidadPago,attr" bson:"PeriodicidadPago"`
-	SalarioBaseCotApor               *float64                `xml:"SalarioBaseCotApor,attr" bson:"SalarioBaseCotApor,omitempty"`
+	SalarioBaseCotizacion            *float64                `xml:"SalarioBaseCotApor,attr" bson:"SalarioBaseCotizacion,omitempty"`
 	RiesgoPuesto                     *int                    `xml:"RiesgoPuesto,attr" bson:"RiesgoPuesto,omitempty"`
 	SalarioDiarioIntegrado           *float64                `xml:"SalarioDiarioIntegrado,attr" bson:"SalarioDiarioIntegrado,omitempty"`
 	Percepciones                     *[]PercepcionesNomina11 `xml:"Percepciones" bson:"Percepciones,omitempty"`

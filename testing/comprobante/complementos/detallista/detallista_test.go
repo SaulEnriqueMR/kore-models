@@ -107,7 +107,6 @@ func InternalDeliveryNote(t *testing.T, delivery detallista10.DeliveryNote) {
 	references := delivery.ReferenceIdentification
 	assert.NotNil(t, references)
 	assert.Equal(t, len(references), 2)
-	log.Println(references)
 	reference := (references)[1]
 	assert.Equal(t, "0000002", reference)
 }

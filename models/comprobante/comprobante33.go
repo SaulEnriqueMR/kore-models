@@ -32,23 +32,33 @@ type Comprobante33 struct {
 	CfdisRelacionados                             *CfdiRelacionados33 `xml:"CfdiRelacionados" bson:"CfdisRelacionados,omitempty"`
 	Emisor                                        Emisor33            `xml:"Emisor" bson:"Emisor"`
 	Receptor                                      Receptor33          `xml:"Receptor" bson:"Receptor"`
+	RfcProvCertif                                 string              `bson:"RfcProvCertif"`
 	Conceptos                                     []Concepto33        `xml:"Conceptos>Concepto" bson:"Conceptos"`
 	Impuestos                                     *Impuestos33        `xml:"Impuestos" bson:"Impuestos,omitempty"`
 	Complemento                                   *Complemento        `xml:"Complemento" bson:"Complemento,omitempty"`
 }
 
+func (c *Comprobante33) DefineTransaccion(rfc string) {
+	if c.Emisor.Rfc == rfc {
+		c.Transaccion = "EMITIDO"
+	}
+	if c.Receptor.Rfc == rfc {
+		c.Transaccion = "RECIBIDO"
+	}
+}
+
 type CfdiRelacionados33 struct {
-	TipoRelacion    string              `xml:"TipoRelacion,attr" bson:"TipoRelacion"`
-	CfdiRelacionado []CfdiRelacionado33 `xml:"CfdiRelacionado" bson:"CfdiRelacionado"`
+	TipoRelacion     string              `xml:"TipoRelacion,attr" bson:"TipoRelacion"`
+	UuidRelacionados []CfdiRelacionado33 `xml:"CfdiRelacionado" bson:"UuidRelacionados"`
 }
 
 type CfdiRelacionado33 struct {
-	UUID string `xml:"UUID,attr" bson:"Uuid"`
+	Uuid string `xml:"UUID,attr" bson:"Uuid"`
 }
 
 type Emisor33 struct {
-	Rfc           string  `xml:"Rfc,attr" bson:"Rfc"`                 // Cifrado
-	Nombre        *string `xml:"Nombre,attr" bson:"Nombre,omitempty"` // Cifrado
+	Rfc           string  `xml:"Rfc,attr" bson:"Rfc"`
+	Nombre        *string `xml:"Nombre,attr" bson:"Nombre,omitempty"`
 	RegimenFiscal string  `xml:"RegimenFiscal,attr" bson:"RegimenFiscal"`
 }
 
@@ -169,8 +179,13 @@ func (c *Comprobante33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		if tfd != nil {
 			c.FechaTimbrado = tfd.FechaTimbrado
 			c.Uuid = strings.ToUpper(tfd.Uuid)
+			rfcProvCertif := tfd.RfcProvCertif
+			if len(rfcProvCertif) > 0 {
+				c.RfcProvCertif = rfcProvCertif
+			}
 		}
 	}
+	c.CadenaOriginal = helpers.CreateCadenaOriginal(*c)
 
 	return nil
 }
@@ -180,3 +195,25 @@ func (c *Comprobante33) GetFileName() string {
 	month := fmt.Sprint(int(c.FechaEmision.Month()))
 	return c.Emisor.Rfc + "/" + c.Receptor.Rfc + "/" + year + "/" + month + "/" + c.Uuid + ".xml"
 }
+
+func (c Comprobante33) GetBasePath() string {
+	year := fmt.Sprint(c.FechaEmision.Year())
+	month := fmt.Sprint(int(c.FechaEmision.Month()))
+	sb := strings.Builder{}
+	sb.WriteString(c.Emisor.Rfc)
+	sb.WriteString("/")
+	sb.WriteString(c.Receptor.Rfc)
+	sb.WriteString("/")
+	sb.WriteString(year)
+	sb.WriteString("/")
+	sb.WriteString(month)
+	sb.WriteString("/")
+	sb.WriteString(c.Uuid)
+	return sb.String()
+}
+
+/* func (c *Comprobante33) SetFilePaths() {
+	basePath := c.GetBasePath()
+	c.XmlPath = strings.Join([]string{basePath, "xml"}, ".")
+	c.PdfPath = strings.Join([]string{basePath, "pdf"}, ".")
+} */

@@ -10,7 +10,7 @@ import (
 // Nomina12 Presente en Comprobante 3.3 y 4.0
 type Nomina12 struct {
 	Version                string                 `xml:"Version,attr" bson:"Version"`
-	TipoNomina             string                 `xml:"TipoNomina,attr" bson:"Tipo"`
+	TipoNomina             string                 `xml:"TipoNomina,attr" bson:"TipoNomina"`
 	FechaPagoString        string                 `xml:"FechaPago,attr"`
 	FechaPago              time.Time              `bson:"FechaPago"`
 	FechaInicialPagoString string                 `xml:"FechaInicialPago,attr"`

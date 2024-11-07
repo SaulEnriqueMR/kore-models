@@ -54,7 +54,7 @@ func InternalTestFullAtributesCfdiRelacionados(t *testing.T, relacionados33 comp
 	assert.NotNil(t, relacionados33)
 	assert.Equal(t, "01", relacionados33.TipoRelacion)
 	//Prueba del atributo UUID del nodo CfdiRelacionado
-	assert.Equal(t, "123e4567-e89b-12d3-a456-426614174000", relacionados33.CfdiRelacionado[0].UUID)
+	assert.Equal(t, "123e4567-e89b-12d3-a456-426614174000", relacionados33.UuidRelacionados[0].Uuid)
 }
 
 func InternalTestFullAtributesEmisorComprobante33(t *testing.T, emisor33 comprobante3.Emisor33) {
@@ -169,4 +169,22 @@ func InternalTestFullAtributesComplemento33(t *testing.T, complemento33 comproba
 	assert.Equal(t, "IVA", trasladosLocales[0].Impuesto)
 	assert.Equal(t, 16.00, trasladosLocales[0].Tasa)
 	assert.Equal(t, 3000.00, trasladosLocales[0].Importe)
+}
+
+func TestEmitidaRecibida33(t *testing.T) {
+	comprobante33, _ := GetComprobante33ForTest("./comprobante33_emitido-recibido.xml", t)
+
+	rfcEmitido := "ABC123456789"
+	comprobante33.DefineTransaccion(rfcEmitido)
+	assert.Equal(t, "EMITIDO", comprobante33.Transaccion)
+
+	rfcRecibido := "DEF123456789"
+	comprobante33.DefineTransaccion(rfcRecibido)
+	assert.Equal(t, "RECIBIDO", comprobante33.Transaccion)
+}
+
+func TestBasePath33(t *testing.T) {
+	comprobante33, _ := GetComprobante33ForTest("./comprobante33.xml", t)
+
+	assert.Equal(t, comprobante33.GetFileName(), comprobante33.GetBasePath()+".xml")
 }

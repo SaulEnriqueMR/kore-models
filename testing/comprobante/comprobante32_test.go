@@ -10,7 +10,7 @@ import (
 	"testing"
 )
 
-func GestComprobante32ForTest(filename string, t *testing.T) (comprobante2.Comprobante32, error) {
+func GetComprobante32ForTest(filename string, t *testing.T) (comprobante2.Comprobante32, error) {
 	data := testing2.GetFileContentForTest(filename, t)
 	var parsed comprobante2.Comprobante32
 	errUnmarshal := xml.Unmarshal(data, &parsed)
@@ -20,7 +20,7 @@ func GestComprobante32ForTest(filename string, t *testing.T) (comprobante2.Compr
 }
 
 func TestComprobante32(t *testing.T) {
-	comprobante32, _ := GestComprobante32ForTest("./comprobante32.xml", t)
+	comprobante32, _ := GetComprobante32ForTest("./comprobante32.xml", t)
 	InternalTestFullAtributesComprobante32(t, comprobante32)
 	InternalTestFullAtributesEmisorComprobante32(t, comprobante32.Emisor)
 	InternalTestFullAtributesReceptor32(t, comprobante32.Receptor)
@@ -48,10 +48,10 @@ func InternalTestFullAtributesComprobante32(t *testing.T, comprobante32 comproba
 	assert.Equal(t, "Transferencia bancaria", comprobante32.MetodoPago)
 	assert.Equal(t, "Ciudad de México", comprobante32.LugarExpedicion)
 	assert.Equal(t, "1234", *comprobante32.NumeroCuentaPago)
-	assert.Equal(t, "ABC123456", *comprobante32.FolioFiscalOrig)
-	assert.Equal(t, "A1", *comprobante32.SerieFolioFiscalOrig)
-	assert.Equal(t, "2023-09-23T12:00:00", *comprobante32.FechaFolioFiscalOrig)
-	assert.Equal(t, "1000.00", *comprobante32.MontoFolioFiscalOrig)
+	assert.Equal(t, "ABC123456", *comprobante32.FolioFiscalOriginal)
+	assert.Equal(t, "A1", *comprobante32.SerieFolioFiscalOriginal)
+	assert.Equal(t, "2023-09-23T12:00:00", *comprobante32.FechaFolioFiscalOriginal)
+	assert.Equal(t, "1000.00", *comprobante32.MontoFolioFiscalOriginal)
 }
 
 func InternalTestFullAtributesEmisorComprobante32(t *testing.T, emisor32 comprobante2.Emisor32) {
@@ -170,4 +170,22 @@ func InternalTestFullAtributesRetenciones32(t *testing.T, retenciones32 []compro
 	assert.Equal(t, 1, len(retenciones32))
 	assert.Equal(t, "IEPS", retenciones32[0].Impuesto)
 	assert.Equal(t, 10500.00, retenciones32[0].Importe)
+}
+
+func TestEmitidaRecibida32(t *testing.T) {
+	comprobante32, _ := GetComprobante32ForTest("./comprobante32_emitido-recibido.xml", t)
+
+	rfcEmitido := "ABC123456789"
+	comprobante32.DefineTransaccion(rfcEmitido)
+	assert.Equal(t, "EMITIDO", comprobante32.Transaccion)
+
+	rfcRecibido := "DEF123456789"
+	comprobante32.DefineTransaccion(rfcRecibido)
+	assert.Equal(t, "RECIBIDO", comprobante32.Transaccion)
+}
+
+func TestBasePath32(t *testing.T) {
+	comprobante32, _ := GetComprobante32ForTest("./comprobante32.xml", t)
+
+	assert.Equal(t, comprobante32.GetFileName(), comprobante32.GetBasePath()+".xml")
 }

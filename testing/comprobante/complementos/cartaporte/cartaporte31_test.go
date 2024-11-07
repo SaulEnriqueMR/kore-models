@@ -2,7 +2,6 @@ package cartaporte
 
 import (
 	"encoding/xml"
-	"log"
 	"testing"
 
 	cartaporte1 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/cartaporte"
@@ -246,7 +245,6 @@ func InternalTestContenedorMatirimo(t *testing.T, contenedores *[]cartaporte1.Co
 	assert.NotNil(t, contenedores)
 	assert.Equal(t, len(*contenedores), 2)
 	contenedor := (*contenedores)[0]
-	log.Println(contenedor)
 	assert.Equal(t, "ContenedorTipo1", contenedor.Tipo)
 	assert.Equal(t, "ABCD1234567", *contenedor.Matricula)
 	assert.Equal(t, "PREC12345", *contenedor.NoPrecinto)

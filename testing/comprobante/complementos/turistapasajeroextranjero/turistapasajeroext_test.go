@@ -34,7 +34,6 @@ func InternalTestBase(t *testing.T, turista turispasajextra1.TuristaPasajeroExtr
 	isoDate, _ := time.Parse(IsoDatetimeLayout, "2024-09-19T14:30:00")
 	//Comparar fecha ISO creada con la fecha ISO creada con el Unmarshal
 	assert.Equal(t, isoDate, turista.FechaTransito)
-	print(turista.FechaTransito.String())
 	assert.Equal(t, "Arribo", turista.TipoTransito)
 	InternalTestTuristaPasajeroExtranjero(t, turista.DatosTransito)
 }

@@ -12,15 +12,15 @@ import (
 // Solo aplica para versión Comprobante 3.2.
 type TimbreFiscalDigital10 struct {
 	// Debería siempre estar fijo a 1.0
-	Version string `xml:"version,attr" bson:"Version"`
-	Uuid    string `xml:"UUID,attr" bson:"Uuid"`
+	Version string `xml:"version,attr" bson:"Version" json:"Version"`
+	Uuid    string `xml:"UUID,attr" bson:"Uuid" json:"Uuid"`
 	// Extracción a nivel string, debe convertise después para poder ser filtrable
-	Fecha string `xml:"FechaTimbrado,attr"`
+	Fecha string `xml:"FechaTimbrado,attr" json:"Fecha"`
 	// Conversión de campo XML FechaTimbrado
-	FechaTimbrado    time.Time `bson:"FechaTimbrado"`
-	SelloCfd         string    `xml:"selloCFD,attr" bson:"SelloCfd"`
-	NoCertificadoSat string    `xml:"noCertificadoSAT,attr" bson:"NoCertificadoSat"`
-	SelloSat         string    `xml:"selloSAT,attr" bson:"SelloSat"`
+	FechaTimbrado    time.Time `bson:"FechaTimbrado" json:"FechaTimbrado"`
+	SelloCfd         string    `xml:"selloCFD,attr" bson:"SelloCfd" json:"SelloCfd"`
+	NoCertificadoSat string    `xml:"noCertificadoSAT,attr" bson:"NoCertificadoSat" json:"NoCertificadoSat"`
+	SelloSat         string    `xml:"selloSAT,attr" bson:"SelloSat" json:"SelloSat"`
 }
 
 func (t *TimbreFiscalDigital10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

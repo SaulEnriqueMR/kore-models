@@ -60,7 +60,7 @@ type Complemento struct {
 	Nomina                         *nomina.Nomina                                       `xml:"Nomina" bson:"Nomina,omitempty"`
 	NotariosPublicos               *notariospublicos.NotariosPublicos                   `xml:"NotariosPublicos" bson:"NotariosPublicos,omitempty"`
 	Pagos                          *pagos.Pagos                                         `xml:"Pagos" bson:"Pagos,omitempty"`
-	TimbreFiscalDigital            *timbrefiscaldigital.TimbreFiscalDigital             `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty"`
+	TimbreFiscalDigital            *timbrefiscaldigital.TimbreFiscalDigital             `xml:"TimbreFiscalDigital" bson:"TimbreFiscalDigital,omitempty" json:"TimbreFiscalDigital"`
 	ObrasAntiguedades              *obrasantiguedades.ObrasAntiguedades                 `xml:"obrasarteantiguedades" bson:"ObrasArteAntiguedaes,omitempty"`
 	PagoEnEspecie                  *pagoespecie.PagoEnEspecie                           `xml:"PagoEnEspecie" bson:"PagoEnEspecie,omitempty"`
 	ParcialesConstruccion          *parcialesconstruccion.ParcialesConstruccion         `xml:"parcialesconstruccion" bson:"parcialesconstruccion,omitempty"`

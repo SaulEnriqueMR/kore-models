@@ -6,8 +6,8 @@ import (
 )
 
 type TimbreFiscalDigital struct {
-	TimbreFiscalDigital11 *TimbreFiscalDigital11 `bson:"TimbreFiscalDigital11,omitempty"`
-	TimbreFiscalDigital10 *TimbreFiscalDigital10 `bson:"TimbreFiscalDigital10,omitempty"`
+	TimbreFiscalDigital11 *TimbreFiscalDigital11 `bson:"TimbreFiscalDigital11,omitempty" json:"TimbreFiscalDigital11"`
+	TimbreFiscalDigital10 *TimbreFiscalDigital10 `bson:"TimbreFiscalDigital10,omitempty" json:"TimbreFiscalDigital10"`
 }
 
 func (t *TimbreFiscalDigital) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

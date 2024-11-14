@@ -270,10 +270,6 @@
                 "InstitucionesEducativas": {
                     "InstitucioneEducativas10": [
                         {
-                            "XMLName": {
-                                "Space": "",
-                                "Local": "instEducativas"
-                            },
                             "Version": "1.0",
                             "NombreAlumno": "Francisco Hernandez",
                             "Curp": "BAHF840120HOCTRR04",
@@ -282,10 +278,6 @@
                             "RfcPago": "XAXX010101333"
                         },
                         {
-                            "XMLName": {
-                                "Space": "",
-                                "Local": "instEducativas"
-                            },
                             "Version": "1.0",
                             "NombreAlumno": "Francisco Hernandez",
                             "Curp": "BAHF840120HOCTRR04",
@@ -294,10 +286,6 @@
                             "RfcPago": "XAXX010101333"
                         },
                         {
-                            "XMLName": {
-                                "Space": "",
-                                "Local": "instEducativas"
-                            },
                             "Version": "1.0",
                             "NombreAlumno": "Francisco Hernandez",
                             "Curp": "BAHF840120HOCTRR04",
@@ -461,10 +449,6 @@
         "CartaPorte": {
             "CartaPorte20": [
                 {
-                    "XMLName": {
-                        "Space": "",
-                        "Local": "CartaPorte"
-                    },
                     "Version": "2.0",
                     "TransporteInternacional": "Si",
                     "EsTransporteInternacional": true,
@@ -709,10 +693,6 @@
                     }
                 },
                 {
-                    "XMLName": {
-                        "Space": "",
-                        "Local": "CartaPorte"
-                    },
                     "Version": "2.0",
                     "TransporteInternacional": "Si",
                     "EsTransporteInternacional": true,
@@ -959,10 +939,6 @@
             ],
             "CartaPorte30": [
                 {
-                    "XMLName": {
-                        "Space": "",
-                        "Local": "CartaPorte"
-                    },
                     "Version": "3.0",
                     "IdCcp": "CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12",
                     "TransporteInternacional": "Sí",
@@ -1415,10 +1391,6 @@
                     }
                 },
                 {
-                    "XMLName": {
-                        "Space": "",
-                        "Local": "CartaPorte"
-                    },
                     "Version": "3.0",
                     "IdCcp": "CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12",
                     "TransporteInternacional": "Sí",
@@ -1873,10 +1845,6 @@
             ],
             "CartaPorte31": [
                 {
-                    "XMLName": {
-                        "Space": "",
-                        "Local": "CartaPorte"
-                    },
                     "Version": "3.1",
                     "IdCcp": "CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12",
                     "TransporteInternacional": "Sí",
@@ -2351,10 +2319,6 @@
                     }
                 },
                 {
-                    "XMLName": {
-                        "Space": "",
-                        "Local": "CartaPorte"
-                    },
                     "Version": "3.1",
                     "IdCcp": "CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12",
                     "TransporteInternacional": "Sí",
@@ -4292,12 +4256,7 @@
                             "Percentage": "0.00"
                         }
                     },
-                    "ShipmentDetail": {
-                        "XMLName": {
-                            "Space": "http://www.sat.gob.mx/detallista",
-                            "Local": "shipmentDetail"
-                        }
-                    },
+                    "ShipmentDetail": {},
                     "AllowanceCharge": [
                         {
                             "AllowanceChargeType": "ALLOWANCE_GLOBAL",
@@ -4573,12 +4532,7 @@
                             "Percentage": "0.00"
                         }
                     },
-                    "ShipmentDetail": {
-                        "XMLName": {
-                            "Space": "http://www.sat.gob.mx/detallista",
-                            "Local": "shipmentDetail"
-                        }
-                    },
+                    "ShipmentDetail": {},
                     "AllowanceCharge": [
                         {
                             "AllowanceChargeType": "ALLOWANCE_GLOBAL",
@@ -4854,12 +4808,7 @@
                             "Percentage": "0.00"
                         }
                     },
-                    "ShipmentDetail": {
-                        "XMLName": {
-                            "Space": "http://www.sat.gob.mx/detallista",
-                            "Local": "shipmentDetail"
-                        }
-                    },
+                    "ShipmentDetail": {},
                     "AllowanceCharge": [
                         {
                             "AllowanceChargeType": "ALLOWANCE_GLOBAL",
@@ -6628,10 +6577,6 @@
         },
         "TimbreFiscalDigital": {
             "TimbreFiscalDigital11": {
-                "XMLName": {
-                    "Space": "http://www.sat.gob.mx/TimbreFiscalDigital",
-                    "Local": "TimbreFiscalDigital"
-                },
                 "Version": "1.1",
                 "Uuid": "3ea43e97-71bf-4ac5-a28e-9374ea9f8b45",
                 "Fecha": "2024-04-29T10:46:30",
@@ -6643,10 +6588,6 @@
                 "SelloSat": "QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"
             },
             "TimbreFiscalDigital10": {
-                "XMLName": {
-                    "Space": "http://www.sat.gob.mx/TimbreFiscalDigital",
-                    "Local": "TimbreFiscalDigital"
-                },
                 "Version": "1.0",
                 "Uuid": "3ea43e97-71bf-4ac5-a28e-9374ea9f8b45",
                 "Fecha": "2024-04-29T10:46:30",

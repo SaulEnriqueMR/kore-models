@@ -199,6 +199,10 @@ func (c *Comprobante40) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		if tfd != nil {
 			c.FechaTimbrado = tfd.FechaTimbrado
 			c.Uuid = strings.ToUpper(tfd.Uuid)
+			rfcProvCertif := tfd.RfcProvCertif
+			if len(rfcProvCertif) > 0 {
+				c.RfcProvCertif = rfcProvCertif
+			}
 		}
 	}
 

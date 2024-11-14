@@ -34,6 +34,7 @@ type Comprobante40 struct {
 	CfdisRelacionados                             *[]CfdisRelacionados40 `xml:"CfdiRelacionados" bson:"CfdisRelacionados,omitempty" json:"CfdisRelacionados"`
 	Emisor                                        Emisor40               `xml:"Emisor" bson:"Emisor" json:"Emisor"`
 	Receptor                                      Receptor40             `xml:"Receptor" bson:"Receptor" json:"Receptor"`
+	RfcProvCertif                                 string                 `bson:"RfcProvCertif"`
 	Conceptos                                     []Concepto40           `xml:"Conceptos>Concepto" bson:"Conceptos" json:"Conceptos"`
 	Impuestos                                     *Impuestos40           `xml:"Impuestos" bson:"Impuestos,omitempty" json:"Impuestos"`
 	Complemento                                   Complemento            `xml:"Complemento" bson:"Complemento" json:"Complemento"`
@@ -60,7 +61,7 @@ type CfdisRelacionados40 struct {
 }
 
 type UuidRelacionado40 struct {
-	UUID string `xml:"UUID,attr" bson:"Uuid" json:"UUID"`
+	Uuid string `xml:"UUID,attr" bson:"Uuid" json:"UUID"`
 }
 
 type Emisor40 struct {
@@ -201,6 +202,7 @@ func (c *Comprobante40) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		}
 	}
 
+	c.CadenaOriginal = helpers.CreateCadenaOriginal(*c)
 	return nil
 }
 
@@ -209,3 +211,25 @@ func (c *Comprobante40) GetFileName() string {
 	month := fmt.Sprint(int(c.FechaEmision.Month()))
 	return c.Emisor.Rfc + "/" + c.Receptor.Rfc + "/" + year + "/" + month + "/" + c.Uuid + ".xml"
 }
+
+func (c Comprobante40) GetBasePath() string {
+	year := fmt.Sprint(c.FechaEmision.Year())
+	month := fmt.Sprint(int(c.FechaEmision.Month()))
+	sb := strings.Builder{}
+	sb.WriteString(c.Emisor.Rfc)
+	sb.WriteString("/")
+	sb.WriteString(c.Receptor.Rfc)
+	sb.WriteString("/")
+	sb.WriteString(year)
+	sb.WriteString("/")
+	sb.WriteString(month)
+	sb.WriteString("/")
+	sb.WriteString(c.Uuid)
+	return sb.String()
+}
+
+/* func (c *Comprobante40) SetFilePaths() {
+	basePath := c.GetBasePath()
+	c.XmlPath = strings.Join([]string{basePath, "xml"}, ".")
+	c.PdfPath = strings.Join([]string{basePath, "pdf"}, ".")
+} */

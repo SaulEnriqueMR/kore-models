@@ -52,10 +52,8 @@ func InternalTestBaseAttributes(t *testing.T, nomina nomina11.Nomina11) {
 	assert.Equal(t, 500.0, *nomina.SalarioDiarioIntegrado)
 }
 
-func InternalTestPercepciones(t *testing.T, nomina *[]nomina11.PercepcionesNomina11) {
-	assert.NotNil(t, nomina)
-	assert.Equal(t, len(*nomina), 1)
-	percepciones := (*nomina)[0]
+func InternalTestPercepciones(t *testing.T, percepciones *nomina11.PercepcionesNomina11) {
+	assert.NotNil(t, percepciones)
 	assert.Equal(t, 1000.00, percepciones.TotalExento)
 	assert.Equal(t, 15000.00, percepciones.TotalGravado)
 	InternalTestPercepcion(t, percepciones.Percepcion)
@@ -73,10 +71,8 @@ func InternalTestPercepcion(t *testing.T, percepciones []nomina11.PercepcionNomi
 
 }
 
-func InternalTestDeducciones(t *testing.T, nomina *[]nomina11.DeduccionesNomina11) {
-	assert.NotNil(t, nomina)
-	assert.Equal(t, len(*nomina), 1)
-	deducciones := (*nomina)[0]
+func InternalTestDeducciones(t *testing.T, deducciones *nomina11.DeduccionesNomina11) {
+	assert.NotNil(t, deducciones)
 	assert.Equal(t, 0.00, deducciones.TotalExento)
 	assert.Equal(t, 500.00, deducciones.TotalGravado)
 	InternalTestDeduccion(t, &deducciones.Deduccion)
@@ -93,19 +89,15 @@ func InternalTestDeduccion(t *testing.T, deduccion *[]nomina11.DeduccionNomina11
 	assert.Equal(t, "ISR", deduccion1.Concepto)
 }
 
-func InternalTestIncapacidad(t *testing.T, nomina *[]nomina11.IncapacidadNomina11) {
-	assert.NotNil(t, nomina)
-	assert.Equal(t, len(*nomina), 2)
-	nomina1 := (*nomina)[0]
-	assert.Equal(t, 2.00, nomina1.Dias)
-	assert.Equal(t, 001, nomina1.Tipo)
-	assert.Equal(t, 200.0, nomina1.Descuento)
+func InternalTestIncapacidad(t *testing.T, incapacidad *nomina11.IncapacidadNomina11) {
+	assert.NotNil(t, incapacidad)
+	assert.Equal(t, 2.00, incapacidad.Dias)
+	assert.Equal(t, 001, incapacidad.Tipo)
+	assert.Equal(t, 200.0, incapacidad.Descuento)
 }
 
-func InternalTestHorasExtra(t *testing.T, nomina *[]nomina11.HorasExtraNomina11) {
-	assert.NotNil(t, nomina)
-	assert.Len(t, *nomina, 2)
-	horaExtra := (*nomina)[0]
+func InternalTestHorasExtra(t *testing.T, horaExtra *nomina11.HorasExtraNomina11) {
+	assert.NotNil(t, horaExtra)
 	assert.Equal(t, 1, horaExtra.Dias)
 	assert.Equal(t, "Dobles", horaExtra.TipoHoras)
 	assert.Equal(t, 2, horaExtra.HorasExtra)

@@ -25,74 +25,55 @@
     "SalarioBaseCotizacion": 10000,
     "RiesgoPuesto": 1,
     "SalarioDiarioIntegrado": 500,
-    "Percepciones": [
-        {
-            "TotalGravado": 15000,
-            "TotalExento": 1000,
-            "Percepcion": [
-                {
-                    "TipoPercepcion": 1,
-                    "Clave": "001",
-                    "Concepto": "Sueldo Base",
-                    "ImporteGravado": 15000,
-                    "ImporteExento": 1000
-                },
-                {
-                    "TipoPercepcion": 1,
-                    "Clave": "001",
-                    "Concepto": "Sueldo Base",
-                    "ImporteGravado": 15000,
-                    "ImporteExento": 1000
-                }
-            ]
-        }
-    ],
-    "Deducciones": [
-        {
-            "TotalGravado": 500,
-            "TotalExento": 0,
-            "Deduccion": [
-                {
-                    "TipoDeduccion": 1,
-                    "Clave": "001",
-                    "Concepto": "ISR",
-                    "ImporteGravado": 500,
-                    "ImporteExento": 0
-                },
-                {
-                    "TipoDeduccion": 1,
-                    "Clave": "001",
-                    "Concepto": "ISR",
-                    "ImporteGravado": 500,
-                    "ImporteExento": 0
-                }
-            ]
-        }
-    ],
-    "Incapacidades": [
-        {
-            "Dias": 2,
-            "Tipo": 1,
-            "Descuento": 200
-        },
-        {
-            "Dias": 2,
-            "Tipo": 1,
-            "Descuento": 200
-        }
-    ],
-    "HorasExtras": [
-        {
-            "Dias": 1,
-            "TipoHoras": "Dobles",
-            "HorasExtra": 2,
-            "ImportePagado": 100
-        },
-        {
-            "Dias": 1,
-            "TipoHoras": "Dobles",
-            "HorasExtra": 2,
-            "ImportePagado": 100
-        }
-    ]
+    "Percepciones": {
+        "TotalGravado": 15000,
+        "TotalExento": 1000,
+        "Percepcion": [
+            {
+                "TipoPercepcion": 1,
+                "Clave": "001",
+                "Concepto": "Sueldo Base",
+                "ImporteGravado": 15000,
+                "ImporteExento": 1000
+            },
+            {
+                "TipoPercepcion": 1,
+                "Clave": "001",
+                "Concepto": "Sueldo Base",
+                "ImporteGravado": 15000,
+                "ImporteExento": 1000
+            }
+        ]
+    },
+    "Deducciones": {
+        "TotalGravado": 500,
+        "TotalExento": 0,
+        "Deduccion": [
+            {
+                "TipoDeduccion": 1,
+                "Clave": "001",
+                "Concepto": "ISR",
+                "ImporteGravado": 500,
+                "ImporteExento": 0
+            },
+            {
+                "TipoDeduccion": 1,
+                "Clave": "001",
+                "Concepto": "ISR",
+                "ImporteGravado": 500,
+                "ImporteExento": 0
+            }
+        ]
+    },
+    "Incapacidades": {
+        "Dias": 2,
+        "Tipo": 1,
+        "Descuento": 200
+    },
+    "HorasExtras": {
+        "Dias": 1,
+        "TipoHoras": "Dobles",
+        "HorasExtra": 2,
+        "ImportePagado": 100
+    }
 }

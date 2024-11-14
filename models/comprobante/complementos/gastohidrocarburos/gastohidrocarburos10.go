@@ -81,11 +81,13 @@ func (iavv10 *DocumentoRelacionadoGastoHidrocar10) UnmarshalXML(d *xml.Decoder, 
 	*iavv10 = DocumentoRelacionadoGastoHidrocar10(aux)
 
 	if iavv10 != nil {
-		fecha, err := helpers.ParseDatetime(*iavv10.FechaFolioFiscalVinculadoString)
-		if err != nil {
-			return err
+		if iavv10.FechaFolioFiscalVinculadoString != nil {
+			fecha, err := helpers.ParseDatetime(*iavv10.FechaFolioFiscalVinculadoString)
+			if err != nil {
+				return err
+			}
+			iavv10.FechaFolioFiscalVinculado = fecha
 		}
-		iavv10.FechaFolioFiscalVinculado = fecha
 	}
 
 	return nil

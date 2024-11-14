@@ -39,6 +39,15 @@ type Comprobante40 struct {
 	Complemento                                   Complemento            `xml:"Complemento" bson:"Complemento" json:"Complemento"`
 }
 
+func (c *Comprobante40) DefineTransaccion(rfc string) {
+	if c.Emisor.Rfc == rfc {
+		c.Transaccion = "EMITIDO"
+	}
+	if c.Receptor.Rfc == rfc {
+		c.Transaccion = "RECIBIDO"
+	}
+}
+
 type InformacionGlobal40 struct {
 	Periodicidad string `xml:"Periodicidad,attr" bson:"Periodicidad" json:"Periodicidad"`
 	Meses        string `xml:"Meses,attr" bson:"Meses" json:"Meses"`

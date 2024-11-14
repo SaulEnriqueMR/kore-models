@@ -97,7 +97,7 @@ type ImpuestosConcepto40 struct {
 
 type TrasladoConcepto40 struct {
 	Base       float64  `xml:"Base,attr" bson:"Base" json:"Base"`
-	Impuesto   string   `xml:"Impuesto,attr" bson:"Impuesto" json:"TipoImpuesto"`
+	Impuesto   string   `xml:"Impuesto,attr" bson:"Impuesto" json:"Impuesto"`
 	TipoFactor string   `xml:"TipoFactor,attr" bson:"TipoFactor" json:"TipoFactor"`
 	TasaOCuota *float64 `xml:"TasaOCuota,attr" bson:"TasaOCuota,omitempty" json:"TasaOCuota"`
 	Importe    *float64 `xml:"Importe,attr" bson:"Importe,omitempty" json:"Importe"`
@@ -105,7 +105,7 @@ type TrasladoConcepto40 struct {
 
 type RetencionConcepto40 struct {
 	Base       float64 `xml:"Base,attr" bson:"Base" json:"Base"`
-	Impuesto   string  `xml:"Impuesto,attr" bson:"Impuesto" json:"TipoImpuesto"`
+	Impuesto   string  `xml:"Impuesto,attr" bson:"Impuesto" json:"Impuesto"`
 	TipoFactor string  `xml:"TipoFactor,attr" bson:"TipoFactor" json:"TipoFactor"`
 	TasaOCuota float64 `xml:"TasaOCuota,attr" bson:"TasaOCuota" json:"TasaOCuota"`
 	Importe    float64 `xml:"Importe,attr" bson:"Importe" json:"Importe"`
@@ -145,13 +145,13 @@ type Impuestos40 struct {
 }
 
 type RetencionImpuestos40 struct {
-	Impuesto string  `xml:"Impuesto,attr" bson:"Impuesto" json:"TipoImpuesto"`
+	Impuesto string  `xml:"Impuesto,attr" bson:"Impuesto" json:"Impuesto"`
 	Importe  float64 `xml:"Importe,attr" bson:"Importe" json:"Importe"`
 }
 
 type TrasladoImpuestos40 struct {
 	Base       float64  `xml:"Base,attr" bson:"Base" json:"Base"`
-	Impuesto   string   `xml:"Impuesto,attr" bson:"Impuesto" json:"TipoImpuesto"`
+	Impuesto   string   `xml:"Impuesto,attr" bson:"Impuesto" json:"Impuesto"`
 	TipoFactor string   `xml:"TipoFactor,attr" bson:"TipoFactor" json:"TipoFactor"`
 	TasaOCuota *float64 `xml:"TasaOCuota,attr" bson:"TasaOCuota,omitempty" json:"TasaOCuota"`
 	Importe    *float64 `xml:"Importe,attr" bson:"Importe,omitempty" json:"Importe"`

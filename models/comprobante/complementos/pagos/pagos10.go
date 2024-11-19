@@ -2,6 +2,7 @@ package pagos
 
 import (
 	"encoding/xml"
+	"strings"
 	"time"
 
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
@@ -81,6 +82,23 @@ func (p *PagoPagos10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 		return err
 	}
 	p.FechaPago = fecha
+
+	return nil
+}
+
+func (dr *DoctoRelacionadoPagos10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias DoctoRelacionadoPagos10
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*dr = DoctoRelacionadoPagos10(aux)
+
+	iddocumento := strings.ToUpper(aux.IdDocumento)
+	dr.IdDocumento = iddocumento
 
 	return nil
 }

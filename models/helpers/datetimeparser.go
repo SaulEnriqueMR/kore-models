@@ -2,7 +2,6 @@ package helpers
 
 import (
 	"errors"
-	"log"
 	"regexp"
 	"strings"
 	"time"
@@ -29,12 +28,10 @@ func ParseDatetime(s string) (time.Time, error) {
 		isoDate, err := time.Parse(IsoDatetimeLayout, trimmedString)
 		return isoDate, err
 	}
-	log.Println("Data: ", s)
 	// En caso de que no, probamos con el RFC3339.
 	patternRFC := regexp.MustCompile(Rfc3339Regex)
 	if patternRFC.MatchString(s) {
 		isoDate, err := time.Parse(Rfc3339DatetimeLayout, trimmedString)
-		log.Println("Data: ", isoDate)
 		return isoDate, err
 	}
 
@@ -42,7 +39,6 @@ func ParseDatetime(s string) (time.Time, error) {
 	layout := time.RFC3339
 	parsedTime, err := time.Parse(layout, trimmedString)
 	if err == nil {
-		log.Println("Data: ", parsedTime)
 		return parsedTime, err
 	}
 

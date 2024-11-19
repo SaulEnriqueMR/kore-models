@@ -39,7 +39,15 @@ func ParseDatetime(s string) (time.Time, error) {
 	layout := time.RFC3339
 	parsedTime, err := time.Parse(layout, trimmedString)
 	if err == nil {
-		return parsedTime, err
+		// return parsedTime, err
+		// Load the Mexico City location
+		location, locErr := time.LoadLocation("America/Mexico_City")
+		if locErr != nil {
+			return time.Time{}, locErr
+		}
+		// Convert the parsed time to the Mexico City location
+		localTime := parsedTime.In(location)
+		return localTime, nil
 	}
 
 	// En caso de que sea rfc3339 nativo de golang

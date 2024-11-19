@@ -2,6 +2,7 @@ package helpers
 
 import (
 	"errors"
+	"log"
 	"regexp"
 	"strings"
 	"time"
@@ -28,26 +29,21 @@ func ParseDatetime(s string) (time.Time, error) {
 		isoDate, err := time.Parse(IsoDatetimeLayout, trimmedString)
 		return isoDate, err
 	}
+	log.Println("Data: ", s)
 	// En caso de que no, probamos con el RFC3339.
 	patternRFC := regexp.MustCompile(Rfc3339Regex)
 	if patternRFC.MatchString(s) {
 		isoDate, err := time.Parse(Rfc3339DatetimeLayout, trimmedString)
+		log.Println("Data: ", isoDate)
 		return isoDate, err
 	}
 
-	// Caso extraordinario Retenciones 1.0. Ejemplo "2019-10-20T16:35:28-06:00"
+	// Caso extraordinario Retenciones 1.0. Ejemplo "2019-10-20T16:35:28-06:00")
 	layout := time.RFC3339
 	parsedTime, err := time.Parse(layout, trimmedString)
 	if err == nil {
-		// return parsedTime, err
-		// Load the Mexico City location
-		location, locErr := time.LoadLocation("America/Mexico_City")
-		if locErr != nil {
-			return time.Time{}, locErr
-		}
-		// Convert the parsed time to the Mexico City location
-		localTime := parsedTime.In(location)
-		return localTime, nil
+		log.Println("Data: ", parsedTime)
+		return parsedTime, err
 	}
 
 	// En caso de que sea rfc3339 nativo de golang

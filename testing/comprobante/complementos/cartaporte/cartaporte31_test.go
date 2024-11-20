@@ -2,6 +2,7 @@ package cartaporte
 
 import (
 	"encoding/xml"
+	"strings"
 	"testing"
 
 	cartaporte1 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/cartaporte"
@@ -26,7 +27,8 @@ func TestFullCartaPorte31(t *testing.T) {
 
 func InternalTestCartaPorte(t *testing.T, carta cartaporte1.CartaPorte31) {
 	assert.Equal(t, "3.1", carta.Version)
-	assert.Equal(t, "CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12", carta.IdCcp)
+	assert.Equal(t, strings.ToUpper("CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12"), carta.IdCcp)
+	assert.Equal(t, "CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12", carta.IdCCP)
 	assert.Equal(t, "Sí", carta.TransporteInternacional)
 	assert.Equal(t, true, carta.EsTransporteInternacional)
 	assert.NotNil(t, carta.EntradaSalidaMercancia)
@@ -135,7 +137,8 @@ func InternalTestMercancia(t *testing.T, mercancias []cartaporte1.MercanciaCarta
 	assert.Equal(t, 1000.00, *mercancia.ValorMercancia)
 	assert.Equal(t, "MXN", *mercancia.Moneda)
 	assert.Equal(t, "123456", *mercancia.FraccionArancelaria)
-	assert.Equal(t, "123e4567-e89b-12d3-a456-426614174000", *mercancia.UuidComercioExterior)
+	assert.Equal(t, "123e4567-e89b-12d3-a456-426614174000", *mercancia.UUIDComercioExt)
+	assert.Equal(t, strings.ToUpper("123e4567-e89b-12d3-a456-426614174000"), *mercancia.UuidComercioExterior)
 	assert.Equal(t, "Producto", *mercancia.TipoMateria)
 	assert.Equal(t, "Tabletas de medicamento", *mercancia.DescripcionMateria)
 	InternalTestDocumentacionAduanera(t, mercancia.DocumentacionAduanera)

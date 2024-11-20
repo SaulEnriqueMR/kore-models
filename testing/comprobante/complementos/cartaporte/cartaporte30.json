@@ -1,6 +1,7 @@
 {
     "Version": "3.0",
-    "IdCcp": "CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12",
+    "IdCCP": "CCCfa34e2-5bcd-4a5f-b8de-66bdeb4a2e12",
+    "IdCcp": "CCCFA34E2-5BCD-4A5F-B8DE-66BDEB4A2E12",
     "TransporteInternacional": "Sí",
     "EsTransporteInternacional": true,
     "RegimenAduanero": "A1",
@@ -129,7 +130,8 @@
                 "ValorMercancia": 1000,
                 "Moneda": "MXN",
                 "FraccionArancelaria": "123456",
-                "UuidComercioExterior": "123e4567-e89b-12d3-a456-426614174000",
+                "UUIDComercioExt": "123e4567-e89b-12d3-a456-426614174000",
+                "UuidComercioExterior": "123E4567-E89B-12D3-A456-426614174000",
                 "TipoMateria": "Producto",
                 "DescripcionMateria": "Tabletas de medicamento",
                 "DocumentacionAduanera": [

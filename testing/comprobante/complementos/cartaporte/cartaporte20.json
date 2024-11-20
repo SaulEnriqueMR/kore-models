@@ -86,7 +86,8 @@
                 "ValorMercancia": 1500,
                 "Moneda": "MXN",
                 "FraccionArancelaria": "1234.56",
-                "UuidComercioExterior": "550e8400-e29b-41d4-a716-446655440000",
+                "UUIDComercioExt": "550e8400-e29b-41d4-a716-446655440000",
+                "UuidComercioExterior": "550E8400-E29B-41D4-A716-446655440000",
                 "Pedimentos": [
                     {
                         "Pedimento": "230112345678901"

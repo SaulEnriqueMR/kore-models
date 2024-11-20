@@ -2,6 +2,7 @@ package cartaporte
 
 import (
 	"encoding/xml"
+	"strings"
 
 	"testing"
 
@@ -125,7 +126,8 @@ func InternalFullTestAtributesMercancia20(t *testing.T, porte20 []cartaporte2.Me
 	assert.Equal(t, 1500.00, *porte20[0].ValorMercancia)
 	assert.Equal(t, "MXN", *porte20[0].Moneda)
 	assert.Equal(t, "1234.56", *porte20[0].FraccionArancelaria)
-	assert.Equal(t, "550e8400-e29b-41d4-a716-446655440000", *porte20[0].UuidComercioExterior)
+	assert.Equal(t, "550e8400-e29b-41d4-a716-446655440000", *porte20[0].UUIDComercioExt)
+	assert.Equal(t, strings.ToUpper("550e8400-e29b-41d4-a716-446655440000"), *porte20[0].UuidComercioExterior)
 	InternalTestFullAtributesPedimentos20(t, *porte20[0].Pedimentos)
 	InternalTestFullAtributesGuiasIdentificacion20(t, *porte20[0].GuiasIdentificacion)
 	InternalTestFullAtributesCantidadTransporta20(t, *porte20[0].CantidadTransporta)

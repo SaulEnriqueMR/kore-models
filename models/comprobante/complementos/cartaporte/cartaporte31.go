@@ -2,32 +2,29 @@ package cartaporte
 
 import (
 	"encoding/xml"
+	"strings"
 	"time"
 
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
 type CartaPorte31 struct {
-	// Attr
-	Version string `xml:"Version,attr" bson:"Version"`
-	IdCcp   string `xml:"IdCCP,attr" bson:"IdCcp"`
-
-	TransporteInternacional   string `xml:"TranspInternac,attr" bson:"TransporteInternacional"`
-	EsTransporteInternacional bool   `bson:"EsTransporteInternacional"`
-
-	EntradaSalidaMercancia  *string  `xml:"EntradaSalidaMerc,attr" bson:"EntradaSalidaMercancia,omitempty"`
-	PaisOrigenDestino       *string  `xml:"PaisOrigenDestino,attr" bson:"PaisOrigenDestino,omitempty"`
-	ViaEntradaSalida        *string  `xml:"ViaEntradaSalida,attr" bson:"ViaEntradaSalida,omitempty"`
-	TotalDistanciaRecorrida *float64 `xml:"TotalDistRec,attr" bson:"TotalDistanciaRecorrida,omitempty"`
-	RegistroIstmo           *string  `xml:"RegistroISTMO,attr" bson:"RegistroIstmo,omitempty"`
-	UbicacionPoloOrigen     *string  `xml:"UbicacionPoloOrigen,attr" bson:"UbicacionPoloOrigen,omitempty"`
-	UbicacionPoloDestino    *string  `xml:"UbicacionPoloDestino,attr" bson:"UbicacionPoloDestino,omitempty"`
-
-	// Nodos
-	RegimenesAduaneros *[]RegimenAduaneroCartaPorte31 `xml:"RegimenesAduaneros>RegimenAduaneroCCP" bson:"RegimenesAduaneros,omitempty"`
-	Ubicaciones        []UbicacionCartaPorte31        `xml:"Ubicaciones>Ubicacion" bson:"Ubicaciones"`
-	Mercancias         MercanciasCartaPorte31         `xml:"Mercancias" bson:"Mercancias"`
-	FiguraTransporte   *FiguraTransporteCartaPorte31  `xml:"FiguraTransporte" bson:"FiguraTransporte,omitempty"`
+	Version                   string                         `xml:"Version,attr" bson:"Version"`
+	IdCCP                     string                         `xml:"IdCCP,attr" bson:"IdCCP"`
+	IdCcp                     string                         `bson:"IdCcp"`
+	TransporteInternacional   string                         `xml:"TranspInternac,attr" bson:"TransporteInternacional"`
+	EsTransporteInternacional bool                           `bson:"EsTransporteInternacional"`
+	EntradaSalidaMercancia    *string                        `xml:"EntradaSalidaMerc,attr" bson:"EntradaSalidaMercancia,omitempty"`
+	PaisOrigenDestino         *string                        `xml:"PaisOrigenDestino,attr" bson:"PaisOrigenDestino,omitempty"`
+	ViaEntradaSalida          *string                        `xml:"ViaEntradaSalida,attr" bson:"ViaEntradaSalida,omitempty"`
+	TotalDistanciaRecorrida   *float64                       `xml:"TotalDistRec,attr" bson:"TotalDistanciaRecorrida,omitempty"`
+	RegistroIstmo             *string                        `xml:"RegistroISTMO,attr" bson:"RegistroIstmo,omitempty"`
+	UbicacionPoloOrigen       *string                        `xml:"UbicacionPoloOrigen,attr" bson:"UbicacionPoloOrigen,omitempty"`
+	UbicacionPoloDestino      *string                        `xml:"UbicacionPoloDestino,attr" bson:"UbicacionPoloDestino,omitempty"`
+	RegimenesAduaneros        *[]RegimenAduaneroCartaPorte31 `xml:"RegimenesAduaneros>RegimenAduaneroCCP" bson:"RegimenesAduaneros,omitempty"`
+	Ubicaciones               []UbicacionCartaPorte31        `xml:"Ubicaciones>Ubicacion" bson:"Ubicaciones"`
+	Mercancias                MercanciasCartaPorte31         `xml:"Mercancias" bson:"Mercancias"`
+	FiguraTransporte          *FiguraTransporteCartaPorte31  `xml:"FiguraTransporte" bson:"FiguraTransporte,omitempty"`
 }
 
 func (ccp *CartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
@@ -42,6 +39,8 @@ func (ccp *CartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElement) er
 	*ccp = CartaPorte31(aux)
 	ccp.EsTransporteInternacional = helpers.ResolveSatBoolean(ccp.TransporteInternacional)
 
+	ccp.IdCcp = strings.ToUpper(aux.IdCCP)
+
 	return nil
 }
 
@@ -50,22 +49,20 @@ type RegimenAduaneroCartaPorte31 struct {
 }
 
 type UbicacionCartaPorte31 struct {
-	// Attr
-	TipoUbicacion                string    `xml:"TipoUbicacion,attr" bson:"TipoUbicacion"`
-	IdUbicacion                  *string   `xml:"IDUbicacion,attr" bson:"IdUbicacion,omitempty"`
-	RfcRemitenteDestinatario     string    `xml:"RFCRemitenteDestinatario,attr" bson:"RfcRemitenteDestinatario"`
-	NombreRemitenteDestinatario  *string   `xml:"NombreRemitenteDestinatario,attr" bson:"NombreRemitenteDestinatario,omitempty"`
-	NumRegIdTrib                 *string   `xml:"NumRegIdTrib,attr" bson:"NumRegIdTrib,omitempty"`
-	ResidenciaFiscal             *string   `xml:"ResidenciaFiscal,attr" bson:"ResidenciaFiscal,omitempty"`
-	NoEstacion                   *string   `xml:"NumEstacion,attr" bson:"NoEstacion,omitempty"`
-	NombreEstacion               *string   `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
-	NavegacionTrafico            *string   `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
-	FechaHoraSalidaLlegadaString string    `xml:"FechaHoraSalidaLlegada,attr" bson:"FechaHoraSalidaLlegadaString"`
-	FechaHoraSalidaLlegada       time.Time `bson:"FechaHoraSalidaLlegada"`
-	TipoEstacion                 *string   `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
-	DistanciaRecorrida           *float64  `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
-	// Nodos
-	Domicilio *DomicilioCartaPorte31 `xml:"Domicilio" bson:"Domicilio,omitempty"`
+	TipoUbicacion                string                 `xml:"TipoUbicacion,attr" bson:"TipoUbicacion"`
+	IdUbicacion                  *string                `xml:"IDUbicacion,attr" bson:"IdUbicacion,omitempty"`
+	RfcRemitenteDestinatario     string                 `xml:"RFCRemitenteDestinatario,attr" bson:"RfcRemitenteDestinatario"`
+	NombreRemitenteDestinatario  *string                `xml:"NombreRemitenteDestinatario,attr" bson:"NombreRemitenteDestinatario,omitempty"`
+	NumRegIdTrib                 *string                `xml:"NumRegIdTrib,attr" bson:"NumRegIdTrib,omitempty"`
+	ResidenciaFiscal             *string                `xml:"ResidenciaFiscal,attr" bson:"ResidenciaFiscal,omitempty"`
+	NoEstacion                   *string                `xml:"NumEstacion,attr" bson:"NoEstacion,omitempty"`
+	NombreEstacion               *string                `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
+	NavegacionTrafico            *string                `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
+	FechaHoraSalidaLlegadaString string                 `xml:"FechaHoraSalidaLlegada,attr" bson:"FechaHoraSalidaLlegadaString"`
+	FechaHoraSalidaLlegada       time.Time              `bson:"FechaHoraSalidaLlegada"`
+	TipoEstacion                 *string                `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
+	DistanciaRecorrida           *float64               `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
+	Domicilio                    *DomicilioCartaPorte31 `xml:"Domicilio" bson:"Domicilio,omitempty"`
 }
 
 func (u *UbicacionCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
@@ -154,7 +151,8 @@ type MercanciaCartaPorte31 struct {
 	ValorMercancia                         *float64   `xml:"ValorMercancia,attr" bson:"ValorMercancia,omitempty"`
 	Moneda                                 *string    `xml:"Moneda,attr" bson:"Moneda,omitempty"`
 	FraccionArancelaria                    *string    `xml:"FraccionArancelaria,attr" bson:"FraccionArancelaria,omitempty"`
-	UuidComercioExterior                   *string    `xml:"UUIDComercioExt,attr" bson:"UuidComercioExterior,omitempty"`
+	UUIDComercioExt                        *string    `xml:"UUIDComercioExt,attr" bson:"UUIDComercioExt,omitempty"`
+	UuidComercioExterior                   *string    `bson:"UuidComercioExterior,omitempty"`
 	TipoMateria                            *string    `xml:"TipoMateria,attr" bson:"TipoMateria,omitempty"`
 	DescripcionMateria                     *string    `xml:"DescripcionMateria,attr" bson:"DescripcionMateria,omitempty"`
 	// Nodos
@@ -183,6 +181,10 @@ func (m *MercanciaCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 		if errFecha == nil {
 			m.FechaCaducidad = &fecha
 		}
+	}
+	if m.UUIDComercioExt != nil && *m.UUIDComercioExt != "" {
+		uuidComercioExterior := strings.ToUpper(*m.UUIDComercioExt)
+		m.UuidComercioExterior = &uuidComercioExterior
 	}
 	return nil
 }

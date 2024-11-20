@@ -15,7 +15,7 @@ type Nomina12 struct {
 	FechaPago              time.Time              `bson:"FechaPago"`
 	FechaInicialPagoString string                 `xml:"FechaInicialPago,attr" bson:"FechaInicialPagoString"`
 	FechaInicialPago       time.Time              `bson:"FechaInicialPago"`
-	FechaFinalPagoString   string                 `xml:"FechaFinalPago,attr" bson:"FechaFinalPago"`
+	FechaFinalPagoString   string                 `xml:"FechaFinalPago,attr" bson:"FechaFinalPagoString"`
 	FechaFinalPago         time.Time              `bson:"FechaFinalPago"`
 	NumeroDiasPagados      float64                `xml:"NumDiasPagados,attr" bson:"NumeroDiasPagados"`
 	TotalPercepciones      *float64               `xml:"TotalPercepciones,attr" bson:"TotalPercepciones,omitempty"`

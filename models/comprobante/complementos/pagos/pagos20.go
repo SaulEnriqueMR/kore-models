@@ -29,7 +29,7 @@ type TotalesPagos20 struct {
 }
 
 type PagoPagos20 struct {
-	FechaPagoString                string                    `xml:"FechaPago,attr" bson:"FechaPago"`
+	FechaPagoString                string                    `xml:"FechaPago,attr" bson:"FechaPagoString"`
 	FechaPago                      time.Time                 `bson:"FechaPago"`
 	FormaPago                      string                    `xml:"FormaDePagoP,attr" bson:"FormaPago"`
 	Moneda                         string                    `xml:"MonedaP,attr" bson:"Moneda"`

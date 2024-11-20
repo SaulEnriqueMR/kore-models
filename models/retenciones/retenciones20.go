@@ -15,7 +15,7 @@ type Retenciones20 struct {
 	Sello                string                  `xml:"Sello,attr" bson:"Sello"`
 	NoCertificado        string                  `xml:"NoCertificado,attr" bson:"NoCertificado"`
 	Certificado          string                  `xml:"Certificado,attr" bson:"Certificado"`
-	FechaExp             string                  `xml:"FechaExp,attr"`
+	Fecha                string                  `xml:"FechaExp,attr" bson:"Fecha"`
 	LugarExpedicion      string                  `xml:"LugarExpRetenc,attr" bson:"LugarExpedicion"`
 	ClaveRetencion       string                  `xml:"CveRetenc,attr" bson:"ClaveRetencion"`
 	DescripcionRetencion *string                 `xml:"DescRetenc,attr" bson:"DescripcionRetencion,omitempty"`
@@ -38,7 +38,24 @@ func (c *Retenciones20) DefineTransaccion(rfc string) {
 
 type RetencionRelacionada20 struct {
 	TipoRelacion string `xml:"TipoRelacion,attr" bson:"TipoRelacion"`
-	Uuid         string `xml:"UUID,attr" bson:"Uuid"`
+	UUID         string `xml:"UUID,attr" bson:"UUID"`
+	Uuid         string `bson:"Uuid"`
+}
+
+func (rr *RetencionRelacionada20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias RetencionRelacionada20
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+
+	*rr = RetencionRelacionada20(aux)
+	rr.Uuid = strings.ToUpper(aux.UUID)
+	
+	return nil
 }
 
 type Emisor20 struct {
@@ -98,7 +115,7 @@ func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		return err
 	}
 
-	fechaEmision, err := date.ParseDatetime(aux.FechaExp)
+	fechaEmision, err := date.ParseDatetime(aux.Fecha)
 	if err != nil {
 		return err
 	}

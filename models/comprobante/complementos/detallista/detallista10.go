@@ -304,7 +304,7 @@ type ExtendedAttributes struct {
 }
 
 type LotNumber struct {
-	ProductionDateString string    `xml:"productionDate,attr"`
+	ProductionDateString string    `xml:"productionDate,attr" bson:"ProductionDateString"`
 	ProductionDate       time.Time `bson:"ProductionDate"`
 	Value                string    `xml:",chardata" bson:"Value"`
 }

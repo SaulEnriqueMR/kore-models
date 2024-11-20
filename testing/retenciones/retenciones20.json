@@ -12,13 +12,14 @@
     "Sello": "bG3OOBPprTCS9TJXLvRl4",
     "NoCertificado": "30001000000500003416",
     "Certificado": "MIIFsDCCA5igAwIBAgIUMz",
-    "FechaExp": "2024-03-04T00:00:00",
+    "Fecha": "2024-03-04T00:00:00",
     "LugarExpedicion": "45110",
     "ClaveRetencion": "01",
     "DescripcionRetencion": "DESCRIPCION",
     "RetencionRelacionada": {
         "TipoRelacion": "02",
-        "Uuid": "9341a0a9-eade-4c20-9f6e-a58aa5438a6a"
+        "UUID": "9341a0a9-eade-4c20-9f6e-a58aa5438a6a",
+        "Uuid": "9341A0A9-EADE-4C20-9F6E-A58AA5438A6A"
     },
     "Emisor": {
         "Rfc": "EKU9003173C9",
@@ -522,7 +523,7 @@
                             "TipoServicio": "A01",
                             "SubtipoServicio": "B02",
                             "RfcTerceroAutorizado": "ABC123456789",
-                            "FechaServString": "2023-09-23",
+                            "FechaServ": "2023-09-23",
                             "FechaServicio": "2023-09-23T00:00:00-06:00",
                             "PrecioServicioSinIva": 1000,
                             "ImpuestosTrasladadosServicio": {
@@ -561,7 +562,7 @@
                             "TipoServicio": "A01",
                             "SubtipoServicio": "B02",
                             "RfcTerceroAutorizado": "ABC123456789",
-                            "FechaServString": "2023-09-23",
+                            "FechaServ": "2023-09-23",
                             "FechaServicio": "2023-09-23T00:00:00-06:00",
                             "PrecioServicioSinIva": 1000,
                             "ImpuestosTrasladadosServicio": {
@@ -600,7 +601,7 @@
                             "TipoServicio": "A01",
                             "SubtipoServicio": "B02",
                             "RfcTerceroAutorizado": "ABC123456789",
-                            "FechaServString": "2023-09-23",
+                            "FechaServ": "2023-09-23",
                             "FechaServicio": "2023-09-23T00:00:00-06:00",
                             "PrecioServicioSinIva": 1000,
                             "ImpuestosTrasladadosServicio": {

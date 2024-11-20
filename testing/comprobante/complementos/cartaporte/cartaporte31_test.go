@@ -250,7 +250,7 @@ func InternalTestContenedorMatirimo(t *testing.T, contenedores *[]cartaporte1.Co
 	assert.Equal(t, "PREC12345", *contenedor.NoPrecinto)
 	assert.Equal(t, "CCC1234-abcd-5678-efgh-1234567890ab", *contenedor.IdCcpRelacionado)
 	assert.Equal(t, "XYZ123", *contenedor.PlacaVmCcp)
-	assert.Equal(t, "2023-09-20T12:00:00", *contenedor.FechaCertificacionCcpString)
+	assert.Equal(t, "2023-09-20T12:00:00", *contenedor.FechaCertificacionCCP)
 	InternalTestRemolqueCCP(t, contenedor.RemolquesCcp)
 }
 

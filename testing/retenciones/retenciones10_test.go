@@ -28,7 +28,7 @@ func InternalTestFullAttributes10(t *testing.T, r retenciones.Retenciones10) {
 	assert.Equal(t, "RwN+snnlG7o9XzJKvqkAY", r.Sello)
 	assert.Equal(t, "20001000000300022755", r.NoCertificado)
 	assert.Equal(t, "MIIF7TCCA9WgAwIBAgIUMjAw", r.Certificado)
-	assert.Equal(t, "2019-10-20T16:35:28-06:00", r.FechaExp)
+	assert.Equal(t, "2019-10-20T16:35:28-06:00", r.Fecha)
 	assert.Equal(t, "14", r.ClaveRetencion)
 
 	assert.NotNil(t, r.Folio)

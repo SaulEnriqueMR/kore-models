@@ -273,7 +273,7 @@
                     "NoPrecinto": "PREC12345",
                     "IdCcpRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
                     "PlacaVmCcp": "XYZ123",
-                    "FechaCertificacionCcpString": "2023-09-20T12:00:00",
+                    "FechaCertificacionCCP": "2023-09-20T12:00:00",
                     "FechaCertificacionCcp": "2023-09-20T12:00:00-06:00",
                     "RemolquesCcp": [
                         {
@@ -292,7 +292,7 @@
                     "NoPrecinto": "PREC12345",
                     "IdCcpRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
                     "PlacaVmCcp": "XYZ123",
-                    "FechaCertificacionCcpString": "2023-09-20T12:00:00",
+                    "FechaCertificacionCCP": "2023-09-20T12:00:00",
                     "FechaCertificacionCcp": "2023-09-20T12:00:00-06:00",
                     "RemolquesCcp": [
                         {

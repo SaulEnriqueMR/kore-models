@@ -35,7 +35,7 @@ func InternalTestFullAtributesConsumoCombus11(t *testing.T, consumoCombustible11
 
 func InternalTestFullAtributesConceptoConsumoCombus11(t *testing.T, conceptoConsumoCombus11 consumoCombus11.ConceptoConsumoDeCombustibles11) {
 	assert.Equal(t, "0001", conceptoConsumoCombus11.Identificador)
-	assert.Equal(t, "2016-04-08 06:02:00 +0000 UTC", conceptoConsumoCombus11.Fecha.String())
+	assert.Equal(t, "2016-04-08T06:02:00", conceptoConsumoCombus11.FechaString)
 	assert.Equal(t, "XAXX010101000", conceptoConsumoCombus11.Rfc)
 	assert.Equal(t, "111", conceptoConsumoCombus11.ClaveEstacion)
 	assert.Equal(t, float64(1), conceptoConsumoCombus11.Cantidad)

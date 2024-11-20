@@ -25,7 +25,7 @@ type DetallesDelServicioPlatTecno10 struct {
 	TipoServicio                 string                                   `xml:"TipoDeServ,attr" bson:"TipoServicio"`
 	SubtipoServicio              *string                                  `xml:"SubTipServ,attr" bson:"SubtipoServicio"`
 	RfcTerceroAutorizado         *string                                  `xml:"RFCTerceroAutorizado,attr" bson:"RfcTerceroAutorizado,omitempty"`
-	FechaServString              string                                   `xml:"FechaServ,attr"`
+	FechaServ                    string                                   `xml:"FechaServ,attr" bson:"FechaServ"`
 	FechaServicio                time.Time                                `bson:"FechaServicio"`
 	PrecioServicioSinIva         float64                                  `xml:"PrecioServSinIVA,attr" bson:"PrecioServicioSinIva"`
 	ImpuestosTrasladadosServicio ImpuestosTrasladosDelServicioPlatTecno10 `xml:"ImpuestosTrasladadosdelServicio" bson:"ImpuestosTrasladadosServicio,omitempty"`
@@ -63,7 +63,7 @@ func (t *DetallesDelServicioPlatTecno10) UnmarshalXML(d *xml.Decoder, start xml.
 	}
 
 	// Parse the date from the 'Fecha' field
-	fechaServ, err := helpers.ParseDatetime(aux.FechaServString)
+	fechaServ, err := helpers.ParseDatetime(aux.FechaServ)
 	if err != nil {
 		return err
 	}

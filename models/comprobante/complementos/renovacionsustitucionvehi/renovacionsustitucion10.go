@@ -40,7 +40,7 @@ type VehiculosUsados struct {
 	NoFolioTarjetaCirculacion  string     `xml:"NumFolTarjCir,attr" bson:"NoFolioTarjetaCirculacion"`
 	NumeroPedimentoImportacion *string    `xml:"NumPedIm,attr" bson:"NumeroPedimentoImportacion,omitempty"`
 	Aduana                     *string    `xml:"Aduana,attr" bson:"Aduana,omitempty"`
-	FechaRegulVehString        *string    `xml:"FechaRegulVeh,attr"`
+	FechaRegulVeh              *string    `xml:"FechaRegulVeh,attr" bson:"FechaRegulVeh"`
 	FechaRegulacionImportacion *time.Time `bson:"FechaRegulacionImportacion,omitempty"`
 	FolioFiscal                string     `xml:"Foliofiscal,attr" bson:"FolioFiscal"`
 }
@@ -63,8 +63,8 @@ func (c *VehiculosUsados) UnmarshalXML(d *xml.Decoder, start xml.StartElement) e
 	}
 	*c = VehiculosUsados(aux)
 
-	if aux.FechaRegulVehString != nil {
-		fecha, err := helpers.ParseDatetime(*aux.FechaRegulVehString)
+	if aux.FechaRegulVeh != nil {
+		fecha, err := helpers.ParseDatetime(*aux.FechaRegulVeh)
 		if err != nil {
 			return err
 		}

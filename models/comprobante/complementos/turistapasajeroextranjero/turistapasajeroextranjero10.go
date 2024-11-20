@@ -8,7 +8,7 @@ import (
 
 type TuristaPasajeroExtranjero10 struct {
 	Version             string        `xml:"version,attr" bson:"Version"`
-	FechaTransitoString string        `xml:"fechadeTransito,attr"`
+	FechaTransitoString string        `xml:"fechadeTransito,attr" bson:"FechaTransitoString"`
 	FechaTransito       time.Time     `bson:"FechaTransito"`
 	TipoTransito        string        `xml:"tipoTransito,attr" bson:"TipoTransito"`
 	DatosTransito       DatosTransito `xml:"datosTransito" bson:"DatosTransito"`

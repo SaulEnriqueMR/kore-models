@@ -50,7 +50,7 @@ func InternalFullTestAtributesDescInmuebleNotariosPub10(t *testing.T, pub10 []no
 
 func InternalTestFullAtributesDatosOperacionNotariosPub10(t *testing.T, pub10 notariosPub2.DatosOperacionNotariosPub10) {
 	assert.Equal(t, "12345", pub10.NoInstrumentoNotarial)
-	assert.Equal(t, "2014-05-05", pub10.FechaFirmaInstrumentoNotarialString)
+	assert.Equal(t, "2014-05-05", pub10.FechaInstNotarial)
 	assert.Equal(t, 330000.00, pub10.MontoOperacion)
 	assert.Equal(t, 330000.00, pub10.Subtotal)
 	assert.Equal(t, 52800.00, pub10.Iva)

@@ -33,7 +33,7 @@ type InformacionFiscalTerceroTerceros11 struct {
 
 type InformacionAduaneraTerceros11 struct {
 	Numero      string    `xml:"numero,attr" bson:"Numero"`
-	FechaString string    `xml:"fecha,attr"`
+	FechaString string    `xml:"fecha,attr" bson:"FechaString"`
 	Fecha       time.Time `bson:"Fecha"`
 	Aduana      *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
 }

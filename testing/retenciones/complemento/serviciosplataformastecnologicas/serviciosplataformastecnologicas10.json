@@ -15,7 +15,7 @@
             "TipoServicio": "A01",
             "SubtipoServicio": "B02",
             "RfcTerceroAutorizado": "ABC123456789",
-            "FechaServString": "2023-09-23",
+            "FechaServ": "2023-09-23",
             "FechaServicio": "2023-09-23T00:00:00-06:00",
             "PrecioServicioSinIva": 1000,
             "ImpuestosTrasladadosServicio": {

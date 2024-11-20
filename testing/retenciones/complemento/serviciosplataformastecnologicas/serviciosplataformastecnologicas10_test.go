@@ -44,7 +44,7 @@ func InternalTestFullAtributesDetallesDelServicioPlatTecno10(t *testing.T, tecno
 	assert.Equal(t, "A01", tecno10[0].TipoServicio)
 	assert.Equal(t, "B02", *tecno10[0].SubtipoServicio)
 	assert.Equal(t, "ABC123456789", *tecno10[0].RfcTerceroAutorizado)
-	assert.Equal(t, "2023-09-23", tecno10[0].FechaServString)
+	assert.Equal(t, "2023-09-23", tecno10[0].FechaServ)
 	assert.Equal(t, 1000.00, tecno10[0].PrecioServicioSinIva)
 	InternalTestFullAtributesImpuestosTrasladosDelServicioPlatTecno10(t, tecno10[0].ImpuestosTrasladadosServicio)
 	InternalTestFullAtributesContribucionGubernamentalPlatTecno10(t, *tecno10[0].ContribucionGubernamental)

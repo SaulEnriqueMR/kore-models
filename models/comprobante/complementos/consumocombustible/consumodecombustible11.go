@@ -21,7 +21,7 @@ type ConceptosConsumoDeCombus11 struct {
 
 type ConceptoConsumoDeCombustibles11 struct {
 	Identificador     string                        `xml:"identificador,attr" bson:"Identificador"`
-	FechaString       string                        `xml:"fecha,attr"`
+	FechaString       string                        `xml:"fecha,attr" bson:"FechaString"`
 	Fecha             time.Time                     `bson:"Fecha"`
 	Rfc               string                        `xml:"rfc,attr" bson:"Rfc"`
 	ClaveEstacion     string                        `xml:"claveEstacion,attr" bson:"ClaveEstacion"`

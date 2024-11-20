@@ -21,7 +21,7 @@ type ConceptosEstadoDeCuentaCombus11 struct {
 
 type ConceptoEstadoDeCuentaCombustible11 struct {
 	Identificador     string                          `xml:"Identificador,attr" bson:"Identificador"`
-	FechaString       string                          `xml:"Fecha,attr"`
+	FechaString       string                          `xml:"Fecha,attr" bson:"FechaString"`
 	Fecha             time.Time                       `bson:"Fecha"`
 	Rfc               string                          `xml:"Rfc,attr" bson:"Rfc"`
 	ClaveEstacion     string                          `xml:"ClaveEstacion,attr" bson:"ClaveEstacion"`

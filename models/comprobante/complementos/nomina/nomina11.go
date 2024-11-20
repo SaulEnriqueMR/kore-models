@@ -9,36 +9,36 @@ import (
 
 // Nomina11 Presente en Comprobante 3.2 y 3.3
 type Nomina11 struct {
-	Version                          string                `xml:"Version,attr" bson:"Version"`
-	RegistroPatronal                 *string               `xml:"RegistroPatronal,attr" bson:"RegistroPatronal,omitempty"`
-	NoEmpleado                       string                `xml:"NumEmpleado,attr" bson:"NoEmpleado"`
-	Curp                             string                `xml:"CURP,attr" bson:"Curp"`
-	TipoRegimen                      int                   `xml:"TipoRegimen,attr" bson:"TipoRegimen"`
-	NumSeguridadSocial               *string               `xml:"NumSeguridadSocial,attr" bson:"NoSeguridadSocial,omitempty"`
-	FechaPagoString                  string                `xml:"FechaPago,attr"`
-	FechaPago                        time.Time             `bson:"FechaPago"`
-	FechaInicialPagoString           string                `xml:"FechaInicialPago,attr"`
-	FechaInicialPago                 time.Time             `bson:"FechaInicialPago"`
-	FechaFinalPagoString             string                `xml:"FechaFinalPago,attr"`
-	FechaFinalPago                   time.Time             `bson:"FechaFinalPago"`
-	NumerosDiasPagados               float64               `xml:"NumDiasPagados,attr" bson:"NumerosDiasPagados"`
-	Departamento                     *string               `xml:"Departamento,attr" bson:"Departamento,omitempty"`
-	Clabe                            *string               `xml:"CLABE,attr" bson:"Clabe,omitempty"`
-	Banco                            *int                  `xml:"Banco,attr" bson:"Banco,omitempty"`
-	FechaInicioRelacionLaboralString *string               `xml:"FechaInicioRelLaboral,attr"`
-	FechaInicioRelacionLaboral       *time.Time            `bson:"FechaInicioRelacionLaboral,omitempty"`
-	Antiguedad                       *int                  `xml:"Antiguedad,attr" bson:"Antiguedad,omitempty"`
-	Puesto                           *string               `xml:"Puesto,attr" bson:"Puesto,omitempty"`
-	TipoContrato                     *string               `xml:"TipoContrato,attr" bson:"TipoContrato,omitempty"`
-	TipoJornada                      *string               `xml:"TipoJornada,attr" bson:"TipoJornada,omitempty"`
-	PeriodicidadPago                 string                `xml:"PeriodicidadPago,attr" bson:"PeriodicidadPago"`
-	SalarioBaseCotizacion            *float64              `xml:"SalarioBaseCotApor,attr" bson:"SalarioBaseCotizacion,omitempty"`
-	RiesgoPuesto                     *int                  `xml:"RiesgoPuesto,attr" bson:"RiesgoPuesto,omitempty"`
-	SalarioDiarioIntegrado           *float64              `xml:"SalarioDiarioIntegrado,attr" bson:"SalarioDiarioIntegrado,omitempty"`
-	Percepciones                     *PercepcionesNomina11 `xml:"Percepciones" bson:"Percepciones,omitempty"`
-	Deducciones                      *DeduccionesNomina11  `xml:"Deducciones" bson:"Deducciones,omitempty"`
-	Incapacidades                    *IncapacidadNomina11  `xml:"Incapacidades>Incapacidad" bson:"Incapacidades,omitempty"`
-	HorasExtras                      *HorasExtraNomina11   `xml:"HorasExtras>HorasExtra" bson:"HorasExtras,omitempty"`
+	Version                    string                `xml:"Version,attr" bson:"Version"`
+	RegistroPatronal           *string               `xml:"RegistroPatronal,attr" bson:"RegistroPatronal,omitempty"`
+	NoEmpleado                 string                `xml:"NumEmpleado,attr" bson:"NoEmpleado"`
+	Curp                       string                `xml:"CURP,attr" bson:"Curp"`
+	TipoRegimen                int                   `xml:"TipoRegimen,attr" bson:"TipoRegimen"`
+	NumSeguridadSocial         *string               `xml:"NumSeguridadSocial,attr" bson:"NoSeguridadSocial,omitempty"`
+	FechaPagoString            string                `xml:"FechaPago,attr" bson:"FechaPagoString"`
+	FechaPago                  time.Time             `bson:"FechaPago"`
+	FechaInicialPagoString     string                `xml:"FechaInicialPago,attr" bson:"FechaInicialPagoString"`
+	FechaInicialPago           time.Time             `bson:"FechaInicialPago"`
+	FechaFinalPagoString       string                `xml:"FechaFinalPago,attr" bson:"FechaFinalPagoString"`
+	FechaFinalPago             time.Time             `bson:"FechaFinalPago"`
+	NumerosDiasPagados         float64               `xml:"NumDiasPagados,attr" bson:"NumerosDiasPagados"`
+	Departamento               *string               `xml:"Departamento,attr" bson:"Departamento,omitempty"`
+	Clabe                      *string               `xml:"CLABE,attr" bson:"Clabe,omitempty"`
+	Banco                      *int                  `xml:"Banco,attr" bson:"Banco,omitempty"`
+	FechaInicioRelLaboral      *string               `xml:"FechaInicioRelLaboral,attr" bson:"FechaInicioRelLaboral,omitempty"`
+	FechaInicioRelacionLaboral *time.Time            `bson:"FechaInicioRelacionLaboral,omitempty"`
+	Antiguedad                 *int                  `xml:"Antiguedad,attr" bson:"Antiguedad,omitempty"`
+	Puesto                     *string               `xml:"Puesto,attr" bson:"Puesto,omitempty"`
+	TipoContrato               *string               `xml:"TipoContrato,attr" bson:"TipoContrato,omitempty"`
+	TipoJornada                *string               `xml:"TipoJornada,attr" bson:"TipoJornada,omitempty"`
+	PeriodicidadPago           string                `xml:"PeriodicidadPago,attr" bson:"PeriodicidadPago"`
+	SalarioBaseCotizacion      *float64              `xml:"SalarioBaseCotApor,attr" bson:"SalarioBaseCotizacion,omitempty"`
+	RiesgoPuesto               *int                  `xml:"RiesgoPuesto,attr" bson:"RiesgoPuesto,omitempty"`
+	SalarioDiarioIntegrado     *float64              `xml:"SalarioDiarioIntegrado,attr" bson:"SalarioDiarioIntegrado,omitempty"`
+	Percepciones               *PercepcionesNomina11 `xml:"Percepciones" bson:"Percepciones,omitempty"`
+	Deducciones                *DeduccionesNomina11  `xml:"Deducciones" bson:"Deducciones,omitempty"`
+	Incapacidades              *IncapacidadNomina11  `xml:"Incapacidades>Incapacidad" bson:"Incapacidades,omitempty"`
+	HorasExtras                *HorasExtraNomina11   `xml:"HorasExtras>HorasExtra" bson:"HorasExtras,omitempty"`
 }
 
 type PercepcionesNomina11 struct {
@@ -111,8 +111,8 @@ func (n *Nomina11) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 	}
 	n.FechaFinalPago = fecha2
 
-	if aux.FechaInicioRelacionLaboralString != nil {
-		fechaIniRelLab, _ := helpers.ParseDatetime(*aux.FechaInicioRelacionLaboralString)
+	if aux.FechaInicioRelLaboral != nil {
+		fechaIniRelLab, _ := helpers.ParseDatetime(*aux.FechaInicioRelLaboral)
 		n.FechaInicioRelacionLaboral = &fechaIniRelLab
 	}
 

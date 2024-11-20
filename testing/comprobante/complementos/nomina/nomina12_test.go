@@ -61,7 +61,7 @@ func InternalTestReceptor(t *testing.T, receptor nomina12.ReceptorNomina12) {
 	assert.NotNil(t, receptor)
 	assert.Equal(t, "DEF123456HDFGJ01", receptor.Curp)
 	assert.Equal(t, "123456789012345", *receptor.NoSeguridadSocial)
-	assert.Equal(t, "2022-01-01", *receptor.FechaInicioRelacionLaboralString)
+	assert.Equal(t, "2022-01-01", *receptor.FechaInicioRelLaboral)
 	assert.Equal(t, "P1Y2M10D", *receptor.Antiguedad)
 	assert.Equal(t, "01", receptor.TipoContrato)
 	assert.Equal(t, "Sí", *receptor.Sindicalizado)

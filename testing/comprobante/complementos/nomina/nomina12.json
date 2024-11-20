@@ -23,7 +23,7 @@
     "Receptor": {
         "Curp": "DEF123456HDFGJ01",
         "NoSeguridadSocial": "123456789012345",
-        "FechaInicioRelacionLaboralString": "2022-01-01",
+        "FechaInicioRelLaboral": "2022-01-01",
         "FechaInicioRelacionLaboral": "2022-01-01T00:00:00-06:00",
         "Antiguedad": "P1Y2M10D",
         "TipoContrato": "01",

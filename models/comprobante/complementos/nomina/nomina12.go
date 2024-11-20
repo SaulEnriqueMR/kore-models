@@ -11,11 +11,11 @@ import (
 type Nomina12 struct {
 	Version                string                 `xml:"Version,attr" bson:"Version"`
 	TipoNomina             string                 `xml:"TipoNomina,attr" bson:"TipoNomina"`
-	FechaPagoString        string                 `xml:"FechaPago,attr"`
+	FechaPagoString        string                 `xml:"FechaPago,attr" bson:"FechaPagoString"`
 	FechaPago              time.Time              `bson:"FechaPago"`
-	FechaInicialPagoString string                 `xml:"FechaInicialPago,attr"`
+	FechaInicialPagoString string                 `xml:"FechaInicialPago,attr" bson:"FechaInicialPagoString"`
 	FechaInicialPago       time.Time              `bson:"FechaInicialPago"`
-	FechaFinalPagoString   string                 `xml:"FechaFinalPago,attr"`
+	FechaFinalPagoString   string                 `xml:"FechaFinalPago,attr" bson:"FechaFinalPago"`
 	FechaFinalPago         time.Time              `bson:"FechaFinalPago"`
 	NumeroDiasPagados      float64                `xml:"NumDiasPagados,attr" bson:"NumeroDiasPagados"`
 	TotalPercepciones      *float64               `xml:"TotalPercepciones,attr" bson:"TotalPercepciones,omitempty"`
@@ -42,26 +42,26 @@ type EntidadSNCFNomina12 struct {
 }
 
 type ReceptorNomina12 struct {
-	Curp                             string                     `xml:"Curp,attr" bson:"Curp"`                                      // Cifrado
-	NoSeguridadSocial                *string                    `xml:"NumSeguridadSocial,attr" bson:"NoSeguridadSocial,omitempty"` // Cifrado
-	FechaInicioRelacionLaboralString *string                    `xml:"FechaInicioRelLaboral,attr"`
-	FechaInicioRelacionLaboral       *time.Time                 `bson:"FechaInicioRelacionLaboral,omitempty"`
-	Antiguedad                       *string                    `xml:"Antigüedad,attr" bson:"Antiguedad,omitempty"`
-	TipoContrato                     string                     `xml:"TipoContrato,attr" bson:"TipoContrato"`
-	Sindicalizado                    *string                    `xml:"Sindicalizado,attr" bson:"Sindicalizado,omitempty"`
-	TipoJornada                      *string                    `xml:"TipoJornada,attr" bson:"TipoJornada,omitempty"`
-	TipoRegimen                      string                     `xml:"TipoRegimen,attr" bson:"TipoRegimen"`
-	NoEmpleado                       string                     `xml:"NumEmpleado,attr" bson:"NoEmpleado"`
-	Departamento                     *string                    `xml:"Departamento,attr" bson:"Departamento,omitempty"`
-	Puesto                           *string                    `xml:"Puesto,attr" bson:"Puesto,omitempty"`
-	RiesgoPuesto                     *string                    `xml:"RiesgoPuesto,attr" bson:"RiesgoPuesto,omitempty"`
-	PeriodicidadPago                 string                     `xml:"PeriodicidadPago,attr" bson:"PeriodicidadPago"`
-	Banco                            *string                    `xml:"Banco,attr" bson:"Banco,omitempty"`
-	CuentaBancaria                   *string                    `xml:"CuentaBancaria,attr" bson:"CuentaBancaria,omitempty"`
-	SalarioBaseCotizacion            *float64                   `xml:"SalarioBaseCotApor,attr" bson:"SalarioBaseCotizacion,omitempty"`
-	SalarioDiarioIntegrado           *float64                   `xml:"SalarioDiarioIntegrado,attr" bson:"SalarioDiarioIntegrado,omitempty"`
-	ClaveEntidadFederativa           string                     `xml:"ClaveEntFed,attr" bson:"ClaveEntidadFederativa"`
-	Subcontratacion                  *[]SubContratacionNomina12 `xml:"SubContratacion" bson:"Subcontratacion,omitempty"`
+	Curp                       string                     `xml:"Curp,attr" bson:"Curp"`                                      // Cifrado
+	NoSeguridadSocial          *string                    `xml:"NumSeguridadSocial,attr" bson:"NoSeguridadSocial,omitempty"` // Cifrado
+	FechaInicioRelLaboral      *string                    `xml:"FechaInicioRelLaboral,attr" bson:"FechaInicioRelLaboral,omitempty"`
+	FechaInicioRelacionLaboral *time.Time                 `bson:"FechaInicioRelacionLaboral,omitempty"`
+	Antiguedad                 *string                    `xml:"Antigüedad,attr" bson:"Antiguedad,omitempty"`
+	TipoContrato               string                     `xml:"TipoContrato,attr" bson:"TipoContrato"`
+	Sindicalizado              *string                    `xml:"Sindicalizado,attr" bson:"Sindicalizado,omitempty"`
+	TipoJornada                *string                    `xml:"TipoJornada,attr" bson:"TipoJornada,omitempty"`
+	TipoRegimen                string                     `xml:"TipoRegimen,attr" bson:"TipoRegimen"`
+	NoEmpleado                 string                     `xml:"NumEmpleado,attr" bson:"NoEmpleado"`
+	Departamento               *string                    `xml:"Departamento,attr" bson:"Departamento,omitempty"`
+	Puesto                     *string                    `xml:"Puesto,attr" bson:"Puesto,omitempty"`
+	RiesgoPuesto               *string                    `xml:"RiesgoPuesto,attr" bson:"RiesgoPuesto,omitempty"`
+	PeriodicidadPago           string                     `xml:"PeriodicidadPago,attr" bson:"PeriodicidadPago"`
+	Banco                      *string                    `xml:"Banco,attr" bson:"Banco,omitempty"`
+	CuentaBancaria             *string                    `xml:"CuentaBancaria,attr" bson:"CuentaBancaria,omitempty"`
+	SalarioBaseCotizacion      *float64                   `xml:"SalarioBaseCotApor,attr" bson:"SalarioBaseCotizacion,omitempty"`
+	SalarioDiarioIntegrado     *float64                   `xml:"SalarioDiarioIntegrado,attr" bson:"SalarioDiarioIntegrado,omitempty"`
+	ClaveEntidadFederativa     string                     `xml:"ClaveEntFed,attr" bson:"ClaveEntidadFederativa"`
+	Subcontratacion            *[]SubContratacionNomina12 `xml:"SubContratacion" bson:"Subcontratacion,omitempty"`
 }
 
 func (r *ReceptorNomina12) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
@@ -75,8 +75,8 @@ func (r *ReceptorNomina12) UnmarshalXML(d *xml.Decoder, start xml.StartElement) 
 	}
 	*r = ReceptorNomina12(aux)
 
-	if r.FechaInicioRelacionLaboralString != nil {
-		fechaIniRelLab, _ := helpers.ParseDatetime(*aux.FechaInicioRelacionLaboralString)
+	if r.FechaInicioRelLaboral != nil {
+		fechaIniRelLab, _ := helpers.ParseDatetime(*aux.FechaInicioRelLaboral)
 		r.FechaInicioRelacionLaboral = &fechaIniRelLab
 	}
 

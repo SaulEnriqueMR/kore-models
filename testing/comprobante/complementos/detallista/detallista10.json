@@ -29,7 +29,7 @@
             }
         ],
         "ReferenceDateString": "2016-02-07",
-        "Date": "2016-02-07T00:00:00Z"
+        "Date": "2016-02-07T00:00:00-06:00"
     },
     "AdditionalInformation": {
         "ReferenceIdentification": [
@@ -49,7 +49,7 @@
             "0000002"
         ],
         "ReferenceDateString": "2016-04-07",
-        "Date": "2016-04-07T00:00:00Z"
+        "Date": "2016-04-07T00:00:00-05:00"
     },
     "Buyer": {
         "Gln": "7504000107903",
@@ -206,7 +206,7 @@
                         "Type": "TN"
                     },
                     "ReferenceDateString": "2016-04-07",
-                    "Date": "2016-04-07T00:00:00Z",
+                    "Date": "2016-04-07T00:00:00-05:00",
                     "NameAndAddress": {
                         "Name": "TIJUANA"
                     }
@@ -230,7 +230,7 @@
                 "LotNumber": [
                     {
                         "ProductionDateString": "2016-04-07",
-                        "ProductionDate": "2016-04-07T00:00:00Z",
+                        "ProductionDate": "2016-04-07T00:00:00-05:00",
                         "Value": "1123"
                     }
                 ]

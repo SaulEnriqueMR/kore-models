@@ -14,7 +14,7 @@ type Comprobante33 struct {
 	Version                                       string              `xml:"Version,attr" bson:"Version"`
 	Serie                                         *string             `xml:"Serie,attr" bson:"Serie,omitempty"`
 	Folio                                         *string             `xml:"Folio,attr" bson:"Folio,omitempty"`
-	Fecha                                         string              `xml:"Fecha,attr"`
+	Fecha                                         string              `xml:"Fecha,attr" bson:"Fecha"`
 	Sello                                         string              `xml:"Sello,attr" bson:"Sello"`
 	FormaPago                                     *string             `xml:"FormaPago,attr" bson:"FormaPago,omitempty"`
 	NoCertificado                                 string              `xml:"NoCertificado,attr" bson:"NoCertificado"`
@@ -49,11 +49,28 @@ func (c *Comprobante33) DefineTransaccion(rfc string) {
 
 type CfdiRelacionados33 struct {
 	TipoRelacion     string              `xml:"TipoRelacion,attr" bson:"TipoRelacion"`
-	UuidRelacionados []CfdiRelacionado33 `xml:"CfdiRelacionado" bson:"UuidRelacionados"`
+	UuidRelacionados []UuidRelacionado33 `xml:"CfdiRelacionado" bson:"UuidRelacionados"`
 }
 
-type CfdiRelacionado33 struct {
-	Uuid string `xml:"UUID,attr" bson:"Uuid"`
+type UuidRelacionado33 struct {
+	UUID string `xml:"UUID,attr" bson:"UUID"`
+	Uuid string `bson:"Uuid"`
+}
+
+func (ur *UuidRelacionado33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias UuidRelacionado33
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+
+	*ur = UuidRelacionado33(aux)
+	ur.Uuid = strings.ToUpper(aux.UUID)
+
+	return nil
 }
 
 type Emisor33 struct {

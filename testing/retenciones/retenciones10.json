@@ -1,7 +1,7 @@
 {
     "FechaEmision": "2019-10-20T16:35:28-06:00",
     "Uuid": "3EA43E97-71BF-4AC5-A28E-9374EA9F8B45",
-    "FechaTimbrado": "2024-04-29T10:46:30Z",
+    "FechaTimbrado": "2024-04-29T10:46:30-06:00",
     "CadenaOriginal": "",
     "Comprobante": false,
     "Transaccion": "",
@@ -515,7 +515,7 @@
                             "SubtipoServicio": "B02",
                             "RfcTerceroAutorizado": "ABC123456789",
                             "FechaServString": "2023-09-23",
-                            "FechaServicio": "2023-09-23T00:00:00Z",
+                            "FechaServicio": "2023-09-23T00:00:00-06:00",
                             "PrecioServicioSinIva": 1000,
                             "ImpuestosTrasladadosServicio": {
                                 "Base": 1000,
@@ -554,7 +554,7 @@
                             "SubtipoServicio": "B02",
                             "RfcTerceroAutorizado": "ABC123456789",
                             "FechaServString": "2023-09-23",
-                            "FechaServicio": "2023-09-23T00:00:00Z",
+                            "FechaServicio": "2023-09-23T00:00:00-06:00",
                             "PrecioServicioSinIva": 1000,
                             "ImpuestosTrasladadosServicio": {
                                 "Base": 1000,
@@ -593,7 +593,7 @@
                             "SubtipoServicio": "B02",
                             "RfcTerceroAutorizado": "ABC123456789",
                             "FechaServString": "2023-09-23",
-                            "FechaServicio": "2023-09-23T00:00:00Z",
+                            "FechaServicio": "2023-09-23T00:00:00-06:00",
                             "PrecioServicioSinIva": 1000,
                             "ImpuestosTrasladadosServicio": {
                                 "Base": 1000,
@@ -621,7 +621,7 @@
                 "Version": "1.1",
                 "Uuid": "3ea43e97-71bf-4ac5-a28e-9374ea9f8b45",
                 "Fecha": "2024-04-29T10:46:30",
-                "FechaTimbrado": "2024-04-29T10:46:30Z",
+                "FechaTimbrado": "2024-04-29T10:46:30-06:00",
                 "RfcProvCertif": "SPR190613I52",
                 "Leyenda": "Leyenda SAT",
                 "SelloCfd": "AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3",
@@ -632,7 +632,7 @@
                 "Version": "1.0",
                 "Uuid": "3ea43e97-71bf-4ac5-a28e-9374ea9f8b45",
                 "Fecha": "2024-04-29T10:46:30",
-                "FechaTimbrado": "2024-04-29T10:46:30Z",
+                "FechaTimbrado": "2024-04-29T10:46:30-06:00",
                 "SelloCfd": "AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3",
                 "NoCertificadoSat": "30001000000500003456",
                 "SelloSat": "QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"

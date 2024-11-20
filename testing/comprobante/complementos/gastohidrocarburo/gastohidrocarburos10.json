@@ -22,7 +22,7 @@
                     "MontoIvaPedimento": 100,
                     "OtrosImpuestosPagadosPedimento": 20,
                     "FechaFolioFiscalVinculadoString": "2024-01-15",
-                    "FechaFolioFiscalVinculado": "2024-01-15T00:00:00Z",
+                    "FechaFolioFiscalVinculado": "2024-01-15T00:00:00-06:00",
                     "Mes": "Febrero",
                     "MontoTotalErogaciones": 3000
                 }

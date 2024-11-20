@@ -2,6 +2,6 @@
     "Version": "1.1",
     "NoAutorizacion": "SP-DF-12345",
     "FechaAutString": "2014-01-01",
-    "FechaAutorizacion": "2014-01-01T00:00:00Z",
+    "FechaAutorizacion": "2014-01-01T00:00:00-06:00",
     "Leyenda": "Este importe corresponde a una donación"
 }

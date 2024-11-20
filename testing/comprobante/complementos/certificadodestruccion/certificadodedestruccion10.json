@@ -19,7 +19,7 @@
 		{
 			"NumeroPedimentoImportacion": "2390321",
 			"FechaString": "2014-01-23",
-			"Fecha": "2014-01-23T00:00:00Z",
+			"Fecha": "2014-01-23T00:00:00-06:00",
 			"Aduana": "Aduana"
 		}
 	]

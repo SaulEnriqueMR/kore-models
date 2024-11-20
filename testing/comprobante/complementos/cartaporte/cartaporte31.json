@@ -33,7 +33,7 @@
             "NombreEstacion": "Estación 1",
             "NavegacionTrafico": "Altura",
             "FechaHoraSalidaLlegadaString": "2024-09-20T08:30:00",
-            "FechaHoraSalidaLlegada": "2024-09-20T08:30:00Z",
+            "FechaHoraSalidaLlegada": "2024-09-20T08:30:00-06:00",
             "TipoEstacion": "Terrestre",
             "DistanciaRecorrida": 150.5,
             "Domicilio": {
@@ -60,7 +60,7 @@
             "NombreEstacion": "Estación 2",
             "NavegacionTrafico": null,
             "FechaHoraSalidaLlegadaString": "2024-09-21T12:45:00",
-            "FechaHoraSalidaLlegada": "2024-09-21T12:45:00Z",
+            "FechaHoraSalidaLlegada": "2024-09-21T12:45:00-06:00",
             "TipoEstacion": null,
             "DistanciaRecorrida": 350.75,
             "Domicilio": {
@@ -87,7 +87,7 @@
             "NombreEstacion": "Estación 3",
             "NavegacionTrafico": null,
             "FechaHoraSalidaLlegadaString": "2024-09-22T16:30:00",
-            "FechaHoraSalidaLlegada": "2024-09-22T16:30:00Z",
+            "FechaHoraSalidaLlegada": "2024-09-22T16:30:00-06:00",
             "TipoEstacion": null,
             "DistanciaRecorrida": 220,
             "Domicilio": null
@@ -121,7 +121,7 @@
                 "DenominacionDistintivaProducto": "Marca ABC",
                 "Fabricante": "Laboratorio XYZ",
                 "FechaCaducidadString": "2025-12-31",
-                "FechaCaducidad": "2025-12-31T00:00:00Z",
+                "FechaCaducidad": "2025-12-31T00:00:00-06:00",
                 "LoteMedicamento": "L123456",
                 "FormaFarmaceutica": "Tableta",
                 "CondicionesEspecialesTransporte": "N/A",
@@ -274,7 +274,7 @@
                     "IdCcpRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
                     "PlacaVmCcp": "XYZ123",
                     "FechaCertificacionCcpString": "2023-09-20T12:00:00",
-                    "FechaCertificacionCcp": "2023-09-20T12:00:00Z",
+                    "FechaCertificacionCcp": "2023-09-20T12:00:00-06:00",
                     "RemolquesCcp": [
                         {
                             "Subtipo": "SubTipo1",
@@ -293,7 +293,7 @@
                     "IdCcpRelacionado": "CCC1234-abcd-5678-efgh-1234567890ab",
                     "PlacaVmCcp": "XYZ123",
                     "FechaCertificacionCcpString": "2023-09-20T12:00:00",
-                    "FechaCertificacionCcp": "2023-09-20T12:00:00Z",
+                    "FechaCertificacionCcp": "2023-09-20T12:00:00-06:00",
                     "RemolquesCcp": [
                         {
                             "Subtipo": "SubTipo1",

@@ -16,7 +16,7 @@
     "Pago": [
         {
             "FechaPagoString": "2024-09-15T12:00:00",
-            "FechaPago": "2024-09-15T12:00:00Z",
+            "FechaPago": "2024-09-15T12:00:00-06:00",
             "FormaPago": "03",
             "Moneda": "USD",
             "TipoCambio": 17.5,

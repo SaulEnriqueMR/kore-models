@@ -50,8 +50,8 @@ func InternalTestFullAtributesComprobante32(t *testing.T, comprobante32 comproba
 	assert.Equal(t, "1234", *comprobante32.NumeroCuentaPago)
 	assert.Equal(t, "ABC123456", *comprobante32.FolioFiscalOriginal)
 	assert.Equal(t, "A1", *comprobante32.SerieFolioFiscalOriginal)
-	assert.Equal(t, "2023-09-23T12:00:00", *comprobante32.FechaFolioFiscalOriginal)
-	assert.Equal(t, "1000.00", *comprobante32.MontoFolioFiscalOriginal)
+	assert.Equal(t, "2023-09-23T12:00:00", *comprobante32.FechaFolioFiscalOrig)
+	assert.Equal(t, 1000.00, *comprobante32.MontoFolioFiscalOriginal)
 }
 
 func InternalTestFullAtributesEmisorComprobante32(t *testing.T, emisor32 comprobante2.Emisor32) {
@@ -135,7 +135,7 @@ func InternalTestFullAtributesConceptos32(t *testing.T, concepto32 []comprobante
 func InternalTestFullAtributesInformacionAduaneraConcepto32(t *testing.T, aduanera32 []comprobante2.InformacionAduanera32) {
 	assert.Equal(t, 1, len(aduanera32))
 	assert.Equal(t, "A123456", aduanera32[0].Numero)
-	assert.Equal(t, "2023-09-15", aduanera32[0].Fecha)
+	assert.Equal(t, "2023-09-15", aduanera32[0].FechaString)
 	assert.Equal(t, "Aduana de Ciudad Juárez", *aduanera32[0].Aduana)
 }
 

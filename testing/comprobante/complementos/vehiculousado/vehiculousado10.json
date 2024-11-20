@@ -14,19 +14,19 @@
         {
             "Numero": "12345",
             "FechaString": "2022-05-15",
-            "Fecha": "2022-05-15T00:00:00Z",
+            "Fecha": "2022-05-15T00:00:00-05:00",
             "Aduana": "Aduana del Puerto de Veracruz"
         },
         {
             "Numero": "67890",
             "FechaString": "2021-03-22",
-            "Fecha": "2021-03-22T00:00:00Z",
+            "Fecha": "2021-03-22T00:00:00-06:00",
             "Aduana": "Aduana del Aeropuerto Internacional de la Ciudad de México"
         },
         {
             "Numero": "54321",
             "FechaString": "2020-12-10",
-            "Fecha": "2020-12-10T00:00:00Z",
+            "Fecha": "2020-12-10T00:00:00-06:00",
             "Aduana": "Aduana de Lázaro Cárdenas"
         }
     ]

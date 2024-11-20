@@ -17,8 +17,8 @@
     ],
     "DatosOperacion": {
         "NoInstrumentoNotarial": "12345",
-        "FechaFirmaInstrumentoNotarialString": "2014-05-05",
-        "FechaFirmaInstrumentoNotarial": "2014-05-05T00:00:00Z",
+        "FechaInstNotarial": "2014-05-05",
+        "FechaFirmaInstrumentoNotarial": "2014-05-05T00:00:00-05:00",
         "MontoOperacion": 330000,
         "Subtotal": 330000,
         "Iva": 52800

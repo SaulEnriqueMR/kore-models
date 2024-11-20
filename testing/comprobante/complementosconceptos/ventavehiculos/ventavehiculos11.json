@@ -7,8 +7,8 @@
 			"InformacionAduanera": [
 				{
 					"Numero": "AAA1212129",
-					"Fecha": "2016-04-11",
-					"FechaDate": "2016-04-11T00:00:00Z",
+					"FechaString": "2016-04-11",
+					"Fecha": "2016-04-11T00:00:00-05:00",
 					"Aduana": "Tijuana"
 				}
 			],

@@ -29,7 +29,7 @@ type TotalesPagos20 struct {
 }
 
 type PagoPagos20 struct {
-	FechaPagoString                string                    `xml:"FechaPago,attr"`
+	FechaPagoString                string                    `xml:"FechaPago,attr" bson:"FechaPago"`
 	FechaPago                      time.Time                 `bson:"FechaPago"`
 	FormaPago                      string                    `xml:"FormaDePagoP,attr" bson:"FormaPago"`
 	Moneda                         string                    `xml:"MonedaP,attr" bson:"Moneda"`
@@ -50,7 +50,8 @@ type PagoPagos20 struct {
 }
 
 type DoctoRelacionadoPagos20 struct {
-	IdDocumento          string              `xml:"IdDocumento,attr" bson:"IdDocumento"`
+	IdDocumentoString    string              `xml:"IdDocumento,attr" bson:"IdDocumentoString"`
+	IdDocumento          string              `bson:"IdDocumento"`
 	Serie                *string             `xml:"Serie,attr" bson:"Serie,omitempty"`
 	Folio                *string             `xml:"Folio,attr" bson:"Folio,omitempty"`
 	Moneda               string              `xml:"MonedaDR,attr" bson:"Moneda"`
@@ -61,6 +62,22 @@ type DoctoRelacionadoPagos20 struct {
 	ImporteSaldoInsoluto float64             `xml:"ImpSaldoInsoluto,attr" bson:"ImporteSaldoInsoluto"`
 	ObjetoImpuesto       string              `xml:"ObjetoImpDR,attr" bson:"ObjetoImpuesto"`
 	Impuestos            *ImpuestosDRPagos20 `xml:"ImpuestosDR" bson:"Impuestos,omitempty"`
+}
+
+func (dr *DoctoRelacionadoPagos20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias DoctoRelacionadoPagos20
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+
+	*dr = DoctoRelacionadoPagos20(aux)
+	dr.IdDocumento = strings.ToUpper(aux.IdDocumentoString)
+
+	return nil
 }
 
 type ImpuestosDRPagos20 struct {

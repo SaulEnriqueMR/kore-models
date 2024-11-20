@@ -9,7 +9,7 @@
             {
                 "Identificador": "12234",
                 "FechaString": "2015-11-02T10:20:02",
-                "Fecha": "2015-11-02T10:20:02Z",
+                "Fecha": "2015-11-02T10:20:02-06:00",
                 "Rfc": "XAXX010101000",
                 "ClaveEstacion": "111",
                 "Cantidad": "3.0",

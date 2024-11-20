@@ -46,7 +46,7 @@ type UbicacionCartaPorte20 struct {
 	NoEstacion                   *string                `xml:"NumEstacion,attr" bson:"NoEstacion,omitempty"`
 	NombreEstacion               *string                `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
 	NavegacionTrafico            *string                `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
-	FechaHoraSalidaLlegadaString string                 `xml:"FechaHoraSalidaLlegada,attr"`
+	FechaHoraSalidaLlegadaString string                 `xml:"FechaHoraSalidaLlegada,attr" bson:"FechaHoraSalidaLlegadaString"`
 	FechaHoraSalidaLlegada       time.Time              `bson:"FechaHoraSalidaLlegada"`
 	TipoEstacion                 *string                `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
 	DistanciaRecorrida           *float64               `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`

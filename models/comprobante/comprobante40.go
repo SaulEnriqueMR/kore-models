@@ -14,7 +14,7 @@ type Comprobante40 struct {
 	Version                                       string                 `xml:"Version,attr" bson:"Version" json:"Version"`
 	Serie                                         *string                `xml:"Serie,attr" bson:"Serie,omitempty" json:"Serie"`
 	Folio                                         *string                `xml:"Folio,attr" bson:"Folio,omitempty" json:"Folio"`
-	Fecha                                         string                 `xml:"Fecha,attr" json:"Fecha"`
+	Fecha                                         string                 `xml:"Fecha,attr" bson:"Fecha" json:"Fecha"`
 	Sello                                         string                 `xml:"Sello,attr" bson:"Sello"`
 	FormaPago                                     *string                `xml:"FormaPago,attr" bson:"FormaPago,omitempty" json:"FormaPago"`
 	NoCertificado                                 string                 `xml:"NoCertificado,attr" bson:"NoCertificado" json:"NoCertificado"`
@@ -61,7 +61,24 @@ type CfdisRelacionados40 struct {
 }
 
 type UuidRelacionado40 struct {
-	Uuid string `xml:"UUID,attr" bson:"Uuid" json:"Uuid"`
+	Uuid string `bson:"Uuid" json:"Uuid"`
+	UUID string `xml:"UUID,attr" bson:"UUID" json:"UUID"`
+}
+
+func (ur *UuidRelacionado40) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias UuidRelacionado40
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+
+	*ur = UuidRelacionado40(aux)
+	ur.Uuid = strings.ToUpper(aux.UUID)
+
+	return nil
 }
 
 type Emisor40 struct {

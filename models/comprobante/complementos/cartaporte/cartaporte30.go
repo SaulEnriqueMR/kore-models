@@ -52,7 +52,7 @@ type UbicacionCartaPorte30 struct {
 	NoEstacion                   *string                `xml:"NumEstacion,attr" bson:"NoEstacion,omitempty"`
 	NombreEstacion               *string                `xml:"NombreEstacion,attr" bson:"NombreEstacion,omitempty"`
 	NavegacionTrafico            *string                `xml:"NavegacionTrafico,attr" bson:"NavegacionTrafico,omitempty"`
-	FechaHoraSalidaLlegadaString string                 `xml:"FechaHoraSalidaLlegada,attr"`
+	FechaHoraSalidaLlegadaString string                 `xml:"FechaHoraSalidaLlegada,attr" bson:"FechaHoraSalidaLlegadaString"`
 	FechaHoraSalidaLlegada       time.Time              `bson:"FechaHoraSalidaLlegada"`
 	TipoEstacion                 *string                `xml:"TipoEstacion,attr" bson:"TipoEstacion,omitempty"`
 	DistanciaRecorrida           *float64               `xml:"DistanciaRecorrida,attr" bson:"DistanciaRecorrida,omitempty"`
@@ -115,19 +115,17 @@ type MercanciaCartaPorte30 struct {
 	MaterialPeligroso   *string `xml:"MaterialPeligroso,attr" bson:"MaterialPeligroso,omitempty"`
 	EsMaterialPeligroso *bool   `bson:"EsMaterialPeligroso,omitempty"`
 
-	ClaveMaterialPeligroso         *string `xml:"CveMaterialPeligroso,attr" bson:"ClaveMaterialPeligroso,omitempty"`
-	Embalaje                       *string `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
-	DescripcionEmbalaje            *string `xml:"DescripEmbalaje,attr" bson:"DescripcionEmbalaje,omitempty"`
-	SectorCofepris                 *string `xml:"SectorCOFEPRIS,attr" bson:"SectorCofepris,omitempty"`
-	NombreIngredienteActivo        *string `xml:"NombreIngredienteActivo,attr" bson:"NombreIngredienteActivo,omitempty"`
-	NombreQuimico                  *string `xml:"NomQuimico,attr" bson:"NombreQuimico,omitempty"`
-	DenominacionGenericaProducto   *string `xml:"DenominacionGenericaProd,attr" bson:"DenominacionGenericaProducto,omitempty"`
-	DenominacionDistintivaProducto *string `xml:"DenominacionDistintivaProd,attr" bson:"DenominacionDistintivaProducto,omitempty"`
-	Fabricante                     *string `xml:"Fabricante,attr" bson:"Fabricante,omitempty"`
-
-	FechaCaducidadString *string    `xml:"FechaCaducidad,attr"`
-	FechaCaducidad       *time.Time `bson:"FechaCaducidad,omitempty"`
-
+	ClaveMaterialPeligroso                 *string                              `xml:"CveMaterialPeligroso,attr" bson:"ClaveMaterialPeligroso,omitempty"`
+	Embalaje                               *string                              `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
+	DescripcionEmbalaje                    *string                              `xml:"DescripEmbalaje,attr" bson:"DescripcionEmbalaje,omitempty"`
+	SectorCofepris                         *string                              `xml:"SectorCOFEPRIS,attr" bson:"SectorCofepris,omitempty"`
+	NombreIngredienteActivo                *string                              `xml:"NombreIngredienteActivo,attr" bson:"NombreIngredienteActivo,omitempty"`
+	NombreQuimico                          *string                              `xml:"NomQuimico,attr" bson:"NombreQuimico,omitempty"`
+	DenominacionGenericaProducto           *string                              `xml:"DenominacionGenericaProd,attr" bson:"DenominacionGenericaProducto,omitempty"`
+	DenominacionDistintivaProducto         *string                              `xml:"DenominacionDistintivaProd,attr" bson:"DenominacionDistintivaProducto,omitempty"`
+	Fabricante                             *string                              `xml:"Fabricante,attr" bson:"Fabricante,omitempty"`
+	FechaCaducidadString                   *string                              `xml:"FechaCaducidad,attr" bson:"FechaCaducidadString,omitempty"`
+	FechaCaducidad                         *time.Time                           `bson:"FechaCaducidad,omitempty"`
 	LoteMedicamento                        *string                              `xml:"LoteMedicamento,attr" bson:"LoteMedicamento,omitempty"`
 	FormaFarmaceutica                      *string                              `xml:"FormaFarmaceutica,attr" bson:"FormaFarmaceutica,omitempty"`
 	CondicionesEspecialesTransporte        *string                              `xml:"CondicionesEspTransp,attr" bson:"CondicionesEspecialesTransporte,omitempty"`

@@ -23,10 +23,10 @@ type ParteVentVehi10 struct {
 }
 
 type InformacionAduaneraVentVehi10 struct {
-	Numero    string    `xml:"numero,attr" bson:"Numero"`
-	Fecha     string    `xml:"fecha,attr"`
-	FechaDate time.Time `bson:"Fecha"`
-	Aduana    *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
+	Numero      string    `xml:"numero,attr" bson:"Numero"`
+	FechaString string    `xml:"fecha,attr" bson:"FechaString"`
+	Fecha       time.Time `bson:"Fecha"`
+	Aduana      *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
 }
 
 func (iavv10 *InformacionAduaneraVentVehi10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
@@ -41,11 +41,11 @@ func (iavv10 *InformacionAduaneraVentVehi10) UnmarshalXML(d *xml.Decoder, start 
 	*iavv10 = InformacionAduaneraVentVehi10(aux)
 
 	if iavv10 != nil {
-		fecha, err := helpers.ParseDatetime(iavv10.Fecha)
+		fecha, err := helpers.ParseDatetime(iavv10.FechaString)
 		if err != nil {
 			return err
 		}
-		iavv10.FechaDate = fecha
+		iavv10.Fecha = fecha
 	}
 
 	return nil

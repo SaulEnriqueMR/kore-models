@@ -18,7 +18,7 @@ type ValesDespensa10 struct {
 
 type Conceptos struct {
 	Identificador     string    `xml:"identificador,attr" bson:"Identificador"`
-	FechaString       string    `xml:"fecha,attr"`
+	FechaString       string    `xml:"fecha,attr" bson:"FechaString"`
 	Fecha             time.Time `bson:"Fecha"`
 	Rfc               string    `xml:"rfc,attr" bson:"Rfc"`
 	Curp              string    `xml:"curp,attr" bson:"Curp"`

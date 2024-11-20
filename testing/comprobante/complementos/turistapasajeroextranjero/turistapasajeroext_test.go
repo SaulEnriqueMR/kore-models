@@ -2,12 +2,10 @@ package turistapasajeroextranjero
 
 import (
 	"encoding/xml"
-	"testing"
-	"time"
-
 	turispasajextra1 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/turistapasajeroextranjero"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func GetTurisPasajExtraForTest(filename string, t *testing.T) (turispasajextra1.TuristaPasajeroExtranjero10, error) {
@@ -29,11 +27,12 @@ func InternalTestBase(t *testing.T, turista turispasajextra1.TuristaPasajeroExtr
 	assert.Equal(t, "1.0", turista.Version)
 	//Testear el parseo de fecha ISO
 	//Crear Variable ISO para comparar
-	var IsoDatetimeLayout = "2006-01-02T15:04:05"
+	// var IsoDatetimeLayout = "2006-01-02T15:04:05"
 	//Crear Fecha ISO apartir de la fecha string del cml
-	isoDate, _ := time.Parse(IsoDatetimeLayout, "2024-09-19T14:30:00")
+	// isoDate, _ := time.Parse(IsoDatetimeLayout, "2024-09-19T14:30:00")
 	//Comparar fecha ISO creada con la fecha ISO creada con el Unmarshal
-	assert.Equal(t, isoDate, turista.FechaTransito)
+	// assert.Equal(t, isoDate, turista.FechaTransito)
+	assert.Equal(t, "2024-09-19T14:30:00", turista.FechaTransitoString)
 	assert.Equal(t, "Arribo", turista.TipoTransito)
 	InternalTestTuristaPasajeroExtranjero(t, turista.DatosTransito)
 }

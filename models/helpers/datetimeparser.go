@@ -14,6 +14,8 @@ var (
 	Rfc3339Regex          = `^\d{4}-\d{2}-\d{2}$`
 )
 
+var MexicoLocation, errLocation = time.LoadLocation("Mexico/General")
+
 // ParseDatetime Función encargada de la conversión de los formatos de fechas utilizados por el SAT.
 // Aún queda como incognita si el SAT utiliza más formatos pero de momento son los identificados
 func ParseDatetime(s string) (time.Time, error) {
@@ -25,19 +27,20 @@ func ParseDatetime(s string) (time.Time, error) {
 	// Primero checamos si coincide con el layout de ISO.
 	patternISO := regexp.MustCompile(IsoDateRegex)
 	if patternISO.MatchString(s) {
-		isoDate, err := time.Parse(IsoDatetimeLayout, trimmedString)
+		isoDate, err := time.ParseInLocation(IsoDatetimeLayout, trimmedString, MexicoLocation)
 		return isoDate, err
 	}
+
 	// En caso de que no, probamos con el RFC3339.
 	patternRFC := regexp.MustCompile(Rfc3339Regex)
 	if patternRFC.MatchString(s) {
-		isoDate, err := time.Parse(Rfc3339DatetimeLayout, trimmedString)
+		isoDate, err := time.ParseInLocation(Rfc3339DatetimeLayout, trimmedString, MexicoLocation)
 		return isoDate, err
 	}
 
 	// Caso extraordinario Retenciones 1.0. Ejemplo "2019-10-20T16:35:28-06:00")
 	layout := time.RFC3339
-	parsedTime, err := time.Parse(layout, trimmedString)
+	parsedTime, err := time.ParseInLocation(layout, trimmedString, MexicoLocation)
 	if err == nil {
 		return parsedTime, err
 	}

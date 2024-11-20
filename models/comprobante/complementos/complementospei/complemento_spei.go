@@ -11,7 +11,7 @@ type ComplementoSpei struct {
 }
 
 type SpeiTerceroCompSpei struct {
-	FechaOperacionString string                 `xml:"FechaOperacion,attr"`
+	FechaOperacionString string                 `xml:"FechaOperacion,attr" bson:"FechaOperacionString"`
 	FechaOperacion       time.Time              `bson:"FechaOperacion"`
 	Hora                 string                 `xml:"Hora,attr" bson:"Hora"`
 	ClaveSpei            string                 `xml:"ClaveSPEI,attr" bson:"ClaveSpei"`

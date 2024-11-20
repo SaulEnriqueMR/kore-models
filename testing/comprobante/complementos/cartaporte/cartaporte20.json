@@ -18,7 +18,7 @@
             "NombreEstacion": "Estacion1",
             "NavegacionTrafico": "Trafico1",
             "FechaHoraSalidaLlegadaString": "2024-09-23T12:30:00",
-            "FechaHoraSalidaLlegada": "2024-09-23T12:30:00Z",
+            "FechaHoraSalidaLlegada": "2024-09-23T12:30:00-06:00",
             "TipoEstacion": "Tipo1",
             "DistanciaRecorrida": 100.5,
             "Domicilio": {
@@ -45,7 +45,7 @@
             "NombreEstacion": "Estacion2",
             "NavegacionTrafico": "Trafico2",
             "FechaHoraSalidaLlegadaString": "2024-09-23T12:30:00",
-            "FechaHoraSalidaLlegada": "2024-09-23T12:30:00Z",
+            "FechaHoraSalidaLlegada": "2024-09-23T12:30:00-06:00",
             "TipoEstacion": "Tipo2",
             "DistanciaRecorrida": 100.5,
             "Domicilio": {

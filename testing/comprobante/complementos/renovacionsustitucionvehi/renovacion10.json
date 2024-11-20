@@ -18,8 +18,8 @@
                 "NoFolioTarjetaCirculacion": "ABC987654321",
                 "NumeroPedimentoImportacion": "12345678901234567890",
                 "Aduana": "Aduana de Tijuana",
-                "FechaRegulVehString": "2021-07-15",
-                "FechaRegulacionImportacion": "2021-07-15T00:00:00Z",
+                "FechaRegulVeh": "2021-07-15",
+                "FechaRegulacionImportacion": "2021-07-15T00:00:00-05:00",
                 "FolioFiscal": "A1B2C3D4E5F6G7H8I9J0"
             },
             {
@@ -36,8 +36,8 @@
                 "NoFolioTarjetaCirculacion": "ABC987654321",
                 "NumeroPedimentoImportacion": "12345678901234567890",
                 "Aduana": "Aduana de Tijuana",
-                "FechaRegulVehString": "2022-07-15",
-                "FechaRegulacionImportacion": "2022-07-15T00:00:00Z",
+                "FechaRegulVeh": "2022-07-15",
+                "FechaRegulacionImportacion": "2022-07-15T00:00:00-05:00",
                 "FolioFiscal": "A1B2C3D4E5F6G7H8I9J0"
             }
         ],
@@ -67,8 +67,8 @@
                 "NoFolioTarjetaCirculacion": "ABC987654321",
                 "NumeroPedimentoImportacion": "12345678901234567890",
                 "Aduana": "Aduana de Tijuana",
-                "FechaRegulVehString": "2023-07-15",
-                "FechaRegulacionImportacion": "2023-07-15T00:00:00Z",
+                "FechaRegulVeh": "2023-07-15",
+                "FechaRegulacionImportacion": "2023-07-15T00:00:00-06:00",
                 "FolioFiscal": "A1B2C3D4E5F6G7H8I9J0"
             }
         ],

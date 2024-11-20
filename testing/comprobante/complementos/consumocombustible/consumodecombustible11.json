@@ -9,7 +9,7 @@
             {
                 "Identificador": "0001",
                 "FechaString": "2016-04-08T06:02:00",
-                "Fecha": "2016-04-08T06:02:00Z",
+                "Fecha": "2016-04-08T06:02:00-05:00",
                 "Rfc": "XAXX010101000",
                 "ClaveEstacion": "111",
                 "TipoCombustible": "Gasolina",

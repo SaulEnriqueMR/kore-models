@@ -28,7 +28,7 @@ type VehiculoDestruidoCertDest10 struct {
 
 type InformacionAduaneraCertDest10 struct {
 	NumeroPedimentoImportacion string    `xml:"NumPedImp,attr" bson:"NumeroPedimentoImportacion"`
-	FechaString                string    `xml:"Fecha,attr"`
+	FechaString                string    `xml:"Fecha,attr" bson:"FechaString"`
 	Fecha                      time.Time `bson:"Fecha"`
 	Aduana                     string    `xml:"Aduana,attr" bson:"Aduana"`
 }

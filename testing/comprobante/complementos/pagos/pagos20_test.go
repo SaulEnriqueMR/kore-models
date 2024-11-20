@@ -74,7 +74,8 @@ func InternalTestDoctoRelacionado(t *testing.T, doctosRelacionado []pagos20.Doct
 	assert.NotNil(t, doctosRelacionado)
 	assert.Equal(t, len(doctosRelacionado), 1)
 	doctoRelacionado := doctosRelacionado[0]
-	assert.Equal(t, "123e4567-e89b-12d3-a456-426614174000", doctoRelacionado.IdDocumento)
+	assert.Equal(t, "123e4567-e89b-12d3-a456-426614174000", doctoRelacionado.IdDocumentoString)
+	assert.Equal(t, "123E4567-E89B-12D3-A456-426614174000", doctoRelacionado.IdDocumento)
 	assert.Equal(t, "A", *doctoRelacionado.Serie)
 	assert.Equal(t, "1001", *doctoRelacionado.Folio)
 	assert.Equal(t, "MXN", doctoRelacionado.Moneda)

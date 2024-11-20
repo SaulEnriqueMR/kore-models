@@ -59,7 +59,7 @@ func InternalTestFullInformacionAduanera11(t *testing.T, informacionAduanera *[]
 	assert.Equal(t, 1, len(*informacionAduanera))
 	first := (*informacionAduanera)[0]
 	assert.Equal(t, "AAA1212129", first.Numero)
-	assert.Equal(t, "2016-04-11", first.Fecha)
+	assert.Equal(t, "2016-04-11", first.FechaString)
 	assert.NotNil(t, first.Aduana)
 	assert.Equal(t, "Tijuana", *first.Aduana)
 }

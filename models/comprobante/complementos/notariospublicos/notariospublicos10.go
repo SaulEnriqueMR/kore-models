@@ -30,12 +30,12 @@ type DescInmuebleNotariosPub10 struct {
 }
 
 type DatosOperacionNotariosPub10 struct {
-	NoInstrumentoNotarial               string    `xml:"NumInstrumentoNotarial,attr" bson:"NoInstrumentoNotarial"`
-	FechaFirmaInstrumentoNotarialString string    `xml:"FechaInstNotarial,attr"`
-	FechaFirmaInstrumentoNotarial       time.Time `bson:"FechaInstNotarial"`
-	MontoOperacion                      float64   `xml:"MontoOperacion,attr" bson:"MontoOperacion"`
-	Subtotal                            float64   `xml:"Subtotal,attr" bson:"Subtotal"`
-	Iva                                 float64   `xml:"IVA,attr" bson:"Iva"`
+	NoInstrumentoNotarial         string    `xml:"NumInstrumentoNotarial,attr" bson:"NoInstrumentoNotarial"`
+	FechaInstNotarial             string    `xml:"FechaInstNotarial,attr" bson:"FechaInstNotarial"`
+	FechaFirmaInstrumentoNotarial time.Time `bson:"FechaFirmaInstrumentoNotarial"`
+	MontoOperacion                float64   `xml:"MontoOperacion,attr" bson:"MontoOperacion"`
+	Subtotal                      float64   `xml:"Subtotal,attr" bson:"Subtotal"`
+	Iva                           float64   `xml:"IVA,attr" bson:"Iva"`
 }
 
 type DatosNotarioNotariosPub10 struct {
@@ -134,7 +134,7 @@ func (t *DatosOperacionNotariosPub10) UnmarshalXML(d *xml.Decoder, start xml.Sta
 	}
 
 	// Parse the date from the 'Fecha' field
-	fechaInstNotarial, err := helpers.ParseDatetime(aux.FechaFirmaInstrumentoNotarialString)
+	fechaInstNotarial, err := helpers.ParseDatetime(aux.FechaInstNotarial)
 	if err != nil {
 		return err
 	}

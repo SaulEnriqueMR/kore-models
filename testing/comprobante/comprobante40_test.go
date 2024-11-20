@@ -83,14 +83,17 @@ func InternalTestFullCfdisRelacionados40(t *testing.T, cfdisRelacionados *[]comp
 	assert.Equal(t, "01", first.TipoRelacion)
 	uuidsFirst := first.UuidRelacionados
 	assert.Equal(t, 2, len(uuidsFirst))
-	assert.Equal(t, "09755d3a-e6fe-4863-b1f0-ec08a5883324", uuidsFirst[0].Uuid)
-	assert.Equal(t, "709a6642-acac-4b09-a7ae-1c667a1173f8", uuidsFirst[1].Uuid)
+	assert.Equal(t, "09755d3a-e6fe-4863-b1f0-ec08a5883324", uuidsFirst[0].UUID)
+	assert.Equal(t, "09755D3A-E6FE-4863-B1F0-EC08A5883324", uuidsFirst[0].Uuid)
+	assert.Equal(t, "709a6642-acac-4b09-a7ae-1c667a1173f8", uuidsFirst[1].UUID)
+	assert.Equal(t, "709A6642-ACAC-4B09-A7AE-1C667A1173F8", uuidsFirst[1].Uuid)
 
 	second := (*cfdisRelacionados)[1]
 	assert.Equal(t, "02", second.TipoRelacion)
 	uuidsSecond := second.UuidRelacionados
 	assert.Equal(t, 1, len(uuidsSecond))
-	assert.Equal(t, "989427db-2363-4291-8c31-f7b84223406f", uuidsSecond[0].Uuid)
+	assert.Equal(t, "989427DB-2363-4291-8C31-F7B84223406F", uuidsSecond[0].Uuid)
+	assert.Equal(t, "989427db-2363-4291-8c31-f7b84223406f", uuidsSecond[0].UUID)
 }
 
 func InternalTestFullEmisor40(t *testing.T, emisor comprobante2.Emisor40) {

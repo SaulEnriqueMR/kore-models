@@ -14,7 +14,7 @@ type ObrasAntiguedades10 struct {
 	OtrosTitulosAdquiridos    *string   `xml:"OtrosTitulosAdquiridos,attr" bson:"OtrosTitulosAdquiridos,omitempty"`
 	Subtotal                  float64   `xml:"Subtotal,attr" bson:"Subtotal"`
 	Iva                       float64   `xml:"IVA,attr" bson:"Iva"`
-	FechaAdquisicionString    string    `xml:"FechaAdquisicion,attr"`
+	FechaAdquisicionString    string    `xml:"FechaAdquisicion,attr" bson:"FechaAdquisicionString"`
 	FechaAdquisicion          time.Time `bson:"FechaAdquisicion"`
 	CaracteristicasObraOPieza string    `xml:"CaracterísticasDeObraoPieza,attr" bson:"CaracteristicasObraOPieza"`
 }

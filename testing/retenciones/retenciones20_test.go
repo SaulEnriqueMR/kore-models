@@ -2,6 +2,7 @@ package retenciones
 
 import (
 	"encoding/xml"
+	"strings"
 	"testing"
 
 	"github.com/SaulEnriqueMR/kore-models/models/retenciones"
@@ -30,7 +31,7 @@ func InternalTestFullAttributes20(t *testing.T, r retenciones.Retenciones20) {
 	assert.Equal(t, "bG3OOBPprTCS9TJXLvRl4", r.Sello)
 	assert.Equal(t, "30001000000500003416", r.NoCertificado)
 	assert.Equal(t, "MIIFsDCCA5igAwIBAgIUMz", r.Certificado)
-	assert.Equal(t, "2024-03-04T00:00:00", r.FechaExp)
+	assert.Equal(t, "2024-03-04T00:00:00", r.Fecha)
 	assert.Equal(t, "45110", r.LugarExpedicion)
 	assert.Equal(t, "01", r.ClaveRetencion)
 
@@ -45,7 +46,8 @@ func InternalTestRetencionRelacionada20(t *testing.T, retencionesRelacionadas *r
 	assert.NotNil(t, retencionesRelacionadas)
 
 	assert.Equal(t, "02", retencionesRelacionadas.TipoRelacion)
-	assert.Equal(t, "9341a0a9-eade-4c20-9f6e-a58aa5438a6a", retencionesRelacionadas.Uuid)
+	assert.Equal(t, "9341a0a9-eade-4c20-9f6e-a58aa5438a6a", retencionesRelacionadas.UUID)
+	assert.Equal(t, strings.ToUpper("9341a0a9-eade-4c20-9f6e-a58aa5438a6a"), retencionesRelacionadas.Uuid)
 }
 
 func InternalTestEmisor20(t *testing.T, emisor retenciones.Emisor20) {

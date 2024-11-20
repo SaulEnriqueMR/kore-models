@@ -24,7 +24,7 @@ type VehiculoUsado10 struct {
 
 type InformacionAduanera struct {
 	Numero      string    `xml:"numero,attr" bson:"Numero"`
-	FechaString string    `xml:"fecha,attr"`
+	FechaString string    `xml:"fecha,attr" bson:"FechaString"`
 	Fecha       time.Time `bson:"Fecha"`
 	Aduana      *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
 }

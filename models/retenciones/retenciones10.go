@@ -16,7 +16,7 @@ type Retenciones10 struct {
 	Sello                string       `xml:"Sello,attr" bson:"Sello"`
 	NoCertificado        string       `xml:"NumCert,attr" bson:"NoCertificado"`
 	Certificado          string       `xml:"Cert,attr" bson:"Certificado"`
-	FechaExp             string       `xml:"FechaExp,attr"`
+	Fecha                string       `xml:"FechaExp,attr" bson:"Fecha"`
 	ClaveRetencion       string       `xml:"CveRetenc,attr" bson:"ClaveRetencion"`
 	DescripcionRetencion *string      `xml:"DescRetenc,attr" bson:"DescripcionRetencion,omitempty"`
 	Emisor               Emisor10     `xml:"Emisor" bson:"Emisor"`
@@ -89,7 +89,7 @@ func (r *Retenciones10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		return err
 	}
 
-	fechaEmision, err := date.ParseDatetime(aux.FechaExp)
+	fechaEmision, err := date.ParseDatetime(aux.Fecha)
 	if err != nil {
 		return err
 	}

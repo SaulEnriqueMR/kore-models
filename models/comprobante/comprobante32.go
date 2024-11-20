@@ -32,10 +32,12 @@ type Comprobante32 struct {
 	MetodoPago                                    string       `xml:"metodoDePago,attr" bson:"MetodoPago"`
 	LugarExpedicion                               string       `xml:"LugarExpedicion,attr" bson:"LugarExpedicion"`
 	NumeroCuentaPago                              *string      `xml:"NumCtaPago,attr" bson:"NumeroCuentaPago,omitempty"`
-	FolioFiscalOriginal                           *string      `xml:"FolioFiscalOrig,attr" bson:"FolioFiscalOriginal,omitempty"`
+	FolioFiscalOriginal                           *string      `bson:"FolioFiscalOriginal,omitempty"`
+	FolioFiscalOrig                               *string      `xml:"FolioFiscalOrig,attr" bson:"FolioFiscalOrig,omitempty"`
 	SerieFolioFiscalOriginal                      *string      `xml:"SerieFolioFiscalOrig,attr" bson:"SerieFolioFiscalOriginal,omitempty"`
-	FechaFolioFiscalOriginal                      *string      `xml:"FechaFolioFiscalOrig,attr" bson:"FechaFolioFiscalOriginal,omitempty"`
-	MontoFolioFiscalOriginal                      *string      `xml:"MontoFolioFiscalOrig,attr" bson:"MontoFolioFiscalOriginal,omitempty"`
+	FechaFolioFiscalOriginal                      *time.Time   `bson:"FechaFolioFiscalOriginal,omitempty"`
+	FechaFolioFiscalOrig                          *string      `xml:"FechaFolioFiscalOrig,attr" bson:"FechaFolioFiscalOrig,omitempty"`
+	MontoFolioFiscalOriginal                      *float64     `xml:"MontoFolioFiscalOrig,attr" bson:"MontoFolioFiscalOriginal,omitempty"`
 	Emisor                                        Emisor32     `xml:"Emisor" bson:"Emisor"`
 	Receptor                                      Receptor32   `xml:"Receptor" bson:"Receptor"`
 	Conceptos                                     []Concepto32 `xml:"Conceptos>Concepto" bson:"Conceptos"`
@@ -97,10 +99,33 @@ type Concepto32 struct {
 }
 
 type InformacionAduanera32 struct {
-	Numero    string    `xml:"numero,attr" bson:"Numero"`
-	Fecha     string    `xml:"fecha,attr" bson:"Fecha"`
-	FechaDate time.Time `bson:"Fecha"`
-	Aduana    *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
+	Numero      string    `xml:"numero,attr" bson:"Numero"`
+	FechaString string    `xml:"fecha,attr" bson:"fecha"`
+	Fecha       time.Time `bson:"Fecha"`
+	Aduana      *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
+}
+
+func (ia32 *InformacionAduanera32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	// Create an alias to avoid recursion
+	type Alias InformacionAduanera32
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	
+	*ia32 = InformacionAduanera32(aux)
+
+	if ia32 != nil {
+		fecha, err := helpers.ParseDatetime(ia32.FechaString)
+		if err != nil {
+			return err
+		}
+		ia32.Fecha = fecha
+	}
+
+	return nil
 }
 
 type CuentaPredial32 struct {
@@ -151,6 +176,12 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	}
 
 	*c = Comprobante32(aux)
+
+	if aux.FolioFiscalOrig != nil {
+		folioOriginal := strings.ToUpper(*aux.FolioFiscalOrig)
+		c.FolioFiscalOriginal = &folioOriginal
+	}
+
 	c.FechaEmision = fechaEmision
 	c.Comprobante = true
 	c.Vigente = nil
@@ -170,28 +201,6 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		}
 	}
 	c.CadenaOriginal = helpers.CreateCadenaOriginal(*c)
-
-	return nil
-}
-
-func (ia32 *InformacionAduanera32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
-	// Create an alias to avoid recursion
-	type Alias InformacionAduanera32
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-	*ia32 = InformacionAduanera32(aux)
-
-	if ia32 != nil {
-		fecha, err := helpers.ParseDatetime(ia32.Fecha)
-		if err != nil {
-			return err
-		}
-		ia32.FechaDate = fecha
-	}
 
 	return nil
 }

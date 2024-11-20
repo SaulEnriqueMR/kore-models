@@ -35,7 +35,7 @@ type DocumentoRelacionadoGastoHidrocar10 struct {
 	ClavePagoPedimentoVinculado     *string   `xml:"ClavePagoPedimentoVinculado,attr" bson:"ClavePagoPedimentoVinculado,omitempty"`
 	MontoIvaPedimento               *float64  `xml:"MontoIVAPedimento,attr" bson:"MontoIvaPedimento,omitempty"`
 	OtrosImpuestosPagadosPedimento  *float64  `xml:"OtrosImpuestosPagadosPedimento,attr" bson:"OtrosImpuestosPagadosPedimento,omitempty"`
-	FechaFolioFiscalVinculadoString *string   `xml:"FechaFolioFiscalVinculado,attr"`
+	FechaFolioFiscalVinculadoString *string   `xml:"FechaFolioFiscalVinculado,attr" bson:"FechaFolioFiscalVinculadoString"`
 	FechaFolioFiscalVinculado       time.Time `bson:"FechaFolioFiscalVinculado,omitempty"`
 	Mes                             string    `xml:"Mes,attr" bson:"Mes"`
 	MontoTotalErogaciones           float64   `xml:"MontoTotalErogaciones,attr" bson:"MontoTotalErogaciones,omitempty"`

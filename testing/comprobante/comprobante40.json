@@ -1,7 +1,7 @@
 {
-    "FechaEmision": "2024-04-29T00:00:55Z",
+    "FechaEmision": "2024-04-29T00:00:55-06:00",
     "Uuid": "3EA43E97-71BF-4AC5-A28E-9374EA9F8B45",
-    "FechaTimbrado": "2024-04-29T10:46:30Z",
+    "FechaTimbrado": "2024-04-29T10:46:30-06:00",
     "CadenaOriginal": "||4.0|2024-04-29T00:00:55|200.000000|MXN|199.960000|I|01|20000|EKU9003173C9|ESCUELA KEMPER URGATE|601|URE180429TM6|UNIVERSIDAD ROBOTICA ESPAÑOLA|86991|601|G01|SPR190613I52|50211503|1.000000|H87|Cigarros|200.000000|200.000000|02|50211503|1.000000|H87|Cigarros|200.000000|200.000000|02|1.000000|002|Tasa|1.000000|001|Tasa|0.100000|0.100000|51241200|1.000000|ACEITE AJONJOLI|1.000000|002|Tasa|1.1|3ea43e97-71bf-4ac5-a28e-9374ea9f8b45|2024-04-29T10:46:30|SPR190613I52||",
     "Comprobante": true,
     "Transaccion": "",
@@ -150,7 +150,7 @@
                 "Version": "1.1",
                 "Uuid": "3ea43e97-71bf-4ac5-a28e-9374ea9f8b45",
                 "Fecha": "2024-04-29T10:46:30",
-                "FechaTimbrado": "2024-04-29T10:46:30Z",
+                "FechaTimbrado": "2024-04-29T10:46:30-06:00",
                 "RfcProvCertif": "SPR190613I52",
                 "Leyenda": null,
                 "SelloCfd": "AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3",

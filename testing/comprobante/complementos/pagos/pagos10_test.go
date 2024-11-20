@@ -51,11 +51,13 @@ func InternalTestPagos10(t *testing.T, pagos []pagos10.PagoPagos10) {
 	InternalTestDoctoRelacionadoPagos10(t, pago.DocumentosRelacionados)
 	InternalTestImpuestosPagos10(t, pago.Impuestos)
 }
+
 func InternalTestDoctoRelacionadoPagos10(t *testing.T, documentos *[]pagos10.DoctoRelacionadoPagos10) {
 	assert.NotNil(t, documentos)
 	assert.Equal(t, len(*documentos), 3)
 	documento := (*documentos)[1]
-	assert.Equal(t, "456e1234-e89b-12d3-a456-426614174001", documento.IdDocumento)
+	assert.Equal(t, "456e1234-e89b-12d3-a456-426614174001", documento.IdDocumentoString)
+	assert.Equal(t, "456E1234-E89B-12D3-A456-426614174001", documento.IdDocumento)
 	assert.Equal(t, "B", *documento.Serie)
 	assert.Equal(t, "0002", *documento.Folio)
 	assert.Equal(t, "USD", documento.Moneda)

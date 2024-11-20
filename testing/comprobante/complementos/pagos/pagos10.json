@@ -20,7 +20,8 @@
             "SelloPago": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvD1X...",
             "DocumentosRelacionados": [
                 {
-                    "IdDocumento": "123e4567-e89b-12d3-a456-426614174000",
+                    "IdDocumentoString": "123e4567-e89b-12d3-a456-426614174000",
+                    "IdDocumento": "123E4567-E89B-12D3-A456-426614174000",
                     "Serie": "A",
                     "Folio": "0001",
                     "Moneda": "MXN",
@@ -32,7 +33,8 @@
                     "ImporteSaldoInsoluto": 1000
                 },
                 {
-                    "IdDocumento": "456e1234-e89b-12d3-a456-426614174001",
+                    "IdDocumentoString": "456e1234-e89b-12d3-a456-426614174001",
+                    "IdDocumento": "456E1234-E89B-12D3-A456-426614174001",
                     "Serie": "B",
                     "Folio": "0002",
                     "Moneda": "USD",
@@ -44,7 +46,8 @@
                     "ImporteSaldoInsoluto": 1000
                 },
                 {
-                    "IdDocumento": "789e0123-e89b-12d3-a456-426614174002",
+                    "IdDocumentoString": "789e0123-e89b-12d3-a456-426614174002",
+                    "IdDocumento": "789E0123-E89B-12D3-A456-426614174002",
                     "Serie": "C",
                     "Folio": "0003",
                     "Moneda": "EUR",

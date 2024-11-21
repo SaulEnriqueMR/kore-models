@@ -23,8 +23,8 @@ func TestFullNomina11(t *testing.T) {
 	InternalTestBaseAttributes(t, nomina)
 	InternalTestPercepciones(t, nomina.Percepciones)
 	InternalTestDeducciones(t, nomina.Deducciones)
-	InternalTestIncapacidad(t, nomina.Incapacidades)
-	InternalTestHorasExtra(t, nomina.HorasExtras)
+	InternalTestIncapacidades(t, nomina.Incapacidades)
+	InternalTestHorasExtras(t, nomina.HorasExtras)
 }
 
 func InternalTestBaseAttributes(t *testing.T, nomina nomina11.Nomina11) {
@@ -89,11 +89,25 @@ func InternalTestDeduccion(t *testing.T, deduccion *[]nomina11.DeduccionNomina11
 	assert.Equal(t, "ISR", deduccion1.Concepto)
 }
 
+func InternalTestIncapacidades(t *testing.T, incapacidades *[]nomina11.IncapacidadNomina11) {
+	assert.NotNil(t, incapacidades)
+	assert.Equal(t, len(*incapacidades), 2)
+	incapacidad1 := (*incapacidades)[0]
+	InternalTestIncapacidad(t, &incapacidad1)
+}
+
 func InternalTestIncapacidad(t *testing.T, incapacidad *nomina11.IncapacidadNomina11) {
 	assert.NotNil(t, incapacidad)
 	assert.Equal(t, 2.00, incapacidad.Dias)
 	assert.Equal(t, 001, incapacidad.Tipo)
 	assert.Equal(t, 200.0, incapacidad.Descuento)
+}
+
+func InternalTestHorasExtras(t *testing.T, extraNomina11 *[]nomina11.HorasExtraNomina11) {
+	assert.NotNil(t, extraNomina11)
+	assert.Equal(t, len(*extraNomina11), 2)
+	extraNomina1 := (*extraNomina11)[0]
+	InternalTestHorasExtra(t, &extraNomina1)
 }
 
 func InternalTestHorasExtra(t *testing.T, horaExtra *nomina11.HorasExtraNomina11) {

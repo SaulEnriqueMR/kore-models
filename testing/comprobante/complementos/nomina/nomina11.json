@@ -65,15 +65,30 @@
             }
         ]
     },
-    "Incapacidades": {
-        "Dias": 2,
-        "Tipo": 1,
-        "Descuento": 200
-    },
-    "HorasExtras": {
-        "Dias": 1,
-        "TipoHoras": "Dobles",
-        "HorasExtra": 2,
-        "ImportePagado": 100
-    }
+    "Incapacidades": [
+        {
+            "Dias": 2,
+            "Tipo": 1,
+            "Descuento": 200
+        },
+        {
+            "Dias": 2,
+            "Tipo": 1,
+            "Descuento": 200
+        }
+    ],
+    "HorasExtras": [
+        {
+            "Dias": 1,
+            "TipoHoras": "Dobles",
+            "HorasExtra": 2,
+            "ImportePagado": 100
+        },
+        {
+            "Dias": 1,
+            "TipoHoras": "Dobles",
+            "HorasExtra": 2,
+            "ImportePagado": 100
+        }
+    ]
 }

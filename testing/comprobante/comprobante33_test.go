@@ -39,7 +39,7 @@ func InternalTestFullAtributesComprobante33(t *testing.T, comprobante33 comproba
 	assert.Equal(t, "12345678901234567890", comprobante33.NoCertificado)
 	assert.Equal(t, "Base64Certificado", comprobante33.Certificado)
 	assert.Equal(t, "Contado", *comprobante33.CondicionesPago)
-	assert.Equal(t, 1000.00, comprobante33.SubTotal)
+	assert.Equal(t, 1000.00, comprobante33.Subtotal)
 	assert.Equal(t, 50.00, *comprobante33.Descuento)
 	assert.Equal(t, "MXN", comprobante33.Moneda)
 	assert.Equal(t, 1.000000, *comprobante33.TipoCambio)

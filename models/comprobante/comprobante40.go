@@ -24,7 +24,7 @@ type Comprobante40 struct {
 	Descuento                                     *float64               `xml:"Descuento,attr" bson:"Descuento,omitempty" json:"Descuento"`
 	Moneda                                        string                 `xml:"Moneda,attr" bson:"Moneda" json:"Moneda"`
 	TipoCambio                                    *float64               `xml:"TipoCambio,attr" bson:"TipoCambio,omitempty" json:"TipoCambio"`
-	Total                                         float64                `xml:"Total,attr" bson:"Total" json:"Total"`
+	Total                                         Float                  `xml:"Total,attr" bson:"Total" json:"Total"`
 	TipoComprobante                               string                 `xml:"TipoDeComprobante,attr" bson:"TipoComprobante" json:"TipoComprobante"`
 	Exportacion                                   string                 `xml:"Exportacion,attr" bson:"Exportacion" json:"Exportacion"`
 	MetodoPago                                    *string                `xml:"MetodoPago,attr" bson:"MetodoPago,omitempty" json:"MetodoPago"`

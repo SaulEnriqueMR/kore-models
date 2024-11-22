@@ -161,8 +161,8 @@
     ],
     "LineItem": [
         {
-            "Type": "",
-            "Number": 0,
+            "Type": "SimpleInvoiceLineItemType",
+            "Number": 1,
             "TradeItemIdentification": {
                 "Gtin": "FGTSDF"
             },

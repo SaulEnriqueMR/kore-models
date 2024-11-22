@@ -242,7 +242,7 @@ func InternalTradeItemDescriptionInformation(t *testing.T, trade *detallista10.T
 func InternalInvoicedQuantity(t *testing.T, invoived detallista10.InvoicedQuantity) {
 	assert.NotNil(t, invoived)
 	assert.Equal(t, "PZA", invoived.UnitOfMeasure)
-	assert.Equal(t, 1, invoived.Value)
+	assert.Equal(t, 1.0, invoived.Value)
 }
 
 func InternalAditionalQuantity(t *testing.T, aditionals *[]detallista10.AditionalQuantity) {

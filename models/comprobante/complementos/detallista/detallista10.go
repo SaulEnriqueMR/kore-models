@@ -191,8 +191,8 @@ type MonetaryAmountOrPercentage struct {
 }
 
 type LineItem struct {
-	Type                             string                              `xml:"" bson:""`
-	Number                           int32                               `xml:"" bson:""`
+	Type                             *string                             `xml:"type,attr" bson:"Type"`
+	Number                           *int32                              `xml:"number,attr" bson:"Number"`
 	TradeItemIdentification          *TradeItemIdentification            `xml:"tradeItemIdentification" bson:"TradeItemIdentification,omitempty"`
 	AlternateTradeItemIdentification *[]AlternateTradeItemIdentification `xml:"alternateTradeItemIdentification" bson:"AlternateTradeItemIdentification,omitempty"`
 	TradeItemDescriptionInformation  *TradeItemDescriptionInformation    `xml:"tradeItemDescriptionInformation" bson:"TradeItemDescriptionInformation,omitempty"`
@@ -225,8 +225,8 @@ type TradeItemDescriptionInformation struct {
 }
 
 type InvoicedQuantity struct {
-	UnitOfMeasure string `xml:"unitOfMeasure,attr" bson:"UnitOfMeasure"`
-	Value         int    `xml:",chardata" bson:"Value"`
+	UnitOfMeasure string  `xml:"unitOfMeasure,attr" bson:"UnitOfMeasure"`
+	Value         float64 `xml:",chardata" bson:"Value"`
 }
 
 type AditionalQuantity struct {

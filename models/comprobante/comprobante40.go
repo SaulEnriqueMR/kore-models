@@ -41,11 +41,11 @@ type Comprobante40 struct {
 }
 
 func (c *Comprobante40) DefineTransaccion(rfc string) {
-	if c.Emisor.Rfc == rfc {
-		c.Transaccion = "EMITIDO"
-	}
 	if c.Receptor.Rfc == rfc {
 		c.Transaccion = "RECIBIDO"
+	}
+	if c.Emisor.Rfc == rfc {
+		c.Transaccion = "EMITIDO"
 	}
 }
 

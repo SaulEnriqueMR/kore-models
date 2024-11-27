@@ -46,11 +46,11 @@ type Comprobante32 struct {
 }
 
 func (c *Comprobante32) DefineTransaccion(rfc string) {
-	if c.Emisor.Rfc == rfc {
-		c.Transaccion = "EMITIDO"
-	}
 	if c.Receptor.Rfc == rfc {
 		c.Transaccion = "RECIBIDO"
+	}
+	if c.Emisor.Rfc == rfc {
+		c.Transaccion = "EMITIDO"
 	}
 }
 
@@ -114,7 +114,7 @@ func (ia32 *InformacionAduanera32) UnmarshalXML(d *xml.Decoder, start xml.StartE
 	if err := d.DecodeElement(&aux, &start); err != nil {
 		return err
 	}
-	
+
 	*ia32 = InformacionAduanera32(aux)
 
 	if ia32 != nil {

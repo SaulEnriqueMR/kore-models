@@ -2,10 +2,11 @@ package retenciones
 
 import (
 	"encoding/xml"
-	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
-	date "github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"strconv"
 	"strings"
+
+	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
+	date "github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
 type Retenciones20 struct {
@@ -28,11 +29,11 @@ type Retenciones20 struct {
 }
 
 func (c *Retenciones20) DefineTransaccion(rfc string) {
-	if c.Emisor.Rfc == rfc {
-		c.Transaccion = "EMITIDO"
-	}
 	if c.Receptor.Nacional.Rfc == rfc {
 		c.Transaccion = "RECIBIDO"
+	}
+	if c.Emisor.Rfc == rfc {
+		c.Transaccion = "EMITIDO"
 	}
 }
 
@@ -54,7 +55,7 @@ func (rr *RetencionRelacionada20) UnmarshalXML(d *xml.Decoder, start xml.StartEl
 
 	*rr = RetencionRelacionada20(aux)
 	rr.Uuid = strings.ToUpper(aux.UUID)
-	
+
 	return nil
 }
 

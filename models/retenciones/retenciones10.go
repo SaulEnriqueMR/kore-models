@@ -27,11 +27,11 @@ type Retenciones10 struct {
 }
 
 func (c *Retenciones10) DefineTransaccion(rfc string) {
-	if c.Emisor.Rfc == rfc {
-		c.Transaccion = "EMITIDO"
-	}
 	if c.Receptor.Nacional.Rfc == rfc {
 		c.Transaccion = "RECIBIDO"
+	}
+	if c.Emisor.Rfc == rfc {
+		c.Transaccion = "EMITIDO"
 	}
 }
 

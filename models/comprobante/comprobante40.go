@@ -47,6 +47,9 @@ func (c *Comprobante40) DefineTransaccion(rfc string) {
 	if c.Emisor.Rfc == rfc {
 		c.Transaccion = "EMITIDO"
 	}
+	if c.Receptor.Rfc == rfc && c.Emisor.Rfc == rfc {
+		c.Transaccion = "AUTOFACTURACION"
+	}
 }
 
 type InformacionGlobal40 struct {

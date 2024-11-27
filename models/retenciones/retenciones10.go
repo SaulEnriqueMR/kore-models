@@ -33,6 +33,9 @@ func (c *Retenciones10) DefineTransaccion(rfc string) {
 	if c.Emisor.Rfc == rfc {
 		c.Transaccion = "EMITIDO"
 	}
+	if c.Receptor.Nacional.Rfc == rfc && c.Emisor.Rfc == rfc {
+		c.Transaccion = "AUTOFACTURACION"
+	}
 }
 
 type Emisor10 struct {

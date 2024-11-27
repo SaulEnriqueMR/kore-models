@@ -17,6 +17,7 @@ type ComprobanteMetadata struct {
 	Metadata        bool              `bson:"Metadata" json:"Metadata"`
 	// FechaCancelacion *time.Time        `bson:"FechaCancelacion,omitempty" json:"FechaCancelacion,omitempty"`
 	Cancelacion *Cancelacion `xml:"Cancelacion" bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
+	Transaccion string       `bson:"Transaccion"`
 }
 
 type Cancelacion struct {

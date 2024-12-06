@@ -52,7 +52,7 @@ func (c *Comprobante33) DefineTransaccion(rfc string) {
 
 type CfdiRelacionados33 struct {
 	TipoRelacion     string              `xml:"TipoRelacion,attr" bson:"TipoRelacion" json:"TipoRelacion"`
-	UuidRelacionados []UuidRelacionado33 `xml:"CfdiRelacionado" bson:"UuidRelacionados" json:"UuidRelacionados"`
+	UuidRelacionados []UuidRelacionado33 `xml:"CfdiRelacionado" bson:"UuidsRelacionados" json:"UuidsRelacionados"`
 }
 
 type UuidRelacionado33 struct {

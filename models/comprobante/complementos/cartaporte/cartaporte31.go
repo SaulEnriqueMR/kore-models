@@ -257,7 +257,7 @@ type TransporteMaritimoCartaPorte31 struct {
 	NoOmi                     string                    `xml:"NumeroOMI,attr" bson:"NoOmi"`
 	AnioEmbarcacion           *float64                  `xml:"AnioEmbarcacion,attr" bson:"AnioEmbarcacion,omitempty"`
 	NombreEmbarcacion         *string                   `xml:"NombreEmbarc,attr" bson:"NombreEmbarcacion,omitempty"`
-	NacionalidadEmbarcion     string                    `xml:"NacionalidadEmbarc,attr" bson:"NacionalidadEmbarcion"`
+	NacionalidadEmbarcacion   string                    `xml:"NacionalidadEmbarc,attr" bson:"NacionalidadEmbarcacion"`
 	UnidadesArqueoBruto       float64                   `xml:"UnidadesDeArqBruto,attr" bson:"UnidadesArqueoBruto"`
 	TipoCarga                 string                    `xml:"TipoCarga,attr" bson:"TipoCarga"`
 	Eslora                    *float64                  `xml:"Eslora,attr" bson:"Eslora,omitempty"`

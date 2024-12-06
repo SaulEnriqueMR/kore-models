@@ -210,7 +210,7 @@ func InternalTestTransporteMaritimo30(t *testing.T, transporte *cartaporte1.Tran
 	assert.Equal(t, "IMO1234567", transporte.NoOmi)
 	assert.Equal(t, 2020.0, *transporte.AnioEmbarcacion)
 	assert.Equal(t, "Embarcación del Mar", *transporte.NombreEmbarcacion)
-	assert.Equal(t, "MX", transporte.NacionalidadEmbarcion)
+	assert.Equal(t, "MX", transporte.NacionalidadEmbarcacion)
 	assert.Equal(t, 100.500, transporte.UnidadesArqueoBruto)
 	assert.Equal(t, "CargaGeneral", transporte.TipoCarga)
 	assert.Equal(t, 150.25, *transporte.Eslora)

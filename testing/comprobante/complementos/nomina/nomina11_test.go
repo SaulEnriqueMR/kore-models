@@ -67,7 +67,7 @@ func InternalTestPercepcion(t *testing.T, percepciones []nomina11.PercepcionNomi
 	assert.Equal(t, "Sueldo Base", percepcion.Concepto)
 	assert.Equal(t, 1000.00, percepcion.ImporteExento)
 	assert.Equal(t, 15000.00, percepcion.ImporteGravado)
-	assert.Equal(t, 001, percepcion.TipoPercepcion)
+	assert.Equal(t, 001, percepcion.Tipo)
 
 }
 
@@ -83,7 +83,7 @@ func InternalTestDeduccion(t *testing.T, deduccion *[]nomina11.DeduccionNomina11
 	assert.Equal(t, len(*deduccion), 2)
 	deduccion1 := (*deduccion)[0]
 	assert.Equal(t, "001", deduccion1.Clave)
-	assert.Equal(t, 001, deduccion1.TipoDeduccion)
+	assert.Equal(t, 001, deduccion1.Tipo)
 	assert.Equal(t, 0.00, deduccion1.ImporteExento)
 	assert.Equal(t, 500.00, deduccion1.ImporteGravado)
 	assert.Equal(t, "ISR", deduccion1.Concepto)

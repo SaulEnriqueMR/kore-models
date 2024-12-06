@@ -100,7 +100,7 @@ type PercepcionesNomina12 struct {
 }
 
 type PercepcionNomina12 struct {
-	TipoPercepcion   string                    `xml:"TipoPercepcion,attr" bson:"Tipo"`
+	Tipo             string                    `xml:"TipoPercepcion,attr" bson:"Tipo"`
 	Clave            string                    `xml:"Clave,attr" bson:"Clave"`
 	Concepto         string                    `xml:"Concepto,attr" bson:"Concepto"`
 	ImporteGravado   float64                   `xml:"ImporteGravado,attr" bson:"ImporteGravado"`

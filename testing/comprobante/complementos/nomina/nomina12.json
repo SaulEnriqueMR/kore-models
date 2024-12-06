@@ -59,7 +59,7 @@
         "TotalExento": 3000,
         "Percepcion": [
             {
-                "TipoPercepcion": "001",
+                "Tipo": "001",
                 "Clave": "12345",
                 "Concepto": "Sueldo Mensual",
                 "ImporteGravado": 15000,
@@ -78,7 +78,7 @@
                 ]
             },
             {
-                "TipoPercepcion": "039",
+                "Tipo": "039",
                 "Clave": "67890",
                 "Concepto": "Pensión",
                 "ImporteGravado": 0,

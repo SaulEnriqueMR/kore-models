@@ -2,6 +2,7 @@ package complementos
 
 import (
 	"encoding/xml"
+	"log"
 	"testing"
 
 	donatarias2 "github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/donatarias"
@@ -26,6 +27,7 @@ func TestDonatarias11(t *testing.T) {
 func InternalTestFullAtributesDonatarias11(t *testing.T, donatarias donatarias2.Donatarias11) {
 	assert.Equal(t, "1.1", donatarias.Version)
 	assert.Equal(t, "SP-DF-12345", donatarias.NoAutorizacion)
-	assert.Equal(t, "2014-01-01", donatarias.FechaAutString)
+	assert.Equal(t, "2014-01-01+06:00", donatarias.FechaAutString)
+	log.Println(donatarias.FechaAutString, donatarias.FechaAutorizacion)
 	assert.Equal(t, "Este importe corresponde a una donación", donatarias.Leyenda)
 }

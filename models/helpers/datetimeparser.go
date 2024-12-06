@@ -12,6 +12,7 @@ var (
 	Rfc3339DatetimeLayout = "2006-01-02"
 	IsoDateRegex          = `^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$`
 	Rfc3339Regex          = `^\d{4}-\d{2}-\d{2}$`
+	XsDateRegex           = `^\d{4}-\d{2}-\d{2}(Z|([+-]\d{2}:\d{2}))?$`
 )
 
 var MexicoLocation, errLocation = time.LoadLocation("Mexico/General")
@@ -36,6 +37,14 @@ func ParseDatetime(s string) (time.Time, error) {
 	if patternRFC.MatchString(s) {
 		isoDate, err := time.ParseInLocation(Rfc3339DatetimeLayout, trimmedString, MexicoLocation)
 		return isoDate, err
+	}
+
+	// xs:date
+	patternXsDate := regexp.MustCompile(XsDateRegex)
+	if patternXsDate.MatchString(trimmedString) {
+		// Parse as RFC3339 date with midnight time added
+		parsedTime, err := time.Parse(time.RFC3339, trimmedString[:10]+"T00:00:00"+trimmedString[10:])
+		return parsedTime, err
 	}
 
 	// Caso extraordinario Retenciones 1.0. Ejemplo "2019-10-20T16:35:28-06:00")

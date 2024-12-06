@@ -48,7 +48,7 @@ type PercepcionesNomina11 struct {
 }
 
 type PercepcionNomina11 struct {
-	TipoPercepcion int     `xml:"TipoPercepcion,attr" bson:"Tipo"`
+	Tipo           int     `xml:"TipoPercepcion,attr" bson:"Tipo"`
 	Clave          string  `xml:"Clave,attr" bson:"Clave"`
 	Concepto       string  `xml:"Concepto,attr" bson:"Concepto"`
 	ImporteGravado float64 `xml:"ImporteGravado,attr" bson:"ImporteGravado"`
@@ -62,7 +62,7 @@ type DeduccionesNomina11 struct {
 }
 
 type DeduccionNomina11 struct {
-	TipoDeduccion  int     `xml:"TipoDeduccion,attr" bson:"Tipo"`
+	Tipo           int     `xml:"TipoDeduccion,attr" bson:"Tipo"`
 	Clave          string  `xml:"Clave,attr" bson:"Clave"`
 	Concepto       string  `xml:"Concepto,attr" bson:"Concepto"`
 	ImporteGravado float64 `xml:"ImporteGravado,attr" bson:"ImporteGravado"`

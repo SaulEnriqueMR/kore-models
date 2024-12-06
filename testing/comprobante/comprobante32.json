@@ -5525,14 +5525,14 @@
                         "TotalExento": 1000,
                         "Percepcion": [
                             {
-                                "TipoPercepcion": 1,
+                                "Tipo": 1,
                                 "Clave": "001",
                                 "Concepto": "Sueldo Base",
                                 "ImporteGravado": 15000,
                                 "ImporteExento": 1000
                             },
                             {
-                                "TipoPercepcion": 1,
+                                "Tipo": 1,
                                 "Clave": "001",
                                 "Concepto": "Sueldo Base",
                                 "ImporteGravado": 15000,
@@ -5545,14 +5545,14 @@
                         "TotalExento": 0,
                         "Deduccion": [
                             {
-                                "TipoDeduccion": 1,
+                                "Tipo": 1,
                                 "Clave": "001",
                                 "Concepto": "ISR",
                                 "ImporteGravado": 500,
                                 "ImporteExento": 0
                             },
                             {
-                                "TipoDeduccion": 1,
+                                "Tipo": 1,
                                 "Clave": "001",
                                 "Concepto": "ISR",
                                 "ImporteGravado": 500,
@@ -5619,14 +5619,14 @@
                         "TotalExento": 1000,
                         "Percepcion": [
                             {
-                                "TipoPercepcion": 1,
+                                "Tipo": 1,
                                 "Clave": "001",
                                 "Concepto": "Sueldo Base",
                                 "ImporteGravado": 15000,
                                 "ImporteExento": 1000
                             },
                             {
-                                "TipoPercepcion": 1,
+                                "Tipo": 1,
                                 "Clave": "001",
                                 "Concepto": "Sueldo Base",
                                 "ImporteGravado": 15000,
@@ -5639,14 +5639,14 @@
                         "TotalExento": 0,
                         "Deduccion": [
                             {
-                                "TipoDeduccion": 1,
+                                "Tipo": 1,
                                 "Clave": "001",
                                 "Concepto": "ISR",
                                 "ImporteGravado": 500,
                                 "ImporteExento": 0
                             },
                             {
-                                "TipoDeduccion": 1,
+                                "Tipo": 1,
                                 "Clave": "001",
                                 "Concepto": "ISR",
                                 "ImporteGravado": 500,
@@ -5744,7 +5744,7 @@
                         "TotalExento": 3000,
                         "Percepcion": [
                             {
-                                "TipoPercepcion": "001",
+                                "Tipo": "001",
                                 "Clave": "12345",
                                 "Concepto": "Sueldo Mensual",
                                 "ImporteGravado": 15000,
@@ -5763,7 +5763,7 @@
                                 ]
                             },
                             {
-                                "TipoPercepcion": "039",
+                                "Tipo": "039",
                                 "Clave": "67890",
                                 "Concepto": "Pensión",
                                 "ImporteGravado": 0,
@@ -5903,7 +5903,7 @@
                         "TotalExento": 3000,
                         "Percepcion": [
                             {
-                                "TipoPercepcion": "001",
+                                "Tipo": "001",
                                 "Clave": "12345",
                                 "Concepto": "Sueldo Mensual",
                                 "ImporteGravado": 15000,
@@ -5922,7 +5922,7 @@
                                 ]
                             },
                             {
-                                "TipoPercepcion": "039",
+                                "Tipo": "039",
                                 "Clave": "67890",
                                 "Concepto": "Pensión",
                                 "ImporteGravado": 0,

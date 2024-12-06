@@ -104,7 +104,7 @@ func InternalTestPercepcion12(t *testing.T, percepciones []nomina12.PercepcionNo
 	assert.NotNil(t, percepciones)
 	percepcion := percepciones[0]
 	assert.NotNil(t, percepcion)
-	assert.Equal(t, "001", percepcion.TipoPercepcion)
+	assert.Equal(t, "001", percepcion.Tipo)
 	assert.Equal(t, "12345", percepcion.Clave)
 	assert.Equal(t, "Sueldo Mensual", percepcion.Concepto)
 	assert.Equal(t, 15000.00, percepcion.ImporteGravado)

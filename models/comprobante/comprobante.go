@@ -16,7 +16,7 @@ func (c *Comprobante) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 	var Version string
 
 	for _, attributes := range start.Attr {
-		if attributes.Name.Local == "Version" {
+		if strings.ToLower(attributes.Name.Local) == "version" {
 			Version = attributes.Value
 			Version = strings.TrimSpace(Version)
 			break

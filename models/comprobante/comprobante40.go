@@ -59,8 +59,8 @@ type InformacionGlobal40 struct {
 }
 
 type CfdisRelacionados40 struct {
-	TipoRelacion     string              `xml:"TipoRelacion,attr" bson:"TipoRelacion" json:"TipoRelacion"`
-	UuidRelacionados []UuidRelacionado40 `xml:"CfdiRelacionado" bson:"UuidsRelacionados" json:"UuidRelacionados"`
+	TipoRelacion      string              `xml:"TipoRelacion,attr" bson:"TipoRelacion" json:"TipoRelacion"`
+	UuidsRelacionados []UuidRelacionado40 `xml:"CfdiRelacionado" bson:"UuidsRelacionados" json:"UuidsRelacionados"`
 }
 
 type UuidRelacionado40 struct {

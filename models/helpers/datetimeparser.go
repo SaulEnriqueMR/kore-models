@@ -16,6 +16,7 @@ var (
 )
 
 var MexicoLocation, errLocation = time.LoadLocation("Mexico/General")
+var UTC = time.UTC
 
 // ParseDatetime Función encargada de la conversión de los formatos de fechas utilizados por el SAT.
 // Aún queda como incognita si el SAT utiliza más formatos pero de momento son los identificados
@@ -28,14 +29,14 @@ func ParseDatetime(s string) (time.Time, error) {
 	// Primero checamos si coincide con el layout de ISO.
 	patternISO := regexp.MustCompile(IsoDateRegex)
 	if patternISO.MatchString(s) {
-		isoDate, err := time.ParseInLocation(IsoDatetimeLayout, trimmedString, MexicoLocation)
+		isoDate, err := time.ParseInLocation(IsoDatetimeLayout, trimmedString, UTC)
 		return isoDate, err
 	}
 
 	// En caso de que no, probamos con el RFC3339.
 	patternRFC := regexp.MustCompile(Rfc3339Regex)
 	if patternRFC.MatchString(s) {
-		isoDate, err := time.ParseInLocation(Rfc3339DatetimeLayout, trimmedString, MexicoLocation)
+		isoDate, err := time.ParseInLocation(Rfc3339DatetimeLayout, trimmedString, UTC)
 		return isoDate, err
 	}
 
@@ -43,13 +44,13 @@ func ParseDatetime(s string) (time.Time, error) {
 	patternXsDate := regexp.MustCompile(XsDateRegex)
 	if patternXsDate.MatchString(trimmedString) {
 		// Parse as RFC3339 date with midnight time added
-		parsedTime, err := time.Parse(time.RFC3339, trimmedString[:10]+"T00:00:00"+trimmedString[10:])
+		parsedTime, err := time.ParseInLocation(time.RFC3339, trimmedString[:10]+"T00:00:00"+trimmedString[10:], UTC)
 		return parsedTime, err
 	}
 
 	// Caso extraordinario Retenciones 1.0. Ejemplo "2019-10-20T16:35:28-06:00")
 	layout := time.RFC3339
-	parsedTime, err := time.ParseInLocation(layout, trimmedString, MexicoLocation)
+	parsedTime, err := time.ParseInLocation(layout, trimmedString, UTC)
 	if err == nil {
 		return parsedTime, err
 	}

@@ -108,7 +108,7 @@ type ImpuestosPagos20 struct {
 
 type RetencionPagos20 struct {
 	Impuesto string  `xml:"ImpuestoP,attr" bson:"Impuesto"`
-	Importe  float32 `xml:"ImporteP,attr" bson:"Importe"`
+	Importe  float64 `xml:"ImporteP,attr" bson:"Importe"`
 }
 
 type TrasladoPagos20 struct {

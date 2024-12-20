@@ -54,8 +54,8 @@ func InternalTestFullAtributesCfdiRelacionados(t *testing.T, relacionados33 comp
 	assert.NotNil(t, relacionados33)
 	assert.Equal(t, "01", relacionados33.TipoRelacion)
 	//Prueba del atributo UUID del nodo CfdiRelacionado
-	assert.Equal(t, "123e4567-e89b-12d3-a456-426614174000", relacionados33.UuidRelacionados[0].UUID)
-	assert.Equal(t, "123E4567-E89B-12D3-A456-426614174000", relacionados33.UuidRelacionados[0].Uuid)
+	assert.Equal(t, "123e4567-e89b-12d3-a456-426614174000", relacionados33.UuidsRelacionados[0].UUID)
+	assert.Equal(t, "123E4567-E89B-12D3-A456-426614174000", relacionados33.UuidsRelacionados[0].Uuid)
 }
 
 func InternalTestFullAtributesEmisorComprobante33(t *testing.T, emisor33 comprobante3.Emisor33) {

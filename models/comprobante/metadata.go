@@ -16,8 +16,9 @@ type ComprobanteMetadata struct {
 	RfcProvCertif   string            `bson:"RfcProvCertif" json:"RfcProvCertif"`
 	Metadata        bool              `bson:"Metadata" json:"Metadata"`
 	// FechaCancelacion *time.Time        `bson:"FechaCancelacion,omitempty" json:"FechaCancelacion,omitempty"`
-	Cancelacion *Cancelacion `xml:"Cancelacion" bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
-	Transaccion string       `bson:"Transaccion"`
+	Cancelacion        *Cancelacion       `xml:"Cancelacion" bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
+	Transaccion        string             `bson:"Transaccion"`
+	TotalesMonedaLocal TotalesMonedaLocal `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
 }
 
 type Cancelacion struct {
@@ -38,4 +39,9 @@ type PagoTercerosMetadata struct {
 type ComprobanteTerceros struct {
 	Uuid     string              `bson:"Uuid" json:"UuidComprobante"`
 	Terceros []RfcEmisorReceptor `bson:"Terceros" json:"Terceros"`
+}
+
+type TotalesMonedaLocal struct {
+	Total    float64 `bson:"Total"`
+	Subtotal float64 `bson:"Subtotal"`
 }

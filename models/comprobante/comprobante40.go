@@ -227,6 +227,37 @@ func (c *Comprobante40) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	}
 
 	c.CadenaOriginal = helpers.CreateCadenaOriginal(*c)
+
+	tipoCambio := 1.0
+	// Calculo de totales
+	if c.TipoCambio != nil {
+		tipoCambio = *c.TipoCambio
+	}
+
+	totalesMonedaLocal := documentofiscaldigital.TotalesMonedaLocal{
+		Total:    c.Total * tipoCambio,
+		Subtotal: c.Subtotal * tipoCambio,
+	}
+
+	if c.Descuento != nil {
+		descuento := *c.Descuento * tipoCambio
+		totalesMonedaLocal.Descuento = &descuento
+	}
+
+	if c.Impuestos != nil {
+		if c.Impuestos.TotalImpuestosRetenidos != nil {
+			tir := *c.Impuestos.TotalImpuestosRetenidos * tipoCambio
+			totalesMonedaLocal.TotalImpuestosRetenidos = &tir
+		}
+
+		if c.Impuestos.TotalImpuestosTrasladados != nil {
+			tit := *c.Impuestos.TotalImpuestosTrasladados * tipoCambio
+			totalesMonedaLocal.TotalImpuestosTrasladados = &tit
+		}
+	}
+
+	c.TotalesMonedaLocal = totalesMonedaLocal
+
 	return nil
 }
 

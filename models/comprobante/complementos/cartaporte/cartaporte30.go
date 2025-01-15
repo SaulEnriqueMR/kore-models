@@ -106,17 +106,15 @@ type MercanciasCartaPorte30 struct {
 }
 
 type MercanciaCartaPorte30 struct {
-	BienesTransportados string  `xml:"BienesTransp,attr" bson:"BienesTransportados"`
-	ClaveStcc           *string `xml:"ClaveSTCC,attr" bson:"ClaveStcc,omitempty"`
-	Descripcion         string  `xml:"Descripcion,attr" bson:"Descripcion"`
-	Cantidad            float64 `xml:"Cantidad,attr" bson:"Cantidad"`
-	ClaveUnidad         string  `xml:"ClaveUnidad,attr" bson:"ClaveUnidad"`
-	Unidad              *string `xml:"Unidad,attr" bson:"Unidad,omitempty"`
-	Dimensiones         *string `xml:"Dimensiones,attr" bson:"Dimensiones,omitempty"`
-
-	MaterialPeligroso   *string `xml:"MaterialPeligroso,attr" bson:"MaterialPeligroso,omitempty"`
-	EsMaterialPeligroso *bool   `bson:"EsMaterialPeligroso,omitempty"`
-
+	BienesTransportados                    string                               `xml:"BienesTransp,attr" bson:"BienesTransportados"`
+	ClaveStcc                              *string                              `xml:"ClaveSTCC,attr" bson:"ClaveStcc,omitempty"`
+	Descripcion                            string                               `xml:"Descripcion,attr" bson:"Descripcion"`
+	Cantidad                               float64                              `xml:"Cantidad,attr" bson:"Cantidad"`
+	ClaveUnidad                            string                               `xml:"ClaveUnidad,attr" bson:"ClaveUnidad"`
+	Unidad                                 *string                              `xml:"Unidad,attr" bson:"Unidad,omitempty"`
+	Dimensiones                            *string                              `xml:"Dimensiones,attr" bson:"Dimensiones,omitempty"`
+	MaterialPeligroso                      *string                              `xml:"MaterialPeligroso,attr" bson:"MaterialPeligroso,omitempty"`
+	EsMaterialPeligroso                    *bool                                `bson:"EsMaterialPeligroso,omitempty"`
 	ClaveMaterialPeligroso                 *string                              `xml:"CveMaterialPeligroso,attr" bson:"ClaveMaterialPeligroso,omitempty"`
 	Embalaje                               *string                              `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
 	DescripcionEmbalaje                    *string                              `xml:"DescripEmbalaje,attr" bson:"DescripcionEmbalaje,omitempty"`

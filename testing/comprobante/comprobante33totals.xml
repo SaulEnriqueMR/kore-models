@@ -1,0 +1,84 @@
+<Comprobante
+        Version="3.3"
+        Serie="A"
+        Folio="123456"
+        Fecha="2023-09-24T14:30:00"
+        Sello="Base64SelloDigital"
+        FormaPago="01"
+        NoCertificado="12345678901234567890"
+        Certificado="Base64Certificado"
+        CondicionesDePago="Contado"
+        SubTotal="200.00"
+        Descuento="100.00"
+        Moneda="MXN"
+        TipoCambio="20"
+        Total="200.00"
+        TipoDeComprobante="I"
+        MetodoPago="PUE"
+        LugarExpedicion="01234"
+        Confirmacion="ABCDE">
+    <CfdiRelacionados TipoRelacion="01">
+        <CfdiRelacionado UUID="123e4567-e89b-12d3-a456-426614174000"/>
+    </CfdiRelacionados>
+    <Emisor Rfc="XAXX010101000"
+            Nombre="Empresa Ejemplo S.A. de C.V."
+            RegimenFiscal="601"/>
+    <Receptor
+            Rfc="XAXX010101000"
+            Nombre="Juan Pérez"
+            ResidenciaFiscal="MEX"
+            NumRegIdTrib="1234567890"
+            UsoCFDI="G03"/>
+    <Conceptos>
+        <Concepto
+                ClaveProdServ="01010101"
+                NoIdentificacion="SKU12345"
+                Cantidad="10.000000"
+                ClaveUnidad="H87"
+                Unidad="Piezas"
+                Descripcion="Descripción del producto o servicio"
+                ValorUnitario="100.00"
+                Importe="1000.00"
+                Descuento="50.00">
+            <Impuestos>
+                <Traslados>
+                    <Traslado
+                            Base="1000.00"
+                            Impuesto="002"
+                            TipoFactor="Tasa"
+                            TasaOCuota="0.16"
+                            Importe="160.00"/>
+                </Traslados>
+                <Retenciones>
+                    <Retencion
+                            Base="1000.00"
+                            Impuesto="003"
+                            TipoFactor="Tasa"
+                            TasaOCuota="0.10"
+                            Importe="100.00"/>
+                </Retenciones>
+            </Impuestos>
+        </Concepto>
+    </Conceptos>
+    <Impuestos TotalImpuestosTrasladados="100.00">
+        <Retenciones>
+            <Retencion Impuesto="001" Importe="100.00" />
+        </Retenciones>
+        <Traslados>
+            <Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="200.00" />
+        </Traslados>
+    </Impuestos>
+    <Complemento>
+        <tfd:TimbreFiscalDigital
+                xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd"
+                xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                Version="1.1" UUID="3ea43e97-71bf-4ac5-a28e-9374ea9f8b45"
+                Leyenda="Leyenda SAT"
+                FechaTimbrado="2024-04-29T10:46:30"
+                RfcProvCertif="SPR190613I52"
+                SelloCFD="AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3"
+                NoCertificadoSAT="30001000000500003456"
+                SelloSAT="QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"/>
+    </Complemento>
+</Comprobante>

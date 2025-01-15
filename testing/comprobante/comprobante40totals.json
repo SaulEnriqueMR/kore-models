@@ -2,17 +2,17 @@
     "FechaEmision": "2024-04-29T00:00:55Z",
     "Uuid": "3EA43E97-71BF-4AC5-A28E-9374EA9F8B45",
     "FechaTimbrado": "2024-04-29T10:46:30Z",
-    "CadenaOriginal": "||4.0|2024-04-29T00:00:55|200.000000|MXN|199.960000|I|01|20000|EKU9003173C9|ESCUELA KEMPER URGATE|601|URE180429TM6|UNIVERSIDAD ROBOTICA ESPAÑOLA|86991|601|G01|SPR190613I52|50211503|1.000000|H87|Cigarros|200.000000|200.000000|02|50211503|1.000000|H87|Cigarros|200.000000|200.000000|02|1.000000|002|Tasa|1.000000|001|Tasa|0.100000|0.100000|51241200|1.000000|ACEITE AJONJOLI|1.000000|002|Tasa|1.1|3ea43e97-71bf-4ac5-a28e-9374ea9f8b45|2024-04-29T10:46:30|SPR190613I52||",
+    "CadenaOriginal": "||4.0|2024-04-29T00:00:55|200.000000|USD|20.000000|200.000000|I|01|20000|EKU9003173C9|ESCUELA KEMPER URGATE|601|URE180429TM6|UNIVERSIDAD ROBOTICA ESPAÑOLA|86991|601|G01|SPR190613I52|50211503|1.000000|H87|Cigarros|200.000000|200.000000|02|50211503|1.000000|H87|Cigarros|200.000000|200.000000|02|1.000000|002|Tasa|1.000000|001|Tasa|0.100000|0.100000|51241200|1.000000|ACEITE AJONJOLI|100.000000|100.000000|1.000000|002|Tasa|1.1|3ea43e97-71bf-4ac5-a28e-9374ea9f8b45|2024-04-29T10:46:30|SPR190613I52||",
     "Comprobante": true,
     "Transaccion": "",
     "XmlPath": "",
     "PdfPath": "",
     "TotalesMonedaLocal": {
-        "Total": 199.96,
-        "Subtotal": 200,
+        "Total": 4000,
+        "Subtotal": 4000,
         "Descuento": null,
-        "TotalImpuestosRetenidos": null,
-        "TotalImpuestosTrasladados": null
+        "TotalImpuestosRetenidos": 2000,
+        "TotalImpuestosTrasladados": 2000
     },
     "Version": "4.0",
     "Serie": null,
@@ -25,9 +25,9 @@
     "CondicionesPago": null,
     "Subtotal": 200,
     "Descuento": null,
-    "Moneda": "MXN",
-    "TipoCambio": null,
-    "Total": 199.96,
+    "Moneda": "USD",
+    "TipoCambio": 20,
+    "Total": 200,
     "TipoComprobante": "I",
     "Exportacion": "01",
     "MetodoPago": null,
@@ -120,8 +120,8 @@
         }
     ],
     "Impuestos": {
-        "TotalImpuestosRetenidos": null,
-        "TotalImpuestosTrasladados": null,
+        "TotalImpuestosRetenidos": 100,
+        "TotalImpuestosTrasladados": 100,
         "Retenciones": null,
         "Traslados": [
             {

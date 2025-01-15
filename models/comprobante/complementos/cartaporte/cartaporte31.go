@@ -96,7 +96,6 @@ type DomicilioCartaPorte31 struct {
 }
 
 type MercanciasCartaPorte31 struct {
-	// Attr
 	PesoBrutoTotal                        float64                            `xml:"PesoBrutoTotal,attr" bson:"PesoBrutoTotal"`
 	UnidadPeso                            string                             `xml:"UnidadPeso,attr" bson:"UnidadPeso"`
 	PesoNetoTotal                         *float64                           `xml:"PesoNetoTotal,attr" bson:"PesoNetoTotal,omitempty"`
@@ -112,54 +111,51 @@ type MercanciasCartaPorte31 struct {
 
 type MercanciaCartaPorte31 struct {
 	// Attrs
-	BienesTransportados string  `xml:"BienesTransp,attr" bson:"BienesTransportados"`
-	ClaveStcc           *string `xml:"ClaveSTCC,attr" bson:"ClaveStcc,omitempty"`
-	Descripcion         string  `xml:"Descripcion,attr" bson:"Descripcion"`
-	Cantidad            float64 `xml:"Cantidad,attr" bson:"Cantidad"`
-	ClaveUnidad         string  `xml:"ClaveUnidad,attr" bson:"ClaveUnidad"`
-	Unidad              *string `xml:"Unidad,attr" bson:"Unidad,omitempty"`
-	Dimensiones         *string `xml:"Dimensiones,attr" bson:"Dimensiones,omitempty"`
-
-	MaterialPeligroso   *string `xml:"MaterialPeligroso,attr" bson:"MaterialPeligroso,omitempty"`
-	EsMaterialPeligroso *bool   `bson:"EsMaterialPeligroso,omitempty"`
-
-	ClaveMaterialPeligroso                 *string    `xml:"CveMaterialPeligroso,attr" bson:"ClaveMaterialPeligroso,omitempty"`
-	Embalaje                               *string    `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
-	DescripcionEmbalaje                    *string    `xml:"DescripEmbalaje,attr" bson:"DescripcionEmbalaje,omitempty"`
-	SectorCofepris                         *string    `xml:"SectorCOFEPRIS,attr" bson:"SectorCofepris,omitempty"`
-	NombreIngredienteActivo                *string    `xml:"NombreIngredienteActivo,attr" bson:"NombreIngredienteActivo,omitempty"`
-	NombreQuimico                          *string    `xml:"NomQuimico,attr" bson:"NombreQuimico,omitempty"`
-	DenominacionGenericaProducto           *string    `xml:"DenominacionGenericaProd,attr" bson:"DenominacionGenericaProducto,omitempty"`
-	DenominacionDistintivaProducto         *string    `xml:"DenominacionDistintivaProd,attr" bson:"DenominacionDistintivaProducto,omitempty"`
-	Fabricante                             *string    `xml:"Fabricante,attr" bson:"Fabricante,omitempty"`
-	FechaCaducidadString                   *string    `xml:"FechaCaducidad,attr" bson:"FechaCaducidadString"`
-	FechaCaducidad                         *time.Time `bson:"FechaCaducidad,omitempty"`
-	LoteMedicamento                        *string    `xml:"LoteMedicamento,attr" bson:"LoteMedicamento,omitempty"`
-	FormaFarmaceutica                      *string    `xml:"FormaFarmaceutica,attr" bson:"FormaFarmaceutica,omitempty"`
-	CondicionesEspecialesTransporte        *string    `xml:"CondicionesEspTransp,attr" bson:"CondicionesEspecialesTransporte,omitempty"`
-	RegistroSanitarioFolioAutorizacion     *string    `xml:"RegistroSanitarioFolioAutorizacion,attr" bson:"RegistroSanitarioFolioAutorizacion,omitempty"`
-	PermisoImportacion                     *string    `xml:"PermisoImportacion,attr" bson:"PermisoImportacion,omitempty"`
-	FolioImportacionVucem                  *string    `xml:"FolioImpoVUCEM,attr" bson:"FolioImportacionVucem,omitempty"`
-	NoCas                                  *string    `xml:"NumCAS,attr" bson:"NoCas,omitempty"`
-	RazonSocialEmpresaImportadora          *string    `xml:"RazonSocialEmpImp,attr" bson:"RazonSocialEmpresaImportadora,omitempty"`
-	NoRegistroSanitarioPlaguicidasCofepris *string    `xml:"NumRegSanPlagCOFEPRIS,attr" bson:"NoRegistroSanitarioPlaguicidasCofepris,omitempty"`
-	DatosFabricante                        *string    `xml:"DatosFabricante,attr" bson:"DatosFabricante,omitempty"`
-	DatosFormulador                        *string    `xml:"DatosFormulador,attr" bson:"DatosFormulador,omitempty"`
-	DatosMaquilador                        *string    `xml:"DatosMaquilador,attr" bson:"DatosMaquilador,omitempty"`
-	UsoAutorizado                          *string    `xml:"UsoAutorizado,attr" bson:"UsoAutorizado,omitempty"`
-	PesoKg                                 float64    `xml:"PesoEnKg,attr" bson:"PesoKg"`
-	ValorMercancia                         *float64   `xml:"ValorMercancia,attr" bson:"ValorMercancia,omitempty"`
-	Moneda                                 *string    `xml:"Moneda,attr" bson:"Moneda,omitempty"`
-	FraccionArancelaria                    *string    `xml:"FraccionArancelaria,attr" bson:"FraccionArancelaria,omitempty"`
-	UUIDComercioExt                        *string    `xml:"UUIDComercioExt,attr" bson:"UUIDComercioExt,omitempty"`
-	UuidComercioExterior                   *string    `bson:"UuidComercioExterior,omitempty"`
-	TipoMateria                            *string    `xml:"TipoMateria,attr" bson:"TipoMateria,omitempty"`
-	DescripcionMateria                     *string    `xml:"DescripcionMateria,attr" bson:"DescripcionMateria,omitempty"`
-	// Nodos
-	DocumentacionAduanera *[]DocumentacionAduaneraCartaPorte31 `xml:"DocumentacionAduanera" bson:"DocumentacionAduanera,omitempty"`
-	GuiasIdentificacion   *[]GuiasIdentificacionCartaPorte31   `xml:"GuiasIdentificacion" bson:"GuiasIdentificacion,omitempty"`
-	CantidadTransporta    *[]CantidadTransporteCartaPorte31    `xml:"CantidadTransporta" bson:"CantidadTransporta,omitempty"`
-	DetalleMercancia      *DetalleMercanciaCartaPorte31        `xml:"DetalleMercancia" bson:"DetalleMercancia,omitempty"`
+	BienesTransportados                    string                               `xml:"BienesTransp,attr" bson:"BienesTransportados"`
+	ClaveStcc                              *string                              `xml:"ClaveSTCC,attr" bson:"ClaveStcc,omitempty"`
+	Descripcion                            string                               `xml:"Descripcion,attr" bson:"Descripcion"`
+	Cantidad                               float64                              `xml:"Cantidad,attr" bson:"Cantidad"`
+	ClaveUnidad                            string                               `xml:"ClaveUnidad,attr" bson:"ClaveUnidad"`
+	Unidad                                 *string                              `xml:"Unidad,attr" bson:"Unidad,omitempty"`
+	Dimensiones                            *string                              `xml:"Dimensiones,attr" bson:"Dimensiones,omitempty"`
+	MaterialPeligroso                      *string                              `xml:"MaterialPeligroso,attr" bson:"MaterialPeligroso,omitempty"`
+	EsMaterialPeligroso                    *bool                                `bson:"EsMaterialPeligroso,omitempty"`
+	ClaveMaterialPeligroso                 *string                              `xml:"CveMaterialPeligroso,attr" bson:"ClaveMaterialPeligroso,omitempty"`
+	Embalaje                               *string                              `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
+	DescripcionEmbalaje                    *string                              `xml:"DescripEmbalaje,attr" bson:"DescripcionEmbalaje,omitempty"`
+	SectorCofepris                         *string                              `xml:"SectorCOFEPRIS,attr" bson:"SectorCofepris,omitempty"`
+	NombreIngredienteActivo                *string                              `xml:"NombreIngredienteActivo,attr" bson:"NombreIngredienteActivo,omitempty"`
+	NombreQuimico                          *string                              `xml:"NomQuimico,attr" bson:"NombreQuimico,omitempty"`
+	DenominacionGenericaProducto           *string                              `xml:"DenominacionGenericaProd,attr" bson:"DenominacionGenericaProducto,omitempty"`
+	DenominacionDistintivaProducto         *string                              `xml:"DenominacionDistintivaProd,attr" bson:"DenominacionDistintivaProducto,omitempty"`
+	Fabricante                             *string                              `xml:"Fabricante,attr" bson:"Fabricante,omitempty"`
+	FechaCaducidadString                   *string                              `xml:"FechaCaducidad,attr" bson:"FechaCaducidadString"`
+	FechaCaducidad                         *time.Time                           `bson:"FechaCaducidad,omitempty"`
+	LoteMedicamento                        *string                              `xml:"LoteMedicamento,attr" bson:"LoteMedicamento,omitempty"`
+	FormaFarmaceutica                      *string                              `xml:"FormaFarmaceutica,attr" bson:"FormaFarmaceutica,omitempty"`
+	CondicionesEspecialesTransporte        *string                              `xml:"CondicionesEspTransp,attr" bson:"CondicionesEspecialesTransporte,omitempty"`
+	RegistroSanitarioFolioAutorizacion     *string                              `xml:"RegistroSanitarioFolioAutorizacion,attr" bson:"RegistroSanitarioFolioAutorizacion,omitempty"`
+	PermisoImportacion                     *string                              `xml:"PermisoImportacion,attr" bson:"PermisoImportacion,omitempty"`
+	FolioImportacionVucem                  *string                              `xml:"FolioImpoVUCEM,attr" bson:"FolioImportacionVucem,omitempty"`
+	NoCas                                  *string                              `xml:"NumCAS,attr" bson:"NoCas,omitempty"`
+	RazonSocialEmpresaImportadora          *string                              `xml:"RazonSocialEmpImp,attr" bson:"RazonSocialEmpresaImportadora,omitempty"`
+	NoRegistroSanitarioPlaguicidasCofepris *string                              `xml:"NumRegSanPlagCOFEPRIS,attr" bson:"NoRegistroSanitarioPlaguicidasCofepris,omitempty"`
+	DatosFabricante                        *string                              `xml:"DatosFabricante,attr" bson:"DatosFabricante,omitempty"`
+	DatosFormulador                        *string                              `xml:"DatosFormulador,attr" bson:"DatosFormulador,omitempty"`
+	DatosMaquilador                        *string                              `xml:"DatosMaquilador,attr" bson:"DatosMaquilador,omitempty"`
+	UsoAutorizado                          *string                              `xml:"UsoAutorizado,attr" bson:"UsoAutorizado,omitempty"`
+	PesoKg                                 float64                              `xml:"PesoEnKg,attr" bson:"PesoKg"`
+	ValorMercancia                         *float64                             `xml:"ValorMercancia,attr" bson:"ValorMercancia,omitempty"`
+	Moneda                                 *string                              `xml:"Moneda,attr" bson:"Moneda,omitempty"`
+	FraccionArancelaria                    *string                              `xml:"FraccionArancelaria,attr" bson:"FraccionArancelaria,omitempty"`
+	UUIDComercioExt                        *string                              `xml:"UUIDComercioExt,attr" bson:"UUIDComercioExt,omitempty"`
+	UuidComercioExterior                   *string                              `bson:"UuidComercioExterior,omitempty"`
+	TipoMateria                            *string                              `xml:"TipoMateria,attr" bson:"TipoMateria,omitempty"`
+	DescripcionMateria                     *string                              `xml:"DescripcionMateria,attr" bson:"DescripcionMateria,omitempty"`
+	DocumentacionAduanera                  *[]DocumentacionAduaneraCartaPorte31 `xml:"DocumentacionAduanera" bson:"DocumentacionAduanera,omitempty"`
+	GuiasIdentificacion                    *[]GuiasIdentificacionCartaPorte31   `xml:"GuiasIdentificacion" bson:"GuiasIdentificacion,omitempty"`
+	CantidadTransporta                     *[]CantidadTransporteCartaPorte31    `xml:"CantidadTransporta" bson:"CantidadTransporta,omitempty"`
+	DetalleMercancia                       *DetalleMercanciaCartaPorte31        `xml:"DetalleMercancia" bson:"DetalleMercancia,omitempty"`
 }
 
 func (m *MercanciaCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
@@ -248,7 +244,7 @@ type RemolqueCartaPorte31 struct {
 }
 
 type TransporteMaritimoCartaPorte31 struct {
-	PermSCT                   *string                   `xml:"PermSCT,attr" bson:"PermisoSct,omitempty"`
+	PermisoSct                *string                   `xml:"PermSCT,attr" bson:"PermisoSct,omitempty"`
 	NoPermisoSct              *string                   `xml:"NumPermisoSCT,attr" bson:"NoPermisoSct,omitempty"`
 	NombreAseguradora         *string                   `xml:"NombreAseg,attr" bson:"NombreAseguradora,omitempty"`
 	NoPolizaSeguro            *string                   `xml:"NumPolizaSeguro,attr" bson:"NoPolizaSeguro,omitempty"`

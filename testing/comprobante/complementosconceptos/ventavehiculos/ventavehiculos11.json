@@ -8,7 +8,7 @@
 				{
 					"Numero": "AAA1212129",
 					"FechaString": "2016-04-11",
-					"Fecha": "2016-04-11T00:00:00-05:00",
+					"Fecha": "2016-04-11T00:00:00Z",
 					"Aduana": "Tijuana"
 				}
 			],

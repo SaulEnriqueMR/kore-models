@@ -219,7 +219,7 @@ func InternalTestRemolque(t *testing.T, remolques *[]cartaporte1.RemolqueCartaPo
 }
 
 func InternalTestTransporteMaritimo(t *testing.T, transporte *cartaporte1.TransporteMaritimoCartaPorte31) {
-	assert.Equal(t, "ABC123", *transporte.PermSCT)
+	assert.Equal(t, "ABC123", *transporte.PermisoSct)
 	assert.Equal(t, "1234567890", *transporte.NoPermisoSct)
 	assert.Equal(t, "Aseguradora XYZ", *transporte.NombreAseguradora)
 	assert.Equal(t, "POL123456", *transporte.NoPolizaSeguro)

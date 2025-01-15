@@ -1,0 +1,155 @@
+{
+    "FechaEmision": "2023-09-24T14:30:00Z",
+    "Uuid": "3EA43E97-71BF-4AC5-A28E-9374EA9F8B45",
+    "FechaTimbrado": "2024-04-29T10:46:30Z",
+    "CadenaOriginal": "||3.3|A|123456|2023-09-24T14:30:00|01|Contado|200.000000|100.000000|MXN|20.000000|200.000000|I|PUE|01234|ABCDE|01|123e4567-e89b-12d3-a456-426614174000|123E4567-E89B-12D3-A456-426614174000|XAXX010101000|Empresa Ejemplo S.A. de C.V.|601|XAXX010101000|Juan Pérez|MEX|1234567890|G03|SPR190613I52|01010101|SKU12345|10.000000|H87|Piezas|Descripción del producto o servicio|100.000000|1000.000000|50.000000|1000.000000|002|Tasa|0.160000|160.000000|1000.000000|003|Tasa|0.100000|100.000000|100.000000|001|100.000000|002|Tasa|0.160000|200.000000|1.1|3ea43e97-71bf-4ac5-a28e-9374ea9f8b45|2024-04-29T10:46:30|SPR190613I52|Leyenda SAT||",
+    "Comprobante": true,
+    "Transaccion": "",
+    "XmlPath": "",
+    "PdfPath": "",
+    "TotalesMonedaLocal": {
+        "Total": 4000,
+        "Subtotal": 4000,
+        "Descuento": 2000,
+        "TotalImpuestosRetenidos": null,
+        "TotalImpuestosTrasladados": 2000
+    },
+    "Version": "3.3",
+    "Serie": "A",
+    "Folio": "123456",
+    "Fecha": "2023-09-24T14:30:00",
+    "Sello": "Base64SelloDigital",
+    "FormaPago": "01",
+    "NoCertificado": "12345678901234567890",
+    "Certificado": "Base64Certificado",
+    "CondicionesPago": "Contado",
+    "Subtotal": 200,
+    "Descuento": 100,
+    "Moneda": "MXN",
+    "TipoCambio": 20,
+    "Total": 200,
+    "TipoComprobante": "I",
+    "MetodoPago": "PUE",
+    "LugarExpedicion": "01234",
+    "Confirmacion": "ABCDE",
+    "CfdisRelacionados": {
+        "TipoRelacion": "01",
+        "UuidsRelacionados": [
+            {
+                "UUID": "123e4567-e89b-12d3-a456-426614174000",
+                "Uuid": "123E4567-E89B-12D3-A456-426614174000"
+            }
+        ]
+    },
+    "Emisor": {
+        "Rfc": "XAXX010101000",
+        "Nombre": "Empresa Ejemplo S.A. de C.V.",
+        "RegimenFiscal": "601"
+    },
+    "Receptor": {
+        "Rfc": "XAXX010101000",
+        "Nombre": "Juan Pérez",
+        "ResidenciaFiscal": "MEX",
+        "NumRegIdTrib": "1234567890",
+        "UsoCFDI": "G03"
+    },
+    "RfcProvCertif": "SPR190613I52",
+    "Conceptos": [
+        {
+            "ClaveProdServ": "01010101",
+            "NoIdentificacion": "SKU12345",
+            "Cantidad": 10,
+            "ClaveUnidad": "H87",
+            "Unidad": "Piezas",
+            "Descripcion": "Descripción del producto o servicio",
+            "ValorUnitario": 100,
+            "Importe": 1000,
+            "Descuento": 50,
+            "Impuestos": {
+                "Traslados": [
+                    {
+                        "Base": 1000,
+                        "Impuesto": "002",
+                        "TipoFactor": "Tasa",
+                        "TasaOCuota": 0.16,
+                        "Importe": 160
+                    }
+                ],
+                "Retenciones": [
+                    {
+                        "Base": 1000,
+                        "Impuesto": "003",
+                        "TipoFactor": "Tasa",
+                        "TasaOCuota": 0.1,
+                        "Importe": 100
+                    }
+                ]
+            },
+            "InformacionAduanera": null,
+            "CuentaPredial": null,
+            "ComplementoConcepto": null,
+            "Parte": null,
+            "DetallesConcepto": ""
+        }
+    ],
+    "Impuestos": {
+        "TotalImpuestosRetenidos": null,
+        "TotalImpuestosTrasladados": 100,
+        "Retenciones": [
+            {
+                "Impuesto": "001",
+                "Importe": 100
+            }
+        ],
+        "Traslados": [
+            {
+                "Impuesto": "002",
+                "TipoFactor": "Tasa",
+                "TasaOCuota": 0.16,
+                "Importe": 200
+            }
+        ]
+    },
+    "Complemento": {
+        "CartaPorte": null,
+        "ComercioExterior": null,
+        "ImpuestoLocales": null,
+        "Aerolineas": null,
+        "CertificadoDestruccion": null,
+        "CFDIRegistroFiscal": null,
+        "ComplementoSPEI": null,
+        "ConsumoCombustibles": null,
+        "Detallista": null,
+        "Divisas": null,
+        "Donatarias": null,
+        "EstadoCuentaCombustible": null,
+        "GastoHidrocarburos": null,
+        "Ine": null,
+        "LeyendasFiscales": null,
+        "Nomina": null,
+        "NotariosPublicos": null,
+        "Pagos": null,
+        "TimbreFiscalDigital": {
+            "TimbreFiscalDigital11": {
+                "Version": "1.1",
+                "Uuid": "3ea43e97-71bf-4ac5-a28e-9374ea9f8b45",
+                "Fecha": "2024-04-29T10:46:30",
+                "FechaTimbrado": "2024-04-29T10:46:30Z",
+                "RfcProvCertif": "SPR190613I52",
+                "Leyenda": "Leyenda SAT",
+                "SelloCfd": "AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3",
+                "NoCertificadoSat": "30001000000500003456",
+                "SelloSat": "QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"
+            },
+            "TimbreFiscalDigital10": null
+        },
+        "ObrasAntiguedades": null,
+        "PagoEnEspecie": null,
+        "ParcialesConstruccion": null,
+        "PFIntegrantesCoordinado": null,
+        "RenovacionSustitucionVehiculos": null,
+        "TuristaPasajeroExtranjero": null,
+        "ValesDeDespensa": null,
+        "VehiculoUsado": null
+    }
+}

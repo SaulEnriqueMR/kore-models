@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd"
+        xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+        Version="4.0"
+        Fecha="2024-04-29T00:00:55"
+        Sello="AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3"
+        NoCertificado="30001000000500003416"
+        Certificado="MIIFsDCCA5igAwIBAgIUMzAwMDE"
+        SubTotal="200"
+        Moneda="USD"
+        TipoCambio="20"
+        Total="200"
+        TipoDeComprobante="I"
+        Exportacion="01"
+        LugarExpedicion="20000">
+    <cfdi:Emisor
+            Rfc="EKU9003173C9"
+            Nombre="ESCUELA KEMPER URGATE"
+            RegimenFiscal="601"/>
+    <cfdi:Receptor
+            Rfc="URE180429TM6"
+            Nombre="UNIVERSIDAD ROBOTICA ESPAÑOLA"
+            DomicilioFiscalReceptor="86991"
+            RegimenFiscalReceptor="601"
+            UsoCFDI="G01"/>
+    <cfdi:Conceptos>
+        <cfdi:Concepto
+                ClaveProdServ="50211503"
+                Cantidad="1"
+                ClaveUnidad="H87"
+                Descripcion="Cigarros"
+                ValorUnitario="200.00"
+                Importe="200.00"
+                ObjetoImp="02">
+        </cfdi:Concepto>
+
+        <cfdi:Concepto
+                ClaveProdServ="50211503"
+                Cantidad="1"
+                ClaveUnidad="H87"
+                Descripcion="Cigarros"
+                ValorUnitario="200.00"
+                Importe="200.00"
+                ObjetoImp="02">
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado
+                            Base="1"
+                            Impuesto="002"
+                            TipoFactor="Tasa"/>
+                </cfdi:Traslados>
+                <cfdi:Retenciones>
+                    <cfdi:Retencion
+                            Base="1"
+                            Impuesto="001"
+                            TipoFactor="Tasa"
+                            TasaOCuota="0.100000"
+                            Importe="0.10"/>
+                </cfdi:Retenciones>
+            </cfdi:Impuestos>
+            <cfdi:Parte
+                    ClaveProdServ="51241200"
+                    Cantidad="1"
+                    Descripcion="ACEITE AJONJOLI"/>
+        </cfdi:Concepto>
+
+    </cfdi:Conceptos>
+    <cfdi:Impuestos
+        TotalImpuestosRetenidos="100"
+        TotalImpuestosTrasladados="100">
+        <cfdi:Traslados>
+            <cfdi:Traslado
+                    Base="1"
+                    Impuesto="002"
+                    TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+    </cfdi:Impuestos>
+    <cfdi:Complemento>
+        <tfd:TimbreFiscalDigital
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd"
+                xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+                Version="1.1"
+                UUID="3ea43e97-71bf-4ac5-a28e-9374ea9f8b45"
+                FechaTimbrado="2024-04-29T10:46:30"
+                RfcProvCertif="SPR190613I52"
+                SelloCFD="AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3"
+                NoCertificadoSAT="30001000000500003456"
+                SelloSAT="QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"/>
+    </cfdi:Complemento>
+</cfdi:Comprobante>

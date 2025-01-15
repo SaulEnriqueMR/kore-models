@@ -112,7 +112,7 @@ func InternalTestFullAtributesMercancias(t *testing.T, porte20 cartaporte2.Merca
 func InternalFullTestAtributesMercancia20(t *testing.T, porte20 []cartaporte2.MercanciaCartaPorte20) {
 	assert.Equal(t, 1, len(porte20))
 	assert.Equal(t, "12345678", porte20[0].BienesTransportados)
-	assert.Equal(t, "123456", *porte20[0].ClaveSTCC)
+	assert.Equal(t, "123456", *porte20[0].ClaveStcc)
 	assert.Equal(t, "Electrodomésticos de cocina", porte20[0].Descripcion)
 	assert.Equal(t, 10.000000, porte20[0].Cantidad)
 	assert.Equal(t, "E48", porte20[0].ClaveUnidad)
@@ -207,7 +207,7 @@ func InternalTestFullAtributesTransporteMaritimo20(t *testing.T, porte20 cartapo
 	assert.Equal(t, "MX", porte20.NacionalidadEmbarcacion)
 	assert.Equal(t, 250.500, porte20.UnidadesArqueoBruto)
 	assert.Equal(t, "CARGA001", porte20.TipoCarga)
-	assert.Equal(t, "CERT123", porte20.NumCertITC)
+	assert.Equal(t, "CERT123", porte20.NumCertItc)
 	assert.Equal(t, "2010", *porte20.AnioEmbarcacion)
 	assert.Equal(t, "Embarcación XYZ", *porte20.NombreEmbarcacion)
 	assert.Equal(t, 30.00, *porte20.Eslora)

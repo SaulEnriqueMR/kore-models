@@ -1,0 +1,403 @@
+{
+    "Version": "1.0",
+    "TransporteInternacional": "No",
+    "EsTransporteInternacional": false,
+    "EntradaSalidaMercancia": "Entrada",
+    "ViaEntradaSalida": "01",
+    "TotalDistanciaRecorrida": 2500,
+    "Ubicaciones": [
+        {
+            "Origen": {
+                "IdUbicacion": "OR00001",
+                "RfcRemitenteDestinatario": "MME861201NB3",
+                "NombreRemitenteDestinatario": "MANE MEXICO S.A. DE C.V.",
+                "NumRegIdTrib": "1232131211",
+                "ResidenciaFiscal": "MEX",
+                "NoEstacion": "91",
+                "NombreEstacion": "ESTACION 1",
+                "NavegacionTrafico": "Altura",
+                "FechaHoraSalidaLlegadaString": "2021-11-24T16:16:39",
+                "FechaHoraSalidaLlegada": "2021-11-24T16:16:39Z"
+            },
+            "Destino": null,
+            "Domicilio": {
+                "Calle": "NEMESIO DIEZ RIEGA 9",
+                "NoExterior": "12",
+                "NoInterior": "13",
+                "Colonia": "BENITO",
+                "Localidad": "12",
+                "Referencia": "Entre",
+                "Municipio": "051",
+                "Estado": "MEX",
+                "Pais": "MEX",
+                "CodigoPostal": "52004"
+            },
+            "TipoEstacion": null,
+            "DistanciaRecorrida": null
+        },
+        {
+            "Origen": null,
+            "Destino": {
+                "IdUbicacion": "DE000005",
+                "RfcRemitenteDestinatario": "ERFDSFGR312",
+                "NombreRemitenteDestinatario": "DROGUERIA SINERGIA INTERNATIONAL, SOCIEDAD ANONIMA",
+                "NumRegIdTrib": "12770698",
+                "ResidenciaFiscal": "GTM",
+                "NoEstacion": "02",
+                "NombreEstacion": "ESTACION",
+                "NavegacionTrafico": "Cabotaje",
+                "FechaHoraSalidaLlegadaString": "2021-11-24T16:16:40",
+                "FechaHoraSalidaLlegada": "2021-11-24T16:16:40Z"
+            },
+            "Domicilio": {
+                "Calle": "9A. CALLE 2-71",
+                "NoExterior": "12",
+                "NoInterior": "13",
+                "Colonia": "ZONA 1",
+                "Localidad": "No Aplica",
+                "Referencia": "Entre",
+                "Municipio": "No Aplica",
+                "Estado": "No Aplica",
+                "Pais": "GTM",
+                "CodigoPostal": "1000"
+            },
+            "TipoEstacion": "01",
+            "DistanciaRecorrida": 2500
+        }
+    ],
+    "Mercancias": {
+        "PesoBrutoTotal": 10,
+        "UnidadPeso": "E48",
+        "PesoNetoTotal": 5660,
+        "NumeroTotalMercancias": 1,
+        "CargoPorTasacion": 100,
+        "Mercancia": [
+            {
+                "BienesTransportados": "12164503",
+                "ClaveStcc": "123456",
+                "Descripcion": "ADITIVOS DE FRAGANCIA",
+                "Cantidad": "13",
+                "ClaveUnidad": "H87",
+                "Unidad": "PIEZA",
+                "Dimensiones": "CUBOS",
+                "MaterialPeligroso": "Sí",
+                "EsMaterialPeligroso": true,
+                "ClaveMaterialPeligroso": "M0508",
+                "Embalaje": "3H1",
+                "DescripcionEmbalaje": "JERRICANES (PORRONES) DE PLÁSTICO DE TAPA NO DESMONTABLE",
+                "PesoKg": 5660,
+                "ValorMercancia": 100,
+                "Moneda": "MXN",
+                "FraccionArancelaria": "01",
+                "UUIDComercioExt": "94072f17-4f13-40b4-bd07-e2e027650898",
+                "UuidComercioExterior": "94072F17-4F13-40B4-BD07-E2E027650898",
+                "CantidadTransporta": [
+                    {
+                        "Cantidad": 10,
+                        "IdOrigen": "OR00001",
+                        "IdDestino": "DE00002",
+                        "ClavesTransporte": "02"
+                    },
+                    {
+                        "Cantidad": 10,
+                        "IdOrigen": "OR00001",
+                        "IdDestino": "DE00002",
+                        "ClavesTransporte": "02"
+                    }
+                ],
+                "DetalleMercancia": {
+                    "UnidadPeso": "KG",
+                    "PesoBruto": 100,
+                    "PesoNeto": 101,
+                    "PesoTara": 102,
+                    "NumeroPiezas": 1
+                }
+            }
+        ],
+        "Autotransporte": {
+            "PermisoSct": "TPAF01",
+            "NoPermisoSct": "1329TERS24112011230301006",
+            "NombreAseguradora": "QUALITAS",
+            "NoPoliza": "2440038161",
+            "IdentificacionVehicular": {
+                "ConfiguracionVehicular": "C3R2",
+                "PlacaVm": "11AL4L",
+                "AnioModeloVm": "2009"
+            },
+            "Remolques": [
+                {
+                    "Subtipo": "CTR004",
+                    "Placa": "02UJ6C"
+                },
+                {
+                    "Subtipo": "CTR004",
+                    "Placa": "02UJ6C"
+                }
+            ]
+        },
+        "TransporteMaritimo": {
+            "PermisoSct": "PermSCT",
+            "NoPermisoSct": "NumPermisoSCT",
+            "NombreAseguradora": "NombreAseg",
+            "NoPolizaSeguro": "NumPolizaSeguro",
+            "TipoEmbarcacion": "TipoEmbarcacion",
+            "Matricula": "Matricula",
+            "NoOmi": "NumeroOMI",
+            "AnioEmbarcacion": "AnioEmbarcacion",
+            "NombreEmbarcacion": "NombreEmbarc",
+            "NacionalidadEmbarcacion": "NacionalidadEmbarc",
+            "UnidadesArqueoBruto": 3,
+            "TipoCarga": "TipoCarga",
+            "NumCertITC": "NumCertITC",
+            "Eslora": 2,
+            "Manga": 3,
+            "Calado": 4,
+            "LineaNaviera": "LineaNaviera",
+            "NombreAgenteNaviero": "NombreAgenteNaviero",
+            "NoAutorizacionNaviero": "NumAutorizacionNaviero",
+            "NoViaje": "NumViaje",
+            "NoConocimientoEmbarque": "NumConocEmbarc",
+            "Contenedores": [
+                {
+                    "Matricula": "MatriculaContenedor",
+                    "Tipo": "TipoContenedor",
+                    "NoPrecinto": "NumPrecinto"
+                },
+                {
+                    "Matricula": "MatriculaContenedor",
+                    "Tipo": "TipoContenedor",
+                    "NoPrecinto": "NumPrecinto"
+                }
+            ]
+        },
+        "TransporteAereo": {
+            "PermisoSct": "PermSCT",
+            "NoPermisoSct": "NumPermisoSCT",
+            "MatriculaAeronave": "MatriculaAeronave",
+            "NombreAseguradora": "NombreAseg",
+            "NoPolizaSeguro": "NumPolizaSeguro",
+            "NoGuia": "NumeroGuia",
+            "LugarContrato": "LugarContrato",
+            "RfcTransportista": "RFCTransportista",
+            "CodigoTransportista": "CodigoTransportista",
+            "NumRegIdTribTransportista": "NumRegIdTribTranspor",
+            "ResidenciaFiscalTransportista": "ResidenciaFiscalTranspor",
+            "NombreTransportista": "NombreTransportista",
+            "RfcEmbarcador": "RFCEmbarcador",
+            "NumRegIdTribEmbarcador": "NumRegIdTribEmbarc",
+            "ResidenciaFiscalEmbarcador": "ResidenciaFiscalEmbarc",
+            "NombreEmbarcador": "NombreEmbarcador"
+        },
+        "TransporteFerroviario": {
+            "TipoServicio": "TipoDeServicio",
+            "NombreAseguradora": "NombreAseg",
+            "NoPolizaSeguro": "NumPolizaSeguro",
+            "Concesionario": "Concesionario",
+            "DerechoPaso": [
+                {
+                    "Tipo": "TipoDerechoDePaso",
+                    "KilometrajePagado": 10
+                },
+                {
+                    "Tipo": "TipoDerechoDePaso",
+                    "KilometrajePagado": 10
+                }
+            ],
+            "Carro": [
+                {
+                    "Tipo": "TipoCarro",
+                    "Matricula": "MatriculaCarro",
+                    "Guia": "GuiaCarro",
+                    "ToneladasNetas": 10,
+                    "Contenedor": [
+                        {
+                            "Tipo": "TipoContenedor",
+                            "PesoContenedorVacio": 10,
+                            "PesoNetoMercancia": 10
+                        },
+                        {
+                            "Tipo": "TipoContenedor",
+                            "PesoContenedorVacio": 10,
+                            "PesoNetoMercancia": 10
+                        }
+                    ]
+                },
+                {
+                    "Tipo": "TipoCarro",
+                    "Matricula": "MatriculaCarro",
+                    "Guia": "GuiaCarro",
+                    "ToneladasNetas": 10,
+                    "Contenedor": [
+                        {
+                            "Tipo": "TipoContenedor",
+                            "PesoContenedorVacio": 10,
+                            "PesoNetoMercancia": 10
+                        },
+                        {
+                            "Tipo": "TipoContenedor",
+                            "PesoContenedorVacio": 10,
+                            "PesoNetoMercancia": 10
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "FiguraTransporte": {
+        "ClaveTransporte": "01",
+        "Operadores": [
+            {
+                "Rfc": "RFCOperador",
+                "NoLicencia": "NumLicencia",
+                "Nombre": "NombreOperador",
+                "NumRegIdTrib": "NumRegIdTribOperador",
+                "ResidenciaFiscal": "ResidenciaFiscalOperador",
+                "Domicilio": {
+                    "Calle": "CONOCIDO",
+                    "NoExterior": "10",
+                    "NoInterior": "10",
+                    "Colonia": "1510",
+                    "Localidad": "01",
+                    "Referencia": "Referencia",
+                    "Municipio": "012",
+                    "Estado": "HID",
+                    "Pais": "MEX",
+                    "CodigoPostal": "43300"
+                }
+            },
+            {
+                "Rfc": "RFCOperador",
+                "NoLicencia": "NumLicencia",
+                "Nombre": "NombreOperador",
+                "NumRegIdTrib": "NumRegIdTribOperador",
+                "ResidenciaFiscal": "ResidenciaFiscalOperador",
+                "Domicilio": {
+                    "Calle": "CONOCIDO",
+                    "NoExterior": "10",
+                    "NoInterior": "10",
+                    "Colonia": "1510",
+                    "Localidad": "01",
+                    "Referencia": "Referencia",
+                    "Municipio": "012",
+                    "Estado": "HID",
+                    "Pais": "MEX",
+                    "CodigoPostal": "43300"
+                }
+            }
+        ],
+        "Propietarios": [
+            {
+                "Rfc": "RFCPropietario",
+                "Nombre": "NombrePropietario",
+                "NumRegIdTrib": "NumRegIdTribPropietario",
+                "ResidenciaFiscal": "ResidenciaFiscalPropietario",
+                "Domicilio": {
+                    "Calle": "CONOCIDO",
+                    "NoExterior": "10",
+                    "NoInterior": "10",
+                    "Colonia": "1510",
+                    "Localidad": "01",
+                    "Referencia": "Referencia",
+                    "Municipio": "012",
+                    "Estado": "HID",
+                    "Pais": "MEX",
+                    "CodigoPostal": "43300"
+                }
+            },
+            {
+                "Rfc": "RFCPropietario",
+                "Nombre": "NombrePropietario",
+                "NumRegIdTrib": "NumRegIdTribPropietario",
+                "ResidenciaFiscal": "ResidenciaFiscalPropietario",
+                "Domicilio": {
+                    "Calle": "CONOCIDO",
+                    "NoExterior": "10",
+                    "NoInterior": "10",
+                    "Colonia": "1510",
+                    "Localidad": "01",
+                    "Referencia": "Referencia",
+                    "Municipio": "012",
+                    "Estado": "HID",
+                    "Pais": "MEX",
+                    "CodigoPostal": "43300"
+                }
+            }
+        ],
+        "Arrendatarios": [
+            {
+                "Rfc": "RFCArrendatario",
+                "Nombre": "NombreArrendatario",
+                "NumRegIdTrib": "NumRegIdTribArrendatario",
+                "ResidenciaFiscal": "ResidenciaFiscalArrendatario",
+                "Domicilio": {
+                    "Calle": "CONOCIDO",
+                    "NoExterior": "10",
+                    "NoInterior": "10",
+                    "Colonia": "1510",
+                    "Localidad": "01",
+                    "Referencia": "Referencia",
+                    "Municipio": "012",
+                    "Estado": "HID",
+                    "Pais": "MEX",
+                    "CodigoPostal": "43300"
+                }
+            },
+            {
+                "Rfc": "RFCArrendatario",
+                "Nombre": "NombreArrendatario",
+                "NumRegIdTrib": "NumRegIdTribArrendatario",
+                "ResidenciaFiscal": "ResidenciaFiscalArrendatario",
+                "Domicilio": {
+                    "Calle": "CONOCIDO",
+                    "NoExterior": "10",
+                    "NoInterior": "10",
+                    "Colonia": "1510",
+                    "Localidad": "01",
+                    "Referencia": "Referencia",
+                    "Municipio": "012",
+                    "Estado": "HID",
+                    "Pais": "MEX",
+                    "CodigoPostal": "43300"
+                }
+            }
+        ],
+        "Notificados": [
+            {
+                "Rfc": "RFCNotificado",
+                "Nombre": "NombreNotificado",
+                "NumRegIdTrib": "NumRegIdTribNotificado",
+                "ResidenciaFiscal": "ResidenciaFiscalNotificado",
+                "Domicilio": {
+                    "Calle": "CONOCIDO",
+                    "NoExterior": "10",
+                    "NoInterior": "10",
+                    "Colonia": "1510",
+                    "Localidad": "01",
+                    "Referencia": "Referencia",
+                    "Municipio": "012",
+                    "Estado": "HID",
+                    "Pais": "MEX",
+                    "CodigoPostal": "43300"
+                }
+            },
+            {
+                "Rfc": "RFCNotificado",
+                "Nombre": "NombreNotificado",
+                "NumRegIdTrib": "NumRegIdTribNotificado",
+                "ResidenciaFiscal": "ResidenciaFiscalNotificado",
+                "Domicilio": {
+                    "Calle": "CONOCIDO",
+                    "NoExterior": "10",
+                    "NoInterior": "10",
+                    "Colonia": "1510",
+                    "Localidad": "01",
+                    "Referencia": "Referencia",
+                    "Municipio": "012",
+                    "Estado": "HID",
+                    "Pais": "MEX",
+                    "CodigoPostal": "43300"
+                }
+            }
+        ]
+    }
+}

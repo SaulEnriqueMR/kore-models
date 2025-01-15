@@ -6,6 +6,7 @@ import (
 )
 
 type CartaPorte struct {
+	CartaPorte10 *[]CartaPorte10 `bson:"CartaPorte10,omitempty"`
 	CartaPorte20 *[]CartaPorte20 `bson:"CartaPorte20,omitempty"`
 	CartaPorte30 *[]CartaPorte30 `bson:"CartaPorte30,omitempty"`
 	CartaPorte31 *[]CartaPorte31 `bson:"CartaPorte31,omitempty"`
@@ -21,6 +22,17 @@ func (c *CartaPorte) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error 
 			Version = strings.TrimSpace(Version)
 			break
 		}
+	}
+
+	if Version == "1.0" {
+		var cp10 []CartaPorte10
+		if err := d.DecodeElement(&cp10, &start); err != nil {
+			return err
+		}
+		if c.CartaPorte10 == nil {
+			c.CartaPorte10 = &[]CartaPorte10{}
+		}
+		*c.CartaPorte10 = append(*c.CartaPorte10, cp10...)
 	}
 
 	if Version == "2.0" {

@@ -18,7 +18,7 @@
             "NombreEstacion": "Estacion1",
             "NavegacionTrafico": "Trafico1",
             "FechaHoraSalidaLlegadaString": "2024-09-23T12:30:00",
-            "FechaHoraSalidaLlegada": "2024-09-23T12:30:00-06:00",
+            "FechaHoraSalidaLlegada": "2024-09-23T12:30:00Z",
             "TipoEstacion": "Tipo1",
             "DistanciaRecorrida": 100.5,
             "Domicilio": {
@@ -45,7 +45,7 @@
             "NombreEstacion": "Estacion2",
             "NavegacionTrafico": "Trafico2",
             "FechaHoraSalidaLlegadaString": "2024-09-23T12:30:00",
-            "FechaHoraSalidaLlegada": "2024-09-23T12:30:00-06:00",
+            "FechaHoraSalidaLlegada": "2024-09-23T12:30:00Z",
             "TipoEstacion": "Tipo2",
             "DistanciaRecorrida": 100.5,
             "Domicilio": {
@@ -71,7 +71,7 @@
         "Mercancia": [
             {
                 "BienesTransportados": "12345678",
-                "ClaveSTCC": "123456",
+                "ClaveStcc": "123456",
                 "Descripcion": "Electrodomésticos de cocina",
                 "Cantidad": 10,
                 "ClaveUnidad": "E48",
@@ -154,7 +154,7 @@
             "NacionalidadEmbarcacion": "MX",
             "UnidadesArqueoBruto": 250.5,
             "TipoCarga": "CARGA001",
-            "NumCertITC": "CERT123",
+            "NumCertItc": "CERT123",
             "Eslora": 30,
             "Manga": 8.5,
             "Calado": 5,

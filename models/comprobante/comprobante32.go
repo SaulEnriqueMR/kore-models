@@ -205,6 +205,8 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	}
 	c.CadenaOriginal = helpers.CreateCadenaOriginal(*c)
 
+	// Calculo de totales
+	
 	return nil
 }
 

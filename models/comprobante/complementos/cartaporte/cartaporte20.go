@@ -96,17 +96,15 @@ type MercanciasCartaPorte20 struct {
 }
 
 type MercanciaCartaPorte20 struct {
-	BienesTransportados string  `xml:"BienesTransp,attr" bson:"BienesTransportados"`
-	ClaveSTCC           *string `xml:"ClaveSTCC,attr" bson:"ClaveSTCC,omitempty"`
-	Descripcion         string  `xml:"Descripcion,attr" bson:"Descripcion"`
-	Cantidad            float64 `xml:"Cantidad,attr" bson:"Cantidad"`
-	ClaveUnidad         string  `xml:"ClaveUnidad,attr" bson:"ClaveUnidad"`
-	Unidad              *string `xml:"Unidad,attr" bson:"Unidad,omitempty"`
-	Dimensiones         *string `xml:"Dimensiones,attr" bson:"Dimensiones,omitempty"`
-
-	MaterialPeligroso   *string `xml:"MaterialPeligroso,attr" bson:"MaterialPeligroso,omitempty"`
-	EsMaterialPeligroso *bool   `bson:"EsMaterialPeligroso,omitempty"`
-
+	BienesTransportados    string                             `xml:"BienesTransp,attr" bson:"BienesTransportados"`
+	ClaveStcc              *string                            `xml:"ClaveSTCC,attr" bson:"ClaveStcc,omitempty"`
+	Descripcion            string                             `xml:"Descripcion,attr" bson:"Descripcion"`
+	Cantidad               float64                            `xml:"Cantidad,attr" bson:"Cantidad"`
+	ClaveUnidad            string                             `xml:"ClaveUnidad,attr" bson:"ClaveUnidad"`
+	Unidad                 *string                            `xml:"Unidad,attr" bson:"Unidad,omitempty"`
+	Dimensiones            *string                            `xml:"Dimensiones,attr" bson:"Dimensiones,omitempty"`
+	MaterialPeligroso      *string                            `xml:"MaterialPeligroso,attr" bson:"MaterialPeligroso,omitempty"`
+	EsMaterialPeligroso    *bool                              `bson:"EsMaterialPeligroso,omitempty"`
 	ClaveMaterialPeligroso *string                            `xml:"CveMaterialPeligroso,attr" bson:"ClaveMaterialPeligroso,omitempty"`
 	Embalaje               *string                            `xml:"Embalaje,attr" bson:"Embalaje,omitempty"`
 	DescripcionEmbalaje    *string                            `xml:"DescripEmbalaje,attr" bson:"DescripcionEmbalaje,omitempty"`
@@ -179,7 +177,7 @@ type AutotransporteCartaPorte20 struct {
 }
 
 type IdentificacionVehicularCartaPorte20 struct {
-	ConfiguracionVehicular string `xml:"ConfigVehicular,attr" bson:"Configuracion"`
+	ConfiguracionVehicular string `xml:"ConfigVehicular,attr" bson:"ConfiguracionVehicular"`
 	PlacaVm                string `xml:"PlacaVM,attr" bson:"PlacaVm"`
 	AnioModeloVm           string `xml:"AnioModeloVM,attr" bson:"AnioModeloVm"`
 }
@@ -212,7 +210,7 @@ type TransporteMaritimoCartaPorte20 struct {
 	NacionalidadEmbarcacion string                   `xml:"NacionalidadEmbarc,attr" bson:"NacionalidadEmbarcacion"`
 	UnidadesArqueoBruto     float64                  `xml:"UnidadesDeArqBruto,attr" bson:"UnidadesArqueoBruto"`
 	TipoCarga               string                   `xml:"TipoCarga,attr" bson:"TipoCarga"`
-	NumCertITC              string                   `xml:"NumCertITC,attr" bson:"NumCertITC"`
+	NumCertItc              string                   `xml:"NumCertITC,attr" bson:"NumCertItc"`
 	Eslora                  *float64                 `xml:"Eslora,attr" bson:"Eslora,omitempty"`
 	Manga                   *float64                 `xml:"Manga,attr" bson:"Manga,omitempty"`
 	Calado                  *float64                 `xml:"Calado,attr" bson:"Calado,omitempty"`

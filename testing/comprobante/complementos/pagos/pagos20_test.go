@@ -117,7 +117,7 @@ func InternalTestRetencionP(t *testing.T, retencionesP *[]pagos20.RetencionPagos
 	assert.Equal(t, len(*retencionesP), 2)
 	retencionP := (*retencionesP)[0]
 	assert.Equal(t, "ISR", retencionP.Impuesto)
-	assert.Equal(t, float32(1500.00), retencionP.Importe)
+	assert.Equal(t, float64(1500.00), retencionP.Importe)
 }
 
 func InternalTestTrasladoP(t *testing.T, trasladosP *[]pagos20.TrasladoPagos20) {

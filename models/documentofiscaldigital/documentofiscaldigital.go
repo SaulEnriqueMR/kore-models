@@ -16,6 +16,7 @@ type DocumentoFiscalDigital struct {
 	Transaccion          string                `bson:"Transaccion"`
 	XmlPath              string                `bson:"XmlPath"`
 	PdfPath              string                `bson:"PdfPath"`
+	TotalesMonedaLocal   TotalesMonedaLocal    `bson:"TotalesMonedaLocal"`
 }
 
 type InformacionAdicional struct {
@@ -34,4 +35,12 @@ type Cancelacion struct {
 	EstatusCancelacion *string    `bson:"EstatusCancelacion,omitempty"`
 	EsCancelable       *string    `bson:"EsCancelable,omitempty"`
 	FechaCancelacion   *time.Time `bson:"FechaCancelacion,omitempty"`
+}
+
+type TotalesMonedaLocal struct {
+	Total                     float64  `bson:"Total"`
+	Subtotal                  float64  `bson:"Subtotal"`
+	Descuento                 *float64 `bson:"Descuento,omitempty"`
+	TotalImpuestosRetenidos   *float64 `bson:"TotalImpuestosRetenidos,omitempty"`
+	TotalImpuestosTrasladados *float64 `bson:"TotalImpuestosTrasladados,omitempty"`
 }

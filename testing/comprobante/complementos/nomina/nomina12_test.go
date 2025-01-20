@@ -124,9 +124,9 @@ func InternalTestHorasExtra12(t *testing.T, horasExtras []nomina12.HorasExtraNom
 	assert.NotNil(t, horasExtras)
 	horasExtra := horasExtras[0]
 	assert.NotNil(t, horasExtra)
-	assert.Equal(t, 5.0, horasExtra.Dias)
+	assert.Equal(t, 5, horasExtra.Dias)
 	assert.Equal(t, "1", horasExtra.TipoHoras)
-	assert.Equal(t, 10.0, horasExtra.HorasExtra)
+	assert.Equal(t, 10, horasExtra.HorasExtra)
 	assert.Equal(t, 2000.00, horasExtra.ImportePagado)
 }
 
@@ -142,7 +142,7 @@ func InternalTestJubilacionPensionRetiro12(t *testing.T, jubilacion nomina12.Jub
 func InternalTestSeparacionIndemnizacionNomina12(t *testing.T, separacion nomina12.SeparacionIndemnizacionNomina12) {
 	assert.NotNil(t, separacion)
 	assert.Equal(t, 5000.00, separacion.TotalPagado)
-	assert.Equal(t, 10.0, separacion.NumeroAniosServicio)
+	assert.Equal(t, 10, separacion.NumeroAniosServicio)
 	assert.Equal(t, 1500.00, separacion.UltimoSueldoMensualOrdinario)
 	assert.Equal(t, 4000.00, separacion.IngresoAcumulable)
 	assert.Equal(t, 1000.00, separacion.IngresoNoAcumulable)
@@ -193,7 +193,7 @@ func InternalTestIncapacidad12(t *testing.T, incapacidades []nomina12.Incapacida
 	assert.NotNil(t, incapacidades)
 	incapacidad := incapacidades[0]
 	assert.NotNil(t, incapacidad)
-	assert.Equal(t, 5.0, incapacidad.Dias)
-	assert.Equal(t, 01.0, incapacidad.Tipo)
+	assert.Equal(t, 5, incapacidad.Dias)
+	assert.Equal(t, "01", incapacidad.Tipo)
 	assert.Equal(t, 1500.00, *incapacidad.Importe)
 }

@@ -115,9 +115,9 @@ type AccionesOTitulosNomina12 struct {
 }
 
 type HorasExtraNomina12 struct {
-	Dias          float64 `xml:"Dias,attr" bson:"Dias"`
+	Dias          int     `xml:"Dias,attr" bson:"Dias"`
 	TipoHoras     string  `xml:"TipoHoras,attr" bson:"TipoHoras"`
-	HorasExtra    float64 `xml:"HorasExtra,attr" bson:"HorasExtra"`
+	HorasExtra    int     `xml:"HorasExtra,attr" bson:"HorasExtra"`
 	ImportePagado float64 `xml:"ImportePagado,attr" bson:"ImportePagado"`
 }
 
@@ -131,7 +131,7 @@ type JubilacionPensionRetiroNomina12 struct {
 
 type SeparacionIndemnizacionNomina12 struct {
 	TotalPagado                  float64 `xml:"TotalPagado,attr" bson:"TotalPagado"`
-	NumeroAniosServicio          float64 `xml:"NumAñosServicio,attr" bson:"NumeroAniosServicio"`
+	NumeroAniosServicio          int     `xml:"NumAñosServicio,attr" bson:"NumeroAniosServicio"`
 	UltimoSueldoMensualOrdinario float64 `xml:"UltimoSueldoMensOrd,attr" bson:"UltimoSueldoMensualOrdinario"`
 	IngresoAcumulable            float64 `xml:"IngresoAcumulable,attr" bson:"IngresoAcumulable"`
 	IngresoNoAcumulable          float64 `xml:"IngresoNoAcumulable,attr" bson:"IngresoNoAcumulable"`
@@ -170,8 +170,8 @@ type CompensacionSaldosAFavorNomina12 struct {
 }
 
 type IncapacidadNomina12 struct {
-	Dias    float64  `xml:"DiasIncapacidad,attr" bson:"Dias"`
-	Tipo    float64  `xml:"TipoIncapacidad,attr" bson:"Tipo"`
+	Dias    int      `xml:"DiasIncapacidad,attr" bson:"Dias"`
+	Tipo    string   `xml:"TipoIncapacidad,attr" bson:"Tipo"`
 	Importe *float64 `xml:"ImporteMonetario,attr" bson:"Importe,omitempty"`
 }
 

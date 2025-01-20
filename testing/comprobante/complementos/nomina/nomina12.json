@@ -147,12 +147,12 @@
     "Incapacidades": [
         {
             "Dias": 5,
-            "Tipo": 1,
+            "Tipo": "01",
             "Importe": 1500
         },
         {
             "Dias": 2,
-            "Tipo": 2,
+            "Tipo": "02",
             "Importe": 600
         }
     ]

@@ -1,6 +1,7 @@
 package comprobante
 
 import (
+	"github.com/SaulEnriqueMR/kore-models/models/addenda"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/aerolineas"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/cartaporte"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/certificadodestruccion"
@@ -72,5 +73,6 @@ type Complemento struct {
 }
 
 type Addenda struct {
-	Value string `xml:",chardata" bson:"Value"`
+	Value       string                 `xml:",innerxml" bson:"Value"`
+	BuzonFiscal *[]addenda.BuzonFiscal `xml:"AddendaBuzonFiscal" bson:"BuzonFiscal,omitempty"`
 }

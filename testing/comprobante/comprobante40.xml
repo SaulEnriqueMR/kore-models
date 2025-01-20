@@ -4298,4 +4298,24 @@
                 NoCertificadoSAT="30001000000500003456"
                 SelloSAT="QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"/>
     </cfdi:Complemento>
+    <Addenda>
+        <AddendaBuzonFiscal xmlns="http://www.buzonfiscal.com/ns/addenda/bf/2" version="4.0">
+            <TipoDocumento descripcion="Factura" nombreCorto="FAC"/>
+            <Receptor noCliente="4000655163"/>
+            <Destino nombre="SANCHEZ LOPEZ MARIO ERNESTO" estado="" municipio="Correo :MARIO.SANCHEZ.L@TECSALUD.MX" calle="RIO PILON 416" claveIdentificacion="4000655163"/>
+            <CFD totalConLetra="CINCO MIL PESOS (01/100) M.N."/>
+            <Extra valor="10/12/2024" atributo="FechaIngreso"/>
+            <Extra valor="05:51:56 p. m." atributo="HoraIngreso"/>
+            <Extra valor="2003283321" atributo="Episodio"/>
+            <Extra valor="30/06/1980" atributo="FechaNacimiento"/>
+            <Extra valor="Facturo" atributo="L03120920"/>
+            <Extra valor="MARIO RODARTE SHADE" atributo="Nombre del Doctor"/>
+            <Extra valor="4310.35" atributo="SubtotalGravado"/>
+            <Extra valor="4310.35" atributo="TotalServicios"/>
+            <Extra valor="4310.35" atributo="Subtotal1"/>
+            <Extra valor="689.66" atributo="Iva1"/>
+            <Extra valor="5000.01" atributo="Total1"/>
+            <Extra valor="689.66" atributo="IVAParcial"/>
+        </AddendaBuzonFiscal>
+    </Addenda>
 </cfdi:Comprobante>

@@ -1,0 +1,67 @@
+{
+    "Version": "4.0",
+    "TipoDocumento": {
+        "Descripcion": "Factura",
+        "NombreCorto": "FAC"
+    },
+    "Receptor": {
+        "NoCliente": "4000655163"
+    },
+    "Destino": {
+        "Nombre": "SANCHEZ LOPEZ MARIO ERNESTO",
+        "Estado": "",
+        "Municipio": "Correo :MARIO.SANCHEZ.L@TECSALUD.MX",
+        "Calle": "RIO PILON 416",
+        "ClaveIdentificacion": "4000655163"
+    },
+    "Extra": [
+        {
+            "Valor": "10/12/2024",
+            "Atributo": "FechaIngreso"
+        },
+        {
+            "Valor": "05:51:56 p. m.",
+            "Atributo": "HoraIngreso"
+        },
+        {
+            "Valor": "2003283321",
+            "Atributo": "Episodio"
+        },
+        {
+            "Valor": "30/06/1980",
+            "Atributo": "FechaNacimiento"
+        },
+        {
+            "Valor": "Facturo",
+            "Atributo": "L03120920"
+        },
+        {
+            "Valor": "MARIO RODARTE SHADE",
+            "Atributo": "Nombre del Doctor"
+        },
+        {
+            "Valor": "4310.35",
+            "Atributo": "SubtotalGravado"
+        },
+        {
+            "Valor": "4310.35",
+            "Atributo": "TotalServicios"
+        },
+        {
+            "Valor": "4310.35",
+            "Atributo": "Subtotal1"
+        },
+        {
+            "Valor": "689.66",
+            "Atributo": "Iva1"
+        },
+        {
+            "Valor": "5000.01",
+            "Atributo": "Total1"
+        },
+        {
+            "Valor": "689.66",
+            "Atributo": "IVAParcial"
+        }
+    ]
+}

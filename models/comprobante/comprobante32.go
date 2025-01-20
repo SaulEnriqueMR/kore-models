@@ -43,6 +43,7 @@ type Comprobante32 struct {
 	Conceptos                                     []Concepto32 `xml:"Conceptos>Concepto" bson:"Conceptos"`
 	Impuestos                                     Impuestos32  `xml:"Impuestos" bson:"Impuestos"`
 	Complemento                                   *Complemento `xml:"Complemento" bson:"Complemento,omitempty"`
+	Addenda                                       *Addenda     `xml:"Addenda" bson:"Addenda,omitempty"`
 }
 
 func (c *Comprobante32) DefineTransaccion(rfc string) {
@@ -206,7 +207,7 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	c.CadenaOriginal = helpers.CreateCadenaOriginal(*c)
 
 	// Calculo de totales
-	
+
 	return nil
 }
 

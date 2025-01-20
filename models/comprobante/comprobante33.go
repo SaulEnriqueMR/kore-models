@@ -36,6 +36,7 @@ type Comprobante33 struct {
 	Conceptos                                     []Concepto33        `xml:"Conceptos>Concepto" bson:"Conceptos" json:"Conceptos"`
 	Impuestos                                     *Impuestos33        `xml:"Impuestos" bson:"Impuestos,omitempty" json:"Impuestos"`
 	Complemento                                   *Complemento        `xml:"Complemento" bson:"Complemento,omitempty" json:"Complemento"`
+	Addenda                                       *Addenda            `xml:"Addenda" bson:"Addenda,omitempty"`
 }
 
 func (c *Comprobante33) DefineTransaccion(rfc string) {

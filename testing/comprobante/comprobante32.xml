@@ -22,11 +22,9 @@
              FechaFolioFiscalOrig="2023-09-23T12:00:00"
              MontoFolioFiscalOrig="1000.00">
     <Emisor rfc="ABC123456789" nombre="Juan Pérez S.A. de C.V.">
-        <RegimenFiscal>
-            <Regimen Regimen="Persona Física con Actividades Empresariales"/>
-            <Regimen Regimen="Régimen de Incorporación Fiscal"/>
-            <Regimen Regimen="Persona Moral"/>
-        </RegimenFiscal>
+        <RegimenFiscal Regimen="Persona Física con Actividades Empresariales" />
+        <RegimenFiscal Regimen="Régimen de Incorporación Fiscal" />
+        <RegimenFiscal Regimen="Persona Moral" />
         <DomicilioFiscal
                 calle="Avenida Insurgentes"
                 noExterior="456"

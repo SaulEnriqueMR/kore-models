@@ -11,7 +11,7 @@ import (
 )
 
 func TestDocumentoFiscalDigitalComprobante40(t *testing.T) {
-	data := testing2.GetFileContentForTest("./comprobante40.xml", t)
+	data := testing2.GetFileContentForTest("./df.xml", t)
 	var parsed comprobante.Comprobante
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)

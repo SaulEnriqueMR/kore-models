@@ -3,6 +3,7 @@ package comprobante
 import (
 	"encoding/xml"
 	"fmt"
+	"github.com/SaulEnriqueMR/kore-models/models"
 	"strconv"
 	"strings"
 	"time"
@@ -207,7 +208,9 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	c.CadenaOriginal = helpers.CreateCadenaOriginal(*c)
 
 	// Calculo de totales
-
+	processDate := time.Now().UTC()
+	c.ProcessorMetadata.LastUpdate = &processDate
+	c.ProcessorMetadata.KoreModelsVersion = &models.KoreModelVersion
 	return nil
 }
 

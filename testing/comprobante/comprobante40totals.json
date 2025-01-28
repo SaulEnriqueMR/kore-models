@@ -14,6 +14,12 @@
         "TotalImpuestosRetenidos": 2000,
         "TotalImpuestosTrasladados": 2000
     },
+    "ProcessorMetadata": {
+        "KoreModelsVersion": "v1.0.47",
+        "KoreVersion": null,
+        "LastUpdate": "2025-01-28T15:05:31.539018Z",
+        "CreationDate": null
+    },
     "Version": "4.0",
     "Serie": null,
     "Folio": null,

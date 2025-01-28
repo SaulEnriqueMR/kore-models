@@ -6,6 +6,26 @@ import (
 	"strings"
 )
 
+func CreateCadenaOriginalFromTfd(v interface{}) string {
+	var sb strings.Builder
+	val := reflect.ValueOf(v)
+
+	processValueTfd(val, &sb)
+
+	// Remove the trailing "|" if present
+	str := sb.String()
+	if len(str) > 0 && str[len(str)-1] == '|' {
+		str = str[:len(str)-1]
+	}
+
+	aux := sb.String()
+	sb.Reset()
+	sb.WriteString("||")
+	sb.WriteString(aux)
+	sb.WriteString("|")
+	return sb.String()
+}
+
 func CreateCadenaOriginal(v interface{}) string {
 	var sb strings.Builder
 	val := reflect.ValueOf(v)
@@ -26,6 +46,45 @@ func CreateCadenaOriginal(v interface{}) string {
 	return sb.String()
 }
 
+func processValueTfd(val reflect.Value, sb *strings.Builder) {
+	if !val.IsValid() {
+		return // Skip invalid or empty values
+	}
+
+	switch val.Kind() {
+	case reflect.Struct:
+		for i := 0; i < val.NumField(); i++ {
+			field := val.Field(i)
+
+			if val.Type().Field(i).PkgPath == "" { // Only process exported fields
+				// Accessing field name
+				processValue(field, sb)
+			}
+		}
+	case reflect.Ptr:
+		if !val.IsNil() {
+			processValue(val.Elem(), sb) // Dereference and process non-nil pointers
+		}
+	case reflect.Slice, reflect.Array:
+		for i := 0; i < val.Len(); i++ {
+			processValue(val.Index(i), sb)
+		}
+	case reflect.String:
+		if val.String() != "" { // Only append non-empty strings
+			sb.WriteString(val.String() + "|")
+		}
+	case reflect.Int, reflect.Int64, reflect.Int32:
+		sb.WriteString(fmt.Sprintf("%d|", val.Int()))
+	case reflect.Float64, reflect.Float32:
+		sb.WriteString(fmt.Sprintf("%f|", val.Float()))
+	case reflect.Bool:
+		// sb.WriteString(fmt.Sprintf("%t|", val.Bool()))
+		return
+	default:
+		sb.WriteString(fmt.Sprintf("%v|", val.Interface()))
+	}
+}
+
 var ignoreMap = map[string]struct{}{
 	"Sello":                  {},
 	"Certificado":            {},
@@ -35,6 +94,7 @@ var ignoreMap = map[string]struct{}{
 	"NoCertificadoSat":       {},
 	"SelloSat":               {},
 	"DocumentoFiscalDigital": {},
+	"ProcessorMetadata":      {},
 }
 
 func processValue(val reflect.Value, sb *strings.Builder) {

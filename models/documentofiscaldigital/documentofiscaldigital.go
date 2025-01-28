@@ -17,6 +17,14 @@ type DocumentoFiscalDigital struct {
 	XmlPath              string                `bson:"XmlPath"`
 	PdfPath              string                `bson:"PdfPath"`
 	TotalesMonedaLocal   TotalesMonedaLocal    `bson:"TotalesMonedaLocal"`
+	ProcessorMetadata    ProcessorMetadata     `bson:"ProcessorMetadata"`
+}
+
+type ProcessorMetadata struct {
+	KoreModelsVersion *string    `bson:"KoreModelsVersion"`
+	KoreVersion       *string    `bson:"KoreVersion"`
+	LastUpdate        *time.Time `bson:"LastUpdate"`
+	CreationDate      *time.Time `bson:"CreationDate"`
 }
 
 type InformacionAdicional struct {

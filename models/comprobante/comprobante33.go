@@ -3,7 +3,9 @@ package comprobante
 import (
 	"encoding/xml"
 	"fmt"
+	"github.com/SaulEnriqueMR/kore-models/models"
 	"strings"
+	"time"
 
 	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
@@ -237,6 +239,10 @@ func (c *Comprobante33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	}
 
 	c.TotalesMonedaLocal = totalesMonedaLocal
+
+	processDate := time.Now().UTC()
+	c.ProcessorMetadata.LastUpdate = &processDate
+	c.ProcessorMetadata.KoreModelsVersion = &models.KoreModelVersion
 
 	return nil
 }

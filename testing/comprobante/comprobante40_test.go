@@ -14,12 +14,12 @@ func GetComprobante40ForTest(filename string, t *testing.T) (comprobante2.Compro
 	var parsed comprobante2.Comprobante40
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
-	testing2.GenerateJSONFromStructure("comprobante40.json", parsed)
 	return parsed, errUnmashal
 }
 
 func TestFullComprobante40(t *testing.T) {
 	comprobante, _ := GetComprobante40ForTest("./comprobante40.xml", t)
+	testing2.GenerateJSONFromStructure("comprobante40.json", comprobante)
 	InternalTestFullAttributes40(t, comprobante)
 	InternalTestFullInformacionGlobal40(t, comprobante.InformacionGlobal)
 	InternalTestFullCfdisRelacionados40(t, comprobante.CfdisRelacionados)
@@ -327,6 +327,5 @@ func TestEmitidaRecibida40(t *testing.T) {
 
 func TestBasePath40(t *testing.T) {
 	comprobante40, _ := GetComprobante40ForTest("./comprobante40.xml", t)
-
 	assert.Equal(t, comprobante40.GetFileName(), comprobante40.GetBasePath()+".xml")
 }

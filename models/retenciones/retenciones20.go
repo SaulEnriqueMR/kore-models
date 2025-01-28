@@ -2,8 +2,10 @@ package retenciones
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
 	date "github.com/SaulEnriqueMR/kore-models/models/helpers"
@@ -135,6 +137,11 @@ func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 			}
 		}
 	}
+
+	processDate := time.Now().UTC()
+	r.ProcessorMetadata.LastUpdate = &processDate
+	r.ProcessorMetadata.KoreModelsVersion = &models.KoreModelVersion
+	
 	return nil
 }
 

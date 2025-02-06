@@ -2,6 +2,7 @@ package acuentaterceros
 
 import (
 	"encoding/xml"
+	"strings"
 	"time"
 
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
@@ -80,12 +81,64 @@ type ImpuestosTerceros11 struct {
 }
 
 type RetencionTerceros11 struct {
-	Impuesto string  `xml:"impuesto,attr" bson:"Impuesto"`
-	Importe  float64 `xml:"importe,attr" bson:"Importe"`
+	TipoImpuesto string  `xml:"impuesto,attr" bson:"TipoImpuesto"`
+	Impuesto     string  `bson:"Impuesto"`
+	Importe      float64 `xml:"importe,attr" bson:"Importe"`
+}
+
+func (i *RetencionTerceros11) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	type Alias RetencionTerceros11
+	var aux Alias
+
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+
+	*i = RetencionTerceros11(aux)
+
+	switch strings.ToLower(i.TipoImpuesto) {
+	case "isr":
+		i.Impuesto = "001"
+		break
+	case "iva":
+		i.Impuesto = "002"
+		break
+	case "ieps":
+		i.Impuesto = "003"
+		break
+	}
+
+	return nil
 }
 
 type TrasladoTerceros11 struct {
-	Impuesto string  `xml:"impuesto,attr" bson:"Impuesto"`
-	Tasa     float64 `xml:"tasa,attr" bson:"Tasa"`
-	Importe  float64 `xml:"importe,attr" bson:"Importe"`
+	TipoImpuesto string  `xml:"impuesto,attr" bson:"TipoImpuesto"`
+	Impuesto     string  `bson:"Impuesto"`
+	Tasa         float64 `xml:"tasa,attr" bson:"Tasa"`
+	Importe      float64 `xml:"importe,attr" bson:"Importe"`
+}
+
+func (i *TrasladoTerceros11) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	type Alias TrasladoTerceros11
+	var aux Alias
+
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+
+	*i = TrasladoTerceros11(aux)
+
+	switch strings.ToLower(i.TipoImpuesto) {
+	case "isr":
+		i.Impuesto = "001"
+		break
+	case "iva":
+		i.Impuesto = "002"
+		break
+	case "ieps":
+		i.Impuesto = "003"
+		break
+	}
+
+	return nil
 }

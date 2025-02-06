@@ -44,13 +44,15 @@
     "Impuestos": {
         "Retenciones": [
             {
-                "Impuesto": "ISR",
+                "TipoImpuesto": "ISR",
+                "Impuesto": "001",
                 "Importe": 150
             }
         ],
         "Traslados": [
             {
-                "Impuesto": "IVA",
+                "TipoImpuesto": "IVA",
+                "Impuesto": "002",
                 "Tasa": 16,
                 "Importe": 160
             }

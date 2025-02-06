@@ -26,10 +26,12 @@ type Comprobante32 struct {
 	Subtotal                                      float64      `xml:"subTotal,attr" bson:"Subtotal"`
 	Descuento                                     *float64     `xml:"descuento,attr" bson:"Descuento,omitempty"`
 	MotivoDescuento                               *string      `xml:"motivoDescuento,attr" bson:"MotivoDescuento,omitempty"`
-	TipoCambio                                    *string      `xml:"TipoCambio,attr" bson:"TipoCambio,omitempty"`
+	TipoDeCambio                                  *string      `xml:"TipoCambio,attr" bson:"TipoDeCambio,omitempty"`
+	TipoCambio                                    float64      `bson:"TipoCambio,omitempty"`
 	Moneda                                        *string      `xml:"Moneda,attr" bson:"Moneda,omitempty"`
 	Total                                         float64      `xml:"total,attr" bson:"Total"`
-	TipoComprobante                               string       `xml:"tipoDeComprobante,attr" bson:"TipoComprobante"`
+	TipoDeComprobante                             string       `xml:"tipoDeComprobante,attr" bson:"TipoDeComprobante"`
+	TipoComprobante                               string       `bson:"TipoComprobante"`
 	MetodoPago                                    string       `xml:"metodoDePago,attr" bson:"MetodoPago"`
 	LugarExpedicion                               string       `xml:"LugarExpedicion,attr" bson:"LugarExpedicion"`
 	NumeroCuentaPago                              *string      `xml:"NumCtaPago,attr" bson:"NumeroCuentaPago,omitempty"`
@@ -155,14 +157,66 @@ type Impuestos32 struct {
 }
 
 type Retencion32 struct {
-	Impuesto string  `xml:"impuesto,attr" bson:"Impuesto"`
-	Importe  float64 `xml:"importe,attr" bson:"Importe"`
+	TipoImpuesto string  `xml:"impuesto,attr" bson:"TipoImpuesto"`
+	Impuesto     string  `bson:"Impuesto"`
+	Importe      float64 `xml:"importe,attr" bson:"Importe"`
+}
+
+func (i *Retencion32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	type Alias Retencion32
+	var aux Alias
+
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+
+	*i = Retencion32(aux)
+
+	switch strings.ToLower(i.TipoImpuesto) {
+	case "isr":
+		i.Impuesto = "001"
+		break
+	case "iva":
+		i.Impuesto = "002"
+		break
+	case "ieps":
+		i.Impuesto = "003"
+		break
+	}
+
+	return nil
 }
 
 type Traslado32 struct {
-	Impuesto string  `xml:"impuesto,attr" bson:"Impuesto"`
-	Tasa     float64 `xml:"tasa,attr" bson:"Tasa"`
-	Importe  float64 `xml:"importe,attr" bson:"Importe"`
+	TipoImpuesto string  `xml:"impuesto,attr" bson:"TipoImpuesto"`
+	Impuesto     string  `bson:"Impuesto"`
+	Tasa         float64 `xml:"tasa,attr" bson:"Tasa"`
+	Importe      float64 `xml:"importe,attr" bson:"Importe"`
+}
+
+func (i *Traslado32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	type Alias Traslado32
+	var aux Alias
+
+	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+
+	*i = Traslado32(aux)
+
+	switch strings.ToLower(i.TipoImpuesto) {
+	case "isr":
+		i.Impuesto = "001"
+		break
+	case "iva":
+		i.Impuesto = "002"
+		break
+	case "ieps":
+		i.Impuesto = "003"
+		break
+	}
+
+	return nil
 }
 
 func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
@@ -190,6 +244,50 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	c.FechaEmision = fechaEmision
 	c.Comprobante = true
 	c.Vigente = nil
+
+	switch strings.ToLower(c.TipoDeComprobante) {
+	case "ingreso":
+		c.TipoComprobante = "I"
+		break
+	case "egreso":
+		c.TipoComprobante = "E"
+		break
+	case "traslado":
+		c.TipoComprobante = "T"
+		break
+	}
+
+	tipoCambio := 1.0
+	if c.TipoDeCambio != nil {
+		tipoDeCambio := *c.TipoDeCambio
+		parsedFloat, _ := strconv.ParseFloat(tipoDeCambio, 64)
+		if parsedFloat > 0 {
+			tipoCambio = parsedFloat
+		}
+	}
+
+	c.TipoCambio = tipoCambio
+	totalesMonedaLocal := documentofiscaldigital.TotalesMonedaLocal{
+		Total:    c.Total * tipoCambio,
+		Subtotal: c.Subtotal * tipoCambio,
+	}
+
+	if c.Descuento != nil {
+		descuento := *c.Descuento * tipoCambio
+		totalesMonedaLocal.Descuento = &descuento
+	}
+
+	if c.Impuestos.TotalImpuestosRetenidos != nil {
+		tir := *c.Impuestos.TotalImpuestosRetenidos * tipoCambio
+		totalesMonedaLocal.TotalImpuestosRetenidos = &tir
+	}
+
+	if c.Impuestos.TotalImpuestosTrasladados != nil {
+		tit := *c.Impuestos.TotalImpuestosTrasladados * tipoCambio
+		totalesMonedaLocal.TotalImpuestosTrasladados = &tit
+	}
+
+	c.TotalesMonedaLocal = totalesMonedaLocal
 
 	if c.InformacionAdicional != nil {
 		c.InformacionAdicional.StampedByKuantik = nil

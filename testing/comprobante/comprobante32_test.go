@@ -41,10 +41,12 @@ func InternalTestFullAtributesComprobante32(t *testing.T, comprobante32 comproba
 	assert.Equal(t, 1000.00, comprobante32.Subtotal)
 	assert.Equal(t, 50.00, *comprobante32.Descuento)
 	assert.Equal(t, "Promoción especial", *comprobante32.MotivoDescuento)
-	assert.Equal(t, "20.5", *comprobante32.TipoCambio)
+	assert.Equal(t, "20.5", *comprobante32.TipoDeCambio)
+	assert.Equal(t, 20.5, comprobante32.TipoCambio)
 	assert.Equal(t, "MXN", *comprobante32.Moneda)
 	assert.Equal(t, 1000.00, comprobante32.Total)
-	assert.Equal(t, "ingreso", comprobante32.TipoComprobante)
+	assert.Equal(t, "ingreso", comprobante32.TipoDeComprobante)
+	assert.Equal(t, "I", comprobante32.TipoComprobante)
 	assert.Equal(t, "Transferencia bancaria", comprobante32.MetodoPago)
 	assert.Equal(t, "Ciudad de México", comprobante32.LugarExpedicion)
 	assert.Equal(t, "1234", *comprobante32.NumeroCuentaPago)
@@ -160,7 +162,8 @@ func InternalTestFullAtributesImpuestos32(t *testing.T, impuestos32 comprobante2
 func InternalTestFullAtributesTraslados32(t *testing.T, traslado32 []comprobante2.Traslado32) {
 	assert.NotNil(t, traslado32)
 	assert.Equal(t, 1, len(traslado32))
-	assert.Equal(t, "IEPS", traslado32[0].Impuesto)
+	assert.Equal(t, "IEPS", traslado32[0].TipoImpuesto)
+	assert.Equal(t, "003", traslado32[0].Impuesto)
 	assert.Equal(t, 16.00, traslado32[0].Tasa)
 	assert.Equal(t, 100.00, traslado32[0].Importe)
 }
@@ -168,7 +171,8 @@ func InternalTestFullAtributesTraslados32(t *testing.T, traslado32 []comprobante
 func InternalTestFullAtributesRetenciones32(t *testing.T, retenciones32 []comprobante2.Retencion32) {
 	assert.NotNil(t, retenciones32)
 	assert.Equal(t, 1, len(retenciones32))
-	assert.Equal(t, "IEPS", retenciones32[0].Impuesto)
+	assert.Equal(t, "IEPS", retenciones32[0].TipoImpuesto)
+	assert.Equal(t, "003", retenciones32[0].Impuesto)
 	assert.Equal(t, 10500.00, retenciones32[0].Importe)
 }
 

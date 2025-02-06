@@ -80,7 +80,8 @@ func InternalTestRetencionTerceros11(t *testing.T, retenciones *[]acuentatercero
 	assert.NotNil(t, retenciones)
 	assert.Equal(t, len(*retenciones), 1)
 	retencion := (*retenciones)[0]
-	assert.Equal(t, "ISR", retencion.Impuesto)
+	assert.Equal(t, "ISR", retencion.TipoImpuesto)
+	assert.Equal(t, "001", retencion.Impuesto)
 	assert.Equal(t, 150.00, retencion.Importe)
 }
 
@@ -88,7 +89,8 @@ func InternalTestTrasladoTerceros11(t *testing.T, traslados *[]acuentaterceros.T
 	assert.NotNil(t, traslados)
 	assert.Equal(t, len(*traslados), 1)
 	traslado := (*traslados)[0]
-	assert.Equal(t, "IVA", traslado.Impuesto)
+	assert.Equal(t, "IVA", traslado.TipoImpuesto)
+	assert.Equal(t, "002", traslado.Impuesto)
 	assert.Equal(t, 16.00, traslado.Tasa)
 	assert.Equal(t, 160.00, traslado.Importe)
 }

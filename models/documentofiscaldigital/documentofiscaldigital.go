@@ -25,6 +25,10 @@ type ProcessorMetadata struct {
 	KoreVersion       *string    `bson:"KoreVersion"`
 	LastUpdate        *time.Time `bson:"LastUpdate"`
 	CreationDate      *time.Time `bson:"CreationDate"`
+	ZipPath           *string    `bson:"ZipPath"`
+	XmlPath           *string    `bson:"XmlPath"`
+	FileName          *string    `bson:"FileName"`
+	FilePaths         *string    `bson:"FilePaths"`
 }
 
 type InformacionAdicional struct {

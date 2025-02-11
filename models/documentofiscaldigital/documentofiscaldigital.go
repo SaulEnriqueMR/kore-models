@@ -21,14 +21,48 @@ type DocumentoFiscalDigital struct {
 }
 
 type ProcessorMetadata struct {
-	KoreModelsVersion *string    `bson:"KoreModelsVersion"`
-	KoreVersion       *string    `bson:"KoreVersion"`
-	LastUpdate        *time.Time `bson:"LastUpdate"`
-	CreationDate      *time.Time `bson:"CreationDate"`
-	ZipPath           *string    `bson:"ZipPath"`
-	XmlPath           *string    `bson:"XmlPath"`
-	FileName          *string    `bson:"FileName"`
-	FilePaths         *string    `bson:"FilePaths"`
+	KoreModelsVersion  *string             `bson:"KoreModelsVersion" json:"KoreModelsVersion"`
+	KoreVersion        *string             `bson:"KoreVersion" json:"KoreVersion"`
+	LastUpdate         *time.Time          `bson:"LastUpdate" json:"LastUpdate"`
+	CreationDate       *time.Time          `bson:"CreationDate,omitempty" json:"CreationDate,omitempty"`
+	ZipProcessor       *ZipProcessor       `bson:"ZipProcessor,omitempty" json:"ZipProcessor,omitempty"`
+	XmlPathProcessor   *XmlPathProcessor   `bson:"XmlPathProcessor,omitempty" json:"XmlPathProcessor,omitempty"`
+	XmlFileProcessor   *XmlFileProcessor   `bson:"XmlFileProcessor,omitempty" json:"XmlFileProcessor,omitempty"`
+	FilePathsProcessor *FilePathsProcessor `bson:"FilePathsProcessor,omitempty" json:"FilePathsProcessor,omitempty"`
+	MetaProcessor      *MetaProcessor      `bson:"MetaProcessor,omitempty" json:"MetaProcessor,omitempty"`
+	// ZipPath           *string    `bson:"ZipPath,omitempty" json:"ZipPath,omitempty"`
+	// XmlPath           *string    `bson:"XmlPath,omitempty" json:"XmlPath,omitempty"`
+	// FileName          *string    `bson:"FileName,omitempty" json:"FileName,omitempty"`
+	// FilePaths         *string    `bson:"FilePaths,omitempty" json:"FilePaths,omitempty"`
+}
+type Processor struct {
+	Attempt    int       `bson:"Attempt,omitempty" json:"Attempt,omitempty"`
+	LastUpdate time.Time `bson:"LastUpdate" json:"LastUpdate"`
+}
+
+type ZipProcessor struct {
+	ZipPath   string `bson:"ZipPath" json:"ZipPath"`
+	Processor `bson:",inline"`
+}
+
+type XmlPathProcessor struct {
+	XmlPath   string `bson:"XmlPath" json:"XmlPath"`
+	Processor `bson:",inline"`
+}
+
+type XmlFileProcessor struct {
+	FileName  string `bson:"FileName" json:"FileName"`
+	Processor `bson:",inline"`
+}
+
+type FilePathsProcessor struct {
+	FilePaths string `bson:"FilePaths" json:"FilePaths"`
+	Processor `bson:",inline"`
+}
+
+type MetaProcessor struct {
+	MetadataPath string `bson:"MetadataPath" json:"MetadataPath"`
+	Processor    `bson:",inline"`
 }
 
 type InformacionAdicional struct {

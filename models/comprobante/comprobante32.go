@@ -245,6 +245,7 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	c.FechaEmision = fechaEmision
 	c.Comprobante = true
 	c.Vigente = nil
+	c.ProcessorMetadata.CreationDate = nil
 
 	switch strings.ToLower(c.TipoDeComprobante) {
 	case "ingreso":

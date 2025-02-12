@@ -76,3 +76,7 @@ type Addenda struct {
 	Value       string                 `xml:",innerxml" bson:"Value"`
 	BuzonFiscal *[]addenda.BuzonFiscal `xml:"AddendaBuzonFiscal" bson:"BuzonFiscal,omitempty"`
 }
+
+type KuantikMetadata struct {
+	SerieFolio string `bson:"SerieFolio"`
+}

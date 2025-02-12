@@ -95,6 +95,7 @@ var ignoreMap = map[string]struct{}{
 	"SelloSat":               {},
 	"DocumentoFiscalDigital": {},
 	"ProcessorMetadata":      {},
+	"KuantikMetadata":        {},
 }
 
 func processValue(val reflect.Value, sb *strings.Builder) {

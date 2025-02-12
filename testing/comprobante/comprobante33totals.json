@@ -15,10 +15,9 @@
         "TotalImpuestosTrasladados": 2000
     },
     "ProcessorMetadata": {
-        "KoreModelsVersion": "v1.0.47",
+        "KoreModelsVersion": "v1.0.53",
         "KoreVersion": null,
-        "LastUpdate": "2025-02-06T16:56:13.519704Z",
-        "CreationDate": null
+        "LastUpdate": "2025-02-12T15:55:51Z"
     },
     "Version": "3.3",
     "Serie": "A",
@@ -158,5 +157,8 @@
         "ValesDeDespensa": null,
         "VehiculoUsado": null
     },
-    "Addenda": null
+    "Addenda": null,
+    "KuantikMetadata": {
+        "SerieFolio": "A-123456"
+    }
 }

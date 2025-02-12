@@ -42,6 +42,7 @@ type Comprobante40 struct {
 	Impuestos                                     *Impuestos40           `xml:"Impuestos" bson:"Impuestos,omitempty" json:"Impuestos"`
 	Complemento                                   Complemento            `xml:"Complemento" bson:"Complemento" json:"Complemento"`
 	Addenda                                       *Addenda               `xml:"Addenda" bson:"Addenda,omitempty"`
+	KuantikMetadata                               KuantikMetadata        `bson:"KuantikMetadata,omitempty"`
 }
 
 func (c *Comprobante40) DefineTransaccion(rfc string) {
@@ -268,6 +269,19 @@ func (c *Comprobante40) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	processDate := time.Date(now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second(), 0, time.UTC)
 	c.ProcessorMetadata.LastUpdate = &processDate
 	c.ProcessorMetadata.KoreModelsVersion = &models.KoreModelVersion
+
+	sb := strings.Builder{}
+	if c.Serie != nil {
+		sb.WriteString(*c.Serie)
+	}
+
+	sb.WriteString("-")
+
+	if c.Folio != nil {
+		sb.WriteString(*c.Folio)
+	}
+
+	c.KuantikMetadata.SerieFolio = sb.String()
 
 	return nil
 }

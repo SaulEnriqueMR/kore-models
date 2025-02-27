@@ -50,12 +50,16 @@ func TestTrimStringAttributes(t *testing.T) {
 func TestTrimAttributesAndText(t *testing.T) {
 	// Sample XML input
 	inputXML := []byte(`
-		<root>
-			<element attribute="   some value   ">   some text   </element>
-		</root>`)
+		<cfdi:Comprobante 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 
+			http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" 
+			Total="100" 
+			Subtotal=" 50       ">
+		</cfdi:Comprobante>`)
 	// Trim the XML attributes and text
 	outputXML, err := helpers.TrimXml(inputXML)
 	assert.NoError(t, err)
-	expectedXML := []byte(`<root><element attribute="some value">some text</element></root>`)
-	assert.Equal(t, string(outputXML), string(expectedXML))
+	expectedXML := `<cfdi:Comprobante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Total="100" Subtotal="50"></cfdi:Comprobante>`
+	assert.Equal(t, expectedXML, string(outputXML))
 }

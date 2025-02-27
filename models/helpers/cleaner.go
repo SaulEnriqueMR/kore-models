@@ -1,57 +1,37 @@
 package helpers
 
 import (
-	"bytes"
-	"encoding/xml"
+	"fmt"
 	"reflect"
+	"regexp"
 	"strings"
 )
 
 func TrimXml(inputXml []byte) ([]byte, error) {
-	decoder := xml.NewDecoder(bytes.NewReader(inputXml))
-	var output bytes.Buffer
-	encoder := xml.NewEncoder(&output)
+	// Regex to match attribute values
+	re := regexp.MustCompile(`(\w+:\w+|[\w-]+)\s*=\s*"([^"]*)"`)
 
-	// Iterate through XML tokens
-	for {
-		tok, err := decoder.Token()
-		if err != nil {
-			// End of file or error
-			if err.Error() == "EOF" {
-				break
-			}
-			return nil, err
+	// Replace function to trim attribute values
+	trimmedXML := re.ReplaceAllStringFunc(string(inputXml), func(match string) string {
+		// Split the match into key and value
+		parts := strings.SplitN(match, "=", 2)
+		if len(parts) != 2 {
+			return match // Return the original match if it doesn't contain "="
 		}
 
-		switch t := tok.(type) {
-		case xml.StartElement:
-			// Trim all attribute values
-			for i := range t.Attr {
-				t.Attr[i].Value = strings.TrimSpace(t.Attr[i].Value)
-			}
-			encoder.EncodeToken(t)
+		// Trim the value (remove leading/trailing spaces and newlines)
+		key := strings.TrimSpace(parts[0])
+		value := strings.TrimSpace(strings.Trim(parts[1], `"`))
 
-		case xml.EndElement:
-			// Write end element
-			encoder.EncodeToken(t)
+		// Reconstruct the attribute with the trimmed value
+		return fmt.Sprintf(`%s="%s"`, key, value)
+	})
 
-		case xml.CharData:
-			// Trim text content
-			trimmedText := strings.TrimSpace(string(t))
-			if trimmedText != "" {
-				encoder.EncodeToken(xml.CharData(trimmedText))
-			}
-
-		default:
-			// For other token types, pass them as they are
-			encoder.EncodeToken(tok)
-		}
-	}
-
-	// Close the encoder and flush the output
-	encoder.Flush()
-
-	return output.Bytes(), nil
+	// Remove extra spaces and newlines between attributes
+	trimmedXML = regexp.MustCompile(`>\s+<`).ReplaceAllString(trimmedXML, "><")
+	trimmedXML = regexp.MustCompile(`\s+`).ReplaceAllString(trimmedXML, " ")
+	trimmedXML = strings.TrimSpace(trimmedXML)
+	return []byte(trimmedXML), nil
 }
 
 // TrimStringAttributes Función encargada de timmear todos los atributos que sean strings.

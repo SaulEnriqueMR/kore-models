@@ -1,0 +1,18 @@
+{
+    "GranTotal": 62618,
+    "CargosNoFacturables": [
+        {
+            "Cargo": "Propinas",
+            "Importe": 7170
+        }
+    ],
+    "Hospedaje": {
+        "Folio": "301630",
+        "Huesped": "SCOTIABANK, ",
+        "Habitacion": "9104",
+        "CheckIn": "2025-02-11",
+        "CheckOut": "2025-02-11",
+        "Reserva": "45789715",
+        "NoCoches": "0"
+    }
+}

@@ -2,6 +2,7 @@ package comprobante
 
 import (
 	"encoding/xml"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"strings"
 )
 
@@ -9,6 +10,21 @@ type Comprobante struct {
 	Comprobante32 *Comprobante32 `bson:"Comprobante32"`
 	Comprobante33 *Comprobante33 `bson:"Comprobante33"`
 	Comprobante40 *Comprobante40 `bson:"Comprobante40"`
+}
+
+func SerializeComprobanteFromXml(inputXml []byte) (Comprobante, error) {
+	var parsed Comprobante
+	
+	trimmedXml, errOnTrim := helpers.TrimXml(inputXml)
+	if errOnTrim != nil {
+		return parsed, errOnTrim
+	}
+
+	errUnmarshal := helpers.UnmarshalXMLWithEncoding(trimmedXml, &parsed)
+	if errUnmarshal != nil {
+		return parsed, errUnmarshal
+	}
+	return parsed, nil
 }
 
 func (c *Comprobante) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

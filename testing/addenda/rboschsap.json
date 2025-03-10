@@ -1,0 +1,49 @@
+{
+    "Cabecera": {
+        "ClaveCli": "0116701426",
+        "ClaveNum": "662801362",
+        "CondicionesPago": "Dentro de 60 d as sin deducción",
+        "Delivery": "6200182304",
+        "Fecha": "2025-03-07",
+        "Folio": "1064121731",
+        "FolioErp": "1001389715",
+        "ImporteTotalLetra": "Tres mil setecientos sesenta y dos 58/100 MXN",
+        "Nodo": "INVOICE",
+        "Peso": "0.108",
+        "TelefX": "(55)6186-2015",
+        "TotalFactura": "3762.58",
+        "TotalNeto": "3243.6",
+        "Moneda": {
+            "Moneda": "MXN",
+            "TipoCambio": "1.00000"
+        },
+        "BillTo": {
+            "Calle": "ORIENTE 743 NO.610",
+            "Ciudad": "AVENIDA SIEMPRE VIVA",
+            "CodigoPostal": "09400",
+            "Email": "usuario@correo.mx",
+            "Estado": "CMX",
+            "Nombre": "EMPRESA MULTINACIONAL",
+            "Pais": "MX"
+        },
+        "ShipTo": {
+            "Calle": "ORIENTE 743 NO.610",
+            "Ciudad": "AVENIDA SIEMPRE VIVA",
+            "CodigoPostal": "09400",
+            "Estado": "CMX",
+            "Nombre": "EMPRESA MULTINACIONAL"
+        }
+    },
+    "Detalle": {
+        "Lineas": {
+            "Cantidad": "1",
+            "MontoLinea": "3243.6",
+            "NoParte": "1551346721560",
+            "NoLinea": "33905",
+            "Pedido": "AB26014DMAR",
+            "PrecioNeto": "540.6",
+            "ReferenciaCliente": "1527585395",
+            "UnidadMedida": "H87"
+        }
+    }
+}

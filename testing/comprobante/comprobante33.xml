@@ -4309,5 +4309,52 @@
                 </elementos>
             </EDICOM_GENERICA>
         </customized>
+        <customized xmlns="http://repository.edicomnet.com/schemas/mx/cfd/addenda" xsi:schemaLocation="http://repository.edicomnet.com/schemas/mx/cfd/addenda http://repository.edicomnet.com/schemas/mx/cfd/addenda/customized.xsd">
+            <RBOSCH_SAP>
+                <CABECERA
+                        CLAVECLI="0116701426"
+                        CLAVENUM="662801362"
+                        CONDICIONESPAGO="Dentro de 60 d as sin deducción"
+                        DELIVERY="6200182304"
+                        FECHA="2025-03-07"
+                        FOLIO="1064121731"
+                        FOLIOERP="1001389715"
+                        IMPTOTALLETRA="Tres mil setecientos sesenta y dos 58/100 MXN"
+                        NODO="INVOICE"
+                        PESO="0.108"
+                        TELF_X="(55)6186-2015"
+                        TOTALFAC="3762.58"
+                        TOTNETO="3243.6">
+                    <MONEDA
+                            MONEDA="MXN"
+                            TIPO_CAMBIO="1.00000"/>
+                    <BILLTO
+                            CALLE="ORIENTE 743 NO.610"
+                            CIUDAD="AVENIDA SIEMPRE VIVA"
+                            CP="09400"
+                            EMAIL="usuario@correo.mx"
+                            ESTADO="CMX"
+                            NOMBRE="EMPRESA MULTINACIONAL"
+                            PAIS="MX"/>
+                    <SHIPTO
+                            CALLE_RECEPTOR="ORIENTE 743 NO.610"
+                            CIUDAD_RECEPTOR="AVENIDA SIEMPRE VIVA"
+                            CP_RECEPTOR="09400"
+                            ESTADO_RECEPTOR="CMX"
+                            NOMBRE_RECEPTOR="EMPRESA MULTINACIONAL"/>
+                </CABECERA>
+                <DETALLE>
+                    <LINEAS
+                            CANTIDAD="1"
+                            MONTOLIN="3243.6"
+                            NPARTE="1551346721560"
+                            NUMLIN="33905"
+                            PEDIDO="AB26014DMAR"
+                            PRECIONETO="540.6"
+                            REFCLIENTE="1527585395"
+                            UMEDIDA="H87"/>
+                </DETALLE>
+            </RBOSCH_SAP>
+        </customized>
     </Addenda>
 </Comprobante>

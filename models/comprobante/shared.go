@@ -77,6 +77,7 @@ type Addenda struct {
 	BuzonFiscal    *[]addenda.BuzonFiscal    `xml:"AddendaBuzonFiscal" bson:"BuzonFiscal,omitempty"`
 	AddendaFacto   *[]addenda.AddendaFacto   `xml:"addendaFacto" bson:"AddendaFacto,omitempty"`
 	EdicomGenerica *[]addenda.EdicomGenerica `xml:"customized>EDICOM_GENERICA" bson:"EdicomGenerica,omitempty"`
+	RBoschSap      *[]addenda.RBoschSap      `xml:"customized>RBOSCH_SAP" bson:"RBoschSap,omitempty"`
 }
 
 type KuantikMetadata struct {

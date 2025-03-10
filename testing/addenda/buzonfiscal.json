@@ -5,14 +5,14 @@
         "NombreCorto": "FAC"
     },
     "Receptor": {
-        "NoCliente": "4000655163"
+        "NoCliente": "7010427863"
     },
     "Destino": {
-        "Nombre": "SANCHEZ LOPEZ MARIO ERNESTO",
+        "Nombre": "OSCAR KALA HAAK",
         "Estado": "",
-        "Municipio": "Correo :MARIO.SANCHEZ.L@TECSALUD.MX",
-        "Calle": "RIO PILON 416",
-        "ClaveIdentificacion": "4000655163"
+        "Municipio": "Correo :USUARIO@CORREO.COM",
+        "Calle": "MAR PILLOFON 216",
+        "ClaveIdentificacion": "8000143165"
     },
     "Extra": [
         {
@@ -24,7 +24,7 @@
             "Atributo": "HoraIngreso"
         },
         {
-            "Valor": "2003283321",
+            "Valor": "5006578221",
             "Atributo": "Episodio"
         },
         {
@@ -33,10 +33,10 @@
         },
         {
             "Valor": "Facturo",
-            "Atributo": "L03120920"
+            "Atributo": "Q06790910"
         },
         {
-            "Valor": "MARIO RODARTE SHADE",
+            "Valor": "RODRIGO KITIA CASTRO",
             "Atributo": "Nombre del Doctor"
         },
         {

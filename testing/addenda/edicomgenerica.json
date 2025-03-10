@@ -1,0 +1,24 @@
+{
+    "Elementos": [
+        {
+            "Etiqueta": "CP",
+            "Descripcion": "Codigo Planta",
+            "Valor": "AB-CXAO7"
+        },
+        {
+            "Etiqueta": "OCC",
+            "Descripcion": "ORDEN DE COMPRA O CONTRATO",
+            "Valor": "ORDEN DE COMPRA"
+        },
+        {
+            "Etiqueta": "OC",
+            "Descripcion": "Orden de Compra",
+            "Valor": "0059036730"
+        },
+        {
+            "Etiqueta": "NC",
+            "Descripcion": "NOMBRE DEL REQUISITOR (MANDATORIO EN CONTRATO)",
+            "Valor": "Clavó, Pablo"
+        }
+    ]
+}

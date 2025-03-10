@@ -1,0 +1,24 @@
+<EDICOM_GENERICA>
+    <elementos>
+        <elemento>
+            <etiqueta>CP</etiqueta>
+            <descripcion>Codigo Planta</descripcion>
+            <valor>AB-CXAO7</valor>
+        </elemento>
+        <elemento>
+            <etiqueta>OCC</etiqueta>
+            <descripcion>ORDEN DE COMPRA O CONTRATO</descripcion>
+            <valor>ORDEN DE COMPRA</valor>
+        </elemento>
+        <elemento>
+            <etiqueta>OC</etiqueta>
+            <descripcion>Orden de Compra</descripcion>
+            <valor>0059036730</valor>
+        </elemento>
+        <elemento>
+            <etiqueta>NC</etiqueta>
+            <descripcion>NOMBRE DEL REQUISITOR (MANDATORIO EN CONTRATO)</descripcion>
+            <valor>Clavó, Pablo</valor>
+        </elemento>
+    </elementos>
+</EDICOM_GENERICA>

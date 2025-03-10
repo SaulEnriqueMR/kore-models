@@ -73,9 +73,10 @@ type Complemento struct {
 }
 
 type Addenda struct {
-	Value        string                  `xml:",innerxml" bson:"Value"`
-	BuzonFiscal  *[]addenda.BuzonFiscal  `xml:"AddendaBuzonFiscal" bson:"BuzonFiscal,omitempty"`
-	AddendaFacto *[]addenda.AddendaFacto `xml:"addendaFacto" bson:"AddendaFacto,omitempty"`
+	Value          string                    `xml:",innerxml" bson:"Value"`
+	BuzonFiscal    *[]addenda.BuzonFiscal    `xml:"AddendaBuzonFiscal" bson:"BuzonFiscal,omitempty"`
+	AddendaFacto   *[]addenda.AddendaFacto   `xml:"addendaFacto" bson:"AddendaFacto,omitempty"`
+	EdicomGenerica *[]addenda.EdicomGenerica `xml:"customized>EDICOM_GENERICA" bson:"EdicomGenerica,omitempty"`
 }
 
 type KuantikMetadata struct {

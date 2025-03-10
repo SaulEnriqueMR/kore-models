@@ -4301,15 +4301,15 @@
     <Addenda>
         <AddendaBuzonFiscal xmlns="http://www.buzonfiscal.com/ns/addenda/bf/2" version="4.0">
             <TipoDocumento descripcion="Factura" nombreCorto="FAC"/>
-            <Receptor noCliente="4000655163"/>
-            <Destino nombre="SANCHEZ LOPEZ MARIO ERNESTO" estado="" municipio="Correo :MARIO.SANCHEZ.L@TECSALUD.MX" calle="RIO PILON 416" claveIdentificacion="4000655163"/>
+            <Receptor noCliente="7010427863"/>
+            <Destino nombre="OSCAR KALA HAAK" estado="" municipio="Correo :USUARIO@CORREO.COM" calle="MAR PILLOFON 216" claveIdentificacion="8000143165"/>
             <CFD totalConLetra="CINCO MIL PESOS (01/100) M.N."/>
             <Extra valor="10/12/2024" atributo="FechaIngreso"/>
             <Extra valor="05:51:56 p. m." atributo="HoraIngreso"/>
-            <Extra valor="2003283321" atributo="Episodio"/>
+            <Extra valor="5006578221" atributo="Episodio"/>
             <Extra valor="30/06/1980" atributo="FechaNacimiento"/>
-            <Extra valor="Facturo" atributo="L03120920"/>
-            <Extra valor="MARIO RODARTE SHADE" atributo="Nombre del Doctor"/>
+            <Extra valor="Facturo" atributo="Q06790910"/>
+            <Extra valor="RODRIGO KITIA CASTRO" atributo="Nombre del Doctor"/>
             <Extra valor="4310.35" atributo="SubtotalGravado"/>
             <Extra valor="4310.35" atributo="TotalServicios"/>
             <Extra valor="4310.35" atributo="Subtotal1"/>
@@ -4322,15 +4322,41 @@
                 <addendaFacto:cargoNoFacturable cargo="Propinas" importe="7170.0"/>
             </addendaFacto:cargoNoFacturable>
             <addendaFacto:hospedaje>
-                <addendaFacto:folio>301630</addendaFacto:folio>
-                <addendaFacto:huesped>SCOTIABANK, </addendaFacto:huesped>
-                <addendaFacto:habitacion>9104</addendaFacto:habitacion>
+                <addendaFacto:folio>502730</addendaFacto:folio>
+                <addendaFacto:huesped>BANCO B, </addendaFacto:huesped>
+                <addendaFacto:habitacion>3104</addendaFacto:habitacion>
                 <addendaFacto:chekIn>2025-02-11</addendaFacto:chekIn>
                 <addendaFacto:chekOut>2025-02-11</addendaFacto:chekOut>
-                <addendaFacto:reserva>45789715</addendaFacto:reserva>
+                <addendaFacto:reserva>78341175</addendaFacto:reserva>
                 <addendaFacto:numeroNoches>0</addendaFacto:numeroNoches>
             </addendaFacto:hospedaje>
             <addendaFacto:granTotal>62618.0</addendaFacto:granTotal>
         </addendaFacto:addendaFacto>
+        <customized xmlns="http://repository.edicomnet.com/schemas/mx/cfd/addenda" xsi:schemaLocation="http://repository.edicomnet.com/schemas/mx/cfd/addenda http://repository.edicomnet.com/schemas/mx/cfd/addenda/customized.xsd">
+            <EDICOM_GENERICA>
+                <elementos>
+                    <elemento>
+                        <etiqueta>CP</etiqueta>
+                        <descripcion>Codigo Planta</descripcion>
+                        <valor>AB-CXAO7</valor>
+                    </elemento>
+                    <elemento>
+                        <etiqueta>OCC</etiqueta>
+                        <descripcion>ORDEN DE COMPRA O CONTRATO</descripcion>
+                        <valor>ORDEN DE COMPRA</valor>
+                    </elemento>
+                    <elemento>
+                        <etiqueta>OC</etiqueta>
+                        <descripcion>Orden de Compra</descripcion>
+                        <valor>0059036730</valor>
+                    </elemento>
+                    <elemento>
+                        <etiqueta>NC</etiqueta>
+                        <descripcion>NOMBRE DEL REQUISITOR (MANDATORIO EN CONTRATO)</descripcion>
+                        <valor>Clavó, Pablo</valor>
+                    </elemento>
+                </elementos>
+            </EDICOM_GENERICA>
+        </customized>
     </Addenda>
 </cfdi:Comprobante>

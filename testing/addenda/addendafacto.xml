@@ -3,12 +3,12 @@
         <addendaFacto:cargoNoFacturable cargo="Propinas" importe="7170.0"/>
     </addendaFacto:cargoNoFacturable>
     <addendaFacto:hospedaje>
-        <addendaFacto:folio>301630</addendaFacto:folio>
-        <addendaFacto:huesped>SCOTIABANK, </addendaFacto:huesped>
-        <addendaFacto:habitacion>9104</addendaFacto:habitacion>
+        <addendaFacto:folio>502730</addendaFacto:folio>
+        <addendaFacto:huesped>BANCO B, </addendaFacto:huesped>
+        <addendaFacto:habitacion>3104</addendaFacto:habitacion>
         <addendaFacto:chekIn>2025-02-11</addendaFacto:chekIn>
         <addendaFacto:chekOut>2025-02-11</addendaFacto:chekOut>
-        <addendaFacto:reserva>45789715</addendaFacto:reserva>
+        <addendaFacto:reserva>78341175</addendaFacto:reserva>
         <addendaFacto:numeroNoches>0</addendaFacto:numeroNoches>
     </addendaFacto:hospedaje>
     <addendaFacto:granTotal>62618.0</addendaFacto:granTotal>

@@ -73,11 +73,12 @@ type Complemento struct {
 }
 
 type Addenda struct {
-	Value          string                    `xml:",innerxml" bson:"Value"`
-	BuzonFiscal    *[]addenda.BuzonFiscal    `xml:"AddendaBuzonFiscal" bson:"BuzonFiscal,omitempty"`
-	AddendaFacto   *[]addenda.AddendaFacto   `xml:"addendaFacto" bson:"AddendaFacto,omitempty"`
-	EdicomGenerica *[]addenda.EdicomGenerica `xml:"customized>EDICOM_GENERICA" bson:"EdicomGenerica,omitempty"`
-	RBoschSap      *[]addenda.RBoschSap      `xml:"customized>RBOSCH_SAP" bson:"RBoschSap,omitempty"`
+	Value             string                       `xml:",innerxml" bson:"Value"`
+	BuzonFiscal       *[]addenda.BuzonFiscal       `xml:"AddendaBuzonFiscal" bson:"BuzonFiscal,omitempty"`
+	AddendaFacto      *[]addenda.AddendaFacto      `xml:"addendaFacto" bson:"AddendaFacto,omitempty"`
+	EdicomGenerica    *[]addenda.EdicomGenerica    `xml:"customized>EDICOM_GENERICA" bson:"EdicomGenerica,omitempty"`
+	RBoschSap         *[]addenda.RBoschSap         `xml:"customized>RBOSCH_SAP" bson:"RBoschSap,omitempty"`
+	RequestForPayment *[]addenda.RequestForPayment `xml:"requestForPayment" bson:"RequestForPayment,omitempty"`
 }
 
 type KuantikMetadata struct {

@@ -1,0 +1,123 @@
+{
+    "DeliveryDate": "2025-03-06",
+    "ContentVersion": "1.3.1",
+    "DocumentStatus": "ORIGINAL",
+    "DocumentStructureVersion": "AMC7.1",
+    "Type": "SimpleInvoiceType",
+    "RequestForPaymentIdentification": {
+        "EntityType": "INVOICE",
+        "UniqueCreatorIdentification": "A7025718709"
+    },
+    "SpecialInstructions": [
+        {
+            "Code": "AAB",
+            "Text": "Hasta el 05.05.2025 sin deducción"
+        },
+        {
+            "Code": "ZZZ",
+            "Text": "cuatrocientos cincuenta y un 63/100 MXN"
+        }
+    ],
+    "OrderIdentification": {
+        "ReferenceIdentification": {
+            "Type": "ON",
+            "Value": "8860911455"
+        },
+        "ReferenceDate": "2025-03-05"
+    },
+    "AdditionalInformation": {
+        "ReferenceIdentification": {
+            "Type": "ATZ",
+            "Value": "892667"
+        }
+    },
+    "Buyer": {
+        "Gln": "0007504005499"
+    },
+    "Seller": {
+        "Gln": "7504004973009",
+        "AlternatePartyIdentification": {
+            "Type": "SELLER_ASSIGNED_IDENTIFIER_FOR_A_PARTY",
+            "Value": "100641"
+        }
+    },
+    "Currency": {
+        "CurrencyISOCode": "MXN",
+        "CurrencyFunction": "BILLING_CURRENCY",
+        "RateOfChange": "1.00"
+    },
+    "LineItem": {
+        "Number": "10",
+        "Type": "SimpleInvoiceLineItemType",
+        "TradeItemIdentification": {
+            "Gtin": "3114147984154"
+        },
+        "AlternateTradeItemIdentification": {
+            "Type": "BUYER_ASSIGNED",
+            "Value": "584047"
+        },
+        "TradeItemDescriptionInformation": {
+            "Language": "ES",
+            "LongText": "PRO Wood Cordless 85x15x20D"
+        },
+        "InvoicedQuantity": {
+            "UnitOfMeasure": "EA",
+            "Value": "2.00"
+        },
+        "GrossPrice": {
+            "Amount": {
+                "Value": "194.67"
+            }
+        },
+        "PalletInformation": {
+            "PalletQuantity": "1",
+            "Description": {
+                "Type": "RETURN_PALLETS",
+                "Value": "RETURN_PALLETS"
+            },
+            "Transport": {
+                "MethodOfPayment": "PREPAID_BY_SELLER"
+            }
+        },
+        "TradeItemTaxInformation": {
+            "TaxTypeDescription": "VAT",
+            "TradeItemTaxAmount": {
+                "TaxPercentage": "16.00",
+                "TaxAmount": "62.29"
+            }
+        },
+        "TotalLineAmount": {
+            "NetAmount": {
+                "Amount": {
+                    "Value": "389.34"
+                }
+            }
+        }
+    },
+    "TotalAmount": {
+        "Amount": {
+            "Value": "389.34"
+        }
+    },
+    "TotalAllowanceCharge": {
+        "AllowanceOrChargeType": "CHARGE",
+        "Amount": {
+            "Value": "0.00"
+        }
+    },
+    "BaseAmount": {
+        "Amount": {
+            "Value": "389.34"
+        }
+    },
+    "Tax": {
+        "Type": "VAT",
+        "TaxPercentage": "16.00",
+        "TaxAmount": "62.29"
+    },
+    "PayableAmount": {
+        "Amount": {
+            "Value": "451.63"
+        }
+    }
+}

@@ -1,11 +1,12 @@
 package comprobante
 
 import (
-	comprobante2 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
-	"github.com/stretchr/testify/assert"
 	"io"
 	"os"
 	"testing"
+
+	comprobante2 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
+	"github.com/stretchr/testify/assert"
 )
 
 func GetFileForTest(filename string, t *testing.T) []byte {

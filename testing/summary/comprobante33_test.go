@@ -19,7 +19,7 @@ func TestFilename33(t *testing.T) {
 	if err != nil {
 		t.Error("Error reading file:", err)
 	}
-	if filename != "XAXX010101001/XAXX010101000/1/1/1362A081-72FD-4631-8573-58B5DB6E2EA9.xml" {
+	if filename != "XAXX010101001/XAXX010101000/2023/4/1362A081-72FD-4631-8573-58B5DB6E2EA9.xml" {
 		t.Log(filename)
 		t.Error("Filename does not match")
 	}

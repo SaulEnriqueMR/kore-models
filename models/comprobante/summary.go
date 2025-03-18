@@ -4,7 +4,6 @@ import (
 	"encoding/xml"
 	"errors"
 	"fmt"
-	"log"
 	"strings"
 	"time"
 
@@ -21,7 +20,7 @@ type SummarizedComprobante struct {
 func (f *SummarizedComprobante) GetFileName() string {
 	year := f.Fecha.Year()
 	month := f.Fecha.Month()
-	log.Println(f.EmisorRfc + "/" + f.ReceptorRfc + "/" + fmt.Sprintf("%d", year) + "/" + fmt.Sprintf("%d", month) + "/" + f.Uuid + ".xml")
+	// log.Println(f.EmisorRfc + "/" + f.ReceptorRfc + "/" + fmt.Sprintf("%d", year) + "/" + fmt.Sprintf("%d", month) + "/" + f.Uuid + ".xml")
 	return f.EmisorRfc + "/" + f.ReceptorRfc + "/" + fmt.Sprintf("%d", year) + "/" + fmt.Sprintf("%d", month) + "/" + f.Uuid + ".xml"
 }
 
@@ -42,7 +41,7 @@ func MyFilename(d *xml.Decoder) (string, error) {
 			if se.Name.Local == "TimbreFiscalDigital" {
 				start := xml.StartElement(se)
 				for _, attributes := range start.Attr {
-					if attributes.Name.Local == "UUID" {
+					if strings.ToLower(attributes.Name.Local) == "uuid" {
 						// filename.Uuid = attributes.Value
 						Uuid = attributes.Value
 					}

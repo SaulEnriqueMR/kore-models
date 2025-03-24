@@ -52,7 +52,7 @@ func ParseDatetime(s string) (time.Time, error) {
 
 	pathIso8601 := regexp.MustCompile(Iso8601)
 	if pathIso8601.MatchString(trimmedString) {
-		parsedTime, err := time.ParseInLocation(CustomLayout, trimmedString, UTC)
+		parsedTime, err := time.ParseInLocation(CustomLayout8601, trimmedString, UTC)
 		return parsedTime, err
 	}
 

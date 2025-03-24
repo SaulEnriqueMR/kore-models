@@ -47,3 +47,10 @@ func TestParseDatetime(t *testing.T) {
 	_, errUnsupported := helpers.ParseDatetime(unsupportedInput)
 	assert.Error(t, errUnsupported)
 }
+
+func TestISO8601(t *testing.T) {
+	isoInput := "2025-01-10T14:31:10.79"
+	expectedIso, _ := time.ParseInLocation(helpers.CustomLayout8601, isoInput, helpers.UTC)
+	isoTest, _ := helpers.ParseDatetime(isoInput)
+	assert.Equal(t, expectedIso, isoTest)
+}

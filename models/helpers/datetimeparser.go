@@ -10,9 +10,11 @@ import (
 var (
 	IsoDatetimeLayout     = "2006-01-02T15:04:05"
 	Rfc3339DatetimeLayout = "2006-01-02"
+	CustomLayout8601      = "2006-01-02T15:04:05.99"
 	IsoDateRegex          = `^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$`
 	Rfc3339Regex          = `^\d{4}-\d{2}-\d{2}$`
 	XsDateRegex           = `^\d{4}-\d{2}-\d{2}(Z|([+-]\d{2}:\d{2}))?$`
+	Iso8601               = `^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{2,3}$`
 )
 
 var MexicoLocation, errLocation = time.LoadLocation("Mexico/General")
@@ -45,6 +47,12 @@ func ParseDatetime(s string) (time.Time, error) {
 	if patternXsDate.MatchString(trimmedString) {
 		// Parse as RFC3339 date with midnight time added
 		parsedTime, err := time.ParseInLocation(time.RFC3339, trimmedString[:10]+"T00:00:00"+trimmedString[10:], UTC)
+		return parsedTime, err
+	}
+
+	pathIso8601 := regexp.MustCompile(Iso8601)
+	if pathIso8601.MatchString(trimmedString) {
+		parsedTime, err := time.ParseInLocation(CustomLayout, trimmedString, UTC)
 		return parsedTime, err
 	}
 

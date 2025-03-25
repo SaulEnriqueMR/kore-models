@@ -14,7 +14,7 @@ var (
 	IsoDateRegex          = `^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$`
 	Rfc3339Regex          = `^\d{4}-\d{2}-\d{2}$`
 	XsDateRegex           = `^\d{4}-\d{2}-\d{2}(Z|([+-]\d{2}:\d{2}))?$`
-	Iso8601               = `^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{2,3}$`
+	Iso8601               = `^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{1,3}$`
 )
 
 var MexicoLocation, errLocation = time.LoadLocation("Mexico/General")

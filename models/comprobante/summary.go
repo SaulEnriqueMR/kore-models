@@ -96,7 +96,7 @@ func MyFilename(d *xml.Decoder) (string, error) {
 	}
 	summarized.EmisorRfc = EmisorRfc
 	summarized.ReceptorRfc = ReceptorRfc
-	summarized.Uuid = Uuid
+	summarized.Uuid = strings.ToUpper(Uuid)
 	summarized.Fecha = Fecha
 
 	return summarized.GetFileName(), nil

@@ -6,6 +6,7 @@ import (
 )
 
 type EstadoDeCuentaCombustible struct {
+	EstadoDeCuentaCombustible10 *[]EstadoDeCuentaCombustible10 `bson:"EstadoDeCuentaCombustible10,omitempty"`
 	EstadoDeCuentaCombustible11 *[]EstadoDeCuentaCombustible11 `bson:"EstadoDeCuentaCombustible11,omitempty"`
 	EstadoDeCuentaCombustible12 *[]EstadoDeCuentaCombustible12 `bson:"EstadoDeCuentaCombustible12,omitempty"`
 }
@@ -31,6 +32,8 @@ func (v *EstadoDeCuentaCombustible) UnmarshalXML(d *xml.Decoder, start xml.Start
 			v.EstadoDeCuentaCombustible11 = &[]EstadoDeCuentaCombustible11{}
 		}
 		*v.EstadoDeCuentaCombustible11 = append(*v.EstadoDeCuentaCombustible11, edcc11...)
+
+		return nil
 	}
 
 	if Version == "1.2" {
@@ -42,7 +45,18 @@ func (v *EstadoDeCuentaCombustible) UnmarshalXML(d *xml.Decoder, start xml.Start
 			v.EstadoDeCuentaCombustible12 = &[]EstadoDeCuentaCombustible12{}
 		}
 		*v.EstadoDeCuentaCombustible12 = append(*v.EstadoDeCuentaCombustible12, edcc12...)
+
+		return nil
 	}
+
+	var edcc10 []EstadoDeCuentaCombustible10
+	if err := d.DecodeElement(&edcc10, &start); err != nil {
+		return err
+	}
+	if v.EstadoDeCuentaCombustible10 == nil {
+		v.EstadoDeCuentaCombustible10 = &[]EstadoDeCuentaCombustible10{}
+	}
+	*v.EstadoDeCuentaCombustible10 = append(*v.EstadoDeCuentaCombustible10, edcc10...)
 
 	return nil
 }

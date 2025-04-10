@@ -1,0 +1,1690 @@
+{
+    "TipoOperacion": "Tarjeta",
+    "NoCuenta": "38572-3",
+    "Subtotal": 10,
+    "Total": 77061.94,
+    "Conceptos": {
+        "Concepto": [
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-02T08:50:25",
+                "Fecha": "2014-01-02T08:50:25Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "141.40",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1042",
+                "ValorUnitario": 12.73,
+                "Importe": 1800,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 248.28
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-06T12:22:08",
+                "Fecha": "2014-01-06T12:22:08Z",
+                "Rfc": "AAC970604LV8",
+                "ClaveEstacion": "5184",
+                "Cantidad": "219.95",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "2055",
+                "ValorUnitario": 12.73,
+                "Importe": 2800,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 386.21
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-08T09:23:00",
+                "Fecha": "2014-01-08T09:23:00Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "70.70",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1110",
+                "ValorUnitario": 12.73,
+                "Importe": 900,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 124.14
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-08T14:18:16",
+                "Fecha": "2014-01-08T14:18:16Z",
+                "Rfc": "AAC970604LV8",
+                "ClaveEstacion": "5184",
+                "Cantidad": "81.17",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "2098",
+                "ValorUnitario": 12.32,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 137.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-10T08:55:46",
+                "Fecha": "2014-01-10T08:55:46Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "35.35",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1142",
+                "ValorUnitario": 12.73,
+                "Importe": 450,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 62.07
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-13T13:39:41",
+                "Fecha": "2014-01-13T13:39:41Z",
+                "Rfc": "AAC970604LV8",
+                "ClaveEstacion": "5184",
+                "Cantidad": "149.25",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "2158",
+                "ValorUnitario": 12.73,
+                "Importe": 1900,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 262.07
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-14T12:57:02",
+                "Fecha": "2014-01-14T12:57:02Z",
+                "Rfc": "SCR950309LA8",
+                "ClaveEstacion": "4531",
+                "Cantidad": "15.71",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "421",
+                "ValorUnitario": 12.73,
+                "Importe": 200,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 27.59
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-15T08:52:55",
+                "Fecha": "2014-01-15T08:52:55Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "94.27",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "10",
+                "ValorUnitario": 12.73,
+                "Importe": 1200,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 165.52
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-15T17:40:34",
+                "Fecha": "2014-01-15T17:40:34Z",
+                "Rfc": "GGM970514ER9",
+                "ClaveEstacion": "6025",
+                "Cantidad": "8.12",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "3638",
+                "ValorUnitario": 12.32,
+                "Importe": 100,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 13.79
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-15T20:19:01",
+                "Fecha": "2014-01-15T20:19:01Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "16.23",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "29",
+                "ValorUnitario": 12.32,
+                "Importe": 200,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 27.59
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-16T08:52:15",
+                "Fecha": "2014-01-16T08:52:15Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "78.55",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "36",
+                "ValorUnitario": 12.73,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 137.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-16T10:02:00",
+                "Fecha": "2014-01-16T10:02:00Z",
+                "Rfc": "SGA080507MV2",
+                "ClaveEstacion": "10087",
+                "Cantidad": "78.55",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "710",
+                "ValorUnitario": 12.73,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 137.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-20T08:48:15",
+                "Fecha": "2014-01-20T08:48:15Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "64.94",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5778",
+                "ValorUnitario": 12.32,
+                "Importe": 800,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 110.34
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-20T12:05:43",
+                "Fecha": "2014-01-20T12:05:43Z",
+                "Rfc": "AAC970604LV8",
+                "ClaveEstacion": "5184",
+                "Cantidad": "149.25",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "2268",
+                "ValorUnitario": 12.73,
+                "Importe": 1900,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 262.07
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-22T08:46:28",
+                "Fecha": "2014-01-22T08:46:28Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "133.54",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "136",
+                "ValorUnitario": 12.73,
+                "Importe": 1700,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 234.48
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-22T12:33:09",
+                "Fecha": "2014-01-22T12:33:09Z",
+                "Rfc": "AAC970604LV8",
+                "ClaveEstacion": "5184",
+                "Cantidad": "86.41",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "2296",
+                "ValorUnitario": 12.73,
+                "Importe": 1100,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 151.72
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-24T08:44:17",
+                "Fecha": "2014-01-24T08:44:17Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "70.70",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "179",
+                "ValorUnitario": 12.73,
+                "Importe": 900,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 124.14
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-27T09:33:43",
+                "Fecha": "2014-01-27T09:33:43Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "70.70",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "214",
+                "ValorUnitario": 12.73,
+                "Importe": 900,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 124.14
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-27T13:16:45",
+                "Fecha": "2014-01-27T13:16:45Z",
+                "Rfc": "SFE800728UU7",
+                "ClaveEstacion": "3062",
+                "Cantidad": "78.55",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "391",
+                "ValorUnitario": 12.73,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 137.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-28T09:35:11",
+                "Fecha": "2014-01-28T09:35:11Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "39.28",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "233",
+                "ValorUnitario": 12.73,
+                "Importe": 500,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 68.97
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-29T09:34:27",
+                "Fecha": "2014-01-29T09:34:27Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "39.28",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "254",
+                "ValorUnitario": 12.73,
+                "Importe": 500,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 68.97
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-29T16:52:17",
+                "Fecha": "2014-01-29T16:52:17Z",
+                "Rfc": "SFE800728UU7",
+                "ClaveEstacion": "3062",
+                "Cantidad": "78.55",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "473",
+                "ValorUnitario": 12.73,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 137.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244086",
+                "FechaString": "2014-01-30T09:06:52",
+                "Fecha": "2014-01-30T09:06:52Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "106.05",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "269",
+                "ValorUnitario": 12.73,
+                "Importe": 1350,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 186.21
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244087",
+                "FechaString": "2014-01-02T23:08:34",
+                "Fecha": "2014-01-02T23:08:34Z",
+                "Rfc": "SPA0209128V0",
+                "ClaveEstacion": "7690",
+                "Cantidad": "23.57",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "10001",
+                "ValorUnitario": 12.73,
+                "Importe": 300,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 41.38
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244087",
+                "FechaString": "2014-01-06T14:19:54",
+                "Fecha": "2014-01-06T14:19:54Z",
+                "Rfc": "OES070503PZ1",
+                "ClaveEstacion": "5508",
+                "Cantidad": "78.55",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "29",
+                "ValorUnitario": 12.73,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 137.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244087",
+                "FechaString": "2014-01-07T17:49:36",
+                "Fecha": "2014-01-07T17:49:36Z",
+                "Rfc": "SPA0209128V0",
+                "ClaveEstacion": "7690",
+                "Cantidad": "47.13",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "10040",
+                "ValorUnitario": 12.73,
+                "Importe": 600,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 82.76
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244087",
+                "FechaString": "2014-01-14T09:34:04",
+                "Fecha": "2014-01-14T09:34:04Z",
+                "Rfc": "SPA0209128V0",
+                "ClaveEstacion": "7690",
+                "Cantidad": "78.55",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "10087",
+                "ValorUnitario": 12.73,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 137.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244087",
+                "FechaString": "2014-01-16T09:07:24",
+                "Fecha": "2014-01-16T09:07:24Z",
+                "Rfc": "SPA0209128V0",
+                "ClaveEstacion": "7690",
+                "Cantidad": "56.82",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "10101",
+                "ValorUnitario": 12.32,
+                "Importe": 700,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 96.55
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244087",
+                "FechaString": "2014-01-20T09:52:21",
+                "Fecha": "2014-01-20T09:52:21Z",
+                "Rfc": "SPA0209128V0",
+                "ClaveEstacion": "7690",
+                "Cantidad": "3.93",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "10130",
+                "ValorUnitario": 12.73,
+                "Importe": 50,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 6.9
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244087",
+                "FechaString": "2014-01-22T09:50:22",
+                "Fecha": "2014-01-22T09:50:22Z",
+                "Rfc": "SPA0209128V0",
+                "ClaveEstacion": "7690",
+                "Cantidad": "78.55",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "10148",
+                "ValorUnitario": 12.73,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 137.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244087",
+                "FechaString": "2014-01-28T09:28:27",
+                "Fecha": "2014-01-28T09:28:27Z",
+                "Rfc": "GBI090227GK4",
+                "ClaveEstacion": "11283",
+                "Cantidad": "78.55",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1183",
+                "ValorUnitario": 12.73,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 137.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244087",
+                "FechaString": "2014-01-31T10:10:46",
+                "Fecha": "2014-01-31T10:10:46Z",
+                "Rfc": "SPA0209128V0",
+                "ClaveEstacion": "7690",
+                "Cantidad": "31.42",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "10204",
+                "ValorUnitario": 12.73,
+                "Importe": 400,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 55.17
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-02T08:25:11",
+                "Fecha": "2014-01-02T08:25:11Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "113.64",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5404",
+                "ValorUnitario": 12.32,
+                "Importe": 1400,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 193.1
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-02T13:01:58",
+                "Fecha": "2014-01-02T13:01:58Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "64.94",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5412",
+                "ValorUnitario": 12.32,
+                "Importe": 800,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 110.34
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-05T00:27:16",
+                "Fecha": "2014-01-05T00:27:16Z",
+                "Rfc": "SGE890919347",
+                "ClaveEstacion": "3846",
+                "Cantidad": "15.71",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "727",
+                "ValorUnitario": 12.73,
+                "Importe": 200,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 27.59
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-06T08:25:58",
+                "Fecha": "2014-01-06T08:25:58Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "97.40",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5462",
+                "ValorUnitario": 12.32,
+                "Importe": 1200,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 165.52
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-06T09:12:07",
+                "Fecha": "2014-01-06T09:12:07Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "162.34",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5465",
+                "ValorUnitario": 12.32,
+                "Importe": 2000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 275.86
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-07T08:52:59",
+                "Fecha": "2014-01-07T08:52:59Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "32.47",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5491",
+                "ValorUnitario": 12.32,
+                "Importe": 400,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 55.17
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-08T09:00:39",
+                "Fecha": "2014-01-08T09:00:39Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "97.40",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5518",
+                "ValorUnitario": 12.32,
+                "Importe": 1200,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 165.52
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-08T14:29:34",
+                "Fecha": "2014-01-08T14:29:34Z",
+                "Rfc": "AAC970604LV8",
+                "ClaveEstacion": "5184",
+                "Cantidad": "16.23",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "2099",
+                "ValorUnitario": 12.32,
+                "Importe": 200,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 27.59
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-08T14:41:38",
+                "Fecha": "2014-01-08T14:41:38Z",
+                "Rfc": "AAC970604LV8",
+                "ClaveEstacion": "5184",
+                "Cantidad": "146.10",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "2100",
+                "ValorUnitario": 12.32,
+                "Importe": 1800,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 248.28
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-09T09:06:19",
+                "Fecha": "2014-01-09T09:06:19Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "32.47",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5545",
+                "ValorUnitario": 12.32,
+                "Importe": 400,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 55.17
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-10T09:17:54",
+                "Fecha": "2014-01-10T09:17:54Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "64.94",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "1143",
+                "ValorUnitario": 12.32,
+                "Importe": 800,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 110.34
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-13T09:05:45",
+                "Fecha": "2014-01-13T09:05:45Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "162.34",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5605",
+                "ValorUnitario": 12.32,
+                "Importe": 1999.99,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 275.86
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-13T09:17:07",
+                "Fecha": "2014-01-13T09:17:07Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "97.40",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5606",
+                "ValorUnitario": 12.32,
+                "Importe": 1200,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 165.52
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-14T10:56:31",
+                "Fecha": "2014-01-14T10:56:31Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "35.35",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1189",
+                "ValorUnitario": 12.73,
+                "Importe": 450,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 62.07
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-15T08:16:36",
+                "Fecha": "2014-01-15T08:16:36Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "162.26",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5658",
+                "ValorUnitario": 12.32,
+                "Importe": 1999,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 275.72
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-16T09:02:38",
+                "Fecha": "2014-01-16T09:02:38Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "129.87",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "37",
+                "ValorUnitario": 12.32,
+                "Importe": 1600,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 220.69
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-20T08:41:33",
+                "Fecha": "2014-01-20T08:41:33Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "64.94",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5777",
+                "ValorUnitario": 12.32,
+                "Importe": 800,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 110.34
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-20T08:54:16",
+                "Fecha": "2014-01-20T08:54:16Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "162.26",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5779",
+                "ValorUnitario": 12.32,
+                "Importe": 1999,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 275.72
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-20T09:37:26",
+                "Fecha": "2014-01-20T09:37:26Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "70.70",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "100",
+                "ValorUnitario": 12.73,
+                "Importe": 900,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 124.14
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-22T08:39:35",
+                "Fecha": "2014-01-22T08:39:35Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "129.87",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5828",
+                "ValorUnitario": 12.32,
+                "Importe": 1600,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 220.69
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-22T08:53:01",
+                "Fecha": "2014-01-22T08:53:01Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "162.26",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5830",
+                "ValorUnitario": 12.32,
+                "Importe": 1999,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 275.72
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-24T08:39:13",
+                "Fecha": "2014-01-24T08:39:13Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "32.47",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5882",
+                "ValorUnitario": 12.32,
+                "Importe": 400,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 55.17
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-27T09:24:01",
+                "Fecha": "2014-01-27T09:24:01Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "97.40",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5938",
+                "ValorUnitario": 12.32,
+                "Importe": 1200,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 165.52
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-27T09:36:28",
+                "Fecha": "2014-01-27T09:36:28Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "162.26",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5939",
+                "ValorUnitario": 12.32,
+                "Importe": 1999,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 275.72
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-29T09:14:03",
+                "Fecha": "2014-01-29T09:14:03Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "40.58",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5983",
+                "ValorUnitario": 12.32,
+                "Importe": 500,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 68.97
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-29T09:25:23",
+                "Fecha": "2014-01-29T09:25:23Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "32.47",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "5984",
+                "ValorUnitario": 12.32,
+                "Importe": 400,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 55.17
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-29T18:37:57",
+                "Fecha": "2014-01-29T18:37:57Z",
+                "Rfc": "AAC970604LV8",
+                "ClaveEstacion": "5184",
+                "Cantidad": "162.34",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "2361",
+                "ValorUnitario": 12.32,
+                "Importe": 2000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 275.86
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-30T09:01:00",
+                "Fecha": "2014-01-30T09:01:00Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "64.94",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "6009",
+                "ValorUnitario": 12.32,
+                "Importe": 800,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 110.34
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-30T09:17:16",
+                "Fecha": "2014-01-30T09:17:16Z",
+                "Rfc": "SRP9803028K7",
+                "ClaveEstacion": "166",
+                "Cantidad": "64.94",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "6010",
+                "ValorUnitario": 12.32,
+                "Importe": 800,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 110.34
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244088",
+                "FechaString": "2014-01-31T09:21:35",
+                "Fecha": "2014-01-31T09:21:35Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "35.35",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "290",
+                "ValorUnitario": 12.73,
+                "Importe": 450,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 62.07
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-02T09:41:27",
+                "Fecha": "2014-01-02T09:41:27Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "43.21",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1043",
+                "ValorUnitario": 12.73,
+                "Importe": 550,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 75.86
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-06T10:39:42",
+                "Fecha": "2014-01-06T10:39:42Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "78.55",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1082",
+                "ValorUnitario": 12.73,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 137.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-07T09:35:24",
+                "Fecha": "2014-01-07T09:35:24Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "43.21",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1095",
+                "ValorUnitario": 12.73,
+                "Importe": 550,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 75.86
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-09T10:05:19",
+                "Fecha": "2014-01-09T10:05:19Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "35.35",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1127",
+                "ValorUnitario": 12.73,
+                "Importe": 450,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 62.07
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-10T10:05:35",
+                "Fecha": "2014-01-10T10:05:35Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "23.57",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1145",
+                "ValorUnitario": 12.73,
+                "Importe": 300,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 41.38
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-13T10:02:26",
+                "Fecha": "2014-01-13T10:02:26Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "5.00",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1168",
+                "ValorUnitario": 12.73,
+                "Importe": 63.65,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 8.78
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-13T10:25:26",
+                "Fecha": "2014-01-13T10:25:26Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "78.55",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1171",
+                "ValorUnitario": 12.73,
+                "Importe": 1000,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 137.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-14T08:59:29",
+                "Fecha": "2014-01-14T08:59:29Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "18.67",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "1188",
+                "ValorUnitario": 12.32,
+                "Importe": 230,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 31.72
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-14T15:51:57",
+                "Fecha": "2014-01-14T15:51:57Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "32.47",
+                "NombreCombustible": "Magna",
+                "FolioOperacion": "1",
+                "ValorUnitario": 12.32,
+                "Importe": 400,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 55.17
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-16T10:01:43",
+                "Fecha": "2014-01-16T10:01:43Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "47.13",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "39",
+                "ValorUnitario": 12.73,
+                "Importe": 600,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 82.76
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-20T09:11:16",
+                "Fecha": "2014-01-20T09:11:16Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "102.12",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "99",
+                "ValorUnitario": 12.73,
+                "Importe": 1300,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 179.31
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-21T09:52:28",
+                "Fecha": "2014-01-21T09:52:28Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "25.14",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "116",
+                "ValorUnitario": 12.73,
+                "Importe": 320,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 44.14
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-22T11:46:44",
+                "Fecha": "2014-01-22T11:46:44Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "11.78",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "138",
+                "ValorUnitario": 12.73,
+                "Importe": 150,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 20.69
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-24T11:17:00",
+                "Fecha": "2014-01-24T11:17:00Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "42.11",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "181",
+                "ValorUnitario": 12.73,
+                "Importe": 536,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 73.93
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-27T10:38:40",
+                "Fecha": "2014-01-27T10:38:40Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "82.48",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "216",
+                "ValorUnitario": 12.73,
+                "Importe": 1050,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 144.83
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-28T16:51:33",
+                "Fecha": "2014-01-28T16:51:33Z",
+                "Rfc": "SST990322N26",
+                "ClaveEstacion": "5849",
+                "Cantidad": "15.71",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "1159",
+                "ValorUnitario": 12.73,
+                "Importe": 200,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 27.59
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-29T10:00:30",
+                "Fecha": "2014-01-29T10:00:30Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "39.28",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "255",
+                "ValorUnitario": 12.73,
+                "Importe": 500,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 68.97
+                        }
+                    ]
+                }
+            },
+            {
+                "Identificador": "244089",
+                "FechaString": "2014-01-30T11:40:01",
+                "Fecha": "2014-01-30T11:40:01Z",
+                "Rfc": "CGP970522EE4",
+                "ClaveEstacion": "76",
+                "Cantidad": "43.21",
+                "NombreCombustible": "Diesel",
+                "FolioOperacion": "273",
+                "ValorUnitario": 12.73,
+                "Importe": 550,
+                "Traslados": {
+                    "Traslado": [
+                        {
+                            "Impuesto": "IVA",
+                            "TasaOCuota": 16,
+                            "Importe": 75.86
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

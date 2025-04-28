@@ -17,13 +17,13 @@ type ComprobanteMetadata struct {
 	Receptor           RfcEmisorReceptor                        `bson:"Receptor" json:"Receptor"`
 	RfcProvCertif      string                                   `bson:"RfcProvCertif" json:"RfcProvCertif"`
 	Metadata           bool                                     `bson:"Metadata" json:"Metadata"`
-	Cancelacion        *Cancelacion                             `xml:"Cancelacion" bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
+	Cancelacion        *CancelacionMetadata                     `xml:"Cancelacion" bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
 	Transaccion        string                                   `bson:"Transaccion"`
-	TotalesMonedaLocal TotalesMonedaLocal                       `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
+	TotalesMonedaLocal TotalesMonedaLocalMetadata               `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
 	ProcessorMetadata  documentofiscaldigital.ProcessorMetadata `bson:"ProcessorMetadata" json:"ProcessorMetadata"`
 }
 
-type Cancelacion struct {
+type CancelacionMetadata struct {
 	CanceledByKuantik *bool      `bson:"CanceledByKuantik,omitempty" json:"CanceledByKuantik,omitempty"`
 	FechaCancelacion  *time.Time `bson:"FechaCancelacion,omitempty" json:"FechaCancelacion,omitempty"`
 }
@@ -43,7 +43,7 @@ type ComprobanteTerceros struct {
 	Terceros []RfcEmisorReceptor `bson:"Terceros" json:"Terceros"`
 }
 
-type TotalesMonedaLocal struct {
+type TotalesMonedaLocalMetadata struct {
 	Total    float64 `bson:"Total"`
 	Subtotal float64 `bson:"Subtotal"`
 }

@@ -6,10 +6,10 @@ import (
 )
 
 type CartaPorte struct {
-	CartaPorte10 *[]CartaPorte10 `bson:"CartaPorte10,omitempty"`
-	CartaPorte20 *[]CartaPorte20 `bson:"CartaPorte20,omitempty"`
-	CartaPorte30 *[]CartaPorte30 `bson:"CartaPorte30,omitempty"`
-	CartaPorte31 *[]CartaPorte31 `bson:"CartaPorte31,omitempty"`
+	CartaPorte10 *[]CartaPorte10 `bson:"CartaPorte10,omitempty" json:"CartaPorte10,omitempty"`
+	CartaPorte20 *[]CartaPorte20 `bson:"CartaPorte20,omitempty" json:"CartaPorte20,omitempty"`
+	CartaPorte30 *[]CartaPorte30 `bson:"CartaPorte30,omitempty" json:"CartaPorte30,omitempty"`
+	CartaPorte31 *[]CartaPorte31 `bson:"CartaPorte31,omitempty" json:"CartaPorte31,omitempty"`
 }
 
 func (c *CartaPorte) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

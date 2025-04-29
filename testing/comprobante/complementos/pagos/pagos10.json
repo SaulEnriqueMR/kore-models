@@ -12,7 +12,7 @@
             "RfcEmisorCuentaOrdenante": "XEXX010101000",
             "NombreBancoOrdenanteExtranjero": "Banco Ejemplo",
             "CuentaOrdenante": "0123456789",
-            "RfcEmisorCuentaBeneficiario": "A123456789",
+            "RfcEmisorCuentaBenBeneficiario": "A123456789",
             "CuentaBeneficiario": "9876543210",
             "TipoCadenaPago": "01",
             "CertificadoPago": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvD1X...",

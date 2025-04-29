@@ -6,7 +6,7 @@ import (
 )
 
 type Divisas struct {
-	Divisas10 *[]Divisas10 `bson:"Divisas10,omitempty"`
+	Divisas10 *[]Divisas10 `bson:"Divisas10,omitempty" json:"Divisas10,omitempty"`
 }
 
 func (v *Divisas) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

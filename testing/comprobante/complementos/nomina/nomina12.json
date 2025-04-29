@@ -82,9 +82,7 @@
                 "Clave": "67890",
                 "Concepto": "Pensión",
                 "ImporteGravado": 0,
-                "ImporteExento": 2000,
-                "AccionesOTitulos": null,
-                "HorasExtra": null
+                "ImporteExento": 2000
             }
         ],
         "JubilacionPensionRetiro": {
@@ -128,15 +126,13 @@
             "Importe": 500,
             "SubsidioAlEmpleo": {
                 "SubsidioCausado": 500
-            },
-            "CompensacionSaldosAFavor": null
+            }
         },
         {
             "Tipo": "002",
             "Clave": "OP002",
             "Concepto": "Compensación de Saldos a Favor",
             "Importe": 200,
-            "SubsidioAlEmpleo": null,
             "CompensacionSaldosAFavor": {
                 "SaldoAFavor": 300,
                 "Anio": "2023",

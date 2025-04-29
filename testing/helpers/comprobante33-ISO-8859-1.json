@@ -10,14 +10,12 @@
     "TotalesMonedaLocal": {
         "Total": 976.72,
         "Subtotal": 845.25,
-        "Descuento": null,
-        "TotalImpuestosRetenidos": null,
         "TotalImpuestosTrasladados": 131.47
     },
     "ProcessorMetadata": {
         "KoreModelsVersion": "v1.0.63",
         "KoreVersion": null,
-        "LastUpdate": "2025-04-28T11:02:18Z"
+        "LastUpdate": "2025-04-29T13:27:25Z"
     },
     "Version": "3.3",
     "Serie": "A",
@@ -27,17 +25,13 @@
     "FormaPago": "04",
     "NoCertificado": "00001000000411407035",
     "Certificado": "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",
-    "CondicionesPago": null,
     "Subtotal": 845.25,
-    "Descuento": null,
     "Moneda": "MXN",
     "TipoCambio": 1,
     "Total": 976.72,
     "TipoComprobante": "I",
     "MetodoPago": "PUE",
     "LugarExpedicion": "76295",
-    "Confirmacion": null,
-    "CfdisRelacionados": null,
     "Emisor": {
         "Rfc": "SAQ110912DI7  ",
         "Nombre": "SERVICIO AEROPUERTO QRO S.A.DE C.V.",
@@ -46,8 +40,6 @@
     "Receptor": {
         "Rfc": "RIN0009135U4",
         "Nombre": "CBRE INMOBILIARIO, S DE R L DE C V",
-        "ResidenciaFiscal": null,
-        "NumRegIdTrib": null,
         "UsoCFDI": "G03"
     },
     "RfcProvCertif": "LSO1306189R5",
@@ -61,7 +53,6 @@
             "Descripcion": "Shell V-Power",
             "ValorUnitario": 18.597259,
             "Importe": 845.25,
-            "Descuento": null,
             "Impuestos": {
                 "Traslados": [
                     {
@@ -71,20 +62,13 @@
                         "TasaOCuota": 0.16,
                         "Importe": 131.4746
                     }
-                ],
-                "Retenciones": null
+                ]
             },
-            "InformacionAduanera": null,
-            "CuentaPredial": null,
-            "ComplementoConcepto": null,
-            "Parte": null,
             "DetallesConcepto": ""
         }
     ],
     "Impuestos": {
-        "TotalImpuestosRetenidos": null,
         "TotalImpuestosTrasladados": 131.47,
-        "Retenciones": null,
         "Traslados": [
             {
                 "Impuesto": "002",
@@ -95,24 +79,6 @@
         ]
     },
     "Complemento": {
-        "CartaPorte": null,
-        "ComercioExterior": null,
-        "ImpuestoLocales": null,
-        "Aerolineas": null,
-        "CertificadoDestruccion": null,
-        "CFDIRegistroFiscal": null,
-        "ComplementoSPEI": null,
-        "ConsumoCombustibles": null,
-        "Detallista": null,
-        "Divisas": null,
-        "Donatarias": null,
-        "EstadoCuentaCombustible": null,
-        "GastoHidrocarburos": null,
-        "Ine": null,
-        "LeyendasFiscales": null,
-        "Nomina": null,
-        "NotariosPublicos": null,
-        "Pagos": null,
         "TimbreFiscalDigital": {
             "TimbreFiscalDigital11": {
                 "Version": "1.1",
@@ -120,23 +86,12 @@
                 "Fecha": "2019-07-25T22:48:04",
                 "FechaTimbrado": "2019-07-25T22:48:04Z",
                 "RfcProvCertif": "LSO1306189R5",
-                "Leyenda": null,
                 "SelloCfd": "VH/Y8uxXeXG+vsGKbgIQwTgqaagfaH99jhkDo5Msbk/G65LPBdz9bs+qECVWwakZGBFxu4oOKrGsSoGPM8rhPxHoRgTSKEP3iGEbHX6XSEOU+wTu1aumbPzEC8Huu7ITx8YvZ5b63m7fbbh6Kg3OGOCYtJcvRh8vYz6WwvaYedYu21O8D4eRK5b92EJMaoSbQZe4PRkPJJOf0W6BKrJMu6TRgYJVt/R/HgiV1l6XsQ+dX2lU3Bd782iGHA8Mb24jEDv3eezyxf6aJ71TLJfP0E3NC1FxeBEnWGT2yLwDSFy+bLx7hOzyNNscuDIAY+IYgfvec8p6xR0aDpCsUwWW2Q==",
                 "NoCertificadoSat": "00001000000408254801",
                 "SelloSat": "mlXHdR540aN28Xqpeo72LeP5njTSa5Cml726REbiygTnpY+aMvfZiSGk965qwUoVajd9Xc+CI/yzddxD+TQknT7sXGyZkNsfYvglNNskYQwRZk9N3gWh5U3ACQKMQIe5C8CL7aafCSAbq2oXyhASE+O/Tkxd8qJlJrsY/UF/k8nDryvvV0E2Fh/8HXs5hflC1lfp3NBGlcm5nhiheCZRD05KeBCXANF5dDR4RzQtITw8Tgc8pLJQCvUNy3I+h1uRfrqcQF8jEWZEfWSLK73Tl/8SacU0i3Ldp6g0qAKgfygdZWJw+aeQ7cZq6Upo5+ZcMytX6K0XcEltOspr7dWXqQ=="
-            },
-            "TimbreFiscalDigital10": null
-        },
-        "ObrasAntiguedades": null,
-        "PagoEnEspecie": null,
-        "ParcialesConstruccion": null,
-        "PFIntegrantesCoordinado": null,
-        "RenovacionSustitucionVehiculos": null,
-        "TuristaPasajeroExtranjero": null,
-        "ValesDeDespensa": null,
-        "VehiculoUsado": null
+            }
+        }
     },
-    "Addenda": null,
     "KuantikMetadata": {
         "SerieFolio": "A-36742"
     }

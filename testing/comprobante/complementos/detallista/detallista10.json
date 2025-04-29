@@ -136,7 +136,7 @@
         "PaymentTermsRelationTime": "REFERENCE_AFTER",
         "NetPayment": {
             "NetPaymentTermsType": "BASIC_NET",
-            "TimePeriodDue": {
+            "PaymentTimePeriod": {
                 "TimePeriod": "DAYS",
                 "Value": "10"
             }
@@ -169,7 +169,7 @@
             "AlternateTradeItemIdentification": [
                 {
                     "Value": "1111",
-                    "Type": "SUPPLIER_ASSIGNED"
+                    "type": "SUPPLIER_ASSIGNED"
                 }
             ],
             "TradeItemDescriptionInformation": {
@@ -222,7 +222,7 @@
                 "PalletQuantity": "2",
                 "Description": {
                     "Value": "Empaque",
-                    "Type": "EXCHANGE_PALLETS"
+                    "type": "EXCHANGE_PALLETS"
                 },
                 "MethodPayment": "PAID_BY_BUYER"
             },

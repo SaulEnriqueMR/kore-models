@@ -6,7 +6,7 @@ import (
 )
 
 type LeyendasFiscales struct {
-	LeyendasFiscales10 *[]LeyendasFiscales10 `bson:"LeyendasFiscales10,omitempty"`
+	LeyendasFiscales10 *[]LeyendasFiscales10 `bson:"LeyendasFiscales10,omitempty" json:"LeyendasFiscales10,omitempty"`
 }
 
 func (v *LeyendasFiscales) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

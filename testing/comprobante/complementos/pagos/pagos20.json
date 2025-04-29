@@ -38,7 +38,6 @@
                     "Serie": "A",
                     "Folio": "1001",
                     "Moneda": "MXN",
-                    "Equivalencia": null,
                     "NoParcialidad": 1,
                     "ImporteSaldoAnterior": 1500,
                     "ImportePagado": 1500,
@@ -72,9 +71,7 @@
                             {
                                 "Base": 1000.000001,
                                 "Impuesto": "003",
-                                "TipoFactor": "Exento",
-                                "TasaOCuota": null,
-                                "Importe": null
+                                "TipoFactor": "Exento"
                             }
                         ]
                     }

@@ -6,7 +6,7 @@ import (
 )
 
 type ConsumoDeCombustible struct {
-	ConsumoDeCombustible11 *[]ConsumoDeCombustible11 `bson:"ConsumoDeCombustible11,omitempty"`
+	ConsumoDeCombustible11 *[]ConsumoDeCombustible11 `bson:"ConsumoDeCombustible11,omitempty" json:"ConsumoDeCombustible11,omitempty"`
 }
 
 func (c *ConsumoDeCombustible) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

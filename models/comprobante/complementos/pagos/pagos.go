@@ -6,8 +6,8 @@ import (
 )
 
 type Pagos struct {
-	Pagos10 *[]Pagos10 `bson:"Pagos10,omitempty"`
-	Pagos20 *[]Pagos20 `bson:"Pagos20,omitempty"`
+	Pagos10 *[]Pagos10 `bson:"Pagos10,omitempty" json:"Pagos10,omitempty"`
+	Pagos20 *[]Pagos20 `bson:"Pagos20,omitempty" json:"Pagos20,omitempty"`
 }
 
 func (p *Pagos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

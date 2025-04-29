@@ -7,20 +7,20 @@ import (
 )
 
 type TuristaPasajeroExtranjero10 struct {
-	Version             string        `xml:"version,attr" bson:"Version"`
-	FechaTransitoString string        `xml:"fechadeTransito,attr" bson:"FechaTransitoString"`
-	FechaTransito       time.Time     `bson:"FechaTransito"`
-	TipoTransito        string        `xml:"tipoTransito,attr" bson:"TipoTransito"`
-	DatosTransito       DatosTransito `xml:"datosTransito" bson:"DatosTransito"`
+	Version             string        `xml:"version,attr" bson:"Version" json:"Version"`
+	FechaTransitoString string        `xml:"fechadeTransito,attr" bson:"FechaTransitoString" json:"FechaTransitoString"`
+	FechaTransito       time.Time     `bson:"FechaTransito" json:"FechaTransito"`
+	TipoTransito        string        `xml:"tipoTransito,attr" bson:"TipoTransito" json:"TipoTransito"`
+	DatosTransito       DatosTransito `xml:"datosTransito" bson:"DatosTransito" json:"DatosTransito"`
 }
 
 type DatosTransito struct {
-	Via               string  `xml:"Via,attr" bson:"Via"`
-	TipoId            string  `xml:"TipoId,attr" bson:"TipoId"`
-	NumeroId          string  `xml:"NumeroId,attr" bson:"NumeroId"`
-	Nacionalidad      string  `xml:"Nacionalidad,attr" bson:"Nacionalidad"`
-	EmpresaTransporte string  `xml:"EmpresaTransporte,attr" bson:"EmpresaTransporte"`
-	IdTransporte      *string `xml:"IdTransporte,attr" bson:"IdTransporte,omitempty"`
+	Via               string  `xml:"Via,attr" bson:"Via" json:"Via"`
+	TipoId            string  `xml:"TipoId,attr" bson:"TipoId" json:"TipoId"`
+	NumeroId          string  `xml:"NumeroId,attr" bson:"NumeroId" json:"NumeroId"`
+	Nacionalidad      string  `xml:"Nacionalidad,attr" bson:"Nacionalidad" json:"Nacionalidad"`
+	EmpresaTransporte string  `xml:"EmpresaTransporte,attr" bson:"EmpresaTransporte" json:"EmpresaTransporte"`
+	IdTransporte      *string `xml:"IdTransporte,attr" bson:"IdTransporte,omitempty" json:"IdTransporte,omitempty"`
 }
 
 func (c *TuristaPasajeroExtranjero10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

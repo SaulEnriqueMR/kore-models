@@ -17,7 +17,7 @@
     "ProcessorMetadata": {
         "KoreModelsVersion": "v1.0.63",
         "KoreVersion": null,
-        "LastUpdate": "2025-04-28T11:02:18Z"
+        "LastUpdate": "2025-04-29T13:27:24Z"
     },
     "Version": "3.3",
     "Serie": "A",
@@ -108,10 +108,7 @@
                             "InformacionFiscalTercero": {
                                 "Calle": "Av. Siempre Viva",
                                 "NoExterior": "123",
-                                "NoInterior": null,
                                 "Colonia": "Centro",
-                                "Localidad": null,
-                                "Referencia": null,
                                 "Municipio": "Ciudad",
                                 "Estado": "Estado",
                                 "Pais": "México",
@@ -126,8 +123,6 @@
                             "Parte": [
                                 {
                                     "Cantidad": 10,
-                                    "Unidad": null,
-                                    "NoIdentificacion": null,
                                     "Descripcion": "Componente X",
                                     "ValorUnitario": 100,
                                     "Importe": 1000,
@@ -169,10 +164,7 @@
                             "InformacionFiscalTercero": {
                                 "Calle": "Av. Siempre Viva",
                                 "NoExterior": "123",
-                                "NoInterior": null,
                                 "Colonia": "Centro",
-                                "Localidad": null,
-                                "Referencia": null,
                                 "Municipio": "Ciudad",
                                 "Estado": "Estado",
                                 "Pais": "México",
@@ -187,8 +179,6 @@
                             "Parte": [
                                 {
                                     "Cantidad": 10,
-                                    "Unidad": null,
-                                    "NoIdentificacion": null,
                                     "Descripcion": "Componente X",
                                     "ValorUnitario": 100,
                                     "Importe": 1000,
@@ -230,10 +220,7 @@
                             "InformacionFiscalTercero": {
                                 "Calle": "Av. Siempre Viva",
                                 "NoExterior": "123",
-                                "NoInterior": null,
                                 "Colonia": "Centro",
-                                "Localidad": null,
-                                "Referencia": null,
                                 "Municipio": "Ciudad",
                                 "Estado": "Estado",
                                 "Pais": "México",
@@ -248,8 +235,6 @@
                             "Parte": [
                                 {
                                     "Cantidad": 10,
-                                    "Unidad": null,
-                                    "NoIdentificacion": null,
                                     "Descripcion": "Componente X",
                                     "ValorUnitario": 100,
                                     "Importe": 1000,
@@ -488,7 +473,6 @@
                                 "FechaHoraSalidaLlegadaString": "2021-11-24T16:16:39",
                                 "FechaHoraSalidaLlegada": "2021-11-24T16:16:39Z"
                             },
-                            "Destino": null,
                             "Domicilio": {
                                 "Calle": "NEMESIO DIEZ RIEGA 9",
                                 "NoExterior": "12",
@@ -500,12 +484,9 @@
                                 "Estado": "MEX",
                                 "Pais": "MEX",
                                 "CodigoPostal": "52004"
-                            },
-                            "TipoEstacion": null,
-                            "DistanciaRecorrida": null
+                            }
                         },
                         {
-                            "Origen": null,
                             "Destino": {
                                 "IdUbicacion": "DE000005",
                                 "RfcRemitenteDestinatario": "ERFDSFGR312",
@@ -583,7 +564,7 @@
                                 }
                             }
                         ],
-                        "Autotransporte": {
+                        "Autotrasporte": {
                             "PermisoSct": "TPAF01",
                             "NoPermisoSct": "1329TERS24112011230301006",
                             "NombreAseguradora": "QUALITAS",
@@ -754,7 +735,7 @@
                                 }
                             }
                         ],
-                        "Propietarios": [
+                        "Propietario": [
                             {
                                 "Rfc": "RFCPropietario",
                                 "Nombre": "NombrePropietario",
@@ -830,7 +811,7 @@
                                 }
                             }
                         ],
-                        "Notificados": [
+                        "Notificado": [
                             {
                                 "Rfc": "RFCNotificado",
                                 "Nombre": "NombreNotificado",
@@ -991,7 +972,7 @@
                                 }
                             }
                         ],
-                        "Autotransporte": {
+                        "Autotrasporte": {
                             "PermisoSct": "PERM001",
                             "NoPermisoSct": "NUMPERM12345",
                             "IdentificacionVehicular": {
@@ -1236,7 +1217,7 @@
                                 }
                             }
                         ],
-                        "Autotransporte": {
+                        "Autotrasporte": {
                             "PermisoSct": "PERM001",
                             "NoPermisoSct": "NUMPERM12345",
                             "IdentificacionVehicular": {
@@ -1415,15 +1396,12 @@
                             "ResidenciaFiscal": "USA",
                             "NoEstacion": "E654321",
                             "NombreEstacion": "Estación 2",
-                            "NavegacionTrafico": null,
                             "FechaHoraSalidaLlegadaString": "2024-09-21T12:45:00",
                             "FechaHoraSalidaLlegada": "2024-09-21T12:45:00Z",
-                            "TipoEstacion": null,
                             "DistanciaRecorrida": 350.75,
                             "Domicilio": {
                                 "Calle": "Calle de las Flores",
                                 "NoExterior": "789",
-                                "NoInterior": null,
                                 "Colonia": "Colonia Del Valle",
                                 "Localidad": "San Luis Potosí",
                                 "Referencia": "Cerca de la plaza",
@@ -1442,12 +1420,9 @@
                             "ResidenciaFiscal": "CAN",
                             "NoEstacion": "E987654",
                             "NombreEstacion": "Estación 3",
-                            "NavegacionTrafico": null,
                             "FechaHoraSalidaLlegadaString": "2024-09-22T16:30:00",
                             "FechaHoraSalidaLlegada": "2024-09-22T16:30:00Z",
-                            "TipoEstacion": null,
-                            "DistanciaRecorrida": 220,
-                            "Domicilio": null
+                            "DistanciaRecorrida": 220
                         }
                     ],
                     "Mercancias": {
@@ -1528,19 +1503,19 @@
                                 ],
                                 "GuiasIdentificacion": [
                                     {
-                                        "Numero": "GU1234567890",
-                                        "Descripcion": "Paquete de medicamentos",
-                                        "Peso": 10.5
+                                        "NumeroGuiaIdentificacion": "GU1234567890",
+                                        "DescripGuiaIdentificacion": "Paquete de medicamentos",
+                                        "PesoGuiaIdentificacion": 10.5
                                     },
                                     {
-                                        "Numero": "GU1234567890",
-                                        "Descripcion": "Paquete de medicamentos",
-                                        "Peso": 10.5
+                                        "NumeroGuiaIdentificacion": "GU1234567890",
+                                        "DescripGuiaIdentificacion": "Paquete de medicamentos",
+                                        "PesoGuiaIdentificacion": 10.5
                                     },
                                     {
-                                        "Numero": "GU1234567890",
-                                        "Descripcion": "Paquete de medicamentos",
-                                        "Peso": 10.5
+                                        "NumeroGuiaIdentificacion": "GU1234567890",
+                                        "DescripGuiaIdentificacion": "Paquete de medicamentos",
+                                        "PesoGuiaIdentificacion": 10.5
                                     }
                                 ],
                                 "CantidadTransporta": [
@@ -1767,8 +1742,6 @@
                             {
                                 "Tipo": "FT01",
                                 "Rfc": "RFC123456",
-                                "ResidenciaFiscal": null,
-                                "NumRegIdTrib": null,
                                 "NoLicencia": "LIC123456",
                                 "Nombre": "Transportista Ejemplo",
                                 "PartesTransporte": [
@@ -1791,10 +1764,6 @@
                                 "Domicilio": {
                                     "Calle": "Av. Principal",
                                     "NoExterior": "123",
-                                    "NoInterior": null,
-                                    "Colonia": null,
-                                    "Localidad": null,
-                                    "Referencia": null,
                                     "Municipio": "Municipio Ejemplo",
                                     "Estado": "Estado Ejemplo",
                                     "Pais": "MX",
@@ -1803,17 +1772,12 @@
                             },
                             {
                                 "Tipo": "FT02",
-                                "Rfc": null,
-                                "ResidenciaFiscal": null,
-                                "NumRegIdTrib": null,
-                                "NoLicencia": null,
                                 "Nombre": "Otro Transportista",
                                 "PartesTransporte": [
                                     {
                                         "Parte": "PT02"
                                     }
-                                ],
-                                "Domicilio": null
+                                ]
                             }
                         ]
                     }
@@ -1869,15 +1833,12 @@
                             "ResidenciaFiscal": "USA",
                             "NoEstacion": "E654321",
                             "NombreEstacion": "Estación 2",
-                            "NavegacionTrafico": null,
                             "FechaHoraSalidaLlegadaString": "2024-09-21T12:45:00",
                             "FechaHoraSalidaLlegada": "2024-09-21T12:45:00Z",
-                            "TipoEstacion": null,
                             "DistanciaRecorrida": 350.75,
                             "Domicilio": {
                                 "Calle": "Calle de las Flores",
                                 "NoExterior": "789",
-                                "NoInterior": null,
                                 "Colonia": "Colonia Del Valle",
                                 "Localidad": "San Luis Potosí",
                                 "Referencia": "Cerca de la plaza",
@@ -1896,12 +1857,9 @@
                             "ResidenciaFiscal": "CAN",
                             "NoEstacion": "E987654",
                             "NombreEstacion": "Estación 3",
-                            "NavegacionTrafico": null,
                             "FechaHoraSalidaLlegadaString": "2024-09-22T16:30:00",
                             "FechaHoraSalidaLlegada": "2024-09-22T16:30:00Z",
-                            "TipoEstacion": null,
-                            "DistanciaRecorrida": 220,
-                            "Domicilio": null
+                            "DistanciaRecorrida": 220
                         }
                     ],
                     "Mercancias": {
@@ -1982,19 +1940,19 @@
                                 ],
                                 "GuiasIdentificacion": [
                                     {
-                                        "Numero": "GU1234567890",
-                                        "Descripcion": "Paquete de medicamentos",
-                                        "Peso": 10.5
+                                        "NumeroGuiaIdentificacion": "GU1234567890",
+                                        "DescripGuiaIdentificacion": "Paquete de medicamentos",
+                                        "PesoGuiaIdentificacion": 10.5
                                     },
                                     {
-                                        "Numero": "GU1234567890",
-                                        "Descripcion": "Paquete de medicamentos",
-                                        "Peso": 10.5
+                                        "NumeroGuiaIdentificacion": "GU1234567890",
+                                        "DescripGuiaIdentificacion": "Paquete de medicamentos",
+                                        "PesoGuiaIdentificacion": 10.5
                                     },
                                     {
-                                        "Numero": "GU1234567890",
-                                        "Descripcion": "Paquete de medicamentos",
-                                        "Peso": 10.5
+                                        "NumeroGuiaIdentificacion": "GU1234567890",
+                                        "DescripGuiaIdentificacion": "Paquete de medicamentos",
+                                        "PesoGuiaIdentificacion": 10.5
                                     }
                                 ],
                                 "CantidadTransporta": [
@@ -2221,8 +2179,6 @@
                             {
                                 "Tipo": "FT01",
                                 "Rfc": "RFC123456",
-                                "ResidenciaFiscal": null,
-                                "NumRegIdTrib": null,
                                 "NoLicencia": "LIC123456",
                                 "Nombre": "Transportista Ejemplo",
                                 "PartesTransporte": [
@@ -2245,10 +2201,6 @@
                                 "Domicilio": {
                                     "Calle": "Av. Principal",
                                     "NoExterior": "123",
-                                    "NoInterior": null,
-                                    "Colonia": null,
-                                    "Localidad": null,
-                                    "Referencia": null,
                                     "Municipio": "Municipio Ejemplo",
                                     "Estado": "Estado Ejemplo",
                                     "Pais": "MX",
@@ -2257,17 +2209,12 @@
                             },
                             {
                                 "Tipo": "FT02",
-                                "Rfc": null,
-                                "ResidenciaFiscal": null,
-                                "NumRegIdTrib": null,
-                                "NoLicencia": null,
                                 "Nombre": "Otro Transportista",
                                 "PartesTransporte": [
                                     {
                                         "Parte": "PT02"
                                     }
-                                ],
-                                "Domicilio": null
+                                ]
                             }
                         ]
                     }
@@ -2335,15 +2282,12 @@
                             "ResidenciaFiscal": "USA",
                             "NoEstacion": "E654321",
                             "NombreEstacion": "Estación 2",
-                            "NavegacionTrafico": null,
                             "FechaHoraSalidaLlegadaString": "2024-09-21T12:45:00",
                             "FechaHoraSalidaLlegada": "2024-09-21T12:45:00Z",
-                            "TipoEstacion": null,
                             "DistanciaRecorrida": 350.75,
                             "Domicilio": {
                                 "Calle": "Calle de las Flores",
                                 "NoExterior": "789",
-                                "NoInterior": null,
                                 "Colonia": "Colonia Del Valle",
                                 "Localidad": "San Luis Potosí",
                                 "Referencia": "Cerca de la plaza",
@@ -2362,12 +2306,9 @@
                             "ResidenciaFiscal": "CAN",
                             "NoEstacion": "E987654",
                             "NombreEstacion": "Estación 3",
-                            "NavegacionTrafico": null,
                             "FechaHoraSalidaLlegadaString": "2024-09-22T16:30:00",
                             "FechaHoraSalidaLlegada": "2024-09-22T16:30:00Z",
-                            "TipoEstacion": null,
-                            "DistanciaRecorrida": 220,
-                            "Domicilio": null
+                            "DistanciaRecorrida": 220
                         }
                     ],
                     "Mercancias": {
@@ -2422,25 +2363,25 @@
                                 "DescripcionMateria": "Tabletas de medicamento",
                                 "DocumentacionAduanera": [
                                     {
-                                        "Tipo": "tipo_doc_aduanero",
+                                        "TipoDocumento": "tipo_doc_aduanero",
                                         "NumeroPedimento": "22  99  1234  0000000",
                                         "IdentificadorDocumento": "Folio123456",
                                         "RfcImportador": "XAXX010101000"
                                     },
                                     {
-                                        "Tipo": "tipo_doc_aduanero",
+                                        "TipoDocumento": "tipo_doc_aduanero",
                                         "NumeroPedimento": "22  99  1234  0000000",
                                         "IdentificadorDocumento": "Folio123456",
                                         "RfcImportador": "XAXX010101000"
                                     },
                                     {
-                                        "Tipo": "tipo_doc_aduanero",
+                                        "TipoDocumento": "tipo_doc_aduanero",
                                         "NumeroPedimento": "22  99  1234  0000000",
                                         "IdentificadorDocumento": "Folio123456",
                                         "RfcImportador": "XAXX010101000"
                                     },
                                     {
-                                        "Tipo": "tipo_doc_aduanero",
+                                        "TipoDocumento": "tipo_doc_aduanero",
                                         "NumeroPedimento": "22  99  1234  0000000",
                                         "IdentificadorDocumento": "Folio123456",
                                         "RfcImportador": "XAXX010101000"
@@ -2701,8 +2642,6 @@
                                 "Rfc": "RFC123456",
                                 "NoLicencia": "LIC123456",
                                 "Nombre": "Transportista Ejemplo",
-                                "NumRegIdTrib": null,
-                                "ResidenciaFiscal": null,
                                 "PartesTransporte": [
                                     {
                                         "Parte": "PT01"
@@ -2723,10 +2662,6 @@
                                 "Domicilio": {
                                     "Calle": "Av. Principal",
                                     "NoExterior": "123",
-                                    "NoInterior": null,
-                                    "Colonia": null,
-                                    "Localidad": null,
-                                    "Referencia": null,
                                     "Municipio": "Municipio Ejemplo",
                                     "Estado": "Estado Ejemplo",
                                     "Pais": "MX",
@@ -2735,17 +2670,12 @@
                             },
                             {
                                 "Tipo": "FT02",
-                                "Rfc": null,
-                                "NoLicencia": null,
                                 "Nombre": "Otro Transportista",
-                                "NumRegIdTrib": null,
-                                "ResidenciaFiscal": null,
                                 "PartesTransporte": [
                                     {
                                         "Parte": "PT02"
                                     }
-                                ],
-                                "Domicilio": null
+                                ]
                             }
                         ]
                     }
@@ -2811,15 +2741,12 @@
                             "ResidenciaFiscal": "USA",
                             "NoEstacion": "E654321",
                             "NombreEstacion": "Estación 2",
-                            "NavegacionTrafico": null,
                             "FechaHoraSalidaLlegadaString": "2024-09-21T12:45:00",
                             "FechaHoraSalidaLlegada": "2024-09-21T12:45:00Z",
-                            "TipoEstacion": null,
                             "DistanciaRecorrida": 350.75,
                             "Domicilio": {
                                 "Calle": "Calle de las Flores",
                                 "NoExterior": "789",
-                                "NoInterior": null,
                                 "Colonia": "Colonia Del Valle",
                                 "Localidad": "San Luis Potosí",
                                 "Referencia": "Cerca de la plaza",
@@ -2838,12 +2765,9 @@
                             "ResidenciaFiscal": "CAN",
                             "NoEstacion": "E987654",
                             "NombreEstacion": "Estación 3",
-                            "NavegacionTrafico": null,
                             "FechaHoraSalidaLlegadaString": "2024-09-22T16:30:00",
                             "FechaHoraSalidaLlegada": "2024-09-22T16:30:00Z",
-                            "TipoEstacion": null,
-                            "DistanciaRecorrida": 220,
-                            "Domicilio": null
+                            "DistanciaRecorrida": 220
                         }
                     ],
                     "Mercancias": {
@@ -2898,25 +2822,25 @@
                                 "DescripcionMateria": "Tabletas de medicamento",
                                 "DocumentacionAduanera": [
                                     {
-                                        "Tipo": "tipo_doc_aduanero",
+                                        "TipoDocumento": "tipo_doc_aduanero",
                                         "NumeroPedimento": "22  99  1234  0000000",
                                         "IdentificadorDocumento": "Folio123456",
                                         "RfcImportador": "XAXX010101000"
                                     },
                                     {
-                                        "Tipo": "tipo_doc_aduanero",
+                                        "TipoDocumento": "tipo_doc_aduanero",
                                         "NumeroPedimento": "22  99  1234  0000000",
                                         "IdentificadorDocumento": "Folio123456",
                                         "RfcImportador": "XAXX010101000"
                                     },
                                     {
-                                        "Tipo": "tipo_doc_aduanero",
+                                        "TipoDocumento": "tipo_doc_aduanero",
                                         "NumeroPedimento": "22  99  1234  0000000",
                                         "IdentificadorDocumento": "Folio123456",
                                         "RfcImportador": "XAXX010101000"
                                     },
                                     {
-                                        "Tipo": "tipo_doc_aduanero",
+                                        "TipoDocumento": "tipo_doc_aduanero",
                                         "NumeroPedimento": "22  99  1234  0000000",
                                         "IdentificadorDocumento": "Folio123456",
                                         "RfcImportador": "XAXX010101000"
@@ -3177,8 +3101,6 @@
                                 "Rfc": "RFC123456",
                                 "NoLicencia": "LIC123456",
                                 "Nombre": "Transportista Ejemplo",
-                                "NumRegIdTrib": null,
-                                "ResidenciaFiscal": null,
                                 "PartesTransporte": [
                                     {
                                         "Parte": "PT01"
@@ -3199,10 +3121,6 @@
                                 "Domicilio": {
                                     "Calle": "Av. Principal",
                                     "NoExterior": "123",
-                                    "NoInterior": null,
-                                    "Colonia": null,
-                                    "Localidad": null,
-                                    "Referencia": null,
                                     "Municipio": "Municipio Ejemplo",
                                     "Estado": "Estado Ejemplo",
                                     "Pais": "MX",
@@ -3211,17 +3129,12 @@
                             },
                             {
                                 "Tipo": "FT02",
-                                "Rfc": null,
-                                "NoLicencia": null,
                                 "Nombre": "Otro Transportista",
-                                "NumRegIdTrib": null,
-                                "ResidenciaFiscal": null,
                                 "PartesTransporte": [
                                     {
                                         "Parte": "PT02"
                                     }
-                                ],
-                                "Domicilio": null
+                                ]
                             }
                         ]
                     }
@@ -3256,12 +3169,6 @@
                         "Nombre": "Juan Pérez García",
                         "Domicilio": {
                             "Calle": "Av. Siempre Viva",
-                            "NumeroExterior": null,
-                            "NumeroInterior": null,
-                            "Colonia": null,
-                            "Localidad": null,
-                            "Referencia": null,
-                            "Municipio": null,
                             "Estado": "Illinois",
                             "Pais": "US",
                             "CodigoPostal": "62704"
@@ -3312,12 +3219,6 @@
                         "Nombre": "Juan Pérez García",
                         "Domicilio": {
                             "Calle": "Av. Siempre Viva",
-                            "NumeroExterior": null,
-                            "NumeroInterior": null,
-                            "Colonia": null,
-                            "Localidad": null,
-                            "Referencia": null,
-                            "Municipio": null,
                             "Estado": "Illinois",
                             "Pais": "US",
                             "CodigoPostal": "62704"
@@ -3424,10 +3325,6 @@
                     "Mercancias": [
                         {
                             "NoIdentificacion": "ABC123456",
-                            "FraccionArancelaria": null,
-                            "CantidadAduana": null,
-                            "UnidadAduana": null,
-                            "ValorUnitarioAduana": null,
                             "ValorDolares": 1500,
                             "DescripcionesEspecificas": [
                                 {
@@ -3443,10 +3340,7 @@
                                     "NoSerie": "123456789"
                                 },
                                 {
-                                    "Marca": "MarcaA",
-                                    "Modelo": null,
-                                    "Submodelo": null,
-                                    "NoSerie": null
+                                    "Marca": "MarcaA"
                                 }
                             ]
                         },
@@ -3456,8 +3350,7 @@
                             "CantidadAduana": 10,
                             "UnidadAduana": "PZ",
                             "ValorUnitarioAduana": 150,
-                            "ValorDolares": 0,
-                            "DescripcionesEspecificas": null
+                            "ValorDolares": 0
                         }
                     ]
                 },
@@ -3541,10 +3434,6 @@
                     "Mercancias": [
                         {
                             "NoIdentificacion": "ABC123456",
-                            "FraccionArancelaria": null,
-                            "CantidadAduana": null,
-                            "UnidadAduana": null,
-                            "ValorUnitarioAduana": null,
                             "ValorDolares": 1500,
                             "DescripcionesEspecificas": [
                                 {
@@ -3560,10 +3449,7 @@
                                     "NoSerie": "123456789"
                                 },
                                 {
-                                    "Marca": "MarcaA",
-                                    "Modelo": null,
-                                    "Submodelo": null,
-                                    "NoSerie": null
+                                    "Marca": "MarcaA"
                                 }
                             ]
                         },
@@ -3573,8 +3459,7 @@
                             "CantidadAduana": 10,
                             "UnidadAduana": "PZ",
                             "ValorUnitarioAduana": 150,
-                            "ValorDolares": 0,
-                            "DescripcionesEspecificas": null
+                            "ValorDolares": 0
                         }
                     ]
                 }
@@ -3588,7 +3473,7 @@
                     "NoCertificadoOrigen": "1234567890",
                     "NoExportadorConfiable": "EXCONFIABLE123",
                     "Incoterm": "FOB",
-                    "Observaciones": "Exportación de mercancías desde México.",
+                    "Obsrvaciones": "Exportación de mercancías desde México.",
                     "TipoCambioUsd": 18.5,
                     "TotalUsd": 10000,
                     "Emisor": {
@@ -3714,7 +3599,7 @@
                     "Mercancias": [
                         {
                             "NoIdentificacion": "12345ABC",
-                            "FraccionArancelaria": "010121",
+                            "FraccionArancelario": "010121",
                             "CantidadAduana": 100,
                             "UnidadAduana": "KGM",
                             "ValorUnitarioAduana": 50.123456,
@@ -3730,7 +3615,7 @@
                         },
                         {
                             "NoIdentificacion": "67890DEF",
-                            "FraccionArancelaria": "020711",
+                            "FraccionArancelario": "020711",
                             "CantidadAduana": 200,
                             "UnidadAduana": "LBR",
                             "ValorUnitarioAduana": 20.654321,
@@ -3760,7 +3645,7 @@
                     "NoCertificadoOrigen": "1234567890",
                     "NoExportadorConfiable": "EXCONFIABLE123",
                     "Incoterm": "FOB",
-                    "Observaciones": "Exportación de mercancías desde México.",
+                    "Obsrvaciones": "Exportación de mercancías desde México.",
                     "TipoCambioUsd": 18.5,
                     "TotalUsd": 10000,
                     "Emisor": {
@@ -3886,7 +3771,7 @@
                     "Mercancias": [
                         {
                             "NoIdentificacion": "12345ABC",
-                            "FraccionArancelaria": "010121",
+                            "FraccionArancelario": "010121",
                             "CantidadAduana": 100,
                             "UnidadAduana": "KGM",
                             "ValorUnitarioAduana": 50.123456,
@@ -3902,7 +3787,7 @@
                         },
                         {
                             "NoIdentificacion": "67890DEF",
-                            "FraccionArancelaria": "020711",
+                            "FraccionArancelario": "020711",
                             "CantidadAduana": 200,
                             "UnidadAduana": "LBR",
                             "ValorUnitarioAduana": 20.654321,
@@ -3932,7 +3817,7 @@
                     "NoCertificadoOrigen": "1234567890",
                     "NoExportadorConfiable": "EXCONFIABLE123",
                     "Incoterm": "FOB",
-                    "Observaciones": "Exportación de mercancías desde México.",
+                    "Obsrvaciones": "Exportación de mercancías desde México.",
                     "TipoCambioUsd": 18.5,
                     "TotalUsd": 10000,
                     "Emisor": {
@@ -4058,7 +3943,7 @@
                     "Mercancias": [
                         {
                             "NoIdentificacion": "12345ABC",
-                            "FraccionArancelaria": "010121",
+                            "FraccionArancelario": "010121",
                             "CantidadAduana": 100,
                             "UnidadAduana": "KGM",
                             "ValorUnitarioAduana": 50.123456,
@@ -4074,7 +3959,7 @@
                         },
                         {
                             "NoIdentificacion": "67890DEF",
-                            "FraccionArancelaria": "020711",
+                            "FraccionArancelario": "020711",
                             "CantidadAduana": 200,
                             "UnidadAduana": "LBR",
                             "ValorUnitarioAduana": 20.654321,
@@ -4098,7 +3983,7 @@
                 }
             ]
         },
-        "ImpuestoLocales": {
+        "ImpuestosLocales": {
             "ImpuestoLocales10": [
                 {
                     "Version": "1.0",
@@ -4202,7 +4087,7 @@
                 {
                     "Version": "1.0",
                     "Tua": "1000.00",
-                    "Otroscargos": [
+                    "OtrosCargos": [
                         {
                             "TotalCargos": "60.00",
                             "Cargo": [
@@ -4217,7 +4102,7 @@
                 {
                     "Version": "1.0",
                     "Tua": "1000.00",
-                    "Otroscargos": [
+                    "OtrosCargos": [
                         {
                             "TotalCargos": "60.00",
                             "Cargo": [
@@ -4232,7 +4117,7 @@
                 {
                     "Version": "1.0",
                     "Tua": "1000.00",
-                    "Otroscargos": [
+                    "OtrosCargos": [
                         {
                             "TotalCargos": "60.00",
                             "Cargo": [
@@ -4246,7 +4131,7 @@
                 }
             ]
         },
-        "CertificadoDestruccion": {
+        "CertificadoDeDestruccion": {
             "CertificadoDeDestruccion10": [
                 {
                     "Version": "1.0",
@@ -4265,7 +4150,7 @@
                             "FolioTarjetaCirculacion": "05413312114"
                         }
                     ],
-                    "InformacinoAduanera": [
+                    "InformacionAduanera": [
                         {
                             "NumeroPedimentoImportacion": "2390321",
                             "FechaString": "2014-01-23",
@@ -4291,7 +4176,7 @@
                             "FolioTarjetaCirculacion": "05413312114"
                         }
                     ],
-                    "InformacinoAduanera": [
+                    "InformacionAduanera": [
                         {
                             "NumeroPedimentoImportacion": "2390321",
                             "FechaString": "2014-01-23",
@@ -4317,7 +4202,7 @@
                             "FolioTarjetaCirculacion": "05413312114"
                         }
                     ],
-                    "InformacinoAduanera": [
+                    "InformacionAduanera": [
                         {
                             "NumeroPedimentoImportacion": "2390321",
                             "FechaString": "2014-01-23",
@@ -4353,7 +4238,7 @@
                     "ClaveSpei": "23837",
                     "Sello": "v7Uq8JveMHDigYBN1mgeUqtAeuCRnTIDE1IpvEQWCCwttZkEOA7OZe+JzdgkLGMlhCzlFMTp3aOZkhhK7WPZXHeov1XlxevfctNqGl1sQWOyZjqqEmngliZppl4dr",
                     "NoCertificado": "20001000000200000876",
-                    "CadenaCda": "cadena",
+                    "cadenaCda": "cadena",
                     "Ordenante": [
                         {
                             "BancoEmisor": "Banco Emisor S.A.",
@@ -4383,7 +4268,7 @@
                     "ClaveSpei": "23837",
                     "Sello": "v7Uq8JveMHDigYBN1mgeUqtAeuCRnTIDE1IpvEQWCCwttZkEOA7OZe+JzdgkLGMlhCzlFMTp3aOZkhhK7WPZXHeov1XlxevfctNqGl1sQWOyZjqqEmngliZppl4dr",
                     "NoCertificado": "20001000000200000876",
-                    "CadenaCda": "cadena",
+                    "cadenaCda": "cadena",
                     "Ordenante": [
                         {
                             "BancoEmisor": "Banco Emisor S.A.",
@@ -4413,7 +4298,7 @@
                     "ClaveSpei": "23837",
                     "Sello": "v7Uq8JveMHDigYBN1mgeUqtAeuCRnTIDE1IpvEQWCCwttZkEOA7OZe+JzdgkLGMlhCzlFMTp3aOZkhhK7WPZXHeov1XlxevfctNqGl1sQWOyZjqqEmngliZppl4dr",
                     "NoCertificado": "20001000000200000876",
-                    "CadenaCda": "cadena",
+                    "cadenaCda": "cadena",
                     "Ordenante": [
                         {
                             "BancoEmisor": "Banco Emisor S.A.",
@@ -4438,7 +4323,7 @@
                 }
             ]
         },
-        "ConsumoCombustibles": {
+        "ConsumoDeCombustibles": {
             "ConsumoDeCombustible11": [
                 {
                     "Version": "1.1",
@@ -4464,7 +4349,7 @@
                                     "Determinado": [
                                         {
                                             "Impuesto": "IVA",
-                                            "TasaOCuota": 16,
+                                            "Tasa": 16,
                                             "Importe": 160
                                         }
                                     ]
@@ -4497,7 +4382,7 @@
                                     "Determinado": [
                                         {
                                             "Impuesto": "IVA",
-                                            "TasaOCuota": 16,
+                                            "Tasa": 16,
                                             "Importe": 160
                                         }
                                     ]
@@ -4530,7 +4415,7 @@
                                     "Determinado": [
                                         {
                                             "Impuesto": "IVA",
-                                            "TasaOCuota": 16,
+                                            "Tasa": 16,
                                             "Importe": 160
                                         }
                                     ]
@@ -4541,7 +4426,7 @@
                 }
             ]
         },
-        "Detallista": {
+        "detallista": {
             "Detallista10": [
                 {
                     "Type": "SimpleInvoiceType",
@@ -4680,7 +4565,7 @@
                         "PaymentTermsRelationTime": "REFERENCE_AFTER",
                         "NetPayment": {
                             "NetPaymentTermsType": "BASIC_NET",
-                            "TimePeriodDue": {
+                            "PaymentTimePeriod": {
                                 "TimePeriod": "DAYS",
                                 "Value": "10"
                             }
@@ -4713,7 +4598,7 @@
                             "AlternateTradeItemIdentification": [
                                 {
                                     "Value": "1111",
-                                    "Type": "SUPPLIER_ASSIGNED"
+                                    "type": "SUPPLIER_ASSIGNED"
                                 }
                             ],
                             "TradeItemDescriptionInformation": {
@@ -4766,7 +4651,7 @@
                                 "PalletQuantity": "2",
                                 "Description": {
                                     "Value": "Empaque",
-                                    "Type": "EXCHANGE_PALLETS"
+                                    "type": "EXCHANGE_PALLETS"
                                 },
                                 "MethodPayment": "PAID_BY_BUYER"
                             },
@@ -4956,7 +4841,7 @@
                         "PaymentTermsRelationTime": "REFERENCE_AFTER",
                         "NetPayment": {
                             "NetPaymentTermsType": "BASIC_NET",
-                            "TimePeriodDue": {
+                            "PaymentTimePeriod": {
                                 "TimePeriod": "DAYS",
                                 "Value": "10"
                             }
@@ -4989,7 +4874,7 @@
                             "AlternateTradeItemIdentification": [
                                 {
                                     "Value": "1111",
-                                    "Type": "SUPPLIER_ASSIGNED"
+                                    "type": "SUPPLIER_ASSIGNED"
                                 }
                             ],
                             "TradeItemDescriptionInformation": {
@@ -5042,7 +4927,7 @@
                                 "PalletQuantity": "2",
                                 "Description": {
                                     "Value": "Empaque",
-                                    "Type": "EXCHANGE_PALLETS"
+                                    "type": "EXCHANGE_PALLETS"
                                 },
                                 "MethodPayment": "PAID_BY_BUYER"
                             },
@@ -5232,7 +5117,7 @@
                         "PaymentTermsRelationTime": "REFERENCE_AFTER",
                         "NetPayment": {
                             "NetPaymentTermsType": "BASIC_NET",
-                            "TimePeriodDue": {
+                            "PaymentTimePeriod": {
                                 "TimePeriod": "DAYS",
                                 "Value": "10"
                             }
@@ -5265,7 +5150,7 @@
                             "AlternateTradeItemIdentification": [
                                 {
                                     "Value": "1111",
-                                    "Type": "SUPPLIER_ASSIGNED"
+                                    "type": "SUPPLIER_ASSIGNED"
                                 }
                             ],
                             "TradeItemDescriptionInformation": {
@@ -5318,7 +5203,7 @@
                                 "PalletQuantity": "2",
                                 "Description": {
                                     "Value": "Empaque",
-                                    "Type": "EXCHANGE_PALLETS"
+                                    "type": "EXCHANGE_PALLETS"
                                 },
                                 "MethodPayment": "PAID_BY_BUYER"
                             },
@@ -5414,7 +5299,7 @@
                 }
             ]
         },
-        "EstadoCuentaCombustible": {
+        "EstadoDeCuentaCombustible": {
             "EstadoDeCuentaCombustible11": [
                 {
                     "Version": "1.1",
@@ -5580,15 +5465,15 @@
                 }
             ]
         },
-        "GastoHidrocarburos": {
+        "GastosHidrocarburos": {
             "GastoHidrocarburos10": [
                 {
                     "Version": "1.0",
-                    "NumeroContrato": "ABC123456",
+                    "NoContrato": "ABC123456",
                     "AreaContractual": "CentroCosto01",
                     "Erogacion": [
                         {
-                            "TipoErogacion": "Gasto",
+                            "Tipo": "Gasto",
                             "MontoCuErogacion": "1500.00",
                             "Porcentaje": "10.500",
                             "DocumentoRelacionado": [
@@ -5646,11 +5531,11 @@
                 },
                 {
                     "Version": "1.0",
-                    "NumeroContrato": "ABC123456",
+                    "NoContrato": "ABC123456",
                     "AreaContractual": "CentroCosto01",
                     "Erogacion": [
                         {
-                            "TipoErogacion": "Gasto",
+                            "Tipo": "Gasto",
                             "MontoCuErogacion": "1500.00",
                             "Porcentaje": "10.500",
                             "DocumentoRelacionado": [
@@ -5708,11 +5593,11 @@
                 },
                 {
                     "Version": "1.0",
-                    "NumeroContrato": "ABC123456",
+                    "NoContrato": "ABC123456",
                     "AreaContractual": "CentroCosto01",
                     "Erogacion": [
                         {
-                            "TipoErogacion": "Gasto",
+                            "Tipo": "Gasto",
                             "MontoCuErogacion": "1500.00",
                             "Porcentaje": "10.500",
                             "DocumentoRelacionado": [
@@ -5909,7 +5794,7 @@
                     "NoEmpleado": "12345",
                     "Curp": "GODE561231GR8",
                     "TipoRegimen": 2,
-                    "NumSeguridadSocial": "123456789012345",
+                    "NoSeguridadSocial": "123456789012345",
                     "FechaPagoString": "2024-09-18",
                     "FechaPago": "2024-09-18T00:00:00Z",
                     "FechaInicialPagoString": "2023-09-01",
@@ -6003,7 +5888,7 @@
                     "NoEmpleado": "12345",
                     "Curp": "GODE561231GR8",
                     "TipoRegimen": 2,
-                    "NumSeguridadSocial": "123456789012345",
+                    "NoSeguridadSocial": "123456789012345",
                     "FechaPagoString": "2024-09-18",
                     "FechaPago": "2024-09-18T00:00:00Z",
                     "FechaInicialPagoString": "2023-09-01",
@@ -6177,9 +6062,7 @@
                                 "Clave": "67890",
                                 "Concepto": "Pensión",
                                 "ImporteGravado": 0,
-                                "ImporteExento": 2000,
-                                "AccionesOTitulos": null,
-                                "HorasExtra": null
+                                "ImporteExento": 2000
                             }
                         ],
                         "JubilacionPensionRetiro": {
@@ -6223,15 +6106,13 @@
                             "Importe": 500,
                             "SubsidioAlEmpleo": {
                                 "SubsidioCausado": 500
-                            },
-                            "CompensacionSaldosAFavor": null
+                            }
                         },
                         {
                             "Tipo": "002",
                             "Clave": "OP002",
                             "Concepto": "Compensación de Saldos a Favor",
                             "Importe": 200,
-                            "SubsidioAlEmpleo": null,
                             "CompensacionSaldosAFavor": {
                                 "SaldoAFavor": 300,
                                 "Anio": "2023",
@@ -6336,9 +6217,7 @@
                                 "Clave": "67890",
                                 "Concepto": "Pensión",
                                 "ImporteGravado": 0,
-                                "ImporteExento": 2000,
-                                "AccionesOTitulos": null,
-                                "HorasExtra": null
+                                "ImporteExento": 2000
                             }
                         ],
                         "JubilacionPensionRetiro": {
@@ -6382,15 +6261,13 @@
                             "Importe": 500,
                             "SubsidioAlEmpleo": {
                                 "SubsidioCausado": 500
-                            },
-                            "CompensacionSaldosAFavor": null
+                            }
                         },
                         {
                             "Tipo": "002",
                             "Clave": "OP002",
                             "Concepto": "Compensación de Saldos a Favor",
                             "Importe": 200,
-                            "SubsidioAlEmpleo": null,
                             "CompensacionSaldosAFavor": {
                                 "SaldoAFavor": 300,
                                 "Anio": "2023",
@@ -6456,7 +6333,7 @@
                             "Rfc": "XAXX010101000",
                             "Curp": "XAXX010101HOCRRN03"
                         },
-                        "DatosEnajenanteCopropiedadOSociedadConyugal": [
+                        "DatosEnajenantesCopropiedadOSociedadConyugal": [
                             {
                                 "Nombre": "Francisco",
                                 "ApellidoPaterno": "Vazquez",
@@ -6530,7 +6407,7 @@
                             "Rfc": "XAXX010101000",
                             "Curp": "XAXX010101HOCRRN03"
                         },
-                        "DatosEnajenanteCopropiedadOSociedadConyugal": [
+                        "DatosEnajenantesCopropiedadOSociedadConyugal": [
                             {
                                 "Nombre": "Francisco",
                                 "ApellidoPaterno": "Vazquez",
@@ -6581,7 +6458,7 @@
                             "RfcEmisorCuentaOrdenante": "XEXX010101000",
                             "NombreBancoOrdenanteExtranjero": "Banco Ejemplo",
                             "CuentaOrdenante": "0123456789",
-                            "RfcEmisorCuentaBeneficiario": "A123456789",
+                            "RfcEmisorCuentaBenBeneficiario": "A123456789",
                             "CuentaBeneficiario": "9876543210",
                             "TipoCadenaPago": "01",
                             "CertificadoPago": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvD1X...",
@@ -6687,7 +6564,7 @@
                             "RfcEmisorCuentaOrdenante": "XEXX010101000",
                             "NombreBancoOrdenanteExtranjero": "Banco Ejemplo",
                             "CuentaOrdenante": "0123456789",
-                            "RfcEmisorCuentaBeneficiario": "A123456789",
+                            "RfcEmisorCuentaBenBeneficiario": "A123456789",
                             "CuentaBeneficiario": "9876543210",
                             "TipoCadenaPago": "01",
                             "CertificadoPago": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvD1X...",
@@ -6821,7 +6698,6 @@
                                     "Serie": "A",
                                     "Folio": "1001",
                                     "Moneda": "MXN",
-                                    "Equivalencia": null,
                                     "NoParcialidad": 1,
                                     "ImporteSaldoAnterior": 1500,
                                     "ImportePagado": 1500,
@@ -6855,9 +6731,7 @@
                                             {
                                                 "Base": 1000.000001,
                                                 "Impuesto": "003",
-                                                "TipoFactor": "Exento",
-                                                "TasaOCuota": null,
-                                                "Importe": null
+                                                "TipoFactor": "Exento"
                                             }
                                         ]
                                     }
@@ -6934,7 +6808,6 @@
                                     "Serie": "A",
                                     "Folio": "1001",
                                     "Moneda": "MXN",
-                                    "Equivalencia": null,
                                     "NoParcialidad": 1,
                                     "ImporteSaldoAnterior": 1500,
                                     "ImportePagado": 1500,
@@ -6968,9 +6841,7 @@
                                             {
                                                 "Base": 1000.000001,
                                                 "Impuesto": "003",
-                                                "TipoFactor": "Exento",
-                                                "TasaOCuota": null,
-                                                "Importe": null
+                                                "TipoFactor": "Exento"
                                             }
                                         ]
                                     }
@@ -7031,7 +6902,7 @@
                 "SelloSat": "QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"
             }
         },
-        "ObrasAntiguedades": {
+        "ObrasArteAntiguedaes": {
             "ObrasAntiguedades10": [
                 {
                     "Version": "1.0",
@@ -7081,7 +6952,7 @@
                 }
             ]
         },
-        "ParcialesConstruccion": {
+        "parcialesconstruccion": {
             "ParcialesConstruccion10": [
                 {
                     "Version": "1.0",
@@ -7115,7 +6986,7 @@
                 }
             ]
         },
-        "PFIntegrantesCoordinado": {
+        "PFintegranteCoordinado": {
             "PFIntegranteCoordinado10": [
                 {
                     "Version": "1.0",
@@ -7140,7 +7011,7 @@
                         "VehiculoEnajenado": "02",
                         "VehiculosUsados": [
                             {
-                                "PrecioVehUsado": 250000,
+                                "Precio": 250000,
                                 "Tipo": "AUTOMOVIL",
                                 "Marca": "Toyota",
                                 "TipoOClase": "Sedan",
@@ -7158,7 +7029,7 @@
                                 "FolioFiscal": "A1B2C3D4E5F6G7H8I9J0"
                             },
                             {
-                                "PrecioVehUsado": 250000,
+                                "Precio": 250000,
                                 "Tipo": "AUTOMOVIL",
                                 "Marca": "Toyota",
                                 "TipoOClase": "Sedan",
@@ -7189,7 +7060,7 @@
                         "VehiculoEnajenado": "02",
                         "VehiculosUsados": [
                             {
-                                "PrecioVehUsado": 250000,
+                                "Precio": 250000,
                                 "Tipo": "AUTOMOVIL",
                                 "Marca": "Toyota",
                                 "TipoOClase": "Sedan",
@@ -7236,7 +7107,7 @@
                         "VehiculoEnajenado": "02",
                         "VehiculosUsados": [
                             {
-                                "PrecioVehUsado": 250000,
+                                "Precio": 250000,
                                 "Tipo": "AUTOMOVIL",
                                 "Marca": "Toyota",
                                 "TipoOClase": "Sedan",
@@ -7254,7 +7125,7 @@
                                 "FolioFiscal": "A1B2C3D4E5F6G7H8I9J0"
                             },
                             {
-                                "PrecioVehUsado": 250000,
+                                "Precio": 250000,
                                 "Tipo": "AUTOMOVIL",
                                 "Marca": "Toyota",
                                 "TipoOClase": "Sedan",
@@ -7285,7 +7156,7 @@
                         "VehiculoEnajenado": "02",
                         "VehiculosUsados": [
                             {
-                                "PrecioVehUsado": 250000,
+                                "Precio": 250000,
                                 "Tipo": "AUTOMOVIL",
                                 "Marca": "Toyota",
                                 "TipoOClase": "Sedan",

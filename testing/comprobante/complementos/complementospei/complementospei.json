@@ -7,7 +7,7 @@
 			"ClaveSpei": "23837",
 			"Sello": "v7Uq8JveMHDigYBN1mgeUqtAeuCRnTIDE1IpvEQWCCwttZkEOA7OZe+JzdgkLGMlhCzlFMTp3aOZkhhK7WPZXHeov1XlxevfctNqGl1sQWOyZjqqEmngliZppl4dr",
 			"NoCertificado": "20001000000200000876",
-			"CadenaCda": "cadena",
+			"cadenaCda": "cadena",
 			"Ordenante": [
 				{
 					"BancoEmisor": "Banco Emisor S.A.",

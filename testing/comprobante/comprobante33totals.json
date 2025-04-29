@@ -11,13 +11,12 @@
         "Total": 4000,
         "Subtotal": 4000,
         "Descuento": 2000,
-        "TotalImpuestosRetenidos": null,
         "TotalImpuestosTrasladados": 2000
     },
     "ProcessorMetadata": {
         "KoreModelsVersion": "v1.0.63",
         "KoreVersion": null,
-        "LastUpdate": "2025-04-28T11:02:18Z"
+        "LastUpdate": "2025-04-29T13:27:24Z"
     },
     "Version": "3.3",
     "Serie": "A",
@@ -90,15 +89,10 @@
                     }
                 ]
             },
-            "InformacionAduanera": null,
-            "CuentaPredial": null,
-            "ComplementoConcepto": null,
-            "Parte": null,
             "DetallesConcepto": ""
         }
     ],
     "Impuestos": {
-        "TotalImpuestosRetenidos": null,
         "TotalImpuestosTrasladados": 100,
         "Retenciones": [
             {
@@ -116,24 +110,6 @@
         ]
     },
     "Complemento": {
-        "CartaPorte": null,
-        "ComercioExterior": null,
-        "ImpuestoLocales": null,
-        "Aerolineas": null,
-        "CertificadoDestruccion": null,
-        "CFDIRegistroFiscal": null,
-        "ComplementoSPEI": null,
-        "ConsumoCombustibles": null,
-        "Detallista": null,
-        "Divisas": null,
-        "Donatarias": null,
-        "EstadoCuentaCombustible": null,
-        "GastoHidrocarburos": null,
-        "Ine": null,
-        "LeyendasFiscales": null,
-        "Nomina": null,
-        "NotariosPublicos": null,
-        "Pagos": null,
         "TimbreFiscalDigital": {
             "TimbreFiscalDigital11": {
                 "Version": "1.1",
@@ -145,19 +121,9 @@
                 "SelloCfd": "AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3",
                 "NoCertificadoSat": "30001000000500003456",
                 "SelloSat": "QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"
-            },
-            "TimbreFiscalDigital10": null
-        },
-        "ObrasAntiguedades": null,
-        "PagoEnEspecie": null,
-        "ParcialesConstruccion": null,
-        "PFIntegrantesCoordinado": null,
-        "RenovacionSustitucionVehiculos": null,
-        "TuristaPasajeroExtranjero": null,
-        "ValesDeDespensa": null,
-        "VehiculoUsado": null
+            }
+        }
     },
-    "Addenda": null,
     "KuantikMetadata": {
         "SerieFolio": "A-123456"
     }

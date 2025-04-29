@@ -6,7 +6,7 @@ import (
 )
 
 type TuristaPasajeroExtranjero struct {
-	TuristaPasajeroExtranjero10 *[]TuristaPasajeroExtranjero10 `bson:"TuristaPasajeroExtranjero10,omitempty"`
+	TuristaPasajeroExtranjero10 *[]TuristaPasajeroExtranjero10 `bson:"TuristaPasajeroExtranjero10,omitempty" json:"TuristaPasajeroExtranjero10,omitempty"`
 }
 
 func (t *TuristaPasajeroExtranjero) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

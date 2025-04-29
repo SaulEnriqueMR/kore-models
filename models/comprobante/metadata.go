@@ -9,7 +9,7 @@ import (
 type ComprobanteMetadata struct {
 	Uuid               string                                   `bson:"Uuid" json:"Uuid"`
 	Fecha              time.Time                                `bson:"FechaEmision" json:"FechaEmision"`
-	Vigente            bool                                     `bson:"Vigente" json:"Estatus"`
+	Vigente            bool                                     `bson:"Vigente" json:"Vigente"`
 	FechaTimbrado      time.Time                                `bson:"FechaTimbrado" json:"FechaTimbrado"`
 	Total              float64                                  `bson:"Total" json:"Total"`
 	TipoComprobante    string                                   `bson:"TipoComprobante" json:"TipoComprobante"`
@@ -18,7 +18,7 @@ type ComprobanteMetadata struct {
 	RfcProvCertif      string                                   `bson:"RfcProvCertif" json:"RfcProvCertif"`
 	Metadata           bool                                     `bson:"Metadata" json:"Metadata"`
 	Cancelacion        *CancelacionMetadata                     `xml:"Cancelacion" bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
-	Transaccion        string                                   `bson:"Transaccion"`
+	Transaccion        string                                   `bson:"Transaccion" json:"Transaccion"`
 	TotalesMonedaLocal TotalesMonedaLocalMetadata               `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
 	ProcessorMetadata  documentofiscaldigital.ProcessorMetadata `bson:"ProcessorMetadata" json:"ProcessorMetadata"`
 }
@@ -33,17 +33,17 @@ type RfcEmisorReceptor struct {
 }
 
 type PagoTercerosMetadata struct {
-	Uuid          string `bson:"Uuid" json:"UuidComprobante"`
+	Uuid          string `bson:"Uuid" json:"Uuid"`
 	RfcTercero    string `bson:"RfcTercero" json:"RfcTercero"`
 	NombreTercero string `bson:"NombreTercero" json:"NombreTercero"`
 }
 
 type ComprobanteTerceros struct {
-	Uuid     string              `bson:"Uuid" json:"UuidComprobante"`
+	Uuid     string              `bson:"Uuid" json:"Uuid"`
 	Terceros []RfcEmisorReceptor `bson:"Terceros" json:"Terceros"`
 }
 
 type TotalesMonedaLocalMetadata struct {
-	Total    float64 `bson:"Total"`
-	Subtotal float64 `bson:"Subtotal"`
+	Total    float64 `bson:"Total" json:"Total"`
+	Subtotal float64 `bson:"Subtotal" json:"Subtotal"`
 }

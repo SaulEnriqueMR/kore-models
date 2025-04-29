@@ -7,9 +7,9 @@ import (
 )
 
 type Comprobante struct {
-	Comprobante32 *Comprobante32 `bson:"Comprobante32"`
-	Comprobante33 *Comprobante33 `bson:"Comprobante33"`
-	Comprobante40 *Comprobante40 `bson:"Comprobante40"`
+	Comprobante32 *Comprobante32 `bson:"Comprobante32" json:"Comprobante32"`
+	Comprobante33 *Comprobante33 `bson:"Comprobante33" json:"Comprobante33"`
+	Comprobante40 *Comprobante40 `bson:"Comprobante40" json:"Comprobante40"`
 }
 
 func SerializeComprobanteFromXml(inputXml []byte) (Comprobante, error) {

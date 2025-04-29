@@ -6,7 +6,7 @@ import (
 )
 
 type PFIntegranteCoordinado struct {
-	PFIntegranteCoordinado10 *[]PFIntegranteCoordinado10 `bson:"PFIntegranteCoordinado10,omitempty"`
+	PFIntegranteCoordinado10 *[]PFIntegranteCoordinado10 `bson:"PFIntegranteCoordinado10,omitempty" json:"PFIntegranteCoordinado10,omitempty"`
 }
 
 func (p *PFIntegranteCoordinado) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

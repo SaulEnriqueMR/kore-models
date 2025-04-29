@@ -6,7 +6,7 @@ import (
 )
 
 type VehiculoUsado struct {
-	VehiculoUsado10 *[]VehiculoUsado10 `bson:"VehiculoUsado10"`
+	VehiculoUsado10 *[]VehiculoUsado10 `bson:"VehiculoUsado10" json:"VehiculoUsado10"`
 }
 
 func (v *VehiculoUsado) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

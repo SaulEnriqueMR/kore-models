@@ -6,7 +6,7 @@ import (
 )
 
 type SectorFinanciero struct {
-	SectorFinanciero10 *[]SectorFinanciero10 `bson:"SectorFinanciero,omitempty"`
+	SectorFinanciero10 *[]SectorFinanciero10 `bson:"SectorFinanciero,omitempty" json:"SectorFinanciero,omitempty"`
 }
 
 func (s *SectorFinanciero) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

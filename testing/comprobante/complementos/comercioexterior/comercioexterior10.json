@@ -24,12 +24,6 @@
         "Nombre": "Juan Pérez García",
         "Domicilio": {
             "Calle": "Av. Siempre Viva",
-            "NumeroExterior": null,
-            "NumeroInterior": null,
-            "Colonia": null,
-            "Localidad": null,
-            "Referencia": null,
-            "Municipio": null,
             "Estado": "Illinois",
             "Pais": "US",
             "CodigoPostal": "62704"

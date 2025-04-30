@@ -6,7 +6,7 @@ import (
 )
 
 type NotariosPublicos struct {
-	NotariosPublicos10 *[]NotariosPublicos10 `bson:"NotariosPublicos10,omitempty"`
+	NotariosPublicos10 *[]NotariosPublicos10 `bson:"NotariosPublicos10,omitempty" json:"NotariosPublicos10,omitempty"`
 }
 
 func (v *NotariosPublicos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

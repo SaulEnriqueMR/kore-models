@@ -9,7 +9,7 @@
     "DiferenciaIvaEntregadoPrestadorServicios": 100,
     "MontoTotalUsoPlataforma": 300,
     "MontoTotalContribucionGubernamental": 150,
-    "DetallesDelServicio": [
+    "Servicios": [
         {
             "FormaPagoServicio": "01",
             "TipoServicio": "A01",

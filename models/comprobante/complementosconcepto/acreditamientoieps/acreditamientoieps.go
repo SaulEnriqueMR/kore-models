@@ -6,7 +6,7 @@ import (
 )
 
 type AcreditamientoIeps struct {
-	AcreditamientoIeps10 *[]AcreditamientoIeps10 `xml:"acreditamientoIEPS" bson:"AcreditamientoIeps10,omitempty"`
+	AcreditamientoIeps10 *[]AcreditamientoIeps10 `xml:"acreditamientoIEPS" bson:"AcreditamientoIeps10,omitempty" json:"AcreditamientoIeps10,omitempty"`
 }
 
 func (ai *AcreditamientoIeps) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

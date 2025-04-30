@@ -6,7 +6,7 @@ import (
 )
 
 type INE struct {
-	INE11 *[]INE11 `bson:"INE11,omitempty"`
+	INE11 *[]INE11 `bson:"INE11,omitempty" json:"INE11,omitempty"`
 }
 
 func (v *INE) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

@@ -1,7 +1,7 @@
 package addenda
 
 type EdicomGenerica struct {
-	Elementos []EdicomGenericaElemento `xml:"elementos>elemento" bson:"Elementos"`
+	Elementos []EdicomGenericaElemento `xml:"elementos>elemento" bson:"Elementos" json:"Elementos"`
 }
 
 type EdicomGenericaElemento struct {

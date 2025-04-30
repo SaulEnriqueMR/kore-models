@@ -6,8 +6,8 @@ import (
 )
 
 type Retenciones struct {
-	Retenciones10 *Retenciones10 `bson:"Retenciones10,omitempty"`
-	Retenciones20 *Retenciones20 `bson:"Retenciones20,omitempty"`
+	Retenciones10 *Retenciones10 `bson:"Retenciones10,omitempty" json:"Retenciones10,omitempty"`
+	Retenciones20 *Retenciones20 `bson:"Retenciones20,omitempty" json:"Retenciones20,omitempty"`
 }
 
 func (r *Retenciones) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

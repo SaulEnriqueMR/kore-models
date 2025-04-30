@@ -6,7 +6,7 @@ import (
 )
 
 type InstitucioneEducativas struct {
-	InstitucioneEducativas10 *[]InstitucioneEducativas10 `bson:"InstitucioneEducativas10,omitempty"`
+	InstitucioneEducativas10 *[]InstitucioneEducativas10 `bson:"InstitucioneEducativas10,omitempty" json:"InstitucioneEducativas10,omitempty"`
 }
 
 func (i *InstitucioneEducativas) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

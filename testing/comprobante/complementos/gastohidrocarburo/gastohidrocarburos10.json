@@ -1,10 +1,10 @@
 {
     "Version": "1.0",
-    "NumeroContrato": "ABC123456",
+    "NoContrato": "ABC123456",
     "AreaContractual": "CentroCosto01",
     "Erogacion": [
         {
-            "TipoErogacion": "Gasto",
+            "Tipo": "Gasto",
             "MontoCuErogacion": "1500.00",
             "Porcentaje": "10.500",
             "DocumentoRelacionado": [

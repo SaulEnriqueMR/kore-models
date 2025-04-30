@@ -8,25 +8,25 @@ import (
 )
 
 type VehiculoUsado10 struct {
-	Version                   string                 `xml:"Version,attr" bson:"Version"`
-	MontoAdquisicion          float64                `xml:"montoAdquisicion,attr" bson:"MontoAdquisicion"`
-	MontoEnajenacion          float64                `xml:"montoEnajenacion,attr" bson:"MontoEnajenacion"`
-	ClaveVehicular            string                 `xml:"claveVehicular,attr" bson:"ClaveVehicular"`
-	Marca                     string                 `xml:"marca,attr" bson:"Marca"`
-	Tipo                      string                 `xml:"tipo,attr" bson:"Tipo"`
-	Modelo                    string                 `xml:"modelo,attr" bson:"Modelo"`
-	NoMotor                   *string                `xml:"numeroMotor,attr" bson:"NoMotor,omitempty"`
-	NoSerie                   *string                `xml:"numeroSerie,attr" bson:"NoSerie,omitempty"`
-	NoIdentificacionVehicular *string                `xml:"NIV,attr" bson:"NoIdentificacionVehicular,omitempty"`
-	Valor                     float64                `xml:"valor,attr" bson:"Valor"`
-	InformacionAduanera       *[]InformacionAduanera `xml:"InformacionAduanera" bson:"InformacionAduanera,omitempty"`
+	Version                   string                 `xml:"Version,attr" bson:"Version" json:"Version"`
+	MontoAdquisicion          float64                `xml:"montoAdquisicion,attr" bson:"MontoAdquisicion" json:"MontoAdquisicion"`
+	MontoEnajenacion          float64                `xml:"montoEnajenacion,attr" bson:"MontoEnajenacion" json:"MontoEnajenacion"`
+	ClaveVehicular            string                 `xml:"claveVehicular,attr" bson:"ClaveVehicular" json:"ClaveVehicular"`
+	Marca                     string                 `xml:"marca,attr" bson:"Marca" json:"Marca"`
+	Tipo                      string                 `xml:"tipo,attr" bson:"Tipo" json:"Tipo"`
+	Modelo                    string                 `xml:"modelo,attr" bson:"Modelo" json:"Modelo"`
+	NoMotor                   *string                `xml:"numeroMotor,attr" bson:"NoMotor,omitempty" json:"NoMotor,omitempty"`
+	NoSerie                   *string                `xml:"numeroSerie,attr" bson:"NoSerie,omitempty" json:"NoSerie,omitempty"`
+	NoIdentificacionVehicular *string                `xml:"NIV,attr" bson:"NoIdentificacionVehicular,omitempty" json:"NoIdentificacionVehicular,omitempty"`
+	Valor                     float64                `xml:"valor,attr" bson:"Valor" json:"Valor"`
+	InformacionAduanera       *[]InformacionAduanera `xml:"InformacionAduanera" bson:"InformacionAduanera,omitempty" json:"InformacionAduanera,omitempty"`
 }
 
 type InformacionAduanera struct {
-	Numero      string    `xml:"numero,attr" bson:"Numero"`
-	FechaString string    `xml:"fecha,attr" bson:"FechaString"`
-	Fecha       time.Time `bson:"Fecha"`
-	Aduana      *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
+	Numero      string    `xml:"numero,attr" bson:"Numero" json:"Numero"`
+	FechaString string    `xml:"fecha,attr" bson:"FechaString" json:"FechaString"`
+	Fecha       time.Time `bson:"Fecha" json:"Fecha"`
+	Aduana      *string   `xml:"aduana,attr" bson:"Aduana,omitempty" json:"Aduana,omitempty"`
 }
 
 func (c *InformacionAduanera) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

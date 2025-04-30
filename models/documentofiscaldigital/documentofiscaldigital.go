@@ -5,19 +5,19 @@ import (
 )
 
 type DocumentoFiscalDigital struct {
-	FechaEmision         time.Time             `bson:"FechaEmision"`
-	Uuid                 string                `bson:"Uuid"`
-	FechaTimbrado        time.Time             `bson:"FechaTimbrado"`
+	FechaEmision         time.Time             `bson:"FechaEmision" json:"FechaEmision"`
+	Uuid                 string                `bson:"Uuid" json:"Uuid"`
+	FechaTimbrado        time.Time             `bson:"FechaTimbrado" json:"FechaTimbrado"`
 	Vigente              *bool                 `bson:"Vigente,omitempty" json:"Vigente,omitempty"`
-	CadenaOriginal       string                `bson:"CadenaOriginal"`
+	CadenaOriginal       string                `bson:"CadenaOriginal" json:"CadenaOriginal"`
 	InformacionAdicional *InformacionAdicional `bson:"InformacionAdicional,omitempty" json:"InformacionAdicional,omitempty"`
 	Cancelacion          *Cancelacion          `bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
-	Comprobante          bool                  `bson:"Comprobante"`
-	Transaccion          string                `bson:"Transaccion"`
-	XmlPath              string                `bson:"XmlPath"`
-	PdfPath              string                `bson:"PdfPath"`
-	TotalesMonedaLocal   TotalesMonedaLocal    `bson:"TotalesMonedaLocal"`
-	ProcessorMetadata    ProcessorMetadata     `bson:"ProcessorMetadata"`
+	Comprobante          bool                  `bson:"Comprobante" json:"Comprobante"`
+	Transaccion          string                `bson:"Transaccion" json:"Transaccion"`
+	XmlPath              string                `bson:"XmlPath" json:"XmlPath"`
+	PdfPath              string                `bson:"PdfPath" json:"PdfPath"`
+	TotalesMonedaLocal   TotalesMonedaLocal    `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
+	ProcessorMetadata    ProcessorMetadata     `bson:"ProcessorMetadata" json:"ProcessorMetadata"`
 }
 
 type ProcessorMetadata struct {
@@ -67,26 +67,26 @@ type MetaProcessor struct {
 
 type InformacionAdicional struct {
 	StampedByKuantik *bool   `bson:"StampedByKuantik,omitempty" json:"StampedByKuantik,omitempty"`
-	Comentario       *string `bson:"Comentario,omitempty"`
-	Desgloce         *string `bson:"Desgloce,omitempty"`
-	NotaPie          *string `bson:"NotaPie,omitempty"`
-	IdProyecto       *string `bson:"IdProyecto,omitempty"`
-	Categoria        *string `bson:"Categoria,omitempty"`
+	Comentario       *string `bson:"Comentario,omitempty" json:"Comentario,omitempty"`
+	Desgloce         *string `bson:"Desgloce,omitempty" json:"Desgloce,omitempty"`
+	NotaPie          *string `bson:"NotaPie,omitempty" json:"NotaPie,omitempty"`
+	IdProyecto       *string `bson:"IdProyecto,omitempty" json:"IdProyecto,omitempty"`
+	Categoria        *string `bson:"Categoria,omitempty" json:"Categoria,omitempty"`
 }
 
 type Cancelacion struct {
 	CanceledByKuantik  *bool      `bson:"CanceledByKuantik,omitempty" json:"CanceledByKuantik,omitempty"`
-	MotivoCancelacion  *string    `bson:"MotivoCancelacion,omitempty"`
-	FolioSustitucion   *string    `bson:"FolioSustitucion,omitempty"`
-	EstatusCancelacion *string    `bson:"EstatusCancelacion,omitempty"`
-	EsCancelable       *string    `bson:"EsCancelable,omitempty"`
-	FechaCancelacion   *time.Time `bson:"FechaCancelacion,omitempty"`
+	MotivoCancelacion  *string    `bson:"MotivoCancelacion,omitempty" json:"MotivoCancelacion,omitempty"`
+	FolioSustitucion   *string    `bson:"FolioSustitucion,omitempty" json:"FolioSustitucion,omitempty"`
+	EstatusCancelacion *string    `bson:"EstatusCancelacion,omitempty" json:"EstatusCancelacion,omitempty"`
+	EsCancelable       *string    `bson:"EsCancelable,omitempty" json:"EsCancelable,omitempty"`
+	FechaCancelacion   *time.Time `bson:"FechaCancelacion,omitempty" json:"FechaCancelacion,omitempty"`
 }
 
 type TotalesMonedaLocal struct {
-	Total                     float64  `bson:"Total"`
-	Subtotal                  float64  `bson:"Subtotal"`
-	Descuento                 *float64 `bson:"Descuento,omitempty"`
-	TotalImpuestosRetenidos   *float64 `bson:"TotalImpuestosRetenidos,omitempty"`
-	TotalImpuestosTrasladados *float64 `bson:"TotalImpuestosTrasladados,omitempty"`
+	Total                     float64  `bson:"Total" json:"Total"`
+	Subtotal                  float64  `bson:"Subtotal" json:"Subtotal"`
+	Descuento                 *float64 `bson:"Descuento,omitempty" json:"Descuento,omitempty"`
+	TotalImpuestosRetenidos   *float64 `bson:"TotalImpuestosRetenidos,omitempty" json:"TotalImpuestosRetenidos,omitempty"`
+	TotalImpuestosTrasladados *float64 `bson:"TotalImpuestosTrasladados,omitempty" json:"TotalImpuestosTrasladados,omitempty"`
 }

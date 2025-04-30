@@ -6,7 +6,7 @@
     "NoCertificadoOrigen": "1234567890",
     "NoExportadorConfiable": "EXCONFIABLE123",
     "Incoterm": "FOB",
-    "Observaciones": "Exportación de mercancías desde México.",
+    "Obsrvaciones": "Exportación de mercancías desde México.",
     "TipoCambioUsd": 18.5,
     "TotalUsd": 10000,
     "Emisor": {
@@ -132,7 +132,7 @@
     "Mercancias": [
         {
             "NoIdentificacion": "12345ABC",
-            "FraccionArancelaria": "010121",
+            "FraccionArancelario": "010121",
             "CantidadAduana": 100,
             "UnidadAduana": "KGM",
             "ValorUnitarioAduana": 50.123456,
@@ -148,7 +148,7 @@
         },
         {
             "NoIdentificacion": "67890DEF",
-            "FraccionArancelaria": "020711",
+            "FraccionArancelario": "020711",
             "CantidadAduana": 200,
             "UnidadAduana": "LBR",
             "ValorUnitarioAduana": 20.654321,

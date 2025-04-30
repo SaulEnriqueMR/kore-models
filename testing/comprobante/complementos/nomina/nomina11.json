@@ -4,7 +4,7 @@
     "NoEmpleado": "12345",
     "Curp": "GODE561231GR8",
     "TipoRegimen": 2,
-    "NumSeguridadSocial": "123456789012345",
+    "NoSeguridadSocial": "123456789012345",
     "FechaPagoString": "2024-09-18",
     "FechaPago": "2024-09-18T00:00:00Z",
     "FechaInicialPagoString": "2023-09-01",

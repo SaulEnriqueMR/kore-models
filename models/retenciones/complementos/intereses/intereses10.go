@@ -7,20 +7,20 @@ import (
 )
 
 type Intereses10 struct {
-	Version string `xml:"Version,attr" bson:"Version"`
+	Version string `xml:"Version,attr" bson:"Version" json:"Version"`
 
-	SistemaFinanciero          string `xml:"SistFinanciero,attr" bson:"SistemaFinanciero"`
-	ProvienenSistemaFinanciero bool   `bson:"ProvienenSistemaFinanciero"`
+	SistemaFinanciero          string `xml:"SistFinanciero,attr" bson:"SistemaFinanciero" json:"SistemaFinanciero"`
+	ProvienenSistemaFinanciero bool   `bson:"ProvienenSistemaFinanciero" json:"ProvienenSistemaFinanciero"`
 
-	RetiroIntereses     string `xml:"RetiroAORESRetInt,attr" bson:"RetiroIntereses"`
-	HuboRetiroIntereses bool   `bson:"HuboRetiroIntereses"`
+	RetiroIntereses     string `xml:"RetiroAORESRetInt,attr" bson:"RetiroIntereses" json:"RetiroIntereses"`
+	HuboRetiroIntereses bool   `bson:"HuboRetiroIntereses" json:"HuboRetiroIntereses"`
 
-	OperacionFinancieraDerivada            string `xml:"OperFinancDerivad,attr" bson:"OperacionFinancieraDerivada"`
-	CorrespondeOperacionFinancieraDerivada bool   `bson:"CorrespondeOperacionFinancieraDerivada"`
+	OperacionFinancieraDerivada            string `xml:"OperFinancDerivad,attr" bson:"OperacionFinancieraDerivada" json:"OperacionFinancieraDerivada"`
+	CorrespondeOperacionFinancieraDerivada bool   `bson:"CorrespondeOperacionFinancieraDerivada" json:"CorrespondeOperacionFinancieraDerivada"`
 
-	MontoInteresNominal float64 `xml:"MontIntNominal,attr" bson:"MontoInteresNominal"`
-	MontoInteresReal    float64 `xml:"MontIntReal,attr" bson:"MontoInteresReal"`
-	Perdida             float64 `xml:"Perdida,attr" bson:"Perdida"`
+	MontoInteresNominal float64 `xml:"MontIntNominal,attr" bson:"MontoInteresNominal" json:"MontoInteresNominal"`
+	MontoInteresReal    float64 `xml:"MontIntReal,attr" bson:"MontoInteresReal" json:"MontoInteresReal"`
+	Perdida             float64 `xml:"Perdida,attr" bson:"Perdida" json:"Perdida"`
 }
 
 func (i *Intereses10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

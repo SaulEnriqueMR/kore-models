@@ -22,7 +22,7 @@
                     "Determinado": [
                         {
                             "Impuesto": "IVA",
-                            "TasaOCuota": 16,
+                            "Tasa": 16,
                             "Importe": 160
                         }
                     ]

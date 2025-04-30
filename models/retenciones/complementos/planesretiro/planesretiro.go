@@ -6,8 +6,8 @@ import (
 )
 
 type PlanesDeRetiro struct {
-	PlanesDeRetiro10 *[]PlanesDeRetiro10 `bson:"PlanesDeRetiro10,omitempty"`
-	PlanesDeRetiro11 *[]PlanesDeRetiro11 `bson:"PlanesDeRetiro11,omitempty"`
+	PlanesDeRetiro10 *[]PlanesDeRetiro10 `bson:"PlanesDeRetiro10,omitempty" json:"PlanesDeRetiro10,omitempty"`
+	PlanesDeRetiro11 *[]PlanesDeRetiro11 `bson:"PlanesDeRetiro11,omitempty" json:"PlanesDeRetiro11,omitempty"`
 }
 
 func (p *PlanesDeRetiro) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

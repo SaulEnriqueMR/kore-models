@@ -6,8 +6,8 @@ import (
 )
 
 type EstadoDeCuentaCombustible struct {
-	EstadoDeCuentaCombustible11 *[]EstadoDeCuentaCombustible11 `bson:"EstadoDeCuentaCombustible11,omitempty"`
-	EstadoDeCuentaCombustible12 *[]EstadoDeCuentaCombustible12 `bson:"EstadoDeCuentaCombustible12,omitempty"`
+	EstadoDeCuentaCombustible11 *[]EstadoDeCuentaCombustible11 `bson:"EstadoDeCuentaCombustible11,omitempty" json:"EstadoDeCuentaCombustible11,omitempty"`
+	EstadoDeCuentaCombustible12 *[]EstadoDeCuentaCombustible12 `bson:"EstadoDeCuentaCombustible12,omitempty" json:"EstadoDeCuentaCombustible12,omitempty"`
 }
 
 func (v *EstadoDeCuentaCombustible) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

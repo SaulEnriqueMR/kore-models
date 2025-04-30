@@ -6,7 +6,7 @@ import (
 )
 
 type ImpuestosLocales struct {
-	ImpuestoLocales10 *[]ImpuestoLocales10 `bson:"ImpuestoLocales10,omitempty"`
+	ImpuestoLocales10 *[]ImpuestoLocales10 `bson:"ImpuestoLocales10,omitempty" json:"ImpuestoLocales10,omitempty"`
 }
 
 func (c *ImpuestosLocales) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

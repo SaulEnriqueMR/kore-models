@@ -117,7 +117,7 @@
                 }
             }
         ],
-        "Autotransporte": {
+        "Autotrasporte": {
             "PermisoSct": "PERM001",
             "NoPermisoSct": "NUMPERM12345",
             "IdentificacionVehicular": {

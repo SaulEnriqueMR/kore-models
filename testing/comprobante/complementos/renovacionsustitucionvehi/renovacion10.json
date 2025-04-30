@@ -5,7 +5,7 @@
         "VehiculoEnajenado": "02",
         "VehiculosUsados": [
             {
-                "PrecioVehUsado": 250000,
+                "Precio": 250000,
                 "Tipo": "AUTOMOVIL",
                 "Marca": "Toyota",
                 "TipoOClase": "Sedan",
@@ -23,7 +23,7 @@
                 "FolioFiscal": "A1B2C3D4E5F6G7H8I9J0"
             },
             {
-                "PrecioVehUsado": 250000,
+                "Precio": 250000,
                 "Tipo": "AUTOMOVIL",
                 "Marca": "Toyota",
                 "TipoOClase": "Sedan",
@@ -54,7 +54,7 @@
         "VehiculoEnajenado": "02",
         "VehiculosUsados": [
             {
-                "PrecioVehUsado": 250000,
+                "Precio": 250000,
                 "Tipo": "AUTOMOVIL",
                 "Marca": "Toyota",
                 "TipoOClase": "Sedan",

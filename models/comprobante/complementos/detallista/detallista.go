@@ -6,7 +6,7 @@ import (
 )
 
 type Detallista struct {
-	Detallista10 *[]Detallista10 `bson:"Detallista10,omitempty"`
+	Detallista10 *[]Detallista10 `bson:"Detallista10,omitempty" json:"Detallista10,omitempty"`
 }
 
 func (d *Detallista) UnmarshalXML(x *xml.Decoder, start xml.StartElement) error {

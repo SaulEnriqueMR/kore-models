@@ -13,14 +13,14 @@ import (
 type TimbreFiscalDigital11 struct {
 	// Debería siempre estar fijo a 1.0
 	Version string `xml:"Version,attr" bson:"Version" json:"Version"`
-	Uuid    string `xml:"UUID,attr" bson:"Uuid" xml:"Uuid"`
+	Uuid    string `xml:"UUID,attr" bson:"Uuid" json:"Uuid" xml:"Uuid"`
 	// Extracción a nivel string, debe convertise después para poder ser filtrable
 	Fecha string `xml:"FechaTimbrado,attr" json:"Fecha"`
 	// Conversión de campo XML FechaTimbrado
 	FechaTimbrado time.Time `bson:"FechaTimbrado" json:"FechaTimbrado"`
 	// PAC que provee el certificado
 	RfcProvCertif    string  `xml:"RfcProvCertif,attr" bson:"RfcProvCertif" json:"RfcProvCertif"`
-	Leyenda          *string `xml:"Leyenda,attr" bson:"Leyenda,omitempty" json:"Leyenda"`
+	Leyenda          *string `xml:"Leyenda,attr" bson:"Leyenda,omitempty" json:"Leyenda,omitempty"`
 	SelloCfd         string  `xml:"SelloCFD,attr" bson:"SelloCfd" json:"SelloCfd"`
 	NoCertificadoSat string  `xml:"NoCertificadoSAT,attr" bson:"NoCertificadoSat" json:"NoCertificadoSat"`
 	SelloSat         string  `xml:"SelloSAT,attr" bson:"SelloSat" json:"SelloSat"`

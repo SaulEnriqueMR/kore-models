@@ -6,7 +6,7 @@ import (
 )
 
 type CfdiRegistroFiscal struct {
-	CfdiRegistroFiscal10 *[]CfdiRegistroFiscal10 `bson:"CfdiRegistroFiscal10,omitempty"`
+	CfdiRegistroFiscal10 *[]CfdiRegistroFiscal10 `bson:"CfdiRegistroFiscal10,omitempty" json:"CfdiRegistroFiscal10,omitempty"`
 }
 
 func (c *CfdiRegistroFiscal) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

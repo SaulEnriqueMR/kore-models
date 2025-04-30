@@ -6,7 +6,7 @@ import (
 )
 
 type Aerolineas struct {
-	Aerolineas10 *[]Aerolineas10 `bson:"Aerolineas10,omitempty"`
+	Aerolineas10 *[]Aerolineas10 `bson:"Aerolineas10,omitempty" json:"Aerolineas10,omitempty"`
 }
 
 func (c *Aerolineas) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

@@ -6,7 +6,7 @@ import (
 )
 
 type FideicomisoEmpresarial struct {
-	FideicomisoEmpresarial10 *[]FideicomisoEmpresarial10 `bson:"FideicomisoEmpresarial10,omitempty"`
+	FideicomisoEmpresarial10 *[]FideicomisoEmpresarial10 `bson:"FideicomisoEmpresarial10,omitempty" json:"FideicomisoEmpresarial10,omitempty"`
 }
 
 func (f *FideicomisoEmpresarial) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

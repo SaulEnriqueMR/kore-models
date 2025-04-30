@@ -9,15 +9,12 @@
     "PdfPath": "",
     "TotalesMonedaLocal": {
         "Total": 0,
-        "Subtotal": 0,
-        "Descuento": null,
-        "TotalImpuestosRetenidos": null,
-        "TotalImpuestosTrasladados": null
+        "Subtotal": 0
     },
     "ProcessorMetadata": {
-        "KoreModelsVersion": "v1.0.76",
+        "KoreModelsVersion": "v1.0.63",
         "KoreVersion": null,
-        "LastUpdate": "2025-04-10T17:52:10Z"
+        "LastUpdate": "2025-04-29T13:27:25Z"
     },
     "Version": "1.0",
     "Folio": "54",
@@ -54,7 +51,7 @@
         "MontoTotalGravado": 90,
         "MontoTotalExento": 10,
         "MontoTotalRetenido": 10,
-        "ImpuestosRetenidos": [
+        "Impuestos": [
             {
                 "Base": 10,
                 "Impuesto": "001",
@@ -388,7 +385,7 @@
         "PlanesDeRetiro": {
             "PlanesDeRetiro10": [
                 {
-                    "Version": "1.0",
+                    "version": "1.0",
                     "SistemaFinanciero": "SI",
                     "ProvienenSistemaFinanciero": true,
                     "MontoTotalAportacionesAnioAnterior": 1000,
@@ -403,7 +400,7 @@
                     "MontoTotalRetiradoAnioAnterior": 90
                 },
                 {
-                    "Version": "1.0",
+                    "version": "1.0",
                     "SistemaFinanciero": "SI",
                     "ProvienenSistemaFinanciero": true,
                     "MontoTotalAportacionesAnioAnterior": 1000,
@@ -420,14 +417,14 @@
             ],
             "PlanesDeRetiro11": [
                 {
-                    "Version": "1.1",
+                    "version": "1.1",
                     "SistemaFinanciero": "SI",
                     "ProvienenSistemaFinanciero": true,
                     "MontoTotalAportacionesAnioAnterior": 1000,
                     "MontoInteresesRealesDevengadosAnioAnterior": 100,
                     "HuboRetirosAnioInmAntPer": "SI",
                     "HuboRetirosAnioAnteriorAntesPermanencia": true,
-                    "MontoTotalRetiradoAnioAnteriorPermanencia": 10,
+                    "MontTotRetiradoAnioInmAntPer": 10,
                     "MontoTotalExentoRetiradoAnioAnterior": 90,
                     "MontoTotalExedenteAnioAnterior": 900,
                     "HuboRetirosAnioInmAnt": "SI",
@@ -443,14 +440,14 @@
                     ]
                 },
                 {
-                    "Version": "1.1",
+                    "version": "1.1",
                     "SistemaFinanciero": "SI",
                     "ProvienenSistemaFinanciero": true,
                     "MontoTotalAportacionesAnioAnterior": 1000,
                     "MontoInteresesRealesDevengadosAnioAnterior": 100,
                     "HuboRetirosAnioInmAntPer": "SI",
                     "HuboRetirosAnioAnteriorAntesPermanencia": true,
-                    "MontoTotalRetiradoAnioAnteriorPermanencia": 10,
+                    "MontTotRetiradoAnioInmAntPer": 10,
                     "MontoTotalExentoRetiradoAnioAnterior": 90,
                     "MontoTotalExedenteAnioAnterior": 900,
                     "HuboRetirosAnioInmAnt": "SI",
@@ -470,14 +467,14 @@
         "Premios": {
             "Premios10": [
                 {
-                    "Version": "1.0",
+                    "version": "1.0",
                     "EntidadFederativa": "19",
                     "MontoTotalPago": 28263.91,
                     "MontTotalPagoGravado": 28263.91,
                     "MontTotalPagoExento": 0
                 },
                 {
-                    "Version": "1.0",
+                    "version": "1.0",
                     "EntidadFederativa": "19",
                     "MontoTotalPago": 28263.91,
                     "MontTotalPagoGravado": 28263.91,
@@ -486,7 +483,7 @@
             ]
         },
         "SectorFinanciero": {
-            "SectorFinanciero10": [
+            "SectorFinanciero": [
                 {
                     "Version": "1.0",
                     "IdFideicomiso": "111111",
@@ -520,7 +517,7 @@
                     "DiferenciaIvaEntregadoPrestadorServicios": 100,
                     "MontoTotalUsoPlataforma": 300,
                     "MontoTotalContribucionGubernamental": 150,
-                    "DetallesDelServicio": [
+                    "Servicios": [
                         {
                             "FormaPagoServicio": "01",
                             "TipoServicio": "A01",
@@ -559,7 +556,7 @@
                     "DiferenciaIvaEntregadoPrestadorServicios": 100,
                     "MontoTotalUsoPlataforma": 300,
                     "MontoTotalContribucionGubernamental": 150,
-                    "DetallesDelServicio": [
+                    "Servicios": [
                         {
                             "FormaPagoServicio": "01",
                             "TipoServicio": "A01",
@@ -598,7 +595,7 @@
                     "DiferenciaIvaEntregadoPrestadorServicios": 100,
                     "MontoTotalUsoPlataforma": 300,
                     "MontoTotalContribucionGubernamental": 150,
-                    "DetallesDelServicio": [
+                    "Servicios": [
                         {
                             "FormaPagoServicio": "01",
                             "TipoServicio": "A01",

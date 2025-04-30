@@ -8,11 +8,11 @@ import (
 )
 
 type Donatarias11 struct {
-	Version           string    `xml:"version,attr" bson:"Version"`
-	NoAutorizacion    string    `xml:"noAutorizacion,attr" bson:"NoAutorizacion"`
-	FechaAutString    string    `xml:"fechaAutorizacion,attr" bson:"FechaAutString"`
-	FechaAutorizacion time.Time `bson:"FechaAutorizacion"`
-	Leyenda           string    `xml:"leyenda,attr" bson:"Leyenda"`
+	Version           string    `xml:"version,attr" bson:"Version" json:"Version"`
+	NoAutorizacion    string    `xml:"noAutorizacion,attr" bson:"NoAutorizacion" json:"NoAutorizacion"`
+	FechaAutString    string    `xml:"fechaAutorizacion,attr" bson:"FechaAutString" json:"FechaAutString"`
+	FechaAutorizacion time.Time `bson:"FechaAutorizacion" json:"FechaAutorizacion"`
+	Leyenda           string    `xml:"leyenda,attr" bson:"Leyenda" json:"Leyenda"`
 }
 
 func (do *Donatarias11) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

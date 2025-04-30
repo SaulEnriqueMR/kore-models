@@ -7,9 +7,9 @@ import (
 )
 
 type ComercioExterior struct {
-	ComercioExterior10 *[]ComercioExterior10 `bson:"ComercioExterior10,omitempty"`
-	ComercioExterior11 *[]ComercioExterior11 `bson:"ComercioExterior11,omitempty"`
-	ComercioExterior20 *[]ComercioExterior20 `bson:"ComercioExterior20,omitempty"`
+	ComercioExterior10 *[]ComercioExterior10 `bson:"ComercioExterior10,omitempty" json:"ComercioExterior10,omitempty"`
+	ComercioExterior11 *[]ComercioExterior11 `bson:"ComercioExterior11,omitempty" json:"ComercioExterior11,omitempty"`
+	ComercioExterior20 *[]ComercioExterior20 `bson:"ComercioExterior20,omitempty" json:"ComercioExterior20,omitempty"`
 }
 
 func (c *ComercioExterior) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

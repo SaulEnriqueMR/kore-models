@@ -10,90 +10,63 @@
     "TotalesMonedaLocal": {
         "Total": 4000,
         "Subtotal": 4000,
-        "Descuento": null,
         "TotalImpuestosRetenidos": 2000,
         "TotalImpuestosTrasladados": 2000
     },
     "ProcessorMetadata": {
-        "KoreModelsVersion": "v1.0.76",
+        "KoreModelsVersion": "v1.0.63",
         "KoreVersion": null,
-        "LastUpdate": "2025-04-10T17:52:05Z"
+        "LastUpdate": "2025-04-29T13:27:24Z"
     },
     "Version": "4.0",
-    "Serie": null,
-    "Folio": null,
     "Fecha": "2024-04-29T00:00:55",
     "Sello": "AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3",
-    "FormaPago": null,
     "NoCertificado": "30001000000500003416",
     "Certificado": "MIIFsDCCA5igAwIBAgIUMzAwMDE",
-    "CondicionesPago": null,
     "Subtotal": 200,
-    "Descuento": null,
     "Moneda": "USD",
     "TipoCambio": 20,
     "Total": 200,
     "TipoComprobante": "I",
     "Exportacion": "01",
-    "MetodoPago": null,
     "LugarExpedicion": "20000",
-    "Confirmacion": null,
-    "InformacionGlobal": null,
-    "CfdisRelacionados": null,
     "Emisor": {
         "Rfc": "EKU9003173C9",
         "Nombre": "ESCUELA KEMPER URGATE",
-        "RegimenFiscal": "601",
-        "FactAtrAdquirent": null
+        "RegimenFiscal": "601"
     },
     "Receptor": {
         "Rfc": "URE180429TM6",
         "Nombre": "UNIVERSIDAD ROBOTICA ESPAÑOLA",
         "DomicilioFiscal": "86991",
-        "ResidenciaFiscal": null,
-        "NumRegIdTrib": null,
         "RegimenFiscal": "601",
-        "UsoCFDI": "G01"
+        "UsoCfdi": "G01"
     },
     "RfcProvCertif": "SPR190613I52",
     "Conceptos": [
         {
-            "ClaveProductoServicio": "50211503",
-            "NoIdentificacion": null,
+            "ClaveProdServ": "50211503",
             "Cantidad": 1,
             "ClaveUnidad": "H87",
-            "Unidad": null,
             "Descripcion": "Cigarros",
             "ValorUnitario": 200,
             "Importe": 200,
-            "Descuento": null,
-            "ObjetoImpuesto": "02",
-            "Impuestos": null,
-            "ACuentaTerceros": null,
-            "InformacionAduanera": null,
-            "CuentaPredial": null,
-            "ComplementoConcepto": null,
-            "Parte": null
+            "ObjetoImpuesto": "02"
         },
         {
-            "ClaveProductoServicio": "50211503",
-            "NoIdentificacion": null,
+            "ClaveProdServ": "50211503",
             "Cantidad": 1,
             "ClaveUnidad": "H87",
-            "Unidad": null,
             "Descripcion": "Cigarros",
             "ValorUnitario": 200,
             "Importe": 200,
-            "Descuento": null,
             "ObjetoImpuesto": "02",
             "Impuestos": {
                 "Traslados": [
                     {
                         "Base": 1,
                         "Impuesto": "002",
-                        "TipoFactor": "Tasa",
-                        "TasaOCuota": null,
-                        "Importe": null
+                        "TipoFactor": "Tasa"
                     }
                 ],
                 "Retenciones": [
@@ -106,20 +79,11 @@
                     }
                 ]
             },
-            "ACuentaTerceros": null,
-            "InformacionAduanera": null,
-            "CuentaPredial": null,
-            "ComplementoConcepto": null,
             "Parte": [
                 {
                     "ClaveProdServ": "51241200",
-                    "NoIdentificacion": null,
                     "Cantidad": 1,
-                    "Unidad": null,
-                    "Descripcion": "ACEITE AJONJOLI",
-                    "ValorUnitario": null,
-                    "Importe": null,
-                    "InformacionAduanera": null
+                    "Descripcion": "ACEITE AJONJOLI"
                 }
             ]
         }
@@ -127,36 +91,15 @@
     "Impuestos": {
         "TotalImpuestosRetenidos": 100,
         "TotalImpuestosTrasladados": 100,
-        "Retenciones": null,
         "Traslados": [
             {
                 "Base": 1,
                 "Impuesto": "002",
-                "TipoFactor": "Tasa",
-                "TasaOCuota": null,
-                "Importe": null
+                "TipoFactor": "Tasa"
             }
         ]
     },
     "Complemento": {
-        "CartaPorte": null,
-        "ComercioExterior": null,
-        "ImpuestoLocales": null,
-        "Aerolineas": null,
-        "CertificadoDestruccion": null,
-        "CFDIRegistroFiscal": null,
-        "ComplementoSPEI": null,
-        "ConsumoCombustibles": null,
-        "Detallista": null,
-        "Divisas": null,
-        "Donatarias": null,
-        "EstadoCuentaCombustible": null,
-        "GastoHidrocarburos": null,
-        "Ine": null,
-        "LeyendasFiscales": null,
-        "Nomina": null,
-        "NotariosPublicos": null,
-        "Pagos": null,
         "TimbreFiscalDigital": {
             "TimbreFiscalDigital11": {
                 "Version": "1.1",
@@ -164,23 +107,12 @@
                 "Fecha": "2024-04-29T10:46:30",
                 "FechaTimbrado": "2024-04-29T10:46:30Z",
                 "RfcProvCertif": "SPR190613I52",
-                "Leyenda": null,
                 "SelloCfd": "AMifipYnPS5FuNWEf3ysVCru4FVG0eGp3",
                 "NoCertificadoSat": "30001000000500003456",
                 "SelloSat": "QKKzapHEGa8tPZFtDuQi+450AtNiQENVSoK1uvQu"
-            },
-            "TimbreFiscalDigital10": null
-        },
-        "ObrasAntiguedades": null,
-        "PagoEnEspecie": null,
-        "ParcialesConstruccion": null,
-        "PFIntegrantesCoordinado": null,
-        "RenovacionSustitucionVehiculos": null,
-        "TuristaPasajeroExtranjero": null,
-        "ValesDeDespensa": null,
-        "VehiculoUsado": null
+            }
+        }
     },
-    "Addenda": null,
     "KuantikMetadata": {
         "SerieFolio": "-"
     }

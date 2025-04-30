@@ -6,7 +6,7 @@ import (
 )
 
 type PagosAExtranjeros struct {
-	PagosAExtranjeros10 *[]PagosAExtranjeros10 `bson:"PagosAExtranjeros10,omitempty"`
+	PagosAExtranjeros10 *[]PagosAExtranjeros10 `bson:"PagosAExtranjeros10,omitempty" json:"PagosAExtranjeros10,omitempty"`
 }
 
 func (p *PagosAExtranjeros) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

@@ -6,7 +6,7 @@ import (
 )
 
 type Intereses struct {
-	Intereses10 *[]Intereses10 `bson:"Intereses10,omitempty"`
+	Intereses10 *[]Intereses10 `bson:"Intereses10,omitempty" json:"Intereses10,omitempty"`
 }
 
 func (i *Intereses) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

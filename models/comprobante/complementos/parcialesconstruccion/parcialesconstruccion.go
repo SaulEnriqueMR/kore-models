@@ -6,7 +6,7 @@ import (
 )
 
 type ParcialesConstruccion struct {
-	ParcialesConstruccion10 *[]ParcialesConstruccion10 `bson:"ParcialesConstruccion10,omitempty"`
+	ParcialesConstruccion10 *[]ParcialesConstruccion10 `bson:"ParcialesConstruccion10,omitempty" json:"ParcialesConstruccion10,omitempty"`
 }
 
 func (p *ParcialesConstruccion) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

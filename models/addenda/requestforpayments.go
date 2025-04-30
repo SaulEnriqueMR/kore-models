@@ -2,190 +2,190 @@ package addenda
 
 // RequestForPayment represents the root element <requestForPayment>
 type RequestForPayment struct {
-	DeliveryDate                    string                          `xml:"DeliveryDate,attr"`
-	ContentVersion                  string                          `xml:"contentVersion,attr"`
-	DocumentStatus                  string                          `xml:"documentStatus,attr"`
-	DocumentStructureVersion        string                          `xml:"documentStructureVersion,attr"`
-	Type                            string                          `xml:"type,attr"`
-	RequestForPaymentIdentification RequestForPaymentIdentification `xml:"requestForPaymentIdentification"`
-	SpecialInstructions             []SpecialInstruction            `xml:"specialInstruction"`
-	OrderIdentification             OrderIdentification             `xml:"orderIdentification"`
-	AdditionalInformation           AdditionalInformation           `xml:"AdditionalInformation"`
-	Buyer                           Buyer                           `xml:"buyer"`
-	Seller                          Seller                          `xml:"seller"`
-	Currency                        Currency                        `xml:"currency"`
-	LineItem                        LineItem                        `xml:"lineItem"`
-	TotalAmount                     TotalAmount                     `xml:"totalAmount"`
-	TotalAllowanceCharge            TotalAllowanceCharge            `xml:"TotalAllowanceCharge"`
-	BaseAmount                      BaseAmount                      `xml:"baseAmount"`
-	Tax                             Tax                             `xml:"tax"`
-	PayableAmount                   PayableAmount                   `xml:"payableAmount"`
+	DeliveryDate                    string                                 `xml:"DeliveryDate,attr"`
+	ContentVersion                  string                                 `xml:"contentVersion,attr"`
+	DocumentStatus                  string                                 `xml:"documentStatus,attr"`
+	DocumentStructureVersion        string                                 `xml:"documentStructureVersion,attr"`
+	Type                            string                                 `xml:"type,attr"`
+	RequestForPaymentIdentification AddendaRequestForPaymentIdentification `xml:"requestForPaymentIdentification"`
+	SpecialInstructions             []AddendaSpecialInstruction            `xml:"specialInstruction"`
+	OrderIdentification             AddendaOrderIdentification             `xml:"orderIdentification"`
+	AdditionalInformation           AddendaAdditionalInformation           `xml:"AdditionalInformation"`
+	Buyer                           AddendaBuyer                           `xml:"buyer"`
+	Seller                          AddendaSeller                          `xml:"seller"`
+	Currency                        AddendaCurrency                        `xml:"currency"`
+	LineItem                        AddendaLineItem                        `xml:"lineItem"`
+	TotalAmount                     AddendaTotalAmount                     `xml:"totalAmount"`
+	TotalAllowanceCharge            AddendaTotalAllowanceCharge            `xml:"TotalAllowanceCharge"`
+	BaseAmount                      AddendaBaseAmount                      `xml:"baseAmount"`
+	Tax                             AddendaTax                             `xml:"tax"`
+	PayableAmount                   AddendaPayableAmount                   `xml:"payableAmount"`
 }
 
-// RequestForPaymentIdentification represents the <requestForPaymentIdentification> element
-type RequestForPaymentIdentification struct {
+// AddendaRequestForPaymentIdentification represents the <requestForPaymentIdentification> element
+type AddendaRequestForPaymentIdentification struct {
 	EntityType                  string `xml:"entityType"`
 	UniqueCreatorIdentification string `xml:"uniqueCreatorIdentification"`
 }
 
-// SpecialInstruction represents the <specialInstruction> element
-type SpecialInstruction struct {
+// AddendaSpecialInstruction represents the <specialInstruction> element
+type AddendaSpecialInstruction struct {
 	Code string `xml:"code,attr"`
 	Text string `xml:"text"`
 }
 
-// OrderIdentification represents the <orderIdentification> element
-type OrderIdentification struct {
-	ReferenceIdentification ReferenceIdentification `xml:"referenceIdentification"`
-	ReferenceDate           string                  `xml:"ReferenceDate"`
+// AddendaOrderIdentification represents the <orderIdentification> element
+type AddendaOrderIdentification struct {
+	ReferenceIdentification AddendaReferenceIdentification `xml:"referenceIdentification"`
+	ReferenceDate           string                         `xml:"ReferenceDate"`
 }
 
-// ReferenceIdentification represents the <referenceIdentification> element
-type ReferenceIdentification struct {
+// AddendaReferenceIdentification represents the <referenceIdentification> element
+type AddendaReferenceIdentification struct {
 	Type  string `xml:"type,attr"`
 	Value string `xml:",chardata"`
 }
 
-// AdditionalInformation represents the <AdditionalInformation> element
-type AdditionalInformation struct {
-	ReferenceIdentification ReferenceIdentification `xml:"referenceIdentification"`
+// AddendaAdditionalInformation represents the <AddendaAdditionalInformation> element
+type AddendaAdditionalInformation struct {
+	ReferenceIdentification AddendaReferenceIdentification `xml:"referenceIdentification"`
 }
 
-// Buyer represents the <buyer> element
-type Buyer struct {
+// AddendaBuyer represents the <buyer> element
+type AddendaBuyer struct {
 	Gln string `xml:"gln"`
 }
 
-// Seller represents the <seller> element
-type Seller struct {
-	Gln                          string                       `xml:"gln"`
-	AlternatePartyIdentification AlternatePartyIdentification `xml:"alternatePartyIdentification"`
+// AddendaSeller represents the <seller> element
+type AddendaSeller struct {
+	Gln                          string                              `xml:"gln"`
+	AlternatePartyIdentification AddendaAlternatePartyIdentification `xml:"alternatePartyIdentification"`
 }
 
-// AlternatePartyIdentification represents the <alternatePartyIdentification> element
-type AlternatePartyIdentification struct {
+// AddendaAlternatePartyIdentification represents the <alternatePartyIdentification> element
+type AddendaAlternatePartyIdentification struct {
 	Type  string `xml:"type,attr"`
 	Value string `xml:",chardata"`
 }
 
-// Currency represents the <currency> element
-type Currency struct {
+// AddendaCurrency represents the <currency> element
+type AddendaCurrency struct {
 	CurrencyISOCode  string `xml:"currencyISOCode,attr"`
 	CurrencyFunction string `xml:"currencyFunction"`
 	RateOfChange     string `xml:"rateOfChange"`
 }
 
-// LineItem represents the <lineItem> element
-type LineItem struct {
-	Number                           string                           `xml:"number,attr"`
-	Type                             string                           `xml:"type,attr"`
-	TradeItemIdentification          TradeItemIdentification          `xml:"tradeItemIdentification"`
-	AlternateTradeItemIdentification AlternateTradeItemIdentification `xml:"alternateTradeItemIdentification"`
-	TradeItemDescriptionInformation  TradeItemDescriptionInformation  `xml:"tradeItemDescriptionInformation"`
-	InvoicedQuantity                 InvoicedQuantity                 `xml:"invoicedQuantity"`
-	GrossPrice                       GrossPrice                       `xml:"grossPrice"`
-	PalletInformation                PalletInformation                `xml:"palletInformation"`
-	TradeItemTaxInformation          TradeItemTaxInformation          `xml:"tradeItemTaxInformation"`
-	TotalLineAmount                  TotalLineAmount                  `xml:"totalLineAmount"`
+// AddendaLineItem represents the <lineItem> element
+type AddendaLineItem struct {
+	Number                           string                                  `xml:"number,attr"`
+	Type                             string                                  `xml:"type,attr"`
+	TradeItemIdentification          AddendaTradeItemIdentification          `xml:"tradeItemIdentification"`
+	AlternateTradeItemIdentification AddendaAlternateTradeItemIdentification `xml:"alternateTradeItemIdentification"`
+	TradeItemDescriptionInformation  AddendaTradeItemDescriptionInformation  `xml:"tradeItemDescriptionInformation"`
+	InvoicedQuantity                 AddendaInvoicedQuantity                 `xml:"invoicedQuantity"`
+	GrossPrice                       AddendaGrossPrice                       `xml:"grossPrice"`
+	PalletInformation                AddendaPalletInformation                `xml:"palletInformation"`
+	TradeItemTaxInformation          AddendaTradeItemTaxInformation          `xml:"tradeItemTaxInformation"`
+	TotalLineAmount                  AddendaTotalLineAmount                  `xml:"totalLineAmount"`
 }
 
-// TradeItemIdentification represents the <tradeItemIdentification> element
-type TradeItemIdentification struct {
+// AddendaTradeItemIdentification represents the <tradeItemIdentification> element
+type AddendaTradeItemIdentification struct {
 	Gtin string `xml:"gtin"`
 }
 
-// AlternateTradeItemIdentification represents the <alternateTradeItemIdentification> element
-type AlternateTradeItemIdentification struct {
+// AddendaAlternateTradeItemIdentification represents the <alternateTradeItemIdentification> element
+type AddendaAlternateTradeItemIdentification struct {
 	Type  string `xml:"type,attr"`
 	Value string `xml:",chardata"`
 }
 
-// TradeItemDescriptionInformation represents the <tradeItemDescriptionInformation> element
-type TradeItemDescriptionInformation struct {
+// AddendaTradeItemDescriptionInformation represents the <tradeItemDescriptionInformation> element
+type AddendaTradeItemDescriptionInformation struct {
 	Language string `xml:"language,attr"`
 	LongText string `xml:"longText"`
 }
 
-// InvoicedQuantity represents the <invoicedQuantity> element
-type InvoicedQuantity struct {
+// AddendaInvoicedQuantity represents the <invoicedQuantity> element
+type AddendaInvoicedQuantity struct {
 	UnitOfMeasure string `xml:"unitOfMeasure,attr"`
 	Value         string `xml:",chardata"`
 }
 
-// GrossPrice represents the <grossPrice> element
-type GrossPrice struct {
-	Amount Amount `xml:"Amount"`
+// AddendaGrossPrice represents the <grossPrice> element
+type AddendaGrossPrice struct {
+	Amount AddendaAmount `xml:"Amount"`
 }
 
-// Amount represents the <Amount> element
-type Amount struct {
+// AddendaAmount represents the <AddendaAmount> element
+type AddendaAmount struct {
 	Value string `xml:",chardata"`
 }
 
-// PalletInformation represents the <palletInformation> element
-type PalletInformation struct {
-	PalletQuantity string      `xml:"palletQuantity"`
-	Description    Description `xml:"description"`
-	Transport      Transport   `xml:"transport"`
+// AddendaPalletInformation represents the <palletInformation> element
+type AddendaPalletInformation struct {
+	PalletQuantity string             `xml:"palletQuantity"`
+	Description    AddendaDescription `xml:"description"`
+	Transport      AddendaTransport   `xml:"transport"`
 }
 
-// Description represents the <description> element
-type Description struct {
+// AddendaDescription represents the <description> element
+type AddendaDescription struct {
 	Type  string `xml:"type,attr"`
 	Value string `xml:",chardata"`
 }
 
-// Transport represents the <transport> element
-type Transport struct {
+// AddendaTransport represents the <transport> element
+type AddendaTransport struct {
 	MethodOfPayment string `xml:"methodOfPayment"`
 }
 
-// TradeItemTaxInformation represents the <tradeItemTaxInformation> element
-type TradeItemTaxInformation struct {
-	TaxTypeDescription string             `xml:"taxTypeDescription"`
-	TradeItemTaxAmount TradeItemTaxAmount `xml:"tradeItemTaxAmount"`
+// AddendaTradeItemTaxInformation represents the <tradeItemTaxInformation> element
+type AddendaTradeItemTaxInformation struct {
+	TaxTypeDescription string                    `xml:"taxTypeDescription"`
+	TradeItemTaxAmount AddendaTradeItemTaxAmount `xml:"tradeItemTaxAmount"`
 }
 
-// TradeItemTaxAmount represents the <tradeItemTaxAmount> element
-type TradeItemTaxAmount struct {
+// AddendaTradeItemTaxAmount represents the <tradeItemTaxAmount> element
+type AddendaTradeItemTaxAmount struct {
 	TaxPercentage string `xml:"taxPercentage"`
 	TaxAmount     string `xml:"taxAmount"`
 }
 
-// TotalLineAmount represents the <totalLineAmount> element
-type TotalLineAmount struct {
-	NetAmount NetAmount `xml:"netAmount"`
+// AddendaTotalLineAmount represents the <totalLineAmount> element
+type AddendaTotalLineAmount struct {
+	NetAmount AddendaNetAmount `xml:"netAmount"`
 }
 
-// NetAmount represents the <netAmount> element
-type NetAmount struct {
-	Amount Amount `xml:"Amount"`
+// AddendaNetAmount represents the <netAmount> element
+type AddendaNetAmount struct {
+	Amount AddendaAmount `xml:"Amount"`
 }
 
-// TotalAmount represents the <totalAmount> element
-type TotalAmount struct {
-	Amount Amount `xml:"Amount"`
+// AddendaTotalAmount represents the <totalAmount> element
+type AddendaTotalAmount struct {
+	Amount AddendaAmount `xml:"Amount"`
 }
 
-// TotalAllowanceCharge represents the <TotalAllowanceCharge> element
-type TotalAllowanceCharge struct {
-	AllowanceOrChargeType string `xml:"allowanceOrChargeType,attr"`
-	Amount                Amount `xml:"Amount"`
+// AddendaTotalAllowanceCharge represents the <AddendaTotalAllowanceCharge> element
+type AddendaTotalAllowanceCharge struct {
+	AllowanceOrChargeType string        `xml:"allowanceOrChargeType,attr"`
+	Amount                AddendaAmount `xml:"Amount"`
 }
 
-// BaseAmount represents the <baseAmount> element
-type BaseAmount struct {
-	Amount Amount `xml:"Amount"`
+// AddendaBaseAmount represents the <baseAmount> element
+type AddendaBaseAmount struct {
+	Amount AddendaAmount `xml:"Amount"`
 }
 
-// Tax represents the <tax> element
-type Tax struct {
+// AddendaTax represents the <tax> element
+type AddendaTax struct {
 	Type          string `xml:"type,attr"`
 	TaxPercentage string `xml:"taxPercentage"`
 	TaxAmount     string `xml:"taxAmount"`
 }
 
-// PayableAmount represents the <payableAmount> element
-type PayableAmount struct {
-	Amount Amount `xml:"Amount"`
+// AddendaPayableAmount represents the <payableAmount> element
+type AddendaPayableAmount struct {
+	Amount AddendaAmount `xml:"Amount"`
 }

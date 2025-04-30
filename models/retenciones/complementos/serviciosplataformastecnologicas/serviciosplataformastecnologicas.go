@@ -6,7 +6,7 @@ import (
 )
 
 type ServiciosPlataformasTecnologicas struct {
-	ServiciosPlataformasTecnologicas10 *[]ServiciosPlataformasTecnologicas10 `bson:"ServiciosPlataformasTecnologicas10,omitempty"`
+	ServiciosPlataformasTecnologicas10 *[]ServiciosPlataformasTecnologicas10 `bson:"ServiciosPlataformasTecnologicas10,omitempty" json:"ServiciosPlataformasTecnologicas10,omitempty"`
 }
 
 func (s *ServiciosPlataformasTecnologicas) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

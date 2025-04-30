@@ -6,7 +6,7 @@ import (
 )
 
 type OperacionesDerivados struct {
-	OperacionesDerivados10 *[]OperacionesDerivados10 `bson:"OperacionesDerivados10,omitempty"`
+	OperacionesDerivados10 *[]OperacionesDerivados10 `bson:"OperacionesDerivados10,omitempty" json:"OperacionesDerivados10,omitempty"`
 }
 
 func (o *OperacionesDerivados) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

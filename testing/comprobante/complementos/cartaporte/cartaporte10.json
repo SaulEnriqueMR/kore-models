@@ -19,7 +19,6 @@
                 "FechaHoraSalidaLlegadaString": "2021-11-24T16:16:39",
                 "FechaHoraSalidaLlegada": "2021-11-24T16:16:39Z"
             },
-            "Destino": null,
             "Domicilio": {
                 "Calle": "NEMESIO DIEZ RIEGA 9",
                 "NoExterior": "12",
@@ -31,12 +30,9 @@
                 "Estado": "MEX",
                 "Pais": "MEX",
                 "CodigoPostal": "52004"
-            },
-            "TipoEstacion": null,
-            "DistanciaRecorrida": null
+            }
         },
         {
-            "Origen": null,
             "Destino": {
                 "IdUbicacion": "DE000005",
                 "RfcRemitenteDestinatario": "ERFDSFGR312",
@@ -114,7 +110,7 @@
                 }
             }
         ],
-        "Autotransporte": {
+        "Autotrasporte": {
             "PermisoSct": "TPAF01",
             "NoPermisoSct": "1329TERS24112011230301006",
             "NombreAseguradora": "QUALITAS",
@@ -285,7 +281,7 @@
                 }
             }
         ],
-        "Propietarios": [
+        "Propietario": [
             {
                 "Rfc": "RFCPropietario",
                 "Nombre": "NombrePropietario",
@@ -361,7 +357,7 @@
                 }
             }
         ],
-        "Notificados": [
+        "Notificado": [
             {
                 "Rfc": "RFCNotificado",
                 "Nombre": "NombreNotificado",

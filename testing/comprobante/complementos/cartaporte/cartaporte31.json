@@ -59,15 +59,12 @@
             "ResidenciaFiscal": "USA",
             "NoEstacion": "E654321",
             "NombreEstacion": "Estación 2",
-            "NavegacionTrafico": null,
             "FechaHoraSalidaLlegadaString": "2024-09-21T12:45:00",
             "FechaHoraSalidaLlegada": "2024-09-21T12:45:00Z",
-            "TipoEstacion": null,
             "DistanciaRecorrida": 350.75,
             "Domicilio": {
                 "Calle": "Calle de las Flores",
                 "NoExterior": "789",
-                "NoInterior": null,
                 "Colonia": "Colonia Del Valle",
                 "Localidad": "San Luis Potosí",
                 "Referencia": "Cerca de la plaza",
@@ -86,12 +83,9 @@
             "ResidenciaFiscal": "CAN",
             "NoEstacion": "E987654",
             "NombreEstacion": "Estación 3",
-            "NavegacionTrafico": null,
             "FechaHoraSalidaLlegadaString": "2024-09-22T16:30:00",
             "FechaHoraSalidaLlegada": "2024-09-22T16:30:00Z",
-            "TipoEstacion": null,
-            "DistanciaRecorrida": 220,
-            "Domicilio": null
+            "DistanciaRecorrida": 220
         }
     ],
     "Mercancias": {
@@ -146,25 +140,25 @@
                 "DescripcionMateria": "Tabletas de medicamento",
                 "DocumentacionAduanera": [
                     {
-                        "Tipo": "tipo_doc_aduanero",
+                        "TipoDocumento": "tipo_doc_aduanero",
                         "NumeroPedimento": "22  99  1234  0000000",
                         "IdentificadorDocumento": "Folio123456",
                         "RfcImportador": "XAXX010101000"
                     },
                     {
-                        "Tipo": "tipo_doc_aduanero",
+                        "TipoDocumento": "tipo_doc_aduanero",
                         "NumeroPedimento": "22  99  1234  0000000",
                         "IdentificadorDocumento": "Folio123456",
                         "RfcImportador": "XAXX010101000"
                     },
                     {
-                        "Tipo": "tipo_doc_aduanero",
+                        "TipoDocumento": "tipo_doc_aduanero",
                         "NumeroPedimento": "22  99  1234  0000000",
                         "IdentificadorDocumento": "Folio123456",
                         "RfcImportador": "XAXX010101000"
                     },
                     {
-                        "Tipo": "tipo_doc_aduanero",
+                        "TipoDocumento": "tipo_doc_aduanero",
                         "NumeroPedimento": "22  99  1234  0000000",
                         "IdentificadorDocumento": "Folio123456",
                         "RfcImportador": "XAXX010101000"
@@ -425,8 +419,6 @@
                 "Rfc": "RFC123456",
                 "NoLicencia": "LIC123456",
                 "Nombre": "Transportista Ejemplo",
-                "NumRegIdTrib": null,
-                "ResidenciaFiscal": null,
                 "PartesTransporte": [
                     {
                         "Parte": "PT01"
@@ -447,10 +439,6 @@
                 "Domicilio": {
                     "Calle": "Av. Principal",
                     "NoExterior": "123",
-                    "NoInterior": null,
-                    "Colonia": null,
-                    "Localidad": null,
-                    "Referencia": null,
                     "Municipio": "Municipio Ejemplo",
                     "Estado": "Estado Ejemplo",
                     "Pais": "MX",
@@ -459,17 +447,12 @@
             },
             {
                 "Tipo": "FT02",
-                "Rfc": null,
-                "NoLicencia": null,
                 "Nombre": "Otro Transportista",
-                "NumRegIdTrib": null,
-                "ResidenciaFiscal": null,
                 "PartesTransporte": [
                     {
                         "Parte": "PT02"
                     }
-                ],
-                "Domicilio": null
+                ]
             }
         ]
     }

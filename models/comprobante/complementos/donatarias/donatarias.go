@@ -6,7 +6,7 @@ import (
 )
 
 type Donatarias struct {
-	Donatarias11 *[]Donatarias11 `bson:"Donatarias11,omitempty"`
+	Donatarias11 *[]Donatarias11 `bson:"Donatarias11,omitempty" json:"Donatarias11,omitempty"`
 }
 
 func (d *Donatarias) UnmarshalXML(x *xml.Decoder, start xml.StartElement) error {

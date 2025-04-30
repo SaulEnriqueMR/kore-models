@@ -8,23 +8,23 @@ import (
 )
 
 type ValesDespensa10 struct {
-	Version          string      `xml:"version,attr" bson:"Version"`
-	TipoOperacion    string      `xml:"tipoOperacion,attr" bson:"TipoOperacion"`
-	RegistroPatronal *string     `xml:"registroPatronal,attr" bson:"RegistroPatronal,omitempty"`
-	NoCuenta         string      `xml:"numeroDeCuenta,attr" bson:"NoCuenta"`
-	Total            float64     `xml:"total,attr" bson:"Total"`
-	Conceptos        []Conceptos `xml:"Conceptos>Concepto" bson:"Conceptos"`
+	Version          string      `xml:"version,attr" bson:"Version" json:"Version"`
+	TipoOperacion    string      `xml:"tipoOperacion,attr" bson:"TipoOperacion" json:"TipoOperacion"`
+	RegistroPatronal *string     `xml:"registroPatronal,attr" bson:"RegistroPatronal,omitempty" json:"RegistroPatronal,omitempty"`
+	NoCuenta         string      `xml:"numeroDeCuenta,attr" bson:"NoCuenta" json:"NoCuenta"`
+	Total            float64     `xml:"total,attr" bson:"Total" json:"Total"`
+	Conceptos        []Conceptos `xml:"Conceptos>Concepto" bson:"Conceptos" json:"Conceptos"`
 }
 
 type Conceptos struct {
-	Identificador     string    `xml:"identificador,attr" bson:"Identificador"`
-	FechaString       string    `xml:"fecha,attr" bson:"FechaString"`
-	Fecha             time.Time `bson:"Fecha"`
-	Rfc               string    `xml:"rfc,attr" bson:"Rfc"`
-	Curp              string    `xml:"curp,attr" bson:"Curp"`
-	Nombre            string    `xml:"nombre,attr" bson:"Nombre"`
-	NoSeguridadSocial string    `xml:"numSeguridadSocial,attr" bson:"NoSeguridadSocial,omitempty"`
-	Importe           float64   `xml:"importe,attr" bson:"Importe"`
+	Identificador     string    `xml:"identificador,attr" bson:"Identificador" json:"Identificador"`
+	FechaString       string    `xml:"fecha,attr" bson:"FechaString" json:"FechaString"`
+	Fecha             time.Time `bson:"Fecha" json:"Fecha"`
+	Rfc               string    `xml:"rfc,attr" bson:"Rfc" json:"Rfc"`
+	Curp              string    `xml:"curp,attr" bson:"Curp" json:"Curp"`
+	Nombre            string    `xml:"nombre,attr" bson:"Nombre" json:"Nombre"`
+	NoSeguridadSocial string    `xml:"numSeguridadSocial,attr" bson:"NoSeguridadSocial,omitempty" json:"NoSeguridadSocial,omitempty"`
+	Importe           float64   `xml:"importe,attr" bson:"Importe" json:"Importe"`
 }
 
 func (c *Conceptos) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

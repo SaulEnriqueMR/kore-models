@@ -15,40 +15,40 @@ import (
 
 type Comprobante32 struct {
 	documentofiscaldigital.DocumentoFiscalDigital `bson:",inline"`
-	Version                                       string          `xml:"version,attr" bson:"Version"`
-	Serie                                         *string         `xml:"serie,attr"  bson:"Serie,omitempty"`
-	Folio                                         *string         `xml:"folio,attr" bson:"Folio,omitempty"`
-	Fecha                                         string          `xml:"fecha,attr" bson:"Fecha"`
-	Sello                                         string          `xml:"sello,attr" bson:"Sello"`
-	FormaPago                                     string          `xml:"formaDePago,attr" bson:"FormaPago"`
-	NoCertificado                                 string          `xml:"noCertificado,attr" bson:"NoCertificado"`
-	Certificado                                   string          `xml:"certificado,attr" bson:"Certificado"`
-	CondicionesPago                               *string         `xml:"condicionesDePago,attr" bson:"CondicionesPago,omitempty"`
-	Subtotal                                      float64         `xml:"subTotal,attr" bson:"Subtotal"`
-	Descuento                                     *float64        `xml:"descuento,attr" bson:"Descuento,omitempty"`
-	MotivoDescuento                               *string         `xml:"motivoDescuento,attr" bson:"MotivoDescuento,omitempty"`
-	TipoDeCambio                                  *string         `xml:"TipoCambio,attr" bson:"TipoDeCambio,omitempty"`
-	TipoCambio                                    float64         `bson:"TipoCambio,omitempty"`
-	Moneda                                        *string         `xml:"Moneda,attr" bson:"Moneda,omitempty"`
-	Total                                         float64         `xml:"total,attr" bson:"Total"`
-	TipoDeComprobante                             string          `xml:"tipoDeComprobante,attr" bson:"TipoDeComprobante"`
-	TipoComprobante                               string          `bson:"TipoComprobante"`
-	MetodoPago                                    string          `xml:"metodoDePago,attr" bson:"MetodoPago"`
-	LugarExpedicion                               string          `xml:"LugarExpedicion,attr" bson:"LugarExpedicion"`
-	NumeroCuentaPago                              *string         `xml:"NumCtaPago,attr" bson:"NumeroCuentaPago,omitempty"`
-	FolioFiscalOriginal                           *string         `bson:"FolioFiscalOriginal,omitempty"`
-	FolioFiscalOrig                               *string         `xml:"FolioFiscalOrig,attr" bson:"FolioFiscalOrig,omitempty"`
-	SerieFolioFiscalOriginal                      *string         `xml:"SerieFolioFiscalOrig,attr" bson:"SerieFolioFiscalOriginal,omitempty"`
-	FechaFolioFiscalOriginal                      *time.Time      `bson:"FechaFolioFiscalOriginal,omitempty"`
-	FechaFolioFiscalOrig                          *string         `xml:"FechaFolioFiscalOrig,attr" bson:"FechaFolioFiscalOrig,omitempty"`
-	MontoFolioFiscalOriginal                      *float64        `xml:"MontoFolioFiscalOrig,attr" bson:"MontoFolioFiscalOriginal,omitempty"`
-	Emisor                                        Emisor32        `xml:"Emisor" bson:"Emisor"`
-	Receptor                                      Receptor32      `xml:"Receptor" bson:"Receptor"`
-	Conceptos                                     []Concepto32    `xml:"Conceptos>Concepto" bson:"Conceptos"`
-	Impuestos                                     Impuestos32     `xml:"Impuestos" bson:"Impuestos"`
-	Complemento                                   *Complemento    `xml:"Complemento" bson:"Complemento,omitempty"`
-	Addenda                                       *Addenda        `xml:"Addenda" bson:"Addenda,omitempty"`
-	KuantikMetadata                               KuantikMetadata `bson:"KuantikMetadata,omitempty"`
+	Version                                       string          `xml:"version,attr" bson:"Version" json:"Version"`
+	Serie                                         *string         `xml:"serie,attr"  bson:"Serie,omitempty" json:"Serie,omitempty"`
+	Folio                                         *string         `xml:"folio,attr" bson:"Folio,omitempty" json:"Folio,omitempty"`
+	Fecha                                         string          `xml:"fecha,attr" bson:"Fecha" json:"Fecha"`
+	Sello                                         string          `xml:"sello,attr" bson:"Sello" json:"Sello"`
+	FormaPago                                     string          `xml:"formaDePago,attr" bson:"FormaPago" json:"FormaPago"`
+	NoCertificado                                 string          `xml:"noCertificado,attr" bson:"NoCertificado" json:"NoCertificado"`
+	Certificado                                   string          `xml:"certificado,attr" bson:"Certificado" json:"Certificado"`
+	CondicionesPago                               *string         `xml:"condicionesDePago,attr" bson:"CondicionesPago,omitempty" json:"CondicionesPago,omitempty"`
+	Subtotal                                      float64         `xml:"subTotal,attr" bson:"Subtotal" json:"Subtotal"`
+	Descuento                                     *float64        `xml:"descuento,attr" bson:"Descuento,omitempty" json:"Descuento,omitempty"`
+	MotivoDescuento                               *string         `xml:"motivoDescuento,attr" bson:"MotivoDescuento,omitempty" json:"MotivoDescuento,omitempty"`
+	TipoDeCambio                                  *string         `xml:"TipoCambio,attr" bson:"TipoDeCambio,omitempty" json:"TipoDeCambio,omitempty"`
+	TipoCambio                                    float64         `bson:"TipoCambio,omitempty" json:"TipoCambio,omitempty"`
+	Moneda                                        *string         `xml:"Moneda,attr" bson:"Moneda,omitempty" json:"Moneda,omitempty"`
+	Total                                         float64         `xml:"total,attr" bson:"Total" json:"Total"`
+	TipoDeComprobante                             string          `xml:"tipoDeComprobante,attr" bson:"TipoDeComprobante" json:"TipoDeComprobante"`
+	TipoComprobante                               string          `bson:"TipoComprobante" json:"TipoComprobante"`
+	MetodoPago                                    string          `xml:"metodoDePago,attr" bson:"MetodoPago" json:"MetodoPago"`
+	LugarExpedicion                               string          `xml:"LugarExpedicion,attr" bson:"LugarExpedicion" json:"LugarExpedicion"`
+	NumeroCuentaPago                              *string         `xml:"NumCtaPago,attr" bson:"NumeroCuentaPago,omitempty" json:"NumeroCuentaPago,omitempty"`
+	FolioFiscalOriginal                           *string         `bson:"FolioFiscalOriginal,omitempty" json:"FolioFiscalOriginal,omitempty"`
+	FolioFiscalOrig                               *string         `xml:"FolioFiscalOrig,attr" bson:"FolioFiscalOrig,omitempty" json:"FolioFiscalOrig,omitempty"`
+	SerieFolioFiscalOriginal                      *string         `xml:"SerieFolioFiscalOrig,attr" bson:"SerieFolioFiscalOriginal,omitempty" json:"SerieFolioFiscalOriginal,omitempty"`
+	FechaFolioFiscalOriginal                      *time.Time      `bson:"FechaFolioFiscalOriginal,omitempty" json:"FechaFolioFiscalOriginal,omitempty"`
+	FechaFolioFiscalOrig                          *string         `xml:"FechaFolioFiscalOrig,attr" bson:"FechaFolioFiscalOrig,omitempty" json:"FechaFolioFiscalOrig,omitempty"`
+	MontoFolioFiscalOriginal                      *float64        `xml:"MontoFolioFiscalOrig,attr" bson:"MontoFolioFiscalOriginal,omitempty" json:"MontoFolioFiscalOriginal,omitempty"`
+	Emisor                                        Emisor32        `xml:"Emisor" bson:"Emisor" json:"Emisor"`
+	Receptor                                      Receptor32      `xml:"Receptor" bson:"Receptor" json:"Receptor"`
+	Conceptos                                     []Concepto32    `xml:"Conceptos>Concepto" bson:"Conceptos" json:"Conceptos"`
+	Impuestos                                     Impuestos32     `xml:"Impuestos" bson:"Impuestos" json:"Impuestos"`
+	Complemento                                   *Complemento    `xml:"Complemento" bson:"Complemento,omitempty" json:"Complemento,omitempty"`
+	Addenda                                       *Addenda        `xml:"Addenda" bson:"Addenda,omitempty" json:"Addenda,omitempty"`
+	KuantikMetadata                               KuantikMetadata `bson:"KuantikMetadata,omitempty" json:"KuantikMetadata,omitempty"`
 }
 
 func (c *Comprobante32) DefineTransaccion(rfc string) {
@@ -64,54 +64,54 @@ func (c *Comprobante32) DefineTransaccion(rfc string) {
 }
 
 type Emisor32 struct {
-	Rfc               string            `xml:"rfc,attr" bson:"Rfc"`
-	Nombre            *string           `xml:"nombre,attr" bson:"Nombre,omitempty"`
-	RegimenesFiscales []RegimenFiscal32 `xml:"RegimenFiscal" bson:"RegimenesFiscales"`
-	DomicilioFiscal   *Domicilio32      `xml:"DomicilioFiscal" bson:"DomicilioFiscal,omitempty"`
-	ExpedidoEn        *Domicilio32      `xml:"ExpedidoEn" bson:"ExpedidoEn,omitempty"`
+	Rfc               string            `xml:"rfc,attr" bson:"Rfc" json:"Rfc"`
+	Nombre            *string           `xml:"nombre,attr" bson:"Nombre,omitempty" json:"Nombre,omitempty"`
+	RegimenesFiscales []RegimenFiscal32 `xml:"RegimenFiscal" bson:"RegimenesFiscales" json:"RegimenesFiscales"`
+	DomicilioFiscal   *Domicilio32      `xml:"DomicilioFiscal" bson:"DomicilioFiscal,omitempty" json:"DomicilioFiscal,omitempty"`
+	ExpedidoEn        *Domicilio32      `xml:"ExpedidoEn" bson:"ExpedidoEn,omitempty" json:"ExpedidoEn,omitempty"`
 }
 
 type RegimenFiscal32 struct {
-	RegimenFiscal string `xml:"Regimen,attr" bson:"RegimenFiscal"`
+	RegimenFiscal string `xml:"Regimen,attr" bson:"RegimenFiscal" json:"RegimenFiscal"`
 }
 
 type Receptor32 struct {
-	Rfc       string       `xml:"rfc,attr" bson:"Rfc"`
-	Nombre    *string      `xml:"nombre,attr" bson:"Nombre,omitempty"`
-	Domicilio *Domicilio32 `xml:"Domicilio" bson:"Domicilio,omitempty"`
+	Rfc       string       `xml:"rfc,attr" bson:"Rfc" json:"Rfc"`
+	Nombre    *string      `xml:"nombre,attr" bson:"Nombre,omitempty" json:"Nombre,omitempty"`
+	Domicilio *Domicilio32 `xml:"Domicilio" bson:"Domicilio,omitempty" json:"Domicilio,omitempty"`
 }
 
 type Domicilio32 struct {
-	Calle        string  `xml:"calle,attr" bson:"Calle"`
-	NoExterior   *string `xml:"noExterior,attr" bson:"NoExterior,omitempty"`
-	NoInterior   *string `xml:"noInterior,attr" bson:"NoInterior,omitempty"`
-	Colonia      *string `xml:"colonia,attr" bson:"Colonia,omitempty"`
-	Localidad    *string `xml:"localidad,attr" bson:"Localidad,omitempty"`
-	Referencia   *string `xml:"referencia,attr" bson:"Referencia,omitempty"`
-	Municipio    string  `xml:"municipio,attr" bson:"Municipio"`
-	Estado       string  `xml:"estado,attr" bson:"Estado"`
-	Pais         string  `xml:"pais,attr" bson:"Pais"`
-	CodigoPostal string  `xml:"codigoPostal,attr" bson:"CodigoPostal"`
+	Calle        string  `xml:"calle,attr" bson:"Calle" json:"Calle"`
+	NoExterior   *string `xml:"noExterior,attr" bson:"NoExterior,omitempty" json:"NoExterior,omitempty"`
+	NoInterior   *string `xml:"noInterior,attr" bson:"NoInterior,omitempty" json:"NoInterior,omitempty"`
+	Colonia      *string `xml:"colonia,attr" bson:"Colonia,omitempty" json:"Colonia,omitempty"`
+	Localidad    *string `xml:"localidad,attr" bson:"Localidad,omitempty" json:"Localidad,omitempty"`
+	Referencia   *string `xml:"referencia,attr" bson:"Referencia,omitempty" json:"Referencia,omitempty"`
+	Municipio    string  `xml:"municipio,attr" bson:"Municipio" json:"Municipio"`
+	Estado       string  `xml:"estado,attr" bson:"Estado" json:"Estado"`
+	Pais         string  `xml:"pais,attr" bson:"Pais" json:"Pais"`
+	CodigoPostal string  `xml:"codigoPostal,attr" bson:"CodigoPostal" json:"CodigoPostal"`
 }
 
 type Concepto32 struct {
-	Cantidad            float64                  `xml:"cantidad,attr" bson:"Cantidad"`
-	Unidad              string                   `xml:"unidad,attr" bson:"Unidad"`
-	NoIdentificacion    *string                  `xml:"noIdentificacion,attr" bson:"NoIdentificacion,omitempty"`
-	Descripcion         string                   `xml:"descripcion,attr" bson:"Descripcion"`
-	ValorUnitario       float64                  `xml:"valorUnitario,attr" bson:"ValorUnitario"`
-	Importe             float64                  `xml:"importe,attr" bson:"Importe"`
-	InformacionAduanera *[]InformacionAduanera32 `xml:"InformacionAduanera" bson:"InformacionAduanera,omitempty"`
-	CuentaPredial       *CuentaPredial32         `xml:"CuentaPredial" bson:"CuentaPredial,omitempty"`
-	ComplementoConcepto *ComplementoConcepto     `xml:"ComplementoConcepto" bson:"ComplementoConcepto,omitempty"`
-	Parte               *[]Parte32               `xml:"Parte" bson:"Parte,omitempty"`
+	Cantidad            float64                  `xml:"cantidad,attr" bson:"Cantidad" json:"Cantidad"`
+	Unidad              string                   `xml:"unidad,attr" bson:"Unidad" json:"Unidad"`
+	NoIdentificacion    *string                  `xml:"noIdentificacion,attr" bson:"NoIdentificacion,omitempty" json:"NoIdentificacion,omitempty"`
+	Descripcion         string                   `xml:"descripcion,attr" bson:"Descripcion" json:"Descripcion"`
+	ValorUnitario       float64                  `xml:"valorUnitario,attr" bson:"ValorUnitario" json:"ValorUnitario"`
+	Importe             float64                  `xml:"importe,attr" bson:"Importe" json:"Importe"`
+	InformacionAduanera *[]InformacionAduanera32 `xml:"InformacionAduanera" bson:"InformacionAduanera,omitempty" json:"InformacionAduanera,omitempty"`
+	CuentaPredial       *CuentaPredial32         `xml:"CuentaPredial" bson:"CuentaPredial,omitempty" json:"CuentaPredial,omitempty"`
+	ComplementoConcepto *ComplementoConcepto     `xml:"ComplementoConcepto" bson:"ComplementoConcepto,omitempty" json:"ComplementoConcepto,omitempty"`
+	Parte               *[]Parte32               `xml:"Parte" bson:"Parte,omitempty" json:"Parte,omitempty"`
 }
 
 type InformacionAduanera32 struct {
-	Numero      string    `xml:"numero,attr" bson:"Numero"`
-	FechaString string    `xml:"fecha,attr" bson:"fecha"`
-	Fecha       time.Time `bson:"Fecha"`
-	Aduana      *string   `xml:"aduana,attr" bson:"Aduana,omitempty"`
+	Numero      string    `xml:"numero,attr" bson:"Numero" json:"Numero"`
+	FechaString string    `xml:"fecha,attr" bson:"fecha" json:"fecha"`
+	Fecha       time.Time `bson:"Fecha" json:"Fecha"`
+	Aduana      *string   `xml:"aduana,attr" bson:"Aduana,omitempty" json:"Aduana,omitempty"`
 }
 
 func (ia32 *InformacionAduanera32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
@@ -138,30 +138,30 @@ func (ia32 *InformacionAduanera32) UnmarshalXML(d *xml.Decoder, start xml.StartE
 }
 
 type CuentaPredial32 struct {
-	Numero string `xml:"numero,attr" bson:"Numero"`
+	Numero string `xml:"numero,attr" bson:"Numero" json:"Numero"`
 }
 
 type Parte32 struct {
-	Cantidad            float64                  `xml:"cantidad,attr" bson:"Cantidad"`
-	Unidad              *string                  `xml:"unidad,attr" bson:"Unidad,omitempty"`
-	NoIdentificacion    *string                  `xml:"noIdentificacion,attr" bson:"NoIdentificacion,omitempty"`
-	Descripcion         string                   `xml:"descripcion,attr" bson:"Descripcion"`
-	ValorUnitario       *float64                 `xml:"valorUnitario,attr" bson:"ValorUnitario,omitempty"`
-	Importe             *float64                 `xml:"importe,attr" bson:"Importe,omitempty"`
-	InformacionAduanera *[]InformacionAduanera32 `xml:"InformacionAduanera" bson:"InformacionAduanera,omitempty"`
+	Cantidad            float64                  `xml:"cantidad,attr" bson:"Cantidad" json:"Cantidad"`
+	Unidad              *string                  `xml:"unidad,attr" bson:"Unidad,omitempty" json:"Unidad,omitempty"`
+	NoIdentificacion    *string                  `xml:"noIdentificacion,attr" bson:"NoIdentificacion,omitempty" json:"NoIdentificacion,omitempty"`
+	Descripcion         string                   `xml:"descripcion,attr" bson:"Descripcion" json:"Descripcion"`
+	ValorUnitario       *float64                 `xml:"valorUnitario,attr" bson:"ValorUnitario,omitempty" json:"ValorUnitario,omitempty"`
+	Importe             *float64                 `xml:"importe,attr" bson:"Importe,omitempty" json:"Importe,omitempty"`
+	InformacionAduanera *[]InformacionAduanera32 `xml:"InformacionAduanera" bson:"InformacionAduanera,omitempty" json:"InformacionAduanera,omitempty"`
 }
 
 type Impuestos32 struct {
-	Retenciones               *[]Retencion32 `xml:"Retenciones>Retencion" bson:"Retenciones,omitempty"`
-	Traslados                 *[]Traslado32  `xml:"Traslados>Traslado" bson:"Traslados,omitempty"`
-	TotalImpuestosRetenidos   *float64       `xml:"totalImpuestosRetenidos,attr" bson:"TotalImpuestosRetenidos,omitempty"`
-	TotalImpuestosTrasladados *float64       `xml:"totalImpuestosTrasladados,attr" bson:"TotalImpuestosTrasladados,omitempty"`
+	Retenciones               *[]Retencion32 `xml:"Retenciones>Retencion" bson:"Retenciones,omitempty" json:"Retenciones,omitempty"`
+	Traslados                 *[]Traslado32  `xml:"Traslados>Traslado" bson:"Traslados,omitempty" json:"Traslados,omitempty"`
+	TotalImpuestosRetenidos   *float64       `xml:"totalImpuestosRetenidos,attr" bson:"TotalImpuestosRetenidos,omitempty" json:"TotalImpuestosRetenidos,omitempty"`
+	TotalImpuestosTrasladados *float64       `xml:"totalImpuestosTrasladados,attr" bson:"TotalImpuestosTrasladados,omitempty" json:"TotalImpuestosTrasladados,omitempty"`
 }
 
 type Retencion32 struct {
-	TipoImpuesto string  `xml:"impuesto,attr" bson:"TipoImpuesto"`
-	Impuesto     string  `bson:"Impuesto"`
-	Importe      float64 `xml:"importe,attr" bson:"Importe"`
+	TipoImpuesto string  `xml:"impuesto,attr" bson:"TipoImpuesto" json:"TipoImpuesto"`
+	Impuesto     string  `bson:"Impuesto" json:"Impuesto"`
+	Importe      float64 `xml:"importe,attr" bson:"Importe" json:"Importe"`
 }
 
 func (i *Retencion32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
@@ -190,10 +190,10 @@ func (i *Retencion32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 }
 
 type Traslado32 struct {
-	TipoImpuesto string  `xml:"impuesto,attr" bson:"TipoImpuesto"`
-	Impuesto     string  `bson:"Impuesto"`
-	Tasa         float64 `xml:"tasa,attr" bson:"Tasa"`
-	Importe      float64 `xml:"importe,attr" bson:"Importe"`
+	TipoImpuesto string  `xml:"impuesto,attr" bson:"TipoImpuesto" json:"TipoImpuesto"`
+	Impuesto     string  `bson:"Impuesto" json:"Impuesto"`
+	Tasa         float64 `xml:"tasa,attr" bson:"Tasa" json:"Tasa"`
+	Importe      float64 `xml:"importe,attr" bson:"Importe" json:"Importe"`
 }
 
 func (i *Traslado32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

@@ -7,66 +7,66 @@ import (
 )
 
 type GastoHidrocarburos10 struct {
-	Version         string                     `xml:"Version,attr" bson:"Version"`
-	NumeroContrato  string                     `xml:"NumeroContrato,attr" bson:"NoContrato"`
-	AreaContractual *string                    `xml:"AreaContractual,attr" bson:"AreaContractual,omitempty"`
-	Erogacion       []ErogacionGastoHidrocar10 `xml:"Erogacion" bson:"Erogacion,omitempty"`
+	Version         string                     `xml:"Version,attr" bson:"Version" json:"Version"`
+	NumeroContrato  string                     `xml:"NumeroContrato,attr" bson:"NoContrato" json:"NoContrato"`
+	AreaContractual *string                    `xml:"AreaContractual,attr" bson:"AreaContractual,omitempty" json:"AreaContractual,omitempty"`
+	Erogacion       []ErogacionGastoHidrocar10 `xml:"Erogacion" bson:"Erogacion,omitempty" json:"Erogacion,omitempty"`
 }
 
 type ErogacionGastoHidrocar10 struct {
-	TipoErogacion        string                                `xml:"TipoErogacion,attr" bson:"Tipo"`
-	MontoCuErogacion     string                                `xml:"MontocuErogacion,attr" bson:"MontoCuErogacion"`
-	Porcentaje           string                                `xml:"Porcentaje,attr" bson:"Porcentaje"`
-	DocumentoRelacionado []DocumentoRelacionadoGastoHidrocar10 `xml:"DocumentoRelacionado" bson:"DocumentoRelacionado,omitempty"`
-	Actividades          *[]ActividadesGastoHidrocar10         `xml:"Actividades" bson:"Actividades,omitempty"`
-	CentroCostos         *[]CentroCostosGastoHidrocar10        `xml:"CentroCostos" bson:"CentroCostos,omitempty"`
+	TipoErogacion        string                                `xml:"TipoErogacion,attr" bson:"Tipo" json:"Tipo"`
+	MontoCuErogacion     string                                `xml:"MontocuErogacion,attr" bson:"MontoCuErogacion" json:"MontoCuErogacion"`
+	Porcentaje           string                                `xml:"Porcentaje,attr" bson:"Porcentaje" json:"Porcentaje"`
+	DocumentoRelacionado []DocumentoRelacionadoGastoHidrocar10 `xml:"DocumentoRelacionado" bson:"DocumentoRelacionado,omitempty" json:"DocumentoRelacionado,omitempty"`
+	Actividades          *[]ActividadesGastoHidrocar10         `xml:"Actividades" bson:"Actividades,omitempty" json:"Actividades,omitempty"`
+	CentroCostos         *[]CentroCostosGastoHidrocar10        `xml:"CentroCostos" bson:"CentroCostos,omitempty" json:"CentroCostos,omitempty"`
 }
 
 type DocumentoRelacionadoGastoHidrocar10 struct {
-	OrigenErogacion                 string    `xml:"OrigenErogacion,attr" bson:"OrigenErogacion"`
-	FolioFiscalVinculado            *string   `xml:"FolioFiscalVinculado,attr" bson:"FolioFiscalVinculado,omitempty"`
-	RfcProveedor                    *string   `xml:"RFCProveedor,attr" bson:"RfcProveedor,omitempty"`
-	MontoTotalIva                   *float64  `xml:"MontoTotalIVA,attr" bson:"MontoTotalIva,omitempty"`
-	MontoRetencionIsr               *float64  `xml:"MontoRetencionISR,attr" bson:"MontoRetencionIsr,omitempty"`
-	MontoRetencionIva               *float64  `xml:"MontoRetencionIVA,attr" bson:"MontoRetencionIva,omitempty"`
-	MontoRetencionOtrosImpuestos    *float64  `xml:"MontoRetencionOtrosImpuestos,attr" bson:"MontoRetencionOtrosImpuestos,omitempty"`
-	NumeroPedimentoVinculado        *string   `xml:"NumeroPedimentoVinculado,attr" bson:"NumeroPedimentoVinculado,omitempty"`
-	ClavePedimentoVinculado         *string   `xml:"ClavePedimentoVinculado,attr" bson:"ClavePedimentoVinculado,omitempty"`
-	ClavePagoPedimentoVinculado     *string   `xml:"ClavePagoPedimentoVinculado,attr" bson:"ClavePagoPedimentoVinculado,omitempty"`
-	MontoIvaPedimento               *float64  `xml:"MontoIVAPedimento,attr" bson:"MontoIvaPedimento,omitempty"`
-	OtrosImpuestosPagadosPedimento  *float64  `xml:"OtrosImpuestosPagadosPedimento,attr" bson:"OtrosImpuestosPagadosPedimento,omitempty"`
-	FechaFolioFiscalVinculadoString *string   `xml:"FechaFolioFiscalVinculado,attr" bson:"FechaFolioFiscalVinculadoString"`
-	FechaFolioFiscalVinculado       time.Time `bson:"FechaFolioFiscalVinculado,omitempty"`
-	Mes                             string    `xml:"Mes,attr" bson:"Mes"`
-	MontoTotalErogaciones           float64   `xml:"MontoTotalErogaciones,attr" bson:"MontoTotalErogaciones,omitempty"`
+	OrigenErogacion                 string    `xml:"OrigenErogacion,attr" bson:"OrigenErogacion" json:"OrigenErogacion"`
+	FolioFiscalVinculado            *string   `xml:"FolioFiscalVinculado,attr" bson:"FolioFiscalVinculado,omitempty" json:"FolioFiscalVinculado,omitempty"`
+	RfcProveedor                    *string   `xml:"RFCProveedor,attr" bson:"RfcProveedor,omitempty" json:"RfcProveedor,omitempty"`
+	MontoTotalIva                   *float64  `xml:"MontoTotalIVA,attr" bson:"MontoTotalIva,omitempty" json:"MontoTotalIva,omitempty"`
+	MontoRetencionIsr               *float64  `xml:"MontoRetencionISR,attr" bson:"MontoRetencionIsr,omitempty" json:"MontoRetencionIsr,omitempty"`
+	MontoRetencionIva               *float64  `xml:"MontoRetencionIVA,attr" bson:"MontoRetencionIva,omitempty" json:"MontoRetencionIva,omitempty"`
+	MontoRetencionOtrosImpuestos    *float64  `xml:"MontoRetencionOtrosImpuestos,attr" bson:"MontoRetencionOtrosImpuestos,omitempty" json:"MontoRetencionOtrosImpuestos,omitempty"`
+	NumeroPedimentoVinculado        *string   `xml:"NumeroPedimentoVinculado,attr" bson:"NumeroPedimentoVinculado,omitempty" json:"NumeroPedimentoVinculado,omitempty"`
+	ClavePedimentoVinculado         *string   `xml:"ClavePedimentoVinculado,attr" bson:"ClavePedimentoVinculado,omitempty" json:"ClavePedimentoVinculado,omitempty"`
+	ClavePagoPedimentoVinculado     *string   `xml:"ClavePagoPedimentoVinculado,attr" bson:"ClavePagoPedimentoVinculado,omitempty" json:"ClavePagoPedimentoVinculado,omitempty"`
+	MontoIvaPedimento               *float64  `xml:"MontoIVAPedimento,attr" bson:"MontoIvaPedimento,omitempty" json:"MontoIvaPedimento,omitempty"`
+	OtrosImpuestosPagadosPedimento  *float64  `xml:"OtrosImpuestosPagadosPedimento,attr" bson:"OtrosImpuestosPagadosPedimento,omitempty" json:"OtrosImpuestosPagadosPedimento,omitempty"`
+	FechaFolioFiscalVinculadoString *string   `xml:"FechaFolioFiscalVinculado,attr" bson:"FechaFolioFiscalVinculadoString" json:"FechaFolioFiscalVinculadoString"`
+	FechaFolioFiscalVinculado       time.Time `bson:"FechaFolioFiscalVinculado,omitempty" json:"FechaFolioFiscalVinculado,omitempty"`
+	Mes                             string    `xml:"Mes,attr" bson:"Mes" json:"Mes"`
+	MontoTotalErogaciones           float64   `xml:"MontoTotalErogaciones,attr" bson:"MontoTotalErogaciones,omitempty" json:"MontoTotalErogaciones,omitempty"`
 }
 
 type ActividadesGastoHidrocar10 struct {
-	ActividadRelacionada *string                          `xml:"ActividadRelacionada,attr" bson:"ActividadRelacionada,omitempty"`
-	Subactividades       *[]SubActividadesGastoHidrocar10 `xml:"SubActividades" bson:"Subactividades,omitempty"`
+	ActividadRelacionada *string                          `xml:"ActividadRelacionada,attr" bson:"ActividadRelacionada,omitempty" json:"ActividadRelacionada,omitempty"`
+	Subactividades       *[]SubActividadesGastoHidrocar10 `xml:"SubActividades" bson:"Subactividades,omitempty" json:"Subactividades,omitempty"`
 }
 
 type SubActividadesGastoHidrocar10 struct {
-	SubactividadRelacionada *string                  `xml:"SubActividadRelacionada,attr" bson:"SubactividadRelacionada,omitempty"`
-	Tareas                  *[]TareasGastoHidrocar10 `xml:"Tareas" bson:"Tareas,omitempty"`
+	SubactividadRelacionada *string                  `xml:"SubActividadRelacionada,attr" bson:"SubactividadRelacionada,omitempty" json:"SubactividadRelacionada,omitempty"`
+	Tareas                  *[]TareasGastoHidrocar10 `xml:"Tareas" bson:"Tareas,omitempty" json:"Tareas,omitempty"`
 }
 
 type TareasGastoHidrocar10 struct {
-	TareaRelacionada *string `xml:"TareaRelacionada,attr" bson:"TareaRelacionada,omitempty"`
+	TareaRelacionada *string `xml:"TareaRelacionada,attr" bson:"TareaRelacionada,omitempty" json:"TareaRelacionada,omitempty"`
 }
 
 type CentroCostosGastoHidrocar10 struct {
-	Campo       *string                       `xml:"Campo,attr" bson:"Campo,omitempty"`
-	Yacimientos *[]YacimientosGastoHidrocar10 `xml:"Yacimientos" bson:"Yacimientos,omitempty"`
+	Campo       *string                       `xml:"Campo,attr" bson:"Campo,omitempty" json:"Campo,omitempty"`
+	Yacimientos *[]YacimientosGastoHidrocar10 `xml:"Yacimientos" bson:"Yacimientos,omitempty" json:"Yacimientos,omitempty"`
 }
 
 type YacimientosGastoHidrocar10 struct {
-	Yacimiento *string                 `xml:"Yacimiento,attr" bson:"Yacimiento,omitempty"`
-	Pozos      *[]PozosGastoHidrocar10 `xml:"Pozos" bson:"Pozos,omitempty"`
+	Yacimiento *string                 `xml:"Yacimiento,attr" bson:"Yacimiento,omitempty" json:"Yacimiento,omitempty"`
+	Pozos      *[]PozosGastoHidrocar10 `xml:"Pozos" bson:"Pozos,omitempty" json:"Pozos,omitempty"`
 }
 
 type PozosGastoHidrocar10 struct {
-	Pozo *string `xml:"Pozo,attr" bson:"Pozo,omitempty"`
+	Pozo *string `xml:"Pozo,attr" bson:"Pozo,omitempty" json:"Pozo,omitempty"`
 }
 
 func (iavv10 *DocumentoRelacionadoGastoHidrocar10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

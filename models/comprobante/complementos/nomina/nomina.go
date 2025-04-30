@@ -6,8 +6,8 @@ import (
 )
 
 type Nomina struct {
-	Nomina11 *[]Nomina11 `bson:"Nomina11,omitempty"`
-	Nomina12 *[]Nomina12 `bson:"Nomina12,omitempty"`
+	Nomina11 *[]Nomina11 `bson:"Nomina11,omitempty" json:"Nomina11,omitempty"`
+	Nomina12 *[]Nomina12 `bson:"Nomina12,omitempty" json:"Nomina12,omitempty"`
 }
 
 func (n *Nomina) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {

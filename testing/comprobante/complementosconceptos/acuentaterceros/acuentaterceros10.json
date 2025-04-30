@@ -5,10 +5,7 @@
     "InformacionFiscalTercero": {
         "Calle": "Av. Siempre Viva",
         "NoExterior": "123",
-        "NoInterior": null,
         "Colonia": "Centro",
-        "Localidad": null,
-        "Referencia": null,
         "Municipio": "Ciudad",
         "Estado": "Estado",
         "Pais": "México",
@@ -23,8 +20,6 @@
     "Parte": [
         {
             "Cantidad": 10,
-            "Unidad": null,
-            "NoIdentificacion": null,
             "Descripcion": "Componente X",
             "ValorUnitario": 100,
             "Importe": 1000,

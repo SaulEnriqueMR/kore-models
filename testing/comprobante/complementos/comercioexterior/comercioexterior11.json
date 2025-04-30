@@ -78,10 +78,6 @@
     "Mercancias": [
         {
             "NoIdentificacion": "ABC123456",
-            "FraccionArancelaria": null,
-            "CantidadAduana": null,
-            "UnidadAduana": null,
-            "ValorUnitarioAduana": null,
             "ValorDolares": 1500,
             "DescripcionesEspecificas": [
                 {
@@ -97,10 +93,7 @@
                     "NoSerie": "123456789"
                 },
                 {
-                    "Marca": "MarcaA",
-                    "Modelo": null,
-                    "Submodelo": null,
-                    "NoSerie": null
+                    "Marca": "MarcaA"
                 }
             ]
         },
@@ -110,8 +103,7 @@
             "CantidadAduana": 10,
             "UnidadAduana": "PZ",
             "ValorUnitarioAduana": 150,
-            "ValorDolares": 0,
-            "DescripcionesEspecificas": null
+            "ValorDolares": 0
         }
     ]
 }

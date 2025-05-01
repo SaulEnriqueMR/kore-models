@@ -1,11 +1,18 @@
-package comprobante
+package cfdi
 
-func (c ComprobanteMetadata) ToCFDI() *CFDI {
+import (
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
+)
+
+type CfdiMetadata comprobante.ComprobanteMetadata
+
+func (c CfdiMetadata) ToCFDI() *CFDI {
 	return &CFDI{
 		Uuid:             c.Uuid,
 		Vigencia:         c.Vigente,
 		Tipo:             c.TipoComprobante,
-		FechaCancelacion: c.Cancelacion.FechaCancelacion,
+		FechaCancelacion: helpers.SafeUnwrap(c.Cancelacion).FechaCancelacion,
 		FechaTimbrado:    &c.FechaTimbrado,
 		Emisor: Emisor{
 			Contribuyente: Contribuyente{

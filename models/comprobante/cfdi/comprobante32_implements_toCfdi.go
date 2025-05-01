@@ -1,12 +1,16 @@
-package comprobante
+package cfdi
 
 import (
 	"strings"
 
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante"
+	cfdicomplementos "github.com/SaulEnriqueMR/kore-models/models/comprobante/cfdi/cfdi_complementos"
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
-func (c Comprobante32) ToCFDI() *CFDI {
+type Cfdi32 comprobante.Comprobante32
+
+func (c Cfdi32) ToCFDI() *CFDI {
 	regimenesFiscales := make([]string, 0, len(c.Emisor.RegimenesFiscales))
 	for _, regimen := range c.Emisor.RegimenesFiscales {
 		regimenesFiscales = append(regimenesFiscales, regimen.RegimenFiscal)
@@ -18,11 +22,11 @@ func (c Comprobante32) ToCFDI() *CFDI {
 		Folio:            helpers.SafeUnwrap(c.Folio),
 		SerieFolio:       c.KuantikMetadata.SerieFolio,
 		Version:          c.Version,
-		Vigencia:         *c.Vigente,
+		Vigencia:         helpers.SafeUnwrap(c.Vigente),
 		Tipo:             c.TipoComprobante,
 		MetodoPago:       c.MetodoPago,
 		FechaEmision:     &c.FechaEmision,
-		FechaCancelacion: c.Cancelacion.FechaCancelacion,
+		FechaCancelacion: helpers.SafeUnwrap(c.Cancelacion).FechaCancelacion,
 		FechaTimbrado:    &c.FechaTimbrado,
 		Emisor: Emisor{
 			Contribuyente: Contribuyente{
@@ -46,5 +50,6 @@ func (c Comprobante32) ToCFDI() *CFDI {
 		TipoCambio:      c.TipoCambio,
 		Subtotal:        c.Subtotal,
 		Total:           c.Total,
+		Complemento:     cfdicomplementos.FromComplemento(helpers.SafeUnwrap(c.Complemento)),
 	}
 }

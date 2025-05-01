@@ -1,4 +1,4 @@
-package comprobante
+package cfdi
 
 type Contribuyente struct {
 	Rfc           string

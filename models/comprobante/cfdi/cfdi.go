@@ -1,7 +1,9 @@
-package comprobante
+package cfdi
 
 import (
 	"time"
+
+	cfdicomplementos "github.com/SaulEnriqueMR/kore-models/models/comprobante/cfdi/cfdi_complementos"
 )
 
 // CFDI Modelo unificado para el manejo de CFDI en la plataforma Kore independientemente de la version.
@@ -26,4 +28,5 @@ type CFDI struct {
 	TipoCambio       float64
 	Subtotal         float64
 	Total            float64
+	Complemento      cfdicomplementos.ComplementoCfdi
 }

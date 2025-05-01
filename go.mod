@@ -3,6 +3,7 @@ module github.com/SaulEnriqueMR/kore-models
 go 1.22.4
 
 require (
+	github.com/AngelTheTwin/slicesutils v0.2.0
 	github.com/stretchr/testify v1.9.0
 	golang.org/x/text v0.18.0
 )

@@ -1,4 +1,4 @@
-package comprobante
+package cfdi
 
 import (
 	"encoding/json"
@@ -7,24 +7,24 @@ import (
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
-type IComprobante interface {
+type ICfdi interface {
 	ToCFDI() *CFDI
 }
 
 type BaseComprobante struct {
-	Value IComprobante
+	Value ICfdi
 }
 
 func getConcreteType(version string) reflect.Type {
 	switch version {
 	case "3.2":
-		return reflect.TypeOf(Comprobante32{})
+		return reflect.TypeOf(Cfdi32{})
 	case "3.3":
-		return reflect.TypeOf(Comprobante33{})
+		return reflect.TypeOf(Cfdi33{})
 	case "4.0":
-		return reflect.TypeOf(Comprobante40{})
+		return reflect.TypeOf(Cfdi40{})
 	default:
-		return reflect.TypeOf(ComprobanteMetadata{})
+		return reflect.TypeOf(CfdiMetadata{})
 	}
 }
 

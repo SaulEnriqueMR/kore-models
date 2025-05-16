@@ -94,8 +94,8 @@ func MyFilename(d *xml.Decoder) (string, error) {
 	if Fecha.IsZero() {
 		return "", errors.New("error parsing datetime. Fecha is empty")
 	}
-	summarized.EmisorRfc = EmisorRfc
-	summarized.ReceptorRfc = ReceptorRfc
+	summarized.EmisorRfc = strings.ToUpper(EmisorRfc)
+	summarized.ReceptorRfc = strings.ToUpper(ReceptorRfc)
 	summarized.Uuid = strings.ToUpper(Uuid)
 	summarized.Fecha = Fecha
 

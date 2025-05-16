@@ -1,7 +1,9 @@
 package cfdi
 
 import (
+	"github.com/AngelTheTwin/slicesutils"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante"
+	cfdicomplementos "github.com/SaulEnriqueMR/kore-models/models/comprobante/cfdi/cfdi_complementos"
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
@@ -43,5 +45,20 @@ func (c Cfdi40) ToCFDI() *CFDI {
 		TipoCambio:      helpers.SafeUnwrap(c.TipoCambio, 1),
 		Subtotal:        c.Subtotal,
 		Total:           c.Total,
+		Complemento:     cfdicomplementos.FromComplemento(c.Complemento),
+		CfdiRelacionados: func() []CfdiRelacionado {
+			relacionados := helpers.SafeUnwrap(c.CfdisRelacionados)
+			cfdiRelacionados := slicesutils.Reduce(relacionados, func(acum []CfdiRelacionado, cfdiRelacionado comprobante.CfdisRelacionados40) []CfdiRelacionado {
+				newRelacionados := slicesutils.Map(cfdiRelacionado.UuidsRelacionados, func(uuids comprobante.UuidRelacionado40) CfdiRelacionado {
+					return CfdiRelacionado{
+						Uuid:         uuids.Uuid,
+						TipoRelacion: cfdiRelacionado.TipoRelacion,
+					}
+				})
+				acum = append(acum, newRelacionados...)
+				return acum
+			}, []CfdiRelacionado{})
+			return cfdiRelacionados
+		}(),
 	}
 }

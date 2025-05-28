@@ -2,6 +2,7 @@ package cfdi
 
 import (
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante"
+	cfdicomplementos "github.com/SaulEnriqueMR/kore-models/models/comprobante/cfdi/cfdi_complementos"
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
@@ -41,5 +42,17 @@ func (c Cfdi33) ToCFDI() *CFDI {
 		TipoCambio:      helpers.SafeUnwrap(c.TipoCambio, 1),
 		Subtotal:        c.Subtotal,
 		Total:           c.Total,
+		Complemento:     cfdicomplementos.FromComplemento(helpers.SafeUnwrap(c.Complemento)),
+		CfdiRelacionados: func() []CfdiRelacionado {
+			relacionados := helpers.SafeUnwrap(c.CfdisRelacionados)
+			cfdiRelacionados := []CfdiRelacionado{}
+			for _, cfdiRelacionado := range relacionados.UuidsRelacionados {
+				cfdiRelacionados = append(cfdiRelacionados, CfdiRelacionado{
+					Uuid:         cfdiRelacionado.Uuid,
+					TipoRelacion: relacionados.TipoRelacion,
+				})
+			}
+			return cfdiRelacionados
+		}(),
 	}
 }

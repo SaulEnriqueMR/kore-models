@@ -29,4 +29,10 @@ type CFDI struct {
 	Subtotal         float64
 	Total            float64
 	Complemento      cfdicomplementos.ComplementoCfdi
+	CfdiRelacionados []CfdiRelacionado
+}
+
+type CfdiRelacionado struct {
+	Uuid         string
+	TipoRelacion string
 }

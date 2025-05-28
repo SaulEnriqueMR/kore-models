@@ -1,6 +1,7 @@
 package cartaporte
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"strings"
 	"time"
@@ -68,6 +69,23 @@ func (u *UbicacionCartaPorte30) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*u = UbicacionCartaPorte30(aux)
+	fecha, errFecha := helpers.ParseDatetime(u.FechaHoraSalidaLlegadaString)
+	if errFecha == nil {
+		u.FechaHoraSalidaLlegada = fecha
+	}
+	return nil
+}
+
+func (u *UbicacionCartaPorte30) UnmarshalJSON(data []byte) error {
+	// Create an alias to avoid recursion
+	type Alias UbicacionCartaPorte30
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*u = UbicacionCartaPorte30(aux)
@@ -160,6 +178,33 @@ func (m *MercanciaCartaPorte30) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*m = MercanciaCartaPorte30(aux)
+	if m.MaterialPeligroso != nil {
+		isMaterialPeligroso := helpers.ResolveSatBoolean(*aux.MaterialPeligroso)
+		m.EsMaterialPeligroso = &isMaterialPeligroso
+	}
+	if m.FechaCaducidadString != nil && *m.FechaCaducidadString != "" {
+		fecha, errFecha := helpers.ParseDatetime(*m.FechaCaducidadString)
+		if errFecha == nil {
+			m.FechaCaducidad = &fecha
+		}
+	}
+	if m.UUIDComercioExt != nil && *m.UUIDComercioExt != "" {
+		uuidComercioExterior := strings.ToUpper(*m.UUIDComercioExt)
+		m.UuidComercioExterior = &uuidComercioExterior
+	}
+	return nil
+}
+
+func (m *MercanciaCartaPorte30) UnmarshalJSON(data []byte) error {
+	// Create an alias to avoid recursion
+	type Alias MercanciaCartaPorte30
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*m = MercanciaCartaPorte30(aux)
@@ -328,10 +373,10 @@ type FiguraTransporteCartaPorte30 struct {
 
 type TiposFiguraCartaPorte30 struct {
 	Tipo             string                          `xml:"TipoFigura,attr" bson:"Tipo" json:"Tipo"`
-	Rfc              *string                         `xml:"RFCFigura,attr" bson:"Rfc,omitempty" json:"Rfc,omitempty"`                           // Cifrado
+	Rfc              *string                         `xml:"RFCFigura,attr" bson:"Rfc,omitempty" json:"Rfc,omitempty"`                                        // Cifrado
 	ResidenciaFiscal *string                         `xml:"ResidenciaFiscalFigura,attr" bson:"ResidenciaFiscal,omitempty" json:"ResidenciaFiscal,omitempty"` // Cifrado
-	NumRegIdTrib     *string                         `xml:"NumRegIdTribFigura,attr" bson:"NumRegIdTrib,omitempty" json:"NumRegIdTrib,omitempty"`         // Cifrado
-	NoLicencia       *string                         `xml:"NumLicencia,attr" bson:"NoLicencia,omitempty" json:"NoLicencia,omitempty"`                  // Cifrado
+	NumRegIdTrib     *string                         `xml:"NumRegIdTribFigura,attr" bson:"NumRegIdTrib,omitempty" json:"NumRegIdTrib,omitempty"`             // Cifrado
+	NoLicencia       *string                         `xml:"NumLicencia,attr" bson:"NoLicencia,omitempty" json:"NoLicencia,omitempty"`                        // Cifrado
 	Nombre           string                          `xml:"NombreFigura,attr" bson:"Nombre" json:"Nombre"`
 	PartesTransporte *[]PartesTransporteCartaPorte30 `xml:"PartesTransporte" bson:"PartesTransporte,omitempty" json:"PartesTransporte,omitempty"`
 	Domicilio        *DomicilioCartaPorte30          `xml:"Domicilio" bson:"Domicilio,omitempty" json:"Domicilio,omitempty"`

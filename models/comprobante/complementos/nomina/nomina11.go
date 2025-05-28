@@ -1,6 +1,7 @@
 package nomina
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"time"
 
@@ -89,6 +90,43 @@ func (n *Nomina11) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*n = Nomina11(aux)
+
+	fecha, err := helpers.ParseDatetime(aux.FechaPagoString)
+	if err != nil {
+		return err
+	}
+	n.FechaPago = fecha
+
+	fecha1, err1 := helpers.ParseDatetime(aux.FechaInicialPagoString)
+	if err1 != nil {
+		return err1
+	}
+	n.FechaInicialPago = fecha1
+
+	fecha2, err2 := helpers.ParseDatetime(aux.FechaFinalPagoString)
+	if err2 != nil {
+		return err2
+	}
+	n.FechaFinalPago = fecha2
+
+	if aux.FechaInicioRelLaboral != nil {
+		fechaIniRelLab, _ := helpers.ParseDatetime(*aux.FechaInicioRelLaboral)
+		n.FechaInicioRelacionLaboral = &fechaIniRelLab
+	}
+
+	return nil
+}
+
+func (n *Nomina11) UnmarshalJSON(data []byte) error {
+	// Create an alias to avoid recursion
+	type Alias Nomina11
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*n = Nomina11(aux)

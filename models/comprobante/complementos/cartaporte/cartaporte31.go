@@ -1,6 +1,7 @@
 package cartaporte
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"strings"
 	"time"
@@ -72,6 +73,22 @@ func (u *UbicacionCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*u = UbicacionCartaPorte31(aux)
+	fecha, errFecha := helpers.ParseDatetime(u.FechaHoraSalidaLlegadaString)
+	if errFecha == nil {
+		u.FechaHoraSalidaLlegada = fecha
+	}
+	return nil
+}
+
+func (u *UbicacionCartaPorte31) UnmarshalJSON(data []byte) error {
+	type Alias UbicacionCartaPorte31
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*u = UbicacionCartaPorte31(aux)
@@ -287,6 +304,26 @@ func (c *ContenedorCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartEle
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*c = ContenedorCartaPorte31(aux)
+
+	if c.FechaCertificacionCCP != nil && *c.FechaCertificacionCCP != "" {
+		fecha, errFecha := helpers.ParseDatetime(*c.FechaCertificacionCCP)
+		if errFecha == nil {
+			c.FechaCertificacionCcp = &fecha
+		}
+	}
+	return nil
+}
+
+func (c *ContenedorCartaPorte31) UnmarshalJSON(data []byte) error {
+	// Create an alias to avoid recursion
+	type Alias ContenedorCartaPorte31
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*c = ContenedorCartaPorte31(aux)

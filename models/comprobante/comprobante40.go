@@ -1,6 +1,7 @@
 package comprobante
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"fmt"
 	"strings"
@@ -284,6 +285,100 @@ func (c *Comprobante40) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	c.KuantikMetadata.SerieFolio = sb.String()
 
 	return nil
+}
+
+func (c *Comprobante40) UnmarshalJSON(data []byte) error {
+
+	type Alias Comprobante40
+	var aux Alias
+
+	if err := json.Unmarshal(data, &aux); err != nil {
+		return err
+	}
+
+	fechaEmision, err := helpers.ParseDatetime(aux.Fecha)
+	if err != nil {
+		return err
+	}
+
+	*c = Comprobante40(aux)
+	c.FechaEmision = fechaEmision
+	c.Comprobante = true
+	c.Vigente = nil
+	c.ProcessorMetadata.CreationDate = nil
+
+	if c.InformacionAdicional != nil {
+		c.InformacionAdicional.StampedByKuantik = nil
+	}
+	if c.Cancelacion != nil {
+		c.Cancelacion.CanceledByKuantik = nil
+	}
+
+	if c.Complemento.TimbreFiscalDigital != nil {
+		tfd := c.Complemento.TimbreFiscalDigital.TimbreFiscalDigital11
+		if tfd != nil {
+			c.FechaTimbrado = tfd.FechaTimbrado
+			c.Uuid = strings.ToUpper(tfd.Uuid)
+			rfcProvCertif := tfd.RfcProvCertif
+			if len(rfcProvCertif) > 0 {
+				c.RfcProvCertif = rfcProvCertif
+			}
+		}
+	}
+
+	c.CadenaOriginal = helpers.CreateCadenaOriginal(*c)
+
+	tipoCambio := 1.0
+	// Calculo de totales
+	if c.TipoCambio != nil {
+		tipoCambio = *c.TipoCambio
+	}
+
+	totalesMonedaLocal := documentofiscaldigital.TotalesMonedaLocal{
+		Total:    c.Total * tipoCambio,
+		Subtotal: c.Subtotal * tipoCambio,
+	}
+
+	if c.Descuento != nil {
+		descuento := *c.Descuento * tipoCambio
+		totalesMonedaLocal.Descuento = &descuento
+	}
+
+	if c.Impuestos != nil {
+		if c.Impuestos.TotalImpuestosRetenidos != nil {
+			tir := *c.Impuestos.TotalImpuestosRetenidos * tipoCambio
+			totalesMonedaLocal.TotalImpuestosRetenidos = &tir
+		}
+
+		if c.Impuestos.TotalImpuestosTrasladados != nil {
+			tit := *c.Impuestos.TotalImpuestosTrasladados * tipoCambio
+			totalesMonedaLocal.TotalImpuestosTrasladados = &tit
+		}
+	}
+
+	c.TotalesMonedaLocal = totalesMonedaLocal
+
+	// processDate := time.Now().UTC()
+	now := time.Now()
+	processDate := time.Date(now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second(), 0, time.UTC)
+	c.ProcessorMetadata.LastUpdate = &processDate
+	c.ProcessorMetadata.KoreModelsVersion = &models.KoreModelVersion
+
+	sb := strings.Builder{}
+	if c.Serie != nil {
+		sb.WriteString(*c.Serie)
+	}
+
+	sb.WriteString("-")
+
+	if c.Folio != nil {
+		sb.WriteString(*c.Folio)
+	}
+
+	c.KuantikMetadata.SerieFolio = sb.String()
+
+	return nil
+
 }
 
 func (c *Comprobante40) GetFileName() string {

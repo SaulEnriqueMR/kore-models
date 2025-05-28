@@ -1,6 +1,7 @@
 package nomina
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"time"
 
@@ -30,9 +31,9 @@ type Nomina12 struct {
 }
 
 type EmisorNomina12 struct {
-	Curp             *string              `xml:"Curp,attr" bson:"Curp,omitempty" json:"Curp,omitempty"`                         // Cifrado
+	Curp             *string              `xml:"Curp,attr" bson:"Curp,omitempty" json:"Curp,omitempty"`                                     // Cifrado
 	RegistroPatronal *string              `xml:"RegistroPatronal,attr" bson:"RegistroPatronal,omitempty" json:"RegistroPatronal,omitempty"` // Cifrado
-	RfcPatronOrigen  *string              `xml:"RfcPatronOrigen,attr" bson:"RfcPatronOrigen,omitempty" json:"RfcPatronOrigen,omitempty"`   // Cifrado
+	RfcPatronOrigen  *string              `xml:"RfcPatronOrigen,attr" bson:"RfcPatronOrigen,omitempty" json:"RfcPatronOrigen,omitempty"`    // Cifrado
 	EntidadSncf      *EntidadSNCFNomina12 `xml:"EntidadSNCF" bson:"EntidadSncf,omitempty" json:"EntidadSncf,omitempty"`
 }
 
@@ -42,7 +43,7 @@ type EntidadSNCFNomina12 struct {
 }
 
 type ReceptorNomina12 struct {
-	Curp                       string                     `xml:"Curp,attr" bson:"Curp" json:"Curp"`                                      // Cifrado
+	Curp                       string                     `xml:"Curp,attr" bson:"Curp" json:"Curp"`                                                             // Cifrado
 	NoSeguridadSocial          *string                    `xml:"NumSeguridadSocial,attr" bson:"NoSeguridadSocial,omitempty" json:"NoSeguridadSocial,omitempty"` // Cifrado
 	FechaInicioRelLaboral      *string                    `xml:"FechaInicioRelLaboral,attr" bson:"FechaInicioRelLaboral,omitempty" json:"FechaInicioRelLaboral,omitempty"`
 	FechaInicioRelacionLaboral *time.Time                 `bson:"FechaInicioRelacionLaboral,omitempty" json:"FechaInicioRelacionLaboral,omitempty"`
@@ -71,6 +72,25 @@ func (r *ReceptorNomina12) UnmarshalXML(d *xml.Decoder, start xml.StartElement) 
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*r = ReceptorNomina12(aux)
+
+	if r.FechaInicioRelLaboral != nil {
+		fechaIniRelLab, _ := helpers.ParseDatetime(*aux.FechaInicioRelLaboral)
+		r.FechaInicioRelacionLaboral = &fechaIniRelLab
+	}
+
+	return nil
+}
+
+func (r *ReceptorNomina12) UnmarshalJSON(data []byte) error {
+	// Create an alias to avoid recursion
+	type Alias ReceptorNomina12
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*r = ReceptorNomina12(aux)
@@ -182,6 +202,40 @@ func (c *Nomina12) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*c = Nomina12(aux)
+	fecha1, err := helpers.ParseDatetime(aux.FechaPagoString)
+	if err != nil {
+		return err
+	}
+
+	c.FechaPago = fecha1
+
+	fecha2, err := helpers.ParseDatetime(aux.FechaInicialPagoString)
+	if err != nil {
+		return err
+	}
+
+	c.FechaInicialPago = fecha2
+
+	fecha3, err := helpers.ParseDatetime(aux.FechaFinalPagoString)
+	if err != nil {
+		return err
+	}
+
+	c.FechaFinalPago = fecha3
+
+	return nil
+}
+
+func (c *Nomina12) UnmarshalJSON(data []byte) error {
+	// Create an alias to avoid recursion
+	type Alias Nomina12
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*c = Nomina12(aux)

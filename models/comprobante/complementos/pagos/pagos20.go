@@ -1,6 +1,7 @@
 package pagos
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"strings"
 	"time"
@@ -38,9 +39,9 @@ type PagoPagos20 struct {
 	NoOperacion                    *string                   `xml:"NumOperacion,attr" bson:"NoOperacion,omitempty" json:"NoOperacion,omitempty"`
 	RfcEmisorCuentaOrdenante       *string                   `xml:"RfcEmisorCtaOrd,attr" bson:"RfcEmisorCuentaOrdenante,omitempty" json:"RfcEmisorCuentaOrdenante,omitempty"`
 	NombreBancoOrdenanteExtranjero *string                   `xml:"NomBancoOrdExt,attr" bson:"NombreBancoOrdenanteExtranjero,omitempty" json:"NombreBancoOrdenanteExtranjero,omitempty"` // Cifrado
-	CuentaOrdenante                *string                   `xml:"CtaOrdenante,attr" bson:"CuentaOrdenante,omitempty" json:"CuentaOrdenante,omitempty"`                  // Cifrado
-	RfcEmisorCuentaBeneficiario    *string                   `xml:"RfcEmisorCtaBen,attr" bson:"RfcEmisorCuentaBeneficiario,omitempty" json:"RfcEmisorCuentaBeneficiario,omitempty"`   // Cifrado
-	CuentaBeneficiario             *string                   `xml:"CtaBeneficiario,attr" bson:"CuentaBeneficiario,omitempty" json:"CuentaBeneficiario,omitempty"`            // Cifrado
+	CuentaOrdenante                *string                   `xml:"CtaOrdenante,attr" bson:"CuentaOrdenante,omitempty" json:"CuentaOrdenante,omitempty"`                                 // Cifrado
+	RfcEmisorCuentaBeneficiario    *string                   `xml:"RfcEmisorCtaBen,attr" bson:"RfcEmisorCuentaBeneficiario,omitempty" json:"RfcEmisorCuentaBeneficiario,omitempty"`      // Cifrado
+	CuentaBeneficiario             *string                   `xml:"CtaBeneficiario,attr" bson:"CuentaBeneficiario,omitempty" json:"CuentaBeneficiario,omitempty"`                        // Cifrado
 	TipoCadenaPago                 *string                   `xml:"TipoCadPago,attr" bson:"TipoCadenaPago,omitempty" json:"TipoCadenaPago,omitempty"`
 	CertificadoPago                *string                   `xml:"CertPago,attr" bson:"CertificadoPago,omitempty" json:"CertificadoPago,omitempty"`
 	CadenaPago                     *string                   `xml:"CadPago,attr" bson:"CadenaPago,omitempty" json:"CadenaPago,omitempty"`
@@ -126,6 +127,26 @@ func (p *PagoPagos20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
+		return err
+	}
+	*p = PagoPagos20(aux)
+
+	fecha, err := helpers.ParseDatetime(aux.FechaPagoString)
+	if err != nil {
+		return err
+	}
+	p.FechaPago = fecha
+
+	return nil
+}
+
+func (p *PagoPagos20) UnmarshalJSON(data []byte) error {
+	// Create an alias to avoid recursion
+	type Alias PagoPagos20
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*p = PagoPagos20(aux)

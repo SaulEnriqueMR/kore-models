@@ -1,6 +1,7 @@
 package nomina
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"testing"
 
@@ -16,6 +17,23 @@ func GetNomina11ForTest(filename string, t *testing.T) (nomina11.Nomina11, error
 	assert.NoError(t, errUnmashal)
 	testing2.GenerateJSONFromStructure("nomina11.json", parsed)
 	return parsed, errUnmashal
+}
+
+func GetNomina11ForTestJSON(filename string, t *testing.T) (nomina11.Nomina11, error) {
+	data := testing2.GetFileContentForTest(filename, t)
+	var parsed nomina11.Nomina11
+	errUnmashal := json.Unmarshal(data, &parsed)
+	assert.NoError(t, errUnmashal)
+	return parsed, errUnmashal
+}
+
+func TestFullNomina11JSON(t *testing.T) {
+	nomina, _ := GetNomina11ForTestJSON("./nomina11.json", t)
+	InternalTestBaseAttributes(t, nomina)
+	InternalTestPercepciones(t, nomina.Percepciones)
+	InternalTestDeducciones(t, nomina.Deducciones)
+	InternalTestIncapacidades(t, nomina.Incapacidades)
+	InternalTestHorasExtras(t, nomina.HorasExtras)
 }
 
 func TestFullNomina11(t *testing.T) {

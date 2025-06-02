@@ -1,6 +1,7 @@
 package comprobante
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"testing"
 
@@ -16,6 +17,26 @@ func GetComprobante33ForTest(filename string, t *testing.T) (comprobante3.Compro
 	assert.NoError(t, errUnmarshal)
 	testing2.GenerateJSONFromStructure("comprobante33.json", parsed)
 	return parsed, errUnmarshal
+}
+
+func GetComprobante33ForTestJSON(filename string, t *testing.T) (comprobante3.Comprobante33, error) {
+	data := testing2.GetFileContentForTest(filename, t)
+	var parsed comprobante3.Comprobante33
+	errUnmarshal := json.Unmarshal(data, &parsed)
+	assert.NoError(t, errUnmarshal)
+	return parsed, errUnmarshal
+}
+
+func TestFullComprobante33JSON(t *testing.T) {
+	comprobante33, _ := GetComprobante33ForTestJSON("./comprobante33.json", t)
+	InternalTestFullAtributesComprobante33(t, comprobante33)
+	InternalTestFullAtributesCfdiRelacionados(t, *comprobante33.CfdisRelacionados)
+	InternalTestFullAtributesEmisorComprobante33(t, comprobante33.Emisor)
+	InternalTestFullAtributesReceptorComprobante33(t, comprobante33.Receptor)
+	InternalTestFullAtributesImpuestosComprobante33(t, *comprobante33.Impuestos)
+	InternalTestFullAtributesConceptos33(t, comprobante33.Conceptos)
+	InternalTestFullAtributesComplemento33(t, *comprobante33.Complemento)
+
 }
 
 func TestComprobante33(t *testing.T) {

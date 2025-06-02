@@ -1,6 +1,7 @@
 package pagos
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"testing"
 
@@ -16,6 +17,20 @@ func GetPagos10ForTest(filename string, t *testing.T) (pagos10.Pagos10, error) {
 	assert.NoError(t, errUnmashal)
 	testing2.GenerateJSONFromStructure("pagos10.json", parsed)
 	return parsed, errUnmashal
+}
+
+func GetPagos10ForTestJSON(filename string, t *testing.T) (pagos10.Pagos10, error) {
+	data := testing2.GetFileContentForTest(filename, t)
+	var parsed pagos10.Pagos10
+	errUnmashal := json.Unmarshal(data, &parsed)
+	assert.NoError(t, errUnmashal)
+	return parsed, errUnmashal
+}
+
+func TestFullPagos10JSON(t *testing.T) {
+	pagos, _ := GetPagos10ForTestJSON("./pagos10.json", t)
+	assert.NotNil(t, pagos)
+	InternalTestBasePagos10Attributes(t, pagos)
 }
 
 func TestFullPagos10(t *testing.T) {

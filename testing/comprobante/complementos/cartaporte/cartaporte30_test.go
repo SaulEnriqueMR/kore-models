@@ -1,6 +1,7 @@
 package cartaporte
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"strings"
 	"testing"
@@ -17,6 +18,20 @@ func GetCartaPorte30ForTest(filename string, t *testing.T) (cartaporte1.CartaPor
 	assert.NoError(t, errUnmashal)
 	testing2.GenerateJSONFromStructure("cartaporte30.json", parsed)
 	return parsed, errUnmashal
+}
+
+func GetCartaPorte30ForTestJSON(filename string, t *testing.T) (cartaporte1.CartaPorte30, error) {
+	data := testing2.GetFileContentForTest(filename, t)
+	var parsed cartaporte1.CartaPorte30
+	errUnmashal := json.Unmarshal(data, &parsed)
+	assert.NoError(t, errUnmashal)
+	return parsed, errUnmashal
+}
+
+func TestFullCartaPorte30JSON(t *testing.T) {
+	cartaporte, _ := GetCartaPorte30ForTestJSON("./cartaporte30.json", t)
+	assert.NotNil(t, cartaporte)
+	InternalTestCartaPorte30(t, cartaporte)
 }
 
 func TestFullCartaPorte30(t *testing.T) {

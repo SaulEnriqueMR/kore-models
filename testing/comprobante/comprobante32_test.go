@@ -1,6 +1,7 @@
 package comprobante
 
 import (
+	"encoding/json"
 	"encoding/xml"
 
 	comprobante2 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
@@ -17,6 +18,23 @@ func GetComprobante32ForTest(filename string, t *testing.T) (comprobante2.Compro
 	assert.NoError(t, errUnmarshal)
 	testing2.GenerateJSONFromStructure("comprobante32.json", parsed)
 	return parsed, errUnmarshal
+}
+
+func GetComprobante32ForTestJSON(filename string, t *testing.T) (comprobante2.Comprobante32, error) {
+	data := testing2.GetFileContentForTest(filename, t)
+	var parsed comprobante2.Comprobante32
+	errUnmarshal := json.Unmarshal(data, &parsed)
+	assert.NoError(t, errUnmarshal)
+	return parsed, errUnmarshal
+}
+
+func TestFullComprobante32JSON(t *testing.T) {
+	comprobante32, _ := GetComprobante32ForTestJSON("./comprobante32.json", t)
+	InternalTestFullAtributesComprobante32(t, comprobante32)
+	InternalTestFullAtributesEmisorComprobante32(t, comprobante32.Emisor)
+	InternalTestFullAtributesReceptor32(t, comprobante32.Receptor)
+	InternalTestFullAtributesConceptos32(t, comprobante32.Conceptos)
+	InternalTestFullAtributesImpuestos32(t, comprobante32.Impuestos)
 }
 
 func TestComprobante32(t *testing.T) {

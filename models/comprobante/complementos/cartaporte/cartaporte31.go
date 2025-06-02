@@ -202,6 +202,33 @@ func (m *MercanciaCartaPorte31) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 	return nil
 }
 
+func (m *MercanciaCartaPorte31) UnmarshalJSON(data []byte) error {
+	// Create an alias to avoid recursion
+	type Alias MercanciaCartaPorte31
+	var aux Alias
+
+	// Unmarshal the XML into the alias
+	if err := json.Unmarshal(data, &aux); err != nil {
+		return err
+	}
+	*m = MercanciaCartaPorte31(aux)
+	if m.MaterialPeligroso != nil {
+		isMaterialPeligroso := helpers.ResolveSatBoolean(*aux.MaterialPeligroso)
+		m.EsMaterialPeligroso = &isMaterialPeligroso
+	}
+	if m.FechaCaducidadString != nil && *m.FechaCaducidadString != "" {
+		fecha, errFecha := helpers.ParseDatetime(*m.FechaCaducidadString)
+		if errFecha == nil {
+			m.FechaCaducidad = &fecha
+		}
+	}
+	if m.UUIDComercioExt != nil && *m.UUIDComercioExt != "" {
+		uuidComercioExterior := strings.ToUpper(*m.UUIDComercioExt)
+		m.UuidComercioExterior = &uuidComercioExterior
+	}
+	return nil
+}
+
 type DocumentacionAduaneraCartaPorte31 struct {
 	Tipo                   string  `xml:"TipoDocumento,attr" bson:"TipoDocumento" json:"TipoDocumento"`
 	NumeroPedimento        *string `xml:"NumPedimento,attr" bson:"NumeroPedimento,omitempty" json:"NumeroPedimento,omitempty"`

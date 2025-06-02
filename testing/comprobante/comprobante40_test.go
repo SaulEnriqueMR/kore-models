@@ -1,6 +1,7 @@
 package comprobante
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"testing"
 
@@ -15,6 +16,24 @@ func GetComprobante40ForTest(filename string, t *testing.T) (comprobante2.Compro
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
 	return parsed, errUnmashal
+}
+
+func GetComprobante40ForTestJSON(filename string, t *testing.T) (comprobante2.Comprobante40, error) {
+	data := testing2.GetFileContentForTest(filename, t)
+	var parsed comprobante2.Comprobante40
+	errUnmashal := json.Unmarshal(data, &parsed)
+	return parsed, errUnmashal
+}
+
+func TestFullComprobante40JSON(t *testing.T) {
+	comprobante, _ := GetComprobante40ForTestJSON("./comprobante40.json", t)
+	InternalTestFullAttributes40(t, comprobante)
+	InternalTestFullInformacionGlobal40(t, comprobante.InformacionGlobal)
+	InternalTestFullCfdisRelacionados40(t, comprobante.CfdisRelacionados)
+	InternalTestFullEmisor40(t, comprobante.Emisor)
+	InternalTestFullReceptor40(t, comprobante.Receptor)
+	InternalTestFullConcepto40(t, comprobante.Conceptos)
+	InternalTestFullImpuestos40(t, comprobante.Impuestos)
 }
 
 func TestFullComprobante40(t *testing.T) {

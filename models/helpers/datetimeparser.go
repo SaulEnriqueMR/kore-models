@@ -26,7 +26,7 @@ func ParseDatetime(s string) (time.Time, error) {
 	// Hacemos un trim, debido a que muchas veces los campos vienen con espacios al inicio y al final.
 	trimmedString := strings.TrimSpace(s)
 	if trimmedString == "" {
-		return time.Time{}, errors.New("error parsing datetime. String is empty")
+		return time.Time{}, nil
 	}
 	// Primero checamos si coincide con el layout de ISO.
 	patternISO := regexp.MustCompile(IsoDateRegex)

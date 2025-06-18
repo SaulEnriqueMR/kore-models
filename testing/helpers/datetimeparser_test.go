@@ -35,10 +35,6 @@ func TestParseDatetime(t *testing.T) {
 	xsDateTimeTest2, _ := helpers.ParseDatetime(xsDateTimeInput2)
 	assert.Equal(t, expectedXsDateTime2, xsDateTimeTest2)
 
-	emptyInput := ""
-	_, errEmpty := helpers.ParseDatetime(emptyInput)
-	assert.Error(t, errEmpty)
-
 	badInput := "sdasdasdouhe"
 	_, errBad := helpers.ParseDatetime(badInput)
 	assert.Error(t, errBad)

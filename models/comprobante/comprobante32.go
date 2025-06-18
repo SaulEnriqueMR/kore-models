@@ -356,112 +356,17 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 }
 
 func (c *Comprobante32) UnmarshalJSON(data []byte) error {
-	// Create an alias to avoid recursion
 	type Alias Comprobante32
 	var aux Alias
-
-	// Unmarshal the XML into the alias
 	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
-
 	fechaEmision, err := helpers.ParseDatetime(aux.Fecha)
 	if err != nil {
 		return err
 	}
-
 	*c = Comprobante32(aux)
-
-	if aux.FolioFiscalOrig != nil {
-		folioOriginal := strings.ToUpper(*aux.FolioFiscalOrig)
-		c.FolioFiscalOriginal = &folioOriginal
-	}
-
 	c.FechaEmision = fechaEmision
-	c.Comprobante = true
-	c.Vigente = nil
-	c.ProcessorMetadata.CreationDate = nil
-
-	switch strings.ToLower(c.TipoDeComprobante) {
-	case "ingreso":
-		c.TipoComprobante = "I"
-		break
-	case "egreso":
-		c.TipoComprobante = "E"
-		break
-	case "traslado":
-		c.TipoComprobante = "T"
-		break
-	}
-
-	tipoCambio := 1.0
-	if c.TipoDeCambio != nil {
-		tipoDeCambio := *c.TipoDeCambio
-		parsedFloat, _ := strconv.ParseFloat(tipoDeCambio, 64)
-		if parsedFloat > 0 {
-			tipoCambio = parsedFloat
-		}
-	}
-
-	c.TipoCambio = tipoCambio
-	totalesMonedaLocal := documentofiscaldigital.TotalesMonedaLocal{
-		Total:    c.Total * tipoCambio,
-		Subtotal: c.Subtotal * tipoCambio,
-	}
-
-	if c.Descuento != nil {
-		descuento := *c.Descuento * tipoCambio
-		totalesMonedaLocal.Descuento = &descuento
-	}
-
-	if c.Impuestos.TotalImpuestosRetenidos != nil {
-		tir := *c.Impuestos.TotalImpuestosRetenidos * tipoCambio
-		totalesMonedaLocal.TotalImpuestosRetenidos = &tir
-	}
-
-	if c.Impuestos.TotalImpuestosTrasladados != nil {
-		tit := *c.Impuestos.TotalImpuestosTrasladados * tipoCambio
-		totalesMonedaLocal.TotalImpuestosTrasladados = &tit
-	}
-
-	c.TotalesMonedaLocal = totalesMonedaLocal
-
-	if c.InformacionAdicional != nil {
-		c.InformacionAdicional.StampedByKuantik = nil
-	}
-	if c.Cancelacion != nil {
-		c.Cancelacion.CanceledByKuantik = nil
-	}
-
-	if c.Complemento.TimbreFiscalDigital != nil {
-		tfd := c.Complemento.TimbreFiscalDigital.TimbreFiscalDigital10
-		if tfd != nil {
-			c.FechaTimbrado = tfd.FechaTimbrado
-			c.Uuid = strings.ToUpper(tfd.Uuid)
-		}
-	}
-	c.CadenaOriginal = helpers.CreateCadenaOriginal(*c)
-
-	// Calculo de totales
-	// processDate := time.Now().UTC()
-	now := time.Now()
-	processDate := time.Date(now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second(), 0, time.UTC)
-	c.ProcessorMetadata.LastUpdate = &processDate
-	c.ProcessorMetadata.KoreModelsVersion = &models.KoreModelVersion
-
-	sb := strings.Builder{}
-	if c.Serie != nil {
-		sb.WriteString(*c.Serie)
-	}
-
-	sb.WriteString("-")
-
-	if c.Folio != nil {
-		sb.WriteString(*c.Folio)
-	}
-
-	c.KuantikMetadata.SerieFolio = sb.String()
-
 	return nil
 }
 

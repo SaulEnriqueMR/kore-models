@@ -72,7 +72,12 @@ func (p Pagos20) ToPagoCfdi() *ComplementoPagos {
 						ImportePagado:        dr.ImportePagado,
 						ImporteSaldoInsoluto: dr.ImporteSaldoInsoluto,
 						ObjetoImpuesto:       dr.ObjetoImpuesto,
-						Impuestos: func(detalle pagos.ImpuestosDRPagos20) []Impuesto {
+						Impuestos: func(detalle *pagos.ImpuestosDRPagos20) []Impuesto {
+
+							if detalle == nil {
+								return make([]Impuesto, 0)
+							}
+
 							impuestos := slicesutils.Reduce(helpers.SafeUnwrap(detalle.Retenciones), func(acum []Impuesto, curr pagos.RetencionDRPagos20) []Impuesto {
 								return append(acum, Impuesto{
 									Tipo:       "Retencion",
@@ -89,13 +94,13 @@ func (p Pagos20) ToPagoCfdi() *ComplementoPagos {
 									Base:       curr.Base,
 									Impuesto:   curr.Impuesto,
 									TipoFactor: curr.TipoFactor,
-									TasaOCuota: *curr.TasaOCuota,
-									Importe:    *curr.Importe,
+									TasaOCuota: helpers.SafeUnwrap(curr.TasaOCuota),
+									Importe:    helpers.SafeUnwrap(curr.Importe),
 								})
 							}, impuestos)
 
 							return impuestos
-						}(helpers.SafeUnwrap(dr.Impuestos)),
+						}(dr.Impuestos),
 					}
 				}),
 				DetalleImpuestos: &detalleImpuestos,

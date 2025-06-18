@@ -1,7 +1,6 @@
 package comprobante
 
 import (
-	"encoding/json"
 	"encoding/xml"
 	"fmt"
 	"strings"
@@ -263,21 +262,6 @@ func (c *Comprobante33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 
 	c.KuantikMetadata.SerieFolio = sb.String()
 
-	return nil
-}
-
-func (c *Comprobante33) UnmarshalJSON(data []byte) error {
-	type Alias Comprobante33
-	var aux Alias
-	if err := json.Unmarshal(data, &aux); err != nil {
-		return err
-	}
-	fechaEmision, err := helpers.ParseDatetime(aux.Fecha)
-	if err != nil {
-		return err
-	}
-	*c = Comprobante33(aux)
-	c.FechaEmision = fechaEmision
 	return nil
 }
 

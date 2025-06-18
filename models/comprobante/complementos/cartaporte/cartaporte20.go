@@ -1,7 +1,6 @@
 package cartaporte
 
 import (
-	"encoding/json"
 	"encoding/xml"
 	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	"strings"
@@ -60,23 +59,6 @@ func (u *UbicacionCartaPorte20) UnmarshalXML(d *xml.Decoder, start xml.StartElem
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-	*u = UbicacionCartaPorte20(aux)
-	fecha, errFecha := helpers.ParseDatetime(u.FechaHoraSalidaLlegadaString)
-	if errFecha == nil {
-		u.FechaHoraSalidaLlegada = fecha
-	}
-	return nil
-}
-
-func (u *UbicacionCartaPorte20) UnmarshalJSON(data []byte) error {
-	// Create an alias to avoid recursion
-	type Alias UbicacionCartaPorte20
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*u = UbicacionCartaPorte20(aux)

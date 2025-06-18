@@ -1,7 +1,6 @@
 package nomina
 
 import (
-	"encoding/json"
 	"encoding/xml"
 	"time"
 
@@ -72,25 +71,6 @@ func (r *ReceptorNomina12) UnmarshalXML(d *xml.Decoder, start xml.StartElement) 
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-	*r = ReceptorNomina12(aux)
-
-	if r.FechaInicioRelLaboral != nil {
-		fechaIniRelLab, _ := helpers.ParseDatetime(*aux.FechaInicioRelLaboral)
-		r.FechaInicioRelacionLaboral = &fechaIniRelLab
-	}
-
-	return nil
-}
-
-func (r *ReceptorNomina12) UnmarshalJSON(data []byte) error {
-	// Create an alias to avoid recursion
-	type Alias ReceptorNomina12
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*r = ReceptorNomina12(aux)
@@ -202,40 +182,6 @@ func (c *Nomina12) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-	*c = Nomina12(aux)
-	fecha1, err := helpers.ParseDatetime(aux.FechaPagoString)
-	if err != nil {
-		return err
-	}
-
-	c.FechaPago = fecha1
-
-	fecha2, err := helpers.ParseDatetime(aux.FechaInicialPagoString)
-	if err != nil {
-		return err
-	}
-
-	c.FechaInicialPago = fecha2
-
-	fecha3, err := helpers.ParseDatetime(aux.FechaFinalPagoString)
-	if err != nil {
-		return err
-	}
-
-	c.FechaFinalPago = fecha3
-
-	return nil
-}
-
-func (c *Nomina12) UnmarshalJSON(data []byte) error {
-	// Create an alias to avoid recursion
-	type Alias Nomina12
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*c = Nomina12(aux)

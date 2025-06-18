@@ -1,7 +1,6 @@
 package comprobante
 
 import (
-	"encoding/json"
 	"encoding/xml"
 	"fmt"
 	"strconv"
@@ -122,29 +121,6 @@ func (ia32 *InformacionAduanera32) UnmarshalXML(d *xml.Decoder, start xml.StartE
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-
-	*ia32 = InformacionAduanera32(aux)
-
-	if ia32 != nil {
-		fecha, err := helpers.ParseDatetime(ia32.FechaString)
-		if err != nil {
-			return err
-		}
-		ia32.Fecha = fecha
-	}
-
-	return nil
-}
-
-func (ia32 *InformacionAduanera32) UnmarshalJSON(data []byte) error {
-	// Create an alias to avoid recursion
-	type Alias InformacionAduanera32
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 
@@ -352,21 +328,6 @@ func (c *Comprobante32) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 
 	c.KuantikMetadata.SerieFolio = sb.String()
 
-	return nil
-}
-
-func (c *Comprobante32) UnmarshalJSON(data []byte) error {
-	type Alias Comprobante32
-	var aux Alias
-	if err := json.Unmarshal(data, &aux); err != nil {
-		return err
-	}
-	fechaEmision, err := helpers.ParseDatetime(aux.Fecha)
-	if err != nil {
-		return err
-	}
-	*c = Comprobante32(aux)
-	c.FechaEmision = fechaEmision
 	return nil
 }
 

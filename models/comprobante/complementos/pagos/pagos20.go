@@ -1,7 +1,6 @@
 package pagos
 
 import (
-	"encoding/json"
 	"encoding/xml"
 	"strings"
 	"time"
@@ -127,26 +126,6 @@ func (p *PagoPagos20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 
 	// Unmarshal the XML into the alias
 	if err := d.DecodeElement(&aux, &start); err != nil {
-		return err
-	}
-	*p = PagoPagos20(aux)
-
-	fecha, err := helpers.ParseDatetime(aux.FechaPagoString)
-	if err != nil {
-		return err
-	}
-	p.FechaPago = fecha
-
-	return nil
-}
-
-func (p *PagoPagos20) UnmarshalJSON(data []byte) error {
-	// Create an alias to avoid recursion
-	type Alias PagoPagos20
-	var aux Alias
-
-	// Unmarshal the XML into the alias
-	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
 	*p = PagoPagos20(aux)

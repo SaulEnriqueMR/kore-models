@@ -9,15 +9,15 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func GetEdicomGenericaForTest(filename string, t *testing.T) (addenda.EdicomGenerica, error) {
+func GetInssistForTest(filename string, t *testing.T) (addenda.Inssist, error) {
 	data := testing2.GetFileContentForTest(filename, t)
-	var parsed addenda.EdicomGenerica
+	var parsed addenda.Inssist
 	errUnmashal := xml.Unmarshal(data, &parsed)
 	assert.NoError(t, errUnmashal)
-	testing2.GenerateJSONFromStructure("edicomgenerica.json", parsed)
+	testing2.GenerateJSONFromStructure("innsist.json", parsed)
 	return parsed, errUnmashal
 }
 
-func TestEdicomGenerica(t *testing.T) {
-	_, _ = GetEdicomGenericaForTest("./edicomgenerica.xml", t)
+func TestInnsist(t *testing.T) {
+	_, _ = GetInssistForTest("./innsist.xml", t)
 }

@@ -2,10 +2,11 @@ package addenda
 
 import (
 	"encoding/xml"
+	"testing"
+
 	"github.com/SaulEnriqueMR/kore-models/models/addenda"
 	testing2 "github.com/SaulEnriqueMR/kore-models/testing"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func GetBuzonFiscalForTest(filename string, t *testing.T) (addenda.BuzonFiscal, error) {

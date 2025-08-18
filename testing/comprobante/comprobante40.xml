@@ -4906,5 +4906,6 @@
                 <Amount>451.63</Amount>
             </payableAmount>
         </requestForPayment>
+        <Innsist Referencia="111111" Reservacion="2222222" OtrosCargos="3333333" importeaPagar="5555555" Importe="" Retenido="" a="" Cuenta="" de="" Terceros="4444444" />
     </Addenda>
 </cfdi:Comprobante>

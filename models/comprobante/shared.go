@@ -79,6 +79,7 @@ type Addenda struct {
 	EdicomGenerica    *[]addenda.EdicomGenerica    `xml:"customized>EDICOM_GENERICA" bson:"EdicomGenerica,omitempty" json:"EdicomGenerica,omitempty"`
 	RBoschSap         *[]addenda.RBoschSap         `xml:"customized>RBOSCH_SAP" bson:"RBoschSap,omitempty" json:"RBoschSap,omitempty"`
 	RequestForPayment *[]addenda.RequestForPayment `xml:"requestForPayment" bson:"RequestForPayment,omitempty" json:"RequestForPayment,omitempty"`
+	Innsist           *[]addenda.Inssist           `xml:"Inssist" bson:"Inssist,omitempty" json:"Inssist,omitempty"`
 }
 
 type KuantikMetadata struct {

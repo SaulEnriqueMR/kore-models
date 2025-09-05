@@ -211,7 +211,7 @@ func (c *Comprobante40) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	c.FechaEmision = fechaEmision
 	c.Comprobante = true
 	c.Vigente = nil
-	c.ProcessorMetadata.CreationDate = nil
+	// c.ProcessorMetadata.CreationDate = nil
 
 	if c.InformacionAdicional != nil {
 		c.InformacionAdicional.StampedByKuantik = nil

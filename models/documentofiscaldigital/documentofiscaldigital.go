@@ -18,13 +18,16 @@ type DocumentoFiscalDigital struct {
 	PdfPath              string                `bson:"PdfPath" json:"PdfPath"`
 	TotalesMonedaLocal   TotalesMonedaLocal    `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
 	ProcessorMetadata    ProcessorMetadata     `bson:"ProcessorMetadata" json:"ProcessorMetadata"`
+	ZipProcessor         *ZipProcessor         `bson:"ZipProcessor,omitempty" json:"ZipProcessor,omitempty"`
+	XmlPathProcessor     *XmlPathProcessor     `bson:"XmlPathProcessor,omitempty" json:"XmlPathProcessor,omitempty"`
+	XmlFileProcessor     *XmlFileProcessor     `bson:"XmlFileProcessor,omitempty" json:"XmlFileProcessor,omitempty"`
+	FilePathsProcessor   *FilePathsProcessor   `bson:"FilePathsProcessor,omitempty" json:"FilePathsProcessor,omitempty"`
 }
 
 type ProcessorMetadata struct {
 	KoreModelsVersion  *string             `bson:"KoreModelsVersion" json:"KoreModelsVersion"`
 	KoreVersion        *string             `bson:"KoreVersion" json:"KoreVersion"`
 	LastUpdate         *time.Time          `bson:"LastUpdate" json:"LastUpdate"`
-	CreationDate       *time.Time          `bson:"CreationDate,omitempty" json:"CreationDate,omitempty"`
 	ZipProcessor       *ZipProcessor       `bson:"ZipProcessor,omitempty" json:"ZipProcessor,omitempty"`
 	XmlPathProcessor   *XmlPathProcessor   `bson:"XmlPathProcessor,omitempty" json:"XmlPathProcessor,omitempty"`
 	XmlFileProcessor   *XmlFileProcessor   `bson:"XmlFileProcessor,omitempty" json:"XmlFileProcessor,omitempty"`

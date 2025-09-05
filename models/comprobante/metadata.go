@@ -19,8 +19,10 @@ type ComprobanteMetadata struct {
 	Metadata           bool                                     `bson:"Metadata" json:"Metadata"`
 	Cancelacion        *CancelacionMetadata                     `xml:"Cancelacion" bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
 	Transaccion        string                                   `bson:"Transaccion" json:"Transaccion"`
+	CreateDate         *time.Time                               `bson:"CreateDate,omitempty" json:"CreateDate,omitempty"` // --- IGNORE ---
 	TotalesMonedaLocal TotalesMonedaLocalMetadata               `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
 	ProcessorMetadata  documentofiscaldigital.ProcessorMetadata `bson:"ProcessorMetadata" json:"ProcessorMetadata"`
+	MetaProcessor      documentofiscaldigital.MetaProcessor     `bson:"MetaProcessor" json:"MetaProcessor"`
 }
 
 type CancelacionMetadata struct {

@@ -249,6 +249,9 @@ func (c *Comprobante33) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	c.ProcessorMetadata.LastUpdate = &processDate
 	c.ProcessorMetadata.KoreModelsVersion = &models.KoreModelVersion
 
+	fileName := c.GetFileName()
+	c.DocumentoFiscalDigital.S3FilePath = &fileName
+
 	sb := strings.Builder{}
 	if c.Serie != nil {
 		sb.WriteString(*c.Serie)

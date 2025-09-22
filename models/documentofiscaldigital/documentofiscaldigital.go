@@ -22,6 +22,7 @@ type DocumentoFiscalDigital struct {
 	XmlPathProcessor     *XmlPathProcessor     `bson:"XmlPathProcessor,omitempty" json:"XmlPathProcessor,omitempty"`
 	XmlFileProcessor     *XmlFileProcessor     `bson:"XmlFileProcessor,omitempty" json:"XmlFileProcessor,omitempty"`
 	FilePathsProcessor   *FilePathsProcessor   `bson:"FilePathsProcessor,omitempty" json:"FilePathsProcessor,omitempty"`
+	S3FilePath           *string               `bson:"S3FilePath,omitempty" json:"S3FilePath,omitempty"`
 }
 
 type ProcessorMetadata struct {

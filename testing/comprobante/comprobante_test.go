@@ -5,7 +5,8 @@ import (
 	"os"
 	"testing"
 
-	comprobante2 "github.com/SaulEnriqueMR/kore-models/models/comprobante"
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante"
+	"github.com/SaulEnriqueMR/kore-models/models/serializate"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -27,7 +28,7 @@ func GetFileForTest(filename string, t *testing.T) []byte {
 
 func TestComprobante(t *testing.T) {
 	bytesComprobante32 := GetFileForTest("./comprobante32.xml", t)
-	comprobante32, errComprobante32 := comprobante2.SerializeComprobanteFromXml(bytesComprobante32)
+	comprobante32, errComprobante32 := serializate.SerializeComprobanteFromXml[comprobante.Comprobante](bytesComprobante32)
 	assert.Nil(t, errComprobante32)
 	assert.NotNil(t, comprobante32)
 
@@ -36,7 +37,7 @@ func TestComprobante(t *testing.T) {
 	assert.Nil(t, comprobante32.Comprobante40)
 
 	bytesComprobante33 := GetFileForTest("./comprobante33.xml", t)
-	comprobante33, errComprobante33 := comprobante2.SerializeComprobanteFromXml(bytesComprobante33)
+	comprobante33, errComprobante33 := serializate.SerializeComprobanteFromXml[comprobante.Comprobante](bytesComprobante33)
 	assert.Nil(t, errComprobante33)
 	assert.NotNil(t, comprobante33)
 
@@ -45,7 +46,7 @@ func TestComprobante(t *testing.T) {
 	assert.Nil(t, comprobante33.Comprobante40)
 
 	bytesComprobante40 := GetFileForTest("./comprobante40.xml", t)
-	comprobante40, errComprobante40 := comprobante2.SerializeComprobanteFromXml(bytesComprobante40)
+	comprobante40, errComprobante40 := serializate.SerializeComprobanteFromXml[comprobante.Comprobante](bytesComprobante40)
 	assert.Nil(t, errComprobante40)
 	assert.NotNil(t, comprobante40)
 

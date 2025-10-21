@@ -73,13 +73,15 @@ type Complemento struct {
 }
 
 type Addenda struct {
-	Value             string                       `xml:",innerxml" bson:"Value" json:"Value"`
-	BuzonFiscal       *[]addenda.BuzonFiscal       `xml:"AddendaBuzonFiscal" bson:"BuzonFiscal,omitempty" json:"BuzonFiscal,omitempty"`
-	AddendaFacto      *[]addenda.AddendaFacto      `xml:"addendaFacto" bson:"AddendaFacto,omitempty" json:"AddendaFacto,omitempty"`
-	EdicomGenerica    *[]addenda.EdicomGenerica    `xml:"customized>EDICOM_GENERICA" bson:"EdicomGenerica,omitempty" json:"EdicomGenerica,omitempty"`
-	RBoschSap         *[]addenda.RBoschSap         `xml:"customized>RBOSCH_SAP" bson:"RBoschSap,omitempty" json:"RBoschSap,omitempty"`
-	RequestForPayment *[]addenda.RequestForPayment `xml:"requestForPayment" bson:"RequestForPayment,omitempty" json:"RequestForPayment,omitempty"`
-	Innsist           *[]addenda.Inssist           `xml:"Inssist" bson:"Inssist,omitempty" json:"Inssist,omitempty"`
+	Value                string                       `xml:",innerxml" bson:"Value" json:"Value"`
+	BuzonFiscal          *[]addenda.BuzonFiscal       `xml:"AddendaBuzonFiscal" bson:"BuzonFiscal,omitempty" json:"BuzonFiscal,omitempty"`
+	AddendaFacto         *[]addenda.AddendaFacto      `xml:"addendaFacto" bson:"AddendaFacto,omitempty" json:"AddendaFacto,omitempty"`
+	EdicomGenerica       *[]addenda.EdicomGenerica    `xml:"customized>EDICOM_GENERICA" bson:"EdicomGenerica,omitempty" json:"EdicomGenerica,omitempty"`
+	RBoschSap            *[]addenda.RBoschSap         `xml:"customized>RBOSCH_SAP" bson:"RBoschSap,omitempty" json:"RBoschSap,omitempty"`
+	RequestForPayment    *[]addenda.RequestForPayment `xml:"requestForPayment" bson:"RequestForPayment,omitempty" json:"RequestForPayment,omitempty"`
+	Innsist              *[]addenda.Inssist           `xml:"Inssist" bson:"Inssist,omitempty" json:"Inssist,omitempty"`
+	AddendaEmisor        *[]addenda.AdditionalInfo    `xml:"AddendaEmisor>InformacionAdicional" bson:"AdditionalInfo,omitempty" json:"AddendaEmisor,omitempty"`
+	InformacionAdicional *[]addenda.AdditionalInfo    `xml:"InformacionAdicional" bson:"InformacionAdicional,omitempty" json:"InformacionAdicional,omitempty"`
 }
 
 type KuantikMetadata struct {

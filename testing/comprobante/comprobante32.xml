@@ -4870,5 +4870,185 @@
             </payableAmount>
         </requestForPayment>
         <Innsist Referencia="111111" Reservacion="2222222" OtrosCargos="3333333" importeaPagar="5555555" Importe="" Retenido="" a="" Cuenta="" de="" Terceros="4444444" />
+        <AddendaEmisor>
+            <InformacionAdicional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                  xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+                                  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <CFDI tipoDocumento="FA" numeroDocumentos="1"
+                      etiqueta1C="O. Compra/ Factura:7500006972" valor1C="O. Venta:SO3885490"
+                      valor10C="4.0" />
+                <EMSR calle="James Watt" noInterior="22" colonia="Parque Industrial Cuamatla"
+                      municipio="Cuautitlan Izcalli" estado="Estado de Mexico" pais="Mexico"
+                      codigoPostal="54730" />
+                <EXP calle="James Watt No. 22" colonia="Parque Industrial Cuamatla"
+                     municipio="Cuautitlan Izcalli" estado="Edo. De Mexico" codigoPostal="54730" />
+                <R noInterior="Lomas de Chapultepec" referencia="Miguel Hidalgo" estado="Mexico"
+                   pais="11000" codigoPostal="499022"
+                   valor13R="Monte Pelvoux #111 No. Int. 8. 9. Y PH" />
+                <PTDA />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                       etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                       valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                       valor4PO="---" />
+                <T />
+            </InformacionAdicional>
+        </AddendaEmisor>
+        <InformacionAdicional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                              xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+                              xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <CFDI tipoDocumento="FA" numeroDocumentos="1"
+                  etiqueta1C="O. Compra/ Factura:7500006972" valor1C="O. Venta:SO3885490"
+                  valor10C="4.0" />
+            <EMSR calle="James Watt" noInterior="22" colonia="Parque Industrial Cuamatla"
+                  municipio="Cuautitlan Izcalli" estado="Estado de Mexico" pais="Mexico"
+                  codigoPostal="54730" />
+            <EXP calle="James Watt No. 22" colonia="Parque Industrial Cuamatla"
+                 municipio="Cuautitlan Izcalli" estado="Edo. De Mexico" codigoPostal="54730" />
+            <R noInterior="Lomas de Chapultepec" referencia="Miguel Hidalgo" estado="Mexico"
+               pais="11000" codigoPostal="499022"
+               valor13R="Monte Pelvoux #111 No. Int. 8. 9. Y PH" />
+            <PTDA />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <PTDAo etiqueta1PO="Item:" valor1PO="750_210_18BDI"
+                   etiqueta2PO="Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657"
+                   valor2PO="," etiqueta3PO="Cantidad:" valor3PO="1" etiqueta4PO="PL"
+                   valor4PO="---" />
+            <T />
+        </InformacionAdicional>
     </Addenda>
 </Comprobante>

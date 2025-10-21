@@ -1,0 +1,215 @@
+{
+    "Cfdi": {
+        "TipoDocumento": "FA",
+        "NumeroDocumentos": "1",
+        "Etiqueta1C": "O. Compra/ Factura:7500006972",
+        "Valor1C": "O. Venta:SO3885490",
+        "Valor10C": "4.0"
+    },
+    "Emsr": {
+        "Calle": "James Watt",
+        "NoInterior": "22",
+        "Colonia": "Parque Industrial Cuamatla",
+        "Municipio": "Cuautitlan Izcalli",
+        "Estado": "Estado de Mexico",
+        "Pais": "Mexico",
+        "CodigoPostal": "54730"
+    },
+    "R": {
+        "NoInterior": "Lomas de Chapultepec",
+        "Referencia": "Miguel Hidalgo",
+        "Estado": "Mexico",
+        "Pais": "11000",
+        "CodigoPostal": "499022",
+        "Valor13R": "Monte Pelvoux #111 No. Int. 8. 9. Y PH"
+    },
+    "Exp": {
+        "Calle": "James Watt No. 22",
+        "Colonia": "Parque Industrial Cuamatla",
+        "Municipio": "Cuautitlan Izcalli",
+        "Estado": "Edo. De Mexico",
+        "CodigoPostal": "54730"
+    },
+    "PTDAo": [
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        },
+        {
+            "Etiqueta1Po": "Item:",
+            "Valor1Po": "750_210_18BDI",
+            "Etiqueta2Po": "Jeringa 3 y 10ml. Nac. Export.Tot Eas: 851,600/4,258cjs/18-tLot 5226504 Cod NS309657",
+            "Valor2Po": ",",
+            "Etiqueta3Po": "Cantidad:",
+            "Valor3Po": "1",
+            "Etiqueta4Po": "PL",
+            "Valor4Po": "---"
+        }
+    ]
+}

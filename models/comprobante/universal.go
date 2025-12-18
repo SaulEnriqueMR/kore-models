@@ -5,6 +5,13 @@ type UniversalSearch struct {
 	CadenaOriginal string `json:"CadenaOriginal" bson:"CadenaOriginal"`
 }
 
+func (c *Comprobante30) ToUniversalSearch() *UniversalSearch {
+	return &UniversalSearch{
+		Uuid:           c.Uuid,
+		CadenaOriginal: c.CadenaOriginal,
+	}
+}
+
 func (c *Comprobante32) ToUniversalSearch() *UniversalSearch {
 	return &UniversalSearch{
 		Uuid:           c.Uuid,

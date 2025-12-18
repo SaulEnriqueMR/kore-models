@@ -14,10 +14,11 @@
         "TotalImpuestosTrasladados": 2000
     },
     "ProcessorMetadata": {
-        "KoreModelsVersion": "v1.0.94",
+        "KoreModelsVersion": "v1.1.2",
         "KoreVersion": null,
-        "LastUpdate": "2025-09-05T09:56:34Z"
+        "LastUpdate": "2025-12-18T17:20:15Z"
     },
+    "S3FilePath": "XAXX010101000/XAXX010101000/2023/9/3EA43E97-71BF-4AC5-A28E-9374EA9F8B45.xml",
     "Version": "3.3",
     "Serie": "A",
     "Folio": "123456",

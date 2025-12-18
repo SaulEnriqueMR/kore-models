@@ -13,10 +13,11 @@
         "TotalImpuestosTrasladados": 131.47
     },
     "ProcessorMetadata": {
-        "KoreModelsVersion": "v1.0.94",
+        "KoreModelsVersion": "v1.1.2",
         "KoreVersion": null,
-        "LastUpdate": "2025-09-05T09:56:39Z"
+        "LastUpdate": "2025-12-18T17:20:23Z"
     },
+    "S3FilePath": "SAQ110912DI7  /RIN0009135U4/2019/7/ACCE84DA-6B62-4392-A273-B212B802C193.xml",
     "Version": "3.3",
     "Serie": "A",
     "Folio": "36742",

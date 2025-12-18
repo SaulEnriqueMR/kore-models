@@ -1,0 +1,160 @@
+{
+    "FechaEmision": "2011-12-09T12:55:04Z",
+    "Uuid": "A096B224-D6CF-40A6-8852-4FEA6835F3DA",
+    "FechaTimbrado": "2011-12-09T12:55:09Z",
+    "CadenaOriginal": "||3.0|A|5672|2011-12-09T12:55:04|PAGO EN UNA SOLA EXHIBICION|Contado|1000.000000|50.000000|DESCUENTAZO|13.6569|13.656900|USD|1477.840000|TRANSFERENCIA|ingreso|I|EKU9003173C9|ESCUELA KEMPER URGATE|CALZADA DE LOS REYES|1|1|PARQUE INDUSTRIAL FINSA|CUAUTITLAN|CUAUTITLAN|CUAUTITLAN|Edo. MEX|México|23452|CALZADA DE LOS REYES|1|1|PARQUE INDUSTRIAL FINSA|CUAUTITLAN|CUAUTITLAN|CUAUTITLAN|Edo. MEX|México|23452|XIA190128J61|XENON INDUSTRIAL ARTICLES|Corredor Industrial|1|1|Cd. Mex|Localidad|Referencia|Municipio|VER|MEXICO|11232|1.000000|PIEZA|3e432432|Consumibles de oficina|1274.000000|1274.000000|212312321|2025-01-01|123123|2132145|2.000000|PIEZA|4324234|Parte de consumible|637.000000|1274.000000|65465465|2025-02-02|654654|IEPS|003|10500.000000|IVA|002|16.000000|203.840000|100.000000|203.840000|1.0|A096B224-D6CF-40A6-8852-4FEA6835F3DA|2011-12-09T12:55:09||",
+    "Comprobante": true,
+    "Transaccion": "",
+    "XmlPath": "",
+    "PdfPath": "",
+    "TotalesMonedaLocal": {
+        "Total": 20182.713096,
+        "Subtotal": 13656.9,
+        "Descuento": 682.845,
+        "TotalImpuestosRetenidos": 1365.69,
+        "TotalImpuestosTrasladados": 2783.8224960000002
+    },
+    "ProcessorMetadata": {
+        "KoreModelsVersion": "v1.1.2",
+        "KoreVersion": null,
+        "LastUpdate": "2025-12-18T17:20:14Z"
+    },
+    "S3FilePath": "EKU9003173C9/XIA190128J61/2011/12/A096B224-D6CF-40A6-8852-4FEA6835F3DA.xml",
+    "Version": "3.0",
+    "Serie": "A",
+    "Folio": "5672",
+    "Fecha": "2011-12-09T12:55:04",
+    "Sello": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQ...",
+    "FormaDePago": "PAGO EN UNA SOLA EXHIBICION",
+    "NoCertificado": "00000000000000000000",
+    "Certificado": "MIICqjCCAbKgAwIBAgIJAN6vK1...",
+    "CondicionesDePago": "Contado",
+    "SubTotal": 1000,
+    "Descuento": 50,
+    "MotivoDescuento": "DESCUENTAZO",
+    "TipoDeCambio": "13.6569",
+    "TipoCambio": 13.6569,
+    "Moneda": "USD",
+    "Total": 1477.84,
+    "MetodoDePago": "TRANSFERENCIA",
+    "TipoDeComprobante": "ingreso",
+    "TipoComprobante": "I",
+    "Emisor": {
+        "Rfc": "EKU9003173C9",
+        "Nombre": "ESCUELA KEMPER URGATE",
+        "DomicilioFiscal": {
+            "Calle": "CALZADA DE LOS REYES",
+            "NoExterior": "1",
+            "NoInterior": "1",
+            "Colonia": "PARQUE INDUSTRIAL FINSA",
+            "Localidad": "CUAUTITLAN",
+            "Referencia": "CUAUTITLAN",
+            "Municipio": "CUAUTITLAN",
+            "Estado": "Edo. MEX",
+            "Pais": "México",
+            "CodigoPostal": "23452"
+        },
+        "ExpedidoEn": {
+            "Calle": "CALZADA DE LOS REYES",
+            "NoExterior": "1",
+            "NoInterior": "1",
+            "Colonia": "PARQUE INDUSTRIAL FINSA",
+            "Localidad": "CUAUTITLAN",
+            "Referencia": "CUAUTITLAN",
+            "Municipio": "CUAUTITLAN",
+            "Estado": "Edo. MEX",
+            "Pais": "México",
+            "CodigoPostal": "23452"
+        }
+    },
+    "Receptor": {
+        "Rfc": "XIA190128J61",
+        "Nombre": "XENON INDUSTRIAL ARTICLES",
+        "Domicilio": {
+            "Calle": "Corredor Industrial",
+            "NoExterior": "1",
+            "NoInterior": "1",
+            "Colonia": "Cd. Mex",
+            "Localidad": "Localidad",
+            "Referencia": "Referencia",
+            "Municipio": "Municipio",
+            "Estado": "VER",
+            "Pais": "MEXICO",
+            "CodigoPostal": "11232"
+        }
+    },
+    "Conceptos": [
+        {
+            "Cantidad": 1,
+            "Unidad": "PIEZA",
+            "NoIdentificacion": "3e432432",
+            "Descripcion": "Consumibles de oficina",
+            "ValorUnitario": 1274,
+            "Importe": 1274,
+            "InformacionAduanera": [
+                {
+                    "Numero": "212312321",
+                    "fecha": "2025-01-01",
+                    "Fecha": "2025-01-01T00:00:00Z",
+                    "Aduana": "123123"
+                }
+            ],
+            "CuentaPredial": {
+                "Numero": "2132145"
+            },
+            "Parte": [
+                {
+                    "Cantidad": 2,
+                    "Unidad": "PIEZA",
+                    "NoIdentificacion": "4324234",
+                    "Descripcion": "Parte de consumible",
+                    "ValorUnitario": 637,
+                    "Importe": 1274,
+                    "InformacionAduanera": [
+                        {
+                            "Numero": "65465465",
+                            "fecha": "2025-02-02",
+                            "Fecha": "2025-02-02T00:00:00Z",
+                            "Aduana": "654654"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Impuestos": {
+        "Retenciones": [
+            {
+                "TipoImpuesto": "IEPS",
+                "Impuesto": "003",
+                "Importe": 10500
+            }
+        ],
+        "Traslados": [
+            {
+                "TipoImpuesto": "IVA",
+                "Impuesto": "002",
+                "Tasa": 16,
+                "Importe": 203.84
+            }
+        ],
+        "TotalImpuestosRetenidos": 100,
+        "TotalImpuestosTrasladados": 203.84
+    },
+    "Complemento": {
+        "TimbreFiscalDigital": {
+            "TimbreFiscalDigital10": {
+                "Version": "1.0",
+                "Uuid": "A096B224-D6CF-40A6-8852-4FEA6835F3DA",
+                "Fecha": "2011-12-09T12:55:09",
+                "FechaTimbrado": "2011-12-09T12:55:09Z",
+                "SelloCfd": "vA0rBWGQwbBvFjAD1LoH80q57ECti+YADgzz0P4zdKfBQ2CGyC6MLLkXTpzot0HOk2oBuiK2bCP2quaOGbol1rQsnTixOA2XYPt36r+eGa+zMLDL6KQSBhtYnt0AdIorBggJTsL0JOVt0px6XookBDgAp1/1dHSnvcUXoUmkpsA=",
+                "NoCertificadoSat": "00001000000102717769",
+                "SelloSat": "pQB/4AEXj6bji5UnKetg8iGWnT+YFIen0rjMo9jrprJrKGBAGanPw/JK3XbibzeTTQJNTwwc6iIJcGj1myOd8zTpIch38saK83ccLLvBrU1NJKRM0Qdr2XjlejJfBJB+M3kqxJK66KhBjwPftbGfaGqfT1YYvA9k3wIxgfYCHWQ="
+            }
+        }
+    },
+    "KuantikMetadata": {
+        "SerieFolio": "A-5672"
+    }
+}

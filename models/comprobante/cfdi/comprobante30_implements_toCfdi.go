@@ -40,7 +40,7 @@ func (c Cfdi30) ToCFDI() *CFDI {
 		FormaPago:        c.FormaPago,
 		CondicionesPago:  helpers.SafeUnwrap(c.CondicionesPago),
 		Descuento:        c.Descuento,
-		TipoCambio:       helpers.SafeUnwrap(c.TipoCambio),
+		TipoCambio:       c.TipoCambio,
 		Subtotal:         c.Subtotal,
 		Total:            c.Total,
 		Complemento:      cfdicomplementos.FromComplemento(helpers.SafeUnwrap(c.Complemento)),

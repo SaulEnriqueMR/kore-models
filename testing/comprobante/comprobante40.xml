@@ -97,6 +97,7 @@
             <cfdi:CuentaPredial Numero="aB3cD4eF5gH6iJ7kL8mN9oP0" />
             <cfdi:CuentaPredial Numero="123213FSDFSVSDVSB8mN9oP0" />
             <ComplementoConcepto>
+                <HidroYPetro Version="1.0" TipoPermiso="PER01" NumeroPermiso="NO PERMISO" ClaveHYP="15101505" SubProductoHYP="SP16" />
                 <aieps:acreditamientoIEPS
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         xsi:schemaLocation="http://www.sat.gob.mx/acreditamiento http://www.sat.gob.mx/acreditamiento.xsd"

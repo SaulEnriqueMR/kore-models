@@ -30,16 +30,18 @@ import (
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementos/vehiculousado"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/acreditamientoieps"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/acuentaterceros"
+	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/hidrocarburospetroliferos"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/institeducativas"
 	"github.com/SaulEnriqueMR/kore-models/models/comprobante/complementosconcepto/ventavehiculos"
 	"github.com/SaulEnriqueMR/kore-models/models/timbrefiscaldigital"
 )
 
 type ComplementoConcepto struct {
-	ACuentaTerceros         *acuentaterceros.ACuentaTerceros         `xml:"PorCuentadeTerceros" bson:"ACuentaTerceros,omitempty" json:"ACuentaTerceros,omitempty"`
-	InstitucionesEducativas *institeducativas.InstitucioneEducativas `xml:"instEducativas" bson:"InstitucionesEducativas,omitempty" json:"InstitucionesEducativas,omitempty"`
-	VentaVehiculos          *ventavehiculos.VentaVehiculos           `xml:"VentaVehiculos" bson:"VentaVehiculos,omitempty" json:"VentaVehiculos,omitempty"`
-	AcreditamientoIeps      *acreditamientoieps.AcreditamientoIeps   `xml:"acreditamientoIEPS" bson:"AcreditamientoIeps,omitempty" json:"AcreditamientoIeps,omitempty"`
+	ACuentaTerceros           *acuentaterceros.ACuentaTerceros                     `xml:"PorCuentadeTerceros" bson:"ACuentaTerceros,omitempty" json:"ACuentaTerceros,omitempty"`
+	InstitucionesEducativas   *institeducativas.InstitucioneEducativas             `xml:"instEducativas" bson:"InstitucionesEducativas,omitempty" json:"InstitucionesEducativas,omitempty"`
+	VentaVehiculos            *ventavehiculos.VentaVehiculos                       `xml:"VentaVehiculos" bson:"VentaVehiculos,omitempty" json:"VentaVehiculos,omitempty"`
+	AcreditamientoIeps        *acreditamientoieps.AcreditamientoIeps               `xml:"acreditamientoIEPS" bson:"AcreditamientoIeps,omitempty" json:"AcreditamientoIeps,omitempty"`
+	HidrocarburosPetroliferos *hidrocarburospetroliferos.HidrocarburosPetroliferos `xml:"HidroYPetro" bson:"HidrocarburosPetroliferos,omitempty" json:"HidrocarburosPetroliferos,omitempty"`
 }
 
 type Complemento struct {

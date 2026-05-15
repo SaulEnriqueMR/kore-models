@@ -70,12 +70,15 @@ type MetaProcessor struct {
 }
 
 type InformacionAdicional struct {
-	StampedByKuantik *bool   `bson:"StampedByKuantik,omitempty" json:"StampedByKuantik,omitempty"`
-	Comentario       *string `bson:"Comentario,omitempty" json:"Comentario,omitempty"`
-	Desgloce         *string `bson:"Desgloce,omitempty" json:"Desgloce,omitempty"`
-	NotaPie          *string `bson:"NotaPie,omitempty" json:"NotaPie,omitempty"`
-	IdProyecto       *string `bson:"IdProyecto,omitempty" json:"IdProyecto,omitempty"`
-	Categoria        *string `bson:"Categoria,omitempty" json:"Categoria,omitempty"`
+	StampedByKuantik     *bool   `bson:"StampedByKuantik,omitempty" json:"StampedByKuantik,omitempty"`
+	Comentario           *string `bson:"Comentario,omitempty" json:"Comentario,omitempty"`
+	Desgloce             *string `bson:"Desgloce,omitempty" json:"Desgloce,omitempty"`
+	Nota                 *string `bson:"Nota,omitempty" json:"Nota,omitempty"`
+	NotaPie              *string `bson:"NotaPie,omitempty" json:"NotaPie,omitempty"`
+	IdProyecto           *string `bson:"IdProyecto,omitempty" json:"IdProyecto,omitempty"`
+	Categoria            *string `bson:"Categoria,omitempty" json:"Categoria,omitempty"`
+	DescripcionRetencion *string `bson:"DescripcionRetencion,omitempty" json:"DescripcionRetencion,omitempty"`
+	DescripcionPago      *string `bson:"DescripcionPago,omitempty" json:"DescripcionPago,omitempty"`
 }
 
 type Cancelacion struct {

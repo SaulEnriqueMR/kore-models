@@ -4704,6 +4704,30 @@
         </ecc:EstadoDeCuentaCombustible>
     </cfdi:Complemento>
     <Addenda>
+        <Datos>
+            <Detalles>
+                <IDRastreo>ABCDSFSAFASDA</IDRastreo>
+                <Moneda>MXN</Moneda>
+                <Monto>200.00</Monto>
+                <Tipo>Bonificación</Tipo>
+            </Detalles>
+        </Datos>
+        <Datos>
+            <Detalles>
+                <IDRastreo>ABCDSFSAFASDA</IDRastreo>
+                <Moneda>MXN</Moneda>
+                <Monto>200.00</Monto>
+                <Tipo>Bonificación</Tipo>
+            </Detalles>
+        </Datos>
+        <Datos>
+            <Detalles>
+                <IDRastreo>ABCDSFSAFASDA</IDRastreo>
+                <Moneda>MXN</Moneda>
+                <Monto>200.00</Monto>
+                <Tipo>Bonificación</Tipo>
+            </Detalles>
+        </Datos>
         <AddendaBuzonFiscal xmlns="http://www.buzonfiscal.com/ns/addenda/bf/2" version="4.0">
             <TipoDocumento descripcion="Factura" nombreCorto="FAC"/>
             <Receptor noCliente="7010427863"/>

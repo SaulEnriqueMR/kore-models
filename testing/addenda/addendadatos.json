@@ -1,0 +1,10 @@
+{
+    "Detalles": [
+        {
+            "IdRastreo": "ABCDSFSAFASDA",
+            "Moneda": "MXN",
+            "Monto": 200,
+            "Tipo": "Bonificación"
+        }
+    ]
+}

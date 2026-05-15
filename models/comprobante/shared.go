@@ -84,6 +84,7 @@ type Addenda struct {
 	Innsist              *[]addenda.Inssist           `xml:"Inssist" bson:"Inssist,omitempty" json:"Inssist,omitempty"`
 	AddendaEmisor        *[]addenda.AdditionalInfo    `xml:"AddendaEmisor>InformacionAdicional" bson:"AdditionalInfo,omitempty" json:"AddendaEmisor,omitempty"`
 	InformacionAdicional *[]addenda.AdditionalInfo    `xml:"InformacionAdicional" bson:"InformacionAdicional,omitempty" json:"InformacionAdicional,omitempty"`
+	AddendaDatos         *[]addenda.AddendaDatos      `xml:"Datos" bson:"AddendaDatos" json:"Datos,omitempty"`
 }
 
 type KuantikMetadata struct {

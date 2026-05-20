@@ -102,6 +102,8 @@ func (r *Retenciones10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 
 	*r = Retenciones10(aux)
 	r.FechaEmision = fechaEmision
+	r.Comprobante = true
+	r.Vigente = nil
 
 	if r.Complemento != nil {
 		if r.Complemento.TimbreFiscalDigital != nil {

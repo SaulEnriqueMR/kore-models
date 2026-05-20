@@ -9,6 +9,7 @@ import (
 	"github.com/SaulEnriqueMR/kore-models/models"
 
 	"github.com/SaulEnriqueMR/kore-models/models/documentofiscaldigital"
+	"github.com/SaulEnriqueMR/kore-models/models/helpers"
 	date "github.com/SaulEnriqueMR/kore-models/models/helpers"
 )
 
@@ -142,6 +143,10 @@ func (r *Retenciones20) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 		}
 	}
 
+	r.CadenaOriginal = helpers.CreateCadenaOriginal(*r)
+	fileName := r.GetBasePath()
+	r.DocumentoFiscalDigital.S3FilePath = &fileName
+
 	// processDate := time.Now().UTC()
 	now := time.Now()
 	processDate := time.Date(now.Year(), now.Month(), now.Day(), now.Hour(), now.Minute(), now.Second(), 0, time.UTC)
@@ -156,7 +161,7 @@ func (c Retenciones20) GetBasePath() string {
 	month := c.FechaEmision.Month()
 	sb := strings.Builder{}
 	sb.WriteString(c.Emisor.Rfc)
-	sb.WriteString("/")
+	sb.WriteString("/retenciones")
 	if c.Receptor.Nacional.Rfc != "" {
 		sb.WriteString(c.Receptor.Nacional.Rfc)
 		sb.WriteString("/")
@@ -164,6 +169,10 @@ func (c Retenciones20) GetBasePath() string {
 	if *c.Receptor.Extranjero.NumRegIdTrib != "" {
 		sb.WriteString(*c.Receptor.Extranjero.NumRegIdTrib)
 		sb.WriteString("/")
+	} else {
+		sb.WriteString("XEXX010101000")
+		sb.WriteString("/")
+
 	}
 	sb.WriteString(strconv.Itoa(year))
 	sb.WriteString("/")

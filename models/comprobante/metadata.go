@@ -61,6 +61,6 @@ type RetencionesMetadata struct {
 	FechaCertificacionSat time.Time  `bson:"FechaCertificacionSat" json:"FechaCertificacionSat"`
 	MontoOp               float64    `bson:"MontoOp" json:"MontoOp"`
 	MontoRet              float64    `bson:"MontoRet" json:"MontoRet"`
-	Estatus               bool       `bson:"Estatus" json:"Estatus"`
+	Vigente               bool       `bson:"Vigente" json:"Vigente"`
 	FechaCancelacion      *time.Time `bson:"FechaCancelacion,omitempty" json:"FechaCancelacion,omitempty"`
 }

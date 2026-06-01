@@ -51,16 +51,22 @@ type TotalesMonedaLocalMetadata struct {
 }
 
 type RetencionesMetadata struct {
-	Uuid                  string     `bson:"Uuid" json:"Uuid"`
-	RfcEmisor             string     `bson:"RfcEmisor" json:"RfcEmisor"`
-	NombreEmisor          string     `bson:"NombreEmisor" json:"NombreEmisor"`
-	RfcReceptor           string     `bson:"RfcReceptor" json:"RfcReceptor"`
-	NombreReceptor        string     `bson:"NombreReceptor" json:"NombreReceptor"`
-	RfcPac                string     `bson:"RfcPac" json:"RfcPac"`
-	FechaEmision          time.Time  `bson:"FechaEmision" json:"FechaEmision"`
-	FechaCertificacionSat time.Time  `bson:"FechaCertificacionSat" json:"FechaCertificacionSat"`
-	MontoOp               float64    `bson:"MontoOp" json:"MontoOp"`
-	MontoRet              float64    `bson:"MontoRet" json:"MontoRet"`
-	Vigente               bool       `bson:"Vigente" json:"Vigente"`
-	FechaCancelacion      *time.Time `bson:"FechaCancelacion,omitempty" json:"FechaCancelacion,omitempty"`
+	Uuid                  string                                   `bson:"Uuid" json:"Uuid"`
+	RfcEmisor             string                                   `bson:"RfcEmisor" json:"RfcEmisor"`
+	NombreEmisor          string                                   `bson:"NombreEmisor" json:"NombreEmisor"`
+	RfcReceptor           string                                   `bson:"RfcReceptor" json:"RfcReceptor"`
+	NombreReceptor        string                                   `bson:"NombreReceptor" json:"NombreReceptor"`
+	RfcPac                string                                   `bson:"RfcPac" json:"RfcPac"`
+	FechaEmision          time.Time                                `bson:"FechaEmision" json:"FechaEmision"`
+	FechaCertificacionSat time.Time                                `bson:"FechaCertificacionSat" json:"FechaCertificacionSat"`
+	MontoOp               float64                                  `bson:"MontoOp" json:"MontoOp"`
+	MontoRet              float64                                  `bson:"MontoRet" json:"MontoRet"`
+	Vigente               bool                                     `bson:"Vigente" json:"Vigente"`
+	Cancelacion           *CancelacionMetadata                     `xml:"Cancelacion" bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
+	Transaccion           string                                   `bson:"Transaccion" json:"Transaccion"`
+	CreatedDate           *time.Time                               `bson:"CreatedDate,omitempty" json:"CreatedDate,omitempty"`
+	Metadata              bool                                     `bson:"Metadata" json:"Metadata"`
+	TotalesMonedaLocal    TotalesMonedaLocalMetadata               `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
+	ProcessorMetadata     documentofiscaldigital.ProcessorMetadata `bson:"ProcessorMetadata" json:"ProcessorMetadata"`
+	MetaProcessor         documentofiscaldigital.MetaProcessor     `bson:"MetaProcessor" json:"MetaProcessor"`
 }

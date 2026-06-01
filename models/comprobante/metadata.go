@@ -52,10 +52,8 @@ type TotalesMonedaLocalMetadata struct {
 
 type RetencionesMetadata struct {
 	Uuid                  string                                   `bson:"Uuid" json:"Uuid"`
-	RfcEmisor             string                                   `bson:"RfcEmisor" json:"RfcEmisor"`
-	NombreEmisor          string                                   `bson:"NombreEmisor" json:"NombreEmisor"`
-	RfcReceptor           string                                   `bson:"RfcReceptor" json:"RfcReceptor"`
-	NombreReceptor        string                                   `bson:"NombreReceptor" json:"NombreReceptor"`
+	Emisor                RfcEmisorReceptor                        `bson:"Emisor" json:"Emisor"`
+	Receptor              RfcEmisorReceptor                        `bson:"Receptor" json:"Receptor"`
 	RfcPac                string                                   `bson:"RfcPac" json:"RfcPac"`
 	FechaEmision          time.Time                                `bson:"FechaEmision" json:"FechaEmision"`
 	FechaCertificacionSat time.Time                                `bson:"FechaCertificacionSat" json:"FechaCertificacionSat"`

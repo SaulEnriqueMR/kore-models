@@ -57,14 +57,22 @@ type RetencionesMetadata struct {
 	RfcPac                string                                   `bson:"RfcPac" json:"RfcPac"`
 	FechaEmision          time.Time                                `bson:"FechaEmision" json:"FechaEmision"`
 	FechaCertificacionSat time.Time                                `bson:"FechaCertificacionSat" json:"FechaCertificacionSat"`
-	MontoOp               float64                                  `bson:"MontoOp" json:"MontoOp"`
-	MontoRet              float64                                  `bson:"MontoRet" json:"MontoRet"`
 	Vigente               bool                                     `bson:"Vigente" json:"Vigente"`
 	Cancelacion           *CancelacionMetadata                     `xml:"Cancelacion" bson:"Cancelacion,omitempty" json:"Cancelacion,omitempty"`
 	Transaccion           string                                   `bson:"Transaccion" json:"Transaccion"`
 	CreatedDate           *time.Time                               `bson:"CreatedDate,omitempty" json:"CreatedDate,omitempty"`
 	Metadata              bool                                     `bson:"Metadata" json:"Metadata"`
-	TotalesMonedaLocal    TotalesMonedaLocalMetadata               `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
+	TotalesMonedaLocal    TotalesMonedaLocalMetadataRetenciones    `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
 	ProcessorMetadata     documentofiscaldigital.ProcessorMetadata `bson:"ProcessorMetadata" json:"ProcessorMetadata"`
 	MetaProcessor         documentofiscaldigital.MetaProcessor     `bson:"MetaProcessor" json:"MetaProcessor"`
+}
+
+type Totales struct {
+	MontoTotalOperacion float64 `xml:"montoTotOperacion,attr" bson:"MontoTotalOperacion" json:"MontoTotalOperacion"`
+	MontoTotalRetenido  float64 `xml:"montoTotRet,attr" bson:"MontoTotalRetenido" json:"MontoTotalRetenido"`
+}
+
+type TotalesMonedaLocalMetadataRetenciones struct {
+	MontoTotalOperacion float64 `bson:"MontoTotalOperacion" json:"MontoTotalOperacion"`
+	MontoTotalRetenido  float64 `bson:"MontoTotalRetenido" json:"MontoTotalRetenido"`
 }

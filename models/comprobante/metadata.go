@@ -49,3 +49,18 @@ type TotalesMonedaLocalMetadata struct {
 	Total    float64 `bson:"Total" json:"Total"`
 	Subtotal float64 `bson:"Subtotal" json:"Subtotal"`
 }
+
+type RetencionesMetadata struct {
+	Uuid                  string     `bson:"Uuid" json:"Uuid"`
+	RfcEmisor             string     `bson:"RfcEmisor" json:"RfcEmisor"`
+	NombreEmisor          string     `bson:"NombreEmisor" json:"NombreEmisor"`
+	RfcReceptor           string     `bson:"RfcReceptor" json:"RfcReceptor"`
+	NombreReceptor        string     `bson:"NombreReceptor" json:"NombreReceptor"`
+	RfcPac                string     `bson:"RfcPac" json:"RfcPac"`
+	FechaEmision          time.Time  `bson:"FechaEmision" json:"FechaEmision"`
+	FechaCertificacionSat time.Time  `bson:"FechaCertificacionSat" json:"FechaCertificacionSat"`
+	MontoOp               float64    `bson:"MontoOp" json:"MontoOp"`
+	MontoRet              float64    `bson:"MontoRet" json:"MontoRet"`
+	Estatus               bool       `bson:"Estatus" json:"Estatus"`
+	FechaCancelacion      *time.Time `bson:"FechaCancelacion,omitempty" json:"FechaCancelacion,omitempty"`
+}

@@ -96,4 +96,6 @@ type TotalesMonedaLocal struct {
 	Descuento                 *float64 `bson:"Descuento,omitempty" json:"Descuento,omitempty"`
 	TotalImpuestosRetenidos   *float64 `bson:"TotalImpuestosRetenidos,omitempty" json:"TotalImpuestosRetenidos,omitempty"`
 	TotalImpuestosTrasladados *float64 `bson:"TotalImpuestosTrasladados,omitempty" json:"TotalImpuestosTrasladados,omitempty"`
+	MontoTotalOperacion       *float64 `bson:"MontoTotalOperacion,omitempty" json:"MontoTotalOperacion,omitempty"`
+	MontoTotalRetenido        *float64 `bson:"MontoTotalRetenido,omitempty" json:"MontoTotalRetenido,omitempty"`
 }

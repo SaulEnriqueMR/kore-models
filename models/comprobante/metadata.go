@@ -62,14 +62,15 @@ type RetencionesMetadata struct {
 	Transaccion           string                                   `bson:"Transaccion" json:"Transaccion"`
 	CreatedDate           *time.Time                               `bson:"CreatedDate,omitempty" json:"CreatedDate,omitempty"`
 	Metadata              bool                                     `bson:"Metadata" json:"Metadata"`
+	TotalesRetenciones    TotalesRetencionesMetadata               `bson:"Totales" json:"Totales"`
 	TotalesMonedaLocal    TotalesMonedaLocalMetadataRetenciones    `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
 	ProcessorMetadata     documentofiscaldigital.ProcessorMetadata `bson:"ProcessorMetadata" json:"ProcessorMetadata"`
 	MetaProcessor         documentofiscaldigital.MetaProcessor     `bson:"MetaProcessor" json:"MetaProcessor"`
 }
 
-type Totales struct {
-	MontoTotalOperacion float64 `xml:"montoTotOperacion,attr" bson:"MontoTotalOperacion" json:"MontoTotalOperacion"`
-	MontoTotalRetenido  float64 `xml:"montoTotRet,attr" bson:"MontoTotalRetenido" json:"MontoTotalRetenido"`
+type TotalesRetencionesMetadata struct {
+	MontoTotalOperacion float64 `bson:"MontoTotalOperacion" json:"MontoTotalOperacion"`
+	MontoTotalRetenido  float64 `bson:"MontoTotalRetenido" json:"MontoTotalRetenido"`
 }
 
 type TotalesMonedaLocalMetadataRetenciones struct {

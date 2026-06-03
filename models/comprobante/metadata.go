@@ -63,17 +63,11 @@ type RetencionesMetadata struct {
 	CreatedDate           *time.Time                               `bson:"CreatedDate,omitempty" json:"CreatedDate,omitempty"`
 	Metadata              bool                                     `bson:"Metadata" json:"Metadata"`
 	TotalesRetenciones    TotalesRetencionesMetadata               `bson:"Totales" json:"Totales"`
-	TotalesMonedaLocal    TotalesMonedaLocalMetadataRetenciones    `bson:"TotalesMonedaLocal" json:"TotalesMonedaLocal"`
 	ProcessorMetadata     documentofiscaldigital.ProcessorMetadata `bson:"ProcessorMetadata" json:"ProcessorMetadata"`
 	MetaProcessor         documentofiscaldigital.MetaProcessor     `bson:"MetaProcessor" json:"MetaProcessor"`
 }
 
 type TotalesRetencionesMetadata struct {
-	MontoTotalOperacion float64 `bson:"MontoTotalOperacion" json:"MontoTotalOperacion"`
-	MontoTotalRetenido  float64 `bson:"MontoTotalRetenido" json:"MontoTotalRetenido"`
-}
-
-type TotalesMonedaLocalMetadataRetenciones struct {
 	MontoTotalOperacion float64 `bson:"MontoTotalOperacion" json:"MontoTotalOperacion"`
 	MontoTotalRetenido  float64 `bson:"MontoTotalRetenido" json:"MontoTotalRetenido"`
 }

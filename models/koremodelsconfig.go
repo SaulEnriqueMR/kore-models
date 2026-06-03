@@ -1,3 +1,3 @@
 package models
 
-var KoreModelVersion = "v1.3.8"
+var KoreModelVersion = "v1.3.9"

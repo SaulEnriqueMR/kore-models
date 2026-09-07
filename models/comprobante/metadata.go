@@ -29,9 +29,27 @@ type CancelacionMetadata struct {
 	CanceledByKuantik *bool      `bson:"CanceledByKuantik,omitempty" json:"CanceledByKuantik,omitempty"`
 	FechaCancelacion  *time.Time `bson:"FechaCancelacion,omitempty" json:"FechaCancelacion,omitempty"`
 }
+
 type RfcEmisorReceptor struct {
 	Rfc    string `bson:"Rfc" json:"Rfc"`
 	Nombre string `bson:"Nombre" json:"Nombre"`
+}
+
+type RfcEmisorReceptorRetencion struct {
+	Nacional   *NacionalMeta   `xml:"Nacional" bson:"Nacional" json:"Nacional"`
+	Extranjero *ExtranjeroMeta `xml:"Extranjero" bson:"Extranjero" json:"Extranjero"`
+}
+
+type NacionalMeta struct {
+	Rfc             string  `bson:"Rfc" json:"Rfc"`
+	Nombre          string  `bson:"Nombre" json:"Nombre"`
+	Curp            *string `bson:"Curp,omitempty" json:"Curp,omitempty"`
+	DomicilioFiscal *string `bson:"DomicilioFiscal,omitempty" json:"DomicilioFiscal,omitempty"`
+}
+
+type ExtranjeroMeta struct {
+	NumRegIdTrib *string `bson:"NumRegIdTrib,omitempty" json:"NumRegIdTrib,omitempty"`
+	Nombre       string  `bson:"Nombre" json:"Nombre"`
 }
 
 type PagoTercerosMetadata struct {
@@ -53,7 +71,7 @@ type TotalesMonedaLocalMetadata struct {
 type RetencionesMetadata struct {
 	Uuid                  string                                   `bson:"Uuid" json:"Uuid"`
 	Emisor                RfcEmisorReceptor                        `bson:"Emisor" json:"Emisor"`
-	Receptor              RfcEmisorReceptor                        `bson:"Receptor" json:"Receptor"`
+	Receptor              RfcEmisorReceptorRetencion               `bson:"Receptor" json:"Receptor"`
 	RfcPac                string                                   `bson:"RfcPac" json:"RfcPac"`
 	FechaEmision          time.Time                                `bson:"FechaEmision" json:"FechaEmision"`
 	FechaCertificacionSat time.Time                                `bson:"FechaCertificacionSat" json:"FechaCertificacionSat"`

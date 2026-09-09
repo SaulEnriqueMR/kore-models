@@ -162,11 +162,11 @@ func (c Retenciones20) GetBasePath() string {
 	sb := strings.Builder{}
 	sb.WriteString(c.Emisor.Rfc)
 	sb.WriteString("/retenciones")
-	if c.Receptor.Nacional.Rfc != "" {
+	if c.Receptor.Nacional != nil && c.Receptor.Nacional.Rfc != "" {
 		sb.WriteString(c.Receptor.Nacional.Rfc)
 		sb.WriteString("/")
 	}
-	if *c.Receptor.Extranjero.NumRegIdTrib != "" {
+	if c.Receptor.Extranjero != nil && *c.Receptor.Extranjero.NumRegIdTrib != "" {
 		sb.WriteString(*c.Receptor.Extranjero.NumRegIdTrib)
 		sb.WriteString("/")
 	} else {

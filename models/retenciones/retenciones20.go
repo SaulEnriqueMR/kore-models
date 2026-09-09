@@ -74,8 +74,8 @@ type Emisor20 struct {
 
 type Receptor20 struct {
 	Nacionalidad string        `xml:"NacionalidadR,attr" bson:"Nacionalidad" json:"Nacionalidad"`
-	Nacional     *Nacional20   `xml:"Nacional" bson:"Nacional" json:"Nacional"`
-	Extranjero   *Extranjero20 `xml:"Extranjero" bson:"Extranjero" json:"Extranjero"`
+	Nacional     *Nacional20   `xml:"Nacional" bson:"Nacional,omitempty" json:"Nacional,omitempty"`
+	Extranjero   *Extranjero20 `xml:"Extranjero" bson:"Extranjero,omitempty" json:"Extranjero,omitempty"`
 }
 
 type Nacional20 struct {

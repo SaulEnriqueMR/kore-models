@@ -36,8 +36,9 @@ type RfcEmisorReceptor struct {
 }
 
 type RfcEmisorReceptorRetencion struct {
-	Nacional   *NacionalMeta   `bson:"Nacional,omitempty" json:"Nacional,omitempty"`
-	Extranjero *ExtranjeroMeta `bson:"Extranjero,omitempty" json:"Extranjero,omitempty"`
+	Nacionalidad string          `xml:"Nacionalidad,attr" bson:"Nacionalidad" json:"Nacionalidad"`
+	Nacional     *NacionalMeta   `bson:"Nacional,omitempty" json:"Nacional,omitempty"`
+	Extranjero   *ExtranjeroMeta `bson:"Extranjero,omitempty" json:"Extranjero,omitempty"`
 }
 
 type NacionalMeta struct {

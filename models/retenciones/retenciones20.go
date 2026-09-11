@@ -33,13 +33,13 @@ type Retenciones20 struct {
 }
 
 func (c *Retenciones20) DefineTransaccion(rfc string) {
-	if c.Receptor.Nacional.Rfc == rfc {
+	if c.Receptor.Nacional != nil && c.Receptor.Nacional.Rfc == rfc {
 		c.Transaccion = "RECIBIDO"
 	}
 	if c.Emisor.Rfc == rfc {
 		c.Transaccion = "EMITIDO"
 	}
-	if c.Receptor.Nacional.Rfc == rfc && c.Emisor.Rfc == rfc {
+	if c.Receptor.Nacional != nil && c.Receptor.Nacional.Rfc == rfc && c.Emisor.Rfc == rfc {
 		c.Transaccion = "AUTOFACTURACION"
 	}
 }
@@ -165,15 +165,24 @@ func (c Retenciones20) GetBasePath() string {
 	if c.Receptor.Nacional != nil && c.Receptor.Nacional.Rfc != "" {
 		sb.WriteString(c.Receptor.Nacional.Rfc)
 		sb.WriteString("/")
-	}
-	if c.Receptor.Extranjero != nil && c.Receptor.Extranjero.NumRegIdTrib != nil {
-		sb.WriteString(*c.Receptor.Extranjero.NumRegIdTrib)
-		sb.WriteString("/")
 	} else {
-		sb.WriteString("XEXX010101000")
-		sb.WriteString("/")
-
+		hasForeignTaxID := false
+		if extranjero := c.Receptor.Extranjero; extranjero != nil {
+			if numRegID := extranjero.NumRegIdTrib; numRegID != nil {
+				trimmedNumRegID := strings.TrimSpace(*numRegID)
+				if trimmedNumRegID != "" {
+					sb.WriteString(trimmedNumRegID)
+					sb.WriteString("/")
+					hasForeignTaxID = true
+				}
+			}
+		}
+		if !hasForeignTaxID {
+			sb.WriteString("XEXX010101000")
+			sb.WriteString("/")
+		}
 	}
+
 	sb.WriteString(strconv.Itoa(year))
 	sb.WriteString("/")
 	sb.WriteString(strconv.Itoa(int(month)))

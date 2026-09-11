@@ -166,7 +166,7 @@ func (c Retenciones20) GetBasePath() string {
 		sb.WriteString(c.Receptor.Nacional.Rfc)
 		sb.WriteString("/")
 	}
-	if c.Receptor.Extranjero != nil && *c.Receptor.Extranjero.NumRegIdTrib != "" {
+	if c.Receptor.Extranjero != nil && c.Receptor.Extranjero.NumRegIdTrib != nil {
 		sb.WriteString(*c.Receptor.Extranjero.NumRegIdTrib)
 		sb.WriteString("/")
 	} else {

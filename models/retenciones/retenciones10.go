@@ -141,16 +141,25 @@ func (c Retenciones10) GetBasePath() string {
 	sb := strings.Builder{}
 	sb.WriteString(c.Emisor.Rfc)
 	sb.WriteString("/retenciones")
-	if c.Receptor.Nacional.Rfc != "" {
+	if c.Receptor.Nacional != nil && c.Receptor.Nacional.Rfc != "" {
 		sb.WriteString(c.Receptor.Nacional.Rfc)
 		sb.WriteString("/")
-	}
-	if *c.Receptor.Extranjero.NumRegIdTrib != "" {
-		sb.WriteString(*c.Receptor.Extranjero.NumRegIdTrib)
-		sb.WriteString("/")
 	} else {
-		sb.WriteString("XEXX010101000")
-		sb.WriteString("/")
+		hasForeignTaxID := false
+		if extranjero := c.Receptor.Extranjero; extranjero != nil {
+			if numRegID := extranjero.NumRegIdTrib; numRegID != nil {
+				trimmedNumRegID := strings.TrimSpace(*numRegID)
+				if trimmedNumRegID != "" {
+					sb.WriteString(trimmedNumRegID)
+					sb.WriteString("/")
+					hasForeignTaxID = true
+				}
+			}
+		}
+		if !hasForeignTaxID {
+			sb.WriteString("XEXX010101000")
+			sb.WriteString("/")
+		}
 	}
 	sb.WriteString(strconv.Itoa(year))
 	sb.WriteString("/")

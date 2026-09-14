@@ -35,3 +35,11 @@ func (r *Retenciones) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 	}
 	return nil
 }
+
+func (r Retenciones20) GetUuid() string {
+	return r.Uuid
+}
+
+func (r Retenciones10) GetUuid() string {
+	return r.Uuid
+}

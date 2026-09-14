@@ -14,22 +14,22 @@ import (
 )
 
 type Retenciones20 struct {
-	documentofiscaldigital.DocumentoFiscalDigital
-	Version              string                  `xml:"Version,attr" bson:"Version" json:"Version"`
-	Folio                *string                 `xml:"FolioInt,attr" bson:"Folio,omitempty" json:"Folio,omitempty"`
-	Sello                string                  `xml:"Sello,attr" bson:"Sello" json:"Sello"`
-	NoCertificado        string                  `xml:"NoCertificado,attr" bson:"NoCertificado" json:"NoCertificado"`
-	Certificado          string                  `xml:"Certificado,attr" bson:"Certificado" json:"Certificado"`
-	Fecha                string                  `xml:"FechaExp,attr" bson:"Fecha" json:"Fecha"`
-	LugarExpedicion      string                  `xml:"LugarExpRetenc,attr" bson:"LugarExpedicion" json:"LugarExpedicion"`
-	ClaveRetencion       string                  `xml:"CveRetenc,attr" bson:"ClaveRetencion" json:"ClaveRetencion"`
-	DescripcionRetencion *string                 `xml:"DescRetenc,attr" bson:"DescripcionRetencion,omitempty" json:"DescripcionRetencion,omitempty"`
-	RetencionRelacionada *RetencionRelacionada20 `xml:"CfdiRetenRelacionados" bson:"RetencionRelacionada,omitempty" json:"RetencionRelacionada,omitempty"`
-	Emisor               Emisor20                `xml:"Emisor" bson:"Emisor" json:"Emisor"`
-	Receptor             Receptor20              `xml:"Receptor" bson:"Receptor" json:"Receptor"`
-	Periodo              Periodo20               `xml:"Periodo" bson:"Periodo" json:"Periodo"`
-	Totales              Totales20               `xml:"Totales" bson:"Totales" json:"Totales"`
-	Complemento          *Complemento            `xml:"Complemento" bson:"Complemento,omitempty" json:"Complemento,omitempty"`
+	documentofiscaldigital.DocumentoFiscalDigital `bson:",inline"`
+	Version                                       string                  `xml:"Version,attr" bson:"Version" json:"Version"`
+	Folio                                         *string                 `xml:"FolioInt,attr" bson:"Folio,omitempty" json:"Folio,omitempty"`
+	Sello                                         string                  `xml:"Sello,attr" bson:"Sello" json:"Sello"`
+	NoCertificado                                 string                  `xml:"NoCertificado,attr" bson:"NoCertificado" json:"NoCertificado"`
+	Certificado                                   string                  `xml:"Certificado,attr" bson:"Certificado" json:"Certificado"`
+	Fecha                                         string                  `xml:"FechaExp,attr" bson:"Fecha" json:"Fecha"`
+	LugarExpedicion                               string                  `xml:"LugarExpRetenc,attr" bson:"LugarExpedicion" json:"LugarExpedicion"`
+	ClaveRetencion                                string                  `xml:"CveRetenc,attr" bson:"ClaveRetencion" json:"ClaveRetencion"`
+	DescripcionRetencion                          *string                 `xml:"DescRetenc,attr" bson:"DescripcionRetencion,omitempty" json:"DescripcionRetencion,omitempty"`
+	RetencionRelacionada                          *RetencionRelacionada20 `xml:"CfdiRetenRelacionados" bson:"RetencionRelacionada,omitempty" json:"RetencionRelacionada,omitempty"`
+	Emisor                                        Emisor20                `xml:"Emisor" bson:"Emisor" json:"Emisor"`
+	Receptor                                      Receptor20              `xml:"Receptor" bson:"Receptor" json:"Receptor"`
+	Periodo                                       Periodo20               `xml:"Periodo" bson:"Periodo" json:"Periodo"`
+	Totales                                       Totales20               `xml:"Totales" bson:"Totales" json:"Totales"`
+	Complemento                                   *Complemento            `xml:"Complemento" bson:"Complemento,omitempty" json:"Complemento,omitempty"`
 }
 
 func (c *Retenciones20) DefineTransaccion(rfc string) {

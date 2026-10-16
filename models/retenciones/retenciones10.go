@@ -2,7 +2,6 @@ package retenciones
 
 import (
 	"encoding/xml"
-	"strconv"
 	"strings"
 	"time"
 
@@ -135,38 +134,31 @@ func (r *Retenciones10) UnmarshalXML(d *xml.Decoder, start xml.StartElement) err
 	return nil
 }
 
-func (c Retenciones10) GetBasePath() string {
-	year := c.FechaEmision.Year()
-	month := c.FechaEmision.Month()
-	sb := strings.Builder{}
-	sb.WriteString(c.Emisor.Rfc)
-	sb.WriteString("/retenciones")
-	if c.Receptor.Nacional != nil && c.Receptor.Nacional.Rfc != "" {
-		sb.WriteString(c.Receptor.Nacional.Rfc)
-		sb.WriteString("/")
-	} else {
-		hasForeignTaxID := false
-		if extranjero := c.Receptor.Extranjero; extranjero != nil {
-			if numRegID := extranjero.NumRegIdTrib; numRegID != nil {
-				trimmedNumRegID := strings.TrimSpace(*numRegID)
-				if trimmedNumRegID != "" {
-					sb.WriteString(trimmedNumRegID)
-					sb.WriteString("/")
-					hasForeignTaxID = true
+func (c Retenciones10) toSummary() SummarizedRetenciones {
+	return SummarizedRetenciones{
+		EmisorRfc: c.Emisor.Rfc,
+		Receptor: func() string {
+			if c.Receptor.Nacional != nil {
+				return c.Receptor.Nacional.Rfc
+			} else if c.Receptor.Extranjero != nil {
+				if c.Receptor.Extranjero.NumRegIdTrib != nil {
+					return *c.Receptor.Extranjero.NumRegIdTrib
+				} else if c.Receptor.Extranjero.Nombre != "" {
+					return c.Receptor.Extranjero.Nombre
+				} else {
+					return "EXTRANJERO"
 				}
 			}
-		}
-		if !hasForeignTaxID {
-			sb.WriteString("XEXX010101000")
-			sb.WriteString("/")
-		}
+			return ""
+		}(),
+		Uuid:  c.Uuid,
+		Fecha: c.FechaEmision,
 	}
-	sb.WriteString(strconv.Itoa(year))
-	sb.WriteString("/")
-	sb.WriteString(strconv.Itoa(int(month)))
-	sb.WriteString("/")
-	sb.WriteString(c.Uuid)
-	return sb.String()
+}
+
+func (c Retenciones10) GetBasePath() string {
+	summary := c.toSummary()
+	return summary.GetFileName()
 }
 
 /* func (c *Retenciones10) SetFilePaths() {

@@ -144,7 +144,8 @@ func (c Retenciones10) toSummary() SummarizedRetenciones {
 				if c.Receptor.Extranjero.NumRegIdTrib != nil {
 					return *c.Receptor.Extranjero.NumRegIdTrib
 				} else if c.Receptor.Extranjero.Nombre != "" {
-					return c.Receptor.Extranjero.Nombre
+					newName := strings.TrimSpace(strings.ReplaceAll(c.Receptor.Extranjero.Nombre, " ", "_"))
+					return newName
 				} else {
 					return "EXTRANJERO"
 				}

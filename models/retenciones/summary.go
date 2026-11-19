@@ -21,7 +21,7 @@ func (f *SummarizedRetenciones) GetFileName() string {
 	year := f.Fecha.Year()
 	month := f.Fecha.Month()
 	// log.Println(f.EmisorRfc + "/" + f.ReceptorRfc + "/" + fmt.Sprintf("%d", year) + "/" + fmt.Sprintf("%d", month) + "/" + f.Uuid + ".xml")
-	return f.EmisorRfc + "/" + f.Receptor + "/" + fmt.Sprintf("%d", year) + "/" + fmt.Sprintf("%d", month) + "/" + f.Uuid + ".xml"
+	return f.EmisorRfc + "/RETENCIONES/" + f.Receptor + "/" + fmt.Sprintf("%d", year) + "/" + fmt.Sprintf("%d", month) + "/" + f.Uuid + ".xml"
 }
 
 func MyFilename(d *xml.Decoder) (string, error) {

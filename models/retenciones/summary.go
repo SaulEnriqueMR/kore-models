@@ -29,7 +29,6 @@ func MyFilename(d *xml.Decoder) (string, error) {
 	var ReceptorRfc string
 	var Uuid string
 	var Fecha time.Time
-
 	summarized := SummarizedRetenciones{}
 	for {
 		t, _ := d.Token()
@@ -50,35 +49,31 @@ func MyFilename(d *xml.Decoder) (string, error) {
 			if se.Name.Local == "Emisor" {
 				start := xml.StartElement(se)
 				for _, attributes := range start.Attr {
-					if strings.ToLower(attributes.Name.Local) == "rfc" {
+					if strings.ToLower(attributes.Name.Local) == "rfce" {
 						EmisorRfc = attributes.Value
 					}
 				}
 			}
-			if se.Name.Local == "Receptor" {
+			if se.Name.Local == "Nacional" {
 				start := xml.StartElement(se)
 				for _, attributes := range start.Attr {
-					if strings.ToLower(attributes.Name.Local) == "nacional" {
-						// ReceptorRfc = attributes.Value
-						startNacional := xml.StartElement(se)
-						for _, attributesNacional := range startNacional.Attr {
-							if strings.ToLower(attributesNacional.Name.Local) == "rfc" {
-								ReceptorRfc = attributesNacional.Value
-							}
-						}
-					} else if strings.ToLower(attributes.Name.Local) == "extranjero" {
-						// ReceptorRfc = attributes.Value
-						startExtranjero := xml.StartElement(se)
-						for _, attributesExtranjero := range startExtranjero.Attr {
-							if strings.ToLower(attributesExtranjero.Name.Local) == "numregidtrib" && attributesExtranjero.Value != "" {
-								ReceptorRfc = attributesExtranjero.Value
-							} else if strings.ToLower(attributesExtranjero.Name.Local) == "nombre" && attributesExtranjero.Value != "" {
-								ReceptorRfc = attributesExtranjero.Value
-							} else {
-								ReceptorRfc = "EXTRANJERO"
-							}
-						}
+					if strings.ToLower(attributes.Name.Local) == "rfcr" {
+						ReceptorRfc = attributes.Value
 					}
+				}
+			}
+			if se.Name.Local == "Extranjero" {
+				for _, attributes := range se.Attr {
+					if strings.ToLower(attributes.Name.Local) == "nomdenrazsocr" {
+						ReceptorRfc = strings.TrimSpace(strings.ReplaceAll(attributes.Value, " ", "_"))
+						break
+					}
+					if strings.ToLower(attributes.Name.Local) == "numregidtrib" && ReceptorRfc == "" {
+						ReceptorRfc = attributes.Value
+					}
+				}
+				if ReceptorRfc == "" {
+					ReceptorRfc = "EXTRANJERO"
 				}
 			}
 			if se.Name.Local == "Retenciones" {
